@@ -73,6 +73,13 @@ cp .env.example .env          # then put your OpenRouter key after OPENROUTER_AP
 .venv/bin/python -m blastradius run --dry-run --topic breaches   # one column, while tuning its brief
 ```
 
+> **Seeing your freshest changes locally:**
+> The website is a static site generated into `public/`. **Whenever you edit configuration** (`config/settings.yaml`, `config/topics.yaml`), **change the wallpaper** (`config/background.jpg`), or **edit assets**, you must rebuild the site to update `public/`:
+> ```sh
+> .venv/bin/python -m blastradius build-site
+> ```
+> Then hard-refresh your browser (`Ctrl+Shift+R` / `Cmd+Shift+R` to bypass cached assets) to view the changes immediately.
+
 A real local `run` changes `archive/` just as CI does, so commit it or discard it with `git checkout archive/`.
 
 ## The board

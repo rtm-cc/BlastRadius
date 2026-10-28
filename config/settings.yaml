@@ -92,3 +92,5 @@ site:
   date_format: dmy
   # Give every tag its own colour, derived from its text.
   colored_tags: true
+  # Blurred wallpaper background (relative to config/); turns columns into frosted glass.
+  background: background.jpg
