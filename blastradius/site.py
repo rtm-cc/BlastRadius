@@ -306,7 +306,7 @@ def _page(
   <div class="bar-actions">
     <form class="search" id="search-form" role="search">
       <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5 18 18"/></svg>
-      <input type="search" id="q" placeholder="Search every day" autocomplete="off" aria-label="Search stories">
+      <input type="search" id="q" placeholder="Search all stories" autocomplete="off" aria-label="Search stories">
       <kbd>/</kbd>
     </form>
     <button type="button" id="theme-toggle" class="icon-btn theme-toggle" aria-label="Switch theme" title="Switch theme">
