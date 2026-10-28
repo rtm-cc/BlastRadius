@@ -1,6 +1,6 @@
 import unittest
 
-from top10.urlmatch import build_index, resolve
+from blastradius.urlmatch import build_index, resolve
 
 GOOGLE = "https://news.google.com/rss/articles/CBMiyg1234"
 

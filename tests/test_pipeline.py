@@ -13,13 +13,13 @@ from datetime import timedelta
 from pathlib import Path
 from unittest import mock
 
-from top10 import cli, config, fetch, googlenews, openrouter, site
-from top10.archive import Archive
-from top10.archive import load as load_yaml
-from top10.state import State
-from top10.config import ConfigError, WindowSettings
-from top10.models import FetchResult, Source
-from top10.window import Window, resolve
+from blastradius import cli, config, fetch, googlenews, openrouter, site
+from blastradius.archive import Archive
+from blastradius.archive import load as load_yaml
+from blastradius.state import State
+from blastradius.config import ConfigError, WindowSettings
+from blastradius.models import FetchResult, Source
+from blastradius.window import Window, resolve
 
 from .factories import NOW, candidate, pick
 from .test_curate import answer

@@ -1,7 +1,7 @@
 import json
 import unittest
 
-from top10 import crosstopic, openrouter
+from blastradius import crosstopic, openrouter
 
 from .factories import topic
 

@@ -64,7 +64,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -t .
-      - run: python -m top10 check
+      - run: python -m blastradius check
 
   digest:
     needs: test
@@ -91,7 +91,7 @@ jobs:
           SINCE_HOURS: ${{ inputs.since_hours }}
         run: |
           set +e
-          python -m top10 run ${SINCE_HOURS:+--since-hours "$SINCE_HOURS"} 2>&1 | tee run.log
+          python -m blastradius run ${SINCE_HOURS:+--since-hours "$SINCE_HOURS"} 2>&1 | tee run.log
           status=${PIPESTATUS[0]}
           set -e
           echo "status=$status" >> "$GITHUB_OUTPUT"
@@ -159,7 +159,7 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: python -m top10 build-site
+      - run: python -m blastradius build-site
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:

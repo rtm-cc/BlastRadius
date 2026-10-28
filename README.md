@@ -2,13 +2,13 @@
 
 Yesterday's security news, curated into a daily board: breaches, vulnerabilities and patches, active threats, supply chain, AI security, fraud and phishing, and policy and enforcement. A scheduled GitHub Actions run pulls security feeds, Google News and OpenRouter web searches, has one OpenRouter call per column pick, dedupe and summarise against what was already published, commits the result to `archive/`, and publishes the board to GitHub Pages.
 
-**Board:** https://rtm-cc.github.io/BlastRadius/
+**Board:** https://rtm.cc/BlastRadius/
 
 There is no server and no settings page. **The configuration is the files in `config/`**: edit one, push, and the next run uses it.
 
 > **Running it day to day? Start with [OPERATIONS.md](OPERATIONS.md).** It covers checking a run, every setting, an "I want to…" table, costs, and what to do when something breaks. [config/README.md](config/README.md) covers the config files themselves.
 
-A fork of [top-10-from-yesterday](https://git.rtm.cc/rtm/top-10-from-yesterday), the general news board: same pipeline and site, security columns, built on GitHub instead of GitLab. The Python package is still called `top10`, which keeps changes easy to carry between the two.
+The code is the `blastradius` Python package: `python -m blastradius <command>`.
 
 ## How a run works
 
@@ -31,7 +31,7 @@ A fork of [top-10-from-yesterday](https://git.rtm.cc/rtm/top-10-from-yesterday),
 | `config/sources/<column>.yaml` | A column's own sources. |
 | `config/settings.yaml` | Models, timezone, window, cost limits, archive length, site title. |
 
-`python -m top10 check` validates all of it. CI runs the same check on every push and pull request.
+`python -m blastradius check` validates all of it. CI runs the same check on every push and pull request.
 
 ## GitHub setup
 
@@ -64,13 +64,13 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 cp .env.example .env          # then put your OpenRouter key after OPENROUTER_API_KEY=
 
-.venv/bin/python -m top10 check                            # validate config/ (free)
-.venv/bin/python -m top10 check-feed <feed url>            # what one feed returns (free)
+.venv/bin/python -m blastradius check                            # validate config/ (free)
+.venv/bin/python -m blastradius check-feed <feed url>            # what one feed returns (free)
 .venv/bin/python -m unittest discover -s tests -t .        # the tests (free)
-.venv/bin/python -m top10 build-site                       # public/ from the archive (free)
+.venv/bin/python -m blastradius build-site                       # public/ from the archive (free)
 .venv/bin/python -m http.server 8765 --directory public    # then open http://127.0.0.1:8765
-.venv/bin/python -m top10 run --dry-run                    # curate and print, write nothing (~$0.08)
-.venv/bin/python -m top10 run --dry-run --topic breaches   # one column, while tuning its brief
+.venv/bin/python -m blastradius run --dry-run                    # curate and print, write nothing (~$0.08)
+.venv/bin/python -m blastradius run --dry-run --topic breaches   # one column, while tuning its brief
 ```
 
 A real local `run` changes `archive/` just as CI does, so commit it or discard it with `git checkout archive/`.

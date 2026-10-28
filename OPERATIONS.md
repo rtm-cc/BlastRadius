@@ -1,6 +1,6 @@
 # Operating the board
 
-How to run, change and fix this without reading the code. The board is at **https://rtm-cc.github.io/BlastRadius/**.
+How to run, change and fix this without reading the code. The board is at **https://rtm.cc/BlastRadius/**.
 
 - [What happens every day](#what-happens-every-day)
 - [Was today's run all right?](#was-todays-run-all-right)
@@ -24,7 +24,7 @@ Everything runs on GitHub's own runners; there is no server.
 | --- | --- |
 | `config/` | Everything you are meant to edit. Its own guide: [config/README.md](config/README.md). |
 | `archive/` | The published boards, one YAML file per day, plus `state.yaml` (when the last run finished). Written by the workflow. |
-| `top10/` | The code. `top10/assets/` is the site's CSS, JavaScript and icons. |
+| `blastradius/` | The code. `blastradius/assets/` is the site's CSS, JavaScript and icons. |
 | `.github/workflows/board.yml` | The three jobs above, and when they run. |
 | GitHub → Settings → Secrets and variables → Actions | `OPENROUTER_API_KEY`, the only secret. |
 | GitHub → Settings → Pages | Source must be **GitHub Actions**. |
@@ -82,7 +82,7 @@ A source `FAIL` does not fail the run; that feed just contributed nothing. Fix o
 | look back further or less | **Run workflow** with "since_hours" | One run only. |
 | rotate the OpenRouter key | Settings → Secrets and variables → Actions → `OPENROUTER_API_KEY` → Update | Also your local `.env`. |
 
-After an edit: `.venv/bin/python -m top10 check` locally, commit, push. The push redeploys the site (no model call); content changes show from the next run.
+After an edit: `.venv/bin/python -m blastradius check` locally, commit, push. The push redeploys the site (no model call); content changes show from the next run.
 
 ## Every setting
 

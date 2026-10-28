@@ -5,7 +5,7 @@ Everything the board does is decided by the files in this folder. Edit one, push
 Before pushing, check your edit; CI runs the same check and fails on a mistake:
 
 ```sh
-.venv/bin/python -m top10 check
+.venv/bin/python -m blastradius check
 ```
 
 | Path | What it holds |
@@ -81,7 +81,7 @@ sources:
 Check a feed before adding it - it shows what the feed returns and how many items a day:
 
 ```sh
-.venv/bin/python -m top10 check-feed https://example.com/feed.xml
+.venv/bin/python -m blastradius check-feed https://example.com/feed.xml
 ```
 
 Mind the volume: a shared feed is offered to all seven columns, so its cost counts seven times. A feed posting 100 a day needs a `max_items`, and no column sends the model more than `curation.candidate_limit` (in `settings.yaml`) anyway.

@@ -1,10 +1,9 @@
-"""Command line entry point: `python -m top10 <command>`.
+"""Command line entry point: `python -m blastradius <command>`.
 
     run            fetch, curate, write today's board, rebuild the site
     check          validate config/ and list what a run would fetch
     check-feed     fetch one RSS/Atom URL and show what a source would get
     build-site     rebuild public/ from the archive, no fetching
-    import-backup  convert the old app's Settings -> Backup JSON into archive/
 
 Exit codes, which CI relies on:
 
@@ -12,13 +11,12 @@ Exit codes, which CI relies on:
     1  nothing was published - bad config, no API key, every source failed,
        or every topic failed to curate
     2  the board was published, but at least one topic failed to curate;
-       CI shows the job as passed with warnings so it gets noticed
+       CI shows it as a warning so it gets noticed
 """
 
 from __future__ import annotations
 
 import argparse
-import json
 import logging
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -33,18 +31,15 @@ from .archive import Archive
 from .config import SHARED, Config, ConfigError
 from .models import Candidate, FetchResult, Source, Story
 from .state import State
-from .textutil import cluster_key, is_opaque_interstitial
+from .textutil import is_opaque_interstitial
 from .window import Window, resolve, utc_now
 
 EXIT_OK, EXIT_FAILED, EXIT_PARTIAL = 0, 1, 2
 
-
 def _print(line: str = "") -> None:
     print(line, flush=True)
 
-
 # --- run ----------------------------------------------------------------------
-
 
 def _pool(results: list[FetchResult], topic_ids: list[str], limit: int | None) -> dict[str, list[Candidate]]:
     """Each topic's candidates: one per URL, in config order, so when
@@ -65,7 +60,6 @@ def _pool(results: list[FetchResult], topic_ids: list[str], limit: int | None) -
         out[topic_id] = candidates
     return out
 
-
 def _report_sources(results: list[FetchResult]) -> None:
     _print("Sources")
     width = max(len(r.source.id) for r in results)
@@ -77,7 +71,6 @@ def _report_sources(results: list[FetchResult]) -> None:
             line = f"FAIL {r.error}"
         _print(f"  {r.source.id:<{width}}  {r.source.type:<11} {line}  {r.elapsed_seconds:5.1f}s{cost}")
     _print()
-
 
 def _resolve_images(records: list[Story], cfg: Config) -> None:
     """og:image for every card whose feed carried none. Only cards that made
@@ -96,7 +89,6 @@ def _resolve_images(records: list[Story], cfg: Config) -> None:
 
     with ThreadPoolExecutor(max_workers=max(1, images.workers)) as pool:
         list(pool.map(find, missing))
-
 
 def cmd_run(args: argparse.Namespace) -> int:
     _print(f"env: {env.load().describe()}")
@@ -234,9 +226,7 @@ def cmd_run(args: argparse.Namespace) -> int:
         return EXIT_PARTIAL
     return EXIT_OK
 
-
 # --- the other commands ---------------------------------------------------
-
 
 def cmd_check(args: argparse.Namespace) -> int:
     cfg = config_module.load()
@@ -263,7 +253,6 @@ def cmd_check(args: argparse.Namespace) -> int:
     _print(f"{len(cfg.enabled_sources)} enabled sources in {len(cfg.enabled_topics)} topics. Config OK.")
     return EXIT_OK
 
-
 def cmd_check_feed(args: argparse.Namespace) -> int:
     settings = config_module.load_settings()
     source = Source(id="check", topic="check", type="rss", name="check", url=args.url)
@@ -282,80 +271,14 @@ def cmd_check_feed(args: argparse.Namespace) -> int:
         _print(f"\nabout {len(result.candidates) / max(span, 1):.1f} items/day")
     return EXIT_OK
 
-
 def cmd_build_site(args: argparse.Namespace) -> int:
     cfg = config_module.load()
     out = site.build(cfg, Archive(Path(cfg.settings.archive.directory)), utc_now())
     _print(f"site in {out}/")
     return EXIT_OK
 
-
-def cmd_import_backup(args: argparse.Namespace) -> int:
-    """The old app's safe JSON export (Settings -> Backup) into archive/.
-
-    Topics are matched by name to topics.yaml. Editorial state - saved,
-    dismissed, pins, notes - has nowhere to live on a static board and is
-    dropped; the stories themselves, their clusters and update links are
-    kept, so tomorrow's run already knows what was published.
-    """
-    cfg = config_module.load()
-    backup = json.loads(Path(args.path).read_text(encoding="utf-8"))
-    if backup.get("format") != "top10fromyesterday-backup":
-        _print(f"{args.path} is not a top10fromyesterday backup.")
-        return EXIT_FAILED
-
-    by_name = {t.name: t.id for t in cfg.topics}
-    topic_ids = {}
-    for topic in backup["topics"]:
-        if topic["name"] not in by_name:
-            _print(f"Backup topic '{topic['name']}' has no topic of that name in topics.yaml.")
-            return EXIT_FAILED
-        topic_ids[topic["id"]] = by_name[topic["name"]]
-
-    days: dict[str, dict[str, list[Story]]] = {}
-    ordered = sorted(backup["stories"], key=lambda s: (s["editorialRank"] if s["editorialRank"] is not None else s["rank"], s["rank"]))
-    for old in ordered:
-        coverage = [
-            {"title": c["title"], "url": c["url"], "source": c["sourceName"], "published": c.get("publishedAt")}
-            for c in old.get("coverageJson") or []
-        ]
-        lead = next((c for c in coverage if c["url"] == old["url"]), None)
-        topic_stories = days.setdefault(old["boardDate"], {}).setdefault(topic_ids[old["topicId"]], [])
-        topic_stories.append(
-            {
-                "id": f"m{old['id']}",
-                "rank": len(topic_stories) + 1,
-                "title": old["title"],
-                "summary": old["summary"],
-                "url": old["url"],
-                "image": old.get("imageUrl") or "",
-                "sources": old.get("sourcesJson") or [],
-                "labels": old.get("labelsJson") or [],
-                "rationale": old.get("rationale") or "",
-                "is_update": bool(old.get("isUpdate")),
-                "supersedes": f"m{old['supersedesId']}" if old.get("supersedesId") else None,
-                "what_changed": old.get("whatChanged"),
-                "cluster": f"c{old['clusterId']}" if old.get("clusterId") else f"m{old['id']}",
-                "cluster_key": old.get("clusterKey") or cluster_key(old["title"]),
-                "coverage": coverage,
-                "published": (lead or (coverage[0] if coverage else {})).get("published"),
-            }
-        )
-
-    archive = Archive(Path(cfg.settings.archive.directory))
-    exported = datetime.fromisoformat(backup["exportedAt"].replace("Z", "+00:00"))
-    for day, topics in sorted(days.items()):
-        existing = archive.load_day(day)
-        # Never overwrite what the new pipeline already published.
-        merged = {**topics, **existing}
-        archive.save_day(day, merged, exported)
-    stories = sum(len(s) for t in days.values() for s in t.values())
-    _print(f"imported {stories} stories over {len(days)} days into {archive.directory}/")
-    return EXIT_OK
-
-
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="python -m top10", description=__doc__.split("\n\n")[0])
+    parser = argparse.ArgumentParser(prog="python -m blastradius", description=__doc__.split("\n\n")[0])
     parser.add_argument("-v", "--verbose", action="store_true")
     commands = parser.add_subparsers(dest="command", required=True)
 
@@ -374,10 +297,6 @@ def main(argv: list[str] | None = None) -> int:
     feed.set_defaults(handler=cmd_check_feed)
 
     commands.add_parser("build-site", help="rebuild public/ from the archive").set_defaults(handler=cmd_build_site)
-
-    importer = commands.add_parser("import-backup", help="import the old app's backup JSON")
-    importer.add_argument("path")
-    importer.set_defaults(handler=cmd_import_backup)
 
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.WARNING, format="%(levelname)s %(name)s: %(message)s")

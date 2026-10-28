@@ -60,7 +60,7 @@
     return icon;
   }
 
-  // Same hash as the old app, so a tag keeps its colour.
+  // A stable hue from any text, so a tag keeps its colour on every day.
   function hue(key) {
     var hash = 0;
     for (var i = 0; i < key.length; i++) hash = (hash * 31 + key.charCodeAt(i)) | 0;

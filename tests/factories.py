@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from top10.models import Candidate, Topic
+from blastradius.models import Candidate, Topic
 
 NOW = datetime(2026, 10, 27, 7, 0, tzinfo=timezone.utc)
 

@@ -3,7 +3,7 @@
 # every topic sees are in sources/shared.yaml, a topic's own in
 # sources/<topic>.yaml. config/README.md explains it all.
 # Every key is optional; a missing one takes the default shown in
-# top10/config.py.
+# blastradius/config.py.
 # ---------------------------------------------------------------------------
 
 # The board date - "today" - is the run's date in this timezone.

@@ -12,9 +12,7 @@ __pycache__/
 .env.*
 !.env.example
 
-# The old app's backup holds a FreshRSS token; the import has already turned
-# it into archive/. Same for an OPML export.
-/backup*.json
+# Feed lists exported from a reader (OPML) can carry private feed URLs.
 *.opml
 *.opml.xml
 

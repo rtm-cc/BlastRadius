@@ -44,7 +44,7 @@ class FetchSettings:
     timeout_seconds: float = 45
     retries: int = 2
     max_workers: int = 8
-    user_agent: str = "top10fromyesterday/0.2 (+RSS reader)"
+    user_agent: str = "BlastRadius/0.1 (+https://github.com/rtm-cc/BlastRadius)"
 
 
 @dataclass(frozen=True)
@@ -90,7 +90,7 @@ class ArchiveSettings:
 @dataclass(frozen=True)
 class SiteSettings:
     directory: str = "public"
-    title: str = "Top 10 from yesterday"
+    title: str = "Blast Radius Digest"
     repo_url: str = ""
     date_format: str = "dmy"
     colored_tags: bool = True

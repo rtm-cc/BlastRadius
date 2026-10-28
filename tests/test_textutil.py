@@ -1,6 +1,6 @@
 import unittest
 
-from top10.textutil import cluster_key, normalize_url, strip_html, truncate
+from blastradius.textutil import cluster_key, normalize_url, strip_html, truncate
 
 
 class NormalizeUrlTest(unittest.TestCase):
@@ -36,7 +36,7 @@ class NormalizeUrlTest(unittest.TestCase):
 
 
 class ClusterKeyTest(unittest.TestCase):
-    def test_matches_the_old_apps_stored_keys(self):
+    def test_first_twelve_words_then_sorted(self):
         # Taken from the backup: the key the TypeScript app stored for this title.
         self.assertEqual(
             cluster_key("ShinyHunters Uses WAF Bypass Trick to Keep Exploiting Oracle PeopleSoft Flaw"),

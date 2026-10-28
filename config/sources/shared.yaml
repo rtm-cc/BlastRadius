@@ -4,7 +4,7 @@
 # sources/<topic>.yaml. Every field is explained in config/README.md.
 #
 # Volumes are items in the last 24 hours, measured 2026-10-27/28. Check a
-# feed before adding it:  python -m top10 check-feed <url>
+# feed before adding it:  python -m blastradius check-feed <url>
 
 sources:
   # === News =================================================================
@@ -131,6 +131,6 @@ sources:
     url: https://www.schneier.com/feed/atom/
     notes: ~1/day, mostly essays the briefs exclude. Cheap to keep.
 
-  # Left out from the FreshRSS "Security" category: the three podcasts
+  # Considered and left out: three security podcasts
   # (nothing to read), CVEMon (bare CVE ids, no context), the Google Online
   # Security Blog (dormant), AWS Security, Semgrep and Rhino (vendor blogs).

@@ -138,10 +138,9 @@ def short_hash(*parts: str) -> str:
 
 def cluster_key(title: str) -> str:
     """A rough fingerprint of a headline, used to find the earlier story an
-    update refers to when the model names it imprecisely. Sorted so word
-    order does not matter.
-
-    Same recipe as the old app's clusterKeyFor - the first twelve words,
-    then sorted - so the keys stored in imported history still match."""
+    update refers to when the model names it imprecisely: the first twelve
+    words of three letters or more, then sorted, so word order does not
+    matter. Keys are stored in the archive, so changing the recipe would
+    stop every stored story from matching."""
     words = re.sub(r"[^\w\s]|_", " ", title.lower()).split()
     return "-".join(sorted([w for w in words if len(w) > 2][:12]))

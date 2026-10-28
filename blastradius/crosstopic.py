@@ -1,10 +1,10 @@
 """One event, one topic.
 
-Each topic is curated in its own call, so nothing stops two topics picking
-the same event: an election lands in World and Brazil, a Coimbra company's
-layoffs in Coimbra and Portugal. Curating every topic in one call would
-catch it, but that call outgrows the model's output limit - which is why the
-old app split them.
+Each topic is curated in its own call, from the same shared feeds, so
+nothing stops two topics picking the same event: a ransomware attack is
+both a breach and an active threat, a hijacked npm package both supply chain
+and malware. Curating every topic in one call would catch it, but that call
+outgrows the model's output limit - which is why they are split.
 
 So once every topic is curated, one more call reads only what is about to be
 published - a short line per story, not the hundreds of candidates - and
@@ -43,9 +43,11 @@ Rules:
 - Only group stories that report the SAME event: the same incident, announcement, decision or \
 development. Stories that are merely related - the same country, the same company, the same ongoing \
 crisis but a different development - are NOT duplicates. When unsure, leave them alone.
-- Keep the story in the topic whose focus it matches most directly. A story about Brazilian politics \
-belongs in Brazil rather than World News; a Coimbra company belongs in Coimbra rather than Portugal; \
-an AI company's breach belongs in CyberSecurity only if the breach, not the company, is the news.
+- Keep the story in the topic whose focus it matches most directly. A company disclosing that its \
+data was stolen belongs in Breaches, while the ransomware group's campaign across many victims \
+belongs in Active Threats; a malicious npm package belongs in Supply Chain rather than Active Threats; \
+the arrest of a ransomware operator belongs in Policy & Enforcement; a breach at an AI company \
+belongs in AI Security only if the AI system itself was the way in.
 - Stories marked (fixed) can be kept but never removed.
 - Respond with strict JSON only, nothing else:
 {"duplicates": [{"keep": "<id>", "remove": ["<id>", ...], "reason": "<one short sentence>"}]}

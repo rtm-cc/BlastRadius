@@ -2,8 +2,8 @@ import json
 import unittest
 from collections import Counter
 
-from top10 import curate, openrouter
-from top10.urlmatch import build_index
+from blastradius import curate, openrouter
+from blastradius.urlmatch import build_index
 
 from .factories import candidate, pick, topic
 

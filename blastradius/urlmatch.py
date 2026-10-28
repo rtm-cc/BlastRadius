@@ -9,8 +9,8 @@ its way back out, which, found live, it does constantly:
     model      https://news.google.com/rss/articles/CBMiyg…
 
 The ~300 character token that identifies the article was copied perfectly;
-only Google's presentation suffix was dropped. One day that cost the
-Technology topic 14 of its 15 stories.
+only Google's presentation suffix was dropped. One day that cost a
+topic 14 of its 15 stories.
 
 So resolution is layered, most specific first, and never guesses:
 

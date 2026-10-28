@@ -1,5 +1,5 @@
-/* The board. Palette and card shapes carried over from the old app's
-   globals.css, so it looks the same; light and dark follow the system. */
+/* The board. Light and dark follow the system; a wallpaper (site.background)
+   turns the columns to frosted glass. */
 
 :root {
   --background: #f7f7fa;
@@ -640,7 +640,7 @@ a.result-title:hover { color: var(--accent-text); }
 .result-sources { margin-right: .35rem; color: var(--muted); font-size: .75rem; }
 
 /* --- wallpaper (site.background) --------------------------------------------
-   The old app's frosted glass. Nested scrolling columns do not reliably blur
+   Frosted glass. Nested scrolling columns do not reliably blur
    a page-level wallpaper with backdrop-filter alone, so each column carries
    its own fixed, enlarged copy of the wallpaper and blurs that underneath
    its content. Cards then stay transparent over the column. */

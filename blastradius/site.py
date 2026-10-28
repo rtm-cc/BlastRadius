@@ -1,9 +1,9 @@
 """The board, as a static site for GitHub Pages.
 
-Same board as the old app - a column per topic, the configured layout,
-yesterday's cards with Full coverage and Developments - minus everything that
-needed a server: no login, no editing, no "Run now". Editing is a commit to
-config/ now, and running is CI's job.
+A column per topic in the configured layout, yesterday's cards with Full
+coverage and Developments, a focus grid per topic, and search across every
+archived day. Nothing needs a server: editing is a commit to config/ and
+running is CI's job.
 
 Static on purpose: plain files, no framework, no build step, so it keeps
 working with nobody maintaining it. What gets written to public/:

@@ -49,7 +49,7 @@ discover it.
    https://news.google.com/rss/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRGx5YUY4U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US:en
    ```
 
-   `python -m top10 check-feed '<that rss url>'` shows what it returns.
+   `python -m blastradius check-feed '<that rss url>'` shows what it returns.
 
 That topic feed is generally much more targeted than the keyword search feed,
 even though both are labelled “Nvidia.”

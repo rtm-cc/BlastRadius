@@ -12,7 +12,7 @@ is trusted as-is:
   topic's recent history.
 
 A topic can come back short not because the news was thin but because the
-model fumbled the paperwork - mis-copied URLs (one day cost Technology 14 of
+model fumbled the paperwork - mis-copied URLs (one day cost a topic 14 of
 its 15 cards), or a bare `{"stories": []}` for a topic holding 111
 candidates. One repair call, naming what went wrong, recovers both. It is
 deliberately not "pad to min_items": a topic that genuinely had little to say
