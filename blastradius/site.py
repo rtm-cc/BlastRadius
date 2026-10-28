@@ -188,7 +188,18 @@ def build(config: Config, archive: Archive, generated_at: datetime) -> Path:
         (out / name).write_bytes(data)
         wallpaper = f"{name}?v={hashlib.sha256(data).hexdigest()[:8]}"
 
-    _write(out / "index.html", _page(settings.title, boot, version, wallpaper, _credit(settings.author, settings.author_url)))
+    _write(
+        out / "index.html",
+        _page(
+            settings.title,
+            boot,
+            version,
+            wallpaper,
+            _credit(settings.author, settings.author_url),
+            description=settings.description,
+            repo_url=settings.repo_url or "https://github.com/rtm-cc/BlastRadius",
+        ),
+    )
     return out
 
 
@@ -209,11 +220,42 @@ def _credit(author: str, url: str) -> str:
     return f'<span class="credit">by {e(author)}</span>'
 
 
-def _page(title: str, boot: dict, version: str, wallpaper: str = "", credit: str = "") -> str:
+def _description(desc: str) -> str:
+    """"A small tagline/description under the title in the header."""
+    if not desc:
+        return ""
+    return f'<p class="brand-desc">{html.escape(desc)}</p>'
+
+
+def _github_link(url: str) -> str:
+    """A GitHub icon link pointing to the repository."""
+    href = _safe_url(url) or "https://github.com/rtm-cc/BlastRadius"
+    e = html.escape
+    return (
+        f'<a href="{e(href)}" class="icon-btn github-link" target="_blank" rel="noopener noreferrer" '
+        f'aria-label="GitHub repository" title="GitHub repository">'
+        f'<svg class="github-icon" viewBox="0 0 16 16" aria-hidden="true">'
+        f'<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>'
+        f'</svg></a>'
+    )
+
+
+def _page(
+    title: str,
+    boot: dict,
+    version: str,
+    wallpaper: str = "",
+    credit: str = "",
+    description: str = "",
+    repo_url: str = "",
+) -> str:
     e = html.escape
     # The name is ours (background.<ext>?v=<hash>), never config text, so it
     # is safe inside url(). The stylesheet does the rest.
     body = f'<body data-wallpaper="true" style="--wallpaper-image: url(\'{e(wallpaper)}\')">' if wallpaper else "<body>"
+    desc_html = _description(description)
+    github_btn = _github_link(repo_url)
+    meta_desc = f'<meta name="description" content="{e(description)}">\n' if description else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,18 +263,32 @@ def _page(title: str, boot: dict, version: str, wallpaper: str = "", credit: str
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
-<title>{e(title)}</title>
+{meta_desc}<title>{e(title)}</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v={version}">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v={version}">
 <meta name="theme-color" content="#2a0a10">
 <link rel="stylesheet" href="style.css?v={version}">
+<script>
+  try {{
+    var theme = localStorage.getItem("theme");
+    if (theme === "light" || theme === "dark") document.documentElement.setAttribute("data-theme", theme);
+  }} catch (_) {{}}
+</script>
 </head>
 {body}
 <a class="skip" href="#board">Skip to stories</a>
 <header class="bar">
-  <div class="brand-wrap">
-    <h1 class="brand"><a href="./" id="home">{e(title)}</a></h1>
-    {credit}
+  <div class="brand-block">
+    <div class="brand-wrap">
+      <h1 class="brand">
+        <a href="./" id="home" class="brand-link">
+          <img src="favicon.svg?v={version}" alt="" class="brand-icon" width="28" height="28">
+          <span>{e(title)}</span>
+        </a>
+      </h1>
+      {credit}
+    </div>
+    {desc_html}
   </div>
   <nav class="days" aria-label="Board day">
     <button type="button" id="prev" class="icon-btn" aria-label="Previous day">
@@ -247,11 +303,23 @@ def _page(title: str, boot: dict, version: str, wallpaper: str = "", credit: str
     </button>
     <button type="button" id="latest" class="text-btn">Latest</button>
   </nav>
-  <form class="search" id="search-form" role="search">
-    <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5 18 18"/></svg>
-    <input type="search" id="q" placeholder="Search every day" autocomplete="off" aria-label="Search stories">
-    <kbd>/</kbd>
-  </form>
+  <div class="bar-actions">
+    <form class="search" id="search-form" role="search">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5 18 18"/></svg>
+      <input type="search" id="q" placeholder="Search every day" autocomplete="off" aria-label="Search stories">
+      <kbd>/</kbd>
+    </form>
+    <button type="button" id="theme-toggle" class="icon-btn theme-toggle" aria-label="Switch theme" title="Switch theme">
+      <svg class="theme-icon-sun" viewBox="0 0 16 16" aria-hidden="true">
+        <circle cx="8" cy="8" r="3.2"/>
+        <path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1"/>
+      </svg>
+      <svg class="theme-icon-moon" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M13.2 10.2A6 6 0 1 1 5.8 2.8a6.5 6.5 0 0 0 7.4 7.4Z"/>
+      </svg>
+    </button>
+    {github_btn}
+  </div>
 </header>
 <p id="status" class="status" role="status"></p>
 <main id="board" tabindex="-1"></main>

@@ -83,6 +83,7 @@ archive:
 site:
   directory: public
   title: Blast Radius Digest
+  description: Daily curated cybersecurity intelligence and threat intel
   # Shown as "by RTM" beside the title, linking to the website.
   author: RTM
   author_url: https://rtm.cc

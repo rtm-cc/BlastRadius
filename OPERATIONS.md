@@ -104,6 +104,7 @@ All in `config/settings.yaml`; every key is optional.
 | `fetch.*`, `web_search.*`, `images.*` | | Timeouts, retries, parallelism. |
 | `archive.keep_days` | 120 | **How many days the archive and the site keep.** |
 | `site.title` | Blast Radius Digest | Page title and header. |
+| `site.description` | Daily curated cybersecurity intelligence and threat intel | Tagline under the title. |
 | `site.author` / `author_url` | RTM / https://rtm.cc | The "by RTM" link. |
 | `site.date_format`, `colored_tags` | `dmy`, true | |
 
