@@ -1,0 +1,9 @@
+# The Active Threats column's own sources, on top of sources/shared.yaml.
+# Every field is explained in config/README.md.
+
+sources:
+  - id: web_threats
+    type: web_search
+    name: "Web search: active threats"
+    query: Ransomware attacks, malware campaigns and nation-state hacking operations reported in the last 24 hours
+    engine: parallel

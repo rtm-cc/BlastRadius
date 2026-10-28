@@ -1,0 +1,27 @@
+# The AI Security column's own sources, on top of sources/shared.yaml.
+# Every field is explained in config/README.md.
+
+sources:
+  - id: embrace_the_red
+    type: rss
+    name: Embrace The Red
+    url: https://embracethered.com/blog/index.xml
+    notes: Johann Rehberger's AI red teaming and agent exploitation research; a few a month.
+
+  - id: owasp_genai
+    type: rss
+    name: OWASP GenAI Security Project
+    url: https://genai.owasp.org/feed/
+    notes: LLM Top 10 and agent security guidance; rare and authoritative.
+
+  - id: simon_willison
+    type: rss
+    name: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    notes: ~2/day of posts and links; the best running coverage of prompt injection. Mostly general AI, which the brief drops.
+
+  - id: web_ai_security
+    type: web_search
+    name: "Web search: AI security"
+    query: AI security news in the last 24 hours, such as prompt injection, AI agent vulnerabilities, jailbreaks and attackers using AI
+    engine: parallel

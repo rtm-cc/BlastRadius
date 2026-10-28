@@ -1,0 +1,27 @@
+# The Fraud & Phishing column's own sources, on top of sources/shared.yaml.
+# Every field is explained in config/README.md.
+
+sources:
+  - id: graham_cluley
+    type: rss
+    name: Graham Cluley
+    url: https://grahamcluley.com/feed/
+    notes: Scams, fraud and breaches in plain language; a few a week.
+
+  - id: sublime_security
+    type: rss
+    name: Sublime Security
+    url: https://blog.sublimesecurity.com/rss/
+    notes: Email attack research - phishing and BEC lures seen in the wild. Rare.
+
+  - id: cofense
+    type: rss
+    name: Cofense
+    url: https://cofense.com/feed/
+    notes: Teardowns of real reported phishing emails; rare.
+
+  - id: web_fraud_phishing
+    type: web_search
+    name: "Web search: fraud and phishing"
+    query: New phishing campaigns, scams and social engineering attacks reported in the last 24 hours
+    engine: parallel

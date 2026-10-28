@@ -1,0 +1,760 @@
+/* The board. Palette and card shapes carried over from the old app's
+   globals.css, so it looks the same; light and dark follow the system. */
+
+:root {
+  --background: #f7f7fa;
+  --surface: #ffffff;
+  --surface-hover: #f1f2f5;
+  --foreground: #17181c;
+  --muted: #6b7180;
+  --border: #e5e6eb;
+  --accent: #4f46e5;
+  --accent-text: #4f46e5;
+  --accent-foreground: #ffffff;
+  --warning: #d97706;
+  --bar-height: 3.5rem;
+  --column: 22rem;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0b0e;
+    --surface: #15161c;
+    --surface-hover: #1c1e26;
+    --foreground: #eceef2;
+    --muted: #9296a3;
+    --border: #24262f;
+    --accent: #6366f1;
+    --accent-text: #a5b0fc;
+    --warning: #f59e0b;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+button { font: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection { background: color-mix(in srgb, var(--accent) 30%, transparent); }
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 10;
+  padding: .5rem 1rem;
+  background: var(--surface);
+}
+.skip:focus { left: 1rem; }
+
+/* --- top bar ------------------------------------------------------------ */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1.25rem;
+  min-height: var(--bar-height);
+  padding: .5rem max(1rem, env(safe-area-inset-left)) .5rem max(1rem, env(safe-area-inset-right));
+  padding-top: max(.5rem, env(safe-area-inset-top));
+  background: color-mix(in srgb, var(--background) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+}
+.brand a { text-decoration: none; }
+
+.brand-wrap { display: flex; align-items: baseline; gap: .5rem; }
+
+/* "by RTM": quiet beside the title until hovered. */
+.credit {
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.credit:hover { color: var(--accent-text); text-decoration: underline; }
+
+.days {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0;
+  border-radius: .4rem;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+.icon-btn:hover:not(:disabled) { background: var(--surface-hover); color: var(--foreground); }
+.icon-btn:disabled { opacity: .3; cursor: default; }
+.icon-btn svg { width: .95rem; height: .95rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+.day-pick {
+  position: relative;
+  padding: .3rem .65rem;
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  background: var(--surface);
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.day-pick:hover { background: var(--surface-hover); }
+/* Kept rendered so showPicker() has an anchor; the label is what shows. */
+.day-pick input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.text-btn {
+  padding: .3rem .6rem;
+  border: 0;
+  border-radius: .5rem;
+  background: none;
+  color: var(--accent-text);
+  font-weight: 550;
+  cursor: pointer;
+}
+.text-btn:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  flex: 1 1 14rem;
+  max-width: 26rem;
+  margin-left: auto;
+  padding: 0 .6rem;
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  background: var(--surface);
+}
+.search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent); }
+.search svg { width: 1rem; height: 1rem; flex: none; fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-linecap: round; }
+.search input {
+  flex: 1;
+  min-width: 0;
+  padding: .4rem 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+.search kbd {
+  padding: 0 .35rem;
+  border: 1px solid var(--border);
+  border-radius: .3rem;
+  color: var(--muted);
+  font: .75rem/1.4 ui-monospace, monospace;
+}
+
+.status {
+  margin: 0;
+  padding: .5rem 1rem 0;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.status:empty { display: none; }
+
+.empty { padding: 2rem 1rem; color: var(--muted); text-align: center; }
+
+/* --- the board ------------------------------------------------------------ */
+
+#board { outline: none; }
+
+.columns {
+  display: flex;
+  gap: 1.25rem;
+  height: calc(100dvh - var(--bar-height) - 1px);
+  padding: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.status:not(:empty) + #board .columns { height: calc(100dvh - var(--bar-height) - 2.2rem); }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 0 0 var(--column);
+  /* Without this a flex item never shrinks below its content, and one long
+     unbreakable source name widens the whole column. */
+  min-width: 0;
+  min-height: 0;
+}
+/* --- focus on one topic ------------------------------------------------------
+   The column takes the whole width and its stories become a magazine grid:
+   every tile the same shape, so rows line up whatever the story; the lead
+   story featured across two columns and two rows; the details in a sheet
+   rather than unfolding in place, so nothing in the grid ever moves. */
+
+.columns.focused .column { flex: 1 1 auto; }
+
+.panel-body.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr));
+  /* Cards clip their overflow, which lets a grid row shrink below its
+     card; max-content keeps every row as tall as its tallest tile, and
+     stretch makes the others in the row match it. */
+  grid-auto-rows: max-content;
+  grid-auto-flow: dense;
+  align-items: stretch;
+  gap: 1.1rem;
+  padding: 1.1rem;
+}
+.panel-body.grid > * + * { margin-top: 0; }
+.panel-body.grid .panel-empty { grid-column: 1 / -1; }
+
+.tile { display: flex; flex-direction: column; }
+.tile .card-main { flex: 1; display: flex; flex-direction: column; }
+.tile .thumb { height: 10rem; flex: none; }
+.tile .card-text { flex: 1; display: flex; flex-direction: column; padding-bottom: .8rem; }
+.tile .card-title,
+.tile .card-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tile .card-title { -webkit-line-clamp: 3; line-clamp: 3; }
+.tile .card-summary { -webkit-line-clamp: 4; line-clamp: 4; }
+/* Source and time sit on the bottom edge of every tile. */
+.tile .card-meta { margin-top: auto; padding-top: .7rem; flex-wrap: nowrap; }
+.tile .card-sources { max-width: none; flex: 0 1 auto; min-width: 0; }
+.more-sources {
+  flex: none;
+  padding: 0 .35rem;
+  border-radius: 999px;
+  background: var(--surface-hover);
+  font-weight: 600;
+}
+.tile:hover .card-title { color: var(--accent-text); }
+
+@media (min-width: 900px) {
+  .tile.featured { grid-column: span 2; grid-row: span 2; }
+  /* The picture takes whatever height the text leaves. */
+  .tile.featured .thumb { flex: 1 1 auto; height: auto; min-height: 15rem; }
+  .tile.featured .card-text { flex: none; padding: 1rem 1.1rem 1rem; }
+  .tile.featured .card-title { font-size: 1.4rem; line-height: 1.2; -webkit-line-clamp: 4; line-clamp: 4; }
+  .tile.featured .card-summary { font-size: .95rem; line-height: 1.45; -webkit-line-clamp: 5; line-clamp: 5; }
+}
+
+/* The story sheet: centred on wide screens, a bottom sheet on a phone. */
+.story-sheet {
+  width: min(44rem, calc(100vw - 2rem));
+  max-width: none;
+  max-height: min(90dvh, 62rem);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  color: var(--foreground);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .35);
+}
+.story-sheet[open] { display: flex; animation: sheet-in .22s cubic-bezier(.16, 1, .3, 1); }
+.story-sheet::backdrop {
+  background: rgba(10, 8, 28, .55);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+@keyframes sheet-in {
+  from { opacity: 0; transform: translateY(14px) scale(.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes sheet-up {
+  from { transform: translateY(100%); }
+  to { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-sheet[open] { animation: none; }
+}
+
+.sheet-inner { position: relative; width: 100%; overflow-y: auto; overscroll-behavior: contain; }
+.sheet-inner .thumb { height: 17rem; }
+.sheet-close {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.sheet-close:hover { background: rgba(0, 0, 0, .7); }
+.sheet-close svg { width: .9rem; height: .9rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+
+.sheet-body { padding: 1.1rem 1.5rem 1.6rem; }
+.sheet-kicker { display: flex; align-items: center; gap: .5rem; margin: 0; }
+.sheet-topic {
+  color: hsl(var(--topic-h) 70% 55%);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.pill-update { background: var(--warning); color: #fff; }
+.sheet-title { margin: .35rem 0 .4rem; font-size: 1.45rem; line-height: 1.25; letter-spacing: -.01em; }
+.sheet-summary { margin: .9rem 0 1rem; font-size: 1rem; line-height: 1.6; }
+.sheet-read {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .5rem .95rem;
+  border-radius: .55rem;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  font-weight: 600;
+  text-decoration: none;
+}
+.sheet-read:hover { filter: brightness(1.1); }
+.sheet-section h3 {
+  margin: 1.4rem 0 .45rem;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.sheet-section p { margin: 0; line-height: 1.55; }
+.sheet-section .coverage-list { margin: 0; padding-left: .8rem; font-size: .88rem; }
+.sheet-body .developments { margin-top: 1.4rem; font-size: .85rem; }
+.sheet-body > .chips { margin-top: 1.3rem; }
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-top: 3px solid hsl(var(--topic-h) 70% 55%);
+  border-radius: .75rem;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .65rem .75rem .65rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-width: 0;
+  margin: 0;
+  font-size: .95rem;
+  font-weight: 620;
+}
+.panel-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.panel-count { color: var(--muted); font-weight: 450; font-size: .8rem; }
+.dot { width: .5rem; height: .5rem; flex: none; border-radius: 50%; background: hsl(var(--topic-h) 70% 55%); }
+
+.panel-body {
+  flex: 1;
+  min-height: 0;
+  padding: .75rem;
+  /* Vertical only. overflow-y: auto quietly makes overflow-x auto too, so
+     this is a scroll container sideways as well; with overscroll-behavior:
+     contain on both axes, a sideways swipe that starts on a card stopped
+     here and never reached the row of columns - on a phone, swiping only
+     worked in the gaps between columns. */
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-x: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.panel-body > * + * { margin-top: .75rem; }
+
+.panel-empty {
+  padding: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: .5rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+.panel-empty p { margin: 0; }
+.panel-empty-title { color: var(--foreground); font-weight: 550; margin-bottom: .25rem !important; }
+
+/* --- cards ---------------------------------------------------------------- */
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+  animation: fade-in .18s ease-out both;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0, 0, 0, .1); }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { animation: none; transition: none; }
+  .card:hover { transform: none; }
+  .thumb img { transition: none; }
+}
+
+.card-main { display: block; text-decoration: none; }
+
+/* The gradient is the placeholder: it shows until the image loads, and
+   stays when there is none or it fails. */
+.thumb {
+  position: relative;
+  height: 8rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(var(--ph) 55% 55%), hsl(calc(var(--ph) + 50) 55% 35%));
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease-out;
+}
+.card:hover .thumb img { transform: scale(1.04); }
+
+.rank {
+  position: absolute;
+  left: .5rem;
+  top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 .4rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .55);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 650;
+  backdrop-filter: blur(4px);
+}
+
+.badge-update {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  padding: .1rem .5rem;
+  border-radius: 999px;
+  background: var(--warning);
+  color: #fff;
+  font-size: .625rem;
+  font-weight: 650;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.card-text { padding: .75rem .75rem 0; }
+.card-title { margin: 0; font-weight: 560; line-height: 1.3; }
+.card-summary { margin: .3rem 0 0; color: var(--muted); font-size: .875rem; line-height: 1.35; }
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .1rem .4rem;
+  margin: .6rem 0 0;
+  color: var(--muted);
+  font-size: .75rem;
+}
+.card-sources { max-width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.card-extra { padding: .5rem .75rem .75rem; }
+.card-extra > * + * { margin-top: .5rem; }
+
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; }
+
+.chip {
+  display: inline-flex;
+  padding: .1rem .5rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent-text);
+  font-size: .6875rem;
+  font-weight: 520;
+  text-decoration: none;
+}
+.chip:hover { opacity: .75; }
+.chip-colored { background: hsl(var(--tag-h) 65% 50% / .14); color: hsl(var(--tag-h) 70% 38%); }
+@media (prefers-color-scheme: dark) {
+  .chip-colored { background: hsl(var(--tag-h) 65% 55% / .2); color: hsl(var(--tag-h) 78% 74%); }
+}
+
+.fold { color: var(--muted); font-size: .75rem; }
+.fold summary {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  font-weight: 550;
+  cursor: pointer;
+  list-style: none;
+}
+.fold summary::-webkit-details-marker { display: none; }
+.fold summary:hover { color: var(--foreground); }
+.caret { width: .7rem; height: .7rem; flex: none; fill: currentColor; transition: transform .2s; }
+.fold[open] > summary .caret { transform: rotate(90deg); }
+.fold-body { margin: .4rem 0 0; padding-left: .65rem; border-left: 2px solid var(--border); }
+.fold-body p { margin: 0; }
+.fold-body p + p { margin-top: .25rem; }
+
+.coverage > summary { color: var(--accent-text); }
+.coverage-list { list-style: none; }
+.coverage-list li + li { margin-top: .3rem; }
+.coverage-list a { text-decoration: none; }
+.coverage-list a:hover { color: var(--accent-text); text-decoration: underline; }
+
+.developments {
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-radius: .5rem;
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+.developments > summary { padding: .45rem .6rem; color: var(--foreground); }
+.developments > summary .pill { margin-left: auto; }
+.developments .fold-body { margin: 0 .6rem .6rem 1rem; padding-left: .8rem; border-left-color: color-mix(in srgb, var(--accent) 25%, transparent); }
+
+.pill {
+  padding: .05rem .4rem;
+  border-radius: 999px;
+  background: var(--surface-hover);
+  font-size: .625rem;
+  font-weight: 650;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.timeline { list-style: none; }
+.timeline li { position: relative; padding-top: .3rem; }
+.timeline li + li { margin-top: .6rem; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-.8rem - 6px);
+  top: .55rem;
+  width: .55rem;
+  height: .55rem;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.timeline li.current::before { background: var(--accent); }
+.event-head { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; }
+.event-day { color: var(--foreground); font-weight: 550; text-decoration: none; }
+.event-day:hover { text-decoration: underline; }
+.this-card { color: var(--accent-text); font-size: .625rem; font-weight: 650; text-transform: uppercase; }
+.event-title { display: block; margin-top: .15rem; color: var(--foreground); font-weight: 550; text-decoration: none; }
+a.event-title:hover { color: var(--accent-text); text-decoration: underline; }
+
+/* --- search ----------------------------------------------------------------- */
+
+.search-view { max-width: 52rem; margin: 0 auto; padding: .75rem 1rem 3rem; }
+.results-day {
+  position: sticky;
+  top: var(--bar-height);
+  margin: 1.25rem 0 .5rem;
+  padding: .35rem 0;
+  background: var(--background);
+  font-size: .85rem;
+  font-weight: 620;
+}
+.results-day a { text-decoration: none; }
+.results-day a:hover { color: var(--accent-text); }
+.results-group > * + * { margin-top: .6rem; }
+
+.result {
+  padding: .75rem .9rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid hsl(var(--topic-h) 70% 55%);
+  border-radius: .6rem;
+  background: var(--surface);
+}
+.result-topic { color: var(--muted); font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.result-title { display: block; margin-top: .1rem; font-weight: 560; text-decoration: none; }
+a.result-title:hover { color: var(--accent-text); }
+.result-summary { margin: .25rem 0 .45rem; color: var(--muted); font-size: .85rem; }
+.result-sources { margin-right: .35rem; color: var(--muted); font-size: .75rem; }
+
+/* --- wallpaper (site.background) --------------------------------------------
+   The old app's frosted glass. Nested scrolling columns do not reliably blur
+   a page-level wallpaper with backdrop-filter alone, so each column carries
+   its own fixed, enlarged copy of the wallpaper and blurs that underneath
+   its content. Cards then stay transparent over the column. */
+
+body[data-wallpaper="true"] {
+  background-color: var(--background);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--background) 18%, transparent), color-mix(in srgb, var(--background) 18%, transparent)),
+    var(--wallpaper-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body[data-wallpaper="true"] .bar { background: color-mix(in srgb, var(--background) 60%, transparent); }
+
+body[data-wallpaper="true"] .panel {
+  position: relative;
+  isolation: isolate;
+  /* Darker and quieter than the wallpaper: the blur should read as texture
+     behind the content, not become the panel's colour. */
+  background: color-mix(in srgb, var(--background) 90%, transparent);
+}
+
+body[data-wallpaper="true"] .panel::before {
+  content: "";
+  position: absolute;
+  inset: -56px;
+  z-index: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--background) 84%, transparent), color-mix(in srgb, var(--background) 84%, transparent)),
+    var(--wallpaper-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(52px) saturate(120%);
+  opacity: .9;
+  pointer-events: none;
+}
+
+body[data-wallpaper="true"] .panel > * { position: relative; z-index: 1; }
+
+/* A second blur on the cards would only darken them; let the column's
+   glass show through. */
+body[data-wallpaper="true"] .card {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--border) 70%, transparent);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .14);
+}
+
+body[data-wallpaper="true"] .result {
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+body[data-wallpaper="true"] .results-day {
+  background: color-mix(in srgb, var(--background) 70%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+body[data-wallpaper="true"] .status { color: color-mix(in srgb, var(--foreground) 80%, transparent); }
+
+/* --- narrow screens --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .bar { gap: .5rem; }
+  .search { flex-basis: 100%; max-width: none; margin-left: 0; }
+  .search kbd { display: none; }
+  :root { --bar-height: 6.4rem; }
+
+  /* Every topic becomes its own swipeable column, stacked pairs included.
+     The row owns the sideways axis and each column its vertical one. */
+  .columns {
+    gap: .75rem;
+    padding: .75rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* Swiping past the last column must not turn into "browser back". */
+    overscroll-behavior-x: contain;
+  }
+  .column { display: contents; }
+  .panel {
+    flex: 0 0 min(85vw, var(--column));
+    scroll-snap-align: center;
+    /* Android picks the pan axis from the element touched; hand both axes
+       to the native scrollers rather than to the card under the finger. */
+    touch-action: pan-x pan-y;
+  }
+  .columns.focused .panel { flex-basis: 100%; }
+  .story-sheet {
+    width: 100vw;
+    max-height: 92dvh;
+    margin: auto 0 0;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 0;
+  }
+  .story-sheet[open] { animation: sheet-up .26s cubic-bezier(.16, 1, .3, 1); }
+  .sheet-inner .thumb { height: 13rem; }
+  .sheet-body { padding: 1rem 1.1rem 1.4rem; }
+  .sheet-title { font-size: 1.25rem; }
+  .card:hover { transform: none; }
+  /* A press-and-drag on a card's image or link must scroll, not start
+     dragging the image or link out of the page. */
+  .card img, .card a { -webkit-user-drag: none; user-select: none; }
+
+  /* Phones: a fixed, filtered layer per column repaints on every scroll in
+     mobile WebViews, so the glass becomes a plain tint there. */
+  body[data-wallpaper="true"] { background-attachment: scroll; }
+  body[data-wallpaper="true"] .panel::before { background-attachment: scroll; filter: none; }
+}
+
+/* Last, so it wins over the phone animation above. */
+@media (prefers-reduced-motion: reduce) {
+  .story-sheet[open] { animation: none; }
+}

@@ -1,0 +1,168 @@
+name: Board
+
+# Three jobs:
+#
+#   test     every run, pull requests included: the unit tests and
+#            `check`, so a bad edit to config/ fails here instead of
+#            costing a morning's board.
+#   digest   the schedule, or "Run workflow" with "curate" ticked. Fetches,
+#            curates through OpenRouter, writes today's board to archive/
+#            and commits it - tomorrow's run reads it to know what is
+#            already published.
+#   pages    every run on main except a failed digest: builds the site
+#            from archive/ and deploys it to GitHub Pages.
+#
+# One workflow, not two, on purpose: a commit pushed with GITHUB_TOKEN
+# never starts another workflow, so the digest's own run has to deploy what
+# it just committed. pages checks out the branch head for the same reason -
+# the commit that started the run is the one from before the digest's.
+#
+# Set up once, in the repository (README "GitHub setup"):
+#   Settings -> Secrets and variables -> Actions -> New repository secret:
+#     OPENROUTER_API_KEY
+#   Settings -> Pages -> Source: GitHub Actions
+
+on:
+  schedule:
+    # GitHub's cron is UTC only: 06:10 UTC is 06:10 in Lisbon in winter and
+    # 07:10 in summer. A few minutes past the hour, because GitHub queues
+    # everything scheduled on the hour and a run can start late.
+    - cron: "10 6 * * *"
+  workflow_dispatch:
+    inputs:
+      curate:
+        description: "Fetch and curate today's board (untick to only redeploy the site)"
+        type: boolean
+        default: true
+      since_hours:
+        description: "Override the window, in hours (blank = since the last run)"
+        type: string
+        required: false
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+# One at a time: two digests would read the same archive and both decide
+# the same story is new. Queue rather than cancel, so a push during a run
+# waits for it.
+concurrency:
+  group: board
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -t .
+      - run: python -m top10 check
+
+  digest:
+    needs: test
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.curate)
+    runs-on: ubuntu-latest
+    # Feeds are quick; web searches and curation calls take minutes each.
+    timeout-minutes: 45
+    permissions:
+      contents: write   # commit archive/
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Curate today's board
+        id: run
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          SINCE_HOURS: ${{ inputs.since_hours }}
+        run: |
+          set +e
+          python -m top10 run ${SINCE_HOURS:+--since-hours "$SINCE_HOURS"} 2>&1 | tee run.log
+          status=${PIPESTATUS[0]}
+          set -e
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Run report"
+            echo
+            echo '```'
+            cat run.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Exit 1 wrote nothing; anything else may have, and must be kept even
+      # if a topic failed, or tomorrow would republish today's stories.
+      - name: Commit the archive
+        if: steps.run.outputs.status != '1'
+        run: |
+          if [ -z "$(git status --porcelain -- archive)" ]; then
+            echo "Nothing new in archive/."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive
+          git commit -q -m "Board for $(TZ=Europe/Lisbon date +%F)"
+          # Someone may have pushed config while this ran. Only this job
+          # writes archive/, so replaying on top of it does not conflict.
+          git pull -q --rebase origin "$GITHUB_REF_NAME"
+          git push -q origin "HEAD:$GITHUB_REF_NAME"
+
+      # 0 clean; 2 published but a topic failed to curate - a warning, since
+      # the board did go out; 1 nothing published - the run fails and GitHub
+      # emails you.
+      - name: Outcome
+        run: |
+          case "${{ steps.run.outputs.status }}" in
+            0) echo "Board published." ;;
+            2) echo "::warning title=Partial board::At least one topic failed to curate and kept its previous board. See the run report in the summary." ;;
+            *) echo "::error title=No board::Nothing was published. See the run report in the summary."; exit 1 ;;
+          esac
+
+  pages:
+    needs: [test, digest]
+    if: >-
+      !cancelled()
+      && github.event_name != 'pull_request'
+      && github.ref == 'refs/heads/main'
+      && needs.test.result == 'success'
+      && (needs.digest.result == 'success' || needs.digest.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      # The branch head, so the digest's fresh commit is what gets built.
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m top10 build-site
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - id: deploy
+        uses: actions/deploy-pages@v5

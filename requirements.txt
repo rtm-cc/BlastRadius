@@ -1,0 +1,5 @@
+feedparser==6.0.14
+requests==2.34.2
+PyYAML==6.0.3
+# zoneinfo needs a timezone database, and slim container images ship none.
+tzdata==2026.1

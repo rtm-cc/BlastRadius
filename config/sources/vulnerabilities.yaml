@@ -1,0 +1,9 @@
+# The Vulnerabilities & Patches column's own sources, on top of
+# sources/shared.yaml. Every field is explained in config/README.md.
+
+sources:
+  - id: web_vulnerabilities
+    type: web_search
+    name: "Web search: vulnerabilities"
+    query: Zero-day vulnerabilities, actively exploited flaws and emergency security patches disclosed in the last 24 hours
+    engine: parallel

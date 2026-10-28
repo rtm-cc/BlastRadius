@@ -1,0 +1,81 @@
+# ---------------------------------------------------------------------------
+# Topics: the columns of the board. Here they are slices of one subject,
+# security, so most sources are in sources/shared.yaml and every topic sees
+# them; each topic's brief (briefs/<id>.md) picks its slice, and the
+# cross-topic review keeps a story in the one column it fits best.
+#
+# Fields
+#   id          required, unique, snake_case. Names the brief, the topic's
+#               own sources file and its column. Renaming one orphans its
+#               history. "shared" is reserved.
+#   name        the column heading.
+#   language    the language summaries are written in.
+#   min_items   asked once more if the model returns fewer because it
+#               mis-copied URLs or returned nothing. Never padding.
+#   max_items   a ceiling, not a target.
+#   color       column accent, a hue 0-359.
+#   enabled     false keeps the history on the site but stops curating it.
+#
+# config/README.md walks through adding a topic and changing the layout.
+# ---------------------------------------------------------------------------
+
+topics:
+  - id: breaches
+    name: Breaches
+    language: en
+    min_items: 3
+    max_items: 12
+    color: 0
+
+  - id: vulnerabilities
+    name: Vulnerabilities & Patches
+    language: en
+    min_items: 3
+    max_items: 15
+    color: 28
+
+  - id: threats
+    name: Active Threats
+    language: en
+    min_items: 3
+    max_items: 12
+    color: 280
+
+  - id: supply_chain
+    name: Supply Chain
+    language: en
+    min_items: 0
+    max_items: 8
+    color: 190
+
+  - id: ai_security
+    name: AI Security
+    language: en
+    min_items: 0
+    max_items: 8
+    color: 160
+
+  - id: fraud_phishing
+    name: Fraud & Phishing
+    language: en
+    min_items: 0
+    max_items: 8
+    color: 45
+
+  - id: policy
+    name: Policy & Enforcement
+    language: en
+    min_items: 0
+    max_items: 8
+    color: 225
+
+# The board's columns, left to right. One line is one column: one topic fills
+# it, two share it stacked at half height each, the first on top. Phones show
+# every topic as its own column, in this order. See config/README.md.
+board:
+  columns:
+    - [breaches]
+    - [vulnerabilities]
+    - [threats]
+    - [supply_chain, ai_security]
+    - [fraud_phishing, policy]

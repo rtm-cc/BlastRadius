@@ -1,0 +1,21 @@
+# The Policy & Enforcement column's own sources, on top of
+# sources/shared.yaml. Every field is explained in config/README.md.
+
+sources:
+  - id: edpb
+    type: rss
+    name: European Data Protection Board
+    url: https://www.edpb.europa.eu/rss.xml_en
+    notes: GDPR guidelines and decisions. The path really ends "rss.xml_en".
+
+  - id: ec_digital_strategy
+    type: rss
+    name: EC Digital Strategy
+    url: https://digital-strategy.ec.europa.eu/en/rss.xml
+    notes: NIS2, Cyber Resilience Act and AI Act milestones, with some unrelated digital policy.
+
+  - id: web_policy
+    type: web_search
+    name: "Web search: policy and enforcement"
+    query: Cybersecurity regulation, data protection fines, law enforcement takedowns, arrests and sanctions against hackers in the last 24 hours
+    engine: parallel

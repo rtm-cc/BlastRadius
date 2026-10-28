@@ -1,0 +1,27 @@
+# The Breaches column's own sources, on top of sources/shared.yaml.
+# Every field is explained in config/README.md.
+
+sources:
+  - id: databreaches_net
+    type: rss
+    name: DataBreaches.net
+    url: https://databreaches.net/feed/
+    notes: ~10/day. Breach reporting with a long memory, often first on healthcare and education.
+
+  - id: hibp_breaches
+    type: rss
+    name: Have I Been Pwned
+    url: https://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches
+    notes: One item per breach loaded into HIBP, with account counts. A few a week.
+
+  - id: troy_hunt
+    type: rss
+    name: Troy Hunt
+    url: https://www.troyhunt.com/rss/
+    notes: Weekly; HIBP breach write-ups land here first.
+
+  - id: web_breaches
+    type: web_search
+    name: "Web search: breaches"
+    query: Data breaches and security incidents disclosed by companies and organizations in the last 24 hours
+    engine: parallel

@@ -1,0 +1,136 @@
+# Sources every topic sees. Security outlets carry breaches, vulnerabilities,
+# threats and fraud alike, so they are fetched once and offered to every
+# column; each topic's brief picks its slice. A topic's own sources are in
+# sources/<topic>.yaml. Every field is explained in config/README.md.
+#
+# Volumes are items in the last 24 hours, measured 2026-10-27/28. Check a
+# feed before adding it:  python -m top10 check-feed <url>
+
+sources:
+  # === News =================================================================
+
+  - id: bleeping_computer
+    type: rss
+    name: BleepingComputer
+    url: https://www.bleepingcomputer.com/feed/
+    notes: ~10/day. Fast on breaches and ransomware. Holds only 15 items.
+
+  - id: the_hacker_news
+    type: rss
+    name: The Hacker News
+    url: https://feeds.feedburner.com/TheHackersNews
+    notes: ~12/day. Good recall, often a rewrite of a BleepingComputer story.
+
+  - id: the_record
+    type: rss
+    name: The Record
+    url: https://therecord.media/feed
+    notes: ~5/day, strong on nation-state, policy and enforcement. Holds only 5 items.
+
+  - id: security_week
+    type: rss
+    name: SecurityWeek
+    url: https://www.securityweek.com/feed/
+    notes: ~10/day, enterprise focused.
+
+  - id: dark_reading
+    type: rss
+    name: Dark Reading
+    url: https://www.darkreading.com/rss.xml
+    notes: ~5/day of news, plus webinar promotion the briefs drop.
+
+  - id: cso_online
+    type: rss
+    name: CSO Online
+    url: https://www.csoonline.com/feed/
+    notes: ~3/day.
+
+  - id: wired_security
+    type: rss
+    name: WIRED Security
+    url: https://www.wired.com/feed/category/security/latest/rss
+    notes: ~1/day.
+
+  - id: risky_business_news
+    type: rss
+    name: Risky Business News
+    url: https://risky.biz/feeds/risky-business-news/
+    notes: ~1/day of short bulletins with real editorial judgement.
+
+  - id: krebs_on_security
+    type: rss
+    name: Krebs on Security
+    url: https://krebsonsecurity.com/feed/
+    notes: About one post a week, investigative.
+
+  - id: gnews_computer_security
+    type: google_news
+    name: Google News - Computer security
+    google_topic: CAAqIQgKIhtDQkFTRGdvSUwyMHZNREl5ZUY4U0FtVnVLQUFQAQ
+    max_age_hours: 24
+    max_items: 25
+    notes: On 2026-10-27 Google served this topic with a single item; cheap to keep.
+
+  # === Advisories ===========================================================
+
+  - id: cisa_advisories
+    type: rss
+    name: CISA
+    url: https://www.cisa.gov/cybersecurity-advisories/all.xml
+    notes: >-
+      ~3/day, including "CISA adds N known exploited vulnerabilities", the
+      active-exploitation signal, and ICS advisories the briefs mostly drop.
+
+  - id: sans_isc
+    type: rss
+    name: SANS Internet Storm Center
+    url: https://isc.sans.edu/rssfeed_full.xml
+    notes: ~2/day. Often the earliest sign something is exploited in the wild.
+
+  # === Research =============================================================
+
+  - id: unit42
+    type: rss
+    name: Palo Alto Unit 42
+    url: https://unit42.paloaltonetworks.com/feed/
+    notes: A few a week. Deep campaign and threat actor analysis.
+
+  - id: google_threat_intel
+    type: rss
+    name: Google Threat Intelligence (Mandiant)
+    url: https://cloudblog.withgoogle.com/topics/threat-intelligence/rss/
+    notes: A few a month. Use exactly this host; cloud.google.com serves bots an empty page.
+
+  - id: securelist
+    type: rss
+    name: Securelist
+    url: https://securelist.com/feed/
+    notes: ~1/day, Kaspersky's threat research.
+
+  - id: eset_welivesecurity
+    type: rss
+    name: ESET WeLiveSecurity
+    url: https://www.welivesecurity.com/en/rss/feed/
+    notes: A few a week. Good on APTs, scams and breaches.
+
+  - id: malwarebytes
+    type: rss
+    name: Malwarebytes
+    url: https://www.malwarebytes.com/blog/feed/index.xml
+    notes: ~3/day, strong on scams and phishing lures.
+
+  - id: tldr_sec
+    type: rss
+    name: tl;dr sec
+    url: https://rss.beehiiv.com/feeds/xgTKUmMmUm.xml
+    notes: A weekly appsec newsletter; each issue is a roundup of links.
+
+  - id: schneier
+    type: rss
+    name: Schneier on Security
+    url: https://www.schneier.com/feed/atom/
+    notes: ~1/day, mostly essays the briefs exclude. Cheap to keep.
+
+  # Left out from the FreshRSS "Security" category: the three podcasts
+  # (nothing to read), CVEMon (bare CVE ids, no context), the Google Online
+  # Security Blog (dormant), AWS Security, Semgrep and Rhino (vendor blogs).

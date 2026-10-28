@@ -1,0 +1,9 @@
+# The Supply Chain column's own sources, on top of sources/shared.yaml.
+# Every field is explained in config/README.md.
+
+sources:
+  - id: web_supply_chain
+    type: web_search
+    name: "Web search: supply chain"
+    query: Software supply chain attacks, malicious npm or PyPI packages and compromised build pipelines reported in the last 24 hours
+    engine: parallel

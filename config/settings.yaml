@@ -1,0 +1,93 @@
+# ---------------------------------------------------------------------------
+# How the pipeline runs. Topics and the layout are in topics.yaml; sources
+# every topic sees are in sources/shared.yaml, a topic's own in
+# sources/<topic>.yaml. config/README.md explains it all.
+# Every key is optional; a missing one takes the default shown in
+# top10/config.py.
+# ---------------------------------------------------------------------------
+
+# The board date - "today" - is the run's date in this timezone.
+timezone: Europe/Lisbon
+
+# OpenRouter model ids. The key comes from OPENROUTER_API_KEY.
+models:
+  # Does the real work: picks, dedupes and summarises every topic. Worth
+  # paying for - a weak model writes shallow summaries and misses repeats.
+  curate: deepseek/deepseek-v4-flash-0731
+  # Only runs the web_search sources. A `native` engine needs a model with
+  # its own search (Perplexity Sonar); the other engines work with any.
+  search: deepseek/deepseek-v4-flash
+
+fetch:
+  timeout_seconds: 45
+  retries: 2
+  max_workers: 8
+  user_agent: "BlastRadius/0.1 (+https://github.com/rtm-cc/BlastRadius)"
+
+# Each run covers everything since the previous run finished (stored in
+# archive/state.yaml), less a small overlap so nothing falls in the seam.
+# A late or skipped run is covered by the next one rather than lost, and
+# the history stops the overlap from repeating anything.
+window:
+  # The first run, with no state.yaml yet.
+  default_hours: 24
+  # Never look back less than this, or more - two weeks of downtime gives a
+  # four day board, not a two week one.
+  min_hours: 6
+  max_hours: 96
+  overlap_minutes: 30
+
+curation:
+  # Topics curated at once. Each is its own model call.
+  workers: 4
+  # Calls per topic when the answer is not valid JSON: 1 + 2 retries.
+  max_attempts: 3
+  # Extra calls when a topic comes back short because the model mis-copied
+  # URLs or returned nothing for a topic that had candidates.
+  repair_rounds: 1
+  # A big topic can legitimately take minutes.
+  timeout_seconds: 600
+  # How far back "already published" reaches, and how many stories of it
+  # each topic's prompt carries.
+  published_days: 30
+  published_limit: 150
+  # Newest N candidates per topic, or null for all of them. The cost
+  # ceiling: a call is roughly 150 tokens per candidate plus the published
+  # list, so this bounds every topic - including the catch-up run after a
+  # missed day, whose window is wider. A normal day stays well under it.
+  candidate_limit: 300
+  # One last call over only the stories about to be published, so an event
+  # picked by two topics - World and Brazil, Coimbra and Portugal - stays in
+  # the one it fits best. Cheap: it reads ~100 short lines, not candidates.
+  cross_topic_review: true
+
+web_search:
+  max_results: 5
+  timeout_seconds: 360
+  # Each result is loaded to check it exists and to read its date.
+  verify_timeout_seconds: 30
+
+# Cards without an image from the feed get the article's og:image.
+images:
+  resolve: true
+  timeout_seconds: 30
+  workers: 8
+
+archive:
+  # One JSON file per board day, committed by CI: tomorrow's run reads it to
+  # avoid repeating today's stories, and the site is built from it.
+  directory: archive
+  # Days older than this are deleted from the archive and the site.
+  keep_days: 120
+
+site:
+  directory: public
+  title: Blast Radius Digest
+  # Shown as "by RTM" beside the title, linking to the website.
+  author: RTM
+  author_url: https://rtm.cc
+  repo_url: https://github.com/rtm-cc/BlastRadius
+  # dmy, mdy or ymd.
+  date_format: dmy
+  # Give every tag its own colour, derived from its text.
+  colored_tags: true
