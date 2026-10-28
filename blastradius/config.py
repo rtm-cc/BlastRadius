@@ -91,7 +91,7 @@ class ArchiveSettings:
 class SiteSettings:
     directory: str = "public"
     title: str = "Blast Radius Digest"
-    description: str = "Daily curated cybersecurity intelligence and threat intel"
+    description: str = "Daily curated cybersecurity news and threat intel"
     repo_url: str = ""
     date_format: str = "dmy"
     colored_tags: bool = True
