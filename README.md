@@ -2,7 +2,7 @@
 
 Yesterday's security news, curated into a daily board: breaches, vulnerabilities and patches, active threats, supply chain, AI security, fraud and phishing, and policy and enforcement. A scheduled GitHub Actions run pulls security feeds, Google News and OpenRouter web searches, has one OpenRouter call per column pick, dedupe and summarise against what was already published, commits the result to `archive/`, and publishes the board to GitHub Pages.
 
-**Board:** https://rtm.cc/BlastRadius/
+**Board:** https://news.rtm.cc/
 
 There is no server and no settings page. **The configuration is the files in `config/`**: edit one, push, and the next run uses it.
 

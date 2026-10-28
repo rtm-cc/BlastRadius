@@ -1,6 +1,6 @@
 # Operating the board
 
-How to run, change and fix this without reading the code. The board is at **https://rtm.cc/BlastRadius/**.
+How to run, change and fix this without reading the code. The board is at **https://news.rtm.cc/**.
 
 - [What happens every day](#what-happens-every-day)
 - [Was today's run all right?](#was-todays-run-all-right)

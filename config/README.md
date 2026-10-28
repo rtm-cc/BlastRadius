@@ -33,10 +33,10 @@ The columns, left to right, are `board.columns` at the bottom of [`topics.yaml`]
 ```yaml
 board:
   columns:
-    - [breaches]                       # a full-height column
+    - [threats]                        # a full-height column
     - [vulnerabilities]
-    - [threats]
-    - [supply_chain, ai_security]      # two columns stacked, half the height each
+    - [ai_security]
+    - [supply_chain, breaches]         # two columns stacked, half the height each
     - [fraud_phishing, policy]
 ```
 

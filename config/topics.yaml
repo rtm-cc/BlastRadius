@@ -74,8 +74,8 @@ topics:
 # every topic as its own column, in this order. See config/README.md.
 board:
   columns:
-    - [breaches]
-    - [vulnerabilities]
     - [threats]
-    - [supply_chain, ai_security]
+    - [vulnerabilities]
+    - [ai_security]
+    - [supply_chain, breaches]
     - [fraud_phishing, policy]
