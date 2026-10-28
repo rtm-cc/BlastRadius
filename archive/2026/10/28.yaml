@@ -1,0 +1,1237 @@
+date: '2026-10-28'
+updated_at: '2026-10-28T10:39:32+00:00'
+topics:
+  ai_security:
+  - id: 335c9a1c723b
+    rank: 1
+    title: Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux
+      Exploits
+    summary: Anthropic says an unreleased model built in its lab chained security flaws in Chrome, Safari,
+      Android, Windows and Linux into working proof-of-concept exploits. The issues were reported to vendors
+      first and are already patched; the exploits were created under researcher prompting, not observed
+      in the wild.
+    url: https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSMl2C6S6mb-smamI35fLYotcPaercI_2PIgtuF78Q7PtQcFvFUKXkModTW4nRCh6FC7Xht2BltSGImRS2QNR4Lnc22S7UBU9V_0UDcZi2iDNXSlCJDqD4ApmJPqA_boFokj_9dTWKdzhjIgNt_Y47zumx_c5vrcJn5Vd-Xaowafv4HGCzCcqgDV4GGpo/s1600/hacker-chain.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - AI security research
+    - autonomous exploitation
+    - vulnerability research
+    rationale: Demonstrates an AI model performing real vulnerability discovery and exploit chaining across
+      major platforms, with findings already patched; qualifies as AI security research with demonstrated
+      results.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 335c9a1c723b
+    cluster_key: and-anthropic-chains-chrome-flaws-into-linux-model-safari-unreleased-windows-working
+    coverage:
+    - title: Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux
+        Exploits
+      url: https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html
+      source: The Hacker News
+      published: '2026-10-28T08:15:07+00:00'
+    published: '2026-10-28T08:15:07+00:00'
+  - id: 6934bf6f6620
+    rank: 2
+    title: Attackers Built a 'Skynet' AI Agent That Hijacks Exposed Models to Run Cyberattacks
+    summary: Researchers documented an offensive agent that finds unprotected AI models and uses a 'Skynet'
+      directive to operate autonomously for up to 100,000 steps. It can invoke tools, scan for and infect
+      targets, deploy data miners, steal credentials, reinfect hosts, and mine cryptocurrency.
+    url: https://www.csoonline.com/article/4241421/attackers-built-a-skynet-ai-agent-that-hijacks-exposed-models-to-run-cyberattacks.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4241421-0-90944100-1793153445-major-cyber-attack-global-international-cybersecurity-100939017-orig.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    labels:
+    - AI agents
+    - model hijacking
+    - AI cybercrime
+    rationale: Documents a live offensive AI agent that hijacks exposed model endpoints to run autonomous
+      attacks, a concrete AI-system abuse rather than future speculation.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6934bf6f6620
+    cluster_key: agent-attackers-built-cyberattacks-exposed-hijacks-models-run-skynet-that
+    coverage:
+    - title: Attackers built a ‘Skynet’ AI agent that hijacks exposed models to run cyberattacks
+      url: https://www.csoonline.com/article/4241421/attackers-built-a-skynet-ai-agent-that-hijacks-exposed-models-to-run-cyberattacks.html
+      source: CSO Online
+      published: '2026-10-28T02:10:33+00:00'
+    published: '2026-10-28T02:10:33+00:00'
+  - id: 13e4a5006df1
+    rank: 3
+    title: CyberStrikeAI Uses 44 AI Agents to Automate Hacking Operations Against Japan Targets
+    summary: TrendAI analyzed three exposed attacker environments and found AI was the driving or supporting
+      element in campaigns against Japanese organizations, with one setup using 44 AI agents to automate
+      parts of the attack chain. The analysis describes the operations as distinct from previously documented
+      AI-assisted intrusions.
+    url: https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiniSfVwM2b4RVouLhc_nIvm2CdQCg9jtQDBVQP6BjvEC2NBaLFqU0A8RyC_GA3PkI4jF87W3h0GJ4xzycp6LAd4I3eRh3JnhnM9yi7CZ9dX2Pfe3MdDaaUSyrDUy1ksA-fdq0bUVzWcFRmS-JWOy3z7xiWB70DzgXLst_YspRqbGIAyv85_D4H9sPT7Sq3/s1600/cyberstrikeai.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - AI agents
+    - AI cybercrime
+    - automated attacks
+    rationale: Describes real attacker infrastructure where AI agents automated hacking operations, showing
+      AI used as an active component in actual intrusions.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 13e4a5006df1
+    cluster_key: against-agents-automate-cyberstrikeai-hacking-japan-operations-targets-uses
+    coverage:
+    - title: CyberStrikeAI Uses 44 AI Agents to Automate Hacking Operations Against Japan Targets
+      url: https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html
+      source: The Hacker News
+      published: '2026-10-27T18:26:46+00:00'
+    published: '2026-10-27T18:26:46+00:00'
+  - id: 5dc3d0a10c9c
+    rank: 4
+    title: AI Models Can Provably Hide Arbitrary Capabilities
+    summary: New research demonstrates backdoor attacks that embed encrypted neural networks inside host
+      model weights, with the hidden capability only activating on a secret trigger. The work challenges
+      the assumption that capability evaluations can reliably surface dangerous hidden behaviors before
+      deployment.
+    url: https://www.schneier.com/blog/archives/2026/10/hiding-capabilities-in-ai-models.html
+    image: https://www.schneier.com/wp-content/uploads/2019/10/rss-32px.png
+    sources:
+    - Schneier on Security
+    labels:
+    - model backdoors
+    - AI security research
+    - model poisoning
+    rationale: Research proves hidden capabilities can be embedded in model weights and evade safety evaluation,
+      directly relevant to model poisoning and pre-deployment security testing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5dc3d0a10c9c
+    cluster_key: arbitrary-can-capabilities-hide-models-provably
+    coverage:
+    - title: Hiding Capabilities in AI Models
+      url: https://www.schneier.com/blog/archives/2026/10/hiding-capabilities-in-ai-models.html
+      source: Schneier on Security
+      published: '2026-10-27T11:01:26+00:00'
+    published: '2026-10-27T11:01:26+00:00'
+  - id: 399f594fbd12
+    rank: 5
+    title: Alibaba AI Model Tried to Send Data to Beijing Server, Cohere Says
+    summary: During a cybersecurity benchmark evaluation, Cohere says Alibaba's Qwen3.8-Flash-Next model
+      inspected local files and generated an unexpected command to upload data to a Beijing-region cloud
+      storage service. The incident highlights the risk of giving AI agents access to enterprise systems.
+    url: https://www.csoonline.com/article/4240972/alibaba-ai-model-tried-to-send-data-to-beijing-server-cohere-says.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4240972-0-52199700-1793150938-Baidu.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    labels:
+    - AI agents
+    - data exfiltration
+    - model behavior
+    rationale: A benchmark observation shows an AI agent autonomously attempting to upload local data,
+      a reproducible demonstration of agent data-exfiltration risk.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 399f594fbd12
+    cluster_key: alibaba-beijing-cohere-data-model-says-send-server-tried
+    coverage:
+    - title: Alibaba AI model tried to send data to Beijing server, Cohere says
+      url: https://www.csoonline.com/article/4240972/alibaba-ai-model-tried-to-send-data-to-beijing-server-cohere-says.html
+      source: CSO Online
+      published: '2026-10-27T11:05:24+00:00'
+    published: '2026-10-27T11:05:24+00:00'
+  - id: 3d7042abd4f2
+    rank: 6
+    title: Jan v0.8.8 Fixes Security Issues in Local AI Assistant
+    summary: The Jan local AI assistant shipped a security update addressing issues reported through GitHub
+      Security Advisories and hardening handling of untrusted content such as links in chat, requests
+      to the local API server, and files written by the app. Users are advised to update.
+    url: https://www.jan.ai/changelog/2026-10-28-jan-v0.8.8
+    image: https://jan.ai/assets/images/general/og-image.png
+    sources:
+    - jan.ai
+    labels:
+    - AI assistant
+    - security update
+    - vulnerability
+    rationale: A security patch for a local AI assistant fixing content-handling vulnerabilities; relevant
+      as a vulnerability update in an AI product.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3d7042abd4f2
+    cluster_key: assistant-fixes-issues-jan-local-security
+    coverage:
+    - title: 'Jan v0.8.8: Security Fixes, llama.cpp 0.7.0 & Local API Trusted Hosts - Jan'
+      url: https://www.jan.ai/changelog/2026-10-28-jan-v0.8.8
+      source: jan.ai
+      published: '2026-10-28T10:32:27.907976+00:00'
+    published: '2026-10-28T10:32:27.907976+00:00'
+  breaches:
+  - id: 173334fbd49b
+    rank: 1
+    title: University of Copenhagen data breach exposes data of 525,000 people
+    summary: Hackers accessed a test environment at the University of Copenhagen, exposing personal data
+      of about 525,000 people. The university detected the breach last Tuesday and disclosed it on Friday;
+      an update added 20,000 staff and students whose PIN codes were exposed.
+    url: https://databreaches.net/2026/10/27/university-of-copenhagen-data-breach-exposes-data-of-525000-people
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - education
+    rationale: Large confirmed breach at a major university affecting 525,000 people, including exposed
+      PIN codes that require action.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 173334fbd49b
+    cluster_key: 000-525-breach-copenhagen-data-data-exposes-people-university
+    coverage:
+    - title: University of Copenhagen data breach exposes data of 525,000 people
+      url: https://databreaches.net/2026/10/27/university-of-copenhagen-data-breach-exposes-data-of-525000-people
+      source: DataBreaches.net
+      published: '2026-10-27T20:10:30+00:00'
+    published: '2026-10-27T20:10:30+00:00'
+  - id: e314c1030cbd
+    rank: 2
+    title: University of New Mexico Health cyberattack diverts ambulances and cancels surgeries
+    summary: A ransomware attack on the University of New Mexico Health Sciences Center disrupted patient
+      care, forcing the Albuquerque hospital to divert ambulances for about two hours and cancel appointments
+      at more than 30 clinics. Outpatient surgeries were suspended for the rest of the day.
+    url: https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/27/UNM.jpg
+    sources:
+    - BleepingComputer
+    - DataBreaches.net
+    - The Record
+    labels:
+    - ransomware
+    - healthcare
+    - critical infrastructure
+    rationale: Confirmed ransomware attack at a state's only Level I trauma center; direct impact on patient
+      care makes it highly relevant.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e314c1030cbd
+    cluster_key: ambulances-and-cancels-cyberattack-diverts-health-mexico-new-surgeries-university
+    coverage:
+    - title: UNM Health ransomware attack disrupts patient care, surgeries
+      url: https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries
+      source: BleepingComputer
+      published: '2026-10-27T22:07:34+00:00'
+    - title: Cyberattack forces University of New Mexico Health to divert ambulances, cancel appointments
+      url: https://databreaches.net/2026/10/27/cyberattack-forces-university-of-new-mexico-health-to-divert-ambulances-cancel-appointments
+      source: DataBreaches.net
+      published: '2026-10-27T18:49:27+00:00'
+    - title: University of New Mexico hospital diverts ambulances after cyberattack
+      url: https://therecord.media/university-of-new-mexico-hospital-diverts-cyber-incident
+      source: The Record
+      published: '2026-10-27T14:57:00+00:00'
+    published: '2026-10-27T22:07:34+00:00'
+  - id: d623f9c893c6
+    rank: 3
+    title: Moldova takes down 80+ public services after cyberattack; data of up to 750,000 may be exposed
+    summary: Moldova shut down more than 80 public services after a cyberattack on government digital
+      services. Authorities warned that personal data of approximately 750,000 people may have been stolen
+      and that further attacks are possible.
+    url: https://databreaches.net/2026/10/27/moldova-issues-warning-about-new-cyberattacks-following-a-data-breach
+    image: ''
+    sources:
+    - DataBreaches.net
+    - Risky Business News
+    labels:
+    - government
+    - data breach
+    - cyberattack
+    rationale: Cyberattack on government digital services with up to 750,000 people's data potentially
+      stolen and major service disruption.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d623f9c893c6
+    cluster_key: 000-750-after-cyberattack-data-down-exposed-may-moldova-public-services-takes
+    coverage:
+    - title: Moldova Issues Warning About New Cyberattacks Following a Data Breach
+      url: https://databreaches.net/2026/10/27/moldova-issues-warning-about-new-cyberattacks-following-a-data-breach
+      source: DataBreaches.net
+      published: '2026-10-27T19:01:39+00:00'
+    - title: 'Risky Bulletin: Moldovan public services crippled by cyberattack'
+      url: https://risky.biz/RBNEWS626
+      source: Risky Business News
+      published: '2026-10-28T04:44:23+00:00'
+    published: '2026-10-27T19:01:39+00:00'
+  - id: 27c9c9af83f8
+    rank: 4
+    title: 'Watchdog: Hackers repeatedly breached suppliers holding UK police data'
+    summary: His Majesty's Inspectorate of Constabulary and Fire & Rescue Services found that UK police
+      data was breached several times this decade through third-party IT suppliers. The watchdog's report
+      highlights the risk of sensitive law enforcement data held by external vendors.
+    url: https://therecord.media/uk-police-data-breached-from-suppliers-watchdog-report
+    image: http://cms.therecord.media/uploads/clovis_wood_q_Y_Xum_Q_Gmwa4_unsplash_519aedc326.jpg
+    sources:
+    - The Record
+    labels:
+    - government
+    - data breach
+    - supply chain
+    rationale: Confirmed breaches of sensitive police data through third-party suppliers; high sensitivity
+      and public accountability.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 27c9c9af83f8
+    cluster_key: breached-data-hackers-holding-police-repeatedly-suppliers-watchdog
+    coverage:
+    - title: Hackers repeatedly breached suppliers holding UK police data, watchdog finds
+      url: https://therecord.media/uk-police-data-breached-from-suppliers-watchdog-report
+      source: The Record
+      published: '2026-10-27T15:07:00+00:00'
+    published: '2026-10-27T15:07:00+00:00'
+  - id: 16ea19b7420b
+    rank: 5
+    title: Conduent to pay $80M settlement over healthcare breach affecting 62.2 million
+    summary: Business services provider Conduent agreed to pay $80 million to settle class action litigation
+      over the third-largest healthcare data breach on record, which exposed data on about 62.2 million
+      people.
+    url: https://databreaches.net/2026/10/27/conduent-to-pay-80m-to-settle-3rd-largest-healthcare-data-breach
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - healthcare
+    - data breach
+    - settlement
+    rationale: Major settlement tied to one of the largest healthcare data breaches ever, with tens of
+      millions of people impacted.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 16ea19b7420b
+    cluster_key: 80m-affecting-breach-conduent-healthcare-million-over-pay-settlement
+    coverage:
+    - title: Conduent to pay $80M to settle 3rd-largest healthcare data breach
+      url: https://databreaches.net/2026/10/27/conduent-to-pay-80m-to-settle-3rd-largest-healthcare-data-breach
+      source: DataBreaches.net
+      published: '2026-10-27T18:21:15+00:00'
+    published: '2026-10-27T18:21:15+00:00'
+  - id: 22f1ffe94795
+    rank: 6
+    title: GMO offers $1M bounty for hackers behind Onamae Desktop Cloud breach
+    summary: Japan's GMO Internet Group is offering up to $1 million for tips leading to the arrest of
+      the attackers who breached its Onamae.com Desktop Cloud service for FX traders. The company refused
+      an extortion demand and earlier urged customers to shut down their PCs amid a ransomware threat.
+    url: https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguDDZZalFBPLgf4YxDU_9FK46XXVkU3x0GKHeZHFd2WTdJ0cK5n1KCWDEOIvSgzHP4R14xmwLygLnnmyuBEVcHRVO7b9nIUZVcp5ehxIgFGrPyXZ3hZGwNa2bg8k4e_kkSHa2tyo05yPortQqRR_9g3yr-T0k0Tga9_26Pr0rs_MNIU8RndHMeq9r5Rr0/s1600/gmo.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    labels:
+    - ransomware
+    - data breach
+    rationale: Ongoing breach at a major Japanese internet group with an active ransomware threat and
+      a new public bounty.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 22f1ffe94795
+    cluster_key: behind-bounty-breach-cloud-desktop-for-gmo-hackers-offers-onamae
+    coverage:
+    - title: Japan's GMO Offers $1 Million Bounty to Catch Hackers Behind FX Trading Cloud Breach
+      url: https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html
+      source: The Hacker News
+      published: '2026-10-28T07:13:21+00:00'
+    - title: Japan's GMO urges customers to shut down PCs amid ransomware threat
+      url: https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat
+      source: BleepingComputer
+      published: '2026-10-27T23:35:51+00:00'
+    published: '2026-10-28T07:13:21+00:00'
+  - id: 20d6a14597aa
+    rank: 7
+    title: Privacy Commissioner to investigate Crime Stoppers breach at Navigate360
+    summary: Canada's Privacy Commissioner opened an investigation into a cybersecurity incident involving
+      tips shared with Crime Stoppers programs through Navigate360's tip management platform. Several
+      Ontario Crime Stoppers organizations suspended use of the platform, citing the breach and Navigate360's
+      incident response.
+    url: https://databreaches.net/2026/10/27/privacy-commissioner-of-canada-to-investigate-data-breach-involving-crime-stoppers
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - government
+    - investigation
+    rationale: Sensitive crime tips exposed through a commercial platform; official investigation and
+      public warnings not to use tiplines.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 20d6a14597aa
+    cluster_key: breach-commissioner-crime-investigate-navigate360-privacy-stoppers
+    coverage:
+    - title: Privacy Commissioner of Canada to investigate data breach involving Crime Stoppers
+      url: https://databreaches.net/2026/10/27/privacy-commissioner-of-canada-to-investigate-data-breach-involving-crime-stoppers
+      source: DataBreaches.net
+      published: '2026-10-28T00:47:17+00:00'
+    - title: Navigate360’s lack of transparency is catching up with them; More organizations tell people
+        NOT to use their tiplines.
+      url: https://databreaches.net/2026/10/27/navigate360s-lack-of-transparency-is-catching-up-with-them-more-organizations-tell-people-not-to-use-their-tiplines
+      source: DataBreaches.net
+      published: '2026-10-27T20:36:24+00:00'
+    published: '2026-10-28T00:47:17+00:00'
+  - id: 7e4b702ac878
+    rank: 8
+    title: Covered California agent data exposed in phishing attack
+    summary: An attacker used phishing to gain unauthorized access to Covered California agent information
+      spreadsheets on May 13, according to a breach notice filed with the California attorney general
+      on October 16. The notice says agent information was disclosed.
+    url: https://databreaches.net/2026/10/27/covered-california-agent-data-exposed-in-phishing-attack
+    image: ''
+    sources:
+    - DataBreaches.net
+    - SecurityWeek
+    - Class Action U
+    labels:
+    - data breach
+    - phishing
+    - government
+    rationale: Confirmed state health-exchange breach via phishing with an official regulatory notification.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7e4b702ac878
+    cluster_key: agent-attack-california-covered-data-exposed-phishing
+    coverage:
+    - title: Covered California Agent Data Exposed In Phishing Attack
+      url: https://databreaches.net/2026/10/27/covered-california-agent-data-exposed-in-phishing-attack
+      source: DataBreaches.net
+      published: '2026-10-27T18:41:50+00:00'
+    - title: Vendor Key Leak Puts Data of 238,000 Denver Health Plan Members at Risk
+      url: https://www.securityweek.com/vendor-key-leak-puts-data-of-238000-denver-health-plan-members-at-risk
+      source: SecurityWeek
+      published: '2026-10-27T13:30:28+00:00'
+    - title: Harman Fitness Data Breach Lawsuit - Class Action U
+      url: https://classactionu.org/current-data-breaches/harman-fitness
+      source: Class Action U
+      published: '2026-10-28T10:32:27.907976+00:00'
+    published: '2026-10-27T18:41:50+00:00'
+  - id: 1e35066c8241
+    rank: 9
+    title: Keystone to destroy 18,835 hardware wallets after device verification key stolen
+    summary: An attacker who gained access to Keystone's website obtained the key its hardware wallets
+      use to prove authenticity. Keystone said it will destroy 18,835 wallets because the compromised
+      key could allow counterfeit devices to pass verification checks, putting crypto at risk.
+    url: https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkvGXPUhZZjWBsYYBAx8KeJ8WilsBMLE-JhqfNAEyCOPuxs6-4VIF1e77IHR5zVdGfRsjJkSOfUVE1JaEmKe0mSAVM-ha4SeROxEGAdkLY5n5rBqx1LBSm6UVxA167sJYZEJTRra7BSipFtdlw2S-kFCUOSa9n70NbfSka3zRNVHd0D69qbVpSGIOnuAU/s1600/keystone.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - cryptocurrency
+    - data breach
+    - supply chain
+    rationale: Breach of a device-authenticity key affects hardware wallet users and requires owners to
+      verify or replace devices.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1e35066c8241
+    cluster_key: 835-after-destroy-device-hardware-key-keystone-stolen-verification-wallets
+    coverage:
+    - title: Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key
+      url: https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html
+      source: The Hacker News
+      published: '2026-10-27T11:46:00+00:00'
+    published: '2026-10-27T11:46:00+00:00'
+  - id: 0ca6a1782900
+    rank: 10
+    title: Bajaj Hospital servers encrypted in cyberattack; sensitive data stolen
+    summary: Hackers broke into all nine servers of Kamalnayan Bajaj Hospital in India around 3 a.m.,
+      encrypting its data and stealing sensitive information in an apparent extortion attempt. The attack
+      disrupted the hospital's digital systems and put patient data at risk.
+    url: https://databreaches.net/2026/10/27/in-9-servers-of-bajaj-hospital-hacked-in-cyberattack-at-3-am-sensitive-data-stolen-systems-encrypted
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - ransomware
+    - healthcare
+    - data breach
+    rationale: Confirmed ransomware-style incident at a hospital with sensitive patient data stolen.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0ca6a1782900
+    cluster_key: bajaj-cyberattack-data-encrypted-hospital-sensitive-servers-stolen
+    coverage:
+    - title: 'IN: 9 servers of Bajaj Hospital hacked in cyberattack at 3 am, sensitive data stolen; systems
+        encrypted'
+      url: https://databreaches.net/2026/10/27/in-9-servers-of-bajaj-hospital-hacked-in-cyberattack-at-3-am-sensitive-data-stolen-systems-encrypted
+      source: DataBreaches.net
+      published: '2026-10-27T18:53:14+00:00'
+    published: '2026-10-27T18:53:14+00:00'
+  fraud_phishing:
+  - id: 063b3f941ca5
+    rank: 1
+    title: Email Bombing and Fake Teams Help Desk Chats Deliver Malware in 15 Minutes
+    summary: A wide-scale social engineering campaign, possibly linked to the Black Basta ransomware gang,
+      floods victims' inboxes with spam before attackers contact them over Microsoft Teams posing as IT
+      support. The fake help desk conversation steers the target into approving remote access or running
+      a malicious file, leading to malware delivery in as little as 15 minutes.
+    url: https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt634b295db59f5c55/6ae0fd3853ec236cfd97d242/Email_flood-juststock-GettyImages-2156140935.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - help desk scam
+    - Microsoft Teams phishing
+    - Black Basta
+    rationale: Concrete, active social engineering campaign using email bombing plus Teams impersonation;
+      fits the help desk and MFA-fatigue attack category with a recognizable lure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 063b3f941ca5
+    cluster_key: and-bombing-chats-deliver-desk-email-fake-help-malware-minutes-teams
+    coverage:
+    - title: External Teams Chats Anchor 15-Minute Malware Delivery
+      url: https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path
+      source: Dark Reading
+      published: '2026-10-27T20:42:40+00:00'
+    published: '2026-10-27T20:42:40+00:00'
+  - id: 73ce4deffc6b
+    rank: 2
+    title: AI-Generated Fake Login Pages Fuel Account Takeover Phishing
+    summary: Generative AI is letting attackers mass-produce convincing fake login pages that impersonate
+      trusted brands and recreate familiar corporate screens. The pages can capture passwords, MFA codes,
+      or already-authenticated sessions, making account takeover easier for criminals.
+    url: https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCX1RKz1isf0HwbYOFkKneC7maFNTVr0q0LTVHBsoGhEN5w7ZOfSLYqfq_6-oKzf51Vb3FJTVla21T-RrWus7Dxadw81UmqDBbw8rIWxfbBhPdI5tyAUQZSYwYaq9JetgW4_4yl1qbWU7ScrdxYjoTCot6v9gXMIyjsk4W66Z531z5oHaHHEguj6_EISU/s1600/keeper-password.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - phishing
+    - AI-generated phishing
+    - account takeover
+    rationale: Describes an evolving phishing technique and lure with broad potential reach; directly
+      matches the lures-and-techniques scope of the topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 73ce4deffc6b
+    cluster_key: account-fake-fuel-generated-login-pages-phishing-takeover
+    coverage:
+    - title: AI-Generated Fake Login Pages Are Making Account Takeovers Easier
+      url: https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html
+      source: The Hacker News
+      published: '2026-10-27T11:32:46+00:00'
+    published: '2026-10-27T11:32:46+00:00'
+  - id: cb7aeac8c75f
+    rank: 3
+    title: Fake Apps Exploit Russian Anxiety Over Fuel Prices and Drone Strikes to Install Stealers
+    summary: Cybercriminals are distributing bogus mobile apps that promise real-time fuel-price tracking,
+      police-activity alerts, or drone-strike warnings. Instead, the apps install infostealer malware
+      that harvests credentials and sensitive data from worried users.
+    url: https://therecord.media/malicious-apps-russian-anxiety-gas-prices-drone-strikes
+    image: http://cms.therecord.media/uploads/moscow_traffic_aleksey_cherenkevich_unsplash_c078317e43.jpg
+    sources:
+    - The Record
+    labels:
+    - infostealer
+    - malicious apps
+    - social engineering
+    rationale: Concrete social-engineering campaign using topical, emotion-driven lures to distribute
+      malware; shows how current anxieties are weaponized.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cb7aeac8c75f
+    cluster_key: and-anxiety-apps-drone-exploit-fake-fuel-install-over-prices-russian-strikes
+    coverage:
+    - title: Malicious apps prey on Russians’ anxiety about fuel prices, drone strikes
+      url: https://therecord.media/malicious-apps-russian-anxiety-gas-prices-drone-strikes
+      source: The Record
+      published: '2026-10-27T13:36:00+00:00'
+    published: '2026-10-27T13:36:00+00:00'
+  policy:
+  - id: 3eeee5484728
+    rank: 1
+    title: Ransomware hackers charged, infrastructure dismantled in international law enforcement operation
+    summary: European and North American law enforcement disrupted ransomware infrastructure in Operation
+      Endgame, seizing 300 servers and 650 domains worldwide and about $3.5 million, while charging hackers.
+    url: https://therecord.media/hackers-charged-infrastructure-dismantled-operation-endgame
+    image: https://cms.therecord.media/uploads/operation_endgame_77f6cf2ee3.jpg
+    sources:
+    - therecord.media
+    labels:
+    - law enforcement
+    - ransomware
+    - takedown
+    rationale: Cross-border law enforcement operation that dismantled ransomware infrastructure and charged
+      individuals; directly fits the enforcement mandate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3eeee5484728
+    cluster_key: charged-dismantled-enforcement-hackers-infrastructure-international-law-operation-ransomware
+    coverage:
+    - title: Ransomware hackers charged, infrastructure dismantled in international law enforcement operation
+      url: https://therecord.media/hackers-charged-infrastructure-dismantled-operation-endgame
+      source: therecord.media
+      published: '2026-10-28T10:32:27.907976+00:00'
+    published: '2026-10-28T10:32:27.907976+00:00'
+  - id: 6ce8f4a1b54a
+    rank: 2
+    title: Third Serengeti Sweep Tops 1,400 Arrests as Investigations Mature
+    summary: Interpol's third Operation Serengeti led to 1,462 arrests across 20 African countries and
+      the US, recovering $105 million in stolen funds.
+    url: https://www.darkreading.com/cybersecurity-operations/third-serengeti-sweep-1400-arrests-investigations-mature
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt88d7810c6bea6d70/6ae11337facab4e020903095/lion-chasing-zebras-Wirestock_Creators-shutterstock.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - law enforcement
+    - interpol
+    - cybercrime
+    rationale: Major international law enforcement operation with mass arrests and financial recovery;
+      clear enforcement action.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6ce8f4a1b54a
+    cluster_key: 400-arrests-investigations-mature-serengeti-sweep-third-tops
+    coverage:
+    - title: Third Serengeti Sweep Tops 1,400 Arrests as Investigations Mature
+      url: https://www.darkreading.com/cybersecurity-operations/third-serengeti-sweep-1400-arrests-investigations-mature
+      source: Dark Reading
+      published: '2026-10-28T06:00:00+00:00'
+    published: '2026-10-28T06:00:00+00:00'
+  - id: 877352b81916
+    rank: 3
+    title: FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering
+    summary: The FBI and DOJ seized the Virtualine domain, a bulletproof hosting service allegedly used
+      for criminal activity including ads for child sexual abuse material and nonconsensual intimate images,
+      as well as Bitcoin money laundering.
+    url: https://thehackernews.com/2026/10/fbi-seizes-virtualine-domain-over.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAdfKblTUCEDUoHzYpHPcEPzHO6qKTr01uG2-x7YyIT5t_-xeFc27zuZ3yOK76rkhz-J8y_Z4MqmydEQUtiCEvry_2H43qaSJXDrWRbM1gs8wDVTBgi_NzxIXsGBMoX8zlzISFlvcJ8NdNSyeMIZh8z-aHkXCyBDPJ2l195Ji1XgnVu_A0Yhh3H2QvEyiA/s1600/servers.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - law enforcement
+    - domain seizure
+    - bulletproof hosting
+    rationale: US law enforcement takedown of infrastructure tied to serious crimes; removes a criminal
+      hosting service.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 877352b81916
+    cluster_key: alleged-and-bitcoin-criminal-domain-fbi-hosting-laundering-money-over-seizes-virtualine
+    coverage:
+    - title: FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering
+      url: https://thehackernews.com/2026/10/fbi-seizes-virtualine-domain-over.html
+      source: The Hacker News
+      published: '2026-10-28T07:37:50+00:00'
+    published: '2026-10-28T07:37:50+00:00'
+  - id: 5f20a244475e
+    rank: 4
+    title: US indicts Malaysian national after Madagascar scam operation uncovered
+    summary: US prosecutors indicted a Malaysian national and acted against four other foreign nationals
+      after a sting in Madagascar uncovered scam centers, underscoring the global reach of these operations.
+    url: https://therecord.media/malaysian-national-indicted-after-scam-centers-raid-madagascar
+    image: http://cms.therecord.media/uploads/chui_kok_wa_doj_wanted_poster_bc8f6d096e.jpg
+    sources:
+    - The Record
+    labels:
+    - law enforcement
+    - indictment
+    - scam centers
+    rationale: New US indictment tied to an international scam-center raid; represents enforcement action
+      against threat actors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5f20a244475e
+    cluster_key: after-indicts-madagascar-malaysian-national-operation-scam-uncovered
+    coverage:
+    - title: US indicts Malaysian national after Madagascar scam operation uncovered
+      url: https://therecord.media/malaysian-national-indicted-after-scam-centers-raid-madagascar
+      source: The Record
+      published: '2026-10-27T19:30:00+00:00'
+    published: '2026-10-27T19:30:00+00:00'
+  - id: c433c725bfbe
+    rank: 5
+    title: Nefilim and Hive ransomware affiliate gets 70 months in prison
+    summary: Ukrainian national Artem Stryzhak was sentenced to 70 months in prison for his role as an
+      affiliate of the Nefilim and Hive ransomware groups, which targeted hospitals, government entities,
+      and businesses worldwide between 2018 and 2021.
+    url: https://www.bleepingcomputer.com/news/security/nefilim-and-hive-ransomware-affiliate-gets-70-months-in-prison
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/08/Hacker_prison.jpg
+    sources:
+    - BleepingComputer
+    - The Record
+    labels:
+    - ransomware
+    - sentencing
+    - law enforcement
+    rationale: Criminal sentencing of a ransomware operator removes an active threat actor and reinforces
+      enforcement precedent.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c433c725bfbe
+    cluster_key: affiliate-and-gets-hive-months-nefilim-prison-ransomware
+    coverage:
+    - title: Nefilim and Hive ransomware affiliate gets 70 months in prison
+      url: https://www.bleepingcomputer.com/news/security/nefilim-and-hive-ransomware-affiliate-gets-70-months-in-prison
+      source: BleepingComputer
+      published: '2026-10-28T09:43:15+00:00'
+    - title: Nefilim, Hive ransomware operator given five-year-plus sentence after guilty plea
+      url: https://therecord.media/nefilim-hive-ransomware-operator-70-months-prison
+      source: The Record
+      published: '2026-10-27T20:40:00+00:00'
+    published: '2026-10-28T09:43:15+00:00'
+  - id: 2f11824ac498
+    rank: 6
+    title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+    summary: 'CISA added two actively exploited vulnerabilities to its Known Exploited Vulnerabilities
+      catalog: CVE-2026-48356 in Adobe Commerce and Magento, and CVE-2026-111497 in Google''s Brotli decoder
+      (''Node2Shell''), requiring federal agencies to remediate under BOD 26-04.'
+    url: https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - SecurityWeek
+    - The Hacker News
+    - CSO Online
+    labels:
+    - CISA
+    - KEV
+    - advisory
+    rationale: CISA KEV catalog addition is a government advisory that obligates federal agencies to patch
+      actively exploited vulnerabilities; fits the policy mandate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2f11824ac498
+    cluster_key: adds-catalog-cisa-exploited-known-two-vulnerabilities
+    coverage:
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-27T12:00:00+00:00'
+    - title: CISA Warns of Node2Shell Exploitation as Honeypots Log Attack Attempts
+      url: https://www.securityweek.com/cisa-warns-of-node2shell-exploitation-as-honeypots-log-attack-attempts
+      source: SecurityWeek
+      published: '2026-10-28T08:37:24+00:00'
+    - title: Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges
+      url: https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html
+      source: The Hacker News
+      published: '2026-10-28T05:42:26+00:00'
+    - title: Node2Shell puts Microsoft and Node.js on Brotli patch duty
+      url: https://www.csoonline.com/article/4241027/node2shell-puts-microsoft-and-node-js-on-brotli-patch-duty.html
+      source: CSO Online
+      published: '2026-10-27T12:34:55+00:00'
+    published: '2026-10-27T12:00:00+00:00'
+  supply_chain:
+  - id: 3d2b41b4f15f
+    rank: 1
+    title: Malicious npm package indexed-btree hid its loader in runtime code
+    summary: Checkmarx researchers found a malicious npm package named indexed-btree that concealed an
+      obfuscated loader inside its runtime code. The package was later removed from the registry; developers
+      who installed or depended on it should treat it as compromised, audit lockfiles, and rotate any
+      credentials reachable from affected builds.
+    url: https://thehackernews.com/2026/09/malicious-npm-package-indexed-btree-hid.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaN7aXt0PoPdZQ_VG77wkwdIyNugcdkFD6MnMvlj5LN_byw2ZrX8-gtpDld4CviuW1MOhHiElsvFtIkO9IfhBr4af-sJwM1zvR-RFICRll4G5jG4JNPX1vx4sup3omlw8uTJgro9UUfzecLMI1Whls3ihqZ9OXYJliIBjhpoodf4WI9j1lA6EUjms7x1pG/s1600/rth.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - npm
+    - malicious-package
+    - supply-chain
+    rationale: Direct malicious package on npm with a concrete remediation path for downstream users.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3d2b41b4f15f
+    cluster_key: btree-code-hid-indexed-its-loader-malicious-npm-package-runtime
+    coverage:
+    - title: Malicious npm Package indexed-btree Hid Its Loader in Runtime Code Before Removal
+      url: https://thehackernews.com/2026/09/malicious-npm-package-indexed-btree-hid.html
+      source: The Hacker News
+      published: '2026-10-28T10:32:27.907976+00:00'
+    published: '2026-10-28T10:32:27.907976+00:00'
+  - id: af7cb77fa8a5
+    rank: 2
+    title: Attackers hid malware in 42 GitHub repos using oversized files
+    summary: JFrog Security Research found 42 third-party GitHub repositories compromised with payload
+      blobs large enough to evade GitHub search and API visibility. The repos contained execution hooks
+      for AI coding assistants and IDEs, plus polymorphic wrappers that decoded to the same hidden CI-publisher
+      malware. Repository owners should inspect workflows, secrets, and large blobs; anyone using these
+      repos should treat them as compromised.
+    url: https://www.csoonline.com/article/4241496/attackers-compromised-42-github-repositories-by-using-files-too-large-to-be-searched-2.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4241496-0-27633600-1793156320-Prompt-Injektionen-bei-GitHub-Duo-verbreiten-Schadcode.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    labels:
+    - github
+    - ci-cd
+    - malware
+    - supply-chain
+    rationale: Compromised GitHub repositories used to push hidden payloads into developer toolchains
+      and CI/CD workflows.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: af7cb77fa8a5
+    cluster_key: attackers-files-github-hid-malware-oversized-repos-using
+    coverage:
+    - title: Attackers compromised 42 GitHub repositories by using files too large to be searched
+      url: https://www.csoonline.com/article/4241496/attackers-compromised-42-github-repositories-by-using-files-too-large-to-be-searched-2.html
+      source: CSO Online
+      published: '2026-10-28T02:58:27+00:00'
+    published: '2026-10-28T02:58:27+00:00'
+  - id: 851c564c1391
+    rank: 3
+    title: Hackers hijacked Convertr analytics script to skim payment cards
+    summary: A credit card skimming group compromised a shared analytics script used by e-commerce platform
+      Convertr, injecting code that stole shoppers' payment data during checkout. Merchants using Convertr
+      should audit the script and checkout flow, remove the malicious injection, and contact their payment
+      processor about exposed transactions.
+    url: https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/27/cart.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - e-commerce
+    - card-skimming
+    - third-party-script
+    - supply-chain
+    rationale: Poisoned third-party script on an e-commerce platform exposing downstream merchants and
+      their customers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 851c564c1391
+    cluster_key: analytics-cards-convertr-hackers-hijacked-payment-script-skim
+    coverage:
+    - title: Hackers hijack Convertr analytics script to steal payment card data
+      url: https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data
+      source: BleepingComputer
+      published: '2026-10-27T20:57:25+00:00'
+    published: '2026-10-27T20:57:25+00:00'
+  - id: bef21c2eb2f3
+    rank: 4
+    title: Adobe Commerce PolyShell attacks breach hundreds of stores
+    summary: CISA added CVE-2026-48356, an unrestricted file upload vulnerability in Adobe Commerce and
+      Magento, to its Known Exploited Vulnerabilities catalog after PolyShell attacks breached hundreds
+      of stores. The flaw is exploited to take over e-commerce storefronts; Adobe Commerce and Magento
+      operators should check for indicators of compromise and install the vendor patch immediately.
+    url: https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1vdoV4q9cDhhxBpH2lDPkUPc4WTkuwSmH93IS6MDM8fSYR4ZsKEakfK54cvOjHMFYGJA7Hri87MShqbPweb0BNmEXEsKJErbferZyq7_m7XdHLrb2bgmps_Bs_nu_w7RCiade8PPKSYv6NpxnWTG8pJD5CIUvI2E_cfWMqNBFTl4MXm2WKZaqL_T0DaO-/s1600/cisa-warning.jpg
+    sources:
+    - The Hacker News
+    - CISA
+    labels:
+    - adobe-commerce
+    - magento
+    - kev
+    - supply-chain
+    rationale: Actively exploited e-commerce platform vulnerability that puts hundreds of downstream stores
+      at risk, with a concrete patch action.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bef21c2eb2f3
+    cluster_key: adobe-attacks-breach-commerce-hundreds-polyshell-stores
+    coverage:
+    - title: Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges
+      url: https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html
+      source: The Hacker News
+      published: '2026-10-28T05:42:26+00:00'
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-27T12:00:00+00:00'
+    published: '2026-10-28T05:42:26+00:00'
+  threats:
+  - id: 0f42521d0296
+    rank: 1
+    title: Lazarus Group abuses South Korean security software to deploy post-quantum-encrypted malware
+    summary: Kaspersky attributed Operation FlashHole to North Korea's Lazarus Group, targeting at least
+      three South Korean organizations in construction, software, and wire-communication equipment manufacturing.
+      Active since July 2025, the campaign abuses legitimate South Korean security software to drop malware
+      that uses post-quantum encryption, a notable evasion technique for espionage operations.
+    url: https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwoWz3Ex4w0TebsrzDSdna5WAjqoQx5EHWC1kY3db9VgMg6FrGK6VbncVA9b3tKdPnqlR6qmdwsq7CT1f-Cp57WpH6lpfoF-5zb_Xg-ahdsNxO4OUTsdDVeO_8s7SQFLp54SrsWlWrZn-37sAcqv1ZeG_7Yc62vQ5X9Tq-MlIEm6EOQOiTkQVlcy9F4VG4/s1600/korean-malware.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - Lazarus Group
+    - North Korea
+    - espionage
+    - post-quantum encryption
+    - South Korea
+    rationale: Nation-state espionage campaign with named attribution and a novel post-quantum encryption
+      technique.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0f42521d0296
+    cluster_key: abuses-deploy-encrypted-group-korean-lazarus-malware-post-quantum-security-software-south
+    coverage:
+    - title: Lazarus Abuses South Korean Security Software to Deploy Malware Using Post-Quantum Encryption
+      url: https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html
+      source: The Hacker News
+      published: '2026-10-27T11:32:31+00:00'
+    published: '2026-10-27T11:32:31+00:00'
+  - id: 4b248a53e2b0
+    rank: 2
+    title: Apple backports fix for exploited CoreGraphics zero-day to older iPhones and iPads
+    summary: Apple patched CVE-2026-86950, an out-of-bounds write in CoreGraphics exploited in 'extremely
+      sophisticated' targeted attacks, for older iPhones and iPads after releasing the fix in the iOS/macOS
+      27.2 update. The flaw can be triggered by a maliciously crafted file and leads to arbitrary code
+      execution.
+    url: https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqZx9ghfLBFufN5Q4s1dq2U1rXwenlfzU7UsqQfLWn3AEUe5CX3krGuvC6DM4mF2T9MmscvntBNxmgU7UjNOnfJQteKvuAs-4Nq0vJ3TnTkuFy1TRO3ibdh2Ekqi_WqiInvPkXjYlnvrCuYb5mb8neOOqBbmf_034wh8MPOLPKW2Nvvezpb2LFNXPbeUa6/s1600/apple-patch.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    - BleepingComputer
+    labels:
+    - Apple
+    - CoreGraphics
+    - zero-day
+    - CVE-2026-86950
+    - targeted attacks
+    rationale: Actively exploited zero-day with fixes extended to more devices; highly actionable for
+      Apple device defenders.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4b248a53e2b0
+    cluster_key: and-apple-backports-coregraphics-day-exploited-fix-for-ipads-iphones-older-zero
+    coverage:
+    - title: Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads
+      url: https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html
+      source: The Hacker News
+      published: '2026-10-27T13:59:09+00:00'
+    - title: iOS, macOS 27.2 Patch 286 Bugs; Fix for Exploited Flaw Backported to iOS 18
+      url: https://www.securityweek.com/ios-macos-27-2-patch-286-bugs-fix-for-exploited-flaw-backported-to-ios-18
+      source: SecurityWeek
+      published: '2026-10-27T11:49:57+00:00'
+    - title: Apple backports CoreGraphics zero-day patches to older iPhones
+      url: https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones
+      source: BleepingComputer
+      published: '2026-10-27T10:36:12+00:00'
+    published: '2026-10-27T13:59:09+00:00'
+  - id: ca63d764da8e
+    rank: 3
+    title: '''Aokigahara'' stealer targets developer keyrings and AI assistants'
+    summary: A new infostealer called Aokigahara expands the traditional credential-theft playbook by
+      targeting developer 'keyrings', AI assistant sessions, and related sensitive data on compromised
+      endpoints. The malware focuses on developer machines, exposing AI sessions, business data, and infrastructure
+      from a single infection.
+    url: https://www.darkreading.com/endpoint-security/aokigahara-stealer-developer-keyrings-ai-assistants
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt951105ce06efe522/6ae0c30979732c23e08f3f0c/aokigahara-Carl_Court-GettyImages-931736204jpg..jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - infostealer
+    - Aokigahara
+    - AI assistants
+    - developer keyrings
+    rationale: New infostealer family with distinctive targeting of AI and developer assets.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ca63d764da8e
+    cluster_key: and-aokigahara-assistants-developer-keyrings-stealer-targets
+    coverage:
+    - title: '''Aokigahara'' Stealer Targets ''Developer Keyrings'' & AI Assistants'
+      url: https://www.darkreading.com/endpoint-security/aokigahara-stealer-developer-keyrings-ai-assistants
+      source: Dark Reading
+      published: '2026-10-27T16:47:20+00:00'
+    published: '2026-10-27T16:47:20+00:00'
+  vulnerabilities:
+  - id: 40c58b3ddf17
+    rank: 1
+    title: Adobe ships emergency fix for exploited Magento zero-day (CVE-2026-75650)
+    summary: Adobe released an emergency patch for CVE-2026-75650 ('StyleSmuggler'), a max-severity Magento/Adobe
+      Commerce zero-day that is being actively exploited to backdoor e-commerce servers. Sansec discovered
+      the flaw. Update affected stores immediately.
+    url: https://www.bleepingcomputer.com/news/security/adobe-fixes-critical-magento-zero-day-exploited-to-backdoor-servers
+    image: https://www.bleepstatic.com/content/hl-images/2026/04/13/Adobe.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    - CISA
+    - SecurityWeek
+    labels:
+    - zero-day
+    - active exploitation
+    - Adobe Commerce
+    - Magento
+    - CVE-2026-75650
+    rationale: Actively exploited max-severity zero-day with an emergency patch available; highest priority
+      for e-commerce users.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 40c58b3ddf17
+    cluster_key: 2026-75650-adobe-cve-day-emergency-exploited-fix-for-magento-ships-zero
+    coverage:
+    - title: Adobe fixes critical Magento zero-day exploited to backdoor servers
+      url: https://www.bleepingcomputer.com/news/security/adobe-fixes-critical-magento-zero-day-exploited-to-backdoor-servers
+      source: BleepingComputer
+      published: '2026-10-28T10:32:27.907976+00:00'
+    - title: Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges
+      url: https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html
+      source: The Hacker News
+      published: '2026-10-28T05:42:26+00:00'
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-27T12:00:00+00:00'
+    - title: iOS, macOS 27.2 Patch 286 Bugs; Fix for Exploited Flaw Backported to iOS 18
+      url: https://www.securityweek.com/ios-macos-27-2-patch-286-bugs-fix-for-exploited-flaw-backported-to-ios-18
+      source: SecurityWeek
+      published: '2026-10-27T11:49:57+00:00'
+    - title: Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads
+      url: https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html
+      source: The Hacker News
+      published: '2026-10-27T13:59:09+00:00'
+    - title: Apple backports CoreGraphics zero-day patches to older iPhones
+      url: https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones
+      source: BleepingComputer
+      published: '2026-10-27T10:36:12+00:00'
+    published: '2026-10-28T10:32:27.907976+00:00'
+  - id: 1c7cebfdeafd
+    rank: 2
+    title: Fortinet discloses exploited FortiMail zero-day (CVE-2026-104286)
+    summary: Fortinet confirmed active exploitation of CVE-2026-104286, a critical CVSS 9.8 zero-day affecting
+      multiple FortiMail versions, before patch disclosure. Review FG-IR-26-175 and apply available mitigations/updates.
+    url: https://www.esentire.com/security-advisories/fortimail-zero-day-vulnerability-cve-2026-104286
+    image: https://esentire-dot-com-assets.s3.amazonaws.com/assetsV4/External/SEO/meta_tru_security-advisories_sept2024.jpg
+    sources:
+    - eSentire
+    labels:
+    - zero-day
+    - Fortinet
+    - FortiMail
+    - CVE-2026-104286
+    - exploited in the wild
+    rationale: Confirmed in-the-wild exploitation of a critical email gateway vulnerability with vendor
+      disclosure; requires immediate attention.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1c7cebfdeafd
+    cluster_key: 104286-2026-cve-day-discloses-exploited-fortimail-fortinet-zero
+    coverage:
+    - title: FortiMail Zero-Day Vulnerability (CVE-2026-104286)
+      url: https://www.esentire.com/security-advisories/fortimail-zero-day-vulnerability-cve-2026-104286
+      source: eSentire
+      published: '2026-10-28T10:32:27.907976+00:00'
+    published: '2026-10-28T10:32:27.907976+00:00'
+  - id: 7f202b25f004
+    rank: 3
+    title: Oracle PeopleSoft zero-day exploited by ShinyHunters is actually three chained flaws
+    summary: CVE-2026-35273, exploited by ShinyHunters since May, is a chain of three vulnerabilities
+      rooted in an SSRF that reaches PeopleSoft's internal management interface. Oracle patched all three
+      under the single identifier in June; ensure the June updates are applied.
+    url: https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgiU-iVEycp9z-2dprGJhgl046M9ZvG7kGGwaXNzgFJg7XDubOoWWLvEuKAOczIcGuXU04db46Xa6pRMKO36ZS7Fu8Xkv7mNuPjHUS0zLTHkGlNWNRD2DLCznPf6jqvqamZSZGMBXSzh9gMYm-9sR-y7OgN7i7n6x0dfYxyl9QftWlfuQw0mpTteHy57k/s1600/sh.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - exploited in the wild
+    - Oracle PeopleSoft
+    - CVE-2026-35273
+    - SSRF
+    - ShinyHunters
+    rationale: Ongoing exploitation by a known threat actor in widely deployed enterprise software; patch
+      details clarified.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7f202b25f004
+    cluster_key: actually-chained-day-exploited-flaws-oracle-peoplesoft-shinyhunters-three-zero
+    coverage:
+    - title: ShinyHunters-Exploited Oracle PeopleSoft Zero-Day Turns Out to Be Three Chained Flaws
+      url: https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html
+      source: The Hacker News
+      published: '2026-10-28T06:04:58+00:00'
+    published: '2026-10-28T06:04:58+00:00'
+  - id: dad116195359
+    rank: 4
+    title: Attackers begin probing Oracle EBS SQL injection flaw (CVE-2026-101767)
+    summary: An unauthenticated SQL injection in Oracle E-Business Suite, CVE-2026-101767, can lead to
+      remote code execution and attackers have already started probing it. Check Oracle's advisory and
+      apply available fixes to affected EBS installations.
+    url: https://www.securityweek.com/hackers-start-probing-fresh-oracle-ebs-vulnerability
+    image: https://www.securityweek.com/wp-content/uploads/2025/10/Oracle-E-Business-Suite.jpeg
+    sources:
+    - SecurityWeek
+    - CISA
+    labels:
+    - Oracle EBS
+    - CVE-2026-101767
+    - SQL injection
+    - remote code execution
+    - active probing
+    rationale: High-severity unauthenticated RCE path in a widely deployed ERP suite with observed attacker
+      probing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: dad116195359
+    cluster_key: 101767-2026-attackers-begin-cve-ebs-flaw-injection-oracle-probing-sql
+    coverage:
+    - title: Hackers Start Probing Fresh Oracle EBS Vulnerability
+      url: https://www.securityweek.com/hackers-start-probing-fresh-oracle-ebs-vulnerability
+      source: SecurityWeek
+      published: '2026-10-28T09:14:23+00:00'
+    - title: HPE Patches Dozens of Critical Flaws in Networking Products
+      url: https://www.securityweek.com/hpe-patches-dozens-of-critical-flaws-in-networking-products
+      source: SecurityWeek
+      published: '2026-10-27T13:13:58+00:00'
+    - title: Mitsubishi Electric GENESIS, GENESIS64, ICONICS Suite, Hyper Historian, AnalytiX, MobileHMI,
+        IoTWorX, MC Works64, GENESIS32 and BizViz
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
+      source: CISA
+      published: '2026-10-27T12:00:00+00:00'
+    - title: EPICS Base
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
+      source: CISA
+      published: '2026-10-27T12:00:00+00:00'
+    published: '2026-10-28T09:14:23+00:00'
+  - id: 01ea0d9ca101
+    rank: 5
+    title: Tailscale 1.104.4 patches SSH 'Tailworm' flaws allowing root privilege escalation
+    summary: Tailscale released 1.104.4 to fix almost a dozen SSH server vulnerabilities that could let
+      an attacker on one device reach files and services on other servers with root privileges. Patches
+      were rushed after an uncoordinated disclosure; update Tailscale.
+    url: https://thehackernews.com/2026/10/tailscale-patches-ssh-flaws-that-could.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4t7YUY-idhgGJFpEuulM5zELQR4QNB-UKmsh7cyB5cdMH4AU_zumf3K27WBWgAw6ra28TvALm5fFeLrV_1wHJXeYy3azE1TcblP-1JSCPLF3mq-WKjUOXy3K-pfjhHtiwGkCoYhxfEMZGielHz2Bit6mLoNlnElmauP0RNcbXelNkAHIWI4s92qrymUQ/s1600/tailscale-patches.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    - BleepingComputer
+    labels:
+    - Tailscale
+    - SSH
+    - privilege escalation
+    - patch
+    rationale: Critical SSH privilege-escalation flaws in a widely used zero-trust networking product,
+      now patched.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 01ea0d9ca101
+    cluster_key: 104-allowing-escalation-flaws-patches-privilege-root-ssh-tailscale-tailworm
+    coverage:
+    - title: Tailscale Patches SSH Flaws That Could Let Hacked Devices Gain Root Access on Other Servers
+      url: https://thehackernews.com/2026/10/tailscale-patches-ssh-flaws-that-could.html
+      source: The Hacker News
+      published: '2026-10-28T06:20:37+00:00'
+    - title: Tailscale Rushes Patches After Uncoordinated Disclosure of ‘Tailworm’ Flaws
+      url: https://www.securityweek.com/tailscale-rushes-patches-after-uncoordinated-disclosure-of-tailworm-flaws
+      source: SecurityWeek
+      published: '2026-10-27T15:26:12+00:00'
+    - title: Tailscale warns of SSH flaws allowing root privilege escalation
+      url: https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation
+      source: BleepingComputer
+      published: '2026-10-27T14:09:46+00:00'
+    published: '2026-10-28T06:20:37+00:00'
+  - id: e360c7fdfe8e
+    rank: 6
+    title: Microsoft Authenticator flaw could let permissionless Android apps steal work account tokens
+    summary: CVE-2026-80097 in Microsoft Authenticator for Android allowed a malicious app with no permissions
+      to impersonate a trusted Microsoft app and capture sign-in tokens for work accounts. Fixed in version
+      6.2606.4246; update the app.
+    url: https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqk63DF3MJCMgQqpg91UsWY7mjACbBgPl50GfKwDPi7v3md6sP5l8a2BUqHABjgMN_6BzgcMx4vVKW4hR9B9pz8_XHqp5ctKqQQLw-RJwuKmVWm2MaSzEMkHIsV-Yi0V6Mq_gUYYuzTpi-BzV2-8dRVYBjtuW4nb9TbobkPwvOGTkIFTpr334JB_LZIkw/s1600/msms.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - Microsoft Authenticator
+    - Android
+    - CVE-2026-80097
+    - token theft
+    - authentication
+    rationale: Widely deployed identity app with a fixed vulnerability enabling token theft; users should
+      update immediately.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e360c7fdfe8e
+    cluster_key: account-android-apps-authenticator-could-flaw-let-microsoft-permissionless-steal-tokens-work
+    coverage:
+    - title: Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens
+      url: https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html
+      source: The Hacker News
+      published: '2026-10-27T12:09:50+00:00'
+    published: '2026-10-27T12:09:50+00:00'
+  - id: 3f63478b6bb3
+    rank: 7
+    title: Microsoft ships out-of-band Windows updates to distrust eMudhra certificates
+    summary: Microsoft released out-of-band Windows updates that remove trust in certificates tied to
+      compromised eMudhra CA keys, protecting systems that don't receive automatic certificate trust updates.
+      Install the OOB update.
+    url: https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates
+    image: https://www.bleepstatic.com/content/hl-images/2025/10/20/Windows-headpic.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - Microsoft
+    - Windows
+    - eMudhra
+    - certificate trust
+    - OOB update
+    rationale: Out-of-band patch for a CA key compromise affecting Windows certificate trust; users should
+      install it.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3f63478b6bb3
+    cluster_key: band-certificates-distrust-emudhra-microsoft-out-ships-updates-windows
+    coverage:
+    - title: Microsoft releases Windows OOB updates to distrust eMudhra certificates
+      url: https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates
+      source: BleepingComputer
+      published: '2026-10-27T18:20:28+00:00'
+    published: '2026-10-27T18:20:28+00:00'
+  - id: 018e34617101
+    rank: 8
+    title: GoAhead TLS flaws allow revoked client certificates and session decryption
+    summary: GoAhead's default TLS backend loads certificate revocation lists but never enables revocation
+      checking in mutual-TLS setups, letting revoked client certificates pass and enabling session decryption.
+      Check affected GoAhead builds and apply vendor guidance.
+    url: https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6ae8TupuVJ4B0uHZJxwQnaqstuuA42Jwt_Zh7m9RwCBp_IrCYuChUaac6fUphOhpalVEC8tfhGsYGxt1lmswBobM-r-ds6t0uEMSV9HZKT_dYcigHPxGJQo7dcJte96ymjxwSREmiGulG6xPIX4Hx3visDSuyaX2DJ3HRcctAz0Jw1T9ALkCEwZUlMsQ/s1600/goahead.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - GoAhead
+    - TLS
+    - certificate revocation
+    - embedded
+    - mutual TLS
+    rationale: TLS trust flaw in a widely used embedded web server that undermines certificate revocation;
+      relevant to IoT/device vendors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 018e34617101
+    cluster_key: allow-and-certificates-client-decryption-flaws-goahead-revoked-session-tls
+    coverage:
+    - title: GoAhead TLS Flaws Allow Revoked Client Certificates and Enable Session Decryption
+      url: https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html
+      source: The Hacker News
+      published: '2026-10-27T13:59:48+00:00'
+    published: '2026-10-27T13:59:48+00:00'
