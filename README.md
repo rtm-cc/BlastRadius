@@ -84,4 +84,4 @@ A real local `run` changes `archive/` just as CI does, so commit it or discard i
 
 ## The board
 
-Columns of cards with **Full coverage** and **Developments** timelines; ← and → step through days, `/` searches every archived day, and a tag on any card lists every story carrying it. Expanding a column shows it as a grid with the lead story featured; a tile opens the full story in a sheet. Links are shareable: `?date=2026-10-28`, `?date=…&topic=breaches`, `?q=ransomware`, `?tag=Zero-Day`.
+Columns of cards with **Full coverage** and **Developments** timelines; ← and → step through days, `/` searches every archived day, and a tag on any card lists every story carrying it. Expanding a column shows it as a grid with the lead story featured; a tile opens the full story in a sheet. Links are shareable: `?date=2026-10-28`, `?date=…&topic=breaches`, `?q=ransomware`, `?tag=Zero-Day`, `?theme=light`.

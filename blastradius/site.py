@@ -270,7 +270,9 @@ def _page(
 <link rel="stylesheet" href="style.css?v={version}">
 <script>
   try {{
-    var theme = localStorage.getItem("theme");
+    var urlParams = new URLSearchParams(window.location.search);
+    var urlTheme = urlParams.get("theme");
+    var theme = (urlTheme === "light" || urlTheme === "dark") ? urlTheme : localStorage.getItem("theme");
     if (theme === "light" || theme === "dark") document.documentElement.setAttribute("data-theme", theme);
   }} catch (_) {{}}
 </script>

@@ -121,6 +121,10 @@
     // away from the story it shows.
     closeSheet();
     var query = new URLSearchParams();
+    var currentTheme = params().get("theme");
+    if (currentTheme && !next.hasOwnProperty("theme")) {
+      query.set("theme", currentTheme);
+    }
     Object.keys(next).forEach(function (key) {
       if (next[key]) query.set(key, next[key]);
     });
@@ -143,6 +147,10 @@
 
   function route() {
     var p = params();
+    var urlTheme = p.get("theme");
+    if (urlTheme === "light" || urlTheme === "dark") {
+      setTheme(urlTheme, false);
+    }
     if (p.get("q") || p.get("tag")) {
       searchInput.value = p.get("q") || "";
       renderSearch(p.get("q") || "", p.get("tag") || "");
@@ -643,6 +651,8 @@
   var themeToggle = document.getElementById("theme-toggle");
 
   function resolvedTheme() {
+    var urlTheme = params().get("theme");
+    if (urlTheme === "light" || urlTheme === "dark") return urlTheme;
     var explicit = document.documentElement.getAttribute("data-theme");
     if (explicit === "light" || explicit === "dark") return explicit;
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -657,21 +667,27 @@
     if (metaTheme) metaTheme.setAttribute("content", theme === "dark" ? "#0a0b0e" : "#f7f7fa");
   }
 
-  function setTheme(theme) {
+  function setTheme(theme, updateUrl) {
     document.documentElement.setAttribute("data-theme", theme);
     try { localStorage.setItem("theme", theme); } catch (_) {}
     updateThemeUI(theme);
+    if (updateUrl) {
+      var p = params();
+      p.set("theme", theme);
+      var newUrl = location.pathname + "?" + p.toString();
+      history.replaceState(null, "", newUrl);
+    }
   }
 
   if (themeToggle) {
     updateThemeUI(resolvedTheme());
     themeToggle.addEventListener("click", function () {
       var next = resolvedTheme() === "dark" ? "light" : "dark";
-      setTheme(next);
+      setTheme(next, true);
     });
     if (window.matchMedia) {
       window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
-        if (!localStorage.getItem("theme")) {
+        if (!localStorage.getItem("theme") && !params().get("theme")) {
           updateThemeUI(resolvedTheme());
         }
       });
