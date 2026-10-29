@@ -12,7 +12,7 @@ How to run, change and fix this without reading the code. The board is at **http
 
 ## What happens every day
 
-At 06:10 UTC (06:10 in Lisbon in winter, 07:10 in summer) GitHub Actions runs the **Board** workflow on `main`:
+At 06:10 UTC (06:10 in Lisbon in winter, 07:10 in summer) GitHub Actions runs the **Board** workflow on `main`. GitHub treats schedules as best-effort and sometimes drops one, so it is also scheduled at 07:40 and 10:10 UTC as backups: whichever runs first curates, and the later ones see today's board already in `archive/` and stop in seconds, without calling the model. A run:
 
 1. **`test`** runs the tests and checks `config/`.
 2. **`digest`** fetches every source, asks the model to curate each column, writes today's board to `archive/<YYYY>/<MM>/<DD>.yaml`, and commits it as **"Board for <date>"** (author: github-actions[bot]).
@@ -136,6 +136,6 @@ About **$0.08 a day**, so roughly $2.50 a month: seven web searches at about hal
 | `pages` fails: "Pages site not found" or "not enabled" | Pages source is not GitHub Actions. | Settings → Pages → Source: GitHub Actions. |
 | Warning **Partial board** | One column's answer was unusable three times. | Usually transient. If it repeats, try another model, or dry-run that column. |
 | A source shows `FAIL` every day | Feed moved, blocked us, or died. | `check-feed <url>`; fix the URL or `enabled: false`. |
-| No scheduled run for days | GitHub disabled the schedule after 60 days without a commit. | Actions → Board → **Enable workflow**. |
+| No board this morning, and no failed run | GitHub dropped all three scheduled slots (rare), or disabled the schedule after 60 days without a commit. | Actions → Board → **Run workflow**; if the workflow shows as disabled, **Enable workflow** first. |
 | The same story in two columns | The cross-topic review missed it. | Sharpen the two briefs about which gets it. |
 | Site unchanged after a push | Browser cache, or `pages` did not run. | Hard refresh (Ctrl+Shift+R); check the run. |

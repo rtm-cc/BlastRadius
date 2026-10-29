@@ -26,8 +26,16 @@ on:
   schedule:
     # GitHub's cron is UTC only: 06:10 UTC is 06:10 in Lisbon in winter and
     # 07:10 in summer. A few minutes past the hour, because GitHub queues
-    # everything scheduled on the hour and a run can start late.
+    # everything scheduled on the hour.
+    #
+    # Three times, because scheduled runs are best-effort: under load GitHub
+    # starts them late or drops them without a trace - the first one, on
+    # 2026-10-29, never ran. Whichever runs first curates; the later ones
+    # find today's board already in archive/ and stop after a few seconds,
+    # without calling the model.
     - cron: "10 6 * * *"
+    - cron: "40 7 * * *"
+    - cron: "10 10 * * *"
   workflow_dispatch:
     inputs:
       curate:
@@ -74,18 +82,39 @@ jobs:
     timeout-minutes: 45
     permissions:
       contents: write   # commit archive/
+    # Read by pages: a backup schedule that found the board done has
+    # nothing new to deploy.
+    outputs:
+      curated: ${{ steps.due.outputs.run }}
     steps:
       - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref }}
+
+      # Scheduled runs only: a backup slot whose day is already published
+      # stops here. A manual run always curates - that is what it is for.
+      - name: Is today's board due?
+        id: due
+        run: |
+          today="archive/$(TZ=Europe/Lisbon date +%Y/%m/%d).yaml"
+          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ -f "$today" ]; then
+            echo "Today's board is already in $today; nothing to do."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v7
+        if: steps.due.outputs.run == 'true'
         with:
           python-version: "3.13"
           cache: pip
-      - run: pip install -r requirements.txt
+      - if: steps.due.outputs.run == 'true'
+        run: pip install -r requirements.txt
 
       - name: Curate today's board
         id: run
+        if: steps.due.outputs.run == 'true'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           SINCE_HOURS: ${{ inputs.since_hours }}
@@ -106,7 +135,7 @@ jobs:
       # Exit 1 wrote nothing; anything else may have, and must be kept even
       # if a topic failed, or tomorrow would republish today's stories.
       - name: Commit the archive
-        if: steps.run.outputs.status != '1'
+        if: steps.due.outputs.run == 'true' && steps.run.outputs.status != '1'
         run: |
           if [ -z "$(git status --porcelain -- archive)" ]; then
             echo "Nothing new in archive/."
@@ -125,6 +154,7 @@ jobs:
       # the board did go out; 1 nothing published - the run fails and GitHub
       # emails you.
       - name: Outcome
+        if: steps.due.outputs.run == 'true'
         run: |
           case "${{ steps.run.outputs.status }}" in
             0) echo "Board published." ;;
@@ -140,6 +170,7 @@ jobs:
       && github.ref == 'refs/heads/main'
       && needs.test.result == 'success'
       && (needs.digest.result == 'success' || needs.digest.result == 'skipped')
+      && !(github.event_name == 'schedule' && needs.digest.outputs.curated == 'false')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

@@ -45,7 +45,7 @@ The workflow is `.github/workflows/board.yml`:
 
 | Trigger | Runs |
 | --- | --- |
-| Every day at 06:10 UTC (07:10 Lisbon in summer) | `test`, `digest`, `pages` |
+| Every day at 06:10 UTC (07:10 Lisbon in summer), with backups at 07:40 and 10:10 UTC that stop early once the day is done | `test`, `digest`, `pages` |
 | **Run workflow**, "curate" ticked | `test`, `digest`, `pages` |
 | **Run workflow**, "curate" unticked | `test`, `pages`: redeploy without calling the model |
 | Push to `main` | `test`, `pages` |
