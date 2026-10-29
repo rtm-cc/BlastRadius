@@ -1,0 +1,982 @@
+date: '2026-10-29'
+updated_at: '2026-10-29T10:43:12+00:00'
+topics:
+  ai_security:
+  - id: e033befc189e
+    rank: 1
+    title: Prompt Injection Flaws Expose 7 AI Platforms to Remote Code Execution
+    summary: New research by Kennedy shows prompt injection flaws in at least seven AI platforms can escalate
+      into remote code execution when AI-generated output is passed into an execution environment without
+      safeguards. In Flowise 3.1.2, an unauthenticated attacker can manipulate a prediction endpoint so
+      malicious instructions become operating-system commands.
+    url: https://www.cybrsecmedia.com/prompt-injection-flaws-expose-7-ai-platforms-to-remote-code-execution
+    image: https://storage.ghost.io/c/ab/67/ab676516-71e3-473d-8f73-9e0692f5aaee/content/images/size/w1200/2026/10/6b7d47d6-c5be-40b4-9711-8bbf6ea66e0a.png
+    sources:
+    - CYBR.SEC.Media
+    labels:
+    - AI security research
+    - remote code execution
+    - vulnerability research
+    rationale: Concrete, demonstrated prompt-injection-to-RCE research across multiple AI platforms; directly
+      matches the AI Security topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e033befc189e
+    cluster_key: code-execution-expose-flaws-injection-platforms-prompt-remote
+    coverage:
+    - title: Prompt Injection Flaws Expose 7 AI Platforms to RCE
+      url: https://www.cybrsecmedia.com/prompt-injection-flaws-expose-7-ai-platforms-to-remote-code-execution
+      source: CYBR.SEC.Media
+      published: '2026-10-28T12:00:50+00:00'
+    published: '2026-10-28T12:00:50+00:00'
+  - id: ca02c631c67b
+    rank: 2
+    title: Unsloth Model Loader Flaw Lets Attackers Execute Code Despite trust_remote_code=False
+    summary: Pillar Security disclosed CVE-2026-93348, a high-severity vulnerability in Unsloth's model
+      loader that can allow arbitrary Python code execution when a maliciously crafted model configuration
+      is processed. The flaw is rated 8.6 on the CVSS scale and bypasses the intended trust_remote_code=False
+      protection because the vulnerable code path does not rely on Hugging Face's safeguard.
+    url: https://www.csoonline.com/article/4241619/trusting-unsloths-trust-setting-could-mean-executing-malicious-code.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4241619-0-81783500-1793188537-shutterstock_2376207999.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    labels:
+    - AI security research
+    - remote code execution
+    - supply chain
+    rationale: A reproducible vulnerability in a widely used AI development framework that enables code
+      execution through a malicious model configuration.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ca02c631c67b
+    cluster_key: attackers-code-code-despite-execute-flaw-lets-loader-model-remote-trust-unsloth
+    coverage:
+    - title: Trusting Unsloth’s trust setting could mean executing malicious code
+      url: https://www.csoonline.com/article/4241619/trusting-unsloths-trust-setting-could-mean-executing-malicious-code.html
+      source: CSO Online
+      published: '2026-10-28T11:53:22+00:00'
+    published: '2026-10-28T11:53:22+00:00'
+  - id: bac13b7c6582
+    rank: 3
+    title: New Adaptive Attacks Bypass Defenses Against LLM Jailbreaks and Prompt Injections
+    summary: USENIX Security 2026 research demonstrates that current defenses against LLM jailbreaks and
+      prompt injections can be bypassed by stronger adaptive attacks. The authors, including researchers
+      from Anthropic and Google DeepMind, show that defenses evaluated under static threat models fail
+      when attackers can adapt their methods.
+    url: https://www.usenix.org/conference/usenixsecurity26/presentation/nasr
+    image: ''
+    sources:
+    - usenix.org
+    labels:
+    - AI security research
+    - model behavior
+    rationale: Peer-reviewed AI security research with demonstrated results on bypassing LLM jailbreak
+      and prompt-injection defenses.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bac13b7c6582
+    cluster_key: adaptive-against-and-attacks-bypass-defenses-injections-jailbreaks-llm-new-prompt
+    coverage:
+    - title: 'The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against LLM Jailbreaks
+        and Prompt Injections | USENIX'
+      url: https://www.usenix.org/conference/usenixsecurity26/presentation/nasr
+      source: usenix.org
+      published: '2026-10-29T10:35:58.051613+00:00'
+    published: '2026-10-29T10:35:58.051613+00:00'
+  - id: efbf3a4e655b
+    rank: 4
+    title: Autonomous Cipher Agent Finds Four Zero-Days in EPICS Research Facility Software
+    summary: Causal Security's autonomous agent Cipher independently discovered four vulnerabilities in
+      EPICS Base, the control software used at particle accelerators and fusion research facilities. The
+      flaws, including CVE-2026-114595 with a CVSS score of 9.x, could allow attackers to crash processes
+      or achieve remote code execution, and were found in under four hours.
+    url: https://www.securityweek.com/long-hidden-flaws-patched-in-epics-research-facility-control-software
+    image: https://www.securityweek.com/wp-content/uploads/2026/10/research-laboratory-physics-laser.jpeg
+    sources:
+    - SecurityWeek
+    - AI Weekly
+    labels:
+    - autonomous exploitation
+    - vulnerability research
+    - critical infrastructure
+    rationale: Demonstrates an autonomous AI agent finding real, critical zero-days in industrial control
+      software, a concrete example of AI security capabilities.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: efbf3a4e655b
+    cluster_key: agent-autonomous-cipher-days-epics-facility-finds-four-research-software-zero
+    coverage:
+    - title: Long-Hidden Flaws Patched in EPICS Research Facility Control Software
+      url: https://www.securityweek.com/long-hidden-flaws-patched-in-epics-research-facility-control-software
+      source: SecurityWeek
+      published: '2026-10-28T10:48:00+00:00'
+    - title: 'AI News Today, October 29: Top Stories | AI Weekly'
+      url: https://aiweekly.co/ai-news-today
+      source: AI Weekly
+      published: '2026-10-29T10:35:58.051613+00:00'
+    published: '2026-10-28T10:48:00+00:00'
+  - id: fd3097dcfdab
+    rank: 5
+    title: Shadowy AI Relay Service Disables Codex and Claude Code Sandboxes
+    summary: An enigmatic relay service is providing OpenAI Codex and Claude Code to mainland China and
+      other regions where the tools are not officially sold, but with key security features such as sandboxes
+      turned off. The arrangement exposes users of popular AI coding agents to significantly higher risk
+      if tool output or prompts are malicious.
+    url: https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt036489a36358dea1/6a971529de036c92b216129d/aicoding-AreeSarak-Getty-2252848921.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - AI agents
+    - AI assistants
+    - supply chain
+    rationale: Shows a real-world abuse of AI coding agents where security controls are stripped out,
+      creating a concrete security risk for users.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fd3097dcfdab
+    cluster_key: and-claude-code-codex-disables-relay-sandboxes-service-shadowy
+    coverage:
+    - title: Shadowy AI Relay Disables OpenAI Codex, Claude Code Sandboxes
+      url: https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes
+      source: Dark Reading
+      published: '2026-10-29T10:00:00+00:00'
+    published: '2026-10-29T10:00:00+00:00'
+  breaches:
+  - id: 4bc4f3fbdb0a
+    rank: 1
+    title: Leak Exposes Personal Data of 41,000 Homeland Security Workers, Including Undercover ICE Agents
+    summary: A leaked archive exposes contact details, facility locations, and other sensitive records
+      on 41,000 ICE, CBP, and other DHS employees, including undercover agents. Bluesky has blocked links
+      to the archive because it contains personal contact information shared without authorization.
+    url: https://www.wired.com/story/massive-leak-exposes-41000-homeland-security-workers-including-undercover-ice-agents
+    image: https://media.wired.com/photos/6ae126cfb5fdd6fa181bb24f/master/pass/Security_Massive%20Leak%20Exposes%2041,000%20DHS%20Employees_v1.jpg
+    sources:
+    - WIRED Security
+    - BleepingComputer
+    - DataBreaches.net
+    labels:
+    - data breach
+    - government
+    - data exfiltration
+    rationale: Confirmed leaked database of highly sensitive DHS employee data; the Bluesky article covers
+      the same archive, so it is combined as coverage.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4bc4f3fbdb0a
+    cluster_key: 000-agents-data-exposes-homeland-ice-including-leak-personal-security-undercover-workers
+    coverage:
+    - title: Massive Leak Exposes 41,000 Homeland Security Workers—Including Undercover ICE Agents
+      url: https://www.wired.com/story/massive-leak-exposes-41000-homeland-security-workers-including-undercover-ice-agents
+      source: WIRED Security
+      published: '2026-10-28T20:00:00+00:00'
+    - title: Bluesky Is Blocking Links to a Major Leak of DHS Employee Records
+      url: https://www.wired.com/story/bluesky-blocks-links-to-major-leak-of-dhs-data
+      source: WIRED Security
+      published: '2026-10-29T03:34:46+00:00'
+    - title: Sony ISP subsidiary data breach exposes 2.5 million customer records
+      url: https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records
+      source: BleepingComputer
+      published: '2026-10-28T16:45:47+00:00'
+    - title: 'JPN: Times Car reporting ¥5.5 billion loss has firms bracing for data breach fallout'
+      url: https://databreaches.net/2026/10/28/jpn-times-car-reporting-%c2%a55-5-billion-loss-has-firms-bracing-for-data-breach-fallout
+      source: DataBreaches.net
+      published: '2026-10-28T15:22:48+00:00'
+    published: '2026-10-28T20:00:00+00:00'
+  - id: d3519b8e4ce9
+    rank: 2
+    title: HHS Filing Puts iRhythm Data Breach Toll at 8.2 Million
+    summary: iRhythm Technologies notified HHS that hackers stole personal information and account and
+      device data from third-party-hosted business applications. The filing puts the breach's impact at
+      8.2 million people.
+    url: https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million
+    image: https://www.securityweek.com/wp-content/uploads/2026/06/iRhythm.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - data breach
+    - healthcare
+    - data exfiltration
+    rationale: Confirmed HHS breach filing with an 8.2 million impact; fits the Breaches column.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d3519b8e4ce9
+    cluster_key: breach-data-filing-hhs-irhythm-million-puts-toll
+    coverage:
+    - title: HHS Filing Puts iRhythm Data Breach Toll at 8.2 Million
+      url: https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million
+      source: SecurityWeek
+      published: '2026-10-29T08:27:16+00:00'
+    published: '2026-10-29T08:27:16+00:00'
+  - id: c5aae416fb99
+    rank: 3
+    title: Japan Airlines Warns of Data Breach Affecting About 2,000 Customers
+    summary: Japan Airlines warned that hackers stole passport numbers, frequent flyer numbers, email
+      addresses, and phone numbers for roughly 2,000 customers. The disclosure comes as Japan grapples
+      with multiple cyber incidents.
+    url: https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents
+    image: http://cms.therecord.media/uploads/japan_airlines_cb02768a19.jpg
+    sources:
+    - The Record
+    labels:
+    - data breach
+    - data exfiltration
+    rationale: Named airline disclosing a confirmed breach with sensitive traveler data; not previously
+      published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c5aae416fb99
+    cluster_key: 000-about-affecting-airlines-breach-customers-data-japan-warns
+    coverage:
+    - title: Japan Airlines warns of data breach as country grapples with multiple cyber incidents
+      url: https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents
+      source: The Record
+      published: '2026-10-28T20:33:00+00:00'
+    published: '2026-10-28T20:33:00+00:00'
+  - id: 2fe61169fff9
+    rank: 4
+    title: South Korea's Bithumb Discloses Data Leak After Internal System Breach
+    summary: Bithumb, a South Korean cryptocurrency exchange, is investigating a data leak caused by a
+      hack of its internal mobile communication system, discovered earlier this week. It was one of three
+      financial-firm breaches reported that day.
+    url: https://databreaches.net/2026/10/28/kr-bithumb-discloses-data-leak-after-internal-system-breach-one-of-three-financial-firm-breaches-reported-that-day
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - cryptocurrency
+    - South Korea
+    - data exfiltration
+    rationale: Confirmed breach at a named cryptocurrency exchange with an active data leak investigation.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2fe61169fff9
+    cluster_key: after-bithumb-breach-data-discloses-internal-korea-leak-south-system
+    coverage:
+    - title: 'KR: Bithumb discloses data leak after internal system breach; One of three financial firm
+        breaches reported that day'
+      url: https://databreaches.net/2026/10/28/kr-bithumb-discloses-data-leak-after-internal-system-breach-one-of-three-financial-firm-breaches-reported-that-day
+      source: DataBreaches.net
+      published: '2026-10-28T12:42:32+00:00'
+    published: '2026-10-28T12:42:32+00:00'
+  - id: 089c3daf9adc
+    rank: 5
+    title: Northern Territory Health Backtracks on Extent of Patient Privacy Breach
+    summary: Northern Territory Health retracted its earlier claim that only five patients were affected
+      by a Royal Darwin Hospital privacy breach that shared pregnant women's confidential medical information
+      with 28,000 Instagram followers. The correction followed the ABC contacting affected women.
+    url: https://databreaches.net/2026/10/28/au-northern-territory-health-backtracks-on-claim-only-five-patients-impacted-by-rdh-privacy-breach
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - healthcare
+    - government
+    rationale: Confirmed health privacy breach with a corrected impact statement from a named government
+      health department.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 089c3daf9adc
+    cluster_key: backtracks-breach-extent-health-northern-patient-privacy-territory
+    coverage:
+    - title: 'AU: Northern Territory Health backtracks on claim only five patients impacted by RDH privacy
+        breach'
+      url: https://databreaches.net/2026/10/28/au-northern-territory-health-backtracks-on-claim-only-five-patients-impacted-by-rdh-privacy-breach
+      source: DataBreaches.net
+      published: '2026-10-28T12:25:38+00:00'
+    published: '2026-10-28T12:25:38+00:00'
+  - id: 41e89d8d6517
+    rank: 6
+    title: Harman Fitness Reports Data Breach Exposing SSNs and Medical Data
+    summary: Baltimore-based fitness club operator Harman Fitness reported a data breach to the Texas
+      Attorney General affecting 1,057 Texans. Exposed data includes names, Social Security numbers, financial
+      and medical information, and dates of birth; the breach date was not disclosed.
+    url: https://classactionu.org/current-data-breaches/harman-fitness
+    image: https://classactionu.org/wp-content/uploads/2026/02/REVERSED-2.png
+    sources:
+    - Class Action U
+    labels:
+    - data breach
+    - healthcare
+    rationale: Confirmed regulatory breach notification involving highly sensitive personal data; fits
+      the Breaches column.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 41e89d8d6517
+    cluster_key: and-breach-data-data-exposing-fitness-harman-medical-reports-ssns
+    coverage:
+    - title: Harman Fitness Data Breach Lawsuit - Class Action U
+      url: https://classactionu.org/current-data-breaches/harman-fitness
+      source: Class Action U
+      published: '2026-10-29T10:35:58.051613+00:00'
+    published: '2026-10-29T10:35:58.051613+00:00'
+  fraud_phishing:
+  - id: 07d7ccb869cb
+    rank: 1
+    title: 'ClickFix Campaign 2026: Fake Cloudflare Page Targets macOS & Windows'
+    summary: A new ClickFix campaign uses a fake Cloudflare verification page to target macOS and Windows
+      users. The page mimics a CAPTCHA/verification flow and walks victims through steps that lead to
+      malware execution, while the campaign profiles victims and tracks their geolocation. The lure is
+      a convincing 'verify you are human' page that tries to get the user to run a command or approve
+      a download.
+    url: https://aviatrix.ai/threat-research-center/clickfix-campaign-fake-cloudflare-macos-windows-2026-33466
+    image: https://images.ctfassets.net/mvxxnmpzvwpe/7MDG23fgp0QLSMjFlqU4oh/ccaddd29f178daaae70e5551c6ef6706/clickfix-campaign-fake-cloudflare-macos-windows-2026-33466.png?w=1200&h=630&fit=fill&fm=jpg&q=85
+    sources:
+    - Aviatrix
+    - SANS Internet Storm Center
+    labels:
+    - phishing
+    - social engineering
+    - malware
+    rationale: Concrete ClickFix social engineering campaign with a recognizable fake Cloudflare lure;
+      it is distinct from previously published help desk and AI login page stories.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 07d7ccb869cb
+    cluster_key: 2026-campaign-clickfix-cloudflare-fake-macos-page-targets-windows
+    coverage:
+    - title: 'ClickFix Campaign 2026: Fake Cloudflare Page Targets macOS & Windows | Aviatrix Threat Research'
+      url: https://aviatrix.ai/threat-research-center/clickfix-campaign-fake-cloudflare-macos-windows-2026-33466
+      source: Aviatrix
+      published: '2026-10-29T10:35:58.051613+00:00'
+    - title: Yet Another ClickFix Campaign, (Wed, Oct 28th)
+      url: https://isc.sans.edu/diary/rss/33466
+      source: SANS Internet Storm Center
+      published: '2026-10-29T00:42:15+00:00'
+    published: '2026-10-29T10:35:58.051613+00:00'
+  - id: 696dfcfd2e73
+    rank: 2
+    title: Skyw4lker Device Code Phishing Campaign Targets American Organizations
+    summary: A phishing campaign called Skyw4lker is abusing device code authentication flows to compromise
+      accounts at primarily U.S. organizations. Instead of stealing passwords directly, the attacker tricks
+      the victim into entering a device code on a fake sign-in page tied to legitimate cloud services,
+      giving the attacker access to the account. The technique relies on trust in familiar authentication
+      screens and legitimate cloud workflows.
+    url: https://thehackernews.com/2026/10/american-organizations-under-attack.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf2g4rsWnZ5eQP03cr-4e99MQStvJmuaTTi91WESG3ua1ddAW73T6X22gyaspj2SirqH-1bSAU9VkOg2F1Kh9TLmPc4jYsNAlD72S2XzCeTTRHSiN3B7is7roWwIMcIm__yRu8SkUBbyeWxAEBo5Fe-bbACZWRuoxZqv_pysQ9iMsZRHPCD_clJZsNIDs/s1600/anyrun-main.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - phishing
+    - account takeover
+    - social engineering
+    rationale: Newly documented device code phishing campaign with a concrete technique and target profile;
+      not already covered by published stories.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 696dfcfd2e73
+    cluster_key: american-campaign-code-device-organizations-phishing-skyw4lker-targets
+    coverage:
+    - title: 'American Organizations Under Attack: Skyw4lker Device Code Phishing Campaign Exposed'
+      url: https://thehackernews.com/2026/10/american-organizations-under-attack.html
+      source: The Hacker News
+      published: '2026-10-28T10:30:00+00:00'
+    published: '2026-10-28T10:30:00+00:00'
+  policy:
+  - id: c3e44cf717f1
+    rank: 1
+    title: FBI and European Agencies Take Down Leakbase Cybercrime Forum
+    summary: The FBI and European law enforcement agencies dismantled Leakbase, a subscription-based cybercrime
+      forum and marketplace operating since 2021 where criminals bought and sold stolen credentials and
+      software exploits. The operation is another global crackdown on cybercriminal infrastructure.
+    url: https://therecord.media/leakbase-cybercrime-fbi-europe-takedown
+    image: https://cms.therecord.media/uploads/Leakbase_1_744f18ad88.jpg
+    sources:
+    - therecord.media
+    labels:
+    - law enforcement
+    - takedown
+    - cybercrime
+    rationale: Law enforcement takedown of a major cybercrime forum that removes threat actor infrastructure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c3e44cf717f1
+    cluster_key: agencies-and-cybercrime-down-european-fbi-forum-leakbase-take
+    coverage:
+    - title: Sprawling FBI, European operation takes down Leakbase cybercriminal forum
+      url: https://therecord.media/leakbase-cybercrime-fbi-europe-takedown
+      source: therecord.media
+      published: '2026-10-29T10:35:58.051613+00:00'
+    published: '2026-10-29T10:35:58.051613+00:00'
+  - id: 886dafcf9ee6
+    rank: 2
+    title: US Sanctions Russians and North Koreans for Laundering Illicit IT Worker Earnings
+    summary: The US Treasury Department sanctioned Russian and North Korean nationals accused of laundering
+      earnings from fraudulent North Korean IT workers on behalf of Pyongyang. The action targets financial
+      networks that support North Korean cybercrime and sanctions evasion.
+    url: https://therecord.media/north-korea-russia-sanctions
+    image: http://cms.therecord.media/uploads/north_korea_flags_roman_harak_d05b7549c5.jpg
+    sources:
+    - The Record
+    labels:
+    - sanctions
+    - North Korea
+    - law enforcement
+    - cybercrime
+    rationale: Sanctions action against individuals supporting North Korean illicit IT worker schemes,
+      changing obligations for financial institutions and targeting threat actors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 886dafcf9ee6
+    cluster_key: and-earnings-for-illicit-koreans-laundering-north-russians-sanctions-worker
+    coverage:
+    - title: US sanctions Russians, North Koreans for laundering IT worker earnings
+      url: https://therecord.media/north-korea-russia-sanctions
+      source: The Record
+      published: '2026-10-28T17:45:00+00:00'
+    published: '2026-10-28T17:45:00+00:00'
+  - id: 4a2d543123bb
+    rank: 3
+    title: Court Strikes Down West Virginia Law Shielding Public Officials' Personal Data
+    summary: A federal appellate court panel ruled that West Virginia's Daniel's Law — which barred disclosure
+      of personal data of police and other public officials — is unconstitutional. The decision removes
+      a legal shield that had limited access to officials' personal information.
+    url: https://therecord.media/west-virginia-daniels-law-struck-down-appellate-court
+    image: http://cms.therecord.media/uploads/Richmond_Federal_Appeals_Court_and_skyline_VA_1_aa3974ad1e.jpg
+    sources:
+    - The Record
+    labels:
+    - government
+    - data protection
+    rationale: Court ruling changes the legal landscape for disclosure of public officials' personal data
+      and sets a precedent for similar state laws.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4a2d543123bb
+    cluster_key: court-data-down-law-officials-personal-public-shielding-strikes-virginia-west
+    coverage:
+    - title: Court strikes down West Virginia law barring disclosure of public officials’ personal data
+      url: https://therecord.media/west-virginia-daniels-law-struck-down-appellate-court
+      source: The Record
+      published: '2026-10-28T20:50:00+00:00'
+    published: '2026-10-28T20:50:00+00:00'
+  supply_chain:
+  - id: d87ac4dd6dc1
+    rank: 1
+    title: Gheist turns GitHub Actions into a secret extraction service across 850+ accounts
+    summary: A threat actor dubbed Gheist has compromised GitHub accounts and planted malicious GitHub
+      Actions workflows in private repositories to harvest repository and environment secrets through
+      GitHub APIs before erasing evidence. Wiz Research has tracked the campaign since September 15 and
+      found more than 13,500 malicious branches across over 850 compromised accounts. Organizations should
+      audit Actions workflows for unauthorized branches, rotate exposed secrets, and revoke compromised
+      credentials.
+    url: https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4241625-0-35879600-1793189156-shutterstock_177668495.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    - The Hacker News
+    labels:
+    - github
+    - ci-cd
+    - token theft
+    - supply-chain
+    rationale: Compromised CI/CD via malicious GitHub Actions workflows at large scale (13,500+ branches,
+      850+ accounts) with concrete remediation steps.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d87ac4dd6dc1
+    cluster_key: 850-accounts-across-actions-extraction-gheist-github-into-secret-service-turns
+    coverage:
+    - title: Gheist turns GitHub Actions into a secret extraction service
+      url: https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html
+      source: CSO Online
+      published: '2026-10-28T12:05:42+00:00'
+    - title: IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks
+      url: https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html
+      source: The Hacker News
+      published: '2026-10-29T10:35:58.051613+00:00'
+    published: '2026-10-28T12:05:42+00:00'
+  - id: 17e01370f505
+    rank: 2
+    title: NetamLoader framework indicates supply-chain attack on custom Windows build for Asian governments
+    summary: Kaspersky's Securelist reported on NetamLoader, a sophisticated .NET assembly-loading framework
+      built on XAML markup that strongly indicates a supply-chain attack against a custom Windows 10 build
+      used exclusively by government entities in Asia. The sample surfaced in the first half of 2026 and
+      no attribution to a known APT group has been established. Affected government organizations should
+      treat the customized Windows build as compromised and investigate endpoints.
+    url: https://securelist.com/netamloader/121676
+    image: https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2026/10/28210649/SL-SAS-NetamLoader-featured.jpg
+    sources:
+    - Securelist
+    labels:
+    - supply-chain
+    - targeted attacks
+    - government
+    - espionage
+    rationale: Named supply-chain attack vector targeting a custom Windows build used only by Asian government
+      entities; identifies framework, victim scope, and attribution status.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 17e01370f505
+    cluster_key: asian-attack-build-chain-custom-for-framework-governments-indicates-netamloader-supply-windows
+    coverage:
+    - title: Unknown APT uses NetamLoader to attack a Win10 OS customized for governments in Asia
+      url: https://securelist.com/netamloader/121676
+      source: Securelist
+      published: '2026-10-29T08:00:15+00:00'
+    published: '2026-10-29T08:00:15+00:00'
+  - id: 4c97038741b7
+    rank: 3
+    title: TLS flaws in GoAhead web server affect hundreds of millions of devices
+    summary: FoxIO disclosed three TLS flaws in the GoAhead embedded web server, which ships in hundreds
+      of millions of devices. The bugs can let revoked certificates pass validation or expose some encrypted
+      sessions to eavesdropping. Device vendors and operators of GoAhead-based products should patch the
+      component and review their TLS and certificate revocation behavior.
+    url: https://www.securityweek.com/tls-flaws-found-in-goahead-web-server-used-in-hundreds-of-millions-of-devices
+    image: https://www.securityweek.com/wp-content/uploads/2024/09/internet-routing-bgp.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - GoAhead
+    - TLS
+    - certificate revocation
+    - embedded
+    - vulnerability
+    rationale: Vulnerabilities in a widely embedded web server component affecting hundreds of millions
+      of downstream devices, with concrete patch and configuration guidance.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4c97038741b7
+    cluster_key: affect-devices-flaws-goahead-hundreds-millions-server-tls-web
+    coverage:
+    - title: TLS Flaws Found in GoAhead Web Server Used in Hundreds of Millions of Devices
+      url: https://www.securityweek.com/tls-flaws-found-in-goahead-web-server-used-in-hundreds-of-millions-of-devices
+      source: SecurityWeek
+      published: '2026-10-28T13:10:34+00:00'
+    published: '2026-10-28T13:10:34+00:00'
+  threats:
+  - id: e8c678bf7689
+    rank: 1
+    title: China-linked Warp Panda exploited VMware ESX logging flaw as zero-day; CISA adds it to KEV
+    summary: CrowdStrike says China-nexus actor Warp Panda weaponized CVE-2026-41709, a low-severity insufficient-logging
+      vulnerability in Broadcom VMware ESX, in attacks on the U.S. legal sector. CISA added the flaw —
+      alongside a Linux kernel vulnerability — to its Known Exploited Vulnerabilities catalog after evidence
+      of active exploitation.
+    url: https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcr5vMvEpNtC6AAPL85NwoZLwafJYuuIYKlofAez4dmACEH-0VI-icaKusP2b9HgxcJC2AMyZkdGNfVOyXQCWqjK-_vIvw1OjptUH_maUL82An7MRxEnZQ62JZqPqwuTp6QQ8TWq4y0SRqUb6KhdXLYRJMyUHg2cQBzez3g-0G8jh2ujIgx-6FqQdWBuFr/s1600/esx-audit.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    - CISA
+    labels:
+    - CISA
+    - KEV
+    - zero-day
+    - active exploitation
+    - espionage
+    rationale: CrowdStrike/CISA evidence makes this an active nation-state zero-day with U.S. legal-sector
+      victims; collapses SecurityWeek, THN, and CISA KEV coverage.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e8c678bf7689
+    cluster_key: china-cisa-day-esx-exploited-flaw-linked-logging-panda-vmware-warp-zero
+    coverage:
+    - title: China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility
+      url: https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html
+      source: The Hacker News
+      published: '2026-10-29T06:22:33+00:00'
+    - title: Chinese Hackers Quietly Used Low-Severity ESXi Logging Flaw as Zero-Day
+      url: https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day
+      source: SecurityWeek
+      published: '2026-10-29T08:01:05+00:00'
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-28T12:00:00+00:00'
+    published: '2026-10-29T06:22:33+00:00'
+  - id: efe73a694f49
+    rank: 2
+    title: Volt Typhoon used covert 'Silent Train' network in zero-day exploitation campaigns
+    summary: Lumen's Black Lotus Labs attributes the covert 'Silent Train' network — active since late
+      2023 and built from rotating chains of compromised SOHO, IoT, and enterprise devices — to China-nexus
+      espionage group Volt Typhoon, emphasizing its use in at least four zero-day exploitation campaigns
+      and long-term strategic access.
+    url: https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXuRyHXVM1n6S9Z49nYkM2dmJjKwuZx2RAre0CQSpB202GteLj8keMogqzR7ZVIv7YRc9udBHU7-oCpnpzL6nLaez3ypbVr9cVmiH9zFwJVApy5cev84W725y38auaUdkCQGN3zvngCivMUl-SYV1jnJu9eHduaYeBzro4cdmFHIQJfBQN4RvcC-fUTrs1/s1600/si.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    - SecurityWeek
+    labels:
+    - espionage
+    - zero-day
+    - targeted attacks
+    - critical infrastructure
+    rationale: Major espionage framework with multiple zero-day campaigns, backed by Lumen Black Lotus
+      Labs; collapses THN and BleepingComputer coverage of the same report.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: efe73a694f49
+    cluster_key: campaigns-covert-day-exploitation-network-silent-train-typhoon-used-volt-zero
+    coverage:
+    - title: Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns
+      url: https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html
+      source: The Hacker News
+      published: '2026-10-28T18:08:33+00:00'
+    - title: Volt Typhoon hides zero-day attacks using 'Silent Train' framework
+      url: https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework
+      source: BleepingComputer
+      published: '2026-10-28T16:00:00+00:00'
+    - title: Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys
+      url: https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html
+      source: The Hacker News
+      published: '2026-10-29T08:24:22+00:00'
+    - title: Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon’s ‘Silent Train’ Network
+      url: https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network
+      source: SecurityWeek
+      published: '2026-10-29T10:29:25+00:00'
+    published: '2026-10-28T18:08:33+00:00'
+  - id: 9b48cf8de90d
+    rank: 3
+    title: Attackers exploit second Cisco firewall VPN zero-day since August
+    summary: An exploited flaw in Cisco's Remote Access SSL VPN service allows unauthenticated attackers
+      to remotely force ASA and Firepower Threat Defense firewalls to reload — the second Cisco firewall
+      VPN zero-day to be exploited since August.
+    url: https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august
+    image: https://www.securityweek.com/wp-content/uploads/2023/04/Cisco_router_hack-e1793267161770.jpg
+    sources:
+    - SecurityWeek
+    labels:
+    - active exploitation
+    - zero-day
+    - vulnerability
+    rationale: Fresh active exploitation of widely deployed Cisco firewall appliances; distinct from the
+      KeyDrift SD-WAN campaign and highly actionable for defenders.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9b48cf8de90d
+    cluster_key: attackers-august-cisco-day-exploit-firewall-second-since-vpn-zero
+    coverage:
+    - title: Attackers Exploit Second Cisco Firewall VPN Zero-Day Since August
+      url: https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august
+      source: SecurityWeek
+      published: '2026-10-29T09:47:10+00:00'
+    published: '2026-10-29T09:47:10+00:00'
+  - id: fbac95f02ba9
+    rank: 4
+    title: PHP2Shell attack chain roots 25 servers, breaches US government-affiliated network
+    summary: Researchers disclosed an apparent AI-assisted attack by a suspected China-nexus actor that
+      chained PHP2Shell with a kernel privilege-escalation exploit to root 25 servers, including two at
+      a US government-affiliated organization, in activity observed on October 25.
+    url: https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgl3PPkqzXf7YyMcnwdBu5XWlOwWtUonf15z0n79qMtIOVTb4LNfKdnl7tUK-45_2boP9r2ZKuHmX6e1BZLmo-LYF-rUwH8gtNrynFuaX4rlNh20UXPvtIfC85BcKcHXK1qei6uOJyImSjTfO537yljJve0Y_zMlfFfhBl0mKPfppWhkfojtGlYgxLjdSO0/s1600/php-united.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    labels:
+    - active exploitation
+    - remote code execution
+    - privilege escalation
+    - AI cybercrime
+    rationale: Concrete recent attack with a root chain, AI-assisted angle, and US government-affiliated
+      victims; collapses THN and SecurityWeek reporting of the same disclosure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fbac95f02ba9
+    cluster_key: affiliated-attack-breaches-chain-government-network-php2shell-roots-servers
+    coverage:
+    - title: PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network
+      url: https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html
+      source: The Hacker News
+      published: '2026-10-28T16:02:45+00:00'
+    - title: China-Linked Hackers Exploit PHP2Shell to Root Firewalls
+      url: https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls
+      source: SecurityWeek
+      published: '2026-10-28T12:00:59+00:00'
+    published: '2026-10-28T16:02:45+00:00'
+  - id: 1f0d03e8ec35
+    rank: 5
+    title: Attackers exploit PHP2Shell flaws in internet-exposed Palo Alto Networks management interfaces
+    summary: Palo Alto Networks updated its advisory to confirm active exploitation of the recently patched
+      PHP2Shell vulnerabilities against publicly accessible management interfaces, urging customers to
+      restrict exposure and apply fixes.
+    url: https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9wRucatO6j8IYS9drMJNn_BtgvNwY739pg33a6-50h33cCXnqi4unW5RppMfzO6TLjMdDQ-XICWN6uKTU6ai_SyLBeD8k4SdO7Kx2-QJeMbz0LSEMZkuKZls2dMSNoJmkY5nSc2SOduiSkVpKY9uFjCG0gU73hMvSyyqMANymiqb012-Z_rVUUUJtQQ5C/s1600/php-palo.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - active exploitation
+    - remote code execution
+    - vulnerability
+    rationale: Vendor-confirmed active exploitation of management interfaces, distinct from the separate
+      PHP2Shell campaign story and highly actionable.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1f0d03e8ec35
+    cluster_key: alto-attackers-exploit-exposed-flaws-interfaces-internet-management-networks-palo-php2shell
+    coverage:
+    - title: Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces
+      url: https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html
+      source: The Hacker News
+      published: '2026-10-29T05:50:17+00:00'
+    published: '2026-10-29T05:50:17+00:00'
+  - id: 4bd110ab9f25
+    rank: 6
+    title: Fake ChatGPT and Claude apps spread malware via signed AI binaries
+    summary: Check Point Research found the 'Yoba' campaign distributing malware through fake ChatGPT
+      and Claude desktop apps on lookalike sites, abusing legitimate digitally signed executables from
+      OpenAI and Anthropic to load malicious code on Windows.
+    url: https://www.csoonline.com/article/4241634/fake-chatgpt-claude-apps-spread-malware-via-signed-ai-binaries.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4241634-0-12654200-1793191021-shutterstock_2548864541.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    labels:
+    - malicious apps
+    - malware
+    - social engineering
+    rationale: Check Point evidence of an active malware campaign riding the AI-app trend, with a notable
+      signed-binary abuse technique.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4bd110ab9f25
+    cluster_key: and-apps-binaries-chatgpt-claude-fake-malware-signed-spread-via
+    coverage:
+    - title: Fake ChatGPT, Claude apps spread malware via signed AI binaries
+      url: https://www.csoonline.com/article/4241634/fake-chatgpt-claude-apps-spread-malware-via-signed-ai-binaries.html
+      source: CSO Online
+      published: '2026-10-28T12:36:48+00:00'
+    published: '2026-10-28T12:36:48+00:00'
+  - id: 09d44207fe86
+    rank: 7
+    title: Lazarus hackers deploy Medusa ransomware in attacks on US and Middle East
+    summary: Symantec observed members of North Korea's Lazarus Group deploying Medusa ransomware in financially
+      motivated attacks against at least two institutions in the US and Middle East, a notable blend of
+      state espionage apparatus with ransomware-for-profit operations.
+    url: https://therecord.media/north-korean-hackers-using-medusa-ransomware
+    image: https://cms.therecord.media/uploads/snake_80d979fa24.jpg
+    sources:
+    - therecord.media
+    labels:
+    - Lazarus Group
+    - North Korea
+    - ransomware
+    rationale: Symantec attribution evidence connecting a state-backed actor to active Medusa ransomware
+      attacks; distinct from the FlashHole campaign already published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 09d44207fe86
+    cluster_key: and-attacks-deploy-east-hackers-lazarus-medusa-middle-ransomware
+    coverage:
+    - title: North Korean state hackers seen using Medusa ransomware in attacks on US, Middle East
+      url: https://therecord.media/north-korean-hackers-using-medusa-ransomware
+      source: therecord.media
+      published: '2026-10-29T10:35:58.051613+00:00'
+    published: '2026-10-29T10:35:58.051613+00:00'
+  vulnerabilities:
+  - id: db63c20b5d9c
+    rank: 1
+    title: CISA warns of active exploitation of critical Node2Shell Brotli flaw
+    summary: CISA confirmed hackers are actively exploiting Node2Shell, a critical Brotli vulnerability
+      also tracked as Broccoli2Shell and HTTP2Shell. Apply the relevant vendor patches or mitigations
+      immediately.
+    url: https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/28/CISA.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    labels:
+    - zero-day
+    - CISA
+    - active exploitation
+    - vulnerability
+    rationale: CISA-confirmed active exploitation of a critical flaw; high urgency.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: db63c20b5d9c
+    cluster_key: active-brotli-cisa-critical-exploitation-flaw-node2shell-warns
+    coverage:
+    - title: CISA warns of hackers now exploiting critical Node2Shell flaw
+      url: https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw
+      source: BleepingComputer
+      published: '2026-10-28T10:46:23+00:00'
+    - title: Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces
+      url: https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html
+      source: The Hacker News
+      published: '2026-10-29T05:50:17+00:00'
+    - title: Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch
+      url: https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html
+      source: The Hacker News
+      published: '2026-10-28T12:48:03+00:00'
+    - title: Hackers now scanning systems for recently-patched Oracle flaw
+      url: https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw
+      source: BleepingComputer
+      published: '2026-10-28T12:19:57+00:00'
+    published: '2026-10-28T10:46:23+00:00'
+  - id: 52d376fc3db8
+    rank: 2
+    title: CISA adds VMware ESX and Linux kernel flaws to KEV after active exploitation
+    summary: CISA added VMware ESX CVE-2026-41709 and Linux kernel CVE-2026-46300 to its Known Exploited
+      Vulnerabilities catalog based on evidence of active exploitation. CrowdStrike ties the ESX bug,
+      an insufficient-logging flaw, to China-nexus Warp Panda attacks on the U.S. legal sector; federal
+      agencies must patch under BOD 26-04.
+    url: https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - SecurityWeek
+    - The Hacker News
+    labels:
+    - CISA
+    - KEV
+    - active exploitation
+    - vulnerability
+    rationale: KEV additions with confirmed exploitation and named threat actor; patch priority for affected
+      organizations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 52d376fc3db8
+    cluster_key: active-adds-after-and-cisa-esx-exploitation-flaws-kernel-kev-linux-vmware
+    coverage:
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-28T12:00:00+00:00'
+    - title: Chinese Hackers Quietly Used Low-Severity ESXi Logging Flaw as Zero-Day
+      url: https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day
+      source: SecurityWeek
+      published: '2026-10-29T08:01:05+00:00'
+    - title: China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility
+      url: https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html
+      source: The Hacker News
+      published: '2026-10-29T06:22:33+00:00'
+    published: '2026-10-28T12:00:00+00:00'
+  - id: 7f9cb4b055a8
+    rank: 3
+    title: Cisco SD-WAN zero-day exploited to steal site-to-site encryption keys
+    summary: Cisco Talos says attackers exploited a critical Catalyst SD-WAN flaw fixed in February to
+      plant KeyDrift malware that copies the keys encrypting traffic between sites. The malware's infrastructure
+      overlaps Volt Typhoon's Silent Train network; patch unpatched SD-WAN deployments and hunt for KeyDrift.
+    url: https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDuVB5nQJHwAnAATDQxAqD8KtWk7IpNvBqXQq6RPkqJ72joLVDp5dUDDdYmRHlrbUhJQpaQQ59p245XjotvW2DNx_fKk7cPp0wJUsK0z5IQY2jXA1oP-YcYKLtSdBXnZJDNECWOzX9tP3-12cKXJm2A1KKoBsu9CEiOYKbgJDVqvQt7YRF8Fzd706YumA/s1600/cisco-sdwan.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    - BleepingComputer
+    labels:
+    - zero-day
+    - active exploitation
+    - espionage
+    - targeted attacks
+    rationale: Exploited SD-WAN zero-day tied to a state-sponsored actor; patch and detection guidance
+      available.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7f9cb4b055a8
+    cluster_key: cisco-day-encryption-exploited-keys-site-site-steal-wan-zero
+    coverage:
+    - title: Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys
+      url: https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html
+      source: The Hacker News
+      published: '2026-10-29T08:24:22+00:00'
+    - title: Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon’s ‘Silent Train’ Network
+      url: https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network
+      source: SecurityWeek
+      published: '2026-10-29T10:29:25+00:00'
+    - title: Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns
+      url: https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html
+      source: The Hacker News
+      published: '2026-10-28T18:08:33+00:00'
+    - title: Volt Typhoon hides zero-day attacks using 'Silent Train' framework
+      url: https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework
+      source: BleepingComputer
+      published: '2026-10-28T16:00:00+00:00'
+    published: '2026-10-29T08:24:22+00:00'
+  - id: e4d147b433df
+    rank: 4
+    title: Chrome 156 and Firefox 159 patch over 200 vulnerabilities
+    summary: Chrome 156 fixes 52 security bugs, including four rated critical, while Firefox 159 patches
+      167 vulnerabilities. Install the updates as soon as possible.
+    url: https://www.securityweek.com/chrome-and-firefox-updates-patch-over-200-vulnerabilities
+    image: https://www.securityweek.com/wp-content/uploads/2025/01/Chrome-Firefox.jpeg
+    sources:
+    - SecurityWeek
+    - Malwarebytes
+    - The Hacker News
+    labels:
+    - security update
+    - patch
+    - vulnerability
+    rationale: Critical and large-scale security updates for the two most widely used browsers; broad
+      user impact.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e4d147b433df
+    cluster_key: 156-159-200-and-chrome-firefox-over-patch-vulnerabilities
+    coverage:
+    - title: Chrome and Firefox Updates Patch Over 200 Vulnerabilities
+      url: https://www.securityweek.com/chrome-and-firefox-updates-patch-over-200-vulnerabilities
+      source: SecurityWeek
+      published: '2026-10-28T13:39:35+00:00'
+    - title: Chrome and Firefox updates fix serious security flaws. Install them now
+      url: https://www.malwarebytes.com/blog/ai/2026/10/chrome-and-firefox-updates-fix-serious-security-flaws-install-them-now
+      source: Malwarebytes
+      published: '2026-10-28T11:13:06+00:00'
+    - title: Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass
+      url: https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html
+      source: The Hacker News
+      published: '2026-10-28T11:15:51+00:00'
+    published: '2026-10-28T13:39:35+00:00'
+  - id: 9efe79917a59
+    rank: 5
+    title: 16-year-old EDK II flaw can run code before Secure Boot on network-booting servers
+    summary: A critical 16-year-old flaw in EDK II, the open-source basis for most UEFI firmware, can
+      let an attacker run code before the OS loads on servers booting over the network, bypassing Secure
+      Boot. Check server vendors for EDK II firmware updates.
+    url: https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoVVx2e6mg8LPbhDYmtubHewVD_9BI7UcctCMSwwG-h4SuOyZJOvIyTre_g9Ggo6sLw6Bjrse_1FsqKKThyiIvc5CbuYqq4caYCtUciHGg33wReFQgOjJuTX5FrnSS3OZTd_yjXt03l_kxwIX-NshU9A8wpANSdQwOWkDKzy31QdXkCD6UP21dOpfbjhg/s1600/server-bios.jpg
+    sources:
+    - The Hacker News
+    - WIRED Security
+    labels:
+    - security update
+    - remote code execution
+    - vulnerability
+    rationale: Critical flaw in the firmware layer used by most servers; code execution before the OS
+      loads.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9efe79917a59
+    cluster_key: before-boot-booting-can-code-edk-flaw-network-old-run-secure-year
+    coverage:
+    - title: Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers
+      url: https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html
+      source: The Hacker News
+      published: '2026-10-28T11:50:00+00:00'
+    - title: Most Servers on the Planet Are Vulnerable to This Firmware Code-Execution Flaw
+      url: https://www.wired.com/story/most-servers-on-the-planet-are-vulnerable-to-a-code-execution-flaw-in-uefi-firmware
+      source: WIRED Security
+      published: '2026-10-28T20:30:00+00:00'
+    published: '2026-10-28T11:50:00+00:00'
