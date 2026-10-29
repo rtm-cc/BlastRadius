@@ -46,6 +46,14 @@ on:
         description: "Override the window, in hours (blank = since the last run)"
         type: string
         required: false
+      # Set by the external scheduler (the GitLab project
+      # jobs/secnews-github-runner-caller): behave like a scheduled run and
+      # skip if today's board is already published, so it and GitHub's own
+      # cron never curate the same day twice.
+      only_if_due:
+        description: "Skip if today's board is already published (for automated callers)"
+        type: boolean
+        default: false
   push:
     branches: [main]
   pull_request:
@@ -82,8 +90,8 @@ jobs:
     timeout-minutes: 45
     permissions:
       contents: write   # commit archive/
-    # Read by pages: a backup schedule that found the board done has
-    # nothing new to deploy.
+    # Read by pages: a scheduled or only_if_due run that found the board
+    # done has nothing new to deploy.
     outputs:
       curated: ${{ steps.due.outputs.run }}
     steps:
@@ -91,13 +99,16 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      # Scheduled runs only: a backup slot whose day is already published
-      # stops here. A manual run always curates - that is what it is for.
+      # Scheduled runs, and dispatches with only_if_due (the GitLab
+      # scheduler): a run whose day is already published stops here. A
+      # manual "Run workflow" always curates - that is what it is for.
       - name: Is today's board due?
         id: due
+        env:
+          ONLY_IF_DUE: ${{ inputs.only_if_due }}
         run: |
           today="archive/$(TZ=Europe/Lisbon date +%Y/%m/%d).yaml"
-          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ -f "$today" ]; then
+          if { [ "$GITHUB_EVENT_NAME" = schedule ] || [ "$ONLY_IF_DUE" = true ]; } && [ -f "$today" ]; then
             echo "Today's board is already in $today; nothing to do."
             echo "run=false" >> "$GITHUB_OUTPUT"
           else
@@ -170,7 +181,7 @@ jobs:
       && github.ref == 'refs/heads/main'
       && needs.test.result == 'success'
       && (needs.digest.result == 'success' || needs.digest.result == 'skipped')
-      && !(github.event_name == 'schedule' && needs.digest.outputs.curated == 'false')
+      && needs.digest.outputs.curated != 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

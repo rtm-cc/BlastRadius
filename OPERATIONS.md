@@ -14,6 +14,8 @@ How to run, change and fix this without reading the code. The board is at **http
 
 At 06:10 UTC (06:10 in Lisbon in winter, 07:10 in summer) GitHub Actions runs the **Board** workflow on `main`. GitHub treats schedules as best-effort and sometimes drops one, so it is also scheduled at 07:40 and 10:10 UTC as backups: whichever runs first curates, and the later ones see today's board already in `archive/` and stop in seconds, without calling the model. A run:
 
+The reliable trigger is outside GitHub: the GitLab project [jobs/secnews-github-runner-caller](https://git.rtm.cc/jobs/secnews-github-runner-caller) calls GitHub's "Run workflow" API every day at 07:00 Lisbon time, with `only_if_due` set, so it curates only if no scheduled run has yet. Its README covers the GitHub token it uses, which expires and has to be renewed.
+
 1. **`test`** runs the tests and checks `config/`.
 2. **`digest`** fetches every source, asks the model to curate each column, writes today's board to `archive/<YYYY>/<MM>/<DD>.yaml`, and commits it as **"Board for <date>"** (author: github-actions[bot]).
 3. **`pages`** rebuilds the site from `archive/` and deploys it to GitHub Pages.
@@ -136,6 +138,6 @@ About **$0.08 a day**, so roughly $2.50 a month: seven web searches at about hal
 | `pages` fails: "Pages site not found" or "not enabled" | Pages source is not GitHub Actions. | Settings → Pages → Source: GitHub Actions. |
 | Warning **Partial board** | One column's answer was unusable three times. | Usually transient. If it repeats, try another model, or dry-run that column. |
 | A source shows `FAIL` every day | Feed moved, blocked us, or died. | `check-feed <url>`; fix the URL or `enabled: false`. |
-| No board this morning, and no failed run | GitHub dropped all three scheduled slots (rare), or disabled the schedule after 60 days without a commit. | Actions → Board → **Run workflow**; if the workflow shows as disabled, **Enable workflow** first. |
+| No board this morning, and no failed run | The GitLab trigger did not run or failed (check its pipeline; an expired token shows as HTTP 401), and GitHub dropped its own scheduled slots too. | Actions → Board → **Run workflow**; if the workflow shows as disabled, **Enable workflow** first. |
 | The same story in two columns | The cross-topic review missed it. | Sharpen the two briefs about which gets it. |
 | Site unchanged after a push | Browser cache, or `pages` did not run. | Hard refresh (Ctrl+Shift+R); check the run. |
