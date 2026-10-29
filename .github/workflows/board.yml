@@ -36,9 +36,6 @@ on:
     - cron: "10 6 * * *"
     - cron: "40 7 * * *"
     - cron: "10 10 * * *"
-    # One-off test of the scheduled path, 2026-10-29 09:28 UTC only (day
-    # and month pinned, so it never fires again). Remove after it has run.
-    - cron: "28 9 29 10 *"
   workflow_dispatch:
     inputs:
       curate:
