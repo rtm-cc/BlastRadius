@@ -693,6 +693,18 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
 .event-day { color: var(--foreground); font-weight: 550; text-decoration: none; }
 .event-day:hover { text-decoration: underline; }
 .this-card { color: var(--accent-text); font-size: .625rem; font-weight: 650; text-transform: uppercase; }
+.event-topic {
+  padding: .05rem .4rem;
+  border-radius: 999px;
+  background: hsl(var(--topic-h) 65% 50% / .16);
+  color: hsl(var(--topic-h) 70% 42%);
+  font-size: .625rem;
+  font-weight: 650;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .event-topic { color: hsl(var(--topic-h) 78% 74%); }
+}
+:root[data-theme="dark"] .event-topic { color: hsl(var(--topic-h) 78% 74%); }
 .event-title { display: block; margin-top: .15rem; color: var(--foreground); font-weight: 550; text-decoration: none; }
 a.event-title:hover { color: var(--accent-text); text-decoration: underline; }
 

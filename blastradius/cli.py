@@ -131,13 +131,22 @@ def cmd_run(args: argparse.Namespace) -> int:
     by_id = {t.id: t for t in cfg.topics}
     tags = curate.tag_vocabulary(archive.tag_counts(), {t: c for t, c in pools.items() if c}, by_id)
     existing_today = archive.load_day(today)
+    # history_scope board: every topic is shown the same board-wide history,
+    # labelled by topic name, so it is read once here rather than per topic.
+    board_history: list[Story] | None = None
+    topic_names: dict[str, str] | None = None
+    if settings.curation.history_scope == "board":
+        board_history = archive.recent(None, today, settings.curation.published_days, settings.curation.published_limit)
+        topic_names = {t.id: t.name for t in cfg.topics}
 
     def run_topic(topic_id: str) -> tuple[curate.TopicResult, list[Story]]:
         topic = by_id[topic_id]
         candidates = pools[topic_id]
         if not candidates:
             return curate.TopicResult(topic=topic, candidates=0), []
-        published = archive.recent(topic_id, today, settings.curation.published_days, settings.curation.published_limit)
+        published = board_history if board_history is not None else archive.recent(
+            topic_id, today, settings.curation.published_days, settings.curation.published_limit
+        )
         result = curate.curate_topic(
             topic,
             candidates,
@@ -147,6 +156,7 @@ def cmd_run(args: argparse.Namespace) -> int:
             settings.curation.max_attempts,
             settings.curation.repair_rounds,
             settings.curation.timeout_seconds,
+            topic_names=topic_names,
         )
         by_url = {c.url: c for c in candidates}
         records = curate.to_records(result, today, by_url, published, existing_today.get(topic_id, []))

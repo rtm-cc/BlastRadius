@@ -88,21 +88,39 @@ def _format_candidate(c: Candidate, index: int) -> str:
     )
 
 
-def _format_published(story: Story) -> str:
+def _format_published(story: Story, topic_names: dict[str, str] | None) -> str:
     summary = (story.get("summary") or "")[:300]
-    return f"- {story['day']} | {story['title']}{f' — {summary}' if summary else ''}"
+    column = f"[{topic_names.get(story['topic'], story['topic'])}] " if topic_names else ""
+    return f"- {story['day']} | {column}{story['title']}{f' — {summary}' if summary else ''}"
 
 
-def build_prompt(topic: Topic, candidates: list[Candidate], published: list[Story], tags: list[str]) -> str:
+def build_prompt(
+    topic: Topic,
+    candidates: list[Candidate],
+    published: list[Story],
+    tags: list[str],
+    topic_names: dict[str, str] | None = None,
+) -> str:
+    """The user message for one topic's call. With `topic_names` - the
+    board-wide history - each published story is labelled with its topic,
+    and the model is told an update may continue a story from another."""
     vocabulary = ", ".join(tags) if tags else "(none yet — create concise tags where useful)"
-    already = "\n".join(_format_published(s) for s in published) or "(none)"
+    already = "\n".join(_format_published(s, topic_names) for s in published) or "(none)"
     pool = "\n\n".join(_format_candidate(c, i) for i, c in enumerate(candidates)) or "(no candidates in this run's window)"
+    if topic_names:
+        heading = (
+            "ALREADY PUBLISHED ON THE WHOLE BOARD, in every topic, labelled [topic] (do not repeat any of "
+            "these unless materially new - whichever topic it ran in; an update may continue a story that "
+            "first ran in another topic, and supersedes then names that story's title):"
+        )
+    else:
+        heading = "ALREADY PUBLISHED (do not repeat unless materially new):"
     return (
         f"EXISTING TAGS (reuse exact matches whenever they fit):\n{vocabulary}\n\n---\n\n"
         f"## Topic: {topic.name}\n"
         f"Instructions: {topic.brief or '(no custom instructions — use editorial judgement)'}\n"
         f'Target: {topic.min_items}-{topic.max_items} items, summaries in "{topic.language}"\n\n'
-        f"ALREADY PUBLISHED (do not repeat unless materially new):\n{already}\n\n"
+        f"{heading}\n{already}\n\n"
         f"CANDIDATES:\n{pool}"
     )
 
@@ -358,12 +376,13 @@ def curate_topic(
     repair_rounds: int,
     timeout: float,
     chat: Chat | None = None,
+    topic_names: dict[str, str] | None = None,
 ) -> TopicResult:
     chat = chat or openrouter.chat_json
     result = TopicResult(topic=topic, candidates=len(candidates))
     by_url = {c.url: c for c in candidates}
     index = build_index(by_url)
-    prompt = build_prompt(topic, candidates, published, tags)
+    prompt = build_prompt(topic, candidates, published, tags, topic_names)
 
     def ask(user: str) -> list[dict] | None:
         """One answer, retrying on unusable JSON with the reason quoted."""
@@ -452,8 +471,10 @@ def to_records(
     A rerun of the same day keeps each story's cluster and update link, so a
     rerun never turns "Update" back into a new story or the reverse. Otherwise
     an update joins the cluster of the story it supersedes - but only one
-    actually in the topic's recent history, found by its exact title or, when
-    the model paraphrased it, by its headline fingerprint.
+    actually in the recent history the model was shown (the topic's own, or
+    with history_scope board every topic's, so a story can move from one
+    topic to another and keep its timeline), found by its exact title or,
+    when the model paraphrased it, by its headline fingerprint.
     """
     by_title = {}
     by_key = {}

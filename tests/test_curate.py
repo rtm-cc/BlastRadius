@@ -161,6 +161,16 @@ class RecordsTest(unittest.TestCase):
         [record] = self.records([pick(A, isUpdate=True, supersedes="Mars rover finds water", whatChanged="More water")])
         self.assertEqual((record["is_update"], record["supersedes"], record["cluster"]), (True, "old1", "c1"))
 
+    def test_update_continues_a_story_from_another_topic(self):
+        # Board-wide history: yesterday's story ran in another topic; today's
+        # update in this one joins its cluster all the same.
+        published = [{"id": "v1", "day": "2026-10-26", "topic": "vulnerabilities",
+                      "title": "FortiMail zero-day patched", "cluster": "cv", "cluster_key": "x"}]
+        result = curate.TopicResult(topic=topic(id="threats", name="Active Threats"), candidates=1,
+                                    accepted=[pick(A, isUpdate=True, supersedes="FortiMail zero-day patched")])
+        [record] = curate.to_records(result, "2026-10-27", {A: candidate(A)}, published, [])
+        self.assertEqual((record["supersedes"], record["cluster"]), ("v1", "cv"))
+
     def test_paraphrased_supersedes_falls_back_to_the_headline_fingerprint(self):
         [record] = self.records([pick(A, "Water finds Mars rover", isUpdate=True, supersedes="something else")])
         self.assertEqual(record["supersedes"], "old1")
@@ -178,6 +188,19 @@ class RecordsTest(unittest.TestCase):
     def test_ranks_are_renumbered(self):
         records = self.records([pick(A, rank=3), pick(B, rank=7)])
         self.assertEqual([r["rank"] for r in records], [1, 2])
+
+
+class PromptTest(unittest.TestCase):
+    published = [{"id": "v1", "day": "2026-10-26", "topic": "vulnerabilities", "title": "FortiMail zero-day", "summary": "s"}]
+
+    def test_own_history_is_unlabelled(self):
+        prompt = curate.build_prompt(topic(), [candidate(A)], self.published, [])
+        self.assertIn("ALREADY PUBLISHED (do not repeat unless materially new):\n- 2026-10-26 | FortiMail zero-day", prompt)
+
+    def test_board_history_names_each_story_topic(self):
+        prompt = curate.build_prompt(topic(), [candidate(A)], self.published, [], {"vulnerabilities": "Vulnerabilities & Patches"})
+        self.assertIn("ALREADY PUBLISHED ON THE WHOLE BOARD", prompt)
+        self.assertIn("- 2026-10-26 | [Vulnerabilities & Patches] FortiMail zero-day", prompt)
 
 
 class TagVocabularyTest(unittest.TestCase):

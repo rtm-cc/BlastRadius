@@ -99,7 +99,8 @@ All in `config/settings.yaml`; every key is optional.
 | `window.overlap_minutes` | 30 | Each run starts this long before the previous one ended. |
 | `window.min_hours` / `max_hours` | 6 / 96 | Limits on the window. |
 | `curation.candidate_limit` | 300 | At most this many candidates per column reach the model. The cost ceiling. |
-| `curation.published_days` / `published_limit` | 30 / 150 | How far back, and how many, "already published" stories each column sees. |
+| `curation.history_scope` | `board` | Every column sees the whole board's recent stories, labelled by column, so a story is never repeated in another column and an update keeps its Developments timeline when it moves between columns. `topic`: each column sees only its own. |
+| `curation.published_days` / `published_limit` | 14 / 300 | How far back, and how many, of those stories each column sees - about a week of the whole board. Each story costs ~100 prompt tokens per column: 300 is about $0.02 a run; 150 halves that but remembers about three days. |
 | `curation.cross_topic_review` | true | Keep each event in one column. |
 | `curation.max_attempts` / `repair_rounds` | 3 / 1 | Retries for unusable or short answers. |
 | `curation.timeout_seconds` / `workers` | 600 / 4 | Per call; columns curated at once. |
@@ -114,7 +115,7 @@ All in `config/settings.yaml`; every key is optional.
 
 `archive/<YYYY>/<MM>/<DD>.yaml` is one board day: every column's stories, in order, with summary, sources, tags, coverage and update links. `archive/state.yaml` records when the last run finished, which is where the next window starts.
 
-It is the pipeline's memory: each run reads the last 30 days of it so it does not publish the same story twice. That is why the workflow commits it.
+It is the pipeline's memory: each run shows every column the last two weeks of it (up to 300 stories, from every column), so a story is not published twice, and a follow-up is marked **Update** and joins the earlier story's Developments timeline - even when it lands in a different column. That is why the workflow commits it.
 
 - **Remove a story:** delete its entry from that day's file, commit, push. The site rebuilds without it.
 - **Remove a day:** delete its file, commit, push.

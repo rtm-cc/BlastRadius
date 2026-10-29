@@ -103,10 +103,12 @@ class Archive:
                 out += [{**s, "day": day, "topic": topic} for s in stories]
         return out
 
-    def recent(self, topic: str, today: str, days: int, limit: int) -> list[Story]:
-        """The topic's stories from the last `days` days before today, newest
-        first. Today is left out on purpose: a rerun replaces today's board,
-        so its own earlier picks are not "already published"."""
+    def recent(self, topic: str | None, today: str, days: int, limit: int) -> list[Story]:
+        """Stories from the last `days` days before today, newest first, each
+        tagged with its day and topic: one topic's, or with topic None every
+        topic's (curation.history_scope: board). Today is left out on
+        purpose: a rerun replaces today's board, so its own earlier picks are
+        not "already published"."""
         earliest = (date.fromisoformat(today) - timedelta(days=days)).isoformat()
         out: list[Story] = []
         for day in reversed(self.days()):
@@ -114,7 +116,9 @@ class Archive:
                 continue
             if day < earliest or len(out) >= limit:
                 break
-            out += [{**s, "day": day} for s in self.load_day(day).get(topic, [])]
+            topics = self.load_day(day)
+            for topic_id in [topic] if topic is not None else sorted(topics):
+                out += [{**s, "day": day, "topic": topic_id} for s in topics.get(topic_id, [])]
         return out[:limit]
 
     def tag_counts(self) -> Counter[tuple[str, str]]:

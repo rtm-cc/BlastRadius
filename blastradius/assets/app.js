@@ -509,6 +509,14 @@
       });
       head.appendChild(day);
       head.appendChild(el("span", "pill", i === 0 ? "First tracked" : event.isUpdate ? "Update" : "Development"));
+      // A story can move between topics as it develops - a zero-day under
+      // Vulnerabilities becomes a campaign under Active Threats - so say
+      // where each event ran when it was not this card's topic.
+      if (event.topic && event.topic !== story.topic) {
+        var where = el("span", "event-topic", topicName(event.topic));
+        where.style.setProperty("--topic-h", topicHue(event.topic));
+        head.appendChild(where);
+      }
       if (event.id === story.id) head.appendChild(el("span", "this-card", "This card"));
       item.appendChild(head);
       item.appendChild(link(event.url, "event-title", event.title));

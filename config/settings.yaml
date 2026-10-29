@@ -47,10 +47,18 @@ curation:
   repair_rounds: 1
   # A big topic can legitimately take minutes.
   timeout_seconds: 600
-  # How far back "already published" reaches, and how many stories of it
-  # each topic's prompt carries.
-  published_days: 30
-  published_limit: 150
+  # What each column is shown as "already published". board: every column's
+  # recent stories, labelled by column - the columns share feeds and stories
+  # move between them as they develop (a zero-day under Vulnerabilities
+  # becomes a campaign under Active Threats), so a repeat is caught and an
+  # update keeps its Developments timeline wherever it lands. topic: only
+  # the column's own stories.
+  history_scope: board
+  # How far back that history reaches, and how many stories of it each
+  # column's prompt carries - the newest first. Board-wide, 300 is about a
+  # week of the whole board; each story costs ~100 prompt tokens per column.
+  published_days: 14
+  published_limit: 300
   # Newest N candidates per topic, or null for all of them. The cost
   # ceiling: a call is roughly 150 tokens per candidate plus the published
   # list, so this bounds every topic - including the catch-up run after a

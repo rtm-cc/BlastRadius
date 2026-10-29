@@ -71,6 +71,7 @@ def _event(story: Story) -> dict:
     return {
         "id": story["id"],
         "day": story["day"],
+        "topic": story["topic"],
         "title": story["title"],
         "url": _safe_url(story["url"]),
         "isUpdate": bool(story.get("is_update")),

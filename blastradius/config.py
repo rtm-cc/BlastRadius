@@ -27,6 +27,7 @@ SHARED = "shared"
 WEB_SEARCH_ENGINES = {"native", "exa", "firecrawl", "parallel", "perplexity"}
 DATE_FORMATS = {"dmy", "mdy", "ymd"}
 IMAGE_TYPES = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
+HISTORY_SCOPES = {"topic", "board"}
 
 
 class ConfigError(Exception):
@@ -63,6 +64,11 @@ class CurationSettings:
     timeout_seconds: float = 600
     published_days: int = 30
     published_limit: int = 150
+    # Whose history a topic is shown as "already published": "topic" - its
+    # own stories only - or "board" - every topic's, labelled by topic, so a
+    # repeat is caught and an update linked across topics. "board" suits a
+    # board whose topics share feeds and stories move between them.
+    history_scope: str = "topic"
     candidate_limit: int | None = None
     cross_topic_review: bool = True
 
@@ -203,6 +209,11 @@ def load_settings(config_dir: Path | None = None) -> Settings:
         ) from exc
     if settings.window.min_hours > settings.window.max_hours:
         raise ConfigError("settings.yaml: window.min_hours is above window.max_hours.")
+    if settings.curation.history_scope not in HISTORY_SCOPES:
+        raise ConfigError(
+            f"settings.yaml: curation.history_scope '{settings.curation.history_scope}' is unknown. "
+            f"Use one of: {', '.join(sorted(HISTORY_SCOPES))}."
+        )
     if settings.curation.published_days >= settings.archive.keep_days:
         raise ConfigError(
             "settings.yaml: curation.published_days must be below archive.keep_days - "

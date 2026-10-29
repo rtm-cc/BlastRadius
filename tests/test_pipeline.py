@@ -99,6 +99,11 @@ class ConfigTest(unittest.TestCase):
         with self.assertRaisesRegex(ConfigError, "curation.max_attempt"):
             config.load(self.dir)
 
+    def test_unknown_history_scope(self):
+        self.edit("settings.yaml", "history_scope: board", "history_scope: everything")
+        with self.assertRaisesRegex(ConfigError, "history_scope 'everything' is unknown"):
+            config.load(self.dir)
+
     def test_orphan_brief(self):
         (self.dir / "briefs" / "sport.md").write_text("x")
         with self.assertRaisesRegex(ConfigError, "sport.md"):
@@ -130,6 +135,14 @@ class ArchiveTest(unittest.TestCase):
             self.archive.publish(day, {"a": [self.story(day)]}, NOW)
         recent = self.archive.recent("a", "2026-10-27", days=10, limit=50)
         self.assertEqual([s["id"] for s in recent], ["2026-10-26", "2026-10-25"])
+
+    def test_recent_for_the_whole_board(self):
+        self.archive.publish("2026-10-25", {"a": [self.story("a25")], "b": [self.story("b25")]}, NOW)
+        self.archive.publish("2026-10-26", {"b": [self.story("b26")]}, NOW)
+        recent = self.archive.recent(None, "2026-10-27", days=10, limit=50)
+        # Newest day first, every topic, each story tagged with its topic.
+        self.assertEqual([(s["id"], s["topic"]) for s in recent], [("b26", "b"), ("a25", "a"), ("b25", "b")])
+        self.assertEqual(len(self.archive.recent(None, "2026-10-27", days=10, limit=2)), 2)
 
     def test_prune(self):
         for day in ("2026-06-01", "2026-10-26"):
