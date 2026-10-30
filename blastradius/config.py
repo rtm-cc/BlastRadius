@@ -45,7 +45,7 @@ class FetchSettings:
     timeout_seconds: float = 45
     retries: int = 2
     max_workers: int = 8
-    user_agent: str = "BlastRadius/0.1 (+https://github.com/rtm-cc/BlastRadius)"
+    user_agent: str = "BlastRadius/1.0 (+https://github.com/rtm-cc/BlastRadius)"
 
 
 @dataclass(frozen=True)

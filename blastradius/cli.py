@@ -24,8 +24,8 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from . import __version__, crosstopic, curate, env, fetch, openrouter, pages, site
 from . import config as config_module
-from . import crosstopic, curate, env, fetch, openrouter, pages, site
 from .archive import Archive
 from .config import SHARED, Config, ConfigError
 from .models import Candidate, FetchResult, Source, Story
@@ -312,6 +312,7 @@ def cmd_build_site(args: argparse.Namespace) -> int:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m blastradius", description=__doc__.split("\n\n")[0])
     parser.add_argument("-v", "--verbose", action="store_true")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     commands = parser.add_subparsers(dest="command", required=True)
 
     run = commands.add_parser("run", help="fetch, curate and publish today's board")
