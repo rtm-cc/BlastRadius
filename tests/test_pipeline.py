@@ -298,6 +298,9 @@ class SiteTest(unittest.TestCase):
         self.assertIn('href="feed.xml"', page)
         self.assertIn('class="icon-btn rss-link"', page)
         self.assertIn('class="rss-icon"', page)
+        self.assertIn('rel="alternate noopener"', page)
+        self.assertIn('http-equiv="Content-Security-Policy"', page)
+        self.assertIn('http-equiv="X-Content-Type-Options"', page)
         self.assertNotIn('type="application/rss+xml"', page.split('class="icon-btn rss-link"')[0].split("<a")[-1])
 
         feed = feedparser.parse((out / "feed.xml").read_text(encoding="utf-8"))

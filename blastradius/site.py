@@ -254,7 +254,7 @@ def _rss_link(url: str = "feed.xml") -> str:
     e = html.escape
     href = url if url in ("feed.xml", "feed", "rss.xml", "rss") or url.startswith(SAFE_SCHEMES) else "feed.xml"
     return (
-        f'<a href="{e(href)}" class="icon-btn rss-link" target="_blank" rel="alternate" '
+        f'<a href="{e(href)}" class="icon-btn rss-link" target="_blank" rel="alternate noopener" '
         f'aria-label="RSS Feed" title="RSS Feed (/feed)">'
         f'<svg class="rss-icon" viewBox="0 0 16 16" aria-hidden="true">'
         f'<path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.75.75 0 0 1-.7-.798zM2 8.75a.75.75 0 0 1 .75-.75 5.5 5.5 0 0 1 5.5 5.5.75.75 0 0 1-1.5 0 4 4 0 0 0-4-4 .75.75 0 0 1-.75-.75zM3.5 14a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>'
@@ -285,6 +285,9 @@ def _page(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.rtm.cc https://rtm.cc; object-src 'none'; base-uri 'self';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
 {meta_desc}<title>{e(title)}</title>
