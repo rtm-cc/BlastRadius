@@ -157,6 +157,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref }}
+          token: ${{ secrets.ARCHIVE_PUSH_TOKEN || secrets.GITHUB_TOKEN }}
 
       # Scheduled runs, and dispatches with only_if_due (the GitLab
       # scheduler): a run whose day is already published stops here. A
