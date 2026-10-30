@@ -65,7 +65,7 @@ All configured sources are fetched concurrently:
 ### 3. LLM Curation Engine
 Each column is curated independently through an OpenRouter LLM call:
 - **Input**: The column brief, all candidates within the time window, the board's recent publication history (up to 300 stories across 14 days), and the existing label vocabulary.
-- **Zero-Hallucination Enforcement**: The model cannot invent stories or links. Every URL in the response must resolve directly back to a known candidate ([blastradius/urlmatch.py](file:///home/rtm/GIT-REPOS/REPOS/rtm-cc/BlastRadius/blastradius/urlmatch.py)). Any unresolved pick is rejected.
+- **Zero-Hallucination Enforcement**: The model cannot invent stories or links. Every URL in the response must resolve directly back to a known candidate (`blastradius/urlmatch.py`). Any unresolved pick is rejected.
 - **History & Updates**: Candidates matching an already-published story are dropped unless they represent a material development. Significant updates link to the original story and appear in its **Developments** timeline.
 - **Auto-Repair**: If a column returns fewer than its target items due to mis-copied URLs or formatting flaws, a targeted repair prompt runs to salvage valid stories.
 
@@ -81,7 +81,7 @@ Because shared sources feed multiple columns, different columns can independentl
 - The workflow commits `archive/` directly to the repository with `github-actions[bot]`.
 
 ### 6. Static Site Compilation
-The generator ([blastradius/site.py](file:///home/rtm/GIT-REPOS/REPOS/rtm-cc/BlastRadius/blastradius/site.py)) outputs plain static assets to `public/`:
+The generator (`blastradius/site.py`) outputs plain static assets to `public/`:
 - `index.html`: Fast shell with embedded bootstrap configuration.
 - `days/<YYYY-MM-DD>.json`: Lazy-loaded daily cards with complete coverage and timelines.
 - `search.json`: Compact index downloaded only when the user opens search (`/`).
