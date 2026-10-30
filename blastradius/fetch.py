@@ -36,6 +36,8 @@ from .window import Window
 EXCERPT_CHARS = 500
 # Feed dates that parse to something absurd mean a broken feed, not a scoop.
 _EARLIEST_SANE = datetime(2000, 1, 1, tzinfo=UTC)
+# Capping RSS/Atom downloads guards the runner against runaway payloads or compression bombs.
+MAX_FEED_BYTES = 10_000_000
 
 
 def _parse_time(parsed: object) -> datetime | None:
@@ -82,7 +84,7 @@ def _entry_image(entry: feedparser.FeedParserDict) -> str:
 
 
 def _download(url: str, settings: Settings) -> bytes:
-    """GET with retries for transient failures. Raises on final failure."""
+    """GET with retries for transient failures and maximum body cap. Raises on final failure."""
     headers = {
         "User-Agent": settings.fetch.user_agent,
         "Accept": "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8",
@@ -90,13 +92,20 @@ def _download(url: str, settings: Settings) -> bytes:
     last_error: Exception | None = None
     for attempt in range(settings.fetch.retries + 1):
         try:
-            response = requests.get(url, headers=headers, timeout=settings.fetch.timeout_seconds)
-            # A 4xx means the configured URL is wrong or we are blocked;
-            # retrying will not fix it, and the report should say so now.
-            if 400 <= response.status_code < 500:
-                raise requests.HTTPError(f"HTTP {response.status_code}", response=response)
-            response.raise_for_status()
-            return response.content
+            with requests.get(url, headers=headers, timeout=settings.fetch.timeout_seconds, stream=True) as response:
+                # A 4xx means the configured URL is wrong or we are blocked;
+                # retrying will not fix it, and the report should say so now.
+                if 400 <= response.status_code < 500:
+                    raise requests.HTTPError(f"HTTP {response.status_code}", response=response)
+                response.raise_for_status()
+                chunks = []
+                total = 0
+                for chunk in response.iter_content(chunk_size=65536):
+                    chunks.append(chunk)
+                    total += len(chunk)
+                    if total >= MAX_FEED_BYTES:
+                        break
+                return b"".join(chunks)
         except requests.HTTPError as exc:
             status = exc.response.status_code if exc.response is not None else 0
             if 400 <= status < 500:
