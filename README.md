@@ -1,4 +1,4 @@
-# Blast Radius Digest
+# <img src="blastradius/assets/favicon.svg" alt="Blast Radius logo" width="30" height="30" valign="bottom"> Blast Radius Digest
 
 A serverless daily cybersecurity news board curated by AI. It aggregates threat intelligence, zero-day vulnerabilities, data breaches, and policy updates from trusted security sources into a clean, searchable dashboard.
 
