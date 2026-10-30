@@ -12,14 +12,15 @@ import unittest
 from datetime import timedelta
 from pathlib import Path
 from unittest import mock
+
 import feedparser
 
 from blastradius import cli, config, fetch, googlenews, openrouter, site
 from blastradius.archive import Archive
 from blastradius.archive import load as load_yaml
-from blastradius.state import State
 from blastradius.config import ConfigError, WindowSettings
 from blastradius.models import FetchResult, Source
+from blastradius.state import State
 from blastradius.window import Window, resolve
 
 from .factories import NOW, candidate, pick
@@ -86,7 +87,9 @@ class ConfigTest(unittest.TestCase):
             config.load(self.dir)
 
     def test_topic_line_contradicting_the_file(self):
-        self.edit("sources/breaches.yaml", "  - id: databreaches_net\n", "  - id: databreaches_net\n    topic: policy\n")
+        self.edit(
+            "sources/breaches.yaml", "  - id: databreaches_net\n", "  - id: databreaches_net\n    topic: policy\n"
+        )
         with self.assertRaisesRegex(ConfigError, "contradicts the file"):
             config.load(self.dir)
 
@@ -161,9 +164,15 @@ class ArchiveTest(unittest.TestCase):
         # Unquoted, YAML would read these back as a date, a bool, a number
         # and null. safe_dump has to quote them.
         tricky = {
-            "id": "x", "title": "no", "summary": "2026-10-27", "url": "https://x/1",
-            "rank": 1, "labels": ["yes", "1.0", "null", "Côja: «fogo»"], "published": "2026-10-27T07:00:00+00:00",
-            "what_changed": None, "is_update": False,
+            "id": "x",
+            "title": "no",
+            "summary": "2026-10-27",
+            "url": "https://x/1",
+            "rank": 1,
+            "labels": ["yes", "1.0", "null", "Côja: «fogo»"],
+            "published": "2026-10-27T07:00:00+00:00",
+            "what_changed": None,
+            "is_update": False,
         }
         self.archive.publish("2026-10-27", {"a": [tricky]}, NOW)
         reread = Archive(self.dir).load_day("2026-10-27")["a"][0]
@@ -205,22 +214,43 @@ class FeedTest(unittest.TestCase):
         result = self.fetch(RSS, Source(id="f", topic="t", type="rss", name="Feed", url="https://example.com/feed"))
         self.assertEqual(result.parsed_count, 3)
         [c] = result.candidates
-        self.assertEqual((c.title, c.url, c.excerpt, c.image), ("New & fresh", "https://example.com/new", "Body", "https://example.com/i.jpg"))
+        self.assertEqual(
+            (c.title, c.url, c.excerpt, c.image),
+            ("New & fresh", "https://example.com/new", "Body", "https://example.com/i.jpg"),
+        )
 
     def test_google_news_publisher(self):
         result = self.fetch(GOOGLE, Source(id="g", topic="t", type="google_news", name="GN", google_topic="WORLD"))
         [c] = result.candidates
-        self.assertEqual((c.title, c.source_name, c.url), ("Summit ends", "Reuters", "https://news.google.com/rss/articles/CBMi1"))
+        self.assertEqual(
+            (c.title, c.source_name, c.url), ("Summit ends", "Reuters", "https://news.google.com/rss/articles/CBMi1")
+        )
 
     def test_a_broken_feed_is_a_value(self):
-        result = self.fetch(b"<html>nope</html>", Source(id="f", topic="t", type="rss", name="Feed", url="https://example.com/feed"))
+        result = self.fetch(
+            b"<html>nope</html>", Source(id="f", topic="t", type="rss", name="Feed", url="https://example.com/feed")
+        )
         self.assertIn("no items in feed", result.error)
 
     def test_google_news_urls(self):
         section = Source(id="g", topic="t", type="google_news", name="g", google_topic="world")
-        self.assertEqual(googlenews.feed_url(section), "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en")
-        search = Source(id="g", topic="t", type="google_news", name="g", query="nasa", max_age_hours=24, language="pt-BR", country="BR")
-        self.assertEqual(googlenews.feed_url(search), "https://news.google.com/rss/search?q=nasa+when:1d&hl=pt-BR&gl=BR&ceid=BR:pt")
+        self.assertEqual(
+            googlenews.feed_url(section),
+            "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en",
+        )
+        search = Source(
+            id="g",
+            topic="t",
+            type="google_news",
+            name="g",
+            query="nasa",
+            max_age_hours=24,
+            language="pt-BR",
+            country="BR",
+        )
+        self.assertEqual(
+            googlenews.feed_url(search), "https://news.google.com/rss/search?q=nasa+when:1d&hl=pt-BR&gl=BR&ceid=BR:pt"
+        )
 
 
 class SiteTest(unittest.TestCase):
@@ -230,7 +260,18 @@ class SiteTest(unittest.TestCase):
         archive = Archive(tmp / "archive")
         archive.publish(
             "2026-10-27",
-            {"tech": [{"id": "s1", "rank": 1, "title": "</script><b>x", "url": "javascript:alert(1)", "image": "data:x", "cluster": "s1"}]},
+            {
+                "tech": [
+                    {
+                        "id": "s1",
+                        "rank": 1,
+                        "title": "</script><b>x",
+                        "url": "javascript:alert(1)",
+                        "image": "data:x",
+                        "cluster": "s1",
+                    }
+                ]
+            },
             NOW,
         )
         cfg = config.load(REPO / "config")
@@ -281,11 +322,13 @@ class RunTest(unittest.TestCase):
         config_dir = self.dir / "config"
         (config_dir / "briefs").mkdir(parents=True)
         (config_dir / "settings.yaml").write_text("timezone: Europe/Lisbon\nimages:\n  resolve: false\n")
-        (config_dir / "topics.yaml").write_text(textwrap.dedent("""\
+        (config_dir / "topics.yaml").write_text(
+            textwrap.dedent("""\
             topics:
               - {id: tech, name: Technology}
               - {id: space, name: Space}
-            """))
+            """)
+        )
         (config_dir / "sources").mkdir()
         (config_dir / "sources" / "tech.yaml").write_text(
             'sources:\n  - {id: t, type: rss, name: T, url: "https://t.example/feed"}\n'

@@ -77,8 +77,15 @@ class VerifyTest(unittest.TestCase):
         pool = [candidate(A), candidate(B)] + [candidate(f"https://example.com/{i}", f"filler {i}") for i in range(20)]
         out = self.verify(
             [
-                pick(A, "Sangoma Switchvox flaw exploited", summary="Attackers exploit Switchvox appliances from Sangoma"),
-                pick(B, "Switchvox bug hits Sangoma users", rank=2, summary="Sangoma Switchvox appliances exploited in attacks"),
+                pick(
+                    A, "Sangoma Switchvox flaw exploited", summary="Attackers exploit Switchvox appliances from Sangoma"
+                ),
+                pick(
+                    B,
+                    "Switchvox bug hits Sangoma users",
+                    rank=2,
+                    summary="Sangoma Switchvox appliances exploited in attacks",
+                ),
             ],
             pool,
         )
@@ -149,7 +156,13 @@ class CurateTopicTest(unittest.TestCase):
 
 class RecordsTest(unittest.TestCase):
     published = [
-        {"id": "old1", "day": "2026-10-26", "title": "Mars rover finds water", "cluster": "c1", "cluster_key": "finds-mars-rover-water"},
+        {
+            "id": "old1",
+            "day": "2026-10-26",
+            "title": "Mars rover finds water",
+            "cluster": "c1",
+            "cluster_key": "finds-mars-rover-water",
+        },
     ]
 
     def records(self, picks, existing_today=()):
@@ -164,10 +177,21 @@ class RecordsTest(unittest.TestCase):
     def test_update_continues_a_story_from_another_topic(self):
         # Board-wide history: yesterday's story ran in another topic; today's
         # update in this one joins its cluster all the same.
-        published = [{"id": "v1", "day": "2026-10-26", "topic": "vulnerabilities",
-                      "title": "FortiMail zero-day patched", "cluster": "cv", "cluster_key": "x"}]
-        result = curate.TopicResult(topic=topic(id="threats", name="Active Threats"), candidates=1,
-                                    accepted=[pick(A, isUpdate=True, supersedes="FortiMail zero-day patched")])
+        published = [
+            {
+                "id": "v1",
+                "day": "2026-10-26",
+                "topic": "vulnerabilities",
+                "title": "FortiMail zero-day patched",
+                "cluster": "cv",
+                "cluster_key": "x",
+            }
+        ]
+        result = curate.TopicResult(
+            topic=topic(id="threats", name="Active Threats"),
+            candidates=1,
+            accepted=[pick(A, isUpdate=True, supersedes="FortiMail zero-day patched")],
+        )
         [record] = curate.to_records(result, "2026-10-27", {A: candidate(A)}, published, [])
         self.assertEqual((record["supersedes"], record["cluster"]), ("v1", "cv"))
 
@@ -181,7 +205,14 @@ class RecordsTest(unittest.TestCase):
         self.assertEqual(record["cluster"], record["id"])
 
     def test_same_day_rerun_keeps_the_link(self):
-        earlier = {"url": A, "cluster": "c1", "cluster_key": "x", "is_update": True, "supersedes": "old1", "what_changed": "w"}
+        earlier = {
+            "url": A,
+            "cluster": "c1",
+            "cluster_key": "x",
+            "is_update": True,
+            "supersedes": "old1",
+            "what_changed": "w",
+        }
         [record] = self.records([pick(A, "Retitled")], existing_today=[earlier])
         self.assertEqual((record["cluster"], record["is_update"], record["supersedes"]), ("c1", True, "old1"))
 
@@ -191,14 +222,20 @@ class RecordsTest(unittest.TestCase):
 
 
 class PromptTest(unittest.TestCase):
-    published = [{"id": "v1", "day": "2026-10-26", "topic": "vulnerabilities", "title": "FortiMail zero-day", "summary": "s"}]
+    published = [
+        {"id": "v1", "day": "2026-10-26", "topic": "vulnerabilities", "title": "FortiMail zero-day", "summary": "s"}
+    ]
 
     def test_own_history_is_unlabelled(self):
         prompt = curate.build_prompt(topic(), [candidate(A)], self.published, [])
-        self.assertIn("ALREADY PUBLISHED (do not repeat unless materially new):\n- 2026-10-26 | FortiMail zero-day", prompt)
+        self.assertIn(
+            "ALREADY PUBLISHED (do not repeat unless materially new):\n- 2026-10-26 | FortiMail zero-day", prompt
+        )
 
     def test_board_history_names_each_story_topic(self):
-        prompt = curate.build_prompt(topic(), [candidate(A)], self.published, [], {"vulnerabilities": "Vulnerabilities & Patches"})
+        prompt = curate.build_prompt(
+            topic(), [candidate(A)], self.published, [], {"vulnerabilities": "Vulnerabilities & Patches"}
+        )
         self.assertIn("ALREADY PUBLISHED ON THE WHOLE BOARD", prompt)
         self.assertIn("- 2026-10-26 | [Vulnerabilities & Patches] FortiMail zero-day", prompt)
 

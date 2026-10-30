@@ -24,6 +24,8 @@ def attribute(app_name: str, app_url: str) -> None:
         HEADERS["X-Title"] = app_name
     if app_url:
         HEADERS["HTTP-Referer"] = app_url
+
+
 # Reaching the host is never slow; answering legitimately can be. Separate
 # timeouts, so an unreachable host fails in seconds rather than minutes.
 CONNECT_TIMEOUT = 10.0
@@ -58,16 +60,12 @@ def _post(body: dict, timeout: float) -> dict:
     except requests.RequestException as exc:
         raise OpenRouterError(f"{type(exc).__name__}: {exc}") from exc
     if not response.ok:
-        raise OpenRouterError(
-            f"HTTP {response.status_code} from OpenRouter: {response.text[:500]}"
-        )
+        raise OpenRouterError(f"HTTP {response.status_code} from OpenRouter: {response.text[:500]}")
     try:
         data = response.json()
     except ValueError as exc:
         # Do not echo the body: it can be a large, truncated model answer.
-        raise OpenRouterError(
-            f"OpenRouter returned invalid JSON ({len(response.content)} bytes)"
-        ) from exc
+        raise OpenRouterError(f"OpenRouter returned invalid JSON ({len(response.content)} bytes)") from exc
     if isinstance(data.get("error"), dict):
         raise OpenRouterError(f"OpenRouter error: {json.dumps(data['error'])[:500]}")
     return data

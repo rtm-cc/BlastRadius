@@ -19,7 +19,7 @@ from __future__ import annotations
 import calendar
 import time
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from urllib.parse import urlsplit
 
 import feedparser
@@ -35,7 +35,7 @@ from .window import Window
 # the model pick.
 EXCERPT_CHARS = 500
 # Feed dates that parse to something absurd mean a broken feed, not a scoop.
-_EARLIEST_SANE = datetime(2000, 1, 1, tzinfo=timezone.utc)
+_EARLIEST_SANE = datetime(2000, 1, 1, tzinfo=UTC)
 
 
 def _parse_time(parsed: object) -> datetime | None:
@@ -43,7 +43,7 @@ def _parse_time(parsed: object) -> datetime | None:
         return None
     try:
         # feedparser has already normalised these to UTC.
-        when = datetime.fromtimestamp(calendar.timegm(parsed), tz=timezone.utc)  # type: ignore[arg-type]
+        when = datetime.fromtimestamp(calendar.timegm(parsed), tz=UTC)  # type: ignore[arg-type]
     except (ValueError, OverflowError, TypeError):
         return None
     return when if when >= _EARLIEST_SANE else None

@@ -27,7 +27,9 @@ class NormalizeUrlTest(unittest.TestCase):
 
     def test_redirect_wrapper_is_unwrapped(self):
         self.assertEqual(
-            normalize_url("https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/x.shtml"),
+            normalize_url(
+                "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/x.shtml"
+            ),
             "https://www1.folha.uol.com.br/poder/x.shtml",
         )
 

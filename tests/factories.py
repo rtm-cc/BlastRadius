@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from blastradius.models import Candidate, Topic
 
-NOW = datetime(2026, 10, 27, 7, 0, tzinfo=timezone.utc)
+NOW = datetime(2026, 10, 27, 7, 0, tzinfo=UTC)
 
 
 def topic(**overrides) -> Topic:

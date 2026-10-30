@@ -12,7 +12,7 @@ a story.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from .config import WindowSettings
 
@@ -61,4 +61,4 @@ def resolve(
 
 
 def utc_now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)

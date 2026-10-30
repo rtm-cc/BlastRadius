@@ -1,0 +1,25 @@
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501", # line too long (formatting handles this or intentional multiline strings)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["blastradius"]
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+warn_unused_configs = true
+files = ["blastradius"]
+

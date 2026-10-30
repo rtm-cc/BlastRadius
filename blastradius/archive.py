@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import re
 from collections import Counter
-from datetime import date, datetime, timedelta, timezone
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -71,20 +71,22 @@ class Archive:
         if day not in self._cache:
             path = self.path(day)
             data = load(path.read_text(encoding="utf-8")) if path.exists() else None
-            self._cache[day] = (data or {}).get("topics") or {}
+            raw_dict = data if isinstance(data, dict) else {}
+            self._cache[day] = raw_dict.get("topics") or {}
         # A shallow copy, so a caller adding a topic cannot edit the cache.
         return dict(self._cache[day])
 
     def save_day(self, day: str, topics: dict[str, list[Story]], updated_at: datetime) -> Path:
+        topics_data: dict[str, list[Story]] = {t: topics[t] for t in sorted(topics) if topics[t]}
         payload = {
             "date": day,
-            "updated_at": updated_at.astimezone(timezone.utc).isoformat(timespec="seconds"),
-            "topics": {t: topics[t] for t in sorted(topics) if topics[t]},
+            "updated_at": updated_at.astimezone(UTC).isoformat(timespec="seconds"),
+            "topics": topics_data,
         }
         path = self.path(day)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(dump(payload), encoding="utf-8")
-        self._cache[day] = payload["topics"]
+        self._cache[day] = topics_data
         return path
 
     def publish(self, day: str, by_topic: dict[str, list[Story]], updated_at: datetime) -> Path:

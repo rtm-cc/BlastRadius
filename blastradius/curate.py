@@ -25,8 +25,10 @@ import json
 import re
 import unicodedata
 from collections import Counter
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from typing import Any, Callable
+from datetime import datetime
+from typing import Any
 
 from . import openrouter
 from .models import Candidate, Story, Topic
@@ -83,8 +85,7 @@ MAX_TAGS = 200
 def _format_candidate(c: Candidate, index: int) -> str:
     when = c.published.isoformat() if c.published else "unknown date"
     return (
-        f"[{index}] {c.title}\n    url: {c.url}\n    source: {c.source_name} | {when}\n"
-        f"    excerpt: {c.excerpt[:500]}"
+        f"[{index}] {c.title}\n    url: {c.url}\n    source: {c.source_name} | {when}\n    excerpt: {c.excerpt[:500]}"
     )
 
 
@@ -106,7 +107,9 @@ def build_prompt(
     and the model is told an update may continue a story from another."""
     vocabulary = ", ".join(tags) if tags else "(none yet — create concise tags where useful)"
     already = "\n".join(_format_published(s, topic_names) for s in published) or "(none)"
-    pool = "\n\n".join(_format_candidate(c, i) for i, c in enumerate(candidates)) or "(no candidates in this run's window)"
+    pool = (
+        "\n\n".join(_format_candidate(c, i) for i, c in enumerate(candidates)) or "(no candidates in this run's window)"
+    )
     if topic_names:
         heading = (
             "ALREADY PUBLISHED ON THE WHOLE BOARD, in every topic, labelled [topic] (do not repeat any of "
@@ -129,7 +132,9 @@ def _words(value: str) -> list[str]:
     return re.findall(r"[^\W_]{2,}", value.lower())
 
 
-def tag_vocabulary(counts: Counter[tuple[str, str]], context: dict[str, list[Candidate]], topics: dict[str, Topic]) -> list[str]:
+def tag_vocabulary(
+    counts: Counter[tuple[str, str]], context: dict[str, list[Candidate]], topics: dict[str, Topic]
+) -> list[str]:
     """The tags offered to the model, so the same idea keeps the same tag.
 
     Tags of the topics being curated come first, and a tag whose words
@@ -137,7 +142,13 @@ def tag_vocabulary(counts: Counter[tuple[str, str]], context: dict[str, list[Can
     would keep offering yesterday's subjects.
     """
     words_by_topic = {
-        topic_id: set(_words(" ".join([topics[topic_id].name, topics[topic_id].brief] + [f"{c.title} {c.excerpt}" for c in candidates])))
+        topic_id: set(
+            _words(
+                " ".join(
+                    [topics[topic_id].name, topics[topic_id].brief] + [f"{c.title} {c.excerpt}" for c in candidates]
+                )
+            )
+        )
         for topic_id, candidates in context.items()
     }
     best: dict[str, tuple[int, int, str]] = {}
@@ -235,8 +246,8 @@ def parse_answer(content: str) -> tuple[list[dict[str, Any]] | None, str]:
             value = story[name]
             # bool is an int in Python; a rank of true is not a rank.
             if not isinstance(value, kind) or (name == "rank" and isinstance(value, bool)):
-                return None, f'Schema mismatch: stories[{i}].{name} has the wrong type.'
-            if kind is list and not all(isinstance(v, str) for v in value):
+                return None, f"Schema mismatch: stories[{i}].{name} has the wrong type."
+            if kind is list and isinstance(value, list) and not all(isinstance(v, str) for v in value):
                 return None, f"Schema mismatch: stories[{i}].{name} must be a list of strings."
     return data["stories"], ""
 
@@ -319,7 +330,9 @@ def verify(stories: list[dict], topic: Topic, by_url: dict[str, Candidate], inde
         # are dropped; everything downstream sees only real candidate URLs.
         quoted = [url, *(story.get("coverageUrls") or [])]
         coverage = list(dict.fromkeys(u for u in (resolve(index, x) for x in quoted) if u))
-        resolved.append({**story, "url": url, "coverageUrls": coverage, "otherSources": _other_sources(coverage, url, by_url)})
+        resolved.append(
+            {**story, "url": url, "coverageUrls": coverage, "otherSources": _other_sources(coverage, url, by_url)}
+        )
 
     is_distinctive = distinctive(list(by_url.values()))
     used: set[str] = set()
@@ -437,7 +450,7 @@ def curate_topic(
             if unresolved:
                 complaint += "\nThese URLs did not match:\n" + "\n".join(f"- {u}" for u in unresolved)
         repaired = ask(
-            f"{prompt}\n\n---\n{complaint}\n\nRedo the selection for this topic. Set \"topic\" to exactly "
+            f'{prompt}\n\n---\n{complaint}\n\nRedo the selection for this topic. Set "topic" to exactly '
             f'"{topic.name}". For every story, copy the "url:" line of its candidate character for character '
             '— the full string including any query parameters after "?" — or pick a different candidate. '
             "If the news genuinely is thin, returning a few solid stories is fine; returning none is not. "
@@ -459,6 +472,10 @@ def curate_topic(
 # --- into the archive -----------------------------------------------------
 
 
+def _iso(dt: datetime | None) -> str | None:
+    return dt.isoformat() if dt is not None else None
+
+
 def to_records(
     result: TopicResult,
     day: str,
@@ -476,8 +493,8 @@ def to_records(
     topic to another and keep its timeline), found by its exact title or,
     when the model paraphrased it, by its headline fingerprint.
     """
-    by_title = {}
-    by_key = {}
+    by_title: dict[str, Story] = {}
+    by_key: dict[str, Story] = {}
     for story in published:
         by_title.setdefault(story["title"], story)
         if story.get("cluster_key"):
@@ -498,7 +515,11 @@ def to_records(
 
         if same is not None:
             cluster = same.get("cluster") or story_id
-            is_update, supersedes, what_changed = same.get("is_update", False), same.get("supersedes"), same.get("what_changed")
+            is_update, supersedes, what_changed = (
+                same.get("is_update", False),
+                same.get("supersedes"),
+                same.get("what_changed"),
+            )
         elif prior is not None:
             cluster = prior.get("cluster") or prior["id"]
             is_update, supersedes, what_changed = True, prior["id"], pick.get("whatChanged")
@@ -526,11 +547,11 @@ def to_records(
                         "title": by_url[u].title,
                         "url": u,
                         "source": by_url[u].source_name,
-                        "published": by_url[u].published.isoformat() if by_url[u].published else None,
+                        "published": _iso(by_url[u].published),
                     }
                     for u in pick["coverageUrls"]
                 ],
-                "published": lead.published.isoformat() if lead.published else None,
+                "published": _iso(lead.published),
             }
         )
     return records
