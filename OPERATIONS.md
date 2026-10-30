@@ -108,6 +108,8 @@ All in `config/settings.yaml`; every key is optional.
 | `archive.keep_days` | 120 | **How many days the archive and the site keep.** |
 | `site.title` | Blast Radius Digest | Page title and header. |
 | `site.description` | Daily curated cybersecurity news and threat intel | Tagline under the title. |
+| `site.site_url` | https://news.rtm.cc | Canonical site URL used for the RSS feed and self links. |
+| `site.feed_days` | 3 | How many recent board days are included in `/feed` (default 3). |
 | `site.author` / `author_url` | RTM / https://rtm.cc | The "by RTM" link. |
 | `site.date_format`, `colored_tags` | `dmy`, true | |
 

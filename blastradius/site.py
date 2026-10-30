@@ -13,6 +13,7 @@ working with nobody maintaining it. What gets written to public/:
     days/<day>.json   one board day, each story carrying its cluster's
                       timeline so Developments needs no second request
     search.json       every story, compact, fetched on the first search only
+    feed.xml, feed    RSS 2.0 feed of curated stories for RSS readers
 
 The archive is several megabytes, so the page loads one day at a time
 instead of embedding everything. Each JSON file is also written gzipped,
@@ -33,7 +34,8 @@ import html
 import json
 import shutil
 from collections import Counter, defaultdict
-from datetime import datetime
+from datetime import date, datetime, timezone
+from email.utils import format_datetime
 from pathlib import Path
 
 from .archive import Archive
@@ -62,7 +64,7 @@ def _json(data: object) -> str:
 def _write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
-    if path.suffix == ".json":
+    if path.suffix in (".json", ".xml") or path.name in ("feed", "rss"):
         # mtime=0 so an unchanged day gzips to identical bytes every build.
         path.with_name(path.name + ".gz").write_bytes(gzip.compress(content.encode("utf-8"), 9, mtime=0))
 
@@ -189,6 +191,12 @@ def build(config: Config, archive: Archive, generated_at: datetime) -> Path:
         (out / name).write_bytes(data)
         wallpaper = f"{name}?v={hashlib.sha256(data).hexdigest()[:8]}"
 
+    feed_xml = _rss(config, stories, generic, generated_at)
+    _write(out / "feed.xml", feed_xml)
+    _write(out / "feed", feed_xml)
+    _write(out / "rss.xml", feed_xml)
+    _write(out / "rss", feed_xml)
+
     _write(
         out / "index.html",
         _page(
@@ -199,6 +207,7 @@ def build(config: Config, archive: Archive, generated_at: datetime) -> Path:
             _credit(settings.author, settings.author_url),
             description=settings.description,
             repo_url=settings.repo_url or "https://github.com/rtm-cc/BlastRadius",
+            rss_url="feed.xml",
         ),
     )
     return out
@@ -241,6 +250,19 @@ def _github_link(url: str) -> str:
     )
 
 
+def _rss_link(url: str = "feed.xml") -> str:
+    """An RSS icon link pointing to the RSS feed."""
+    e = html.escape
+    href = url if url in ("feed.xml", "feed", "rss.xml", "rss") or url.startswith(SAFE_SCHEMES) else "feed.xml"
+    return (
+        f'<a href="{e(href)}" class="icon-btn rss-link" target="_blank" rel="alternate" '
+        f'aria-label="RSS Feed" title="RSS Feed (/feed)">'
+        f'<svg class="rss-icon" viewBox="0 0 16 16" aria-hidden="true">'
+        f'<path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.75.75 0 0 1-.7-.798zM2 8.75a.75.75 0 0 1 .75-.75 5.5 5.5 0 0 1 5.5 5.5.75.75 0 0 1-1.5 0 4 4 0 0 0-4-4 .75.75 0 0 1-.75-.75zM3.5 14a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>'
+        f'</svg></a>'
+    )
+
+
 def _page(
     title: str,
     boot: dict,
@@ -249,6 +271,7 @@ def _page(
     credit: str = "",
     description: str = "",
     repo_url: str = "",
+    rss_url: str = "feed.xml",
 ) -> str:
     e = html.escape
     # The name is ours (background.<ext>?v=<hash>), never config text, so it
@@ -256,6 +279,7 @@ def _page(
     body = f'<body data-wallpaper="true" style="--wallpaper-image: url(\'{e(wallpaper)}\')">' if wallpaper else "<body>"
     desc_html = _description(description)
     github_btn = _github_link(repo_url)
+    rss_btn = _rss_link(rss_url)
     meta_desc = f'<meta name="description" content="{e(description)}">\n' if description else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -265,6 +289,8 @@ def _page(
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
 {meta_desc}<title>{e(title)}</title>
+<link rel="alternate" type="application/rss+xml" title="{e(title)}" href="feed.xml">
+<link rel="alternate" type="application/rss+xml" title="{e(title)} (/feed)" href="feed">
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v={version}">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v={version}">
 <meta name="theme-color" content="#2a0a10">
@@ -321,6 +347,7 @@ def _page(
         <path d="M13.2 10.2A6 6 0 1 1 5.8 2.8a6.5 6.5 0 0 0 7.4 7.4Z"/>
       </svg>
     </button>
+    {rss_btn}
     {github_btn}
   </div>
 </header>
@@ -332,3 +359,156 @@ def _page(
 </body>
 </html>
 """
+
+
+def _xml(text: object) -> str:
+    return (
+        str(text)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&apos;")
+    )
+
+
+def _parse_story_date(published: str | None, day: str) -> datetime:
+    if published:
+        try:
+            dt = datetime.fromisoformat(published)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt
+        except (ValueError, TypeError):
+            pass
+    try:
+        d = date.fromisoformat(day)
+        return datetime(d.year, d.month, d.day, 7, 0, 0, tzinfo=timezone.utc)
+    except (ValueError, TypeError):
+        return datetime.now(timezone.utc)
+
+
+def _story_sort_key(story: Story) -> tuple:
+    dt = _parse_story_date(story.get("published"), story.get("day", ""))
+    rank = story.get("rank", 99)
+    return (story.get("day", ""), dt.isoformat(), -rank)
+
+
+def _rss_item(story: Story, topic_names: dict[str, str], generic_images: set[str], base_url: str) -> str:
+    guid = story["id"]
+    title = _xml(story.get("title", ""))
+    url = _safe_url(story.get("url")) or f"{base_url}/#{guid}"
+    dt = _parse_story_date(story.get("published"), story.get("day", ""))
+    pub_date = format_datetime(dt)
+
+    topic_id = story.get("topic", "")
+    topic_name = topic_names.get(topic_id, topic_id.replace("_", " ").title())
+    labels = story.get("labels") or []
+
+    categories = [f"      <category>{_xml(topic_name)}</category>"]
+    for label in labels:
+        if label:
+            categories.append(f"      <category>{_xml(str(label))}</category>")
+    categories_xml = "\n".join(categories)
+
+    image = story.get("image") or ""
+    safe_image = _safe_url(image) if image not in generic_images else ""
+    enclosure_xml = ""
+    if safe_image:
+        mime = (
+            "image/png"
+            if ".png" in safe_image.lower()
+            else ("image/webp" if ".webp" in safe_image.lower() else "image/jpeg")
+        )
+        enclosure_xml = f'      <enclosure url="{_xml(safe_image)}" length="0" type="{mime}"/>\n'
+
+    summary = story.get("summary") or ""
+    what_changed = story.get("what_changed") or ""
+    is_update = bool(story.get("is_update"))
+    coverage = story.get("coverage") or []
+    sources = story.get("sources") or []
+
+    desc_parts = []
+    if safe_image:
+        desc_parts.append(
+            f'<p><img src="{html.escape(safe_image)}" alt="{html.escape(story.get("title", ""))}" style="max-width:100%;height:auto;border-radius:6px;" /></p>'
+        )
+    if summary:
+        desc_parts.append(f"<p>{html.escape(summary)}</p>")
+    if is_update and what_changed:
+        desc_parts.append(f"<p><strong>Update:</strong> {html.escape(what_changed)}</p>")
+    if coverage:
+        cov_items = []
+        for c in coverage:
+            cov_url = _safe_url(c.get("url"))
+            cov_title = html.escape(c.get("title", ""))
+            cov_src = html.escape(c.get("source", ""))
+            if cov_url and cov_title:
+                prefix = f"{cov_src}: " if cov_src else ""
+                cov_items.append(
+                    f'<li><a href="{html.escape(cov_url)}" target="_blank" rel="noopener">{prefix}{cov_title}</a></li>'
+                )
+        if cov_items:
+            desc_parts.append(f'<p><strong>Related Coverage:</strong></p><ul>{"".join(cov_items)}</ul>')
+
+    meta_parts = [f"Topic: {html.escape(topic_name)}"]
+    if sources:
+        meta_parts.append(f"Sources: {html.escape(', '.join(sources))}")
+    meta_html = " | ".join(meta_parts)
+    desc_parts.append(
+        f'<p style="color:#666;font-size:0.9em;"><small>{meta_html} | <a href="{html.escape(url)}">Original Article</a> | <a href="{html.escape(base_url)}/">Blast Radius</a></small></p>'
+    )
+
+    desc_html = "\n".join(desc_parts)
+    desc_cdata = desc_html.replace("]]>", "]]]]><![CDATA[>")
+
+    return (
+        f"    <item>\n"
+        f"      <title>{title}</title>\n"
+        f"      <link>{_xml(url)}</link>\n"
+        f'      <guid isPermaLink="false">{_xml(guid)}</guid>\n'
+        f"      <pubDate>{pub_date}</pubDate>\n"
+        f"{categories_xml}\n"
+        f"{enclosure_xml}"
+        f"      <description><![CDATA[{desc_cdata}]]></description>\n"
+        f"    </item>"
+    )
+
+
+def _rss(
+    config: Config,
+    stories: list[Story],
+    generic_images: set[str],
+    generated_at: datetime,
+) -> str:
+    settings = config.settings.site
+    title = _xml(settings.title)
+    description = _xml(settings.description)
+    base_url = (settings.site_url or "https://news.rtm.cc").rstrip("/")
+    site_link = _xml(base_url + "/")
+    feed_link = _xml(base_url + "/feed")
+    last_build = format_datetime(generated_at.astimezone(timezone.utc))
+
+    topic_names = {t.id: t.name for t in config.topics}
+    available_days = sorted({s["day"] for s in stories if s.get("day")})
+    feed_days = settings.feed_days if settings.feed_days > 0 else 3
+    cutoff_days = set(available_days[-feed_days:])
+    filtered = [s for s in stories if s.get("day") in cutoff_days]
+    recent_stories = sorted(filtered, key=_story_sort_key, reverse=True)
+    items_xml = "\n".join(_rss_item(s, topic_names, generic_images, base_url) for s in recent_stories)
+
+    return (
+        f'<?xml version="1.0" encoding="UTF-8"?>\n'
+        f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        f"  <channel>\n"
+        f"    <title>{title}</title>\n"
+        f"    <link>{site_link}</link>\n"
+        f"    <description>{description}</description>\n"
+        f"    <language>en</language>\n"
+        f"    <lastBuildDate>{last_build}</lastBuildDate>\n"
+        f'    <atom:link href="{feed_link}" rel="self" type="application/rss+xml"/>\n'
+        f"    <generator>BlastRadius</generator>\n"
+        f"{items_xml}\n"
+        f"  </channel>\n"
+        f"</rss>\n"
+    )

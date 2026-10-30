@@ -98,6 +98,8 @@ class SiteSettings:
     directory: str = "public"
     title: str = "Blast Radius Digest"
     description: str = "Daily curated cybersecurity news and threat intel"
+    site_url: str = "https://news.rtm.cc"
+    feed_days: int = 3
     repo_url: str = ""
     date_format: str = "dmy"
     colored_tags: bool = True
