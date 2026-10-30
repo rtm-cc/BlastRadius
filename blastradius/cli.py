@@ -18,10 +18,9 @@ from __future__ import annotations
 
 import argparse
 import logging
-import sys
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -36,10 +35,13 @@ from .window import Window, resolve, utc_now
 
 EXIT_OK, EXIT_FAILED, EXIT_PARTIAL = 0, 1, 2
 
+
 def _print(line: str = "") -> None:
     print(line, flush=True)
 
+
 # --- run ----------------------------------------------------------------------
+
 
 def _pool(results: list[FetchResult], topic_ids: list[str], limit: int | None) -> dict[str, list[Candidate]]:
     """Each topic's candidates: one per URL, in config order, so when
@@ -55,10 +57,11 @@ def _pool(results: list[FetchResult], topic_ids: list[str], limit: int | None) -
         candidates = list(by_url.values())
         if limit is not None:
             # Newest first, so a smaller prompt is still a predictable one.
-            candidates.sort(key=lambda c: (c.published or datetime.min.replace(tzinfo=timezone.utc)), reverse=True)
+            candidates.sort(key=lambda c: c.published or datetime.min.replace(tzinfo=UTC), reverse=True)
             candidates = candidates[:limit]
         out[topic_id] = candidates
     return out
+
 
 def _report_sources(results: list[FetchResult]) -> None:
     _print("Sources")
@@ -71,6 +74,7 @@ def _report_sources(results: list[FetchResult]) -> None:
             line = f"FAIL {r.error}"
         _print(f"  {r.source.id:<{width}}  {r.source.type:<11} {line}  {r.elapsed_seconds:5.1f}s{cost}")
     _print()
+
 
 def _resolve_images(records: list[Story], cfg: Config) -> None:
     """og:image for every card whose feed carried none. Only cards that made
@@ -89,6 +93,7 @@ def _resolve_images(records: list[Story], cfg: Config) -> None:
 
     with ThreadPoolExecutor(max_workers=max(1, images.workers)) as pool:
         list(pool.map(find, missing))
+
 
 def cmd_run(args: argparse.Namespace) -> int:
     _print(f"env: {env.load().describe()}")
@@ -144,8 +149,10 @@ def cmd_run(args: argparse.Namespace) -> int:
         candidates = pools[topic_id]
         if not candidates:
             return curate.TopicResult(topic=topic, candidates=0), []
-        published = board_history if board_history is not None else archive.recent(
-            topic_id, today, settings.curation.published_days, settings.curation.published_limit
+        published = (
+            board_history
+            if board_history is not None
+            else archive.recent(topic_id, today, settings.curation.published_days, settings.curation.published_limit)
         )
         result = curate.curate_topic(
             topic,
@@ -198,14 +205,22 @@ def cmd_run(args: argparse.Namespace) -> int:
         # Today's cards of topics this run did not curate: context only.
         fixed = {t: s for t, s in existing_today.items() if t not in board and t in by_id and by_id[t].enabled}
         review = crosstopic.review(
-            board, fixed, by_id, settings.models.curate, settings.curation.max_attempts, settings.curation.timeout_seconds
+            board,
+            fixed,
+            by_id,
+            settings.models.curate,
+            settings.curation.max_attempts,
+            settings.curation.timeout_seconds,
         )
         cost += review.cost_usd
         _print(f"\nCross-topic review  {len(review.removed)} removed  {review.calls} calls  ${review.cost_usd:.4f}")
         if review.error:
             _print(f"  FAIL {review.error}")
         for r in review.removed:
-            _print(f"  {r.topic} -> kept in {r.kept_topic}: {r.story['title'][:80]}" + (f" ({r.reason})" if r.reason else ""))
+            _print(
+                f"  {r.topic} -> kept in {r.kept_topic}: {r.story['title'][:80]}"
+                + (f" ({r.reason})" if r.reason else "")
+            )
         # A topic the review emptied stays in `board` as []: publishing it
         # clears that topic for today rather than leaving an earlier rerun's
         # cards behind.
@@ -218,9 +233,9 @@ def cmd_run(args: argparse.Namespace) -> int:
         _print("\nDry run: nothing written. What would have been published:")
         for topic_id, records in board.items():
             _print(f"\n## {by_id[topic_id].name}")
-            for r in records:
-                flag = " [UPDATE]" if r["is_update"] else ""
-                _print(f"{r['rank']:>3}. {r['title']}{flag}\n     {r['url']}")
+            for card in records:
+                flag = " [UPDATE]" if card["is_update"] else ""
+                _print(f"{card['rank']:>3}. {card['title']}{flag}\n     {card['url']}")
         return EXIT_PARTIAL if failed else EXIT_OK
 
     finished = utc_now()
@@ -236,7 +251,9 @@ def cmd_run(args: argparse.Namespace) -> int:
         return EXIT_PARTIAL
     return EXIT_OK
 
+
 # --- the other commands ---------------------------------------------------
+
 
 def cmd_check(args: argparse.Namespace) -> int:
     cfg = config_module.load()
@@ -253,7 +270,9 @@ def cmd_check(args: argparse.Namespace) -> int:
     for topic in cfg.topics:
         state = "" if topic.enabled else "  (disabled)"
         brief = "brief" if topic.brief else "no brief"
-        _print(f"{topic.id}: {topic.name}, {topic.min_items}-{topic.max_items} items in {topic.language}, {brief}{state}")
+        _print(
+            f"{topic.id}: {topic.name}, {topic.min_items}-{topic.max_items} items in {topic.language}, {brief}{state}"
+        )
         for s in by_topic.get(topic.id, []):
             target = s.url or s.google_topic or s.query
             _print(f"  {'+' if s.enabled else '-'} {s.id:<28} {s.type:<11} {target}")
@@ -262,6 +281,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     _print(f"\nboard columns: {cfg.columns}")
     _print(f"{len(cfg.enabled_sources)} enabled sources in {len(cfg.enabled_topics)} topics. Config OK.")
     return EXIT_OK
+
 
 def cmd_check_feed(args: argparse.Namespace) -> int:
     settings = config_module.load_settings()
@@ -281,11 +301,13 @@ def cmd_check_feed(args: argparse.Namespace) -> int:
         _print(f"\nabout {len(result.candidates) / max(span, 1):.1f} items/day")
     return EXIT_OK
 
+
 def cmd_build_site(args: argparse.Namespace) -> int:
     cfg = config_module.load()
     out = site.build(cfg, Archive(Path(cfg.settings.archive.directory)), utc_now())
     _print(f"site in {out}/")
     return EXIT_OK
+
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m blastradius", description=__doc__.split("\n\n")[0])
@@ -309,7 +331,9 @@ def main(argv: list[str] | None = None) -> int:
     commands.add_parser("build-site", help="rebuild public/ from the archive").set_defaults(handler=cmd_build_site)
 
     args = parser.parse_args(argv)
-    logging.basicConfig(level=logging.DEBUG if args.verbose else logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.WARNING, format="%(levelname)s %(name)s: %(message)s"
+    )
     try:
         return args.handler(args)
     except ConfigError as exc:

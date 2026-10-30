@@ -34,7 +34,7 @@ import html
 import json
 import shutil
 from collections import Counter, defaultdict
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from email.utils import format_datetime
 from pathlib import Path
 
@@ -110,7 +110,9 @@ def build(config: Config, archive: Archive, generated_at: datetime) -> Path:
     out = Path(settings.directory)
     # The directory is wiped first, so it had better not be the repo.
     if Path.cwd().resolve().is_relative_to(out.resolve()):
-        raise ConfigError(f"site.directory '{settings.directory}' contains the working directory; refusing to delete it.")
+        raise ConfigError(
+            f"site.directory '{settings.directory}' contains the working directory; refusing to delete it."
+        )
     if out.exists():
         shutil.rmtree(out)
     out.mkdir(parents=True)
@@ -175,10 +177,7 @@ def build(config: Config, archive: Archive, generated_at: datetime) -> Path:
         "generatedAt": generated_at.isoformat(timespec="seconds"),
         "repoUrl": _safe_url(settings.repo_url),
         "days": sorted(by_day),
-        "topics": [
-            {"id": t.id, "name": t.name, "color": t.color, "enabled": t.enabled}
-            for t in config.topics
-        ],
+        "topics": [{"id": t.id, "name": t.name, "color": t.color, "enabled": t.enabled} for t in config.topics],
         # Retired topics still have archived days; show them after the rest.
         "columns": config.columns
         + [[t] for t in sorted({s["topic"] for s in stories} - {i for c in config.columns for i in c})],
@@ -220,7 +219,7 @@ def _embed(data: object) -> str:
 
 
 def _credit(author: str, url: str) -> str:
-    """"by <author>" beside the title; a link when the URL is http(s)."""
+    """ "by <author>" beside the title; a link when the URL is http(s)."""
     if not author:
         return ""
     e = html.escape
@@ -231,7 +230,7 @@ def _credit(author: str, url: str) -> str:
 
 
 def _description(desc: str) -> str:
-    """"A small tagline/description under the title in the header."""
+    """ "A small tagline/description under the title in the header."""
     if not desc:
         return ""
     return f'<p class="brand-desc">{html.escape(desc)}</p>'
@@ -246,7 +245,7 @@ def _github_link(url: str) -> str:
         f'aria-label="GitHub repository" title="GitHub repository">'
         f'<svg class="github-icon" viewBox="0 0 16 16" aria-hidden="true">'
         f'<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>'
-        f'</svg></a>'
+        f"</svg></a>"
     )
 
 
@@ -259,7 +258,7 @@ def _rss_link(url: str = "feed.xml") -> str:
         f'aria-label="RSS Feed" title="RSS Feed (/feed)">'
         f'<svg class="rss-icon" viewBox="0 0 16 16" aria-hidden="true">'
         f'<path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.75.75 0 0 1-.7-.798zM2 8.75a.75.75 0 0 1 .75-.75 5.5 5.5 0 0 1 5.5 5.5.75.75 0 0 1-1.5 0 4 4 0 0 0-4-4 .75.75 0 0 1-.75-.75zM3.5 14a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>'
-        f'</svg></a>'
+        f"</svg></a>"
     )
 
 
@@ -377,15 +376,15 @@ def _parse_story_date(published: str | None, day: str) -> datetime:
         try:
             dt = datetime.fromisoformat(published)
             if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
+                dt = dt.replace(tzinfo=UTC)
             return dt
         except (ValueError, TypeError):
             pass
     try:
         d = date.fromisoformat(day)
-        return datetime(d.year, d.month, d.day, 7, 0, 0, tzinfo=timezone.utc)
+        return datetime(d.year, d.month, d.day, 7, 0, 0, tzinfo=UTC)
     except (ValueError, TypeError):
-        return datetime.now(timezone.utc)
+        return datetime.now(UTC)
 
 
 def _story_sort_key(story: Story) -> tuple:
@@ -449,7 +448,7 @@ def _rss_item(story: Story, topic_names: dict[str, str], generic_images: set[str
                     f'<li><a href="{html.escape(cov_url)}" target="_blank" rel="noopener">{prefix}{cov_title}</a></li>'
                 )
         if cov_items:
-            desc_parts.append(f'<p><strong>Related Coverage:</strong></p><ul>{"".join(cov_items)}</ul>')
+            desc_parts.append(f"<p><strong>Related Coverage:</strong></p><ul>{''.join(cov_items)}</ul>")
 
     meta_parts = [f"Topic: {html.escape(topic_name)}"]
     if sources:
@@ -487,7 +486,7 @@ def _rss(
     base_url = (settings.site_url or "https://news.rtm.cc").rstrip("/")
     site_link = _xml(base_url + "/")
     feed_link = _xml(base_url + "/feed")
-    last_build = format_datetime(generated_at.astimezone(timezone.utc))
+    last_build = format_datetime(generated_at.astimezone(UTC))
 
     topic_names = {t.id: t.name for t in config.topics}
     available_days = sorted({s["day"] for s in stories if s.get("day")})

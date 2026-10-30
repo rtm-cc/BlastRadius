@@ -206,8 +206,7 @@ def load_settings(config_dir: Path | None = None) -> Settings:
         settings.tz
     except (ZoneInfoNotFoundError, ValueError) as exc:
         raise ConfigError(
-            f"settings.yaml: timezone '{settings.timezone}' is unknown. "
-            "Use an IANA name such as Europe/Lisbon."
+            f"settings.yaml: timezone '{settings.timezone}' is unknown. Use an IANA name such as Europe/Lisbon."
         ) from exc
     if settings.window.min_hours > settings.window.max_hours:
         raise ConfigError("settings.yaml: window.min_hours is above window.max_hours.")
@@ -230,11 +229,11 @@ def load_settings(config_dir: Path | None = None) -> Settings:
     if settings.site.background:
         image = (config_dir / settings.site.background).resolve()
         if image.suffix.lower() not in IMAGE_TYPES:
-            raise ConfigError(
-                f"settings.yaml: site.background must be one of {', '.join(sorted(IMAGE_TYPES))}."
-            )
+            raise ConfigError(f"settings.yaml: site.background must be one of {', '.join(sorted(IMAGE_TYPES))}.")
         if not image.is_file():
-            raise ConfigError(f"settings.yaml: site.background '{settings.site.background}' is not a file in {config_dir}.")
+            raise ConfigError(
+                f"settings.yaml: site.background '{settings.site.background}' is not a file in {config_dir}."
+            )
         settings = replace(settings, site=replace(settings.site, background=str(image)))
     return settings
 
@@ -266,9 +265,7 @@ def load_topics(config_dir: Path) -> tuple[list[Topic], list[list[str]]]:
         min_items = int(entry.get("min_items", 0))
         max_items = int(entry.get("max_items", 15))
         if max_items < 1 or min_items < 0 or min_items > max_items:
-            raise ConfigError(
-                f"{where} ('{topic_id}'): need 0 <= min_items <= max_items and max_items >= 1."
-            )
+            raise ConfigError(f"{where} ('{topic_id}'): need 0 <= min_items <= max_items and max_items >= 1.")
         color = entry.get("color")
         if color is not None and not (isinstance(color, int) and 0 <= color < 360):
             raise ConfigError(f"{where} ('{topic_id}'): color must be a hue from 0 to 359.")
@@ -294,8 +291,7 @@ def load_topics(config_dir: Path) -> tuple[list[Topic], list[list[str]]]:
         orphans = sorted(p.stem for p in briefs_dir.glob("*.md") if p.stem not in seen)
         if orphans:
             raise ConfigError(
-                f"{briefs_dir}: {', '.join(o + '.md' for o in orphans)} "
-                "matches no topic id. Rename it, or delete it."
+                f"{briefs_dir}: {', '.join(o + '.md' for o in orphans)} matches no topic id. Rename it, or delete it."
             )
 
     enabled = [t.id for t in topics if t.enabled]
@@ -314,9 +310,7 @@ def _columns(board: dict[str, Any], enabled: list[str], path: Path) -> list[list
             raise ConfigError(f"{path}: board column {ids} holds more than two topics.")
         for topic_id in ids:
             if topic_id not in enabled:
-                raise ConfigError(
-                    f"{path}: board column names '{topic_id}', which is not an enabled topic."
-                )
+                raise ConfigError(f"{path}: board column names '{topic_id}', which is not an enabled topic.")
             if topic_id in placed:
                 raise ConfigError(f"{path}: '{topic_id}' appears in two board columns.")
             placed.add(topic_id)
@@ -398,9 +392,7 @@ def _load_topic_sources(path: Path, topic_id: str, seen: dict[str, str]) -> list
         entry = {**entry, "topic": topic_id}
         source_type = entry.get("type")
         if source_type not in SOURCE_TYPES:
-            raise ConfigError(
-                f"{where}: type '{source_type}' is unknown. Use one of: {', '.join(SOURCE_TYPES)}."
-            )
+            raise ConfigError(f"{where}: type '{source_type}' is unknown. Use one of: {', '.join(SOURCE_TYPES)}.")
         if not str(entry.get("name") or "").strip():
             raise ConfigError(f"{where} is missing 'name'.")
 
@@ -428,16 +420,13 @@ def _check_source(source: Source, where: str) -> None:
             raise ConfigError(f"{where}: an rss source needs a url starting with http(s)://.")
     elif source.type == "google_news":
         if bool(source.google_topic) == bool(source.query):
-            raise ConfigError(
-                f"{where}: a google_news source needs exactly one of google_topic or query."
-            )
+            raise ConfigError(f"{where}: a google_news source needs exactly one of google_topic or query.")
     elif source.type == "web_search":
         if not source.query:
             raise ConfigError(f"{where}: a web_search source needs a query.")
         if source.engine and source.engine not in WEB_SEARCH_ENGINES:
             raise ConfigError(
-                f"{where}: engine '{source.engine}' is unknown. "
-                f"Use one of: {', '.join(sorted(WEB_SEARCH_ENGINES))}."
+                f"{where}: engine '{source.engine}' is unknown. Use one of: {', '.join(sorted(WEB_SEARCH_ENGINES))}."
             )
 
 

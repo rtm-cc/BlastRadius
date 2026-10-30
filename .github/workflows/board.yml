@@ -1,16 +1,17 @@
 name: Board
 
-# Three jobs:
+# Pipeline stages:
 #
-#   test     every run, pull requests included: the unit tests and
-#            `check`, so a bad edit to config/ fails here instead of
-#            costing a morning's board.
-#   digest   the schedule, or "Run workflow" with "curate" ticked. Fetches,
-#            curates through OpenRouter, writes today's board to archive/
-#            and commits it - tomorrow's run reads it to know what is
-#            already published.
-#   pages    every run on main except a failed digest: builds the site
-#            from archive/ and deploys it to GitHub Pages.
+#   lint       code style & syntax checks with Ruff (lint and format check).
+#   typecheck  static type checking across blastradius with Mypy.
+#   security   automated secret scanning with TruffleHog and dependency CVE audit with pip-audit.
+#   test       unit test suite and config/feed validation (`blastradius check`).
+#   digest     the schedule, or "Run workflow" with "curate" ticked. Fetches,
+#              curates through OpenRouter, writes today's board to archive/
+#              and commits it - tomorrow's run reads it to know what is
+#              already published.
+#   pages      every run on main when checks pass: builds the site
+#              from archive/ and deploys it to GitHub Pages.
 #
 # One workflow, not two, on purpose: a commit pushed with GITHUB_TOKEN
 # never starts another workflow, so the digest's own run has to deploy what
@@ -69,7 +70,61 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  lint:
+    name: Code Quality (Ruff)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Install Ruff
+        run: pip install ruff
+      - name: Lint with Ruff
+        run: ruff check .
+      - name: Check code formatting
+        run: ruff format --check .
+
+  typecheck:
+    name: Type Check (Mypy)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Install dependencies and Mypy
+        run: pip install -r requirements.txt mypy
+      - name: Run Mypy
+        run: mypy
+
+  security:
+    name: Security & Secrets
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Secret Scanning (TruffleHog OSS)
+        uses: trufflesecurity/trufflehog@main
+        with:
+          extra_args: --only-verified
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Dependency Vulnerability Audit (pip-audit)
+        run: |
+          pip install pip-audit
+          pip-audit
+
   test:
+    name: Unit Tests & Config
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -78,12 +133,16 @@ jobs:
         with:
           python-version: "3.13"
           cache: pip
-      - run: pip install -r requirements.txt
-      - run: python -m unittest discover -s tests -t .
-      - run: python -m blastradius check
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -t .
+      - name: Check configuration and feeds
+        run: python -m blastradius check
 
   digest:
-    needs: test
+    name: Curate Digest
+    needs: [lint, typecheck, security, test]
     if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.curate)
     runs-on: ubuntu-latest
     # Feeds are quick; web searches and curation calls take minutes each.
@@ -174,11 +233,15 @@ jobs:
           esac
 
   pages:
-    needs: [test, digest]
+    name: Deploy GitHub Pages
+    needs: [lint, typecheck, security, test, digest]
     if: >-
       !cancelled()
       && github.event_name != 'pull_request'
       && github.ref == 'refs/heads/main'
+      && needs.lint.result == 'success'
+      && needs.typecheck.result == 'success'
+      && needs.security.result == 'success'
       && needs.test.result == 'success'
       && (needs.digest.result == 'success' || needs.digest.result == 'skipped')
       && needs.digest.outputs.curated != 'false'

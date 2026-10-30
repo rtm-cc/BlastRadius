@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from html.parser import HTMLParser
 from urllib.parse import urljoin
 
@@ -71,7 +71,7 @@ def _date(raw: str) -> datetime | None:
         parsed = datetime.fromisoformat(raw.strip().replace("Z", "+00:00"))
     except ValueError:
         return None
-    return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+    return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
 
 
 def _side(value: str) -> int:
@@ -102,9 +102,7 @@ def parse(url: str, html: str) -> PageMeta:
     return PageMeta(
         url=url,
         title=strip_html(meta.get("og:title") or parser.title),
-        published=_date(
-            meta.get("article:published_time") or meta.get("date") or parser.time
-        ),
+        published=_date(meta.get("article:published_time") or meta.get("date") or parser.time),
         image=urljoin(url, image) if image and not image.startswith("data:") else "",
         site_name=strip_html(meta.get("og:site_name", "")),
     )
@@ -113,9 +111,7 @@ def parse(url: str, html: str) -> PageMeta:
 def fetch(url: str, user_agent: str, timeout: float) -> PageMeta | None:
     """The page's metadata, or None when it does not load."""
     try:
-        with requests.get(
-            url, headers={"User-Agent": user_agent}, timeout=(10, timeout), stream=True
-        ) as response:
+        with requests.get(url, headers={"User-Agent": user_agent}, timeout=(10, timeout), stream=True) as response:
             if not response.ok or "html" not in response.headers.get("Content-Type", "html"):
                 return None
             body = response.raw.read(MAX_BYTES, decode_content=True)

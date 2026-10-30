@@ -13,8 +13,14 @@ TOPICS = {
 
 
 def story(title, url, source="Src"):
-    return {"title": title, "summary": "", "url": url, "rank": 1, "sources": [source],
-            "coverage": [{"title": title, "url": url, "source": source, "published": None}]}
+    return {
+        "title": title,
+        "summary": "",
+        "url": url,
+        "rank": 1,
+        "sources": [source],
+        "coverage": [{"title": title, "url": url, "source": source, "published": None}],
+    }
 
 
 class FakeChat:
@@ -62,10 +68,10 @@ class ReviewTest(unittest.TestCase):
 
     def test_invented_same_topic_and_contradictory_answers_change_nothing(self):
         reply = answer(
-            {"keep": "s9", "remove": ["s1"]},             # unknown keeper
-            {"keep": "s1", "remove": ["s2"]},             # same topic
-            {"keep": "s1", "remove": ["s3"]},             # s3 is kept below...
-            {"keep": "s3", "remove": ["s1"]},             # ...and s1 is kept above
+            {"keep": "s9", "remove": ["s1"]},  # unknown keeper
+            {"keep": "s1", "remove": ["s2"]},  # same topic
+            {"keep": "s1", "remove": ["s3"]},  # s3 is kept below...
+            {"keep": "s3", "remove": ["s1"]},  # ...and s1 is kept above
         )
         b, result, _ = self.run_review(reply)
         self.assertEqual(result.removed, [])

@@ -28,8 +28,8 @@ same-event matches only, and a failed or unusable answer removes nothing.
 from __future__ import annotations
 
 import json
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from typing import Callable
 
 from . import openrouter
 from .curate import extract_json

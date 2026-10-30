@@ -8,7 +8,7 @@ every run was the first, and fall back to the default window.
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import yaml
@@ -49,12 +49,12 @@ class State:
             parsed = datetime.fromisoformat(str(raw))
         except ValueError:
             return None
-        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+        return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
 
     def record_run(self, finished_at: datetime, stories: int, cost_usd: float) -> None:
         self.directory.mkdir(parents=True, exist_ok=True)
         data = self._read()
-        data["last_run_utc"] = finished_at.astimezone(timezone.utc).isoformat(timespec="seconds")
+        data["last_run_utc"] = finished_at.astimezone(UTC).isoformat(timespec="seconds")
         data["last_run_stories"] = stories
         data["last_run_cost_usd"] = round(cost_usd, 4)
         data["runs"] = int(data.get("runs", 0)) + 1

@@ -16,9 +16,12 @@ At 06:10 UTC (06:10 in Lisbon in winter, 07:10 in summer) GitHub Actions runs th
 
 The reliable trigger is outside GitHub: the GitLab project [jobs/secnews-github-runner-caller](https://git.rtm.cc/jobs/secnews-github-runner-caller) calls GitHub's "Run workflow" API every day at 07:00 Lisbon time, with `only_if_due` set, so it curates only if no scheduled run has yet. Its README covers the GitHub token it uses, which expires and has to be renewed.
 
-1. **`test`** runs the tests and checks `config/`.
-2. **`digest`** fetches every source, asks the model to curate each column, writes today's board to `archive/<YYYY>/<MM>/<DD>.yaml`, and commits it as **"Board for <date>"** (author: github-actions[bot]).
-3. **`pages`** rebuilds the site from `archive/` and deploys it to GitHub Pages.
+1. **`lint`** checks code style, modern syntax, and formatting with Ruff.
+2. **`typecheck`** verifies static typing across all modules with Mypy.
+3. **`security`** scans for leaked credentials/API keys with TruffleHog and audits dependencies with `pip-audit`.
+4. **`test`** runs the unit test suite (80 tests) and validates `config/` sources and schema (`blastradius check`).
+5. **`digest`** (schedule or manual curate) fetches every source, asks the model to curate each column, writes today's board to `archive/<YYYY>/<MM>/<DD>.yaml`, and commits it as **"Board for <date>"** (author: github-actions[bot]).
+6. **`pages`** rebuilds the site from `archive/` and deploys it to GitHub Pages only after all pre-flight checks pass.
 
 Everything runs on GitHub's own runners; there is no server.
 
@@ -27,9 +30,46 @@ Everything runs on GitHub's own runners; there is no server.
 | `config/` | Everything you are meant to edit. Its own guide: [config/README.md](config/README.md). |
 | `archive/` | The published boards, one YAML file per day, plus `state.yaml` (when the last run finished). Written by the workflow. |
 | `blastradius/` | The code. `blastradius/assets/` is the site's CSS, JavaScript and icons. |
-| `.github/workflows/board.yml` | The three jobs above, and when they run. |
+| `.github/workflows/board.yml` | The CI/CD pipeline and deployment jobs. |
+| `pyproject.toml` | Linter (Ruff) and type-checker (Mypy) configurations. |
+| `requirements-dev.txt` | Development and CI dependencies (Ruff, Mypy, pip-audit). |
 | GitHub → Settings → Secrets and variables → Actions | `OPENROUTER_API_KEY`, the only secret. |
 | GitHub → Settings → Pages | Source must be **GitHub Actions**. |
+| GitHub → Settings → Branches | Branch protection on `main` requiring 1 review approval. |
+
+## CI/CD Quality Pipeline & Branch Protection
+
+### Automated Pre-Flight Checks
+Every pull request and push to `main` executes 4 parallel quality jobs before any deployment or curation:
+- **Lint (Ruff)**: Fast Python linting and code formatting checks (`ruff check .`, `ruff format --check .`).
+- **Type Check (Mypy)**: Static type safety verification (`mypy blastradius`).
+- **Security & Secret Scanning (TruffleHog & pip-audit)**: Automated scan for leaked tokens, private keys, or API credentials, plus dependency vulnerability auditing.
+- **Automated Tests**: Complete unit test suite and schema verification (`unittest` + `blastradius check`).
+
+### Local Development Commands
+Before committing changes, run the local quality checks:
+```bash
+# Code formatting and linting
+.venv/bin/ruff check --fix .
+.venv/bin/ruff format .
+
+# Type checking
+.venv/bin/mypy blastradius
+
+# Vulnerability scan
+.venv/bin/pip-audit
+
+# Unit tests and config validation
+.venv/bin/python -m unittest discover -s tests -t .
+.venv/bin/python -m blastradius check
+```
+
+### Branch Protection Rules
+`main` is protected with branch rules:
+- **Pull Request Required**: Direct pushes from collaborators require a pull request.
+- **Review Approval**: Requires at least 1 approving code review before merging.
+- **Stale Review Dismissal**: Outdated approvals are dismissed when new commits are pushed.
+- **Admin Override**: Repository administrators can merge urgent fixes or bypass when pairing.
 
 ## Was today's run all right?
 
