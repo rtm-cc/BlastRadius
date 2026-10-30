@@ -1,0 +1,846 @@
+date: '2026-10-30'
+updated_at: '2026-10-30T07:07:45+00:00'
+topics:
+  ai_security:
+  - id: fb0ce250beee
+    rank: 1
+    title: Anthropic's AI Model Wrote Exploit for Critical Linux Kernel TCP Flaw (CVE-2026-98432)
+    summary: Anthropic said its unreleased AI model produced a working exploit for CVE-2026-98432, a CVSS
+      9.8 Linux kernel TCP vulnerability that lets an unauthenticated remote attacker execute commands
+      as root on Linux servers. The flaw affects Ubuntu, Red Hat Enterprise Linux, and other distributions;
+      the kernel's CVE team rated it 9.8.
+    url: https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfCJ0ttE8v4hkDjJRqbTvxlxFcoNtFJhbYCQ-o8NtaiyFLImEyA8aSO967eeZG9fRebhc8oVA-OloE9X9KVVAxM-H3wKvUlh8XmN6bGlEz2IJwMgcssmA7yIRi7YNOwVQYD6nhQCaWUg6fPy-QXVjfw6rV55LueKlLvZLazjKjTL94KJMMUZ2uZ3R019Km/s1600/linux-flaw.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - AI security research
+    - vulnerability research
+    - remote code execution
+    rationale: New CVE-level detail from Anthropic's earlier disclosure of an AI model chaining exploits;
+      materially identifies the Linux kernel flaw and affected distros.
+    is_update: true
+    supersedes: 335c9a1c723b
+    what_changed: Identifies the specific Linux kernel TCP flaw as CVE-2026-98432 (CVSS 9.8), names affected
+      distributions (Ubuntu, RHEL, others), and details the unauthenticated remote root impact.
+    cluster: 335c9a1c723b
+    cluster_key: 2026-anthropic-critical-cve-exploit-flaw-for-kernel-linux-model-tcp-wrote
+    coverage:
+    - title: Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions
+      url: https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html
+      source: The Hacker News
+      published: '2026-10-29T15:57:05+00:00'
+    published: '2026-10-29T15:57:05+00:00'
+  - id: f13c9c30e224
+    rank: 2
+    title: Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities
+    summary: Google's new Gemini 4 Carbon frontier model scored 88.2% on SEC-bench Pro for vulnerability
+      discovery and 54.8% on ExploitGym for exploitation, and is rolling out first to vetted cyber defenders
+      through the Fairwind Program.
+    url: https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBMb78BxIXnGaXFzCXPdswdQZsuh8rz63Y22pLX3cOkgRgaPv3KJgw6fRULDT3am1YO4eA1obnh0aOdxZy4KVZMww8sxNOtxzZXYcouotzbB25LVdJrCeDk0MQsgCmsYQBAaGdwyhmiMNa2Y90ujuXFXZPLTIrOo1PB6vtWqWAXygOvM72cEmXvHTN9Ktw/s1600/google-gemini.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    labels:
+    - AI security research
+    - vulnerability research
+    - autonomous exploitation
+    rationale: Demonstrated AI security capability with benchmark results for finding and exploiting vulnerabilities;
+      not a general model release.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f13c9c30e224
+    cluster_key: and-benchmarks-carbon-exploiting-finding-for-gemini-google-leads-patching-vulnerabilities
+    coverage:
+    - title: Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities
+      url: https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html
+      source: The Hacker News
+      published: '2026-10-29T13:42:40+00:00'
+    - title: Google Touts Powerful Cybersecurity Capabilities in Gemini 4 Carbon Model
+      url: https://www.securityweek.com/google-says-gemini-4-carbon-leads-in-finding-exploiting-and-fixing-vulnerabilities
+      source: SecurityWeek
+      published: '2026-10-29T15:01:00+00:00'
+    published: '2026-10-29T13:42:40+00:00'
+  - id: b817060d68b6
+    rank: 3
+    title: Cisco Open-Sources Quarry to Catch AI Agent Attacks Hidden in Harmless Steps
+    summary: Cisco open-sourced Project Quarry, a rule language designed to detect AI agent attacks that
+      only become visible across sequences of benign-looking actions.
+    url: https://www.securityweek.com/cisco-open-sources-quarry-to-catch-ai-agent-attacks-hidden-in-harmless-steps
+    image: https://www.securityweek.com/wp-content/uploads/2026/09/AI-artificial-intelligence-training.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - AI security research
+    - AI agents
+    rationale: New defensive research specifically targeting multi-step AI agent attacks; relevant to
+      AI system security and detection.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b817060d68b6
+    cluster_key: agent-attacks-catch-cisco-harmless-hidden-open-quarry-sources-steps
+    coverage:
+    - title: Cisco Open Sources Quarry to Catch AI Agent Attacks Hidden in Harmless Steps
+      url: https://www.securityweek.com/cisco-open-sources-quarry-to-catch-ai-agent-attacks-hidden-in-harmless-steps
+      source: SecurityWeek
+      published: '2026-10-29T14:18:03+00:00'
+    published: '2026-10-29T14:18:03+00:00'
+  breaches:
+  - id: f7e0074ade36
+    rank: 1
+    title: Binance Security Incident Affects $6.3 Billion in Digital Assets
+    summary: Binance is investigating a security incident that affected roughly $6.3 billion in assets,
+      in what could be the largest cryptocurrency hack in history. Nearly $3 billion has been frozen on-chain
+      so far, including over 1.5 billion USDT frozen by Tether and $800 million tied to the incident by
+      Circle.
+    url: https://thehackernews.com/2026/10/binance-suffers-security-breach.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmTtJggkBbk2ERH6bhZMSPnb_E1aQ44w4EpzkwAt1tqp45sGvG7jeAg2QvmbWQsBy5hyphenhyphen7ur18XQ1Uax7D9XRg-CZpQpMAByXt37Fn1loBClsu49KlBEsnxRCfy7vSuI-5yrpHB4JLWc1vtw0aITnhbFXDb4CosJzm07My3Lw6p3fOLTfcaxJLBR-Pdi2A6/s1600/Binance.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    labels:
+    - data breach
+    - cryptocurrency
+    rationale: Confirmed incident at a major crypto exchange with billions of dollars at stake; users
+      may need to watch for fallout.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f7e0074ade36
+    cluster_key: affects-assets-billion-binance-digital-incident-security
+    coverage:
+    - title: Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen
+      url: https://thehackernews.com/2026/10/binance-suffers-security-breach.html
+      source: The Hacker News
+      published: '2026-10-30T04:14:59+00:00'
+    - title: Binance probes potential $5.8 billion crypto-theft hack
+      url: https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack
+      source: BleepingComputer
+      published: '2026-10-29T22:45:23+00:00'
+    published: '2026-10-30T04:14:59+00:00'
+  - id: 57b8c8d77c0f
+    rank: 2
+    title: Florida Department of Education Breach May Affect 4.9 Million People
+    summary: Florida's Department of Education says a criminal intrusion into its student financial aid
+      website may have exposed personal information, including Social Security numbers, belonging to about
+      4.9 million people. The department learned of the unauthorized access on October 19 and activated
+      its cybersecurity response.
+    url: https://databreaches.net/2026/10/29/florida-education-department-says-data-breach-may-affect-4-9-million-people
+    image: ''
+    sources:
+    - DataBreaches.net
+    - BleepingComputer
+    labels:
+    - data breach
+    - education
+    - government
+    rationale: Large-scale state government data breach involving SSNs for millions of students and applicants.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 57b8c8d77c0f
+    cluster_key: affect-breach-department-education-florida-may-million-people
+    coverage:
+    - title: Florida education department says data breach may affect 4.9 million people
+      url: https://databreaches.net/2026/10/29/florida-education-department-says-data-breach-may-affect-4-9-million-people
+      source: DataBreaches.net
+      published: '2026-10-29T20:07:52+00:00'
+    - title: Japan Airlines suffers third-party data breach exposing passenger info
+      url: https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info
+      source: BleepingComputer
+      published: '2026-10-29T22:08:04+00:00'
+    - title: Student SSNs and Medicaid IDs Exposed in Frontline School Software Breach
+      url: https://databreaches.net/2026/10/29/student-ssns-and-medicaid-ids-exposed-in-frontline-school-software-breach
+      source: DataBreaches.net
+      published: '2026-10-29T19:45:40+00:00'
+    published: '2026-10-29T20:07:52+00:00'
+  - id: b17324e2197a
+    rank: 3
+    title: Hackers Steal 2.6 Million Records From Sony's Japanese ISP So-net
+    summary: Attackers stole about 2.6 million records from Sony's Japanese internet provider So-net,
+      exposing customer data for So-net and Plala as well as 54,401 email account passwords and 16 bank
+      account records.
+    url: https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net
+    image: https://www.securityweek.com/wp-content/uploads/2026/10/Sony-So-net.jpeg
+    sources:
+    - SecurityWeek
+    - BleepingComputer
+    labels:
+    - data breach
+    - data exfiltration
+    rationale: Confirmed breach at a Sony-owned ISP exposing millions of records, including credentials
+      and banking data.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b17324e2197a
+    cluster_key: from-hackers-isp-japanese-million-net-records-sony-steal
+    coverage:
+    - title: Hackers Steal 2.6 Million Records From Sony’s Japanese ISP So-net
+      url: https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net
+      source: SecurityWeek
+      published: '2026-10-29T11:00:00+00:00'
+    - title: Energy giant ENGIE discloses data breach affecting customers
+      url: https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers
+      source: BleepingComputer
+      published: '2026-10-30T07:03:44.824802+00:00'
+    published: '2026-10-29T11:00:00+00:00'
+  - id: 601c6dfc207f
+    rank: 4
+    title: Over 41,000 DHS Employee Records Leaked Online
+    summary: Searchable records for more than 41,000 current and former DHS employees and contractors
+      were published, exposing contact details and sensitive assignment information. New reporting says
+      the data was allegedly stolen from an Okta single sign-on system earlier this year.
+    url: https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online
+    image: https://www.securityweek.com/wp-content/uploads/2026/10/DHS.jpeg
+    sources:
+    - SecurityWeek
+    - DataBreaches.net
+    labels:
+    - data breach
+    - government
+    rationale: Update to previously published DHS leak with new detail that records were allegedly taken
+      from an Okta SSO system.
+    is_update: true
+    supersedes: 4bc4f3fbdb0a
+    what_changed: Reporting adds that the data was allegedly stolen from DHS's Okta single sign-on system
+      earlier this year.
+    cluster: 4bc4f3fbdb0a
+    cluster_key: 000-dhs-employee-leaked-online-over-records
+    coverage:
+    - title: Over 41,000 DHS Employee Records Leaked Online
+      url: https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online
+      source: SecurityWeek
+      published: '2026-10-29T12:54:14+00:00'
+    - title: DHS personnel leak exposes contact details and sensitive job information
+      url: https://databreaches.net/2026/10/29/dhs-personnel-leak-exposes-contact-details-and-sensitive-job-information
+      source: DataBreaches.net
+      published: '2026-10-29T19:41:47+00:00'
+    - title: A RIZAP Employee Uploaded 726 People’s Health Records to a Personal AI Chat
+      url: https://databreaches.net/2026/10/29/a-rizap-employee-uploaded-726-peoples-health-records-to-a-personal-ai-chat
+      source: DataBreaches.net
+      published: '2026-10-29T19:59:37+00:00'
+    published: '2026-10-29T12:54:14+00:00'
+  - id: 0968e09f1c6b
+    rank: 5
+    title: Ransomware Group Claims Responsibility for UNM Health Cyberattack
+    summary: University of New Mexico Health acknowledged reports that a ransomware group claimed responsibility
+      for the cyberattack that disrupted patient care, including ambulance diversions and cancelled appointments.
+    url: https://databreaches.net/2026/10/29/unm-health-addresses-cyberattack-in-new-mexico-after-ransomware-group-claims-responsibility
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - cyberattack
+    - ransomware
+    - healthcare
+    rationale: Update to the UNM Health incident with a ransomware group claiming responsibility.
+    is_update: true
+    supersedes: e314c1030cbd
+    what_changed: A ransomware group has claimed responsibility for the attack, adding attribution information
+      to the earlier disruption report.
+    cluster: e314c1030cbd
+    cluster_key: claims-cyberattack-for-group-health-ransomware-responsibility-unm
+    coverage:
+    - title: UNM Health addresses cyberattack in New Mexico after ransomware group claims responsibility
+      url: https://databreaches.net/2026/10/29/unm-health-addresses-cyberattack-in-new-mexico-after-ransomware-group-claims-responsibility
+      source: DataBreaches.net
+      published: '2026-10-29T20:10:54+00:00'
+    published: '2026-10-29T20:10:54+00:00'
+  - id: 242722d79726
+    rank: 6
+    title: BAE Systems Says No Data Stolen in Cyberattack on Federal Bankruptcy Court Systems
+    summary: BAE Systems, the federal contractor behind IT systems for U.S. bankruptcy courts, says its
+      investigation found no data was extracted and no PII was breached in the cyberattack that disrupted
+      court notices for weeks.
+    url: https://therecord.media/us-bankruptcy-courts-it-contractor-says-no-data-stolen-cyberattack
+    image: http://cms.therecord.media/uploads/administrative_office_us_courts_f00373e8c3.jpg
+    sources:
+    - The Record
+    - SecurityWeek
+    labels:
+    - cyberattack
+    - government
+    rationale: Confirmed security incident affecting U.S. federal court systems, with the contractor stating
+      no data was exfiltrated.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 242722d79726
+    cluster_key: bae-bankruptcy-court-cyberattack-data-federal-says-stolen-systems-systems
+    coverage:
+    - title: Federal bankruptcy courts contractor says no data stolen during cyber intrusion
+      url: https://therecord.media/us-bankruptcy-courts-it-contractor-says-no-data-stolen-cyberattack
+      source: The Record
+      published: '2026-10-29T16:13:00+00:00'
+    - title: BAE Says No Data Extracted in Incident Hitting Bankruptcy Courts
+      url: https://www.securityweek.com/bae-says-no-data-extracted-in-incident-hitting-bankruptcy-courts
+      source: SecurityWeek
+      published: '2026-10-29T13:26:49+00:00'
+    published: '2026-10-29T16:13:00+00:00'
+  fraud_phishing:
+  - id: 82601c52d7ce
+    rank: 1
+    title: Fake Anthropic Preview Invites Phish Enterprise Credentials
+    summary: A Cofense-discovered phishing campaign sends employees emails offering access to a private,
+      invite-only Anthropic product preview, with GoTo Webinar branding making the registration pages
+      look legitimate. The goal is to steal Google and Microsoft login credentials, and researchers say
+      the emails have slipped past some major secure email gateways despite clear red flags.
+    url: https://www.csoonline.com/article/4241895/fake-anthropic-ai-previews-lure-in-overeager-employees.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4241895-0-54071000-1793279246-shutterstock_2525206127.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    - Dark Reading
+    labels:
+    - phishing
+    - social engineering
+    - account takeover
+    rationale: Concrete campaign with a recognizable Anthropic preview lure aimed at employees; coverage
+      also notes it bypasses top secure email gateways.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 82601c52d7ce
+    cluster_key: anthropic-credentials-enterprise-fake-invites-phish-preview
+    coverage:
+    - title: Fake Anthropic AI previews lure in overeager employees
+      url: https://www.csoonline.com/article/4241895/fake-anthropic-ai-previews-lure-in-overeager-employees.html
+      source: CSO Online
+      published: '2026-10-29T13:05:00+00:00'
+    - title: Anthropic-Themed Phishing Emails Bypass Top Security Tools
+      url: https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools
+      source: Dark Reading
+      published: '2026-10-29T21:21:56+00:00'
+    published: '2026-10-29T13:05:00+00:00'
+  - id: 9f071e277c9e
+    rank: 2
+    title: Fake 'Padre Terminal' Crypto App on App Store Linked to Solana Wallet Theft
+    summary: A fake cryptocurrency trading app called Padre Terminal was previously available on the Apple
+      App Store and has been linked to the theft of about $23,000 from 27 Solana wallets. Users who installed
+      the bogus app risked having their wallets drained by the attackers.
+    url: https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft
+    image: https://www.bleepstatic.com/content/hl-images/2023/12/01/Hackers_cryptocurrency_red.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - malicious apps
+    - cryptocurrency
+    - account takeover
+    rationale: Concrete fake app incident on the official App Store tied to real cryptocurrency wallet
+      theft, fitting the investment/fraud scope.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9f071e277c9e
+    cluster_key: app-app-crypto-fake-linked-padre-solana-store-terminal-theft-wallet
+    coverage:
+    - title: Fake crypto app on Apple App Store linked to $23K wallet theft
+      url: https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft
+      source: BleepingComputer
+      published: '2026-10-29T19:23:41+00:00'
+    published: '2026-10-29T19:23:41+00:00'
+  policy:
+  - id: ada19758549c
+    rank: 1
+    title: CISA Adds GitLab and Cisco Firewall Flaws to Known Exploited Vulnerabilities Catalog
+    summary: CISA added CVE-2026-97229, an integer overflow/wraparound vulnerability in GitLab Community
+      and Enterprise Editions, and CVE-2026-76418, an unchecked-return-value flaw in Cisco Secure Firewall
+      ASA and FTD software, to its Known Exploited Vulnerabilities catalog based on evidence of active
+      exploitation. Federal agencies are required to remediate under BOD 26-04 deadlines, and the Cisco
+      flaw is being used to remotely crash SSL VPN firewall devices.
+    url: https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - CSO Online
+    - BleepingComputer
+    - The Hacker News
+    labels:
+    - CISA
+    - KEV
+    - active exploitation
+    - vulnerability
+    rationale: Government KEV alert confirms active exploitation of the Cisco firewall flaw and imposes
+      federal remediation obligations; the GitLab addition is also a binding advisory for federal agencies.
+    is_update: true
+    supersedes: 9b48cf8de90d
+    what_changed: CISA added CVE-2026-76418 to its KEV catalog after evidence of active exploitation,
+      and also added CVE-2026-97229 for GitLab; federal agencies now face mandatory remediation deadlines.
+    cluster: 9b48cf8de90d
+    cluster_key: adds-and-catalog-cisa-cisco-exploited-firewall-flaws-gitlab-known-vulnerabilities
+    coverage:
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-29T12:00:00+00:00'
+    - title: New Cisco firewall zero-day being actively exploited
+      url: https://www.csoonline.com/article/4242420/new-cisco-firewall-zero-day-being-actively-exploited.html
+      source: CSO Online
+      published: '2026-10-29T19:31:38+00:00'
+    - title: New Cisco firewall zero-day exploited to crash SSL VPN devices
+      url: https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices
+      source: BleepingComputer
+      published: '2026-10-29T11:10:13+00:00'
+    - title: Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls
+      url: https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html
+      source: The Hacker News
+      published: '2026-10-29T10:44:46+00:00'
+    published: '2026-10-29T12:00:00+00:00'
+  - id: 1ec07b5461b3
+    rank: 2
+    title: GM to Pay $220 Million to Settle State Cases Over Sale of Driver Data
+    summary: General Motors agreed to pay $220 million and adopt reforms to settle a lawsuit brought by
+      36 state attorneys general, who alleged the automaker unlawfully sold detailed driver behavior data
+      to outside parties. The settlement resolves state data protection claims and imposes business practice
+      changes.
+    url: https://therecord.media/general-motors-lawsuit-privacy
+    image: http://cms.therecord.media/uploads/Buick_46b721d4c6.jpg
+    sources:
+    - The Record
+    labels:
+    - data protection
+    - settlement
+    rationale: State attorneys general enforcement action resulting in a large financial penalty and mandated
+      reforms, squarely within policy and data protection enforcement.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1ec07b5461b3
+    cluster_key: 220-cases-data-driver-million-over-pay-sale-settle-state
+    coverage:
+    - title: GM settles with 36 states for selling driver data, agrees to $220 million fine and reforms
+      url: https://therecord.media/general-motors-lawsuit-privacy
+      source: The Record
+      published: '2026-10-29T19:45:00+00:00'
+    published: '2026-10-29T19:45:00+00:00'
+  - id: cb33db5d06b4
+    rank: 3
+    title: FTC Orders Nine Companies to Disclose Personalized Pricing and Pay Data Practices
+    summary: The U.S. Federal Trade Commission ordered nine food delivery, airline, and ride-sharing companies
+      to provide detailed information on how they use personal data to set individual consumer prices
+      and employee compensation, signaling increased regulatory scrutiny of algorithmic and data-driven
+      pricing.
+    url: https://therecord.media/ftc-rideshare-airlines-data
+    image: http://cms.therecord.media/uploads/Delivery_driver_50e30e7e9a.jpg
+    sources:
+    - The Record
+    labels:
+    - investigation
+    - data protection
+    rationale: FTC investigative order requires companies to disclose how they use personal data, a regulatory
+      enforcement step on data protection and algorithmic pricing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cb33db5d06b4
+    cluster_key: and-companies-data-disclose-ftc-nine-orders-pay-personalized-practices-pricing
+    coverage:
+    - title: FTC to probe major companies over personalized pricing and pay
+      url: https://therecord.media/ftc-rideshare-airlines-data
+      source: The Record
+      published: '2026-10-29T13:45:00+00:00'
+    published: '2026-10-29T13:45:00+00:00'
+  supply_chain:
+  - id: b0ae7c304cc5
+    rank: 1
+    title: 319 Chrome extensions with 13.4 million installs hijack searches
+    summary: Researchers detected a large-scale campaign of 319 malicious Chrome extensions with a combined
+      13.4 million installs that redirect user searches through tracking servers to earn ad revenue from
+      Bing and Yahoo. Users should remove any affected extensions, reset browser search settings, and
+      watch for redirects.
+    url: https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/29/Chrome.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - malicious apps
+    - supply-chain
+    rationale: High-impact browser extension supply chain campaign affecting millions of users; direct
+      remediation is removing the extensions and restoring search settings.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b0ae7c304cc5
+    cluster_key: 319-chrome-extensions-hijack-installs-million-searches-with
+    coverage:
+    - title: Chrome extensions with 13.4 million installs caught hijacking searches
+      url: https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches
+      source: BleepingComputer
+      published: '2026-10-29T16:10:31+00:00'
+    published: '2026-10-29T16:10:31+00:00'
+  - id: 5ff4cae8e0a1
+    rank: 2
+    title: Malicious Firefox extensions impersonate Phantom, Jupiter and Bitget wallets
+    summary: Socket found three malicious Firefox extensions impersonating popular crypto wallets Phantom,
+      Jupiter, and Bitget. Once installed, the extensions steal recovery phrases and private keys, giving
+      attackers full control of victims' wallets. Users should remove the extensions and move funds from
+      any wallet whose seed phrase was exposed.
+    url: https://www.malwarebytes.com/blog/news/2026/10/malicious-firefox-extensions-impersonate-popular-crypto-wallets
+    image: https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/10/crypto_wallet_phishing.png
+    sources:
+    - Malwarebytes
+    labels:
+    - malicious apps
+    - cryptocurrency
+    - supply-chain
+    rationale: Malicious add-on supply chain aimed at crypto users; effective action is removing the extensions
+      and treating wallet data as compromised.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5ff4cae8e0a1
+    cluster_key: and-bitget-extensions-firefox-impersonate-jupiter-malicious-phantom-wallets
+    coverage:
+    - title: Malicious Firefox extensions impersonate popular crypto wallets
+      url: https://www.malwarebytes.com/blog/news/2026/10/malicious-firefox-extensions-impersonate-popular-crypto-wallets
+      source: Malwarebytes
+      published: '2026-10-29T14:06:54+00:00'
+    published: '2026-10-29T14:06:54+00:00'
+  - id: 88da725a141a
+    rank: 3
+    title: Hugging Face GPU-mining malware campaign returns after takedown
+    summary: A crypto-mining campaign abusing Hugging Face models returned days after a takedown, hijacking
+      GPU servers and planting backdoors; one malicious model was downloaded more than 28,000 times. The
+      same research also flags a fake Solana starter kit on GitHub designed to trick AI coding agents
+      into installing NetSupport RAT. Teams should audit recently added models and AI agent tooling and
+      rotate credentials on affected runners.
+    url: https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining
+    image: https://www.bleepstatic.com/content/hl-images/2026/07/20/Hugging-Face.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - supply-chain
+    - malware
+    - AI agents
+    - cryptocurrency
+    rationale: Malicious model and AI tooling supply chain attack on a widely used ML registry and GitHub;
+      concrete checks include auditing downloaded models and AI agent dependencies.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 88da725a141a
+    cluster_key: after-campaign-face-gpu-hugging-malware-mining-returns-takedown
+    coverage:
+    - title: Hugging Face malware campaign returns to hijack GPUs for crypto mining
+      url: https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining
+      source: BleepingComputer
+      published: '2026-10-29T22:09:24+00:00'
+    - title: Chrome extensions with 13.4 million installs caught hijacking searches
+      url: https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches
+      source: BleepingComputer
+      published: '2026-10-29T16:10:31+00:00'
+    published: '2026-10-29T22:09:24+00:00'
+  - id: 03e7a3726860
+    rank: 4
+    title: Polymarket halts trading after third-party script breach drains crypto
+    summary: Prediction market Polymarket temporarily suspended trading after hackers compromised a third-party
+      service to distribute cryptocurrency-draining JavaScript, with roughly $2.5 million in assets traced
+      to a suspected attacker wallet. Users should review wallet permissions and treat any suspicious
+      on-chain transactions as compromised.
+    url: https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/29/polymarket-crypto.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - third-party-script
+    - supply-chain
+    - cryptocurrency
+    rationale: Client-side supply chain breach via compromised third-party JavaScript; affected platform
+      users need to check and revoke wallet permissions.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 03e7a3726860
+    cluster_key: after-breach-crypto-drains-halts-party-polymarket-script-third-trading
+    coverage:
+    - title: Polymarket halts trading after crypto-draining script breach, $2.5M traced
+      url: https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced
+      source: BleepingComputer
+      published: '2026-10-29T21:47:25+00:00'
+    published: '2026-10-29T21:47:25+00:00'
+  - id: f654203effd0
+    rank: 5
+    title: 'Japan Airlines: Amadeus breach exposed data of 92,000 customers'
+    summary: Japan Airlines said a data breach at Amadeus's Passenger Service System exposed the personal
+      data of about 92,000 customers, a major expansion from the roughly 2,000 customers initially reported.
+      Affected passengers should watch for targeted phishing and monitor accounts for suspicious activity.
+    url: https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/29/aircraft.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - data breach
+    - supply-chain
+    rationale: Vendor breach at a third-party airline system with materially expanded scope; supply-chain
+      data risk requiring customer notification and monitoring.
+    is_update: true
+    supersedes: c5aae416fb99
+    what_changed: Initial disclosure said about 2,000 customers were affected; the updated reporting puts
+      the exposure at about 92,000 customers via a breach at Amadeus's Passenger Service System.
+    cluster: c5aae416fb99
+    cluster_key: 000-airlines-amadeus-breach-customers-data-exposed-japan
+    coverage:
+    - title: Japan Airlines suffers third-party data breach exposing passenger info
+      url: https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info
+      source: BleepingComputer
+      published: '2026-10-29T22:08:04+00:00'
+    published: '2026-10-29T22:08:04+00:00'
+  - id: 212f23e4e084
+    rank: 6
+    title: 26,400 valid cloud and AI credentials found exposed in public Gitee repositories
+    summary: Independent researcher Ben Zimmermann found 26,400 valid cloud and AI credentials in public
+      code across 7.25 million Gitee repositories, mostly keys for cloud and AI services. Developers and
+      organizations should scan public repositories and forks for secrets and rotate any exposed credentials.
+    url: https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwVszv5076OudfiraNA4yh_XuzZZof-jYaklwUgiY700oPMvBHQfKHx-8yLNwhF9NVXahFRvWwU7c0mPCsIG-GUo45Fi_LT6ecZMsaRUfaLIL6eK16qeku1PO5aMTQRV0VKJh-pjKG4rC-RyajCGjL4R_A5W6YPsps4B4-GhEbstuAN7AnelVJPwIFK5W-/s1600/gite.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - supply-chain
+    - exposed credentials
+    rationale: Credential leakage in public code creates downstream risk to cloud and AI accounts; concrete
+      action is scanning repos and rotating exposed keys.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 212f23e4e084
+    cluster_key: 400-and-cloud-credentials-exposed-found-gitee-public-repositories-valid
+    coverage:
+    - title: 26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories
+      url: https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html
+      source: The Hacker News
+      published: '2026-10-29T11:33:15+00:00'
+    published: '2026-10-29T11:33:15+00:00'
+  threats:
+  - id: aa3fd50fa763
+    rank: 1
+    title: Imposter abused trust in OpenAI, Anthropic, and 30 others to hunt for secrets
+    summary: A single threat actor posed as roughly 32 AI-agent identities, impersonating OpenAI, Anthropic,
+      and Meta, while probing enterprise web servers for files containing credentials, API keys, and other
+      secrets. Organizations should filter and monitor requests from unverified AI crawlers.
+    url: https://www.csoonline.com/article/4242088/imposter-abused-trust-in-openai-anthropic-and-30-others-to-hunt-for-secrets.html
+    image: https://www.csoonline.com/wp-content/uploads/2026/10/4242088-0-09346100-1793274787-shutterstock_editorial_2276608417.jpg?quality=50&strip=all
+    sources:
+    - CSO Online
+    labels:
+    - AI agents
+    - data exfiltration
+    - espionage
+    rationale: 'New attacker technique seen in the wild: impersonating trusted AI agents to harvest credentials
+      from enterprise web servers, with observed targeting across multiple industries.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: aa3fd50fa763
+    cluster_key: abused-and-anthropic-for-hunt-imposter-openai-others-secrets-trust
+    coverage:
+    - title: Imposter abused trust in OpenAI, Anthropic, and 30 others to hunt for secrets
+      url: https://www.csoonline.com/article/4242088/imposter-abused-trust-in-openai-anthropic-and-30-others-to-hunt-for-secrets.html
+      source: CSO Online
+      published: '2026-10-29T11:52:51+00:00'
+    published: '2026-10-29T11:52:51+00:00'
+  - id: ef7620ecc7f7
+    rank: 2
+    title: Cyberattack disrupts Belgian tax services before filing deadline
+    summary: Belgium's Federal Public Service Finance suspended access to MyMinfin and other tax services
+      after a cyberattack, as it investigates the scope of the impact days before a filing deadline. Taxpayers
+      should expect delays and follow official guidance.
+    url: https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline
+    image: http://cms.therecord.media/uploads/scam_click_tax_season_76bf967efe.jpg
+    sources:
+    - The Record
+    labels:
+    - cyberattack
+    - government
+    rationale: Active cyberattack against a national tax authority with direct service disruption, meeting
+      the bar for an in-the-wild threat rather than a breach disclosure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ef7620ecc7f7
+    cluster_key: before-belgian-cyberattack-deadline-disrupts-filing-services-tax
+    coverage:
+    - title: Cyberattack disrupts Belgian tax services before filing deadline
+      url: https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline
+      source: The Record
+      published: '2026-10-29T13:31:00+00:00'
+    published: '2026-10-29T13:31:00+00:00'
+  - id: d3e093690660
+    rank: 3
+    title: Hacker targeted high-stakes poker players with malware that exposed their cards
+    summary: A hacker installed illicit software on the computers of top online poker players to view
+      their hole cards and cheat them at the tables, according to an investigation. The case highlights
+      targeted malware aimed at high-value individuals for fraud.
+    url: https://www.wired.com/story/a-hacker-targeted-high-stakes-poker-players-with-malware-that-exposed-their-cards
+    image: https://media.wired.com/photos/6adfb9e14342ac0de5548666/master/pass/Security_A%20Hacker%20Snuck%20Malware%20Onto%20Online%20Poker%20Players%E2%80%99%20Computers%20That%20Let%20Him%20See%20Their%20Cards_v1.jpg
+    sources:
+    - WIRED Security
+    labels:
+    - malware
+    - cybercrime
+    rationale: Targeted malware operation with a novel financial fraud objective, demonstrating how attackers
+      use remote access to exploit specific high-value victims.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d3e093690660
+    cluster_key: cards-exposed-hacker-high-malware-players-poker-stakes-targeted-that-their-with
+    coverage:
+    - title: A Hacker Targeted High-Stakes Poker Players With Malware That Exposed Their Cards
+      url: https://www.wired.com/story/a-hacker-targeted-high-stakes-poker-players-with-malware-that-exposed-their-cards
+      source: WIRED Security
+      published: '2026-10-29T10:30:00+00:00'
+    published: '2026-10-29T10:30:00+00:00'
+  vulnerabilities:
+  - id: 425b70af3daf
+    rank: 1
+    title: Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days
+    summary: Microsoft's October 2026 Patch Tuesday update addresses a record-breaking 1,411 vulnerabilities,
+      including 70 rated Critical. One zero-day is already being actively exploited and two more were
+      publicly disclosed. Apply the updates immediately.
+    url: https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days
+    image: https://www.bleepstatic.com/content/hl-images/2024/10/08/patch_tuesday_microsoft.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    - CSO Online
+    - CISA
+    - SecurityWeek
+    labels:
+    - Microsoft
+    - patch
+    - security update
+    - zero-day
+    rationale: High-impact Patch Tuesday release with an exploited zero-day and two disclosed zero-days
+      in widely deployed software; immediate patching is required.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 425b70af3daf
+    cluster_key: 2026-411-days-fixes-flaws-microsoft-october-patch-tuesday-zero
+    coverage:
+    - title: Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days
+      url: https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days
+      source: BleepingComputer
+      published: '2026-10-30T07:03:44.824802+00:00'
+    - title: Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls
+      url: https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html
+      source: The Hacker News
+      published: '2026-10-29T10:44:46+00:00'
+    - title: New Cisco firewall zero-day exploited to crash SSL VPN devices
+      url: https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices
+      source: BleepingComputer
+      published: '2026-10-29T11:10:13+00:00'
+    - title: New Cisco firewall zero-day being actively exploited
+      url: https://www.csoonline.com/article/4242420/new-cisco-firewall-zero-day-being-actively-exploited.html
+      source: CSO Online
+      published: '2026-10-29T19:31:38+00:00'
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-29T12:00:00+00:00'
+    - title: Cisco patches Secure Email Gateway zero-day exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root
+      source: BleepingComputer
+      published: '2026-10-30T07:03:44.824802+00:00'
+    - title: Adobe, Veeam, Juniper Networks Patch Critical Vulnerabilities
+      url: https://www.securityweek.com/adobe-veeam-juniper-networks-patch-critical-vulnerabilities
+      source: SecurityWeek
+      published: '2026-10-29T13:42:52+00:00'
+    published: '2026-10-30T07:03:44.824802+00:00'
+  - id: f4c06d447523
+    rank: 2
+    title: Critical Linux kernel TCP flaw CVE-2026-98432 can give remote attackers root access
+    summary: CVE-2026-98432, a flaw in the Linux kernel's TCP code rated 9.8 by the kernel's CVE team,
+      affects Ubuntu, Red Hat Enterprise Linux, and other distributions. A remote attacker with no credentials
+      can exploit it to run commands as root on Linux servers; an AI-written exploit has reportedly been
+      developed. Apply kernel updates from your distribution.
+    url: https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfCJ0ttE8v4hkDjJRqbTvxlxFcoNtFJhbYCQ-o8NtaiyFLImEyA8aSO967eeZG9fRebhc8oVA-OloE9X9KVVAxM-H3wKvUlh8XmN6bGlEz2IJwMgcssmA7yIRi7YNOwVQYD6nhQCaWUg6fPy-QXVjfw6rV55LueKlLvZLazjKjTL94KJMMUZ2uZ3R019Km/s1600/linux-flaw.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - Linux kernel
+    - remote code execution
+    - patch
+    - vulnerability
+    rationale: Critical 9.8 kernel TCP vulnerability in widely deployed Linux distributions with a demonstrated
+      remote-code-execution path.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f4c06d447523
+    cluster_key: 2026-98432-attackers-can-critical-cve-flaw-give-kernel-linux-remote-tcp
+    coverage:
+    - title: Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions
+      url: https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html
+      source: The Hacker News
+      published: '2026-10-29T15:57:05+00:00'
+    published: '2026-10-29T15:57:05+00:00'
+  - id: e8e6f3d01f63
+    rank: 3
+    title: Telegram for Android flaw chain lets attackers take over phones via voice calls; fixed in 12.10.4
+    summary: NebuSec disclosed a flaw in Telegram for Android that, chained with two other bugs, could
+      let an attacker take full control of a victim's phone through a voice call once the victim answers.
+      The attacker only needs an ordinary Telegram account. Telegram fixed the issue in version 12.10.4;
+      users should update.
+    url: https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguzUg6G-A4KdRvBuhj9LZ93cFfXfvMNkg3dJO0H9sfNJ3MTlecsgLEMIk5TnIrdl2N6UGB8D9rlqLduGEZVm7X-XrWZr6Xh5ZrVp38x5uTd1vHyHGcjRR2N3gctNen-CBSz8JihnNL57galBoeOVKwG5w3qsOZnqmGYdkxzjurrI3QWolmS1Qfz_E_Wog/s1600/telegram.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - Telegram
+    - Android
+    - remote code execution
+    - patch
+    rationale: Critical RCE chain in a very widely used messaging app with a fix already released by the
+      vendor.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e8e6f3d01f63
+    cluster_key: android-attackers-chain-flaw-for-lets-over-phones-take-telegram-via-voice
+    coverage:
+    - title: Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls
+      url: https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html
+      source: The Hacker News
+      published: '2026-10-29T11:39:18+00:00'
+    published: '2026-10-29T11:39:18+00:00'
+  - id: 9eee74d9a8bf
+    rank: 4
+    title: Cisco SD-WAN zero-day (CVE-2026-20127) exploited by UAT-11473 to deploy KeyDrift malware
+    summary: Cisco Talos linked exploitation of CVE-2026-20127, an authentication-bypass flaw in Cisco
+      Catalyst SD-WAN Controllers, to a newly identified APT group tracked as UAT-11473. The attackers
+      deployed custom KeyDrift malware that steals site-to-site encryption keys, and the infrastructure
+      overlaps Volt Typhoon's Silent Train network. Patch unpatched SD-WAN deployments and hunt for KeyDrift.
+    url: https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/14/Cisco.jpg
+    sources:
+    - BleepingComputer
+    - SecurityWeek
+    labels:
+    - Cisco
+    - zero-day
+    - espionage
+    - active exploitation
+    rationale: New attribution for an actively exploited SD-WAN zero-day that steals site-to-site encryption
+      keys; patching and hunting guidance are actionable.
+    is_update: true
+    supersedes: 7f9cb4b055a8
+    what_changed: 'Attribution was established: Cisco Talos now tracks the actor as UAT-11473, and the
+      CVE identifier CVE-2026-20127 is confirmed.'
+    cluster: 7f9cb4b055a8
+    cluster_key: 11473-20127-2026-cisco-cve-day-deploy-exploited-keydrift-uat-wan-zero
+    coverage:
+    - title: Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware
+      url: https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware
+      source: BleepingComputer
+      published: '2026-10-29T18:38:26+00:00'
+    - title: Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon’s ‘Silent Train’ Network
+      url: https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network
+      source: SecurityWeek
+      published: '2026-10-29T10:29:25+00:00'
+    published: '2026-10-29T18:38:26+00:00'
