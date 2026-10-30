@@ -64,12 +64,13 @@ Before committing changes, run the local quality checks:
 .venv/bin/python -m blastradius check
 ```
 
-### Branch Protection Rules
-`main` is protected with branch rules:
-- **Pull Request Required**: Direct pushes from collaborators require a pull request.
+### Branch Protection (GitHub Repository Rulesets)
+`main` is protected via modern **GitHub Repository Rulesets**:
+- **Pull Request Required**: Direct pushes from contributors require a pull request.
 - **Review Approval**: Requires at least 1 approving code review before merging.
-- **Stale Review Dismissal**: Outdated approvals are dismissed when new commits are pushed.
-- **Admin Override**: Repository administrators can merge urgent fixes or bypass when pairing.
+- **Stale Review Dismissal**: Outdated approvals are automatically dismissed when new commits are pushed.
+- **Linear History & Deletion Protection**: Branch deletion and force-pushes are blocked.
+- **Admin & Bot Bypass**: Repository administrators and automated bots using `ARCHIVE_PUSH_TOKEN` are on the bypass list to enable emergency maintenance and automated daily archive commits.
 
 ## Was today's run all right?
 
@@ -177,7 +178,7 @@ About **$0.08 a day**, so roughly $2.50 a month: seven web searches at about hal
 | --- | --- | --- |
 | `digest` fails: `OPENROUTER_API_KEY is not set` | The secret is missing or misspelt. | Settings → Secrets and variables → Actions. |
 | `digest` fails, columns `FAIL HTTP 401` / `402` | Key revoked, or OpenRouter credit ran out. | Top up or replace the key. |
-| `digest` fails at "Commit the archive": push rejected | Branch protection on `main` blocks the bot. | Allow GitHub Actions to push to `main`, or drop the rule. |
+| `digest` fails at "Commit the archive": push rejected | Ruleset on `main` blocks the default token. | Add an Admin PAT as `ARCHIVE_PUSH_TOKEN` in Settings → Secrets and variables → Actions. |
 | `pages` fails: "Pages site not found" or "not enabled" | Pages source is not GitHub Actions. | Settings → Pages → Source: GitHub Actions. |
 | Warning **Partial board** | One column's answer was unusable three times. | Usually transient. If it repeats, try another model, or dry-run that column. |
 | A source shows `FAIL` every day | Feed moved, blocked us, or died. | `check-feed <url>`; fix the URL or `enabled: false`. |

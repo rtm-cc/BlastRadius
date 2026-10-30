@@ -6,22 +6,20 @@ This guide covers initial repository setup, required secrets, and deployment con
 
 ## 1. Initial GitHub Setup
 
-1. **Repository Secret**:
+1. **Repository Secrets**:
    - Go to **Settings → Secrets and variables → Actions → New repository secret**.
-   - Name: `OPENROUTER_API_KEY`
-   - Value: Your OpenRouter API key (used for LLM curation calls).
-   - *Note: Commits to the archive are performed using GitHub's built-in `GITHUB_TOKEN`.*
+   - `OPENROUTER_API_KEY`: Your OpenRouter API key (used for LLM curation calls).
+   - `ARCHIVE_PUSH_TOKEN` (optional but recommended): A Personal Access Token (PAT) with `repo` scope from a repository admin. This allows the daily digest job to push `archive/` commits while bypassing the pull request approval rule.
 
 2. **GitHub Pages Deployment**:
    - Go to **Settings → Pages**.
    - Under **Build and deployment → Source**, select **GitHub Actions**.
 
-3. **Branch Protection**:
-   - Go to **Settings → Branches → Branch protection rules → Add rule**.
-   - Branch name pattern: `main`
-   - Check **Require a pull request before merging** with **1 required approval**.
-   - Check **Dismiss stale pull request approvals when new commits are pushed**.
-   - Leave *Do not allow bypassing the above settings* unchecked so repository administrators can perform emergency maintenance or automated bot pushes.
+3. **Branch Protection (Repository Ruleset)**:
+   - Configured via **Settings → Rules → Rulesets** on `main` (`~DEFAULT_BRANCH`).
+   - Requires 1 approving review on pull requests with stale review dismissal.
+   - Deletion and force-pushes are blocked.
+   - The **Bypass List** grants bypass permissions to **Organization Admin** and **Repository Admin** (`ARCHIVE_PUSH_TOKEN`).
 
 ---
 
