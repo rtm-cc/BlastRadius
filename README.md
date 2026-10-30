@@ -70,4 +70,4 @@ cp .env.example .env
 
 ## License & Credits
 
-Built and maintained by [RTM](https://rtm.cc). Published under the MIT License.
+Built and maintained by [RTM](https://rtm.cc). Published under the [MIT License](LICENSE).
