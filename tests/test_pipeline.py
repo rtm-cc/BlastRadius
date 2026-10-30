@@ -12,6 +12,7 @@ import unittest
 from datetime import timedelta
 from pathlib import Path
 from unittest import mock
+import feedparser
 
 from blastradius import cli, config, fetch, googlenews, openrouter, site
 from blastradius.archive import Archive
@@ -246,6 +247,26 @@ class SiteTest(unittest.TestCase):
         self.assertEqual((card["url"], card["image"]), ("", ""))
         self.assertIn(["tech"], json.loads(page.split('id="boot">')[1].split("</script>")[0])["columns"])
         self.assertTrue((out / "search.json.gz").exists())
+        self.assertTrue((out / "feed.xml").exists())
+        self.assertTrue((out / "feed").exists())
+        self.assertTrue((out / "feed.xml.gz").exists())
+        self.assertTrue((out / "feed.gz").exists())
+        self.assertTrue((out / "rss.xml").exists())
+        self.assertTrue((out / "rss").exists())
+        self.assertIn('<link rel="alternate" type="application/rss+xml"', page)
+        self.assertIn('href="feed.xml"', page)
+        self.assertIn('class="icon-btn rss-link"', page)
+        self.assertIn('class="rss-icon"', page)
+        self.assertNotIn('type="application/rss+xml"', page.split('class="icon-btn rss-link"')[0].split("<a")[-1])
+
+        feed = feedparser.parse((out / "feed.xml").read_text(encoding="utf-8"))
+        self.assertFalse(feed.bozo)
+        self.assertEqual(feed.feed.title, "T")
+        self.assertEqual(len(feed.entries), 1)
+        entry = feed.entries[0]
+        self.assertEqual(entry.id, "s1")
+        self.assertNotIn("javascript:", entry.link)
+        self.assertIn("#s1", entry.link)
 
 
 class RunTest(unittest.TestCase):

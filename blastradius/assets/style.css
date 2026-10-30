@@ -270,7 +270,9 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
 :root[data-theme="light"] .theme-toggle .theme-icon-moon { display: block; }
 
 .github-link svg,
-.icon-btn svg.github-icon {
+.icon-btn svg.github-icon,
+.rss-link svg,
+.icon-btn svg.rss-icon {
   fill: currentColor;
   stroke: none;
 }
