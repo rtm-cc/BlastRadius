@@ -18,7 +18,7 @@ The reliable trigger is outside GitHub: the GitLab project [jobs/secnews-github-
 
 1. **`lint`** checks code style, modern syntax, and formatting with Ruff.
 2. **`typecheck`** verifies static typing across all modules with Mypy.
-3. **`security`** scans for leaked credentials/API keys with Gitleaks and audits dependencies with `pip-audit`.
+3. **`security`** scans for leaked credentials/API keys with TruffleHog and audits dependencies with `pip-audit`.
 4. **`test`** runs the unit test suite (80 tests) and validates `config/` sources and schema (`blastradius check`).
 5. **`digest`** (schedule or manual curate) fetches every source, asks the model to curate each column, writes today's board to `archive/<YYYY>/<MM>/<DD>.yaml`, and commits it as **"Board for <date>"** (author: github-actions[bot]).
 6. **`pages`** rebuilds the site from `archive/` and deploys it to GitHub Pages only after all pre-flight checks pass.
@@ -43,7 +43,7 @@ Everything runs on GitHub's own runners; there is no server.
 Every pull request and push to `main` executes 4 parallel quality jobs before any deployment or curation:
 - **Lint (Ruff)**: Fast Python linting and code formatting checks (`ruff check .`, `ruff format --check .`).
 - **Type Check (Mypy)**: Static type safety verification (`mypy blastradius`).
-- **Security & Secret Scanning (Gitleaks & pip-audit)**: Automated scan for leaked tokens, private keys, or API credentials, plus dependency vulnerability auditing.
+- **Security & Secret Scanning (TruffleHog & pip-audit)**: Automated scan for leaked tokens, private keys, or API credentials, plus dependency vulnerability auditing.
 - **Automated Tests**: Complete unit test suite and schema verification (`unittest` + `blastradius check`).
 
 ### Local Development Commands
