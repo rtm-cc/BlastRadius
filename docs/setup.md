@@ -9,7 +9,7 @@ This guide covers initial repository setup, required secrets, and deployment con
 1. **Repository Secrets**:
    - Go to **Settings → Secrets and variables → Actions → New repository secret**.
    - `OPENROUTER_API_KEY`: Your OpenRouter API key (used for LLM curation calls).
-   - `ARCHIVE_PUSH_TOKEN` (optional but recommended): A Personal Access Token (PAT) with `repo` scope from a repository admin. This allows the daily digest job to push `archive/` commits while bypassing the pull request approval rule.
+   - `ARCHIVE_DEPLOY_KEY`: SSH private key for the repository Deploy Key, allowing the daily digest bot to push `archive/` commits while bypassing the pull request approval rule with zero personal tokens.
 
 2. **GitHub Pages Deployment**:
    - Go to **Settings → Pages**.
@@ -19,7 +19,7 @@ This guide covers initial repository setup, required secrets, and deployment con
    - Configured via **Settings → Rules → Rulesets** on `main` (`~DEFAULT_BRANCH`).
    - Requires 1 approving review on pull requests with stale review dismissal.
    - Deletion and force-pushes are blocked.
-   - The **Bypass List** grants bypass permissions to **Organization Admin** and **Repository Admin** (`ARCHIVE_PUSH_TOKEN`).
+   - The **Bypass List** grants bypass permissions to **Organization Admin**, **Repository Admin**, and the **DeployKey** (`ARCHIVE_DEPLOY_KEY`).
 
 ---
 
