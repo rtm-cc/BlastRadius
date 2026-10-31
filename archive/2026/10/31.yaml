@@ -1,0 +1,497 @@
+date: '2026-10-31'
+updated_at: '2026-10-31T07:06:59+00:00'
+topics:
+  breaches:
+  - id: df71def910fa
+    rank: 1
+    title: Binance links $6.3 billion crypto theft to compromised DevOps laptop
+    summary: Binance said the $6.3 billion cryptocurrency theft was traced to a DevOps engineer's compromised
+      laptop that gave attackers a route into its systems. Blockchain analysts point to North Korea's
+      TraderTraitor group; about $3 billion has been frozen on-chain so far, but much of the stolen crypto
+      may already be gone.
+    url: https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/30/Binance.jpg
+    sources:
+    - BleepingComputer
+    - Malwarebytes
+    - WIRED Security
+    - SecurityWeek
+    labels:
+    - cryptocurrency
+    - Lazarus Group
+    - data breach
+    rationale: Update to the already-published Binance incident adds the initial access vector and attribution
+      to North Korea's TraderTraitor.
+    is_update: true
+    supersedes: f7e0074ade36
+    what_changed: Binance identified a compromised DevOps laptop as the entry point, and blockchain analysts
+      linked the heist to North Korea's TraderTraitor.
+    cluster: f7e0074ade36
+    cluster_key: billion-binance-compromised-crypto-devops-laptop-links-theft
+    coverage:
+    - title: Binance links $6.3 billion crypto theft to compromised DevOps laptop
+      url: https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop
+      source: BleepingComputer
+      published: '2026-10-30T09:18:13+00:00'
+    - title: Binance hit by largest-ever crypto theft, with $6.3 billion stolen
+      url: https://www.malwarebytes.com/blog/news/2026/10/binance-hit-by-largest-ever-crypto-theft-with-6-3-billion-stolen
+      source: Malwarebytes
+      published: '2026-10-30T12:24:19+00:00'
+    - title: The $6.3 Billion Binance Hack Was Pulled Off in Just 20 Minutes
+      url: https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes
+      source: WIRED Security
+      published: '2026-10-30T11:36:52+00:00'
+    - title: $6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor
+      url: https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor
+      source: SecurityWeek
+      published: '2026-10-30T08:16:26+00:00'
+    published: '2026-10-30T09:18:13+00:00'
+  - id: 0ee1998244ee
+    rank: 2
+    title: Capcom ID Data Breach Exposes 11.7 Million User Accounts
+    summary: Capcom disclosed that unauthorized access to its Capcom ID service exposed 11.7 million user
+      accounts, including email addresses, account creation and login metadata, and for a small subset
+      date of birth and country. The attackers changed passwords on roughly 193–196 accounts; original
+      passwords and credit card data were not leaked. Capcom detected the intrusion on October 19, launched
+      an investigation, and notified law enforcement.
+    url: https://www.rescana.com/post/capcom-id-data-breach-exposes-11-7-million-user-accounts-incident-analysis-and-security-impact
+    image: https://www.rescana.com/post/img/capcom-id-data-breach-exposes-11-7-million-user-accounts-incident-analysis-and-security-impact-cover.png
+    sources:
+    - Rescana
+    - The Record
+    labels:
+    - data breach
+    - account takeover
+    rationale: New, large confirmed breach at a named gaming company with disclosure details and limited
+      account takeover activity.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0ee1998244ee
+    cluster_key: accounts-breach-capcom-data-exposes-million-user
+    coverage:
+    - title: 'Capcom ID Data Breach Exposes 11.7 Million User Accounts: Incident Analysis and Security
+        Impact'
+      url: https://www.rescana.com/post/capcom-id-data-breach-exposes-11-7-million-user-accounts-incident-analysis-and-security-impact
+      source: Rescana
+      published: '2026-10-31T07:03:49.295194+00:00'
+    - title: Fashion retailer Resolve says hackers stole payment card information
+      url: https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards
+      source: The Record
+      published: '2026-10-30T19:00:00+00:00'
+    published: '2026-10-31T07:03:49.295194+00:00'
+  fraud_phishing:
+  - id: f79fc6642d35
+    rank: 1
+    title: Fake Bid Invitations and 'Protected Documents' Used in Phishing Campaign
+    summary: A phishing campaign targets sales and procurement staff with emails that look like invitation-to-bid
+      requests and mention a 'secured' or protected document. The lure exploits the urgency and routine
+      of the bidding process to push recipients into opening the document, leading to credential theft.
+      The write-up walks through the attack so readers can recognize unsolicited bid invitations that
+      ask them to open protected files.
+    url: https://cofense.com/blog/locked-and-loaded-phishing-through-fake-bids-and-protected-documents
+    image: https://cofense.com/getContentAsset/dba37788-f603-4622-93f7-5669230d40ae/116289b0-4d1b-4ed6-8294-b51f0bb43062/Blog-thumbnail-V2-(1).jpg?language=en
+    sources:
+    - cofense.com
+    labels:
+    - phishing
+    - social engineering
+    rationale: Concrete phishing walkthrough of a realistic and convincing lure aimed at professionals;
+      no existing board story covers it.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f79fc6642d35
+    cluster_key: and-bid-campaign-documents-fake-invitations-phishing-protected-used
+    coverage:
+    - title: 'Locked and Loaded: Phishing through Fake Bids and Protected Documents'
+      url: https://cofense.com/blog/locked-and-loaded-phishing-through-fake-bids-and-protected-documents
+      source: cofense.com
+      published: '2026-10-31T07:03:49.295194+00:00'
+    published: '2026-10-31T07:03:49.295194+00:00'
+  policy:
+  - id: a13858e42cbf
+    rank: 1
+    title: Syrian Electronic Army Hacker Sentenced to 42 Months for Attacks on Western Media
+    summary: Ahmad Umar Agha, the Syrian Electronic Army hacker known online as "Th3Pr0," was sentenced
+      in Virginia federal court to 42 months in prison for his role in a hacking conspiracy organized
+      by allies of former Syrian President Bashar al-Assad. The campaign targeted Western news outlets
+      and included a fake tweet that briefly wiped $136 billion off U.S. stock markets.
+    url: https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxhyw9NKYcR8Nkb28O8I-MA0sr3NhXC_Xr7gjpFqZKFd-29F8pGa5TCuIL2GTBPLAPzQ9iW5DsU_2zK-pUWIar_TdJdKiQMsptNjA-XxvVwMACBSQR9tW_qAC8d7I21YdqraYoY5LdWCRE8vKXjrxYCEW8X7ZbPulwCzdTdxODqnMuJbqQUZStRMRiKHc/s1600/tweets.jpg
+    sources:
+    - The Hacker News
+    - The Record
+    labels:
+    - sentencing
+    - law enforcement
+    - cybercrime
+    rationale: New federal sentencing outcome for an Assad-linked hacker involved in cyber attacks on
+      Western media; not previously published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a13858e42cbf
+    cluster_key: army-attacks-electronic-for-hacker-media-months-sentenced-syrian-western
+    coverage:
+    - title: Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in
+        Prison
+      url: https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html
+      source: The Hacker News
+      published: '2026-10-30T10:40:45+00:00'
+    - title: Syrian Electronic Army hacker gets prison time for attacks on Western targets
+      url: https://therecord.media/syrian-electronic-army-hacker-sentenced-three-years
+      source: The Record
+      published: '2026-10-30T14:24:00+00:00'
+    published: '2026-10-30T10:40:45+00:00'
+  supply_chain:
+  - id: f5f7b4466529
+    rank: 1
+    title: Trojanized Claude Code Extension on Cursor Planted SSH Backdoors in Up to 5,000 Developer Machines
+    summary: Anthropic's official Claude Code VS Code extension was trojanized in Cursor's marketplace
+      for about 11 hours on October 29, with malicious version 2.1.313 distributed under the legitimate
+      publisher identity. The payload attempted to install persistent SSH backdoors on affected systems.
+      Cursor temporarily shut down its marketplace; developers who installed or updated the extension
+      during that window should treat their machines as compromised, rotate credentials, and inspect SSH
+      configuration and authorized keys.
+    url: https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMAV00lkxu7R724ItLdgrRsnEYHR_d2eUSdcen_KymGeBY1tCo8SRVz6w_XiNzzYgwpcl0Me3JCJz8DeieRM_0jb8aL4VkHAAIeXrqNf8oQkmzKahqMHOGvhkFK32HOasHZht8BwtI1NxEZ-_nIwmQY_8fxpGbbl3csC6oZKCVnIRk3iYTRhH975dyxsWS/s1600/cursor-vscode.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    - Dark Reading
+    - WIRED Security
+    labels:
+    - supply-chain
+    - malicious-package
+    - AI assistants
+    rationale: Direct software supply chain compromise through an app marketplace, with concrete remediation
+      for affected developers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f5f7b4466529
+    cluster_key: 000-backdoors-claude-code-cursor-developer-extension-machines-planted-ssh-trojanized
+    coverage:
+    - title: Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor
+      url: https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html
+      source: The Hacker News
+      published: '2026-10-30T08:55:47+00:00'
+    - title: Malicious Claude Code extension on Cursor planted SSH backdoors
+      url: https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors
+      source: BleepingComputer
+      published: '2026-10-30T14:36:54+00:00'
+    - title: Devs Hit by Trojanized Claude Code Extension for Cursor
+      url: https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor
+      source: Dark Reading
+      published: '2026-10-30T20:05:58+00:00'
+    - title: A Supply Chain Attack Put Malicious Anthropic Claude Extensions on Thousands of Devices
+      url: https://www.wired.com/story/trojan-malware-targets-thousands-of-anthropic-claude-developer-systems
+      source: WIRED Security
+      published: '2026-10-30T20:38:46+00:00'
+    published: '2026-10-30T08:55:47+00:00'
+  - id: 9e1499e0cbd9
+    rank: 2
+    title: Trezor Warns of Suspected Crypto-Theft Hardware Implant in Safe 5 Wallets Sold by Reseller
+      CryptoBilis
+    summary: Trezor warned that a Trezor Safe 5 bought from reseller CryptoBilis appears to contain an
+      extra circuit board that can transmit recovery phrases over a mobile network. Trezor has not yet
+      examined the device and advises anyone who bought a Trezor from CryptoBilis since March 2026 to
+      move funds to a new wallet with a new recovery phrase.
+    url: https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEih5QxhFnBw6d40ollOAoolmZedxywTm7DeBQpEqydVG5Pqg0v5iDVFT1hhbsW7Thqg00oI8MACNXC9FX6MCp_qMRkBRiqdxb9D4CDKfTWTZwI5eyY3V2IOa8ODSg24kX7Ni_C968r2X89tUXwPbDnHPV9xX-ydhytwerqMI1ru7tqdIK-cqA0p9oM5Ppxr/s1600/trezor-wallet.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    labels:
+    - supply-chain
+    - cryptocurrency
+    rationale: Physical supply-chain tampering in a widely used hardware wallet, with a clear action for
+      affected customers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9e1499e0cbd9
+    cluster_key: crypto-cryptobilis-hardware-implant-reseller-safe-sold-suspected-theft-trezor-wallets-warns
+    coverage:
+    - title: Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis
+      url: https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html
+      source: The Hacker News
+      published: '2026-10-30T12:21:56+00:00'
+    - title: Trezor warns of suspected crypto-theft implant in hardware wallet
+      url: https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet
+      source: BleepingComputer
+      published: '2026-10-30T15:58:20+00:00'
+    published: '2026-10-30T12:21:56+00:00'
+  threats:
+  - id: 59feab684cf3
+    rank: 1
+    title: Chinese State-Backed Group Uses AI-Powered ARTEX Framework to Target 200+ Organizations
+    summary: CrowdStrike attributes a wave of intrusions against more than 200 high-value targets to China-based
+      Vapor Panda (formerly VexatiousTemper), which is using a Go-based, AI-powered penetration-testing
+      framework called ARTEX. The framework appears to let the group run reconnaissance and exploitation
+      activity against multiple victims at once, and defenders should look for ARTEX-related tooling and
+      behavior.
+    url: https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP1M46Z4Xs0qNHz9xzhTea14XsqTHvNhAfnGb4Ni9goHQR2ypz3BLKRgu-WxWD8VSUNMB3YAP7UhcCAK1AweCc3lC-7VlJ-OqNniD4FvZdE_R-XJkkRadhl2tp3-PqbKPWmQTeJ3a3gvd1kHH_zaW06tCf9cH-7k5feNqHrqbChMAsc5K3hruiX9BDROAe/s1600/CS.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - AI cybercrime
+    - targeted attacks
+    - espionage
+    rationale: New nation-state operation with concrete attribution and scale; defenders can hunt for
+      ARTEX behavior.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 59feab684cf3
+    cluster_key: 200-artex-backed-chinese-framework-group-organizations-powered-state-target-uses
+    coverage:
+    - title: Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide
+      url: https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html
+      source: The Hacker News
+      published: '2026-10-30T16:58:44+00:00'
+    published: '2026-10-30T16:58:44+00:00'
+  - id: 5d8c80bdbd2f
+    rank: 2
+    title: Drupal Warns of Active Exploitation of Critical Commerce Core Access Bypass
+    summary: Drupal is warning that attackers are exploiting CVE-2026-118539, a 'highly critical' missing-authorization
+      flaw in the Commerce Core module that affects versions up to 2.41 and 3.0.0 through 3.3.13. The
+      bug targets online stores, and administrators are urged to patch and audit order data for signs
+      of compromise.
+    url: https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/15/Drupal.jpg
+    sources:
+    - BleepingComputer
+    - SecurityWeek
+    - The Hacker News
+    labels:
+    - e-commerce
+    - active exploitation
+    - vulnerability
+    rationale: Confirmed in-the-wild exploitation of an e-commerce module with clear vendor guidance to
+      patch.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5d8c80bdbd2f
+    cluster_key: access-active-bypass-commerce-core-critical-drupal-exploitation-warns
+    coverage:
+    - title: Drupal warns of critical Commerce Core flaw exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks
+      source: BleepingComputer
+      published: '2026-10-30T10:16:07+00:00'
+    - title: Drupal Commerce Core Vulnerability Exploited Against Online Stores
+      url: https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores
+      source: SecurityWeek
+      published: '2026-10-30T11:07:11+00:00'
+    - title: Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw
+      url: https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html
+      source: The Hacker News
+      published: '2026-10-30T07:45:30+00:00'
+    published: '2026-10-30T10:16:07+00:00'
+  - id: d43fc638b5e0
+    rank: 3
+    title: CISA Adds Two Actively Exploited Ivanti Connect Secure Flaws to KEV
+    summary: CISA added CVE-2026-111357 (missing authentication for a critical function) and CVE-2026-118527
+      (generation of predictable numbers or identifiers) in Ivanti Connect Secure to its Known Exploited
+      Vulnerabilities catalog based on evidence of active exploitation. Federal agencies must remediate
+      the flaws, and organizations using Ivanti Connect Secure should prioritize patching.
+    url: https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    labels:
+    - CISA
+    - KEV
+    - active exploitation
+    - vulnerability
+    rationale: Authoritative confirmation that Ivanti Connect Secure devices are being actively exploited;
+      actionable for defenders.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d43fc638b5e0
+    cluster_key: actively-adds-cisa-connect-exploited-flaws-ivanti-kev-secure-two
+    coverage:
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-30T12:00:00+00:00'
+    published: '2026-10-30T12:00:00+00:00'
+  - id: 724e90fbc442
+    rank: 4
+    title: Belarus-Linked FrostyNeighbor APT Launches Destructive Attack in Ukraine
+    summary: Researchers report that the FrostyNeighbor advanced persistent threat, tied to Belarus, carried
+      out a destructive cyberattack in Ukraine. The operation is drawing concern because it suggests Belarus
+      is aligning more closely with Russian cyberwar objectives.
+    url: https://www.darkreading.com/physical-security/russia-cyber-war-belarus-steps-forward
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/bltd600d33b7bbbc448/6ae39a9b20628a26ab67c66f/Belarus_Russia_flags-Oleksii_Liskonih-GettyImages-1089909770.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - cyberattack
+    - targeted attacks
+    rationale: Active nation-state-aligned destructive operation with strategic significance.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 724e90fbc442
+    cluster_key: apt-attack-belarus-destructive-frostyneighbor-launches-linked-ukraine
+    coverage:
+    - title: As Russia's Cyberwar Evolves, Belarus Steps Forward
+      url: https://www.darkreading.com/physical-security/russia-cyber-war-belarus-steps-forward
+      source: Dark Reading
+      published: '2026-10-30T08:00:00+00:00'
+    published: '2026-10-30T08:00:00+00:00'
+  vulnerabilities:
+  - id: e47e7f75a118
+    rank: 1
+    title: CISA Adds Actively Exploited PHP2Shell Flaws to Known Exploited Vulnerabilities Catalog
+    summary: CISA added the two critical PHP vulnerabilities collectively tracked as PHP2Shell (including
+      CVE-2026-109618) to its Known Exploited Vulnerabilities catalog after confirming active exploitation.
+      The flaws let unauthenticated attackers compromise PHP applications and have been used against web
+      management interfaces of firewalls, VPNs, and other appliances. Apply vendor patches or mitigations
+      immediately.
+    url: https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/26/PHP.jpg
+    sources:
+    - BleepingComputer
+    - CISA
+    - SecurityWeek
+    - The Hacker News
+    labels:
+    - CISA
+    - KEV
+    - active exploitation
+    - vulnerability
+    - patch
+    - PHP2Shell
+    rationale: New CISA KEV entry for PHP2Shell, a pair of critical PHP flaws actively exploited against
+      network appliances; materially extends previously published PHP2Shell coverage.
+    is_update: true
+    supersedes: 1f0d03e8ec35
+    what_changed: CISA has formally added the PHP2Shell vulnerabilities to its KEV catalog after confirming
+      active exploitation.
+    cluster: 1f0d03e8ec35
+    cluster_key: actively-adds-catalog-cisa-exploited-exploited-flaws-known-php2shell-vulnerabilities
+    coverage:
+    - title: CISA confirms PHP2Shell vulnerabilities now exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks
+      source: BleepingComputer
+      published: '2026-10-31T07:03:49.295194+00:00'
+    - title: CISA Adds Two Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-10-30T12:00:00+00:00'
+    - title: Drupal warns of critical Commerce Core flaw exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks
+      source: BleepingComputer
+      published: '2026-10-30T10:16:07+00:00'
+    - title: Drupal Commerce Core Vulnerability Exploited Against Online Stores
+      url: https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores
+      source: SecurityWeek
+      published: '2026-10-30T11:07:11+00:00'
+    - title: Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw
+      url: https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html
+      source: The Hacker News
+      published: '2026-10-30T07:45:30+00:00'
+    published: '2026-10-31T07:03:49.295194+00:00'
+  - id: '704920892434'
+    rank: 2
+    title: WordPress Core RCE Flaw Draws Nearly 63,000 Attack Attempts in 24 Hours
+    summary: Threat actors are attempting to exploit a high-severity, unauthenticated race condition in
+      WordPress Core versions 4.7 through 7.1.3 that leads to remote code execution (CVSS 8.1; no CVE
+      assigned). The flaw drew roughly 63,000 exploit attempts in a day after patches were released. WordPress
+      admins should update to the latest version immediately.
+    url: https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf-pzflJO9HQoCdvBvYNtS12gwwEjAbM4dQ30ak7UYaIPzsVPN9MlFwvIDEFkbe9cWg4wQRFPbGfJ0YXjzGcBS6mUTwttwkQ8IR7OoHyTz3owZkVzYQOAObyJUqfjsC-PqMw2pv41_m68hb6ZkwJb56kGx-Ypv7GWZBtDzjyTTQ8L8i9NxA8_MDVoJSEba/s1600/wp-hack.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    labels:
+    - remote code execution
+    - active probing
+    - vulnerability
+    - patch
+    - WordPress
+    rationale: Actively targeted high-severity RCE in the most widely used CMS, with tens of thousands
+      of exploit attempts observed after patch release.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: '704920892434'
+    cluster_key: 000-attack-attempts-core-draws-flaw-hours-nearly-rce-wordpress
+    coverage:
+    - title: WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours
+      url: https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html
+      source: The Hacker News
+      published: '2026-10-30T14:08:14+00:00'
+    - title: Fresh WordPress Vulnerability in Attackers’ Crosshairs
+      url: https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs
+      source: SecurityWeek
+      published: '2026-10-30T12:04:13+00:00'
+    published: '2026-10-30T14:08:14+00:00'
+  - id: 34680d5351a0
+    rank: 3
+    title: TeamViewer Fixes Flaw Allowing Malicious Hosts to Attack Controllers
+    summary: TeamViewer patched CVE-2026-111585, an integer overflow that lets the host machine in a remote
+      session attack the computer controlling it, potentially crashing TeamViewer or executing arbitrary
+      code on the viewer. Update TeamViewer on both ends of remote support sessions.
+    url: https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge-ZayNgwlu4fhpD2BSyGgkMYehkV0atRJINisISPLpiubkgyXopa4NWVnxOZs9gi-DEYTNEQ5G2pu-X5iSHyMp8pguzp-Q6g-1-mGwcy3so4AkeuYFuYoaotOcmF5A-2oVDvnxd0B_FaZ7JJt8W3zrNFot6kBlJp7WffHkb7m92C9bNQnwFLwnNgXpDk/s1600/teamviewer-flaw.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    labels:
+    - remote code execution
+    - vulnerability
+    - patch
+    - TeamViewer
+    rationale: Fixed remote-code-execution flaw in widely deployed remote-support software; high impact
+      for technicians connecting to untrusted machines.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 34680d5351a0
+    cluster_key: allowing-attack-controllers-fixes-flaw-hosts-malicious-teamviewer
+    coverage:
+    - title: TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them
+      url: https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html
+      source: The Hacker News
+      published: '2026-10-30T15:17:28+00:00'
+    - title: TeamViewer Flaw Could Let Malicious Hosts Take Over Support Technicians’ Machines
+      url: https://www.securityweek.com/teamviewer-flaw-could-let-malicious-hosts-take-over-support-technicians-machines
+      source: SecurityWeek
+      published: '2026-10-30T08:44:49+00:00'
+    published: '2026-10-30T15:17:28+00:00'
+  - id: e009b11878c0
+    rank: 4
+    title: OpenAI Fixes ChatGPT Share Link Flaw That Could Expose Private Chats
+    summary: Parameter researchers found that a malicious ChatGPT share link could run attacker code in
+      the logged-in session of anyone who opened it, allowing the attacker to read private conversations.
+      OpenAI fixed the issue within eight days and rated it P1, its most severe category. No user action
+      is required beyond using the updated service.
+    url: https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEplEzMjNIg5IBNIX4uz_WyVhtJqqbKICvvpW5LbwPEsQVd4ypSQC1ISnXoR0pMLlQEF4erNUIf-5-ELvBXIE8VH2Iv7dCPCuaZAFVeS9VIITs_5e_77DwtIvo3ExUcfJC_aT4x3FDD3AmTKeQFKnOrufXorlbiHOJNO-pUhwzBNwL98r-2JSW2CWiTBs/s1600/chatgpt.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - AI assistant
+    - vulnerability
+    - patch
+    - ChatGPT
+    rationale: Critical, quickly fixed vulnerability in a mainstream AI assistant with potential to expose
+      private user conversations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e009b11878c0
+    cluster_key: chatgpt-chats-could-expose-fixes-flaw-link-openai-private-share-that
+    coverage:
+    - title: A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats
+      url: https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html
+      source: The Hacker News
+      published: '2026-10-31T05:33:41+00:00'
+    published: '2026-10-31T05:33:41+00:00'
