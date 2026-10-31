@@ -2,6 +2,18 @@
 # sources/shared.yaml. Every field is explained in config/README.md.
 
 sources:
+  - id: project_zero
+    type: rss
+    name: Google Project Zero
+    url: https://googleprojectzero.blogspot.com/feeds/posts/default
+    notes: Rare, world-class root cause and exploit analysis of in-the-wild zero-days.
+
+  - id: zdi
+    type: rss
+    name: Zero Day Initiative
+    url: https://www.zerodayinitiative.com/blog?format=rss
+    notes: Zero-day vulnerability disclosures, bug bounty findings, and Patch Tuesday breakdowns.
+
   - id: web_vulnerabilities
     type: web_search
     name: "Web search: vulnerabilities"

@@ -20,6 +20,28 @@ sources:
     url: https://simonwillison.net/atom/everything/
     notes: ~2/day of posts and links; the best running coverage of prompt injection. Mostly general AI, which the brief drops.
 
+  - id: trail_of_bits
+    type: rss
+    name: Trail of Bits
+    url: https://blog.trailofbits.com/feed/
+    notes: AI security audits, prompt injection defenses, LLM tool security, and AI red teaming.
+
+  - id: wiz_research
+    type: rss
+    name: Wiz Research
+    url: https://www.wiz.io/blog/rss.xml
+    max_age_hours: 48
+    max_items: 10
+    notes: Breaks critical AI cloud infrastructure bugs, model registry vulnerabilities, and agentic attack research. Large feed; limited by max_items.
+
+  - id: gnews_ai_security
+    type: google_news
+    name: "Google News: AI Security"
+    query: '"AI" (vulnerability OR exploit OR "prompt injection" OR backdoor OR jailbreak)'
+    max_age_hours: 24
+    max_items: 15
+    notes: Targeted Google News search capturing breaking AI security scoops across all publishers.
+
   - id: web_ai_security
     type: web_search
     name: "Web search: AI security"

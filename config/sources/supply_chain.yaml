@@ -2,6 +2,24 @@
 # Every field is explained in config/README.md.
 
 sources:
+  - id: reversinglabs
+    type: rss
+    name: ReversingLabs
+    url: https://www.reversinglabs.com/blog/rss.xml
+    notes: ~1/week. Deep dives on software tampering, malicious packages, and CI/CD supply chain attacks.
+
+  - id: checkmarx
+    type: rss
+    name: Checkmarx Research
+    url: https://checkmarx.com/feed/
+    notes: ~1-2/week. Malicious open source packages (npm/PyPI) and dependency confusion research.
+
+  - id: openssf
+    type: rss
+    name: OpenSSF
+    url: https://openssf.org/feed/
+    notes: Open source supply chain security initiatives, tooling, and advisories.
+
   - id: web_supply_chain
     type: web_search
     name: "Web search: supply chain"

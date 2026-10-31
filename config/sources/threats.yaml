@@ -2,6 +2,18 @@
 # Every field is explained in config/README.md.
 
 sources:
+  - id: citizen_lab
+    type: rss
+    name: Citizen Lab
+    url: https://citizenlab.ca/feed/
+    notes: Commercial spyware investigations (Pegasus, Predator) and state-sponsored digital espionage.
+
+  - id: dfir_report
+    type: rss
+    name: The DFIR Report
+    url: https://thedfirreport.com/feed/
+    notes: In-depth end-to-end incident response intrusion cases from initial access to ransomware execution.
+
   - id: web_threats
     type: web_search
     name: "Web search: active threats"
