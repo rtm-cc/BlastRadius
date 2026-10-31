@@ -94,6 +94,16 @@ class ReviewTest(unittest.TestCase):
         _, result, _ = self.run_review("unused", {"ai": [story("x", "https://a/1")]})
         self.assertEqual(result.calls, 0)
 
+    def test_last_story_in_topic_is_never_removed(self):
+        # Even if the review wants to remove s2 from brazil, brazil only has 1 story, so it must not be emptied
+        b = {
+            "world": [story("Lula wins", "https://w/1"), story("Summit ends", "https://w/2")],
+            "brazil": [story("Lula reeleito", "https://b/1", "g1")],
+        }
+        b, result, _ = self.run_review(answer({"keep": "s1", "remove": ["s3"], "reason": "World fit"}), b=b)
+        self.assertEqual(result.removed, [])
+        self.assertEqual(len(b["brazil"]), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

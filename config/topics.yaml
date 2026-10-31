@@ -44,28 +44,28 @@ topics:
   - id: supply_chain
     name: Supply Chain
     language: en
-    min_items: 0
+    min_items: 3
     max_items: 8
     color: 190
 
   - id: ai_security
     name: AI Security
     language: en
-    min_items: 0
+    min_items: 3
     max_items: 8
     color: 160
 
   - id: fraud_phishing
     name: Fraud & Phishing
     language: en
-    min_items: 0
+    min_items: 3
     max_items: 8
     color: 45
 
   - id: policy
     name: Policy & Enforcement
     language: en
-    min_items: 0
+    min_items: 3
     max_items: 8
     color: 225
 

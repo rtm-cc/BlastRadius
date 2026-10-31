@@ -46,8 +46,12 @@ crisis but a different development - are NOT duplicates. When unsure, leave them
 - Keep the story in the topic whose focus it matches most directly. A company disclosing that its \
 data was stolen belongs in Breaches, while the ransomware group's campaign across many victims \
 belongs in Active Threats; a malicious npm package belongs in Supply Chain rather than Active Threats; \
-the arrest of a ransomware operator belongs in Policy & Enforcement; a breach at an AI company \
-belongs in AI Security only if the AI system itself was the way in.
+the arrest of a ransomware operator belongs in Policy & Enforcement; vulnerabilities in AI systems, \
+AI assistants, and LLMs, malicious AI developer extensions, or attacks abusing AI models belong in \
+AI Security rather than general Vulnerabilities, Supply Chain, or Active Threats; a breach at an AI \
+company belongs in AI Security only if the AI system itself was the way in.
+- Never remove a story from a topic if doing so would leave that topic with no stories. Every topic \
+column on the board should remain active and populated.
 - Stories marked (fixed) can be kept but never removed.
 - Respond with strict JSON only, nothing else:
 {"duplicates": [{"keep": "<id>", "remove": ["<id>", ...], "reason": "<one short sentence>"}]}
@@ -181,6 +185,10 @@ def review(
 
     for sid, (keep_sid, reason) in doomed.items():
         entry, keeper = entries[sid], entries[keep_sid]
+        # Never remove a story if doing so would drop the topic to or below its minimum target (or leave it empty)
+        floor = max(topics[entry.topic].min_items, 1) if entry.topic in topics else 1
+        if len(board[entry.topic]) <= floor:
+            continue
         if keeper.removable:
             _merge_into(keeper.story, entry.story)
         board[entry.topic] = [s for s in board[entry.topic] if s is not entry.story]

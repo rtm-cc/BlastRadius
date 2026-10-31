@@ -45,10 +45,11 @@ Rules:
 modify a URL. Copy the whole "url:" line character for character, including everything after "?" — \
 a URL with the query string trimmed off does not count as the same URL and the story will be dropped.
 - Exclude any candidate that covers a story already in that topic's "ALREADY PUBLISHED" list, \
-UNLESS it contains materially new information. "Material" means: exploitation status changed, a \
-patch was released, scope significantly widened, attribution established or retracted, or earlier \
-reporting was corrected. If you do re-surface one of these, set isUpdate to true, set supersedes to \
-the title of the story it updates from the ALREADY PUBLISHED list, and fill in whatChanged.
+UNLESS it contains materially new information or developments. "Material development" includes: \
+new technical analysis or root-cause details, exploitation status changed, a patch or workaround \
+released, scope or victim impact significantly widened, attribution established or retracted, official \
+advisories, or earlier reporting updated or corrected. If you do re-surface one of these, set isUpdate \
+to true, set supersedes to the title of the story it updates from the ALREADY PUBLISHED list, and fill in whatChanged.
 - If the same real-world story is covered by candidates under more than one topic below, choose the \
 single best-fitting topic for it and output it under that topic only. Do not duplicate it.
 - Within each topic, collapse every candidate that reports the same real-world event into exactly one \
@@ -60,8 +61,8 @@ update and name the earlier card in supersedes.
 - For every selected story, set coverageUrls to the URLs of other candidate articles that report the \
 same event. Include the selected story URL too when it is the only available coverage. Only use URLs \
 from that topic's candidate list. This is for a "Full coverage" view, not a second ranking.
-- Never pad the list to hit a topic's target item count — if fewer candidates clear the bar, return \
-fewer stories. Respect each topic's max item count as a ceiling, not a target.
+- Never pad the list with fabricated or irrelevant stories, but aim to select at least min_items stories \
+for each topic whenever eligible candidates exist. Respect each topic's max item count as a ceiling.
 - If a topic has eligible candidates, do not omit it entirely. Return stories for every topic you were given candidates for unless all candidates are invalid or already published.
 - Write summaries in the language each topic specifies.
 - Labels are short, useful tags for finding related stories. Prefer an exact tag from the EXISTING TAGS vocabulary when it accurately describes the story; create a new tag only when no existing tag fits. Never force an existing tag that is only loosely related.
