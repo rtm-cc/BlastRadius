@@ -34,7 +34,7 @@ from dataclasses import dataclass, field
 from . import openrouter
 from .curate import extract_json
 from .models import Story, Topic
-from .textutil import cluster_key, normalize_url
+from .textutil import cluster_key, is_article_url, normalize_url
 
 SYSTEM_PROMPT = """You review a news board whose topics were curated independently, so the same \
 real-world event can appear under more than one topic. Find every event that appears in two or more \
@@ -120,9 +120,13 @@ def _parse(content: str) -> tuple[list[dict] | None, str]:
 def _merge_into(keeper: Story, removed: Story) -> None:
     """The removed card's reporting joins the kept card's Full coverage."""
     known = {c["url"] for c in keeper.get("coverage") or []}
-    extra = [c for c in removed.get("coverage") or [] if c["url"] not in known]
-    keeper["coverage"] = (keeper.get("coverage") or []) + extra
-    keeper["sources"] = list(dict.fromkeys((keeper.get("sources") or []) + (removed.get("sources") or [])))
+    extra = [
+        c for c in removed.get("coverage") or [] if c.get("url") and c["url"] not in known and is_article_url(c["url"])
+    ]
+    keeper["coverage"] = [c for c in (keeper.get("coverage") or []) if is_article_url(c.get("url", ""))] + extra
+    keeper["sources"] = list(
+        dict.fromkeys([c["source"] for c in keeper["coverage"] if c.get("source")] or keeper.get("sources") or [])
+    )
 
 
 def review(

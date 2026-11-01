@@ -32,7 +32,7 @@ from typing import Any
 
 from . import openrouter
 from .models import Candidate, Story, Topic
-from .textutil import cluster_key, short_hash
+from .textutil import cluster_key, is_article_url, short_hash
 from .urlmatch import CandidateIndex, build_index, resolve
 
 SYSTEM_PROMPT = """You are the curation engine for a personal news board. You will be given, \
@@ -527,6 +527,28 @@ def to_records(
         else:
             cluster, is_update, supersedes, what_changed = story_id, False, None, None
 
+        coverage = [
+            {
+                "title": by_url[u].title,
+                "url": u,
+                "source": by_url[u].source_name,
+                "published": _iso(by_url[u].published),
+            }
+            for u in pick["coverageUrls"]
+            if u in by_url and is_article_url(u)
+        ]
+        if not any(c["url"] == pick["url"] for c in coverage):
+            coverage.insert(
+                0,
+                {
+                    "title": lead.title,
+                    "url": pick["url"],
+                    "source": lead.source_name,
+                    "published": _iso(lead.published),
+                },
+            )
+        sources = list(dict.fromkeys([lead.source_name] + [c["source"] for c in coverage if c.get("source")]))
+
         records.append(
             {
                 "id": story_id,
@@ -535,7 +557,7 @@ def to_records(
                 "summary": pick["summary"].strip(),
                 "url": pick["url"],
                 "image": lead.image,
-                "sources": list(dict.fromkeys([lead.source_name, *pick["otherSources"]])),
+                "sources": sources,
                 "labels": list(dict.fromkeys(t.strip() for t in pick["labels"] if t.strip())),
                 "rationale": pick["rationale"].strip(),
                 "is_update": is_update,
@@ -543,15 +565,7 @@ def to_records(
                 "what_changed": what_changed,
                 "cluster": cluster,
                 "cluster_key": key,
-                "coverage": [
-                    {
-                        "title": by_url[u].title,
-                        "url": u,
-                        "source": by_url[u].source_name,
-                        "published": _iso(by_url[u].published),
-                    }
-                    for u in pick["coverageUrls"]
-                ],
+                "coverage": coverage,
                 "published": _iso(lead.published),
             }
         )

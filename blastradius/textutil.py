@@ -144,3 +144,31 @@ def cluster_key(title: str) -> str:
     stop every stored story from matching."""
     words = re.sub(r"[^\w\s]|_", " ", title.lower()).split()
     return "-".join(sorted([w for w in words if len(w) > 2][:12]))
+
+
+def is_article_url(url: str) -> bool:
+    """Return True if url points to a specific article, rejecting homepages,
+    search results, category listings, and tag pages."""
+    if not url:
+        return False
+    try:
+        parts = urlsplit(url)
+    except Exception:
+        return False
+    if not parts.scheme or not parts.netloc:
+        return False
+    path = parts.path.rstrip("/")
+    if not path or path.lower() in ("/index.html", "/index.php", "/home", "/default.aspx", "/main"):
+        return False
+    # Reject search paths (e.g. /search, /search/label/...)
+    if re.search(r"^/(search|find|query)(\b|/)", path, re.IGNORECASE):
+        return False
+    # Reject taxonomy / tag / category listing paths
+    if re.search(r"^/(label|labels|category|categories|tag|tags|topics?|sections?|feed)(/|$)", path, re.IGNORECASE):
+        return False
+    # Reject search query parameters
+    params = dict(parse_qsl(parts.query))
+    search_keys = {"q", "query", "s", "search", "keyword", "by-date", "filter"}
+    if any(k.lower() in search_keys for k in params):
+        return False
+    return True

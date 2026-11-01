@@ -28,7 +28,7 @@ import requests
 from . import googlenews, openrouter, pages
 from .config import Settings
 from .models import Candidate, FetchResult, Source
-from .textutil import normalize_url, strip_html, truncate
+from .textutil import is_article_url, normalize_url, strip_html, truncate
 from .window import Window
 
 # What the prompt shows of each candidate. More costs tokens without helping
@@ -195,6 +195,9 @@ def _fetch_web_search(source: Source, settings: Settings, window: Window, result
 
     candidates = []
     for citation in reply.citations:
+        citation_url = citation.get("url") or ""
+        if not is_article_url(citation_url):
+            continue
         # Loading the page is the check that the story exists, and the only
         # reliable source of its title and date.
         page = pages.fetch(citation["url"], settings.fetch.user_agent, settings.web_search.verify_timeout_seconds)

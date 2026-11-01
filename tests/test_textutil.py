@@ -1,6 +1,6 @@
 import unittest
 
-from blastradius.textutil import cluster_key, normalize_url, strip_html, truncate
+from blastradius.textutil import cluster_key, is_article_url, normalize_url, strip_html, truncate
 
 
 class NormalizeUrlTest(unittest.TestCase):
@@ -55,6 +55,25 @@ class TextTest(unittest.TestCase):
 
     def test_truncate_on_word_boundary(self):
         self.assertEqual(truncate("alpha beta gamma", 12), "alpha beta…")
+
+
+class IsArticleUrlTest(unittest.TestCase):
+    def test_real_article_urls_pass(self):
+        self.assertTrue(is_article_url("https://www.bleepingcomputer.com/news/security/article-slug"))
+        self.assertTrue(is_article_url("https://thehackernews.com/2026/10/chainalysis-confirms-intrusion.html"))
+        self.assertTrue(is_article_url("https://news.google.com/rss/articles/CBMi123"))
+
+    def test_homepages_and_empty_paths_fail(self):
+        self.assertFalse(is_article_url("https://recentbreaches.com/"))
+        self.assertFalse(is_article_url("https://therecord.media/?lang=en"))
+        self.assertFalse(is_article_url("https://example.com"))
+        self.assertFalse(is_article_url("https://example.com/index.html"))
+
+    def test_search_and_tag_pages_fail(self):
+        self.assertFalse(is_article_url("https://thehackernews.com/search/label/Supply%20Chain?by-date=false"))
+        self.assertFalse(is_article_url("https://thehackernews.com/search?q=phishing"))
+        self.assertFalse(is_article_url("https://example.com/tag/malware"))
+        self.assertFalse(is_article_url("https://example.com/category/cybercrime"))
 
 
 if __name__ == "__main__":

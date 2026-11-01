@@ -135,7 +135,6 @@ topics:
     image: https://www.bleepstatic.com/content/hl-images/2026/10/31/northflank-header.jpg
     sources:
     - BleepingComputer
-    - The Hacker News
     labels:
     - data breach
     - exposed credentials
@@ -151,113 +150,11 @@ topics:
       url: https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys
       source: BleepingComputer
       published: '2026-10-31T18:01:12+00:00'
-    - title: Supply Chain — Latest News, Reports & Analysis | The Hacker News
-      url: https://thehackernews.com/search/label/Supply%20Chain?by-date=false&m=1&max-results=20&start=40&updated-max=2026-09-23T22%3A23%3A00%2B05%3A30
-      source: The Hacker News
-      published: '2026-11-01T07:03:40.040356+00:00'
-    - title: Supply Chain — Latest News, Reports & Analysis | The Hacker News
-      url: https://thehackernews.com/search/label/Supply%20Chain?by-date=false&max-results=20&start=40&updated-max=2026-09-23T19%3A22%3A00%2B05%3A30
-      source: The Hacker News
-      published: '2026-11-01T07:03:40.040356+00:00'
     published: '2026-10-31T18:01:12+00:00'
-  - id: 8f499078819c
-    rank: 2
-    title: Marathon Health Notifies Vermont Residents of Data Breach Involving SSNs
-      and Health Information
-    summary: Marathon Health notified Vermont residents of a data breach in a filing
-      reported to the Vermont Attorney General on October 30, 2026. The notice lists
-      Social Security numbers and health information among the exposed data, indicating
-      affected individuals should watch for identity theft and fraud.
-    url: https://recentbreaches.com/
-    image: https://recentbreaches.com/static/brand/rb/og-default.png?v=rb1
-    sources:
-    - Recent Breaches
-    labels:
-    - data breach
-    - healthcare
-    rationale: Breach notification for a named healthcare organization surfaced in
-      the candidate tracker, with SSN and health data exposure; not previously published.
-    is_update: false
-    supersedes: null
-    what_changed: null
-    cluster: 8f499078819c
-    cluster_key: and-breach-data-health-health-information-involving-marathon-notifies-residents-ssns-vermont
-    coverage:
-    - title: 'Recent Breaches: Latest Data Breach News & Live Tracker (2026)'
-      url: https://recentbreaches.com/
-      source: Recent Breaches
-      published: '2026-11-01T07:03:40.040356+00:00'
-    published: '2026-11-01T07:03:40.040356+00:00'
-  fraud_phishing:
-  - id: 2d38dfcf5f00
-    rank: 1
-    title: Iranian APT35 'Operation SpoofedScholars' Uses Fake Academic Personas to
-      Target Think Tanks
-    summary: Google says it disrupted a sophisticated Iranian state-sponsored social
-      engineering campaign dubbed Operation SpoofedScholars. The attackers posed as
-      scholars affiliated with the University of London to build trust with think
-      tanks and journalists and trick them into sharing sensitive information, alongside
-      a large APT28 phishing campaign.
-    url: https://thehackernews.com/search?by-date=false&m=1&max-results=20&q=phishing&start=868&updated-max=2024-04-18T06%3A58%3A00-07%3A00
-    image: https://thehackernews.com/images/-AaptImXE5Y4/WzjvqBS8HtI/AAAAAAAAxSs/BcCIwpWJszILkuEbDfKZhxQJwOAD7qV6ACLcBGAs/s728-e365/the-hacker-news.jpg
-    sources:
-    - The Hacker News
-    labels:
-    - social engineering
-    - targeted attacks
-    - espionage
-    - phishing
-    - government
-    rationale: Describes a concrete state-sponsored phishing and social engineering
-      campaign using credible academic personas, which matches the topic's impersonation
-      and targeted-lure focus.
-    is_update: false
-    supersedes: null
-    what_changed: null
-    cluster: 2d38dfcf5f00
-    cluster_key: academic-apt35-fake-iranian-operation-personas-spoofedscholars-tanks-target-think-uses
-    coverage:
-    - title: Search results for phishing — Latest News, Reports & Analysis | The Hacker
-        News
-      url: https://thehackernews.com/search?by-date=false&m=1&max-results=20&q=phishing&start=868&updated-max=2024-04-18T06%3A58%3A00-07%3A00
-      source: The Hacker News
-      published: '2026-11-01T07:03:40.040356+00:00'
-    - title: Search results for phishing — Latest News, Reports & Analysis | The Hacker
-        News
-      url: https://thehackernews.com/search?by-date=false&max-results=20&q=phishing&start=907&updated-max=2024-02-19T10%3A09%3A00%2B05%3A30
-      source: The Hacker News
-      published: '2026-11-01T07:03:40.040356+00:00'
-    published: '2026-11-01T07:03:40.040356+00:00'
+  fraud_phishing: []
   policy:
-  - id: ed0b2d7c562a
-    rank: 1
-    title: US sanctions 10 over ATM malware scheme tied to Tren de Aragua
-    summary: The US imposed sanctions on 10 individuals in connection with an ATM
-      malware scheme tied to Tren de Aragua, according to The Record. The action targets
-      people linked to the criminal group's financial fraud activity.
-    url: https://therecord.media/?lang=en
-    image: https://cms.therecord.media/uploads/primary_logo_rgb_carrot_d6e486d746.svg
-    sources:
-    - The Record from Recorded Future
-    labels:
-    - sanctions
-    - law enforcement
-    - cybercrime
-    rationale: New US sanctions action tied to a criminal ATM malware scheme; fits
-      the Policy & Enforcement focus on sanctions and removing threat actors.
-    is_update: false
-    supersedes: null
-    what_changed: null
-    cluster: ed0b2d7c562a
-    cluster_key: aragua-atm-malware-over-sanctions-scheme-tied-tren
-    coverage:
-    - title: Cyber Security News | The Record from Recorded Future News
-      url: https://therecord.media/?lang=en
-      source: The Record from Recorded Future
-      published: '2026-11-01T07:03:40.040356+00:00'
-    published: '2026-11-01T07:03:40.040356+00:00'
   - id: 4c952fbd89a7
-    rank: 2
+    rank: 1
     title: Syrian Hacker Gets Prison Time in US After Over a Decade on the Run
     summary: SecurityWeek reports that Syrian hacker Ahmad Umar Agha was sentenced
       to 42 months in a US court for pro-Assad attacks on media, businesses, and government
