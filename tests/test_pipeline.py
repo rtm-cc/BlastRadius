@@ -384,9 +384,14 @@ class RunTest(unittest.TestCase):
         code = self.run_with(
             {
                 "Technology": answer(pick("https://x.example/1")),
-                "Space": answer(pick("https://x.example/1", topic="Space")),
+                "Space": answer(pick("https://x.example/2", topic="Space")),
             },
-            {"x": [candidate("https://x.example/1", topic="shared")]},
+            {
+                "x": [
+                    candidate("https://x.example/1", topic="shared"),
+                    candidate("https://x.example/2", topic="shared"),
+                ]
+            },
         )
         self.assertEqual(code, cli.EXIT_OK)
         [path] = (self.dir / "archive").glob("*/*/*.yaml")

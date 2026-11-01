@@ -94,15 +94,26 @@ class ReviewTest(unittest.TestCase):
         _, result, _ = self.run_review("unused", {"ai": [story("x", "https://a/1")]})
         self.assertEqual(result.calls, 0)
 
-    def test_last_story_in_topic_is_never_removed(self):
-        # Even if the review wants to remove s2 from brazil, brazil only has 1 story, so it must not be emptied
+    def test_duplicate_is_always_removed_even_if_topic_becomes_empty(self):
+        # A true duplicate must never remain on the board just because a topic is short
         b = {
             "world": [story("Lula wins", "https://w/1"), story("Summit ends", "https://w/2")],
             "brazil": [story("Lula reeleito", "https://b/1", "g1")],
         }
         b, result, _ = self.run_review(answer({"keep": "s1", "remove": ["s3"], "reason": "World fit"}), b=b)
-        self.assertEqual(result.removed, [])
-        self.assertEqual(len(b["brazil"]), 1)
+        self.assertEqual(len(result.removed), 1)
+        self.assertEqual(len(b["brazil"]), 0)
+        self.assertEqual(len(b["world"]), 2)
+
+    def test_exact_url_overlap_is_removed_even_if_llm_misses_it(self):
+        # Even if the LLM returns no duplicates, identical URLs are deduplicated
+        b = {
+            "world": [story("Shared story", "https://shared/url")],
+            "brazil": [story("Shared story headline", "https://shared/url")],
+        }
+        b, result, _ = self.run_review(answer(), b=b)
+        self.assertEqual(len(result.removed), 1)
+        self.assertEqual(sum(len(slist) for slist in b.values()), 1)
 
 
 if __name__ == "__main__":

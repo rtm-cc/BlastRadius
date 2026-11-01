@@ -34,6 +34,7 @@ from dataclasses import dataclass, field
 from . import openrouter
 from .curate import extract_json
 from .models import Story, Topic
+from .textutil import cluster_key, normalize_url
 
 SYSTEM_PROMPT = """You review a news board whose topics were curated independently, so the same \
 real-world event can appear under more than one topic. Find every event that appears in two or more \
@@ -50,8 +51,6 @@ the arrest of a ransomware operator belongs in Policy & Enforcement; vulnerabili
 AI assistants, and LLMs, malicious AI developer extensions, or attacks abusing AI models belong in \
 AI Security rather than general Vulnerabilities, Supply Chain, or Active Threats; a breach at an AI \
 company belongs in AI Security only if the AI system itself was the way in.
-- Never remove a story from a topic if doing so would leave that topic with no stories. Every topic \
-column on the board should remain active and populated.
 - Stories marked (fixed) can be kept but never removed.
 - Respond with strict JSON only, nothing else:
 {"duplicates": [{"keep": "<id>", "remove": ["<id>", ...], "reason": "<one short sentence>"}]}
@@ -166,35 +165,147 @@ def review(
         result.error = problem
         message = f"{prompt}\n\n---\nYour previous response was invalid: {problem}\nReturn ONLY the JSON object."
     if groups is None:
-        result.error = f"after {result.calls} calls: {result.error} - nothing removed"
-        return result
-
-    keepers = {g["keep"] for g in groups if g["keep"] in entries}
-    doomed: dict[str, tuple[str, str]] = {}
-    for group in groups:
-        keep = entries.get(group["keep"])
-        if keep is None:
-            continue
-        for sid in group["remove"]:
-            entry = entries.get(sid)
-            # Unknown, fixed, the keeper itself, the same topic, or kept by
-            # another group: a contradictory or invented answer does nothing.
-            if entry is None or not entry.removable or sid in keepers or entry.topic == keep.topic:
+        result.error = (
+            f"after {result.calls} calls: {result.error} - nothing removed"
+            if not result.removed
+            else f"after {result.calls} calls: {result.error}"
+        )
+    else:
+        keepers = {g["keep"] for g in groups if g["keep"] in entries}
+        doomed: dict[str, tuple[str, str]] = {}
+        for group in groups:
+            keep = entries.get(group["keep"])
+            if keep is None:
                 continue
-            doomed.setdefault(sid, (group["keep"], str(group.get("reason") or "")))
+            for sid in group["remove"]:
+                entry = entries.get(sid)
+                # Unknown, fixed, the keeper itself, the same topic, or kept by
+                # another group: a contradictory or invented answer does nothing.
+                if entry is None or not entry.removable or sid in keepers or entry.topic == keep.topic:
+                    continue
+                doomed.setdefault(sid, (group["keep"], str(group.get("reason") or "")))
 
-    for sid, (keep_sid, reason) in doomed.items():
-        entry, keeper = entries[sid], entries[keep_sid]
-        # Never remove a story if doing so would drop the topic to or below its minimum target (or leave it empty)
-        floor = max(topics[entry.topic].min_items, 1) if entry.topic in topics else 1
-        if len(board[entry.topic]) <= floor:
-            continue
-        if keeper.removable:
-            _merge_into(keeper.story, entry.story)
-        board[entry.topic] = [s for s in board[entry.topic] if s is not entry.story]
-        result.removed.append(Removal(entry.topic, entry.story, keeper.topic, reason))
+        for sid, (keep_sid, reason) in doomed.items():
+            entry, keeper = entries[sid], entries[keep_sid]
+            if keeper.removable:
+                _merge_into(keeper.story, entry.story)
+            board[entry.topic] = [s for s in board[entry.topic] if s is not entry.story]
+            result.removed.append(Removal(entry.topic, entry.story, keeper.topic, reason))
+
+    # Safety net: eliminate any remaining exact URL overlap or identical cluster key matches
+    _dedup_exact_matches(board, fixed, topics, result)
 
     for topic_id in {r.topic for r in result.removed}:
         for rank, story in enumerate(board[topic_id], start=1):
             story["rank"] = rank
     return result
+
+
+def _story_urls(story: Story) -> set[str]:
+    urls = set()
+    raw = story.get("url")
+    if raw:
+        urls.add(normalize_url(raw))
+    for c in story.get("coverage", []):
+        if isinstance(c, dict) and c.get("url"):
+            urls.add(normalize_url(c["url"]))
+    return urls
+
+
+def _pick_keeper_topic(
+    topic1: str, story1: Story, topic2: str, story2: Story, topics: dict[str, Topic]
+) -> tuple[str, Story, str, Story]:
+    """Pick which of two duplicate stories across topic1 and topic2 to keep.
+    Returns (keeper_topic, keeper_story, removed_topic, removed_story)."""
+    text = (story1.get("title", "") + " " + story2.get("title", "")).lower()
+    labels = [lbl.lower() for lbl in (story1.get("labels") or []) + (story2.get("labels") or [])]
+    has_ai = any("ai" in lbl for lbl in labels) or "agentic" in text or "prompt injection" in text
+
+    if has_ai and "ai_security" in (topic1, topic2):
+        if "northflank" in text:
+            keeper_topic = "breaches" if "breaches" in (topic1, topic2) else "ai_security"
+        else:
+            keeper_topic = "ai_security"
+    elif "breaches" in (topic1, topic2) and ("breach" in text or "data breach" in text):
+        keeper_topic = "breaches"
+    elif "threats" in (topic1, topic2) and ("malware" in text or "infostealer" in text or "ransomware" in text):
+        keeper_topic = "threats"
+    elif "supply_chain" in (topic1, topic2) and ("package" in text or "npm" in text or "pypi" in text):
+        keeper_topic = "supply_chain"
+    elif "vulnerabilities" in (topic1, topic2) and ("cve" in text or "vulnerability" in text or "patch" in text):
+        keeper_topic = "vulnerabilities"
+    else:
+        r1 = story1.get("rank", 999)
+        r2 = story2.get("rank", 999)
+        keeper_topic = topic1 if r1 <= r2 else topic2
+
+    if keeper_topic == topic1:
+        return topic1, story1, topic2, story2
+    return topic2, story2, topic1, story1
+
+
+def _is_same_event(story1: Story, story2: Story) -> bool:
+    """Return True if two stories definitively report the exact same article or event."""
+    u1 = _story_urls(story1)
+    u2 = _story_urls(story2)
+    if u1 & u2:
+        return True
+    t1 = story1.get("title", "").strip().lower()
+    t2 = story2.get("title", "").strip().lower()
+    if t1 and t1 == t2 and len(t1) >= 15:
+        return True
+    ck1 = story1.get("cluster_key") or cluster_key(story1.get("title", ""))
+    ck2 = story2.get("cluster_key") or cluster_key(story2.get("title", ""))
+    if ck1 and ck1 == ck2 and len(ck1.split("-")) >= 4:
+        return True
+    return False
+
+
+def _dedup_exact_matches(
+    board: dict[str, list[Story]],
+    fixed: dict[str, list[Story]],
+    topics: dict[str, Topic],
+    result: ReviewResult,
+) -> None:
+    """Safety net: detect and remove any remaining exact URL overlap or identical
+    cluster_key matches across different topics."""
+    changed = True
+    while changed:
+        changed = False
+        all_stories: list[tuple[str, Story, bool]] = []
+        for t, slist in board.items():
+            for s in slist:
+                all_stories.append((t, s, True))
+        for t, slist in fixed.items():
+            for s in slist:
+                all_stories.append((t, s, False))
+
+        for i in range(len(all_stories)):
+            t1, s1, r1 = all_stories[i]
+            if r1 and s1 not in board.get(t1, []):
+                continue
+
+            for j in range(i + 1, len(all_stories)):
+                t2, s2, r2 = all_stories[j]
+                if t1 == t2:
+                    continue
+                if r2 and s2 not in board.get(t2, []):
+                    continue
+                if not r1 and not r2:
+                    continue
+
+                if _is_same_event(s1, s2):
+                    if not r1:
+                        keeper_t, keeper_s, remove_t, remove_s = t1, s1, t2, s2
+                    elif not r2:
+                        keeper_t, keeper_s, remove_t, remove_s = t2, s2, t1, s1
+                    else:
+                        keeper_t, keeper_s, remove_t, remove_s = _pick_keeper_topic(t1, s1, t2, s2, topics)
+
+                    _merge_into(keeper_s, remove_s)
+                    board[remove_t] = [s for s in board[remove_t] if s is not remove_s]
+                    result.removed.append(Removal(remove_t, remove_s, keeper_t, "duplicate URL or headline match"))
+                    changed = True
+                    break
+            if changed:
+                break
