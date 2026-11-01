@@ -99,9 +99,19 @@
 
 * { box-sizing: border-box; }
 
-html, body { margin: 0; }
+html {
+  height: 100%;
+  margin: 0;
+}
 
 body {
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background: var(--background);
   color: var(--foreground);
   font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -133,6 +143,7 @@ button { font: inherit; color: inherit; }
 /* --- top bar ------------------------------------------------------------ */
 
 .bar {
+  flex: none;
   position: sticky;
   top: 0;
   z-index: 5;
@@ -316,6 +327,7 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
 }
 
 .status {
+  flex: none;
   margin: 0;
   padding: .5rem 1rem 0;
   color: var(--muted);
@@ -327,25 +339,50 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
 
 /* --- the board ------------------------------------------------------------ */
 
-#board { outline: none; }
+#board {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  outline: none;
+}
 
 .columns {
   display: flex;
   gap: 1.25rem;
-  height: calc(100dvh - var(--bar-height) - 1px);
+  flex: 1 1 0;
+  min-height: 0;
+  height: 100%;
   padding: 1rem;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
 }
-.status:not(:empty) + #board .columns { height: calc(100dvh - var(--bar-height) - 2.2rem); }
+
+.columns::-webkit-scrollbar {
+  height: 8px;
+}
+.columns::-webkit-scrollbar-track {
+  background: transparent;
+}
+.columns::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+.columns::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
 
 .column {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   flex: 0 0 var(--column);
+  height: 100%;
   /* Without this a flex item never shrinks below its content, and one long
      unbreakable source name widens the whole column. */
   min-width: 0;
@@ -549,6 +586,19 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
   overscroll-behavior-y: contain;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
+}
+.panel-body::-webkit-scrollbar {
+  width: 6px;
+}
+.panel-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.panel-body::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+.panel-body::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
 }
 .panel-body > * + * { margin-top: .75rem; }
 
@@ -913,6 +963,7 @@ body[data-wallpaper="true"] .status { color: color-mix(in srgb, var(--foreground
   .column { display: contents; }
   .panel {
     flex: 0 0 min(85vw, var(--column));
+    height: 100%;
     scroll-snap-align: center;
     /* Android picks the pan axis from the element touched; hand both axes
        to the native scrollers rather than to the card under the finger. */

@@ -258,8 +258,8 @@
     var hasOnlyCarryover = stories.length > 0 && stories.every(function (s) { return s.isCarryover; });
     if (hasOnlyCarryover) {
       var note = el("div", "panel-carryover-note");
-      note.appendChild(el("p", "panel-carryover-title", "No stories cleared the editorial bar today"));
-      note.appendChild(el("p", null, "Showing latest coverage from previous run:"));
+      note.appendChild(el("p", "panel-carryover-title", "No breaking stories today"));
+      note.appendChild(el("p", null, "Showing coverage from the previous edition:"));
       body.appendChild(note);
     }
     if (stories.length) {
