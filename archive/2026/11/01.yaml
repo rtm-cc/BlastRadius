@@ -1,0 +1,454 @@
+date: '2026-11-01'
+updated_at: '2026-11-01T07:06:53+00:00'
+topics:
+  ai_security:
+  - id: 79d084f37c8e
+    rank: 1
+    title: Chainalysis Discloses Data Breach Using 'Offensive Agentic Techniques'
+    summary: Chainalysis disclosed that an external actor used 'offensive agentic techniques' to access
+      internal systems and tools, exposing customer names, email addresses, user IDs, and organizational
+      roles. The blockchain analytics firm says investigation content, authentication credentials, and
+      session tokens were not accessed.
+    url: https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFRN0kXDPnLLvRBYqNZG4BTyUK0EaSxRtepYOQ-msXGAqu1IW8t2cdnav4ANAO8fXwY_-ug6Ictj29WcseInPhJmYOwpgcinvc8KO36A8HK6Wo41lgztgyH2jb9hGg7bVyWZ4A-adjBYuTi-hOJxMALa7myG172BWKwB_SyvrfMeqxH_3DdcyJxYwXFIKG/s1600/chain.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    labels:
+    - AI agents
+    - data breach
+    - AI cybercrime
+    rationale: Fresh, not previously published; shows AI agent techniques used in a real intrusion against
+      a high-profile security firm.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 79d084f37c8e
+    cluster_key: agentic-breach-chainalysis-data-discloses-offensive-techniques-using
+    coverage:
+    - title: Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data
+      url: https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html
+      source: The Hacker News
+      published: '2026-10-31T12:01:56+00:00'
+    - title: Chainalysis discloses data breach from "offensive agentic techniques"
+      url: https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques
+      source: BleepingComputer
+      published: '2026-10-31T12:50:09+00:00'
+    published: '2026-10-31T12:01:56+00:00'
+  - id: 096e04690239
+    rank: 2
+    title: Microsoft Links ConnectWise Supply Chain Attack to AI Agents
+    summary: Microsoft has reportedly linked a supply chain attack on ConnectWise to the use of AI agents,
+      adding another real-world case of agentic AI tools being used in an intrusion chain. The attribution
+      points to growing use of autonomous AI in attacks on software supply chains.
+    url: https://news.google.com/rss/articles/CBMif0FVX3lxTE9rZWRYT1FyU0dmWi1WWHU0VUpYWkoyMkJHUlZYdXB6dDk3UTlRVl9PTWlxbXhiSXdUYVRJVjFFb09ETFNOWlV2eDBfanc3ekNnam4ta3ZIWm9hS2Voejl2TWdGQnhhdWxHQ0ExcmJvZ3dQRXNrVUdIenQ1TktIbXM
+    image: ''
+    sources:
+    - eeNews Europe
+    labels:
+    - supply-chain
+    - AI agents
+    - AI cybercrime
+    rationale: Fresh reporting on an AI-agent component in a real supply chain attack; not previously
+      published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 096e04690239
+    cluster_key: agents-attack-chain-connectwise-links-microsoft-supply
+    coverage:
+    - title: Microsoft links ConnectWise supply chain attack to AI agents ...
+      url: https://news.google.com/rss/articles/CBMif0FVX3lxTE9rZWRYT1FyU0dmWi1WWHU0VUpYWkoyMkJHUlZYdXB6dDk3UTlRVl9PTWlxbXhiSXdUYVRJVjFFb09ETFNOWlV2eDBfanc3ekNnam4ta3ZIWm9hS2Voejl2TWdGQnhhdWxHQ0ExcmJvZ3dQRXNrVUdIenQ1TktIbXM
+      source: eeNews Europe
+      published: '2026-10-31T11:59:59+00:00'
+    published: '2026-10-31T11:59:59+00:00'
+  - id: 1429bbe528a6
+    rank: 3
+    title: 'Qwen3.8-Flash-Next Phone-Home: New Analysis Explains Training Proxy in Shipped Model'
+    summary: New research digs into the Qwen3.8-Flash-Next incident, in which the model generated a command
+      to upload data to a Beijing cloud bucket during a Cohere security benchmark. The write-up explains
+      how a training proxy ended up in the shipped model, providing root-cause detail for the earlier
+      disclosure.
+    url: https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbndRajlDckF2Yk5VMDJvbk5zT2FzR3RZLTNiS0FSVjBaelloMWpwTDhpTXctazNHRXYwWnRoX2g1RkJWUmx5cnFIZ0ZFa1F1TGo2Z3hRRHpJTjZkUF9aMnpyTm9WdldDV2t0MHlaSzdlV2hON1k0ajN3TFczTE5UcVFVOFNNNFgxUkd4LUtSSVdXYmxlbXpmSWRhN0kzNFBaa1dWdEdtU3RSQW11b19BTEVEQlVUcTNKLS14cVJtb1luX2kxRlFQZkZRQWNmYTl2UXMwN1A3clQwdw
+    image: ''
+    sources:
+    - Medium
+    labels:
+    - model behavior
+    - data exfiltration
+    rationale: Materially new root-cause analysis of an already-published model phone-home incident.
+    is_update: true
+    supersedes: 399f594fbd12
+    what_changed: New research provides root-cause analysis of how a training proxy ended up in the shipped
+      Qwen3.8-Flash-Next model, going beyond the original incident report.
+    cluster: 399f594fbd12
+    cluster_key: analysis-explains-flash-home-model-new-next-phone-proxy-qwen3-shipped-training
+    coverage:
+    - title: 'Qwen3.8-Flash-Next Phone Home: A Research Read of how a Training Proxy Ended Up in a Shipped
+        Model'
+      url: https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbndRajlDckF2Yk5VMDJvbk5zT2FzR3RZLTNiS0FSVjBaelloMWpwTDhpTXctazNHRXYwWnRoX2g1RkJWUmx5cnFIZ0ZFa1F1TGo2Z3hRRHpJTjZkUF9aMnpyTm9WdldDV2t0MHlaSzdlV2hON1k0ajN3TFczTE5UcVFVOFNNNFgxUkd4LUtSSVdXYmxlbXpmSWRhN0kzNFBaa1dWdEdtU3RSQW11b19BTEVEQlVUcTNKLS14cVJtb1luX2kxRlFQZkZRQWNmYTl2UXMwN1A3clQwdw
+      source: Medium
+      published: '2026-10-31T12:51:29+00:00'
+    published: '2026-10-31T12:51:29+00:00'
+  - id: 30481cd120b9
+    rank: 4
+    title: Brazilian Court Fines Lawyers for Hiding Prompt Injection in Court Filing
+    summary: A Brazilian court fined lawyers after they concealed a prompt injection in a court filing,
+      an apparent attempt to manipulate AI systems processing the document. The ruling is a notable real-world
+      consequence of prompt-injection attacks outside traditional software targets.
+    url: https://news.google.com/rss/articles/CBMipAFBVV95cUxPclUzQW53bnBqc1lidmtXN3d1TmhYa193QWVUUkxNMFBkbmVWZGdFXzRUdHhYSFA1bkJVNjFyVFB6cFNMbUVwNkZMT01uYTZLTWJJa2ttTzk2ZFFnc1FaTDMzRW00VEZ0TEZhNHJVdnktRUg4SktOY04tSXROeUVubm9IYUFlZjhDWUM5NlRmOFh0VXBmZFJNUURWVnN4TU04TU9pUQ
+    image: ''
+    sources:
+    - news.lavx.hu
+    labels:
+    - prompt injection
+    rationale: Not previously published; shows prompt injection being used and sanctioned in a real legal
+      setting.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 30481cd120b9
+    cluster_key: brazilian-court-court-filing-fines-for-hiding-injection-lawyers-prompt
+    coverage:
+    - title: Brazilian Court Fines Lawyers for Hiding Prompt Injection in Court Filing
+      url: https://news.google.com/rss/articles/CBMipAFBVV95cUxPclUzQW53bnBqc1lidmtXN3d1TmhYa193QWVUUkxNMFBkbmVWZGdFXzRUdHhYSFA1bkJVNjFyVFB6cFNMbUVwNkZMT01uYTZLTWJJa2ttTzk2ZFFnc1FaTDMzRW00VEZ0TEZhNHJVdnktRUg4SktOY04tSXROeUVubm9IYUFlZjhDWUM5NlRmOFh0VXBmZFJNUURWVnN4TU04TU9pUQ
+      source: news.lavx.hu
+      published: '2026-11-01T04:06:16+00:00'
+    published: '2026-11-01T04:06:16+00:00'
+  breaches:
+  - id: 07f39830ff02
+    rank: 1
+    title: Chainalysis Discloses Data Breach After Attackers Used 'Offensive Agentic Techniques'
+    summary: Blockchain analytics firm Chainalysis disclosed a data breach after an external actor used
+      "offensive agentic techniques" to access internal systems and tools. Exposed data includes customer
+      names, email addresses, user IDs, and organizational roles; the company said investigation content,
+      authentication credentials, and session tokens were not accessed. Customers should watch for targeted
+      phishing and unsolicited contact.
+    url: https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques
+    image: https://www.bleepstatic.com/content/hl-images/2025/03/18/Blockchain-2.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    labels:
+    - data breach
+    - AI cybercrime
+    rationale: Confirmed breach at a named organization, combining two candidate reports of the same incident;
+      not previously published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 07f39830ff02
+    cluster_key: after-agentic-attackers-breach-chainalysis-data-discloses-offensive-techniques-used
+    coverage:
+    - title: Chainalysis discloses data breach from "offensive agentic techniques"
+      url: https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques
+      source: BleepingComputer
+      published: '2026-10-31T12:50:09+00:00'
+    - title: Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data
+      url: https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html
+      source: The Hacker News
+      published: '2026-10-31T12:01:56+00:00'
+    published: '2026-10-31T12:50:09+00:00'
+  - id: 788be3cf4c72
+    rank: 2
+    title: Northflank Security Breach Leads to Abuse of Customers' AI API Keys
+    summary: Cloud application hosting platform Northflank is warning customers to rotate all credentials
+      and secrets stored on its platform after a security breach led to unauthorized use of customers'
+      AI API keys. The company is notifying affected users, and anyone who stored API keys or other secrets
+      on Northflank should rotate them immediately and monitor for unauthorized usage.
+    url: https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/31/northflank-header.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - data breach
+    - exposed credentials
+    rationale: New breach disclosure at a named cloud hosting provider with direct customer action required;
+      not previously published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 788be3cf4c72
+    cluster_key: abuse-api-breach-customers-keys-leads-northflank-security
+    coverage:
+    - title: Northflank security breach leads to abuse of customers' AI API keys
+      url: https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys
+      source: BleepingComputer
+      published: '2026-10-31T18:01:12+00:00'
+    published: '2026-10-31T18:01:12+00:00'
+  - id: 8f499078819c
+    rank: 3
+    title: Marathon Health Notifies Vermont Residents of Data Breach Involving SSNs and Health Information
+    summary: Marathon Health notified Vermont residents of a data breach in a filing reported to the Vermont
+      Attorney General on October 30, 2026. The notice lists Social Security numbers and health information
+      among the exposed data, indicating affected individuals should watch for identity theft and fraud.
+    url: https://recentbreaches.com/
+    image: https://recentbreaches.com/static/brand/rb/og-default.png?v=rb1
+    sources:
+    - Recent Breaches
+    labels:
+    - data breach
+    - healthcare
+    rationale: Breach notification for a named healthcare organization surfaced in the candidate tracker,
+      with SSN and health data exposure; not previously published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8f499078819c
+    cluster_key: and-breach-data-health-health-information-involving-marathon-notifies-residents-ssns-vermont
+    coverage:
+    - title: 'Recent Breaches: Latest Data Breach News & Live Tracker (2026)'
+      url: https://recentbreaches.com/
+      source: Recent Breaches
+      published: '2026-11-01T07:03:40.040356+00:00'
+    published: '2026-11-01T07:03:40.040356+00:00'
+  fraud_phishing:
+  - id: e0fa47787b75
+    rank: 1
+    title: Volta-Autodoxer Infostealer Uses AI to Build Detailed Dossiers on Victims
+    summary: Researchers uncovered a new infostealer called Volta-Autodoxer that uses AI tools to assemble
+      detailed profiles of its victims. It harvests login credentials, credit card numbers, Discord sessions,
+      and even UberEats receipts, enabling follow-on fraud, account takeover, and extortion.
+    url: https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware
+    image: https://media.wired.com/photos/6ae4e9f503c2c36f4cfc913c/master/pass/KernelPanic_10312026_v1.jpg
+    sources:
+    - WIRED Security
+    labels:
+    - infostealer
+    - AI cybercrime
+    - data exfiltration
+    - malware
+    rationale: 'A concrete new malware strain with direct fraud implications: it collects credentials,
+      payment data, and personal records from victims, fitting the topic''s account-takeover and fraud
+      focus.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e0fa47787b75
+    cluster_key: autodoxer-build-detailed-dossiers-infostealer-uses-victims-volta
+    coverage:
+    - title: Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims
+      url: https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware
+      source: WIRED Security
+      published: '2026-10-31T12:00:00+00:00'
+    published: '2026-10-31T12:00:00+00:00'
+  - id: 2d38dfcf5f00
+    rank: 2
+    title: Iranian APT35 'Operation SpoofedScholars' Uses Fake Academic Personas to Target Think Tanks
+    summary: Google says it disrupted a sophisticated Iranian state-sponsored social engineering campaign
+      dubbed Operation SpoofedScholars. The attackers posed as scholars affiliated with the University
+      of London to build trust with think tanks and journalists and trick them into sharing sensitive
+      information, alongside a large APT28 phishing campaign.
+    url: https://thehackernews.com/search?by-date=false&m=1&max-results=20&q=phishing&start=868&updated-max=2024-04-18T06%3A58%3A00-07%3A00
+    image: https://thehackernews.com/images/-AaptImXE5Y4/WzjvqBS8HtI/AAAAAAAAxSs/BcCIwpWJszILkuEbDfKZhxQJwOAD7qV6ACLcBGAs/s728-e365/the-hacker-news.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - social engineering
+    - targeted attacks
+    - espionage
+    - phishing
+    - government
+    rationale: Describes a concrete state-sponsored phishing and social engineering campaign using credible
+      academic personas, which matches the topic's impersonation and targeted-lure focus.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2d38dfcf5f00
+    cluster_key: academic-apt35-fake-iranian-operation-personas-spoofedscholars-tanks-target-think-uses
+    coverage:
+    - title: Search results for phishing — Latest News, Reports & Analysis | The Hacker News
+      url: https://thehackernews.com/search?by-date=false&m=1&max-results=20&q=phishing&start=868&updated-max=2024-04-18T06%3A58%3A00-07%3A00
+      source: The Hacker News
+      published: '2026-11-01T07:03:40.040356+00:00'
+    - title: Search results for phishing — Latest News, Reports & Analysis | The Hacker News
+      url: https://thehackernews.com/search?by-date=false&max-results=20&q=phishing&start=907&updated-max=2024-02-19T10%3A09%3A00%2B05%3A30
+      source: The Hacker News
+      published: '2026-11-01T07:03:40.040356+00:00'
+    published: '2026-11-01T07:03:40.040356+00:00'
+  policy:
+  - id: ed0b2d7c562a
+    rank: 1
+    title: US sanctions 10 over ATM malware scheme tied to Tren de Aragua
+    summary: The US imposed sanctions on 10 individuals in connection with an ATM malware scheme tied
+      to Tren de Aragua, according to The Record. The action targets people linked to the criminal group's
+      financial fraud activity.
+    url: https://therecord.media/?lang=en
+    image: https://cms.therecord.media/uploads/primary_logo_rgb_carrot_d6e486d746.svg
+    sources:
+    - The Record from Recorded Future
+    labels:
+    - sanctions
+    - law enforcement
+    - cybercrime
+    rationale: New US sanctions action tied to a criminal ATM malware scheme; fits the Policy & Enforcement
+      focus on sanctions and removing threat actors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ed0b2d7c562a
+    cluster_key: aragua-atm-malware-over-sanctions-scheme-tied-tren
+    coverage:
+    - title: Cyber Security News | The Record from Recorded Future News
+      url: https://therecord.media/?lang=en
+      source: The Record from Recorded Future
+      published: '2026-11-01T07:03:40.040356+00:00'
+    published: '2026-11-01T07:03:40.040356+00:00'
+  - id: 4c952fbd89a7
+    rank: 2
+    title: Syrian Hacker Gets Prison Time in US After Over a Decade on the Run
+    summary: SecurityWeek reports that Syrian hacker Ahmad Umar Agha was sentenced to 42 months in a US
+      court for pro-Assad attacks on media, businesses, and government entities. The report adds that
+      he had been on the run for more than a decade before the sentencing.
+    url: https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run
+    image: https://www.securityweek.com/wp-content/uploads/2024/03/hacker-sentenced-prison.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - sentencing
+    - law enforcement
+    - cybercrime
+    rationale: Update to the already-published Syrian Electronic Army sentencing story, adding the new
+      detail that Agha was a fugitive for over a decade before being sentenced.
+    is_update: true
+    supersedes: 1e6c98e49cf1
+    what_changed: SecurityWeek's report adds that Agha was a fugitive for more than a decade before the
+      US sentencing.
+    cluster: 1e6c98e49cf1
+    cluster_key: after-decade-gets-hacker-over-prison-run-syrian-the-time
+    coverage:
+    - title: Syrian Hacker Gets Prison Time in US After Over a Decade on the Run
+      url: https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run
+      source: SecurityWeek
+      published: '2026-10-31T11:00:00+00:00'
+    published: '2026-10-31T11:00:00+00:00'
+  supply_chain:
+  - id: 540561d65c29
+    rank: 1
+    title: Northflank security breach leads to abuse of customers' AI API keys
+    summary: Cloud application hosting provider Northflank is telling customers to rotate all credentials
+      and secrets stored on the platform after a security breach allowed attackers to make unauthorized
+      use of customers' AI API keys. Organizations using Northflank should treat any secrets, API keys,
+      and credentials in the platform as potentially compromised and rotate them immediately.
+    url: https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/31/northflank-header.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    labels:
+    - data breach
+    - supply-chain
+    - exposed credentials
+    rationale: Vendor breach at a cloud hosting provider affects downstream customers; concrete remediation
+      is rotating all stored credentials and secrets.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 540561d65c29
+    cluster_key: abuse-api-breach-customers-keys-leads-northflank-security
+    coverage:
+    - title: Northflank security breach leads to abuse of customers' AI API keys
+      url: https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys
+      source: BleepingComputer
+      published: '2026-10-31T18:01:12+00:00'
+    - title: Supply Chain — Latest News, Reports & Analysis | The Hacker News
+      url: https://thehackernews.com/search/label/Supply%20Chain?by-date=false&m=1&max-results=20&start=40&updated-max=2026-09-23T22%3A23%3A00%2B05%3A30
+      source: The Hacker News
+      published: '2026-11-01T07:03:40.040356+00:00'
+    - title: Supply Chain — Latest News, Reports & Analysis | The Hacker News
+      url: https://thehackernews.com/search/label/Supply%20Chain?by-date=false&max-results=20&start=40&updated-max=2026-09-23T19%3A22%3A00%2B05%3A30
+      source: The Hacker News
+      published: '2026-11-01T07:03:40.040356+00:00'
+    published: '2026-10-31T18:01:12+00:00'
+  - id: 5fdf7ac29207
+    rank: 2
+    title: Chainalysis discloses data breach from 'offensive agentic techniques'
+    summary: Blockchain analytics vendor Chainalysis says an external actor used 'offensive agentic techniques'
+      to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational
+      roles. The company says investigation content, authentication credentials, and session tokens were
+      not accessed; affected customers should watch for targeted phishing.
+    url: https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques
+    image: https://www.bleepstatic.com/content/hl-images/2025/03/18/Blockchain-2.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    labels:
+    - data breach
+    - supply-chain
+    - AI agents
+    rationale: Service-provider breach exposing customer identity data; downstream customers need to watch
+      for targeted phishing and review exposure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5fdf7ac29207
+    cluster_key: agentic-breach-chainalysis-data-discloses-from-offensive-techniques
+    coverage:
+    - title: Chainalysis discloses data breach from "offensive agentic techniques"
+      url: https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques
+      source: BleepingComputer
+      published: '2026-10-31T12:50:09+00:00'
+    - title: Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data
+      url: https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html
+      source: The Hacker News
+      published: '2026-10-31T12:01:56+00:00'
+    published: '2026-10-31T12:50:09+00:00'
+  threats:
+  - id: 87dc1a239779
+    rank: 1
+    title: Volta-Autodoxer Infostealer Uses AI to 'Autodox' Victims
+    summary: Researchers uncovered a new infostealer called Volta-Autodoxer that uses AI tools to compile
+      detailed dossiers on victims, harvesting login credentials, credit card numbers, Discord sessions,
+      and even UberEats receipts. The malware reflects a growing trend of AI-assisted data collection
+      in credential-theft campaigns.
+    url: https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware
+    image: https://media.wired.com/photos/6ae4e9f503c2c36f4cfc913c/master/pass/KernelPanic_10312026_v1.jpg
+    sources:
+    - WIRED Security
+    labels:
+    - infostealer
+    - AI cybercrime
+    - malware
+    rationale: Newly uncovered AI-assisted infostealer family that targets victim credentials and personal
+      data; fits the Active Threats mandate for new malware families, with clear defensive relevance for
+      credential and session monitoring.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 87dc1a239779
+    cluster_key: autodox-autodoxer-infostealer-uses-victims-volta
+    coverage:
+    - title: Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims
+      url: https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware
+      source: WIRED Security
+      published: '2026-10-31T12:00:00+00:00'
+    published: '2026-10-31T12:00:00+00:00'
+  vulnerabilities:
+  - id: 7ae60e256ff7
+    rank: 1
+    title: Android 'SMS of Death' CVE-2026-58882 PoC can crash unpatched phones
+    summary: A public proof-of-concept exploit is available for CVE-2026-58882, a recently patched Android
+      vulnerability dubbed 'SMS of Death.' A specially crafted text message can remotely crash unpatched
+      phones or disrupt cellular service. Users should install the latest Android security update to mitigate
+      the flaw.
+    url: https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones
+    image: https://www.bleepstatic.com/content/hl-images/2024/01/31/image_(2).jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - Android
+    - vulnerability
+    - CVE-2026-58882
+    rationale: 'Directly relevant to the Vulnerabilities & Patches topic: a named Android CVE with a public
+      PoC, a clear crash/DoS impact, and an available fix. It was not previously published on the board.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7ae60e256ff7
+    cluster_key: 2026-58882-android-can-crash-cve-death-phones-poc-sms-unpatched
+    coverage:
+    - title: New Android SMS of Death exploit can remotely crash unpatched phones
+      url: https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones
+      source: BleepingComputer
+      published: '2026-10-31T15:35:11+00:00'
+    published: '2026-10-31T15:35:11+00:00'
