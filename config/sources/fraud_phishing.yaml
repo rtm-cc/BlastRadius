@@ -20,6 +20,12 @@ sources:
     url: https://cofense.com/feed/
     notes: Teardowns of real reported phishing emails; rare.
 
+  - id: knowbe4
+    type: rss
+    name: KnowBe4 Research
+    url: https://blog.knowbe4.com/rss.xml
+    notes: ~1/day. Phishing campaigns, BEC, social engineering scams, and attack trends.
+
   - id: web_fraud_phishing
     type: web_search
     name: "Web search: fraud and phishing"

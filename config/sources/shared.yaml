@@ -58,6 +58,18 @@ sources:
     url: https://krebsonsecurity.com/feed/
     notes: About one post a week, investigative.
 
+  - id: cybersecurity_news
+    type: rss
+    name: Cybersecurity News
+    url: https://cybersecuritynews.com/feed/
+    notes: ~5/day. Highly active breaking security news, including weekend coverage.
+
+  - id: infosecurity_magazine
+    type: rss
+    name: Infosecurity Magazine
+    url: https://www.infosecurity-magazine.com/rss/news/
+    notes: ~4/day. Comprehensive reporting on threats, fraud, breaches, and policy.
+
 
   # === Advisories ===========================================================
 

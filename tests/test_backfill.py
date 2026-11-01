@@ -1,0 +1,120 @@
+import shutil
+import tempfile
+import unittest
+from datetime import UTC, datetime
+from pathlib import Path
+
+from blastradius.archive import Archive
+from blastradius.cli import _backfill_empty_topics
+from blastradius.models import Topic
+
+
+def make_story(title: str, url: str, rank: int = 1, coverage: list | None = None) -> dict:
+    return {
+        "id": "id_" + title[:6],
+        "title": title,
+        "url": url,
+        "rank": rank,
+        "summary": "Summary of " + title,
+        "sources": ["Src"],
+        "labels": ["tag"],
+        "coverage": coverage or [{"title": title, "url": url, "source": "Src"}],
+    }
+
+
+class BackfillTest(unittest.TestCase):
+    def setUp(self):
+        self.temp_dir = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.temp_dir)
+        self.archive = Archive(self.temp_dir)
+
+    def test_backfills_empty_topic_from_yesterday(self):
+        topic_a = Topic(id="a", name="Topic A", min_items=2)
+        topic_b = Topic(id="b", name="Topic B", min_items=2)
+
+        # Yesterday's archive
+        self.archive.save_day(
+            "2026-10-31",
+            {
+                "a": [
+                    make_story("Old A1", "https://example.com/a1"),
+                    make_story("Old A2", "https://example.com/a2"),
+                ],
+                "b": [
+                    make_story("Old B1", "https://example.com/b1"),
+                ],
+            },
+            datetime.now(UTC),
+        )
+
+        # Today's board: Topic A has 1 fresh story, Topic B has 0
+        board = {
+            "a": [make_story("Fresh A", "https://example.com/fresh-a")],
+            "b": [],
+        }
+
+        _backfill_empty_topics(board, [topic_a, topic_b], self.archive, "2026-11-01")
+
+        # Topic A should remain untouched (not empty)
+        self.assertEqual(len(board["a"]), 1)
+        self.assertFalse(board["a"][0].get("is_carryover", False))
+
+        # Topic B was empty, should be backfilled with Old B1
+        self.assertEqual(len(board["b"]), 1)
+        self.assertTrue(board["b"][0]["is_carryover"])
+        self.assertEqual(board["b"][0]["title"], "Old B1")
+        self.assertEqual(board["b"][0]["rank"], 1)
+
+    def test_skips_stories_overlapping_with_today(self):
+        topic_a = Topic(id="a", name="Topic A", min_items=2)
+        topic_b = Topic(id="b", name="Topic B", min_items=2)
+
+        # Yesterday has Old B1 which shares a coverage URL with Today's fresh A story
+        shared_url = "https://example.com/shared-article"
+        self.archive.save_day(
+            "2026-10-31",
+            {
+                "b": [
+                    make_story("Old B1", shared_url),
+                    make_story("Old B2", "https://example.com/unique-b2"),
+                ],
+            },
+            datetime.now(UTC),
+        )
+
+        board = {
+            "a": [make_story("Fresh A", "https://example.com/fresh-a", coverage=[{"url": shared_url}])],
+            "b": [],
+        }
+
+        _backfill_empty_topics(board, [topic_a, topic_b], self.archive, "2026-11-01")
+
+        # B should have skipped B1 due to URL collision and selected B2
+        self.assertEqual(len(board["b"]), 1)
+        self.assertEqual(board["b"][0]["title"], "Old B2")
+        self.assertTrue(board["b"][0]["is_carryover"])
+
+    def test_accumulates_across_multiple_days(self):
+        topic = Topic(id="tech", name="Tech", min_items=2)
+
+        # 2 days ago has 1 story
+        self.archive.save_day(
+            "2026-10-30",
+            {"tech": [make_story("Story 10-30", "https://example.com/tech-10-30")]},
+            datetime.now(UTC),
+        )
+        # Yesterday has 1 story
+        self.archive.save_day(
+            "2026-10-31",
+            {"tech": [make_story("Story 10-31", "https://example.com/tech-10-31")]},
+            datetime.now(UTC),
+        )
+
+        board = {"tech": []}
+        _backfill_empty_topics(board, [topic], self.archive, "2026-11-01")
+
+        self.assertEqual(len(board["tech"]), 2)
+        self.assertEqual(board["tech"][0]["title"], "Story 10-31")
+        self.assertEqual(board["tech"][0]["rank"], 1)
+        self.assertEqual(board["tech"][1]["title"], "Story 10-30")
+        self.assertEqual(board["tech"][1]["rank"], 2)

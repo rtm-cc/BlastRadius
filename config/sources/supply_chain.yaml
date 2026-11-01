@@ -20,6 +20,24 @@ sources:
     url: https://openssf.org/feed/
     notes: Open source supply chain security initiatives, tooling, and advisories.
 
+  - id: socket_dev
+    type: rss
+    name: Socket Threat Intel
+    url: https://socket.dev/api/blog/feed.atom
+    notes: ~1/day. Tracks malicious npm, PyPI, and VS Code extensions in real time.
+
+  - id: chainguard
+    type: rss
+    name: Chainguard
+    url: https://www.chainguard.dev/unchained/rss.xml
+    notes: ~1-2/week. Software supply chain security, SBOMs, and container base images.
+
+  - id: snyk_research
+    type: rss
+    name: Snyk Research
+    url: https://snyk.io/blog/feed/
+    notes: ~1/day. Open source vulnerabilities, package health, and dependency disclosures.
+
   - id: web_supply_chain
     type: web_search
     name: "Web search: supply chain"

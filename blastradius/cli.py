@@ -28,9 +28,9 @@ from . import __version__, crosstopic, curate, env, fetch, openrouter, pages, si
 from . import config as config_module
 from .archive import Archive
 from .config import SHARED, Config, ConfigError
-from .models import Candidate, FetchResult, Source, Story
+from .models import Candidate, FetchResult, Source, Story, Topic
 from .state import State
-from .textutil import is_opaque_interstitial
+from .textutil import is_article_url, is_opaque_interstitial
 from .window import Window, resolve, utc_now
 
 EXIT_OK, EXIT_FAILED, EXIT_PARTIAL = 0, 1, 2
@@ -93,6 +93,59 @@ def _resolve_images(records: list[Story], cfg: Config) -> None:
 
     with ThreadPoolExecutor(max_workers=max(1, images.workers)) as pool:
         list(pool.map(find, missing))
+
+
+def _backfill_empty_topics(
+    board: dict[str, list[Story]],
+    topics: list[Topic],
+    archive: Archive,
+    today: str,
+    max_days: int = 3,
+) -> None:
+    """For any enabled topic that has 0 stories after curation and cross-topic
+    review, carry over up to min_items stories from recent archive days
+    (up to max_days back) marked with is_carryover=True.
+    """
+    from datetime import date, timedelta
+
+    from .crosstopic import _story_urls
+
+    used_urls = {u for records in board.values() for s in records for u in _story_urls(s)}
+    today_dt = date.fromisoformat(today)
+    lookback_days = [(today_dt - timedelta(days=d)).isoformat() for d in range(1, max_days + 1)]
+
+    for topic in topics:
+        if not topic.enabled:
+            continue
+        if board.get(topic.id):
+            continue
+
+        target_count = max(topic.min_items, 1) if topic.min_items else 3
+        carried: list[Story] = []
+
+        for past_day in lookback_days:
+            past_stories = archive.load_day(past_day).get(topic.id, [])
+            valid_stories = [
+                s
+                for s in past_stories
+                if s.get("url") and is_article_url(s["url"]) and not (_story_urls(s) & used_urls)
+            ]
+            for s in valid_stories:
+                if len(carried) >= target_count:
+                    break
+                story_copy = dict(s)
+                story_copy["rank"] = len(carried) + 1
+                story_copy["is_carryover"] = True
+                story_copy["coverage"] = [c for c in story_copy.get("coverage", []) if is_article_url(c.get("url", ""))]
+                carried.append(story_copy)
+                used_urls.update(_story_urls(story_copy))
+
+            if len(carried) >= target_count:
+                break
+
+        if carried:
+            board[topic.id] = carried
+            _print(f"  {topic.id}: carried over {len(carried)} story(ies)")
 
 
 def cmd_run(args: argparse.Namespace) -> int:
@@ -225,6 +278,8 @@ def cmd_run(args: argparse.Namespace) -> int:
         # clears that topic for today rather than leaving an earlier rerun's
         # cards behind.
 
+    _backfill_empty_topics(board, cfg.enabled_topics, archive, today)
+
     # Only now, so no page is fetched for a card the review removed.
     _resolve_images([r for records in board.values() for r in records], cfg)
     _print(f"\nOpenRouter cost ${cost:.4f}")
@@ -234,7 +289,7 @@ def cmd_run(args: argparse.Namespace) -> int:
         for topic_id, records in board.items():
             _print(f"\n## {by_id[topic_id].name}")
             for card in records:
-                flag = " [UPDATE]" if card["is_update"] else ""
+                flag = " [UPDATE]" if card["is_update"] else (" [CARRYOVER]" if card.get("is_carryover") else "")
                 _print(f"{card['rank']:>3}. {card['title']}{flag}\n     {card['url']}")
         return EXIT_PARTIAL if failed else EXIT_OK
 

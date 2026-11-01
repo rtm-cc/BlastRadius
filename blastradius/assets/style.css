@@ -470,6 +470,7 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
   text-transform: uppercase;
 }
 .pill-update { background: var(--warning); color: #fff; }
+.pill-carryover { background: var(--surface-hover); color: var(--muted); border: 1px solid var(--border); }
 .sheet-title { margin: .35rem 0 .4rem; font-size: 1.45rem; line-height: 1.25; letter-spacing: -.01em; }
 .sheet-summary { margin: .9rem 0 1rem; color: var(--text-secondary); font-size: 1rem; line-height: 1.6; }
 .sheet-read {
@@ -561,6 +562,18 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
 .panel-empty p { margin: 0; }
 .panel-empty-title { color: var(--foreground); font-weight: 550; margin-bottom: .25rem !important; }
 
+.panel-carryover-note {
+  padding: .65rem .85rem;
+  border: 1px dashed var(--border);
+  border-radius: .5rem;
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.4;
+  margin-bottom: .75rem;
+}
+.panel-carryover-note p { margin: 0; }
+.panel-carryover-title { color: var(--foreground); font-weight: 550; margin-bottom: .15rem !important; }
+
 /* --- cards ---------------------------------------------------------------- */
 
 .card {
@@ -630,6 +643,21 @@ a.credit:hover { color: var(--accent-text); text-decoration: underline; }
   border-radius: 999px;
   background: var(--warning);
   color: #fff;
+  font-size: .625rem;
+  font-weight: 650;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.badge-carryover {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  padding: .1rem .5rem;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
   font-size: .625rem;
   font-weight: 650;
   letter-spacing: .04em;

@@ -113,6 +113,7 @@ class Archive:
         not "already published"."""
         earliest = (date.fromisoformat(today) - timedelta(days=days)).isoformat()
         out: list[Story] = []
+        seen_urls: set[str] = set()
         for day in reversed(self.days()):
             if day >= today:
                 continue
@@ -120,7 +121,13 @@ class Archive:
                 break
             topics = self.load_day(day)
             for topic_id in [topic] if topic is not None else sorted(topics):
-                out += [{**s, "day": day, "topic": topic_id} for s in topics.get(topic_id, [])]
+                for s in topics.get(topic_id, []):
+                    url = s.get("url")
+                    if url and url in seen_urls:
+                        continue
+                    if url:
+                        seen_urls.add(url)
+                    out.append({**s, "day": day, "topic": topic_id})
         return out[:limit]
 
     def tag_counts(self) -> Counter[tuple[str, str]]:

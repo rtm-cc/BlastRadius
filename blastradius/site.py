@@ -77,6 +77,7 @@ def _event(story: Story) -> dict:
         "title": story["title"],
         "url": _safe_url(story["url"]),
         "isUpdate": bool(story.get("is_update")),
+        "isCarryover": bool(story.get("is_carryover")),
         "text": story.get("what_changed") or story.get("summary") or "",
     }
 
@@ -95,6 +96,7 @@ def _card(story: Story, timeline: list[dict], generic_images: set[str]) -> dict:
         "labels": story.get("labels") or [],
         "rationale": story.get("rationale", ""),
         "isUpdate": bool(story.get("is_update")),
+        "isCarryover": bool(story.get("is_carryover")),
         "whatChanged": story.get("what_changed") or "",
         "published": story.get("published"),
         "coverage": [
@@ -120,7 +122,8 @@ def build(config: Config, archive: Archive, generated_at: datetime) -> Path:
     stories = archive.stories()
     clusters: dict[str, list[dict]] = defaultdict(list)
     for story in stories:
-        clusters[story.get("cluster") or story["id"]].append(_event(story))
+        if not story.get("is_carryover"):
+            clusters[story.get("cluster") or story["id"]].append(_event(story))
     for events in clusters.values():
         events.sort(key=lambda e: e["day"])
 
@@ -148,6 +151,7 @@ def build(config: Config, archive: Archive, generated_at: datetime) -> Path:
                     "sources": s.get("sources") or [],
                 }
                 for s in stories
+                if not s.get("is_carryover")
             ]
         ),
     )
@@ -495,7 +499,7 @@ def _rss(
     available_days = sorted({s["day"] for s in stories if s.get("day")})
     feed_days = settings.feed_days if settings.feed_days > 0 else 3
     cutoff_days = set(available_days[-feed_days:])
-    filtered = [s for s in stories if s.get("day") in cutoff_days]
+    filtered = [s for s in stories if s.get("day") in cutoff_days and not s.get("is_carryover")]
     recent_stories = sorted(filtered, key=_story_sort_key, reverse=True)
     items_xml = "\n".join(_rss_item(s, topic_names, generic_images, base_url) for s in recent_stories)
 

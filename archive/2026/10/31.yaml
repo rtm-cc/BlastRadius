@@ -219,7 +219,7 @@ topics:
       Microsoft Teams' external chat feature to impersonate IT support. The lures show up as Teams messages
       or calls from a fake help desk and steer employees into approving remote access or running a malicious
       payload, leading to malware and ransomware.
-    url: https://thehackernews.com/search/label/Phishing
+    url: https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html
     image: https://thehackernews.com/images/-AaptImXE5Y4/WzjvqBS8HtI/AAAAAAAAxSs/BcCIwpWJszILkuEbDfKZhxQJwOAD7qV6ACLcBGAs/s728-e365/the-hacker-news.jpg
     sources:
     - The Hacker News
@@ -237,8 +237,8 @@ topics:
     cluster: 063b3f941ca5
     cluster_key: and-attackers-deploy-malware-microsoft-ransomware-scams-support-teams-use
     coverage:
-    - title: Phishing — Latest News, Reports & Analysis | The Hacker News
-      url: https://thehackernews.com/search/label/Phishing
+    - title: Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware
+      url: https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html
       source: The Hacker News
       published: '2026-10-31T11:08:41.680841+00:00'
     published: '2026-10-31T11:08:41.680841+00:00'
@@ -409,7 +409,7 @@ topics:
       after researchers found a flaw that left more than 1,500 packages vulnerable to hijacking. Maintainers
       who use npm trusted publishing should validate their configurations, audit published package histories,
       and rotate any credentials that may have been exposed.
-    url: https://thehackernews.com/search/label/Supply%20Chain?by-date=false&max-results=20&start=20&updated-max=2026-10-13T23%3A33%3A00%2B05%3A30
+    url: https://thehackernews.com/2026/10/github-tightens-npm-publishing-after.html
     image: https://thehackernews.com/images/-AaptImXE5Y4/WzjvqBS8HtI/AAAAAAAAxSs/BcCIwpWJszILkuEbDfKZhxQJwOAD7qV6ACLcBGAs/s728-e365/the-hacker-news.jpg
     sources:
     - The Hacker News
@@ -425,12 +425,8 @@ topics:
     cluster: ae22874dbbaf
     cluster_key: 500-after-flaw-github-hijacking-left-npm-packages-publishing-tightens-vulnerable
     coverage:
-    - title: Supply Chain — Latest News, Reports & Analysis | The Hacker News
-      url: https://thehackernews.com/search/label/Supply%20Chain?by-date=false&max-results=20&start=20&updated-max=2026-10-13T23%3A33%3A00%2B05%3A30
-      source: The Hacker News
-      published: '2026-10-31T11:08:41.680841+00:00'
-    - title: Supply Chain — Latest News, Reports & Analysis | The Hacker News
-      url: https://thehackernews.com/search/label/Supply%20Chain?by-date=false&m=1&max-results=20&start=20&updated-max=2026-10-13T23%3A33%3A00%2B05%3A30&version=meter%2Bat%2Bnull%3Futm_medium%3Dsidebar
+    - title: GitHub Tightens npm Publishing After Flaw Left 1,500+ Packages Vulnerable to Hijacking
+      url: https://thehackernews.com/2026/10/github-tightens-npm-publishing-after.html
       source: The Hacker News
       published: '2026-10-31T11:08:41.680841+00:00'
     published: '2026-10-31T11:08:41.680841+00:00'
@@ -442,7 +438,7 @@ topics:
       version 0.5.144 contained credential-stealing code. Developers who installed or depend on the package
       should treat it as compromised, audit lockfiles, and rotate any credentials exposed on affected
       systems.
-    url: https://thehackernews.com/search/label/Supply%20Chain?version=meter+at+null
+    url: https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html
     image: https://thehackernews.com/images/-AaptImXE5Y4/WzjvqBS8HtI/AAAAAAAAxSs/BcCIwpWJszILkuEbDfKZhxQJwOAD7qV6ACLcBGAs/s728-e365/the-hacker-news.jpg
     sources:
     - The Hacker News
@@ -458,8 +454,8 @@ topics:
     cluster: 2bf3e90e4212
     cluster_key: compromised-credential-deliver-hulud-npm-package-shai-stealing-tensorlake-worm
     coverage:
-    - title: Supply Chain — Latest News, Reports & Analysis | The Hacker News
-      url: https://thehackernews.com/search/label/Supply%20Chain?version=meter+at+null
+    - title: Tensorlake npm Package Compromised to Deliver Shai-Hulud Credential-Stealing Worm
+      url: https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html
       source: The Hacker News
       published: '2026-10-31T11:08:41.680841+00:00'
     published: '2026-10-31T11:08:41.680841+00:00'

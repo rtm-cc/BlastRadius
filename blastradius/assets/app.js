@@ -255,12 +255,19 @@
     // Focused, the topic is a grid of equal tiles whose details open in a
     // sheet; on the board, each card unfolds its details in place.
     var body = el("div", focus ? "panel-body grid" : "panel-body");
+    var hasOnlyCarryover = stories.length > 0 && stories.every(function (s) { return s.isCarryover; });
+    if (hasOnlyCarryover) {
+      var note = el("div", "panel-carryover-note");
+      note.appendChild(el("p", "panel-carryover-title", "No stories cleared the editorial bar today"));
+      note.appendChild(el("p", null, "Showing latest coverage from previous run:"));
+      body.appendChild(note);
+    }
     if (stories.length) {
       stories.forEach(function (story, i) { body.appendChild(focus ? tile(story, i, day) : card(story, i, day)); });
     } else {
       var empty = el("div", "panel-empty");
       empty.appendChild(el("p", "panel-empty-title", "Nothing published"));
-      empty.appendChild(el("p", null, "No story for this topic cleared the bar that day, or its run failed."));
+      empty.appendChild(el("p", null, "No stories cleared the editorial bar for this topic on this day."));
       body.appendChild(empty);
     }
     section.appendChild(body);
@@ -284,6 +291,7 @@
     }
     box.appendChild(el("span", "rank", String(story.rank)));
     if (story.isUpdate) box.appendChild(el("span", "badge-update", "Update"));
+    if (story.isCarryover) box.appendChild(el("span", "badge-carryover", "Yesterday"));
     return box;
   }
 
@@ -450,13 +458,14 @@
     inner.appendChild(close);
 
     var picture = thumb(story);
-    picture.querySelectorAll(".rank, .badge-update").forEach(function (badge) { badge.remove(); });
+    picture.querySelectorAll(".rank, .badge-update, .badge-carryover").forEach(function (badge) { badge.remove(); });
     inner.appendChild(picture);
 
     var body = el("div", "sheet-body");
     var kicker = el("p", "sheet-kicker");
     kicker.appendChild(el("span", "sheet-topic", topicName(story.topic) + " · #" + story.rank));
     if (story.isUpdate) kicker.appendChild(el("span", "pill pill-update", "Update"));
+    if (story.isCarryover) kicker.appendChild(el("span", "pill pill-carryover", "Yesterday"));
     body.appendChild(kicker);
     body.appendChild(el("h2", "sheet-title", story.title));
     var meta = el("p", "card-meta");
