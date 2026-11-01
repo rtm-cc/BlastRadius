@@ -102,9 +102,9 @@ def _backfill_empty_topics(
     today: str,
     max_days: int = 3,
 ) -> None:
-    """For any enabled topic that has 0 stories after curation and cross-topic
-    review, carry over up to min_items stories from recent archive days
-    (up to max_days back) marked with is_carryover=True.
+    """For any enabled topic that has fewer stories than its min_items quota
+    after curation and cross-topic review, top it up with stories from recent
+    archive days (up to max_days back) marked with is_carryover=True.
     """
     from datetime import date, timedelta
 
@@ -117,10 +117,13 @@ def _backfill_empty_topics(
     for topic in topics:
         if not topic.enabled:
             continue
-        if board.get(topic.id):
+
+        current_stories = board.get(topic.id, [])
+        target_count = max(topic.min_items, 1) if topic.min_items else 3
+        needed = target_count - len(current_stories)
+        if needed <= 0:
             continue
 
-        target_count = max(topic.min_items, 1) if topic.min_items else 3
         carried: list[Story] = []
 
         for past_day in lookback_days:
@@ -131,21 +134,22 @@ def _backfill_empty_topics(
                 if s.get("url") and is_article_url(s["url"]) and not (_story_urls(s) & used_urls)
             ]
             for s in valid_stories:
-                if len(carried) >= target_count:
+                if len(carried) >= needed:
                     break
                 story_copy = dict(s)
-                story_copy["rank"] = len(carried) + 1
+                story_copy["rank"] = len(current_stories) + len(carried) + 1
                 story_copy["is_carryover"] = True
                 story_copy["coverage"] = [c for c in story_copy.get("coverage", []) if is_article_url(c.get("url", ""))]
                 carried.append(story_copy)
                 used_urls.update(_story_urls(story_copy))
 
-            if len(carried) >= target_count:
+            if len(carried) >= needed:
                 break
 
         if carried:
-            board[topic.id] = carried
-            _print(f"  {topic.id}: carried over {len(carried)} story(ies)")
+            board[topic.id] = current_stories + carried
+            action = "carried over" if not current_stories else "topped up"
+            _print(f"  {topic.id}: {action} {len(carried)} story(ies) to reach quota of {target_count}")
 
 
 def cmd_run(args: argparse.Namespace) -> int:

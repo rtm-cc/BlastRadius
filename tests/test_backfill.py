@@ -28,7 +28,7 @@ class BackfillTest(unittest.TestCase):
         self.addCleanup(shutil.rmtree, self.temp_dir)
         self.archive = Archive(self.temp_dir)
 
-    def test_backfills_empty_topic_from_yesterday(self):
+    def test_tops_up_topics_to_meet_min_items_quota(self):
         topic_a = Topic(id="a", name="Topic A", min_items=2)
         topic_b = Topic(id="b", name="Topic B", min_items=2)
 
@@ -55,9 +55,14 @@ class BackfillTest(unittest.TestCase):
 
         _backfill_empty_topics(board, [topic_a, topic_b], self.archive, "2026-11-01")
 
-        # Topic A should remain untouched (not empty)
-        self.assertEqual(len(board["a"]), 1)
+        # Topic A had 1 fresh story, min_items=2 -> topped up with Old A1 to reach 2
+        self.assertEqual(len(board["a"]), 2)
         self.assertFalse(board["a"][0].get("is_carryover", False))
+        self.assertEqual(board["a"][0]["title"], "Fresh A")
+        self.assertEqual(board["a"][0]["rank"], 1)
+        self.assertTrue(board["a"][1]["is_carryover"])
+        self.assertEqual(board["a"][1]["title"], "Old A1")
+        self.assertEqual(board["a"][1]["rank"], 2)
 
         # Topic B was empty, should be backfilled with Old B1
         self.assertEqual(len(board["b"]), 1)
