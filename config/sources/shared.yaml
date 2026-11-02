@@ -70,6 +70,24 @@ sources:
     url: https://www.infosecurity-magazine.com/rss/news/
     notes: ~4/day. Comprehensive reporting on threats, fraud, breaches, and policy.
 
+  - id: help_net_security
+    type: rss
+    name: Help Net Security
+    url: https://www.helpnetsecurity.com/feed/
+    notes: >-
+      ~10/day; the feed holds only its newest 10. Broad, European angle. On
+      2026-11-02, 6 of its 10 stories were not carried by any other source
+      here - the most new coverage of any feed tested - though some are
+      tool and product write-ups the briefs drop.
+
+  - id: cyberscoop
+    type: rss
+    name: CyberScoop
+    url: https://cyberscoop.com/feed/
+    notes: >-
+      ~1.5/day. 8 of its 10 stories in the week to 2026-11-02 were new to
+      this board, including scoops like a China-backed group using an
+      agentic AI pentesting tool. Also carries US politics the briefs drop.
 
   # === Advisories ===========================================================
 
@@ -113,6 +131,33 @@ sources:
     url: https://securelist.com/feed/
     notes: ~1/day, Kaspersky's threat research.
 
+  - id: cisco_talos
+    type: rss
+    name: Cisco Talos
+    url: https://feeds.feedburner.com/feedburner/Talos
+    notes: >-
+      ~1/day. In the week to 2026-11-02, 5 of 6 posts were research no other
+      source here carried (VOLTA infostealer, NIK C2, a Cisco SD-WAN
+      campaign). Full post bodies, about 1 MB per fetch.
+
+  - id: sophos_research
+    type: rss
+    name: Sophos X-Ops
+    url: https://www.sophos.com/en-us/category/threat-research/feed
+    notes: >-
+      A few a week of malware and incident research, high signal: AI-assisted
+      ransomware and an actively exploited Node.js flaw in the week to
+      2026-11-02, 2 of 3 posts new to this board.
+
+  - id: rapid7
+    type: rss
+    name: Rapid7
+    url: https://www.rapid7.com/rss.xml
+    notes: >-
+      ~1/day. The emergent threat response and vulnerability analyses are
+      strong (4 of 5 posts new to this board in the week to 2026-11-02);
+      about half the feed is product content the briefs drop.
+
   - id: eset_welivesecurity
     type: rss
     name: ESET WeLiveSecurity
@@ -131,6 +176,18 @@ sources:
     url: https://rss.beehiiv.com/feeds/xgTKUmMmUm.xml
     notes: A weekly appsec newsletter; each issue is a roundup of links.
 
-  # Considered and left out: three security podcasts
-  # (nothing to read), CVEMon (bare CVE ids, no context), the Google Online
-  # Security Blog (dormant), AWS Security, Semgrep and Rhino (vendor blogs).
+  # Considered and left out. Measured over the week to 2026-11-02 against
+  # this board's own sources, so nobody has to test them again:
+  #   Already covered    Ars Technica, CISA ICS (inside cisa_advisories),
+  #                      Check Point Research - next to nothing new.
+  #   Noise              ZDI published advisories (~5/day of bare advisories;
+  #                      the ZDI blog is in vulnerabilities.yaml), Cloudflare,
+  #                      AWS Security, Proofpoint (product posts), OpenAI news
+  #                      (corporate), Hunton (US state privacy law).
+  #   Dead or empty      Semgrep (404), Group-IB (nothing in a week), NCSC UK,
+  #                      Google Safety & Security (consumer tips).
+  #   Not worth testing  three security podcasts (nothing to read), CVEMon
+  #                      (bare CVE ids, no context), the MSRC update guide
+  #                      (~50 raw CVE entries a day), CISA Alerts (a subset
+  #                      of cisa_advisories), the Google Online Security Blog
+  #                      (dormant), Rhino Security Labs (vendor blog).
