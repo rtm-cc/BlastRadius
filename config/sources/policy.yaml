@@ -14,6 +14,15 @@ sources:
     url: https://digital-strategy.ec.europa.eu/en/rss.xml
     notes: NIS2, Cyber Resilience Act and AI Act milestones, with some unrelated digital policy.
 
+  - id: noyb
+    type: rss
+    name: noyb
+    url: https://noyb.eu/en/rss
+    notes: >-
+      GDPR complaints and enforcement, often ahead of the official channels;
+      a few a week, none of it carried elsewhere (e.g. Fnac Darty fined EUR 7
+      million, 2026-11-02). The feed is large, about 2.4 MB.
+
   - id: web_policy
     type: web_search
     name: "Web search: policy and enforcement"

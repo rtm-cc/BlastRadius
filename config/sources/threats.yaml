@@ -14,6 +14,21 @@ sources:
     url: https://thedfirreport.com/feed/
     notes: In-depth end-to-end incident response intrusion cases from initial access to ransomware execution.
 
+  - id: huntress
+    type: rss
+    name: Huntress
+    url: https://www.huntress.com/blog/rss.xml
+    notes: >-
+      ~1/day. Incident write-ups no other source here carried in the week to
+      2026-11-02 (MDM abused for remote access, the ConnectWise attack),
+      mixed with marketing the brief drops.
+
+  - id: recorded_future
+    type: rss
+    name: Recorded Future (Insikt Group)
+    url: https://www.recordedfuture.com/feed
+    notes: Rare - one post in the week to 2026-11-02 - but distinctive criminal ecosystem analysis.
+
   - id: web_threats
     type: web_search
     name: "Web search: active threats"
