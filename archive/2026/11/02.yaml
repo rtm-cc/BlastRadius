@@ -1,0 +1,666 @@
+date: '2026-11-02'
+updated_at: '2026-11-02T07:08:23+00:00'
+topics:
+  ai_security:
+  - id: 6b52a61eb74d
+    rank: 1
+    title: Security Flaws Found in Five Popular AI Coding Tools, Including OpenAI Codex
+    summary: A report from THE ELEC says researchers found security vulnerabilities in five widely used
+      AI coding tools, including OpenAI Codex. The findings add to a growing body of demonstrated weaknesses
+      in AI-assisted development environments, where flaws could expose code, sessions, or execution environments
+      to attackers. The available summary does not include affected versions, exploit status, or patch
+      guidance.
+    url: https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1tRE9yNW1ZVG01dG9vc2RqOUpIM0tubnhqNHBmVXU3aDFyTGtMUmZiS1duTlRNbklqenFaRzJmaEpzbV9wMWN1VWl6RzdJRF9qNy1CUkFFV2FOcDg5Nmc0cHljSGFSaHc
+    image: ''
+    sources:
+    - THE ELEC, Korea Electronics Industry Media
+    - The Robot Report
+    labels:
+    - AI security research
+    - vulnerability research
+    - AI agents
+    rationale: New reported vulnerabilities in popular AI coding assistants, directly relevant to AI system
+      security.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6b52a61eb74d
+    cluster_key: codex-coding-five-flaws-found-including-openai-popular-security-tools
+    coverage:
+    - title: Security Flaws Found in Five Popular AI Coding Tools, Including OpenAI Codex
+      url: https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1tRE9yNW1ZVG01dG9vc2RqOUpIM0tubnhqNHBmVXU3aDFyTGtMUmZiS1duTlRNbklqenFaRzJmaEpzbV9wMWN1VWl6RzdJRF9qNy1CUkFFV2FOcDg5Nmc0cHljSGFSaHc
+      source: THE ELEC, Korea Electronics Industry Media
+      published: '2026-11-02T01:23:27+00:00'
+    - title: '28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Robotics'
+      url: https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbExiSmZLZGxsbHBOemJ6bVNiWDdWaUd2dlcyVmJqOGZNaHFlSFZyNlB1SEVXMzZyZE5qOWk5VXp0bnhVNTg2YTNfN3hGMThzQnVfZWNvWG1LcFBiTkNXcWREMHVDTlNBaFZ6RFJDSTQ0NGhpQ21VSTdleG1IcUQwNkxtR1NtR1VScHJuaHp4c0s5S3RuRTFRdDFSbURPZ1NodndvLXF4b2VSZGd4Wk81cHR6V2JHLVdW
+      source: The Robot Report
+      published: '2026-11-01T14:07:36+00:00'
+    published: '2026-11-02T01:23:27+00:00'
+  - id: 4b7dfb1e7c6f
+    rank: 2
+    title: Silicon Valley Is Grappling With a Flood of Bugs Found by A.I.
+    summary: The New York Times reports that AI systems are producing a flood of vulnerability findings,
+      straining how software companies triage, verify, and patch bugs discovered at machine speed. The
+      piece highlights the growing role of AI in security research and the operational pressure it creates
+      for vendors as models surface far more potential flaws than human teams can quickly assess.
+    url: https://news.google.com/rss/articles/CBMifkFVX3lxTE1YaHMzZ0xHaXZJclUyQTNaV21kT28yQVNMWk1oaTNENVZQUkFzSjJWTllSMVdKM1dKZU1kUGpHTnBRTUp5czRSS2h5ZUg2ZlJ2cE9adDhOaWRhN1MyaENXazlvWm8zMnhuOFZzQ0F1SkVLMnIwb0hKTzNmY1VSUQ
+    image: ''
+    sources:
+    - The New York Times
+    labels:
+    - AI security research
+    - vulnerability research
+    rationale: Major coverage of the industry-wide impact of AI-driven vulnerability discovery.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4b7dfb1e7c6f
+    cluster_key: bugs-flood-found-grappling-silicon-valley-with
+    coverage:
+    - title: Silicon Valley Is Grappling With a Flood of Bugs Found by A.I.
+      url: https://news.google.com/rss/articles/CBMifkFVX3lxTE1YaHMzZ0xHaXZJclUyQTNaV21kT28yQVNMWk1oaTNENVZQUkFzSjJWTllSMVdKM1dKZU1kUGpHTnBRTUp5czRSS2h5ZUg2ZlJ2cE9adDhOaWRhN1MyaENXazlvWm8zMnhuOFZzQ0F1SkVLMnIwb0hKTzNmY1VSUQ
+      source: The New York Times
+      published: '2026-11-01T23:13:35+00:00'
+    published: '2026-11-01T23:13:35+00:00'
+  - id: 8e738ceb125b
+    rank: 3
+    title: AI Just Helped Jailbreak the Switch 2, and This Could Be Only the Beginning
+    summary: MakeUseOf reports that AI played a role in jailbreaking the Nintendo Switch 2, a milestone
+      for AI-assisted exploitation of consumer hardware. Researchers used AI to help find or chain flaws
+      in the console's defenses, highlighting how the same techniques are lowering the barrier to discovering
+      exploits in consumer devices.
+    url: https://news.google.com/rss/articles/CBMiowFBVV95cUxQR0loQWlHYVMwNXRuN2FlSkVLeDNyQjFRdkUzb2F5d08xVUJBMDNaMzlpdFFzeEtGV1kzWXJCWUJwaXhaMWZzdTlSMk92S01ESWVWblhSUlhKN2FhdUZ3dDdiSEotLU9ZVFlJRUg0eHh5NjVYSTlLbHpXRkVJRHZwRF9tTW5nX1hoWmNLb0hJZFNCb0JpZ2hKVklKSElXazMtVXpZ
+    image: ''
+    sources:
+    - MakeUseOf
+    labels:
+    - AI security research
+    - vulnerability research
+    rationale: Concrete example of AI-assisted exploit development against a consumer hardware target.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8e738ceb125b
+    cluster_key: and-beginning-could-helped-jailbreak-just-only-switch-the-the-this
+    coverage:
+    - title: AI just helped jailbreak the Switch 2, and this could be only the beginning
+      url: https://news.google.com/rss/articles/CBMiowFBVV95cUxQR0loQWlHYVMwNXRuN2FlSkVLeDNyQjFRdkUzb2F5d08xVUJBMDNaMzlpdFFzeEtGV1kzWXJCWUJwaXhaMWZzdTlSMk92S01ESWVWblhSUlhKN2FhdUZ3dDdiSEotLU9ZVFlJRUg0eHh5NjVYSTlLbHpXRkVJRHZwRF9tTW5nX1hoWmNLb0hJZFNCb0JpZ2hKVklKSElXazMtVXpZ
+      source: MakeUseOf
+      published: '2026-11-01T22:01:16+00:00'
+    published: '2026-11-01T22:01:16+00:00'
+  breaches:
+  - id: 28c7f48ea01e
+    rank: 1
+    title: Alpine Linux rebuilds GitLab after attempted RCE attack
+    summary: Alpine Linux said attackers attempted to exploit a critical GitLab vulnerability in its development
+      infrastructure on October 20-21. Over concerns of a possible compromise, the project rebuilt its
+      GitLab server and reset all passwords. No data theft has been confirmed, but the incident highlights
+      the risk of attacks on open-source development infrastructure.
+    url: https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/30/alpine-linux.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - supply-chain
+    - ci-cd
+    - remote code execution
+    rationale: Security incident at a named open-source project's GitLab infrastructure, with rebuild
+      and password resets as a precaution; not previously covered.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 28c7f48ea01e
+    cluster_key: after-alpine-attack-attempted-gitlab-linux-rce-rebuilds
+    coverage:
+    - title: Alpine Linux rebuilds GitLab after attempted RCE attack
+      url: https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack
+      source: BleepingComputer
+      published: '2026-11-01T15:11:21+00:00'
+    published: '2026-11-01T15:11:21+00:00'
+  - id: 788be3cf4c72
+    rank: 2
+    title: Northflank Security Breach Leads to Abuse of Customers' AI API Keys
+    summary: Cloud application hosting platform Northflank is warning customers to rotate all credentials
+      and secrets stored on its platform after a security breach led to unauthorized use of customers'
+      AI API keys. The company is notifying affected users, and anyone who stored API keys or other secrets
+      on Northflank should rotate them immediately and monitor for unauthorized usage.
+    url: https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/31/northflank-header.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - data breach
+    - exposed credentials
+    rationale: New breach disclosure at a named cloud hosting provider with direct customer action required;
+      not previously published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 788be3cf4c72
+    cluster_key: abuse-api-breach-customers-keys-leads-northflank-security
+    coverage:
+    - title: Northflank security breach leads to abuse of customers' AI API keys
+      url: https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys
+      source: BleepingComputer
+      published: '2026-10-31T18:01:12+00:00'
+    published: '2026-10-31T18:01:12+00:00'
+    is_carryover: true
+  - id: df71def910fa
+    rank: 3
+    title: Binance links $6.3B crypto theft to compromised DevOps laptop
+    summary: Binance now says the record-setting theft of about $6.3 billion in digital assets began with
+      a compromised DevOps engineer's laptop, which let the attacker access a service container and submit
+      unauthorized withdrawal transactions. Multiple blockchain-tracing firms suspect North Korea's TraderTraitor
+      group and report the heist was carried out in about 20 minutes; nearly $3 billion has been frozen
+      on-chain so far.
+    url: https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/30/Binance.jpg
+    sources:
+    - BleepingComputer
+    - binance.com
+    - Malwarebytes
+    - WIRED Security
+    labels:
+    - data breach
+    - cryptocurrency
+    - North Korea
+    rationale: Official Binance update adds root-cause and attribution details to the already-published
+      Binance incident, making it a material update.
+    is_update: true
+    supersedes: f7e0074ade36
+    what_changed: Binance identified a compromised DevOps laptop as the entry point, and blockchain analysts
+      linked the heist to North Korea's TraderTraitor.
+    cluster: f7e0074ade36
+    cluster_key: binance-compromised-crypto-devops-laptop-links-theft
+    coverage:
+    - title: Binance links $6.3 billion crypto theft to compromised DevOps laptop
+      url: https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop
+      source: BleepingComputer
+      published: '2026-10-30T09:18:13+00:00'
+    - title: Security Incident Update (2026-10-30) | Binance Announcements, Binance News
+      url: https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7
+      source: binance.com
+      published: '2026-10-31T11:08:41.680841+00:00'
+    - title: Binance hit by largest-ever crypto theft, with $6.3 billion stolen
+      url: https://www.malwarebytes.com/blog/news/2026/10/binance-hit-by-largest-ever-crypto-theft-with-6-3-billion-stolen
+      source: Malwarebytes
+      published: '2026-10-30T12:24:19+00:00'
+    - title: The $6.3 Billion Binance Hack Was Pulled Off in Just 20 Minutes
+      url: https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes
+      source: WIRED Security
+      published: '2026-10-30T11:36:52+00:00'
+    published: '2026-10-30T09:18:13+00:00'
+    is_carryover: true
+  fraud_phishing:
+  - id: 55726a391cef
+    rank: 1
+    title: Sublime Security on the Rise of Calendar-Based Phishing
+    summary: A Risky Business sponsor interview with Sublime Security's Luke Wescott highlights the growth
+      of calendar-based phishing over the past year. Attackers use calendar invitations and .ics files
+      to reach inboxes, a vector that can bypass traditional email defenses and push recipients toward
+      credential-harvesting pages or malicious attachments. The interview frames the calendar invite as
+      the lure users should scrutinize before clicking.
+    url: https://risky.biz/RBNEWSSI149
+    image: https://risky.biz/static/img/RB-OG-Social.jpg
+    sources:
+    - Risky Business News
+    labels:
+    - phishing
+    - social engineering
+    rationale: 'Directly covers a phishing and social-engineering vector aimed at recipients, with a recognizable
+      lure: calendar invites and .ics files.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 55726a391cef
+    cluster_key: based-calendar-phishing-rise-security-sublime-the
+    coverage:
+    - title: 'Sponsored: Sublime Security on the rise of ISC calendar phishing'
+      url: https://risky.biz/RBNEWSSI149
+      source: Risky Business News
+      published: '2026-11-01T19:27:05+00:00'
+    published: '2026-11-01T19:27:05+00:00'
+  - id: 1c43eb1161a5
+    rank: 2
+    title: Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware
+    summary: Researchers highlight a recurring pattern across hundreds of cases in which attackers abuse
+      Microsoft Teams' external chat feature to impersonate IT support. The lures show up as Teams messages
+      or calls from a fake help desk and steer employees into approving remote access or running a malicious
+      payload, leading to malware and ransomware.
+    url: https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html
+    image: https://thehackernews.com/images/-AaptImXE5Y4/WzjvqBS8HtI/AAAAAAAAxSs/BcCIwpWJszILkuEbDfKZhxQJwOAD7qV6ACLcBGAs/s728-e365/the-hacker-news.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - Microsoft Teams phishing
+    - help desk scam
+    - social engineering
+    rationale: 'Directly matches the fraud/phishing brief: a current, broad look at fake Teams help desk
+      social engineering and the lures used to deploy malware and ransomware.'
+    is_update: true
+    supersedes: 063b3f941ca5
+    what_changed: 'New analysis broadens the earlier Black Basta-linked email-bombing story: the same
+      Teams help desk technique is described as a recurring pattern across hundreds of cases, with emphasis
+      on abuse of Teams'' external chat feature.'
+    cluster: 063b3f941ca5
+    cluster_key: and-attackers-deploy-malware-microsoft-ransomware-scams-support-teams-use
+    coverage:
+    - title: Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware
+      url: https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html
+      source: The Hacker News
+      published: '2026-10-31T11:08:41.680841+00:00'
+    published: '2026-10-31T11:08:41.680841+00:00'
+    is_carryover: true
+  - id: f9686e79a3ac
+    rank: 3
+    title: Behind the Scenes of How Operation Blackout Went Down
+    summary: Dark Reading reviews Operation Blackout, a recent law enforcement operation that dismantled
+      harmful scam centers. A threat intelligence expert explains how the operation unfolded and calls
+      for more coordinated takedowns of scam-center infrastructure.
+    url: https://www.darkreading.com/cybersecurity-operations/behind-the-scenes-how-operation-blackout-went-down
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blted8eeb1e23f7df84/6ae3bbdee7e856ef65896aec/GettyImages-1294781573.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - scam centers
+    - law enforcement
+    - takedown
+    rationale: Relevant to fraud and phishing because it covers enforcement action against scam centers
+      actively involved in phishing, investment fraud, and social engineering schemes.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f9686e79a3ac
+    cluster_key: behind-blackout-down-how-operation-scenes-the-went
+    coverage:
+    - title: Behind the Scenes of How Operation Blackout Went Down
+      url: https://www.darkreading.com/cybersecurity-operations/behind-the-scenes-how-operation-blackout-went-down
+      source: Dark Reading
+      published: '2026-10-30T19:46:08+00:00'
+    published: '2026-10-30T19:46:08+00:00'
+    is_carryover: true
+  policy:
+  - id: 8b3da1dc273f
+    rank: 1
+    title: FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist
+    summary: The FBI, together with the U.S. Secret Service and IRS-CI, officially attributed the theft
+      of more than $6 billion in virtual assets from Binance to TraderTraitor, a North Korea-aligned hacking
+      group also tracked as Jade Sleet, Pressure Chollima, PUKCHONG, Slow Pisces, and UNC4899. The confirmation
+      makes the Binance incident the largest cryptocurrency heist on record and establishes state involvement
+      in the attack.
+    url: https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmb1j0HC3RkKxZ4bBQPaOa5GaLqC2EBtxXHOMnebPlgHGDJG7ryIuSBIR-9YBQuUm6HwD15-OJQgBvIkhbLIApM8XoU0DptSEF6DNhEpinxPA-06wQZhLhRiKmFGO5cVjONcaouGC3lqybhkeEsZj-xebX6u6hSR19mS7sVqOrpR02qNOlpHZJEUjf1HtB/s1600/binance-hack.png
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    - Risky Business News
+    labels:
+    - North Korea
+    - cryptocurrency
+    - law enforcement
+    rationale: Official FBI attribution is a law-enforcement determination that materially advances the
+      previously reported Binance theft, changing the story from suspected to confirmed state-sponsored
+      involvement.
+    is_update: true
+    supersedes: df71def910fa
+    what_changed: The FBI, U.S. Secret Service, and IRS-CI officially attributed the attack to North Korea's
+      TraderTraitor group, confirming state sponsorship and adding the largest crypto heist on record
+      to North Korea's known operations.
+    cluster: f7e0074ade36
+    cluster_key: billion-binance-crypto-fbi-heist-korea-links-north-record-tradertraitor
+    coverage:
+    - title: FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist
+      url: https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html
+      source: The Hacker News
+      published: '2026-11-01T07:03:00+00:00'
+    - title: FBI links $6.3 billion Binance crypto heist to North Korean hackers
+      url: https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers
+      source: BleepingComputer
+      published: '2026-11-01T19:57:53+00:00'
+    - title: FBI confirms North Korea behind Binance hack
+      url: https://risky.biz/RBNEWS628
+      source: Risky Business News
+      published: '2026-11-02T02:08:33+00:00'
+    published: '2026-11-01T07:03:00+00:00'
+  - id: 4c952fbd89a7
+    rank: 2
+    title: Syrian Hacker Gets Prison Time in US After Over a Decade on the Run
+    summary: SecurityWeek reports that Syrian hacker Ahmad Umar Agha was sentenced to 42 months in a US
+      court for pro-Assad attacks on media, businesses, and government entities. The report adds that
+      he had been on the run for more than a decade before the sentencing.
+    url: https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run
+    image: https://www.securityweek.com/wp-content/uploads/2024/03/hacker-sentenced-prison.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - sentencing
+    - law enforcement
+    - cybercrime
+    rationale: Update to the already-published Syrian Electronic Army sentencing story, adding the new
+      detail that Agha was a fugitive for over a decade before being sentenced.
+    is_update: true
+    supersedes: 1e6c98e49cf1
+    what_changed: SecurityWeek's report adds that Agha was a fugitive for more than a decade before the
+      US sentencing.
+    cluster: 1e6c98e49cf1
+    cluster_key: after-decade-gets-hacker-over-prison-run-syrian-the-time
+    coverage:
+    - title: Syrian Hacker Gets Prison Time in US After Over a Decade on the Run
+      url: https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run
+      source: SecurityWeek
+      published: '2026-10-31T11:00:00+00:00'
+    published: '2026-10-31T11:00:00+00:00'
+    is_carryover: true
+  - id: 3301680a66d6
+    rank: 3
+    title: DOJ raises privacy concerns over potential sale of Character.AI chats
+    summary: The DOJ's Executive Office for U.S. Trustees told the court handling Character.AI that a
+      consumer privacy ombudsman is needed to decide what chat data may be sold and under what terms.
+      The filing pushes for safeguards on users' AI conversation data ahead of any sale.
+    url: https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale
+    image: http://cms.therecord.media/uploads/getty_images_Pb_U6_Gd8fp40_unsplash_af7822dfbc.jpg
+    sources:
+    - The Record
+    labels:
+    - data protection
+    - AI assistant
+    rationale: A formal U.S. government privacy intervention in a data-sale process, relevant to data
+      protection obligations and precedent-setting oversight.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3301680a66d6
+    cluster_key: character-chats-concerns-doj-over-potential-privacy-raises-sale
+    coverage:
+    - title: DOJ raises privacy concerns over potential sale of Character.AI chats
+      url: https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale
+      source: The Record
+      published: '2026-10-30T20:45:00+00:00'
+    published: '2026-10-30T20:45:00+00:00'
+    is_carryover: true
+  supply_chain:
+  - id: e41970bb5a4c
+    rank: 1
+    title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+    summary: Attackers compromised two legitimate MemTensor packages on npm and PyPI and used them to
+      distribute sckit, a Go-based credential stealer that runs on Windows, Linux, and macOS. Developers
+      who installed or depend on the affected packages should treat them as compromised, audit lockfiles
+      and installed artifacts, and rotate any credentials or tokens stored on affected systems.
+    url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFThFSFsti-2SIka75bNuMKpyJHtOW2ZPrZtcSjbjFQ64GCNn0WtdssYuWlVTbhaLB5cAJ0vu8FgyNmNsDa8g0Ijy-D1zP4FW7ihVfAjk9xWMYDMMdfZPICGyVdjeDwH3-jyKLHOUnjfaXBJIMxGn_3ngeXFsbb4CLnOibRd4fbwXHYpBkMQTcBQAf0edq/s1600/npm-pypi.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - malicious-package
+    - npm
+    - pypi
+    - supply chain
+    rationale: Direct software supply-chain compromise of legitimate npm/PyPI packages affecting developers
+      on three OSes; downstream users need concrete steps to check and rotate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e41970bb5a4c
+    cluster_key: and-compromised-credential-deliver-memtensor-npm-packages-pypi-sckit-stealer-via
+    coverage:
+    - title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+      url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+      source: The Hacker News
+      published: '2026-11-02T07:03:55.662129+00:00'
+    published: '2026-11-02T07:03:55.662129+00:00'
+  - id: 3ad00420fedf
+    rank: 2
+    title: Hackers Target 61 GitHub Repositories With Command Injection Attacks to Steal CI/CD Secrets
+    summary: Radware found 83 malicious issues, pull requests, and comments posted across 61 public GitHub
+      repositories on September 1, 2026, with injected commands executing inside at least two GitHub Actions
+      workflows. Maintainers should review project discussions from that date, audit workflow execution
+      logs, rotate CI/CD secrets that may have been exposed, and tighten permissions on issue- and PR-driven
+      workflows.
+    url: https://cybersecuritynews.com/hackers-target-61-github-repositories
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/10/Hackers-Target-61-GitHub-Repositories-With-Command-Injection-Attacks-to-Steal-CI_CD-Secrets.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - ci-cd
+    - supply chain
+    - github
+    rationale: Attack on open-source development infrastructure aimed at stealing CI/CD secrets; gives
+      a concrete incident date and audit steps for affected repositories.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3ad00420fedf
+    cluster_key: attacks-command-github-hackers-injection-repositories-secrets-steal-target-with
+    coverage:
+    - title: Hackers Target 61 GitHub Repositories With Command Injection Attacks to Steal CI/CD Secrets
+      url: https://cybersecuritynews.com/hackers-target-61-github-repositories
+      source: Cybersecurity News
+      published: '2026-11-02T04:21:41+00:00'
+    published: '2026-11-02T04:21:41+00:00'
+  - id: f1e312cea6d8
+    rank: 3
+    title: Polymarket Refunds $2.7M to 726 Wallets After DebugBear Script Hijack
+    summary: Polymarket said malicious code that replaced a page-speed script from third-party provider
+      DebugBear sold some signed-in traders' positions and moved their funds on October 29. The company
+      says it is refunding about $2.7 million to 726 affected wallets, updating earlier reporting that
+      put the loss at roughly $2.5 million.
+    url: https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhe0B28qLAtUMfqN29_phxZJVJORICkj_98MZFwDiXAxFTABw8G9qbsVyD98pg7T_Rvgv83NXyR5tNGYH4dRwlxs3QFTUZxDPHQs2BgFsnmGcOuVW1HkFVCfiCR3Y05kPQrfFx4S7A8DiFXXAAgdc5SiEKx0-0xrW5rNlNSyN3jZJcyXasdpCr5AG7KM3s/s1600/Polymarket.jpg
+    sources:
+    - The Hacker News
+    - Instagram
+    labels:
+    - third-party-script
+    - supply chain
+    - cryptocurrency
+    rationale: Follow-up on the third-party script compromise at Polymarket, adding the DebugBear script
+      name and revised refund figures; same event as the previously published Polymarket supply-chain
+      story.
+    is_update: true
+    supersedes: 03e7a3726860
+    what_changed: New reporting names the hijacked third-party script as DebugBear and puts refunds at
+      about $2.7 million across 726 wallets, up from the roughly $2.5 million initially reported.
+    cluster: 03e7a3726860
+    cluster_key: 726-after-debugbear-hijack-polymarket-refunds-script-wallets
+    coverage:
+    - title: Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script
+      url: https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html
+      source: The Hacker News
+      published: '2026-11-01T07:25:40+00:00'
+    - title: 'Ron Trotto on Instagram: "In today''s cybersecurity update for November 1st, 2026, small
+        business owners face several critical security threats: Canonical patched a maximum severity 10.0
+        flaw in LXD and MicroCloud allowing attackers to impersonate trusted clients and gain full cluster
+        access using only public certificates, with fixes released October 30th. An invisible SMS of Death
+        attack can crash Android phones and block all calls including emergency services by corrupting
+        phone memory, with no patch timeline yet available. Amadeus reservation platform breach affected
+        Malaysia Airlines, Cathay Pacific, Japan Airlines, and Asiana customers, exposing names, contact
+        information, and booking details for at least 145,000 customers. Japan faces a wave of AI-powered
+        cyberattacks affecting 216 companies, with attackers using artificial intelligence to speed reconnaissance,
+        craft better phishing, and move faster inside networks. Hackers stole approximately $2.7 million
+        from Polymarket traders by hijacking a third-party DebugBear performance monitoring script that
+        the site loaded, injecting malicious code that drained cryptocurrency wallets when users interacted
+        with the compromised page. #Cybersecurity #SmallBusiness #DataBreach #AndroidSecurity #GitLab"'
+      url: https://www.instagram.com/reel/DfNMaU4Ffm_
+      source: Instagram
+      published: '2026-11-02T07:03:55.662129+00:00'
+    published: '2026-11-01T07:25:40+00:00'
+  threats:
+  - id: a46e5b2bfea3
+    rank: 1
+    title: BTCPay Server Urges Operators to Shut Down as Bitcoin Hot Wallets Are Drained
+    summary: BTCPay Server issued an urgent November 1 notice telling operators to shut down and keep
+      installations offline after reports that attackers were draining Bitcoin hot wallets on its servers.
+      The open-source payment processor is investigating; merchants holding funds in managed wallets face
+      immediate risk.
+    url: https://cybersecuritynews.com/btcpay-server-warns
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/BTCPay-Server-Warns-.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - cryptocurrency
+    - cybercrime
+    rationale: Active, ongoing thefts affecting Bitcoin payment infrastructure with urgent defensive action
+      required.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a46e5b2bfea3
+    cluster_key: are-bitcoin-btcpay-down-drained-hot-operators-server-shut-urges-wallets
+    coverage:
+    - title: Hackers Drain Bitcoin Hot Wallets on BTCPay Servers, Users Urged to Shut Down Immediately
+      url: https://cybersecuritynews.com/btcpay-server-warns
+      source: Cybersecurity News
+      published: '2026-11-02T04:04:55+00:00'
+    published: '2026-11-02T04:04:55+00:00'
+  - id: bab9ac4c52cc
+    rank: 2
+    title: Pro-Ukraine Group VantaCore Deploys Custom Ransomware Against Russian Companies
+    summary: New research from Russian security firm F6 describes VantaCore, a ransomware group believed
+      linked to pro-Ukrainian hackers that has hit at least seven Russian organizations with custom malware
+      and multimillion-dollar ransom demands.
+    url: https://therecord.media/new-pro-ukraine-hacker-group-custom-ransomware-russia
+    image: https://cms.therecord.media/uploads/Andrew_P_48cc28d4aa.jpg
+    sources:
+    - therecord.media
+    labels:
+    - ransomware
+    - targeted attacks
+    rationale: New ransomware operation with custom malware and confirmed victims, giving defenders indicators
+      to track.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bab9ac4c52cc
+    cluster_key: against-companies-custom-deploys-group-pro-ransomware-russian-ukraine-vantacore
+    coverage:
+    - title: New pro-Ukraine hacker group targets Russian companies with custom ransomware
+      url: https://therecord.media/new-pro-ukraine-hacker-group-custom-ransomware-russia
+      source: therecord.media
+      published: '2026-11-02T07:03:55.662129+00:00'
+    - title: Pro-Ukraine Hacking Cat group deploying new malware against Russian targets
+      url: https://therecord.media/ukraine-malware-russia-ransomware
+      source: therecord.media
+      published: '2026-11-02T07:03:55.662129+00:00'
+    published: '2026-11-02T07:03:55.662129+00:00'
+  - id: 87dc1a239779
+    rank: 3
+    title: Volta-Autodoxer Infostealer Uses AI to 'Autodox' Victims
+    summary: Researchers uncovered a new infostealer called Volta-Autodoxer that uses AI tools to compile
+      detailed dossiers on victims, harvesting login credentials, credit card numbers, Discord sessions,
+      and even UberEats receipts. The malware reflects a growing trend of AI-assisted data collection
+      in credential-theft campaigns.
+    url: https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware
+    image: https://media.wired.com/photos/6ae4e9f503c2c36f4cfc913c/master/pass/KernelPanic_10312026_v1.jpg
+    sources:
+    - WIRED Security
+    labels:
+    - infostealer
+    - AI cybercrime
+    - malware
+    rationale: Newly uncovered AI-assisted infostealer family that targets victim credentials and personal
+      data; fits the Active Threats mandate for new malware families, with clear defensive relevance for
+      credential and session monitoring.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 87dc1a239779
+    cluster_key: autodox-autodoxer-infostealer-uses-victims-volta
+    coverage:
+    - title: Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims
+      url: https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware
+      source: WIRED Security
+      published: '2026-10-31T12:00:00+00:00'
+    published: '2026-10-31T12:00:00+00:00'
+    is_carryover: true
+  vulnerabilities:
+  - id: 20ab5c6fd5db
+    rank: 1
+    title: CVSS 10.0 LXD, MicroCloud and Incus Flaw Lets Attackers Impersonate Trusted Clients
+    summary: A critical certificate validation flaw in the HTTPS management listener of Canonical LXD/MicroCloud
+      and Incus lets a remote attacker log in as a trusted client without holding its private key, gaining
+      access to the cluster and its virtual machines. Incus rates the issue CVSS 10.0 and published an
+      advisory on October 29; apply available updates.
+    url: https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4Vibbj3miGalyf0avn_Z2WlLhFh5cC5ImXGFlOL0cisgxikHCcLzHjOVM3qO5B47V3uw62rWH6m6fP1svsH3TCG6i9sS19BIXn1CsDjKK3gnG6VQxkFwghemdeBlV4_AM5Ah-_TJ3T_5Gv-D5Pygrm-B5yzQnDqvIXmI2FyAeuzk57_l6esdhNrTMBj0/s1600/linux-vm.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - vulnerability
+    - certificate trust
+    - authentication
+    rationale: Maximum-severity certificate validation flaw in widely used container management software;
+      key patch-action item for Linux operators.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 20ab5c6fd5db
+    cluster_key: and-attackers-clients-cvss-flaw-impersonate-incus-lets-lxd-microcloud-trusted
+    coverage:
+    - title: CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private
+        Key
+      url: https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html
+      source: The Hacker News
+      published: '2026-11-01T08:51:31+00:00'
+    - title: Critical Certificate Validation Flaw in LXD and Incus Could Give Hackers Control of Linux
+        Hosts
+      url: https://cybersecuritynews.com/certificate-validation-flaw-in-lxd-and-incus
+      source: Cybersecurity News
+      published: '2026-11-02T02:45:51+00:00'
+    published: '2026-11-01T08:51:31+00:00'
+  - id: f9542314014d
+    rank: 2
+    title: TightVNC Viewer Pre-Auth RCE Lets Attackers Execute Code on Windows PCs
+    summary: Researchers released a proof-of-concept for a pre-authentication remote code execution in
+      TightVNC Viewer 2.8.88 x64 that can be triggered by a malicious VNC server before the password prompt.
+      The flaw is in the viewer and requires network access to a viewer in Listening Mode or similar reachability;
+      users should check for patched TightVNC releases.
+    url: https://cybersecuritynews.com/tightvnc-pre-auth-rce-vulnerability
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/10/TightVNC-Pre-Auth-RCE-Vulnerability-Lets-Hackers-Execute-Code-on-Windows-PCs-PoC-Released.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - vulnerability
+    - remote code execution
+    rationale: Client-side pre-auth RCE in a widely used remote-desktop tool with public PoC; relevant
+      patch-action item despite no confirmed in-the-wild exploitation.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f9542314014d
+    cluster_key: attackers-auth-code-execute-lets-pcs-pre-rce-tightvnc-viewer-windows
+    coverage:
+    - title: TightVNC Pre-Auth RCE Vulnerability Lets Hackers Execute Code on Windows PCs, PoC Released
+      url: https://cybersecuritynews.com/tightvnc-pre-auth-rce-vulnerability
+      source: Cybersecurity News
+      published: '2026-11-02T04:26:12+00:00'
+    published: '2026-11-02T04:26:12+00:00'
+  - id: 7ae60e256ff7
+    rank: 3
+    title: Android 'SMS of Death' CVE-2026-58882 PoC can crash unpatched phones
+    summary: A public proof-of-concept exploit is available for CVE-2026-58882, a recently patched Android
+      vulnerability dubbed 'SMS of Death.' A specially crafted text message can remotely crash unpatched
+      phones or disrupt cellular service. Users should install the latest Android security update to mitigate
+      the flaw.
+    url: https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones
+    image: https://www.bleepstatic.com/content/hl-images/2024/01/31/image_(2).jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - Android
+    - vulnerability
+    - CVE-2026-58882
+    rationale: 'Directly relevant to the Vulnerabilities & Patches topic: a named Android CVE with a public
+      PoC, a clear crash/DoS impact, and an available fix. It was not previously published on the board.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7ae60e256ff7
+    cluster_key: 2026-58882-android-can-crash-cve-death-phones-poc-sms-unpatched
+    coverage:
+    - title: New Android SMS of Death exploit can remotely crash unpatched phones
+      url: https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones
+      source: BleepingComputer
+      published: '2026-10-31T15:35:11+00:00'
+    published: '2026-10-31T15:35:11+00:00'
+    is_carryover: true
