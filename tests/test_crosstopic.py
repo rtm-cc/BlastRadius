@@ -118,3 +118,47 @@ class ReviewTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def btcpay_pair():
+    """The 2026-11-03 case: yesterday's card, carried over into Active
+    Threats, and today's update of it in Vulnerabilities. Different
+    outlets and headlines, one cluster."""
+    old = {
+        **story("BTCPay Server Urges Operators to Shut Down", "https://cybersecuritynews.com/btcpay-server-warns"),
+        "id": "a46e5b2bfea3",
+        "cluster": "a46e5b2bfea3",
+        "is_carryover": True,
+    }
+    update = {
+        **story(
+            "BTCPay Server tells operators to update after hot-wallet thefts", "https://bleepingcomputer.com/btcpay"
+        ),
+        "id": "0f68334e8489",
+        "cluster": "a46e5b2bfea3",
+        "supersedes": "a46e5b2bfea3",
+        "is_update": True,
+    }
+    return old, update
+
+
+class CarryoverTest(unittest.TestCase):
+    topics = {"threats": topic(id="threats", name="Active Threats"), "vulns": topic(id="vulns", name="Vulnerabilities")}
+
+    def test_one_cluster_is_one_event_even_when_the_model_misses_it(self):
+        old, update = btcpay_pair()
+        b = {"threats": [old], "vulns": [update]}
+        result = crosstopic.review(b, {}, self.topics, "m", 3, 10, chat=FakeChat(answer()))
+        self.assertEqual(b["threats"], [])
+        self.assertEqual([s["id"] for s in b["vulns"]], ["0f68334e8489"])
+        self.assertEqual(result.removed[0].story["id"], "a46e5b2bfea3")
+
+    def test_a_carryover_loses_even_when_the_model_keeps_it(self):
+        old, update = btcpay_pair()
+        del update["cluster"], update["supersedes"]  # only the model can tell
+        b = {"threats": [old], "vulns": [update]}
+        chat = FakeChat(answer({"keep": "s1", "remove": ["s2"], "reason": "fits threats better"}))
+        crosstopic.review(b, {}, self.topics, "m", 3, 10, chat=chat)
+        self.assertEqual(b["threats"], [])
+        self.assertEqual([s["id"] for s in b["vulns"]], ["0f68334e8489"])
+        self.assertIn("(carried over) BTCPay Server Urges", chat.prompts[0])

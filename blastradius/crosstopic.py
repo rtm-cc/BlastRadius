@@ -52,6 +52,9 @@ AI assistants, and LLMs, malicious AI developer extensions, or attacks abusing A
 AI Security rather than general Vulnerabilities, Supply Chain, or Active Threats; a breach at an AI \
 company belongs in AI Security only if the AI system itself was the way in.
 - Stories marked (fixed) can be kept but never removed.
+- Stories marked (carried over) were already published on an earlier day and fill a short column. \
+When one reports the same event as a story without that mark - including a later development of it - \
+keep the unmarked story and remove the carried-over one.
 - Respond with strict JSON only, nothing else:
 {"duplicates": [{"keep": "<id>", "remove": ["<id>", ...], "reason": "<one short sentence>"}]}
 Return {"duplicates": []} when there are none."""
@@ -90,7 +93,8 @@ def _prompt(entries: dict[str, _Entry], topics: dict[str, Topic]) -> str:
             lines.append(f"\n## {name}")
         summary = (entry.story.get("summary") or "")[:200]
         fixed = " (fixed)" if not entry.removable else ""
-        lines.append(f"[{sid}]{fixed} {entry.story['title']} — {summary}")
+        carried = " (carried over)" if entry.story.get("is_carryover") else ""
+        lines.append(f"[{sid}]{fixed}{carried} {entry.story['title']} — {summary}")
     return "STORIES:" + "\n".join(lines)
 
 
@@ -178,20 +182,30 @@ def review(
         keepers = {g["keep"] for g in groups if g["keep"] in entries}
         doomed: dict[str, tuple[str, str]] = {}
         for group in groups:
-            keep = entries.get(group["keep"])
+            keep_sid = group["keep"]
+            keep = entries.get(keep_sid)
             if keep is None:
                 continue
+            reason = str(group.get("reason") or "")
             for sid in group["remove"]:
                 entry = entries.get(sid)
-                # Unknown, fixed, the keeper itself, the same topic, or kept by
-                # another group: a contradictory or invented answer does nothing.
-                if entry is None or not entry.removable or sid in keepers or entry.topic == keep.topic:
+                if entry is None or entry.topic == keep.topic:
                     continue
-                doomed.setdefault(sid, (group["keep"], str(group.get("reason") or "")))
+                # Yesterday's card never beats today's report of the same
+                # event: when the model keeps a carryover over a fresh story,
+                # the carryover is the one that goes.
+                if keep.removable and keep.story.get("is_carryover") and not entry.story.get("is_carryover"):
+                    doomed.setdefault(keep_sid, (sid, reason))
+                    continue
+                # Unknown, fixed, the keeper itself, or kept by another group:
+                # a contradictory or invented answer does nothing.
+                if not entry.removable or sid in keepers:
+                    continue
+                doomed.setdefault(sid, (keep_sid, reason))
 
         for sid, (keep_sid, reason) in doomed.items():
             entry, keeper = entries[sid], entries[keep_sid]
-            if keeper.removable:
+            if keeper.removable and keep_sid not in doomed:
                 _merge_into(keeper.story, entry.story)
             board[entry.topic] = [s for s in board[entry.topic] if s is not entry.story]
             result.removed.append(Removal(entry.topic, entry.story, keeper.topic, reason))
@@ -254,6 +268,17 @@ def _is_same_event(story1: Story, story2: Story) -> bool:
     u2 = _story_urls(story2)
     if u1 & u2:
         return True
+    # One running story, as curation already recorded it: an update joins
+    # the cluster of the story it supersedes. Different outlets, different
+    # headlines - so the URL and headline checks below cannot see it. Found
+    # on 2026-11-03: a carried-over BTCPay card and today's update of it.
+    c1, c2 = story1.get("cluster"), story2.get("cluster")
+    if c1 and c1 == c2:
+        return True
+    if story1.get("supersedes") and story1["supersedes"] == story2.get("id"):
+        return True
+    if story2.get("supersedes") and story2["supersedes"] == story1.get("id"):
+        return True
     t1 = story1.get("title", "").strip().lower()
     t2 = story2.get("title", "").strip().lower()
     if t1 and t1 == t2 and len(t1) >= 15:
@@ -303,6 +328,12 @@ def _dedup_exact_matches(
                         keeper_t, keeper_s, remove_t, remove_s = t1, s1, t2, s2
                     elif not r2:
                         keeper_t, keeper_s, remove_t, remove_s = t2, s2, t1, s1
+                    # Yesterday's card never beats today's report of the
+                    # same event, whichever column fits better.
+                    elif s1.get("is_carryover") and not s2.get("is_carryover"):
+                        keeper_t, keeper_s, remove_t, remove_s = t2, s2, t1, s1
+                    elif s2.get("is_carryover") and not s1.get("is_carryover"):
+                        keeper_t, keeper_s, remove_t, remove_s = t1, s1, t2, s2
                     else:
                         keeper_t, keeper_s, remove_t, remove_s = _pick_keeper_topic(t1, s1, t2, s2, topics)
 

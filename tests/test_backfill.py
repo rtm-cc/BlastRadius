@@ -11,7 +11,8 @@ from blastradius.models import Topic
 
 def make_story(title: str, url: str, rank: int = 1, coverage: list | None = None) -> dict:
     return {
-        "id": "id_" + title[:6],
+        # Unique per story, as real ids are: the top-up never carries one id twice.
+        "id": "id_" + url,
         "title": title,
         "url": url,
         "rank": rank,
@@ -123,3 +124,33 @@ class BackfillTest(unittest.TestCase):
         self.assertEqual(board["tech"][0]["rank"], 1)
         self.assertEqual(board["tech"][1]["title"], "Story 10-30")
         self.assertEqual(board["tech"][1]["rank"], 2)
+
+    def test_skips_a_story_today_already_carries_in_another_column(self):
+        """The 2026-11-03 case: today's update joined yesterday's cluster, in
+        another column, under another outlet's URL."""
+        threats = Topic(id="threats", name="Active Threats", min_items=2)
+        vulns = Topic(id="vulns", name="Vulnerabilities", min_items=1)
+        btcpay = make_story("BTCPay Server Urges Operators to Shut Down", "https://cybersecuritynews.com/btcpay")
+        btcpay.update(id="a46e5b2bfea3", cluster="a46e5b2bfea3")
+        other = make_story("Unrelated ransomware campaign", "https://example.com/ransom")
+        other.update(id="b1", cluster="b1")
+        self.archive.save_day("2026-11-02", {"threats": [btcpay, other]}, datetime.now(UTC))
+
+        update = make_story("BTCPay Server tells operators to update", "https://bleepingcomputer.com/btcpay")
+        update.update(id="0f68334e8489", cluster="a46e5b2bfea3", supersedes="a46e5b2bfea3")
+        board = {"threats": [], "vulns": [update]}
+
+        _backfill_empty_topics(board, [threats, vulns], self.archive, "2026-11-03")
+
+        self.assertEqual([s["id"] for s in board["threats"]], ["b1"])
+
+    def test_skips_a_story_superseded_today_even_without_a_cluster(self):
+        topic = Topic(id="threats", name="Active Threats", min_items=1)
+        old = make_story("Old story", "https://example.com/old")
+        old["id"] = "old1"
+        self.archive.save_day("2026-11-02", {"threats": [old]}, datetime.now(UTC))
+        board = {"threats": [], "vulns": [{**make_story("New", "https://example.com/new"), "supersedes": "old1"}]}
+
+        _backfill_empty_topics(board, [topic], self.archive, "2026-11-03")
+
+        self.assertEqual(board["threats"], [])
