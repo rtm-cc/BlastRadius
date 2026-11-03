@@ -1,5 +1,5 @@
 date: '2026-11-03'
-updated_at: '2026-11-03T07:09:56+00:00'
+updated_at: '2026-11-03T15:22:34+00:00'
 topics:
   ai_security:
   - id: f6ffcc49d719
@@ -759,36 +759,8 @@ topics:
       source: Infosecurity Magazine
       published: '2026-11-02T14:00:00+00:00'
     published: '2026-11-03T06:44:36+00:00'
-  - id: a46e5b2bfea3
-    rank: 2
-    title: BTCPay Server Urges Operators to Shut Down as Bitcoin Hot Wallets Are Drained
-    summary: BTCPay Server issued an urgent November 1 notice telling operators to shut down and keep
-      installations offline after reports that attackers were draining Bitcoin hot wallets on its servers.
-      The open-source payment processor is investigating; merchants holding funds in managed wallets face
-      immediate risk.
-    url: https://cybersecuritynews.com/btcpay-server-warns
-    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/BTCPay-Server-Warns-.webp
-    sources:
-    - Cybersecurity News
-    labels:
-    - cryptocurrency
-    - cybercrime
-    rationale: Active, ongoing thefts affecting Bitcoin payment infrastructure with urgent defensive action
-      required.
-    is_update: false
-    supersedes: null
-    what_changed: null
-    cluster: a46e5b2bfea3
-    cluster_key: are-bitcoin-btcpay-down-drained-hot-operators-server-shut-urges-wallets
-    coverage:
-    - title: Hackers Drain Bitcoin Hot Wallets on BTCPay Servers, Users Urged to Shut Down Immediately
-      url: https://cybersecuritynews.com/btcpay-server-warns
-      source: Cybersecurity News
-      published: '2026-11-02T04:04:55+00:00'
-    published: '2026-11-02T04:04:55+00:00'
-    is_carryover: true
   - id: bab9ac4c52cc
-    rank: 3
+    rank: 2
     title: Pro-Ukraine Group VantaCore Deploys Custom Ransomware Against Russian Companies
     summary: New research from Russian security firm F6 describes VantaCore, a ransomware group believed
       linked to pro-Ukrainian hackers that has hit at least seven Russian organizations with custom malware
