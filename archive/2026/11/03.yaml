@@ -1,0 +1,956 @@
+date: '2026-11-03'
+updated_at: '2026-11-03T07:09:56+00:00'
+topics:
+  ai_security:
+  - id: f6ffcc49d719
+    rank: 1
+    title: Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers
+    summary: Two critical flaws in Langflow, an open-source framework for building AI agents and workflows,
+      let unauthenticated remote attackers bypass authentication and potentially execute arbitrary code
+      on servers. IBM says every release from 1.0.0 through 1.12.8 is affected and the only fix is version
+      1.13.0.
+    url: https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_FF2_yXQrxnB1ymo-GsohY6t0INslV7mps2DVMnYa_dD_RpZu7uz9HwNrux1gxieMF4hnc_84KMpOyhroj0EDx0Vwv0QljdhTehvJINIsr-Sjyw4CaMiLO3fFWGl-8LhLWgOtC4DRU2X5e46s3Rxghu3KLUMsyHfpxFyKogIs34Q2fm2RYpAMI_Jt_9A/s1600/langflow-rce.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - remote code execution
+    - AI agents
+    - vulnerability research
+    rationale: Directly covers a reproducible vulnerability in an AI agent development framework and is
+      not already published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f6ffcc49d719
+    cluster_key: attackers-code-could-critical-flaws-langflow-let-run-servers-unauthenticated
+    coverage:
+    - title: Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers
+      url: https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html
+      source: The Hacker News
+      published: '2026-11-02T11:50:00+00:00'
+    published: '2026-11-02T11:50:00+00:00'
+  - id: da07ec102e26
+    rank: 2
+    title: 'The Rise of LLMJacking: Threat Actors Monetize Compromised Cloud and Model Resources'
+    summary: Mandiant documents a wave of 2026 intrusions in which attackers hijacked enterprise access
+      to large language models, abusing cloud and model resources across North America, South America,
+      and Asia Pacific. The report details how compromised cloud credentials and exposed endpoints are
+      used to run workloads, steal model access, and monetize resources.
+    url: https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models
+    image: https://storage.googleapis.com/gweb-cloudblog-publish/images/03_ThreatIntelligenceWebsiteBannerIdeas_BA.max-2600x2600.png
+    sources:
+    - Google Threat Intelligence (Mandiant)
+    labels:
+    - model hijacking
+    - AI agents
+    - cybercrime
+    rationale: Real-world AI security incident research from Mandiant; not covered by any previously published
+      card.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: da07ec102e26
+    cluster_key: actors-and-cloud-compromised-llmjacking-model-monetize-resources-rise-the-threat
+    coverage:
+    - title: 'The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources'
+      url: https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models
+      source: Google Threat Intelligence (Mandiant)
+      published: '2026-11-02T14:00:00+00:00'
+    published: '2026-11-02T14:00:00+00:00'
+  - id: 730c39f46b1e
+    rank: 3
+    title: Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts
+    summary: Palo Alto Networks Unit 42 details a campaign tracked as CL-UNK-1211 that targeted Linux
+      servers at government and state-affiliated organizations between October 2025 and April 2026. Attackers
+      deployed the SysGoRAT backdoor and used scripts that appear AI-generated, highlighting AI-assisted
+      tooling in active espionage operations.
+    url: https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYHKbP_7yOsvpwAldBMCL3QkCJ9SbUVrJz1Tr_RB6m3O99Gj73H0fX20hIbzKujRWB-1qkBCWv1UEJEbrTe1NFYpPkTm0OoNqJe7OdJoZa1HcZDT2On3mUT0igQeCOsMnWw_ZfT-HsLx6B8R84XYHHg4mUI2hPzM15ggddQCFAAmzChzC5Of90LInW8RB8/s1600/artex.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - AI cybercrime
+    - espionage
+    - targeted attacks
+    rationale: Documents attackers using AI-generated tooling in a real espionage campaign; no previous
+      card covers this cluster.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 730c39f46b1e
+    cluster_key: and-generated-government-linux-scripts-servers-suspected-sysgorat-targeted-with
+    coverage:
+    - title: Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts
+      url: https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html
+      source: The Hacker News
+      published: '2026-11-02T10:49:59+00:00'
+    - title: DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment
+      url: https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html
+      source: The Hacker News
+      published: '2026-11-02T14:46:05+00:00'
+    published: '2026-11-02T10:49:59+00:00'
+  - id: 733121d40d6f
+    rank: 4
+    title: Kaspersky Details CyberStrikeAI Attacks Using AI-Controlled Command-and-Control Agents
+    summary: Kaspersky says its threat intelligence team found a malicious campaign in which an LLM orchestrator
+      on the command-and-control server plans actions, with the open-source CyberStrikeAI framework playing
+      a key post-exploitation role. Confirmed victims include education organizations in Africa and Latin
+      America.
+    url: https://securelist.com/tr/cyberstrikeai-attacks/121715
+    image: https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2026/10/31142432/cyberstrikeai-1_securelist-featured_1200x600.jpg
+    sources:
+    - Securelist
+    labels:
+    - AI agents
+    - AI cybercrime
+    - automated attacks
+    rationale: Extends the previously published CyberStrikeAI reporting with confirmed real-world victims
+      and LLM-orchestrated C2 details.
+    is_update: true
+    supersedes: 13e4a5006df1
+    what_changed: Kaspersky published additional findings confirming victims in the education sector across
+      Africa and Latin America and detailing the LLM orchestrator's role in post-exploitation.
+    cluster: 13e4a5006df1
+    cluster_key: agents-and-attacks-command-control-controlled-cyberstrikeai-details-kaspersky-using
+    coverage:
+    - title: 'CyberStrikeAI in the wild: the use of AI in real-world attacks on organizations'
+      url: https://securelist.com/tr/cyberstrikeai-attacks/121715
+      source: Securelist
+      published: '2026-11-02T08:00:24+00:00'
+    published: '2026-11-02T08:00:24+00:00'
+  - id: 92ae2d6d86b1
+    rank: 5
+    title: AI Coding Agents Are Installing MCP Servers That Will Never Be Patched
+    summary: Glow Labs found that AI coding agents frequently install MCP servers from deprecated, unmaintained
+      repositories when asked to set up integrations; in 98% of reviewed sessions the agent chose an archived
+      package that will never be patched. The pattern, dubbed MCPhantom, exposes developer machines to
+      avoidable supply-chain risk.
+    url: https://www.helpnetsecurity.com/2026/11/03/mcphantom-deprecated-mcp-servers
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/05/26122920/connect-servers.webp
+    sources:
+    - Help Net Security
+    labels:
+    - supply-chain
+    - AI agents
+    - vulnerability research
+    rationale: Demonstrates a concrete supply-chain risk caused by AI coding agent behavior; not previously
+      published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 92ae2d6d86b1
+    cluster_key: agents-are-coding-installing-mcp-never-patched-servers-that-will
+    coverage:
+    - title: AI coding agents are installing MCP servers that will never be patched
+      url: https://www.helpnetsecurity.com/2026/11/03/mcphantom-deprecated-mcp-servers
+      source: Help Net Security
+      published: '2026-11-03T05:45:53+00:00'
+    published: '2026-11-03T05:45:53+00:00'
+  breaches:
+  - id: ed7f00d46c46
+    rank: 1
+    title: WorkOS Breach Tied to ARTEX AI Framework Exposes Customer Slack Records
+    summary: WorkOS confirmed unauthorized access to an internal sales application, exposing customer
+      contact information and business conversation records. The company detected the incident on October
+      30 and says its investigation identified ARTEX, an AI-powered offensive security framework, used
+      to automate reconnaissance and exploitation.
+    url: https://cybersecuritynews.com/workos-data-breach
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/WorkOS-Data-Breach.webp
+    sources:
+    - Cybersecurity News
+    - DataBreaches.net
+    - Malwarebytes
+    labels:
+    - data breach
+    - AI cybercrime
+    - targeted attacks
+    rationale: Confirmed breach at a named company with AI-assisted attack details and exposure of customer
+      business communications.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ed7f00d46c46
+    cluster_key: artex-breach-customer-exposes-framework-records-slack-tied-workos
+    coverage:
+    - title: Hackers Use ARTEX AI to Breach WorkOS and Access Customer Slack Conversations
+      url: https://cybersecuritynews.com/workos-data-breach
+      source: Cybersecurity News
+      published: '2026-11-03T03:43:36+00:00'
+    - title: 'KR: HYBE data breach exposes employee medical records, financial details'
+      url: https://databreaches.net/2026/11/02/kr-hybe-data-breach-exposes-employee-medical-records-financial-details
+      source: DataBreaches.net
+      published: '2026-11-02T23:25:15+00:00'
+    - title: 'JPN: Suntory Holdings says personal data of around 100,000 people leaked'
+      url: https://databreaches.net/2026/11/02/jpn-suntory-holdings-says-personal-data-of-around-100000-people-leaked
+      source: DataBreaches.net
+      published: '2026-11-02T23:25:59+00:00'
+    - title: Applebee’s customer data exposed by password left in app
+      url: https://www.malwarebytes.com/blog/news/2026/11/applebees-customer-data-exposed-by-password-left-in-app
+      source: Malwarebytes
+      published: '2026-11-02T14:22:43+00:00'
+    published: '2026-11-03T03:43:36+00:00'
+  - id: 4365a087b8b2
+    rank: 2
+    title: Mercado Bitcoin Cyberattack Drains Over $46 Million in Suspicious Transfers
+    summary: Brazil's largest crypto exchange suspended deposits and withdrawals after a cyberattack;
+      blockchain security firms flagged more than $46 million in suspicious transfers across at least
+      10 blockchains. Mercado Bitcoin says it contained the incident but has not confirmed the exact loss.
+    url: https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist
+    image: http://cms.therecord.media/uploads/mercado_bitcoin_92ae590f6f.jpg
+    sources:
+    - The Record
+    - Cybersecurity News
+    labels:
+    - cyberattack
+    - cryptocurrency
+    rationale: High-profile attack on a major exchange with significant fund outflow and operational disruption.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4365a087b8b2
+    cluster_key: bitcoin-cyberattack-drains-mercado-million-over-suspicious-transfers
+    coverage:
+    - title: Largest crypto exchange in Brazil confirms cyberattack as millions flow out of platform
+      url: https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist
+      source: The Record
+      published: '2026-11-02T21:42:00+00:00'
+    - title: Mercado Bitcoin Suffers Cyberattack as Researchers Flag $40 Million in Suspicious Crypto
+        Transfers
+      url: https://cybersecuritynews.com/mercado-bitcoin-suffers-cyberattack
+      source: Cybersecurity News
+      published: '2026-11-02T17:54:22+00:00'
+    published: '2026-11-02T21:42:00+00:00'
+  - id: 3b5191c3e8c0
+    rank: 3
+    title: Polymarket Returns $3.9 Million to Users as DebugBear Cites DNS Hijack
+    summary: Polymarket will return $3.9 million to users affected by the October 29 script compromise
+      and compensate for downtime. DebugBear now says its DNS records were hijacked via the domain registrar,
+      and early findings point to a single customer being targeted.
+    url: https://www.securityweek.com/polymarket-returns-3-9-million-to-traders-as-debugbear-cites-dns-hijack
+    image: https://www.securityweek.com/wp-content/uploads/2026/06/Polymarket.webp
+    sources:
+    - SecurityWeek
+    - The Record
+    labels:
+    - data breach
+    - third-party-script
+    - cryptocurrency
+    rationale: Material update to prior coverage with increased refund amount and root cause details.
+    is_update: true
+    supersedes: f1e312cea6d8
+    what_changed: Refund amount increased from $2.7M to $3.9M; DebugBear says DNS records were compromised
+      via its domain registrar and early findings point to a single customer being targeted.
+    cluster: 03e7a3726860
+    cluster_key: cites-debugbear-dns-hijack-million-polymarket-returns-users
+    coverage:
+    - title: Polymarket Returns $3.9 Million to Traders as DebugBear Cites DNS Hijack
+      url: https://www.securityweek.com/polymarket-returns-3-9-million-to-traders-as-debugbear-cites-dns-hijack
+      source: SecurityWeek
+      published: '2026-11-02T09:33:15+00:00'
+    - title: Polymarket pledges to give $3.9 million back to victims after site compromise
+      url: https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise
+      source: The Record
+      published: '2026-11-02T17:05:20+00:00'
+    published: '2026-11-02T09:33:15+00:00'
+  - id: e79adc7f0524
+    rank: 4
+    title: UNM Health Attackers Apologize and Offer Patients $2,500 in New Statement
+    summary: The ransomware group behind the University of New Mexico Health attack issued a new statement
+      apologizing and offering $2,500 to affected patients, while revealing more details about the incident
+      that disrupted patient care and diverted ambulances.
+    url: https://databreaches.net/2026/11/02/hackers-hit-unm-hospital-then-apologize-and-offer-patients-2500-in-a-new-statement-they-reveal-more-about-the-incident
+    image: ''
+    sources:
+    - DataBreaches.net
+    - The Record
+    labels:
+    - ransomware
+    - healthcare
+    - data breach
+    rationale: New developments from attackers about an already-covered hospital breach.
+    is_update: true
+    supersedes: 0968e09f1c6b
+    what_changed: Threat actors apologized and offered $2,500 to affected patients; their new statement
+      disclosed additional incident details.
+    cluster: e314c1030cbd
+    cluster_key: 500-and-apologize-attackers-health-new-offer-patients-statement-unm
+    coverage:
+    - title: Hackers hit UNM hospital, then apologize and offer patients $2,500. In a new statement, they
+        reveal more about the incident.
+      url: https://databreaches.net/2026/11/02/hackers-hit-unm-hospital-then-apologize-and-offer-patients-2500-in-a-new-statement-they-reveal-more-about-the-incident
+      source: DataBreaches.net
+      published: '2026-11-02T23:27:32+00:00'
+    - title: Michigan State cyber incident claimed by ransomware gang behind recent hospital attack
+      url: https://therecord.media/michigan-state-university-byod-gang-cyber-incident
+      source: The Record
+      published: '2026-11-02T19:54:00+00:00'
+    published: '2026-11-02T23:27:32+00:00'
+  - id: 5769fd486117
+    rank: 5
+    title: Revolve Data Breach Impacts at Least 200,000 People
+    summary: Online retailer Revolve disclosed that hackers accessed its shopping platform and stole customers'
+      personal and payment card information, affecting at least 200,000 people.
+    url: https://www.securityweek.com/revolve-data-breach-impacts-at-least-180000-people
+    image: https://www.securityweek.com/wp-content/uploads/2025/02/data_breach.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - data breach
+    - e-commerce
+    rationale: Large customer payment-data breach at a major retailer.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5769fd486117
+    cluster_key: 000-200-breach-data-impacts-least-people-revolve
+    coverage:
+    - title: Revolve Data Breach Impacts at Least 200,000 People
+      url: https://www.securityweek.com/revolve-data-breach-impacts-at-least-180000-people
+      source: SecurityWeek
+      published: '2026-11-02T13:35:21+00:00'
+    published: '2026-11-02T13:35:21+00:00'
+  - id: def034bf3ba3
+    rank: 6
+    title: Russia's Statistics Agency Confirms Cyberattack After Hackers Claim Data Theft
+    summary: Russia's federal statistics agency confirmed a cyberattack claimed by an alliance of Belarusian
+      and pro-Ukrainian hackers, who said they stole large amounts of sensitive government data.
+    url: https://therecord.media/hackers-ukraine-belarus-russia
+    image: http://cms.therecord.media/uploads/rosstat_cyber_partisans_9ce9dfb0f4.jpg
+    sources:
+    - The Record
+    labels:
+    - data breach
+    - government
+    - cyberattack
+    rationale: Confirmed attack on a national government agency with claimed data theft.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: def034bf3ba3
+    cluster_key: after-agency-claim-confirms-cyberattack-data-hackers-russia-statistics-theft
+    coverage:
+    - title: Russia's statistics agency confirms cyberattack claimed by Belarusian and Ukrainian hackers
+      url: https://therecord.media/hackers-ukraine-belarus-russia
+      source: The Record
+      published: '2026-11-02T16:30:00+00:00'
+    published: '2026-11-02T16:30:00+00:00'
+  - id: f85978e12192
+    rank: 7
+    title: Hackers Disrupt Refrigeration Systems at European Supermarkets
+    summary: Hackers remotely changed temperature settings on refrigeration units at multiple supermarket
+      chains in Belgium, Luxembourg, and Sweden, spoiling food in a second wave of attacks after similar
+      incidents in France.
+    url: https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/02/freezers.jpg
+    sources:
+    - BleepingComputer
+    - DataBreaches.net
+    - Help Net Security
+    labels:
+    - cyberattack
+    - critical infrastructure
+    rationale: Security incident disrupting physical operations at named retail chains across Europe.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f85978e12192
+    cluster_key: disrupt-european-hackers-refrigeration-supermarkets-systems
+    coverage:
+    - title: Hackers disrupt refrigeration systems at European supermarkets
+      url: https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets
+      source: BleepingComputer
+      published: '2026-11-02T14:28:39+00:00'
+    - title: Supermarket freezers across Europe hit by second suspected cyber-attack
+      url: https://databreaches.net/2026/11/02/supermarket-freezers-across-europe-hit-by-second-suspected-cyber-attack
+      source: DataBreaches.net
+      published: '2026-11-02T23:26:13+00:00'
+    - title: Second wave of refrigeration cyberattacks hits European supermarkets
+      url: https://www.helpnetsecurity.com/2026/11/02/european-supermarkets-refrigeration-units-cyberattacks
+      source: Help Net Security
+      published: '2026-11-02T14:28:25+00:00'
+    published: '2026-11-02T14:28:39+00:00'
+  fraud_phishing:
+  - id: 0e6af204efb3
+    rank: 1
+    title: Teams 'IT Support' Scam Abuses AD CS to Mint Privileged Account Certificates
+    summary: Microsoft's investigation of two intrusions shows attackers posing as IT support on Microsoft
+      Teams calls and chats persuaded employees to approve remote access to their PCs. After gaining a
+      foothold, the attackers abused weak Active Directory Certificate Services (AD CS) settings to obtain
+      login certificates for privileged accounts, including one with domain controller access. The campaign
+      relies on social engineering and legitimate remote-support software, not a Teams vulnerability.
+    url: https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLv88EM1ZSjaeI7bH9DVpg2mGdkwXWUuir0S_p9IfiWG49_TgRalFdK4oQ6e7UE_JYOnNH70Z6wcftnjhcYHRY-Xc0o8GYp9r1uNzxdC_1bnXZgvon74cXkWgKpHZtwJg3IKLsqGC2HS2tcMfQS8BZu7kfrW1vAaaIA316LRzgCOn8zeGZ1WvALgJmyM4/s1600/ms-ad.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - Microsoft Teams phishing
+    - help desk scam
+    - social engineering
+    rationale: 'New Microsoft investigation adds material technical detail to already-published Teams
+      help desk scam coverage: post-compromise AD CS abuse to gain privileged account certificates.'
+    is_update: true
+    supersedes: 1c43eb1161a5
+    what_changed: Microsoft's report details two intrusions and shows attackers abused insecure Active
+      Directory Certificate Services settings to mint login certificates for privileged accounts, including
+      a domain controller.
+    cluster: 063b3f941ca5
+    cluster_key: abuses-account-certificates-mint-privileged-scam-support-teams
+    coverage:
+    - title: Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data
+      url: https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html
+      source: The Hacker News
+      published: '2026-11-02T11:08:45+00:00'
+    - title: Hackers Using Microsoft Teams Messages and Calls to Trick Users and Gain Remote Access to
+        System
+      url: https://cybersecuritynews.com/microsoft-teams-messages
+      source: Cybersecurity News
+      published: '2026-11-02T12:33:55+00:00'
+    published: '2026-11-02T11:08:45+00:00'
+  - id: c53794411ccb
+    rank: 2
+    title: Scammers Target US Voters With Registration, Survey, and Donation Lures
+    summary: Ahead of the US midterm elections, scammers are sending texts, emails, and phone calls that
+      offer help registering to vote, ask recipients to take a survey, or solicit donations. The messages
+      are designed to steal money, personal information, or credentials, and often impersonate official
+      election or campaign organizations. Recipients should verify contacts through official channels
+      and avoid clicking links in unsolicited voter-related messages.
+    url: https://blog.knowbe4.com/warning-scammers-are-targeting-voters-ahead-of-election-day
+    image: https://blog.knowbe4.com/hubfs/Stock%20images/Closeup%20of%20hands%20of%20young%20man%20in%20checkered%20shirt%20using%20mobile%20phone%20while%20his%20partners%20arguing-3.jpeg
+    sources:
+    - KnowBe4 Research
+    labels:
+    - phishing
+    - social engineering
+    rationale: Concrete voter-targeted smishing and phishing lures ahead of Election Day; widely relevant
+      and recognizable to many people.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c53794411ccb
+    cluster_key: and-donation-lures-registration-scammers-survey-target-voters-with
+    coverage:
+    - title: 'Warning: Scammers Are Targeting Voters Ahead of Election Day'
+      url: https://blog.knowbe4.com/warning-scammers-are-targeting-voters-ahead-of-election-day
+      source: KnowBe4 Research
+      published: '2026-11-02T21:00:01+00:00'
+    published: '2026-11-02T21:00:01+00:00'
+  - id: 64961a2de2a2
+    rank: 3
+    title: 'Phishing Roundup: Microsoft 365 Document Lures and Fake ÖGK Data-Verification Page'
+    summary: Newly reported phishing lures include pages impersonating Microsoft 365 document-sharing
+      and login flows on domains like miscrosoftonlinesecuredemandocument.com, securemsexcel.online, and
+      1mdrvpdf-rfqonlineinvite.com, which hand attackers Microsoft 365 tokens. Another campaign uses the
+      Austrian health insurer ÖGK's name and logo on at-oegk.com to trick visitors into entering personal
+      data. Microsoft, Zoom, and ÖGK are not involved in these pages.
+    url: https://scammers.com/scams?category=phishing
+    image: https://scammers.com/og/default?v=3
+    sources:
+    - Scammers.com
+    labels:
+    - phishing
+    - account takeover
+    rationale: Freshly reported phishing URLs and recognizable lures (Microsoft 365 document sharing,
+      Austrian health insurance verification) that readers could encounter.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 64961a2de2a2
+    cluster_key: 365-and-data-document-fake-lures-microsoft-page-phishing-roundup-verification-ögk
+    coverage:
+    - title: Phishing scams
+      url: https://scammers.com/scams?category=phishing
+      source: Scammers.com
+      published: '2026-11-03T07:03:45.266720+00:00'
+    published: '2026-11-03T07:03:45.266720+00:00'
+  - id: 00a9b58e312c
+    rank: 4
+    title: Underground 'Reputation Management' Services Sell Fake Reviews and Manipulation
+    summary: Malwarebytes researchers found cybercrime forums advertising illicit reputation-management
+      services that can flood products with glowing reviews, suppress negative ones, or manipulate ratings
+      for a fee. The trade helps scam products and services look trustworthy, and the same forums also
+      sell scam kits and stolen data. Consumers should be cautious of heavily reviewed items from unknown
+      sellers and watch for review patterns that seem inflated.
+    url: https://www.malwarebytes.com/blog/threat-intel/2026/11/5-stars-for-sale-inside-the-underground-fake-review-trade
+    image: https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/10/fake-review-ecosystem.jpg
+    sources:
+    - Malwarebytes
+    labels:
+    - cybercrime
+    rationale: Concrete research into the underground fake-review trade, a fraud enabler that deceives
+      consumers; not a generic statistic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 00a9b58e312c
+    cluster_key: and-fake-management-manipulation-reputation-reviews-sell-services-underground
+    coverage:
+    - title: '5 stars for sale: Inside the underground fake review trade'
+      url: https://www.malwarebytes.com/blog/threat-intel/2026/11/5-stars-for-sale-inside-the-underground-fake-review-trade
+      source: Malwarebytes
+      published: '2026-11-02T14:24:43+00:00'
+    published: '2026-11-02T14:24:43+00:00'
+  policy:
+  - id: 6a8121dba741
+    rank: 1
+    title: Operation Jackal IV Nets 58 Arrests in Global Crackdown on West African Cybercrime Networks
+    summary: Law enforcement agencies from 22 countries identified 263 suspects and arrested 58 people
+      linked to cybercrime networks coordinated by African crime groups, including the Black Axe syndicate.
+      The international action ran from November 2025 to June 2026 and targeted West African criminal
+      networks.
+    url: https://www.bleepingcomputer.com/news/security/police-arrests-dozens-of-suspects-in-global-cybercrime-crackdown
+    image: https://www.bleepstatic.com/content/hl-images/2026/04/29/Law_enforcement_arrest.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - law enforcement
+    - cybercrime
+    rationale: Direct law enforcement action removing cybercrime suspects and disrupting an organized
+      crime syndicate across multiple countries.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6a8121dba741
+    cluster_key: african-arrests-crackdown-cybercrime-global-jackal-nets-networks-operation-west
+    coverage:
+    - title: Police arrests dozens of suspects in global cybercrime crackdown
+      url: https://www.bleepingcomputer.com/news/security/police-arrests-dozens-of-suspects-in-global-cybercrime-crackdown
+      source: BleepingComputer
+      published: '2026-11-03T07:03:45.266720+00:00'
+    published: '2026-11-03T07:03:45.266720+00:00'
+  - id: 16c886f38e4f
+    rank: 2
+    title: FBI Flags Over 600 Wallet Addresses Tied to North Korea’s Binance Heist
+    summary: The FBI has formally attributed the roughly $6.4 billion Binance theft to North Korean APT
+      TraderTraitor and published more than 600 associated cryptocurrency addresses as the attackers continue
+      to launder the stolen funds. The address list gives exchanges and blockchain forensics teams concrete
+      data to monitor and freeze assets.
+    url: https://www.securityweek.com/fbi-flags-over-600-addresses-tied-to-north-koreas-binance-heist
+    image: https://www.securityweek.com/wp-content/uploads/2026/10/Binance-hacked.jpeg
+    sources:
+    - SecurityWeek
+    - Infosecurity Magazine
+    - Dark Reading
+    labels:
+    - North Korea
+    - law enforcement
+    - cryptocurrency
+    rationale: 'Update to the FBI''s Binance attribution with new operational detail: more than 600 wallet
+      addresses to track as laundering continues.'
+    is_update: true
+    supersedes: 8b3da1dc273f
+    what_changed: The FBI publicly listed more than 600 wallet addresses tied to the stolen funds, adding
+      concrete tracking data to the earlier attribution.
+    cluster: f7e0074ade36
+    cluster_key: 600-addresses-binance-fbi-flags-heist-korea-north-over-tied-wallet
+    coverage:
+    - title: FBI Flags Over 600 Addresses Tied to North Korea’s Binance Heist
+      url: https://www.securityweek.com/fbi-flags-over-600-addresses-tied-to-north-koreas-binance-heist
+      source: SecurityWeek
+      published: '2026-11-02T08:40:36+00:00'
+    - title: FBI Attributes Binance Heist to North Korea’s TraderTraitor
+      url: https://www.infosecurity-magazine.com/news/fbi-attributes-binance-north
+      source: Infosecurity Magazine
+      published: '2026-11-02T10:15:00+00:00'
+    - title: 'One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning'
+      url: https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths
+      source: Dark Reading
+      published: '2026-11-02T22:27:24+00:00'
+    published: '2026-11-02T08:40:36+00:00'
+  - id: 8b3da1dc273f
+    rank: 3
+    title: FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist
+    summary: The FBI, together with the U.S. Secret Service and IRS-CI, officially attributed the theft
+      of more than $6 billion in virtual assets from Binance to TraderTraitor, a North Korea-aligned hacking
+      group also tracked as Jade Sleet, Pressure Chollima, PUKCHONG, Slow Pisces, and UNC4899. The confirmation
+      makes the Binance incident the largest cryptocurrency heist on record and establishes state involvement
+      in the attack.
+    url: https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmb1j0HC3RkKxZ4bBQPaOa5GaLqC2EBtxXHOMnebPlgHGDJG7ryIuSBIR-9YBQuUm6HwD15-OJQgBvIkhbLIApM8XoU0DptSEF6DNhEpinxPA-06wQZhLhRiKmFGO5cVjONcaouGC3lqybhkeEsZj-xebX6u6hSR19mS7sVqOrpR02qNOlpHZJEUjf1HtB/s1600/binance-hack.png
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    - Risky Business News
+    labels:
+    - North Korea
+    - cryptocurrency
+    - law enforcement
+    rationale: Official FBI attribution is a law-enforcement determination that materially advances the
+      previously reported Binance theft, changing the story from suspected to confirmed state-sponsored
+      involvement.
+    is_update: true
+    supersedes: df71def910fa
+    what_changed: The FBI, U.S. Secret Service, and IRS-CI officially attributed the attack to North Korea's
+      TraderTraitor group, confirming state sponsorship and adding the largest crypto heist on record
+      to North Korea's known operations.
+    cluster: f7e0074ade36
+    cluster_key: billion-binance-crypto-fbi-heist-korea-links-north-record-tradertraitor
+    coverage:
+    - title: FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist
+      url: https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html
+      source: The Hacker News
+      published: '2026-11-01T07:03:00+00:00'
+    - title: FBI links $6.3 billion Binance crypto heist to North Korean hackers
+      url: https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers
+      source: BleepingComputer
+      published: '2026-11-01T19:57:53+00:00'
+    - title: FBI confirms North Korea behind Binance hack
+      url: https://risky.biz/RBNEWS628
+      source: Risky Business News
+      published: '2026-11-02T02:08:33+00:00'
+    published: '2026-11-01T07:03:00+00:00'
+    is_carryover: true
+  supply_chain:
+  - id: fed7e8209b03
+    rank: 1
+    title: Google dismantles XCPE botnet preinstalled on 1.3M Android TV boxes
+    summary: Google and industry partners took down the XCPE backdoor, which was preinstalled on more
+      than 1.3 million Android TV set-top boxes. Google attributes the operation with high confidence
+      to Videostrong Technology, which sold criminal access to the devices for ad fraud and proxy traffic.
+      The takedown may cut off access to over 10 million additional compromised IoT devices.
+    url: https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet
+    image: https://storage.googleapis.com/gweb-cloudblog-publish/images/03_ThreatIntelligenceWebsiteBannerIdeas_BA.max-2600x2600.png
+    sources:
+    - Google Threat Intelligence (Mandiant)
+    - Cybersecurity News
+    - Krebs on Security
+    - CyberScoop
+    - BleepingComputer
+    - Help Net Security
+    - The Hacker News
+    labels:
+    - supply-chain
+    - Android
+    - malware
+    rationale: 'Large-scale supply chain compromise at the device manufacturing level, affecting over
+      a million devices. Concrete action: detect/remove affected boxes and monitor for XCPE indicators
+      from the takedown.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fed7e8209b03
+    cluster_key: android-botnet-boxes-dismantles-google-preinstalled-xcpe
+    coverage:
+    - title: Shutting the Door on the XCPE Botnet
+      url: https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet
+      source: Google Threat Intelligence (Mandiant)
+      published: '2026-11-02T14:00:00+00:00'
+    - title: Google Dismantles 1.3 Million Device XCPE Botnet, Bans Android TV Maker Over Preinstalled
+        Malware
+      url: https://cybersecuritynews.com/google-dismantles-xcpe-botnet
+      source: Cybersecurity News
+      published: '2026-11-03T02:24:38+00:00'
+    - title: Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies
+      url: https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies
+      source: Krebs on Security
+      published: '2026-11-03T02:24:31+00:00'
+    - title: Google shuts down global botnet running on certified Android devices
+      url: https://cyberscoop.com/google-disrupts-xcpe-botnet-videostrong-android-devices
+      source: CyberScoop
+      published: '2026-11-02T21:58:24+00:00'
+    - title: Google disrupts million-device XCPE Android malware botnet, bans TV box maker
+      url: https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker
+      source: BleepingComputer
+      published: '2026-11-02T18:16:34+00:00'
+    - title: Google disrupts XCPE botnet, bans the company behind it
+      url: https://www.helpnetsecurity.com/2026/11/02/xcpe-botnet-android-backdoor
+      source: Help Net Security
+      published: '2026-11-02T15:50:46+00:00'
+    - title: Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access
+      url: https://thehackernews.com/2026/11/google-disrupts-13-million-device.html
+      source: The Hacker News
+      published: '2026-11-02T15:50:26+00:00'
+    published: '2026-11-02T14:00:00+00:00'
+  - id: a32e7948b375
+    rank: 2
+    title: PyPI LiteLLM release pipeline compromised to ship credential stealer
+    summary: Attackers compromised the release pipeline of the LiteLLM Python package, shipping version
+      1.107.0 built from a lookalike repository using stolen developer GitHub tokens. The wheel contains
+      a credential stealer that executes on any Python start, including pip. Developers who installed
+      or depend on 1.107.0 should treat it as compromised, audit lockfiles, and rotate credentials.
+    url: https://pkgwarden.com/incidents
+    image: https://pkgwarden.com/og-image.png
+    sources:
+    - pkgwarden
+    labels:
+    - supply-chain
+    - malicious-package
+    - pypi
+    rationale: Concrete malicious package incident in PyPI with clear action for users. LiteLLM's popularity
+      makes this high impact, and the detail on the release-pipeline compromise provides actionable indicators.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a32e7948b375
+    cluster_key: compromised-credential-litellm-pipeline-pypi-release-ship-stealer
+    coverage:
+    - title: Supply chain incident recaps | pkgwarden
+      url: https://pkgwarden.com/incidents
+      source: pkgwarden
+      published: '2026-11-03T07:03:45.266720+00:00'
+    published: '2026-11-03T07:03:45.266720+00:00'
+  - id: e41970bb5a4c
+    rank: 3
+    title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+    summary: Attackers compromised two legitimate MemTensor packages on npm and PyPI and used them to
+      distribute sckit, a Go-based credential stealer that runs on Windows, Linux, and macOS. Developers
+      who installed or depend on the affected packages should treat them as compromised, audit lockfiles
+      and installed artifacts, and rotate any credentials or tokens stored on affected systems.
+    url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFThFSFsti-2SIka75bNuMKpyJHtOW2ZPrZtcSjbjFQ64GCNn0WtdssYuWlVTbhaLB5cAJ0vu8FgyNmNsDa8g0Ijy-D1zP4FW7ihVfAjk9xWMYDMMdfZPICGyVdjeDwH3-jyKLHOUnjfaXBJIMxGn_3ngeXFsbb4CLnOibRd4fbwXHYpBkMQTcBQAf0edq/s1600/npm-pypi.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - malicious-package
+    - npm
+    - pypi
+    - supply chain
+    rationale: Direct software supply-chain compromise of legitimate npm/PyPI packages affecting developers
+      on three OSes; downstream users need concrete steps to check and rotate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e41970bb5a4c
+    cluster_key: and-compromised-credential-deliver-memtensor-npm-packages-pypi-sckit-stealer-via
+    coverage:
+    - title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+      url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+      source: The Hacker News
+      published: '2026-11-02T07:03:55.662129+00:00'
+    published: '2026-11-02T07:03:55.662129+00:00'
+    is_carryover: true
+  threats:
+  - id: 60f8b6dab1b6
+    rank: 1
+    title: Bitter APT Deploys PapRAT in Cyber-Espionage Campaign Across South Asia
+    summary: Researchers attribute a new espionage campaign to Bitter, an India-linked threat group active
+      since 2013, targeting organizations in South and Southeast Asia with fake meeting letters and event
+      invitations. The campaign uses Windows VHDX disk images, LNK shortcut files, and WebDAV remote folders
+      across three infection chains to install PapRAT, a custom remote access trojan, while evading detection.
+    url: https://cybersecuritynews.com/hackers-use-malicious-vhdx-files
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Hackers-Use-Malicious-VHDX-Files-and-WebDAV-Links-to-Infect-Windows-Devices-With-PapRAT-Malware.webp
+    sources:
+    - Cybersecurity News
+    - Dark Reading
+    - Infosecurity Magazine
+    labels:
+    - espionage
+    - targeted attacks
+    - malware
+    rationale: Active regional APT espionage campaign with three distinct infection chains and custom
+      malware; defenders can act on the lures and indicators described.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 60f8b6dab1b6
+    cluster_key: across-apt-asia-bitter-campaign-cyber-deploys-espionage-paprat-south
+    coverage:
+    - title: Hackers Use Malicious VHDX Files and WebDAV Links to Infect Windows Devices With PapRAT Malware
+      url: https://cybersecuritynews.com/hackers-use-malicious-vhdx-files
+      source: Cybersecurity News
+      published: '2026-11-03T06:44:36+00:00'
+    - title: PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia
+      url: https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia
+      source: Dark Reading
+      published: '2026-11-02T14:00:00+00:00'
+    - title: Bitter Deploys PapRAT in Asian Cyber-Espionage Campaign
+      url: https://www.infosecurity-magazine.com/news/paprat-bitter-cyberespionage
+      source: Infosecurity Magazine
+      published: '2026-11-02T14:00:00+00:00'
+    published: '2026-11-03T06:44:36+00:00'
+  - id: a46e5b2bfea3
+    rank: 2
+    title: BTCPay Server Urges Operators to Shut Down as Bitcoin Hot Wallets Are Drained
+    summary: BTCPay Server issued an urgent November 1 notice telling operators to shut down and keep
+      installations offline after reports that attackers were draining Bitcoin hot wallets on its servers.
+      The open-source payment processor is investigating; merchants holding funds in managed wallets face
+      immediate risk.
+    url: https://cybersecuritynews.com/btcpay-server-warns
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/BTCPay-Server-Warns-.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - cryptocurrency
+    - cybercrime
+    rationale: Active, ongoing thefts affecting Bitcoin payment infrastructure with urgent defensive action
+      required.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a46e5b2bfea3
+    cluster_key: are-bitcoin-btcpay-down-drained-hot-operators-server-shut-urges-wallets
+    coverage:
+    - title: Hackers Drain Bitcoin Hot Wallets on BTCPay Servers, Users Urged to Shut Down Immediately
+      url: https://cybersecuritynews.com/btcpay-server-warns
+      source: Cybersecurity News
+      published: '2026-11-02T04:04:55+00:00'
+    published: '2026-11-02T04:04:55+00:00'
+    is_carryover: true
+  - id: bab9ac4c52cc
+    rank: 3
+    title: Pro-Ukraine Group VantaCore Deploys Custom Ransomware Against Russian Companies
+    summary: New research from Russian security firm F6 describes VantaCore, a ransomware group believed
+      linked to pro-Ukrainian hackers that has hit at least seven Russian organizations with custom malware
+      and multimillion-dollar ransom demands.
+    url: https://therecord.media/new-pro-ukraine-hacker-group-custom-ransomware-russia
+    image: https://cms.therecord.media/uploads/Andrew_P_48cc28d4aa.jpg
+    sources:
+    - therecord.media
+    labels:
+    - ransomware
+    - targeted attacks
+    rationale: New ransomware operation with custom malware and confirmed victims, giving defenders indicators
+      to track.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bab9ac4c52cc
+    cluster_key: against-companies-custom-deploys-group-pro-ransomware-russian-ukraine-vantacore
+    coverage:
+    - title: New pro-Ukraine hacker group targets Russian companies with custom ransomware
+      url: https://therecord.media/new-pro-ukraine-hacker-group-custom-ransomware-russia
+      source: therecord.media
+      published: '2026-11-02T07:03:55.662129+00:00'
+    - title: Pro-Ukraine Hacking Cat group deploying new malware against Russian targets
+      url: https://therecord.media/ukraine-malware-russia-ransomware
+      source: therecord.media
+      published: '2026-11-02T07:03:55.662129+00:00'
+    published: '2026-11-02T07:03:55.662129+00:00'
+    is_carryover: true
+  vulnerabilities:
+  - id: b22a155c12f9
+    rank: 1
+    title: Cisco releases security updates for exploited ASA/FTD SSL VPN zero-day CVE-2026-76418
+    summary: Cisco has released security updates for CVE-2026-76418, a high-severity denial-of-service
+      flaw in ASA and Firepower Threat Defense that unauthenticated remote attackers are exploiting to
+      crash devices with SSL VPN enabled. Apply the updates immediately; the bug is also in CISA's Known
+      Exploited Vulnerabilities catalog.
+    url: https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/29/Cisco-headpic.jpg
+    sources:
+    - BleepingComputer
+    - fieldeffect.com
+    - The Hacker News
+    labels:
+    - active exploitation
+    - security update
+    - CISA
+    rationale: Actively exploited zero-day in widely deployed Cisco firewall software, now with vendor
+      patches; direct patch action.
+    is_update: true
+    supersedes: 9b48cf8de90d
+    what_changed: Cisco has now shipped security updates for CVE-2026-76418, adding a fix to the previously
+      reported active exploitation.
+    cluster: 9b48cf8de90d
+    cluster_key: asa-cisco-day-exploited-for-ftd-releases-security-ssl-updates-vpn-zero
+    coverage:
+    - title: New Cisco firewall zero-day exploited to crash SSL VPN devices
+      url: https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices
+      source: BleepingComputer
+      published: '2026-11-03T07:03:45.266720+00:00'
+    - title: Citrix patches two actively exploited NetScaler vulnerabilities
+      url: https://fieldeffect.com/blog/citrix-patch-exploited-netscaler-vulnerabilities
+      source: fieldeffect.com
+      published: '2026-11-03T07:03:45.266720+00:00'
+    - title: Over 1,000 GitLab servers vulnerable to ongoing RCE attacks
+      url: https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks
+      source: BleepingComputer
+      published: '2026-11-02T12:47:00+00:00'
+    - title: Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors
+      url: https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html
+      source: The Hacker News
+      published: '2026-11-03T05:34:41+00:00'
+    - title: Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials
+      url: https://thehackernews.com/2026/11/attackers-target-unpatched.html
+      source: The Hacker News
+      published: '2026-11-03T05:34:37+00:00'
+    - title: Synology warns of C3RB3R ransomware attacks targeting NAS devices
+      url: https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks
+      source: BleepingComputer
+      published: '2026-11-02T11:28:42+00:00'
+    published: '2026-11-03T07:03:45.266720+00:00'
+  - id: d5dc34b1cfb2
+    rank: 2
+    title: Unpatched CryptoPayment Gateway WordPress flaw (CVE-2026-81648) under attack
+    summary: Threat actors are attempting to exploit CVE-2026-81648, a CVSS 10.0 vulnerability in the
+      CryptoPayment Gateway WordPress plugin, letting unauthenticated users delete arbitrary files and
+      access data that can expose wallet credentials. No patch is available yet, so disable or firewall
+      the plugin until a fix is released.
+    url: https://thehackernews.com/2026/11/attackers-target-unpatched.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1tflB6yfzJv3UijqJlfCikzOQx0NHz9AVTh13vDvWu-LfAfFfBDjGbKI79Cb3dd2Ca_ck2KNP46WwYKcuweVD9Wc1srFpRkBimsG-EQS567tR92Yyg1DKPWqhhZHc1sP71qHWQoUxndY2VzDlqVsd2gx2GPcMx7pjVG8ws13bfMKXDtqz5q7EiJ22Mmr_/s1600/wp.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - active exploitation
+    - WordPress
+    - cryptocurrency
+    - CVE-2026-81648
+    rationale: Maximum-severity unpatched WordPress plugin flaw already being targeted, with direct financial
+      impact through wallet credential exposure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d5dc34b1cfb2
+    cluster_key: 2026-81648-attack-cryptopayment-cve-flaw-gateway-under-unpatched-wordpress
+    coverage:
+    - title: Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials
+      url: https://thehackernews.com/2026/11/attackers-target-unpatched.html
+      source: The Hacker News
+      published: '2026-11-03T05:34:37+00:00'
+    published: '2026-11-03T05:34:37+00:00'
+  - id: da75f2b2e75d
+    rank: 3
+    title: Synology warns of C3RB3R ransomware attacks on NAS devices
+    summary: Synology is warning customers to update their NAS devices immediately amid a surge of C3RB3R
+      ransomware attacks. Apply the latest firmware and DSM updates and reduce internet exposure to lower
+      infection risk.
+    url: https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/02/Synology_headpic.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - ransomware
+    - active exploitation
+    - security update
+    rationale: Vendor-issued warning about ongoing ransomware attacks on widely deployed NAS devices;
+      update guidance is directly actionable.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: da75f2b2e75d
+    cluster_key: attacks-c3rb3r-devices-nas-ransomware-synology-warns
+    coverage:
+    - title: Synology warns of C3RB3R ransomware attacks targeting NAS devices
+      url: https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks
+      source: BleepingComputer
+      published: '2026-11-02T11:28:42+00:00'
+    published: '2026-11-02T11:28:42+00:00'
+  - id: 0f68334e8489
+    rank: 4
+    title: BTCPay Server tells operators to update after hot-wallet thefts on outdated instances
+    summary: BTCPay Server maintainers now say hot-wallet thefts are hitting outdated instances and are
+      urging operators to upgrade to the latest release, following earlier advice to shut down vulnerable
+      servers. Update installations and move funds from managed wallets to safe storage.
+    url: https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/08/Bitcoin-cryptocurrency.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - cryptocurrency
+    - security update
+    - active exploitation
+    rationale: 'Update to the BTCPay Server wallet-drain story: the issue is now tied to outdated instances
+      and the guidance is to install the latest release.'
+    is_update: true
+    supersedes: a46e5b2bfea3
+    what_changed: 'Guidance evolved from an urgent shutdown warning to a specific fix: upgrade to the
+      latest BTCPay Server release, with thefts affecting outdated instances.'
+    cluster: a46e5b2bfea3
+    cluster_key: after-btcpay-hot-instances-operators-outdated-server-tells-thefts-update-wallet
+    coverage:
+    - title: BTCPay Server warns of hot wallet crypto thefts on outdated instances
+      url: https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances
+      source: BleepingComputer
+      published: '2026-11-02T15:03:07+00:00'
+    published: '2026-11-02T15:03:07+00:00'
