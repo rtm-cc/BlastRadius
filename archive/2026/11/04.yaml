@@ -1,0 +1,824 @@
+date: '2026-11-04'
+updated_at: '2026-11-04T07:08:08+00:00'
+topics:
+  ai_security:
+  - id: a53e9190822b
+    rank: 1
+    title: Haiou Codex Jailbreak Toolkit Injects Ads Into AI Responses via Persistent 'Prompt Adware'
+    summary: Check Point Research found Haiou, a Chinese-language jailbreak toolkit for OpenAI Codex that
+      persistently alters the coding agent's trusted instructions — global prompts, skills, and configuration
+      files — so ordinary prompts trigger ads for a third-party AI gateway. Dubbed 'prompt adware,' the
+      technique shows how unofficial AI add-ons can modify agent behavior without a conventional executable
+      payload.
+    url: https://blog.checkpoint.com/security/prompt-adware-how-hidden-ai-instructions-could-create-a-new-enterprise-security-risk
+    image: https://blog.checkpoint.com/wp-content/uploads/2026/11/blog_800x400_3.png
+    sources:
+    - Check Point Blog
+    - CyberSecurityNews
+    - Cybersecurity News
+    labels:
+    - AI cybercrime
+    - prompt injection
+    - AI agents
+    rationale: Newly documented, reproducible subversion of an AI coding agent's trusted instructions,
+      demonstrated by Check Point Research and directly relevant to AI security.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a53e9190822b
+    cluster_key: ads-adware-codex-haiou-injects-into-jailbreak-persistent-prompt-responses-toolkit-via
+    coverage:
+    - title: 'Prompt Adware: A New AI Security Risk'
+      url: https://blog.checkpoint.com/security/prompt-adware-how-hidden-ai-instructions-could-create-a-new-enterprise-security-risk
+      source: Check Point Blog
+      published: '2026-11-03T13:00:57+00:00'
+    - title: Hackers Use OpenAI Codex Jailbreak Toolkit That Secretly Injects Ads Into AI Responses
+      url: https://news.google.com/rss/articles/CBMiY0FVX3lxTE9QVVFPaVBDaXZQWEJwbGg0UVQ5UVN6U3pTbFdBNmxCOWNhdEViX2IzcUloNUdVZlZkTkRWMnNKZDNvS2FudGhIWGI2eXVIU2pwNGdNNFo1UFlfWnczOU42d1FpRdIBaEFVX3lxTE5tbFVpVUVMejRPVTlfQUhWU193WDQ1dFJTeGFuYUJVSnlOTVNRc2lQQWNibFVEWGNaeEpELUNIV0pPWTFTalVfei03akVoS25SUzdORFFreENVTExpR0NhZm5mdlJ5cExD
+      source: CyberSecurityNews
+      published: '2026-11-04T05:26:15+00:00'
+    - title: Hackers Use OpenAI Codex Jailbreak Toolkit That Secretly Injects Ads Into AI Responses
+      url: https://cybersecuritynews.com/openai-codex-jailbreak
+      source: Cybersecurity News
+      published: '2026-11-04T05:22:19+00:00'
+    published: '2026-11-03T13:00:57+00:00'
+  - id: 8cad56539e5c
+    rank: 2
+    title: Docker Sandboxes Vulnerability Lets AI Agents Access Sensitive Files Outside Their Sandbox
+      (CVE-2026-103916)
+    summary: A vulnerability in Docker Sandboxes, tracked as CVE-2026-103916, can let AI agents access
+      sensitive files outside their intended sandbox, according to Endor Labs. The flaw undermines the
+      isolation boundary for AI agent workloads and needs to be addressed by affected users.
+    url: https://news.google.com/rss/articles/CBMi1AFBVV95cUxOeU5aWV9pdzdOZXhVVnRnRFRfbU83am5aUGY5Q3liMXVSc0Vwell0bEcwSndWdmY2UWlnZWgxMkhrekVQb0VkM2JsazdFTnltSFE3S3lRb2NPZTdCdnZFVlVQSmNhNUVGUzE1ZTQ2azZySmNoTWtqVVBIdjdBTmptSTB2WjFINE5RakhkV2xKS0pFZ2Z0VVctaFhmS3lnY0VjTzlqV1EtWjJDbGl5Wll3V1A0UE5IMU5RSFQ4QlIzemJFbXpCQWdNMzhmN2EtenhFM2xtYw
+    image: ''
+    sources:
+    - Endor Labs
+    labels:
+    - vulnerability
+    - AI agents
+    rationale: Concrete vulnerability in AI agent sandboxing, matching the topic's focus on vulnerabilities
+      in AI systems and frameworks.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8cad56539e5c
+    cluster_key: access-agents-cve-docker-files-lets-outside-sandbox-sandboxes-sensitive-their-vulnerability
+    coverage:
+    - title: Docker Sandboxes vulnerability lets AI agents access sensitive files outside their sandbox
+        (CVE-2026-103916)
+      url: https://news.google.com/rss/articles/CBMi1AFBVV95cUxOeU5aWV9pdzdOZXhVVnRnRFRfbU83am5aUGY5Q3liMXVSc0Vwell0bEcwSndWdmY2UWlnZWgxMkhrekVQb0VkM2JsazdFTnltSFE3S3lRb2NPZTdCdnZFVlVQSmNhNUVGUzE1ZTQ2azZySmNoTWtqVVBIdjdBTmptSTB2WjFINE5RakhkV2xKS0pFZ2Z0VVctaFhmS3lnY0VjTzlqV1EtWjJDbGl5Wll3V1A0UE5IMU5RSFQ4QlIzemJFbXpCQWdNMzhmN2EtenhFM2xtYw
+      source: Endor Labs
+      published: '2026-11-03T23:16:43+00:00'
+    published: '2026-11-03T23:16:43+00:00'
+  - id: 1a1740264c6e
+    rank: 3
+    title: Red Hat Patches Linux Kernel TCP RCE CVE-2026-98432; Ubuntu Fixes in Testing
+    summary: Red Hat released fixed kernels for CVE-2026-98432, the Linux kernel IPv4 TCP use-after-free
+      flaw that Anthropic says its unreleased AI model produced a working exploit for. Ubuntu has published
+      fixes in its opt-in testing channel for its three newest LTS releases, with no date yet for a regular
+      update.
+    url: https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdf8UfDHsjH9VaJGtYT5WgjtJ1G5YRMkjPWNeKn-hw05sM9ny0kW9L2eIc3UCiIQ7qmc_TmfrenS1WH8KiRBjln2hQS0X7DUlykxdHrzDgg4uoiHpiOf3fVTOnUuOt4618z3PN7hw1AfUch_y0Tot3ubTga5LEfyWnATkzegfQBSWxMbzNzJaGY18QqC8/s1600/linux-rce.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - Linux kernel
+    - security update
+    - vulnerability
+    rationale: Material follow-up to a previously covered AI-discovered kernel flaw; vendor patch availability
+      is a concrete development for defenders.
+    is_update: true
+    supersedes: fb0ce250beee
+    what_changed: Red Hat released fixed kernels for RHEL 8, 9, and 10; Ubuntu published fixes in its
+      testing channel for its three newest LTS releases, with no date yet for a regular update.
+    cluster: 335c9a1c723b
+    cluster_key: 2026-98432-cve-fixes-hat-kernel-linux-patches-rce-red-tcp-ubuntu
+    coverage:
+    - title: Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing
+      url: https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html
+      source: The Hacker News
+      published: '2026-11-03T11:23:53+00:00'
+    published: '2026-11-03T11:23:53+00:00'
+  breaches:
+  - id: dda47e79f387
+    rank: 1
+    title: Binance Says Fake Job Interviews and Tampered Homebrew Led to $6.34B Crypto Heist
+    summary: Binance revealed that the record $6.34 billion theft from its exchange was a multi-stage
+      campaign, not a simple phishing incident. North Korean attackers used fake job interviews and a
+      poisoned coding task to target two engineers, tampered with a Homebrew installation, and abused
+      an internal AI tool to reach wallet infrastructure. The FBI attributes the theft to the North Korean
+      group TraderTraitor.
+    url: https://www.bleepingcomputer.com/news/security/binance-says-fake-job-interview-led-to-63-billion-crypto-heist
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/30/Binance.jpg
+    sources:
+    - BleepingComputer
+    - WIRED Security
+    - The Hacker News
+    - The Record
+    - Cybersecurity News
+    - The Tech Buzz
+    - The Cryptonomist
+    labels:
+    - cryptocurrency
+    - North Korea
+    - social engineering
+    - targeted attacks
+    rationale: Major update to the Binance breach story with new attack-chain details and attribution.
+    is_update: true
+    supersedes: df71def910fa
+    what_changed: New reporting shows the initial access came from fake job interviews, a poisoned coding
+      task and a tampered Homebrew install, with two engineers targeted and an internal AI tool abused
+      to reach wallet systems.
+    cluster: f7e0074ade36
+    cluster_key: 34b-and-binance-crypto-fake-heist-homebrew-interviews-job-led-says-tampered
+    coverage:
+    - title: Binance says fake job interview led to $6.3 billion crypto heist
+      url: https://www.bleepingcomputer.com/news/security/binance-says-fake-job-interview-led-to-63-billion-crypto-heist
+      source: BleepingComputer
+      published: '2026-11-03T20:05:50+00:00'
+    - title: Binance Says Hackers Used Well-Known Tricks to Carry Out a $6.34 Billion Heist
+      url: https://www.wired.com/story/binance-says-hackers-used-well-known-tricks-to-carry-out-a-dollar634-billion-heist
+      source: WIRED Security
+      published: '2026-11-03T19:04:58+00:00'
+    - title: Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft
+      url: https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html
+      source: The Hacker News
+      published: '2026-11-03T16:55:58+00:00'
+    - title: Binance CEO says ‘months-long campaign’ led to $6.3 billion theft as N. Korea denies responsibility
+      url: https://therecord.media/binance-cryptocurrency-theft-months-long-campaign-nkorea
+      source: The Record
+      published: '2026-11-03T16:42:00+00:00'
+    - title: North Korean Hackers Abuse Internal AI Tool and Fake Job Interviews in $6.34 Billion Binance
+        Heist
+      url: https://cybersecuritynews.com/fake-job-interviews-binance-heist
+      source: Cybersecurity News
+      published: '2026-11-03T16:39:33+00:00'
+    - title: Binance $6.3B Heist Used Fake Job Interviews, AI Tools
+      url: https://news.google.com/rss/articles/CBMijgFBVV95cUxOZkNQQkpaRlZpVllLSVpDUnZSZ1d0eFRyOTVsVjNEWlRyWTI0UkNfX0YzSFZDekIzYWNEVWN0RUtGc2tlaEVJRHRkcDZ3X1lfYUUtc2s4ZkdPcmFrcUk0NEpTd0VfSU80V1EtX3lDdGR1ZHdZODAzMC1ub1lDWlh3ekdaQi1OcjBseUE3Z3R3
+      source: The Tech Buzz
+      published: '2026-11-03T23:02:32+00:00'
+    - title: 'Binance $6.34B Hack: Inside the AI Tool Exploit and Aftermath'
+      url: https://news.google.com/rss/articles/CBMiaEFVX3lxTFBQcmpyV1dxV2l3RksyMDBJSGdCOVExZndmaTRIWTBmai1pU2l3OFBFSHM1eENWSmJVOXZUeTFyN2xEdXZMdG9pWDlzMk5sMFFIdTlJdTQ5NGEyUW1la0VteVVHYjAxQmRL
+      source: The Cryptonomist
+      published: '2026-11-03T14:54:22+00:00'
+    published: '2026-11-03T20:05:50+00:00'
+  - id: bce0e144742f
+    rank: 2
+    title: Harvard Data Breach Exposes Info From Over 850,000 Accounts
+    summary: A breach of Harvard University's Alumni Affairs and Development systems, first disclosed
+      after a November 2025 intrusion linked to ShinyHunters, has been added to Have I Been Pwned with
+      850,537 breached accounts. Exposed data includes email addresses, phone numbers, and extensive donor
+      and alumni profile information as well as data on some faculty, staff and students.
+    url: https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/03/Harvard-University.jpg
+    sources:
+    - BleepingComputer
+    - Have I Been Pwned
+    - DataBreaches.net
+    - SecurityWeek
+    labels:
+    - data breach
+    - education
+    - ShinyHunters
+    rationale: Newly indexed breach of a major university with a large affected population.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bce0e144742f
+    cluster_key: 000-850-accounts-breach-data-exposes-from-harvard-info-over
+    coverage:
+    - title: Harvard University data breach exposed info of 851,000 accounts
+      url: https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts
+      source: BleepingComputer
+      published: '2026-11-03T10:53:25+00:00'
+    - title: Harvard - 850,537 breached accounts
+      url: https://haveibeenpwned.com/Breach/Harvard
+      source: Have I Been Pwned
+      published: '2026-11-03T07:24:50+00:00'
+    - title: Nine health systems affected by AI company data breach
+      url: https://databreaches.net/2026/11/03/nine-health-systems-affected-by-ai-company-data-breach
+      source: DataBreaches.net
+      published: '2026-11-03T20:02:54+00:00'
+    - title: Frontline Education Data Breach Impacts Over 1.3 Million
+      url: https://www.securityweek.com/frontline-education-data-breach-impacts-over-1-3-million
+      source: SecurityWeek
+      published: '2026-11-03T14:32:38+00:00'
+    published: '2026-11-03T10:53:25+00:00'
+  - id: e02213b9c94d
+    rank: 3
+    title: Philippine Migrant Worker Data Likely Leaked in 69GB Government Breach
+    summary: An unknown attacker appears to have exfiltrated SQL Server backups from the Philippine Overseas
+      Employment Administration in under 30 minutes. The 69GB trove likely contains personal data of migrant
+      workers; the full scope has not been officially confirmed.
+    url: https://www.darkreading.com/cyberattacks-data-breaches/philippine-migrant-worker-data-69gb-government-breach
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt61b6b950560b6729/6a974efda0ff3877b64d75b3/philippines-south-china-sea-map-AustralianCamera-shutterstock.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    - DataBreaches.net
+    labels:
+    - data breach
+    - government
+    - data exfiltration
+    rationale: Likely government data breach involving sensitive migrant worker records.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e02213b9c94d
+    cluster_key: 69gb-breach-data-government-leaked-likely-migrant-philippine-worker
+    coverage:
+    - title: Philippine Migrant Worker Data Likely Leaked in 69GB Government Breach
+      url: https://www.darkreading.com/cyberattacks-data-breaches/philippine-migrant-worker-data-69gb-government-breach
+      source: Dark Reading
+      published: '2026-11-04T02:00:00+00:00'
+    - title: 'AU: Criminal investigation after NSW Health hit by cyber breach'
+      url: https://databreaches.net/2026/11/03/au-criminal-investigation-after-nsw-health-hit-by-cyber-breach
+      source: DataBreaches.net
+      published: '2026-11-03T22:29:14+00:00'
+    published: '2026-11-04T02:00:00+00:00'
+  - id: f69ebe99eded
+    rank: 4
+    title: Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes
+    summary: Blockchain infrastructure provider Chainstack said an external attacker gained unauthorized
+      access to parts of its production infrastructure, exposing customer data and password hashes. The
+      company assesses the incident as part of a large-scale AI-powered attack campaign and is warning
+      customers to reset credentials.
+    url: https://thehackernews.com/2026/11/chainstack-reports-production-systems.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMgLc61q6cTompbBY4lS-pqinmS1_3vYBYH7OVnnFTmOZfMk8R7houuqUmnMhUs-gTI-55HwieAaPuCI_zhc0XNw74PhfZVbCjWexPUUugMc1crPvP6uQsic7o3GDy5KXbYJE8LtXqdban8cTcfnn9AxRgOkR0w5_bQx-pHTR1A5-ttEHcpqGkgYajjSiA/s1600/chainstack.png
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    labels:
+    - data breach
+    - cryptocurrency
+    rationale: Confirmed infrastructure breach exposing customer data and password hashes.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f69ebe99eded
+    cluster_key: and-breach-chainstack-customer-data-exposing-hashes-password-production-reports-systems
+    coverage:
+    - title: Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes
+      url: https://thehackernews.com/2026/11/chainstack-reports-production-systems.html
+      source: The Hacker News
+      published: '2026-11-03T18:16:19+00:00'
+    - title: Hackers hijack cPGuard autoupdate to deploy backdoor, steal data
+      url: https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data
+      source: BleepingComputer
+      published: '2026-11-03T22:18:50+00:00'
+    - title: cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes
+      url: https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html
+      source: The Hacker News
+      published: '2026-11-03T15:16:32+00:00'
+    published: '2026-11-03T18:16:19+00:00'
+  - id: e73f39dfc6ea
+    rank: 5
+    title: Revolve Breach May Affect Up to 1.5 Million People
+    summary: New reporting on the Revolve data breach suggests up to 1.5 million people may have had personal
+      and payment card data exposed, a major increase from the 200,000 figure previously reported. Revolve
+      has not confirmed the revised estimate; affected customers should watch for card fraud and phishing.
+    url: https://www.malwarebytes.com/blog/data-breaches/2026/11/revolve-card-breach-1-5-million-people-may-be-affected
+    image: https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/11/revolve.jpg
+    sources:
+    - Malwarebytes
+    labels:
+    - data breach
+    - e-commerce
+    - cybercrime
+    rationale: Material update significantly widening the estimated impact of the Revolve breach.
+    is_update: true
+    supersedes: 5769fd486117
+    what_changed: Scope estimate raised from 200,000 to up to 1.5 million people potentially affected.
+    cluster: 5769fd486117
+    cluster_key: affect-breach-may-million-people-revolve
+    coverage:
+    - title: 'Revolve card breach: 1.5 million people may be affected'
+      url: https://www.malwarebytes.com/blog/data-breaches/2026/11/revolve-card-breach-1-5-million-people-may-be-affected
+      source: Malwarebytes
+      published: '2026-11-03T11:26:44+00:00'
+    published: '2026-11-03T11:26:44+00:00'
+  - id: b169d6c31c68
+    rank: 6
+    title: mSecure Password Manager Warns Users to Reset Passwords, 2FA and Passkeys
+    summary: mSecure developer mSeven Software is advising current and former customers to change passwords,
+      reset two-factor authentication and remove passkeys after detecting suspicious activity linked to
+      the app. The company has not confirmed what data was exposed, but the advisory urges users to treat
+      stored credentials as at risk.
+    url: https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtvbYhodewxI1TOMjVp0GKUmMdudVKH27My8auvMEvDbCkd_JBzdJjjBb99j2a2a9R1wgkOaTdLcM_9FEmpyweVquFetLeyfzSC5UgpukK8Ukw7keJb5HwmTnPP1qWT2QzVX3FKLtBKLDFnuMrzmfgW5dwYf6SJHZHqSDj_eYGdap3ECOMMI1Em6_oS_0/s1600/msecure.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - data breach
+    - authentication
+    - account takeover
+    rationale: Security incident at a password manager requiring urgent user action to protect stored
+      credentials.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b169d6c31c68
+    cluster_key: 2fa-and-manager-msecure-passkeys-password-passwords-reset-users-warns
+    coverage:
+    - title: mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity
+      url: https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html
+      source: The Hacker News
+      published: '2026-11-03T18:46:38+00:00'
+    - title: Password Manager mSecure Urges Users to Secure Logins and Confidential Data Stored
+      url: https://cybersecuritynews.com/msecure-security-incident
+      source: Cybersecurity News
+      published: '2026-11-03T16:21:27+00:00'
+    published: '2026-11-03T18:46:38+00:00'
+  fraud_phishing:
+  - id: 59e652aef108
+    rank: 1
+    title: Phishing Operations Impersonate Prediction Markets Like Polymarket and Kalshi
+    summary: Criminals are exploiting growing interest in prediction markets by selling phishing infrastructure
+      that mimics sites like Polymarket and Kalshi. According to Recorded Future, 'traffers' provide fellow
+      scammers with lookalike websites, admin panels, cryptocurrency payment infrastructure, victim-management
+      tools, and support. The lures push users toward fake login pages designed to steal credentials and
+      crypto funds.
+    url: https://blog.knowbe4.com/warning-phishing-operations-are-impersonating-prediction-markets
+    image: https://blog.knowbe4.com/hubfs/designer%20hand%20working%20and%20smart%20phone%20and%20laptop%20on%20wooden%20desk%20in%20office%20with%20london%20city%20background.jpeg
+    sources:
+    - KnowBe4 Research
+    labels:
+    - phishing
+    - cybercrime
+    - cryptocurrency
+    rationale: Directly a phishing campaign targeting individuals through impersonation of popular prediction-market
+      brands; describes the lure and infrastructure clearly.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 59e652aef108
+    cluster_key: and-impersonate-kalshi-like-markets-operations-phishing-polymarket-prediction
+    coverage:
+    - title: 'Warning: Phishing Operations Are Impersonating Prediction Markets'
+      url: https://blog.knowbe4.com/warning-phishing-operations-are-impersonating-prediction-markets
+      source: KnowBe4 Research
+      published: '2026-11-03T21:00:12+00:00'
+    published: '2026-11-03T21:00:12+00:00'
+  policy:
+  - id: 81a14654f7dc
+    rank: 1
+    title: Europol Dismantles Investment Fraud Service Used Across 50 Countries
+    summary: Europol coordinated a takedown of an investment fraud scheme that supplied fraudulent trading
+      websites to criminal groups. Seven people were arrested, more than 100 servers were seized, and
+      searches were carried out across 17 countries; potential victims span more than 50 countries and
+      estimated losses are at least $4.5 million. The investigation began after a German couple reported
+      being unable to withdraw savings from an online trading platform.
+    url: https://cyberscoop.com/europol-investment-scam-takedown
+    image: https://cyberscoop.com/wp-content/uploads/sites/3/2021/12/GettyImages-1253014959.jpg
+    sources:
+    - CyberScoop
+    - Dark Reading
+    - Help Net Security
+    - BleepingComputer
+    labels:
+    - law enforcement
+    - cybercrime
+    - takedown
+    - investigation
+    rationale: International law enforcement action that removes criminal infrastructure and arrests suspects,
+      directly fitting the Policy & Enforcement scope.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 81a14654f7dc
+    cluster_key: across-countries-dismantles-europol-fraud-investment-service-used
+    coverage:
+    - title: Europol dismantles investment scheme that impacted potential victims in 50 countries
+      url: https://cyberscoop.com/europol-investment-scam-takedown
+      source: CyberScoop
+      published: '2026-11-03T17:02:27+00:00'
+    - title: Germany Busts 'Crime-as-a-Service' Investment Fraud Outfit
+      url: https://www.darkreading.com/cybersecurity-operations/germany-crime-service-investment-fraud
+      source: Dark Reading
+      published: '2026-11-03T21:57:12+00:00'
+    - title: Police seize over 100 servers linked to investment fraud with more than €4 million in losses
+      url: https://www.helpnetsecurity.com/2026/11/03/investment-fraud-network-servers-seized
+      source: Help Net Security
+      published: '2026-11-03T14:31:51+00:00'
+    - title: Police seizes over 100 servers in investment scam crackdown
+      url: https://www.bleepingcomputer.com/news/security/police-seizes-over-100-servers-in-investment-scam-crackdown
+      source: BleepingComputer
+      published: '2026-11-03T13:33:49+00:00'
+    published: '2026-11-03T17:02:27+00:00'
+  - id: 9bffe6887263
+    rank: 2
+    title: ILC Dover to Pay $13 Million Over Missed Cybersecurity Contract Requirements
+    summary: ILC Dover and ILC Astrospace agreed to pay $13 million to resolve False Claims Act allegations
+      that they failed to meet cybersecurity obligations in contracts with the U.S. Army, Missile Defense
+      Agency, and NASA. The settlement is a civil enforcement action tied directly to contractual cybersecurity
+      requirements.
+    url: https://cyberscoop.com/ilc-dover-cybersecurity-settlement-false-claims-act
+    image: https://cyberscoop.com/wp-content/uploads/sites/3/2026/11/GettyImages-175399977.jpg
+    sources:
+    - CyberScoop
+    labels:
+    - settlement
+    - government
+    rationale: Government enforcement settlement over failure to meet cybersecurity contract requirements,
+      setting a financial precedent for defense and aerospace contractors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9bffe6887263
+    cluster_key: contract-cybersecurity-dover-ilc-million-missed-over-pay-requirements
+    coverage:
+    - title: Defense and aerospace firm settles with government over allegedly failing to meet cybersecurity
+        contract requirements
+      url: https://cyberscoop.com/ilc-dover-cybersecurity-settlement-false-claims-act
+      source: CyberScoop
+      published: '2026-11-03T21:49:51+00:00'
+    published: '2026-11-03T21:49:51+00:00'
+  - id: dde63e5d7063
+    rank: 3
+    title: Oklahoma Man Charged With Mailing Hoax Substances to Election Officials
+    summary: Federal prosecutors charged Robin Patrick Martin with mailing threatening communications
+      and conveying false or misleading information after he allegedly sent white powdery substances to
+      election officials nationwide. The charging documents describe a campaign beginning September 16,
+      2024 that targeted state election officials and is linked to efforts to intimidate them.
+    url: https://cyberscoop.com/oklahoma-man-charged-white-powder-letters-election-officials
+    image: https://cyberscoop.com/wp-content/uploads/sites/3/2026/11/GettyImages-1280380298-1.jpg
+    sources:
+    - CyberScoop
+    labels:
+    - law enforcement
+    - government
+    rationale: Federal criminal charges against an individual targeting election infrastructure personnel,
+      fitting the enforcement and government-protection focus of this topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: dde63e5d7063
+    cluster_key: charged-election-hoax-mailing-man-officials-oklahoma-substances-with
+    coverage:
+    - title: Oklahoma man charged with mailing threats, substances to election officials nationwide
+      url: https://cyberscoop.com/oklahoma-man-charged-white-powder-letters-election-officials
+      source: CyberScoop
+      published: '2026-11-03T18:51:23+00:00'
+    published: '2026-11-03T18:51:23+00:00'
+  - id: e4d6fea988b5
+    rank: 4
+    title: Russia Dismantles VasyGrek Cybercrime Group and Detains Three Suspects
+    summary: Russia's Interior Ministry said police dismantled the infrastructure of the VasyGrek cybercrime
+      group and detained three suspected members, with assistance from cybersecurity firm Kaspersky. The
+      operation removes a criminal group's infrastructure and publicly identifies its alleged operators.
+    url: https://therecord.media/russia-dismantles-vasygrek-infrastructure-detains-three
+    image: http://cms.therecord.media/uploads/russian_arrests_f80b0410db.jpg
+    sources:
+    - The Record
+    labels:
+    - law enforcement
+    - cybercrime
+    - takedown
+    - investigation
+    rationale: Law enforcement dismantlement of cybercrime infrastructure and arrests, matching the policy
+      and enforcement mandate to remove real threat actors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e4d6fea988b5
+    cluster_key: and-cybercrime-detains-dismantles-group-russia-suspects-three-vasygrek
+    coverage:
+    - title: Russia dismantles infrastructure of VasyGrek cybercrime group, detains three suspects
+      url: https://therecord.media/russia-dismantles-vasygrek-infrastructure-detains-three
+      source: The Record
+      published: '2026-11-03T13:50:00+00:00'
+    published: '2026-11-03T13:50:00+00:00'
+  threats:
+  - id: 16d2110a854e
+    rank: 1
+    title: 'Gorbag: Orcs at the border harvesting intelligence from Ukraine'
+    summary: ESET details Russia-aligned Gorbag, active since at least February 2025, using simple infostealers
+      against Ukrainian law enforcement, justice, local administrations near the front line, and defense
+      organizations. The group exploits a WinRAR flaw for delivery and focuses exclusively on Ukrainian
+      targets.
+    url: https://www.welivesecurity.com/en/eset-research/gorbag-orcs-border-harvesting-intelligence-ukraine
+    image: https://web-assets.esetstatic.com/wls/2026/10-26/gorbag-phishing.jpg
+    sources:
+    - ESET WeLiveSecurity
+    - Infosecurity Magazine
+    - The Hacker News
+    labels:
+    - espionage
+    - targeted attacks
+    - malware
+    rationale: Newly documented Russia-aligned espionage group with clear targeting and technical detail
+      from ESET.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 16d2110a854e
+    cluster_key: border-from-gorbag-harvesting-intelligence-orcs-the-ukraine
+    coverage:
+    - title: 'Gorbag: Orcs at the border harvesting intelligence from Ukraine'
+      url: https://www.welivesecurity.com/en/eset-research/gorbag-orcs-border-harvesting-intelligence-ukraine
+      source: ESET WeLiveSecurity
+      published: '2026-11-03T09:50:00+00:00'
+    - title: Russia-Aligned Gorbag Targets Ukraine for Intelligence
+      url: https://www.infosecurity-magazine.com/news/russia-gorbag-targets-ukraine
+      source: Infosecurity Magazine
+      published: '2026-11-03T15:30:00+00:00'
+    - title: Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware
+      url: https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html
+      source: The Hacker News
+      published: '2026-11-03T11:00:45+00:00'
+    published: '2026-11-03T09:50:00+00:00'
+  - id: 730375efabb0
+    rank: 2
+    title: UK school estate hit by 3AM ransomware in suspected AI-assisted attack
+    summary: A 3AM ransomware affiliate hit a UK school estate from an unmanaged host, encrypting about
+      37 of nearly 50 machines. The attackers abused built-in Windows tools, stolen backup passwords,
+      and fake admin accounts, and researchers saw signs of AI-generated or AI-revised commands during
+      the breach.
+    url: https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack
+    image: https://www.bleepstatic.com/content/hl-images/2026/04/28/ransomware.jpg
+    sources:
+    - BleepingComputer
+    - Cybersecurity News
+    - Dark Reading
+    labels:
+    - ransomware
+    - education
+    - AI agents
+    - cybercrime
+    rationale: Active ransomware intrusion with hands-on attack techniques and suspected AI-assisted command
+      generation.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 730375efabb0
+    cluster_key: 3am-assisted-attack-estate-hit-ransomware-school-suspected
+    coverage:
+    - title: UK school estate hit by 3AM ransomware in suspected AI-assisted attack
+      url: https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack
+      source: BleepingComputer
+      published: '2026-11-03T14:00:00+00:00'
+    - title: Hackers Use AI Agents to Launch 3AM Ransomware Attacks Against UK School Networks
+      url: https://cybersecuritynews.com/hackers-use-ai-agents-2
+      source: Cybersecurity News
+      published: '2026-11-03T15:55:08+00:00'
+    - title: 3AM Affiliate Embraces AI-Like Loops in European School Attack
+      url: https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack
+      source: Dark Reading
+      published: '2026-11-03T14:00:00+00:00'
+    published: '2026-11-03T14:00:00+00:00'
+  - id: 0a16133c2c92
+    rank: 3
+    title: Attackers exploit critical Node-RED flaw to deploy Linux bot and backdoors (CVE-2026-58115)
+    summary: VulnCheck observed attackers exploiting CVE-2026-58115, an authentication flaw in Node-RED,
+      to install a Linux bot and webshells on unprotected servers. Node-RED is embedded in some industrial
+      control products, broadening the risk.
+    url: https://www.helpnetsecurity.com/2026/11/03/node-red-cve-2026-58115-exploitation
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/03134721/node-red-1500.webp
+    sources:
+    - Help Net Security
+    - SecurityWeek
+    labels:
+    - active exploitation
+    - malware
+    - botnet
+    - CVE-2026-58115
+    - vulnerability
+    rationale: Active exploitation of a critical flaw that leads to botnet and backdoor deployment in
+      IT and industrial environments.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0a16133c2c92
+    cluster_key: and-attackers-backdoors-bot-critical-cve-deploy-exploit-flaw-linux-node-red
+    coverage:
+    - title: Attackers exploit critical Node-RED flaw to deploy Linux bot and backdoors (CVE-2026-58115)
+      url: https://www.helpnetsecurity.com/2026/11/03/node-red-cve-2026-58115-exploitation
+      source: Help Net Security
+      published: '2026-11-03T12:59:51+00:00'
+    - title: Critical Node-RED Flaw Exploited in Attacks
+      url: https://www.securityweek.com/critical-node-red-flaw-exploited-in-attacks
+      source: SecurityWeek
+      published: '2026-11-03T12:10:19+00:00'
+    published: '2026-11-03T12:59:51+00:00'
+  - id: 12c1723ffdbf
+    rank: 4
+    title: Hackers Use Stolen Microsoft Entra ID and Azure DevOps Credentials to Access 27 Organizations
+    summary: Todyl reports an ongoing campaign since November 1 using stolen Microsoft Entra ID app credentials
+      and Azure DevOps identities to reach Microsoft 365 and Azure environments. The operator hit around
+      45 app registrations across roughly 18 organizations, with more than 33 authenticating successfully
+      and downstream access reaching at least 27 organizations, including MSP customers.
+    url: https://cybersecuritynews.com/stolen-entra-id-and-azure-credentials
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Stolen-Entra-ID-and-Azure-Credentials.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - targeted attacks
+    - account takeover
+    - exposed credentials
+    rationale: Active credential-abuse campaign against MSPs and their customers with concrete scale and
+      attacker techniques.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 12c1723ffdbf
+    cluster_key: access-and-azure-credentials-devops-entra-hackers-microsoft-organizations-stolen-use
+    coverage:
+    - title: Hackers Use Stolen Microsoft Entra ID and Azure DevOps Credentials to Access 27 Organizations
+      url: https://cybersecuritynews.com/stolen-entra-id-and-azure-credentials
+      source: Cybersecurity News
+      published: '2026-11-04T05:45:46+00:00'
+    published: '2026-11-04T05:45:46+00:00'
+  - id: 9c89c3d4d009
+    rank: 5
+    title: Over 100 European Stores Hit as Supermarket Fridge Attacks Return
+    summary: A second wave of attacks on supermarket refrigeration controls hit more than 100 stores across
+      at least 10 European countries, with temperatures raised as high as 50°C and food pulled from shelves.
+      Retailers in Belgium, Sweden, Ireland, Estonia and the UK were affected.
+    url: https://www.securityweek.com/over-100-european-stores-hit-as-supermarket-fridge-attacks-resume
+    image: https://www.securityweek.com/wp-content/uploads/2026/10/supermarket-refrigerators.jpeg
+    sources:
+    - SecurityWeek
+    - Dark Reading
+    - The Record
+    - Cybersecurity News
+    - Infosecurity Magazine
+    - The Hacker News
+    - DataBreaches.net
+    labels:
+    - critical infrastructure
+    - cyberattack
+    rationale: Material scope expansion of an active OT attack on food supply infrastructure, now quantified
+      at 100+ stores in 10+ countries.
+    is_update: true
+    supersedes: f85978e12192
+    what_changed: Later reporting expands the campaign to more than 100 stores in at least 10 countries,
+      including the UK, Ireland and Estonia, with temperatures up to 50°C.
+    cluster: f85978e12192
+    cluster_key: 100-attacks-european-fridge-hit-over-return-stores-supermarket
+    coverage:
+    - title: Over 100 European Stores Hit as Supermarket Fridge Attacks Return
+      url: https://www.securityweek.com/over-100-european-stores-hit-as-supermarket-fridge-attacks-resume
+      source: SecurityWeek
+      published: '2026-11-03T07:43:24+00:00'
+    - title: Fresh European Fridge Attacks Put Cold-Chain Security in Focus
+      url: https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security
+      source: Dark Reading
+      published: '2026-11-03T22:16:49+00:00'
+    - title: British businesses caught in Europe-wide supermarket fridge attacks
+      url: https://therecord.media/british-businesses-caught-in-europe-wide-supermarket-fridge-attacks
+      source: The Record
+      published: '2026-11-03T17:43:00+00:00'
+    - title: Hackers Target Supermarket Refrigeration Systems Across Europe, Raising Freezer Temperatures
+        to 50°C
+      url: https://cybersecuritynews.com/supermarket-refrigeration-systems-across-europe
+      source: Cybersecurity News
+      published: '2026-11-03T15:51:08+00:00'
+    - title: Cyber-Attack on Refrigeration Systems Hits Supermarkets Across Europe
+      url: https://www.infosecurity-magazine.com/news/cyber-refrigeration-supermarkets
+      source: Infosecurity Magazine
+      published: '2026-11-03T13:45:00+00:00'
+    - title: New Wave of Refrigeration Cyberattacks Hits Supermarkets Across Europe, Forcing Stores to
+        Pull Food
+      url: https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html
+      source: The Hacker News
+      published: '2026-11-03T07:27:07+00:00'
+    - title: Hackers Hijacked French Blood Plasma Freezers, Changing Temperature Settings From −30°C to
+        110°C
+      url: https://cybersecuritynews.com/french-blood-plasma-freezers-hacked
+      source: Cybersecurity News
+      published: '2026-11-04T02:35:39+00:00'
+    - title: French blood storage units targeted in cyberattack
+      url: https://databreaches.net/2026/11/03/french-blood-storage-units-targeted-in-cyberattack
+      source: DataBreaches.net
+      published: '2026-11-04T01:31:44+00:00'
+    - title: Hackers Use Stolen Microsoft Entra ID and Azure DevOps Credentials to Access 27 Organizations
+      url: https://cybersecuritynews.com/stolen-entra-id-and-azure-credentials
+      source: Cybersecurity News
+      published: '2026-11-04T05:45:46+00:00'
+    published: '2026-11-03T07:43:24+00:00'
+  - id: 6a20edca24c1
+    rank: 6
+    title: Hackers Hijacked French Blood Plasma Freezers, Changing Temperature Settings From −30°C to
+      110°C
+    summary: Attackers changed temperature settings on refrigeration equipment used by the French Blood
+      Establishment (EFS) after targeting cooling service provider Coolworld, raising concerns that frozen
+      plasma for transfusions may have been spoiled. Facilities in Bourgogne-Franche-Comté were reportedly
+      affected and France's health authorities are investigating.
+    url: https://cybersecuritynews.com/french-blood-plasma-freezers-hacked
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Blood-Plasma-Freezers-Hacked.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - critical infrastructure
+    - healthcare
+    - cyberattack
+    rationale: Active OT tampering with medical cold-chain infrastructure, distinct from the supermarket
+      refrigeration wave.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6a20edca24c1
+    cluster_key: 110-blood-changing-freezers-french-from-hackers-hijacked-plasma-settings-temperature
+    coverage:
+    - title: Hackers Hijacked French Blood Plasma Freezers, Changing Temperature Settings From −30°C to
+        110°C
+      url: https://cybersecuritynews.com/french-blood-plasma-freezers-hacked
+      source: Cybersecurity News
+      published: '2026-11-04T02:35:39+00:00'
+    published: '2026-11-04T02:35:39+00:00'
+  - id: ea7a6f599bda
+    rank: 7
+    title: Fake-download campaign uses trojanized installers to deliver monetization payloads
+    summary: Microsoft Threat Intelligence documents a fake-download campaign targeting users of cracked
+      software, free games, activators, and plugins. Trojanized Inno Setup-style installers deliver multiple
+      'offers' that share internet bandwidth, run computing workloads, or install unwanted utilities,
+      turning Windows machines into revenue sources.
+    url: https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads
+    image: https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2026/02/MS_Actional-Insights_Detection-hunting.png
+    sources:
+    - Microsoft Threat Intelligence
+    - Cybersecurity News
+    labels:
+    - malware
+    - cybercrime
+    rationale: New malware distribution campaign with clear monetization model and Microsoft-provided
+      mitigation guidance.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ea7a6f599bda
+    cluster_key: campaign-deliver-download-fake-installers-monetization-payloads-trojanized-uses
+    coverage:
+    - title: Fake-download campaign uses trojanized installers to deliver monetization payloads
+      url: https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads
+      source: Microsoft Threat Intelligence
+      published: '2026-11-03T17:32:47+00:00'
+    - title: Hackers Use Fake Software Downloads to Secretly Hijack Windows PCs and Monetize Their Resources
+      url: https://cybersecuritynews.com/hackers-use-fake-software-downloads
+      source: Cybersecurity News
+      published: '2026-11-04T06:44:45+00:00'
+    published: '2026-11-03T17:32:47+00:00'
+  vulnerabilities:
+  - id: e81761d63f85
+    rank: 1
+    title: CISA adds WordPress Core RCE flaw CVE-2026-119977 to KEV
+    summary: CISA added CVE-2026-119977, a time-of-check/time-of-use race condition in WordPress Core,
+      to its Known Exploited Vulnerabilities catalog based on evidence of active exploitation. The flaw
+      can lead to unauthenticated remote code execution. Apply the patched WordPress release immediately;
+      federal agencies must remediate under BOD 26-04.
+    url: https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - SecurityWeek
+    labels:
+    - WordPress
+    - CISA
+    - KEV
+    - active exploitation
+    - remote code execution
+    rationale: The WordPress core RCE story was published before a CVE was assigned; the CISA KEV entry
+      is a new, actionable development.
+    is_update: true
+    supersedes: '704920892434'
+    what_changed: CISA assigned CVE-2026-119977 and added the actively exploited flaw to its Known Exploited
+      Vulnerabilities catalog.
+    cluster: '704920892434'
+    cluster_key: 119977-2026-adds-cisa-core-cve-flaw-kev-rce-wordpress
+    coverage:
+    - title: CISA Adds One Known Exploited Vulnerability to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog
+      source: CISA
+      published: '2026-11-03T12:00:00+00:00'
+    - title: Android’s November 2026 Updates Patch Over 200 Vulnerabilities
+      url: https://www.securityweek.com/androids-november-2026-updates-patch-over-200-vulnerabilities
+      source: SecurityWeek
+      published: '2026-11-03T12:21:49+00:00'
+    published: '2026-11-03T12:00:00+00:00'
+  - id: 03ceebed7a56
+    rank: 2
+    title: CISA warns of high-severity SQL injection flaws in Subnet PowerSYSTEM Center
+    summary: CISA published an advisory covering CVE-2026-63017 and CVE-2026-63774 in Subnet Solutions
+      PowerSYSTEM Center, a power-system analysis tool. Successful exploitation could allow an attacker
+      to execute unauthorized SQL commands and access unauthorized resources, with CVSS v3 scores around
+      9. Upgrade affected PowerSYSTEM Center versions per the vendor's guidance.
+    url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    labels:
+    - critical infrastructure
+    - SQL injection
+    - CISA
+    - advisory
+    rationale: High-severity CISA ICS advisory with patch guidance for critical infrastructure asset owners.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 03ceebed7a56
+    cluster_key: center-cisa-flaws-high-injection-powersystem-severity-sql-subnet-warns
+    coverage:
+    - title: Subnet Solutions PowerSYSTEM Center
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01
+      source: CISA
+      published: '2026-11-03T12:00:00+00:00'
+    published: '2026-11-03T12:00:00+00:00'
