@@ -32,8 +32,11 @@ window:
   # The first run, with no state.yaml yet.
   default_hours: 24
   # Never look back less than this, or more - two weeks of downtime gives a
-  # four day board, not a two week one.
-  min_hours: 6
+  # four day board, not a two week one. 30, not 24: a daily run then
+  # overlaps the previous one by ~6h, so an item a feed dated earlier but
+  # listed late is still caught, and a rerun always sees the whole day.
+  # The history stops the overlap from repeating anything.
+  min_hours: 30
   max_hours: 96
   overlap_minutes: 30
 
