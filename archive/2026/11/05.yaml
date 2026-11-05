@@ -70,6 +70,35 @@ topics:
       published: '2026-11-04T05:22:19+00:00'
     published: '2026-11-03T13:00:57+00:00'
     is_carryover: true
+  - id: 8cad56539e5c
+    rank: 3
+    title: Docker Sandboxes Vulnerability Lets AI Agents Access Sensitive Files Outside Their Sandbox
+      (CVE-2026-103916)
+    summary: A vulnerability in Docker Sandboxes, tracked as CVE-2026-103916, can let AI agents access
+      sensitive files outside their intended sandbox, according to Endor Labs. The flaw undermines the
+      isolation boundary for AI agent workloads and needs to be addressed by affected users.
+    url: https://news.google.com/rss/articles/CBMi1AFBVV95cUxOeU5aWV9pdzdOZXhVVnRnRFRfbU83am5aUGY5Q3liMXVSc0Vwell0bEcwSndWdmY2UWlnZWgxMkhrekVQb0VkM2JsazdFTnltSFE3S3lRb2NPZTdCdnZFVlVQSmNhNUVGUzE1ZTQ2azZySmNoTWtqVVBIdjdBTmptSTB2WjFINE5RakhkV2xKS0pFZ2Z0VVctaFhmS3lnY0VjTzlqV1EtWjJDbGl5Wll3V1A0UE5IMU5RSFQ4QlIzemJFbXpCQWdNMzhmN2EtenhFM2xtYw
+    image: ''
+    sources:
+    - Endor Labs
+    labels:
+    - vulnerability
+    - AI agents
+    rationale: Concrete vulnerability in AI agent sandboxing, matching the topic's focus on vulnerabilities
+      in AI systems and frameworks.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8cad56539e5c
+    cluster_key: access-agents-cve-docker-files-lets-outside-sandbox-sandboxes-sensitive-their-vulnerability
+    coverage:
+    - title: Docker Sandboxes vulnerability lets AI agents access sensitive files outside their sandbox
+        (CVE-2026-103916)
+      url: https://news.google.com/rss/articles/CBMi1AFBVV95cUxOeU5aWV9pdzdOZXhVVnRnRFRfbU83am5aUGY5Q3liMXVSc0Vwell0bEcwSndWdmY2UWlnZWgxMkhrekVQb0VkM2JsazdFTnltSFE3S3lRb2NPZTdCdnZFVlVQSmNhNUVGUzE1ZTQ2azZySmNoTWtqVVBIdjdBTmptSTB2WjFINE5RakhkV2xKS0pFZ2Z0VVctaFhmS3lnY0VjTzlqV1EtWjJDbGl5Wll3V1A0UE5IMU5RSFQ4QlIzemJFbXpCQWdNMzhmN2EtenhFM2xtYw
+      source: Endor Labs
+      published: '2026-11-03T23:16:43+00:00'
+    published: '2026-11-03T23:16:43+00:00'
+    is_carryover: true
   breaches:
   - id: 07c7d737d783
     rank: 1
@@ -419,6 +448,156 @@ topics:
       source: BleepingComputer
       published: '2026-11-03T13:33:49+00:00'
     published: '2026-11-03T17:02:27+00:00'
+    is_carryover: true
+  - id: 9bffe6887263
+    rank: 3
+    title: ILC Dover to Pay $13 Million Over Missed Cybersecurity Contract Requirements
+    summary: ILC Dover and ILC Astrospace agreed to pay $13 million to resolve False Claims Act allegations
+      that they failed to meet cybersecurity obligations in contracts with the U.S. Army, Missile Defense
+      Agency, and NASA. The settlement is a civil enforcement action tied directly to contractual cybersecurity
+      requirements.
+    url: https://cyberscoop.com/ilc-dover-cybersecurity-settlement-false-claims-act
+    image: https://cyberscoop.com/wp-content/uploads/sites/3/2026/11/GettyImages-175399977.jpg
+    sources:
+    - CyberScoop
+    labels:
+    - settlement
+    - government
+    rationale: Government enforcement settlement over failure to meet cybersecurity contract requirements,
+      setting a financial precedent for defense and aerospace contractors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9bffe6887263
+    cluster_key: contract-cybersecurity-dover-ilc-million-missed-over-pay-requirements
+    coverage:
+    - title: Defense and aerospace firm settles with government over allegedly failing to meet cybersecurity
+        contract requirements
+      url: https://cyberscoop.com/ilc-dover-cybersecurity-settlement-false-claims-act
+      source: CyberScoop
+      published: '2026-11-03T21:49:51+00:00'
+    published: '2026-11-03T21:49:51+00:00'
+    is_carryover: true
+  supply_chain:
+  - id: fed7e8209b03
+    rank: 1
+    title: Google dismantles XCPE botnet preinstalled on 1.3M Android TV boxes
+    summary: Google and industry partners took down the XCPE backdoor, which was preinstalled on more
+      than 1.3 million Android TV set-top boxes. Google attributes the operation with high confidence
+      to Videostrong Technology, which sold criminal access to the devices for ad fraud and proxy traffic.
+      The takedown may cut off access to over 10 million additional compromised IoT devices.
+    url: https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet
+    image: https://storage.googleapis.com/gweb-cloudblog-publish/images/03_ThreatIntelligenceWebsiteBannerIdeas_BA.max-2600x2600.png
+    sources:
+    - Google Threat Intelligence (Mandiant)
+    - Cybersecurity News
+    - Krebs on Security
+    - CyberScoop
+    - BleepingComputer
+    - Help Net Security
+    - The Hacker News
+    labels:
+    - supply-chain
+    - Android
+    - malware
+    rationale: 'Large-scale supply chain compromise at the device manufacturing level, affecting over
+      a million devices. Concrete action: detect/remove affected boxes and monitor for XCPE indicators
+      from the takedown.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fed7e8209b03
+    cluster_key: android-botnet-boxes-dismantles-google-preinstalled-xcpe
+    coverage:
+    - title: Shutting the Door on the XCPE Botnet
+      url: https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet
+      source: Google Threat Intelligence (Mandiant)
+      published: '2026-11-02T14:00:00+00:00'
+    - title: Google Dismantles 1.3 Million Device XCPE Botnet, Bans Android TV Maker Over Preinstalled
+        Malware
+      url: https://cybersecuritynews.com/google-dismantles-xcpe-botnet
+      source: Cybersecurity News
+      published: '2026-11-03T02:24:38+00:00'
+    - title: Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies
+      url: https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies
+      source: Krebs on Security
+      published: '2026-11-03T02:24:31+00:00'
+    - title: Google shuts down global botnet running on certified Android devices
+      url: https://cyberscoop.com/google-disrupts-xcpe-botnet-videostrong-android-devices
+      source: CyberScoop
+      published: '2026-11-02T21:58:24+00:00'
+    - title: Google disrupts million-device XCPE Android malware botnet, bans TV box maker
+      url: https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker
+      source: BleepingComputer
+      published: '2026-11-02T18:16:34+00:00'
+    - title: Google disrupts XCPE botnet, bans the company behind it
+      url: https://www.helpnetsecurity.com/2026/11/02/xcpe-botnet-android-backdoor
+      source: Help Net Security
+      published: '2026-11-02T15:50:46+00:00'
+    - title: Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access
+      url: https://thehackernews.com/2026/11/google-disrupts-13-million-device.html
+      source: The Hacker News
+      published: '2026-11-02T15:50:26+00:00'
+    published: '2026-11-02T14:00:00+00:00'
+    is_carryover: true
+  - id: a32e7948b375
+    rank: 2
+    title: PyPI LiteLLM release pipeline compromised to ship credential stealer
+    summary: Attackers compromised the release pipeline of the LiteLLM Python package, shipping version
+      1.107.0 built from a lookalike repository using stolen developer GitHub tokens. The wheel contains
+      a credential stealer that executes on any Python start, including pip. Developers who installed
+      or depend on 1.107.0 should treat it as compromised, audit lockfiles, and rotate credentials.
+    url: https://pkgwarden.com/incidents
+    image: https://pkgwarden.com/og-image.png
+    sources:
+    - pkgwarden
+    labels:
+    - supply-chain
+    - malicious-package
+    - pypi
+    rationale: Concrete malicious package incident in PyPI with clear action for users. LiteLLM's popularity
+      makes this high impact, and the detail on the release-pipeline compromise provides actionable indicators.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a32e7948b375
+    cluster_key: compromised-credential-litellm-pipeline-pypi-release-ship-stealer
+    coverage:
+    - title: Supply chain incident recaps | pkgwarden
+      url: https://pkgwarden.com/incidents
+      source: pkgwarden
+      published: '2026-11-03T07:03:45.266720+00:00'
+    published: '2026-11-03T07:03:45.266720+00:00'
+    is_carryover: true
+  - id: e41970bb5a4c
+    rank: 3
+    title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+    summary: Attackers compromised two legitimate MemTensor packages on npm and PyPI and used them to
+      distribute sckit, a Go-based credential stealer that runs on Windows, Linux, and macOS. Developers
+      who installed or depend on the affected packages should treat them as compromised, audit lockfiles
+      and installed artifacts, and rotate any credentials or tokens stored on affected systems.
+    url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFThFSFsti-2SIka75bNuMKpyJHtOW2ZPrZtcSjbjFQ64GCNn0WtdssYuWlVTbhaLB5cAJ0vu8FgyNmNsDa8g0Ijy-D1zP4FW7ihVfAjk9xWMYDMMdfZPICGyVdjeDwH3-jyKLHOUnjfaXBJIMxGn_3ngeXFsbb4CLnOibRd4fbwXHYpBkMQTcBQAf0edq/s1600/npm-pypi.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - malicious-package
+    - npm
+    - pypi
+    - supply chain
+    rationale: Direct software supply-chain compromise of legitimate npm/PyPI packages affecting developers
+      on three OSes; downstream users need concrete steps to check and rotate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e41970bb5a4c
+    cluster_key: and-compromised-credential-deliver-memtensor-npm-packages-pypi-sckit-stealer-via
+    coverage:
+    - title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+      url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+      source: The Hacker News
+      published: '2026-11-02T07:03:55.662129+00:00'
+    published: '2026-11-02T07:03:55.662129+00:00'
     is_carryover: true
   threats:
   - id: 416f06a674e3
