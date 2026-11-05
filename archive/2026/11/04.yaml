@@ -358,6 +358,73 @@ topics:
       source: KnowBe4 Research
       published: '2026-11-03T21:00:12+00:00'
     published: '2026-11-03T21:00:12+00:00'
+  - id: 0e6af204efb3
+    rank: 2
+    title: Teams 'IT Support' Scam Abuses AD CS to Mint Privileged Account Certificates
+    summary: Microsoft's investigation of two intrusions shows attackers posing as IT support on Microsoft
+      Teams calls and chats persuaded employees to approve remote access to their PCs. After gaining a
+      foothold, the attackers abused weak Active Directory Certificate Services (AD CS) settings to obtain
+      login certificates for privileged accounts, including one with domain controller access. The campaign
+      relies on social engineering and legitimate remote-support software, not a Teams vulnerability.
+    url: https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLv88EM1ZSjaeI7bH9DVpg2mGdkwXWUuir0S_p9IfiWG49_TgRalFdK4oQ6e7UE_JYOnNH70Z6wcftnjhcYHRY-Xc0o8GYp9r1uNzxdC_1bnXZgvon74cXkWgKpHZtwJg3IKLsqGC2HS2tcMfQS8BZu7kfrW1vAaaIA316LRzgCOn8zeGZ1WvALgJmyM4/s1600/ms-ad.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - Microsoft Teams phishing
+    - help desk scam
+    - social engineering
+    rationale: 'New Microsoft investigation adds material technical detail to already-published Teams
+      help desk scam coverage: post-compromise AD CS abuse to gain privileged account certificates.'
+    is_update: true
+    supersedes: 1c43eb1161a5
+    what_changed: Microsoft's report details two intrusions and shows attackers abused insecure Active
+      Directory Certificate Services settings to mint login certificates for privileged accounts, including
+      a domain controller.
+    cluster: 063b3f941ca5
+    cluster_key: abuses-account-certificates-mint-privileged-scam-support-teams
+    coverage:
+    - title: Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data
+      url: https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html
+      source: The Hacker News
+      published: '2026-11-02T11:08:45+00:00'
+    - title: Hackers Using Microsoft Teams Messages and Calls to Trick Users and Gain Remote Access to
+        System
+      url: https://cybersecuritynews.com/microsoft-teams-messages
+      source: Cybersecurity News
+      published: '2026-11-02T12:33:55+00:00'
+    published: '2026-11-02T11:08:45+00:00'
+    is_carryover: true
+  - id: c53794411ccb
+    rank: 3
+    title: Scammers Target US Voters With Registration, Survey, and Donation Lures
+    summary: Ahead of the US midterm elections, scammers are sending texts, emails, and phone calls that
+      offer help registering to vote, ask recipients to take a survey, or solicit donations. The messages
+      are designed to steal money, personal information, or credentials, and often impersonate official
+      election or campaign organizations. Recipients should verify contacts through official channels
+      and avoid clicking links in unsolicited voter-related messages.
+    url: https://blog.knowbe4.com/warning-scammers-are-targeting-voters-ahead-of-election-day
+    image: https://blog.knowbe4.com/hubfs/Stock%20images/Closeup%20of%20hands%20of%20young%20man%20in%20checkered%20shirt%20using%20mobile%20phone%20while%20his%20partners%20arguing-3.jpeg
+    sources:
+    - KnowBe4 Research
+    labels:
+    - phishing
+    - social engineering
+    rationale: Concrete voter-targeted smishing and phishing lures ahead of Election Day; widely relevant
+      and recognizable to many people.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c53794411ccb
+    cluster_key: and-donation-lures-registration-scammers-survey-target-voters-with
+    coverage:
+    - title: 'Warning: Scammers Are Targeting Voters Ahead of Election Day'
+      url: https://blog.knowbe4.com/warning-scammers-are-targeting-voters-ahead-of-election-day
+      source: KnowBe4 Research
+      published: '2026-11-02T21:00:01+00:00'
+    published: '2026-11-02T21:00:01+00:00'
+    is_carryover: true
   policy:
   - id: 81a14654f7dc
     rank: 1
@@ -487,6 +554,127 @@ topics:
       source: The Record
       published: '2026-11-03T13:50:00+00:00'
     published: '2026-11-03T13:50:00+00:00'
+  supply_chain:
+  - id: fed7e8209b03
+    rank: 1
+    title: Google dismantles XCPE botnet preinstalled on 1.3M Android TV boxes
+    summary: Google and industry partners took down the XCPE backdoor, which was preinstalled on more
+      than 1.3 million Android TV set-top boxes. Google attributes the operation with high confidence
+      to Videostrong Technology, which sold criminal access to the devices for ad fraud and proxy traffic.
+      The takedown may cut off access to over 10 million additional compromised IoT devices.
+    url: https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet
+    image: https://storage.googleapis.com/gweb-cloudblog-publish/images/03_ThreatIntelligenceWebsiteBannerIdeas_BA.max-2600x2600.png
+    sources:
+    - Google Threat Intelligence (Mandiant)
+    - Cybersecurity News
+    - Krebs on Security
+    - CyberScoop
+    - BleepingComputer
+    - Help Net Security
+    - The Hacker News
+    labels:
+    - supply-chain
+    - Android
+    - malware
+    rationale: 'Large-scale supply chain compromise at the device manufacturing level, affecting over
+      a million devices. Concrete action: detect/remove affected boxes and monitor for XCPE indicators
+      from the takedown.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fed7e8209b03
+    cluster_key: android-botnet-boxes-dismantles-google-preinstalled-xcpe
+    coverage:
+    - title: Shutting the Door on the XCPE Botnet
+      url: https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet
+      source: Google Threat Intelligence (Mandiant)
+      published: '2026-11-02T14:00:00+00:00'
+    - title: Google Dismantles 1.3 Million Device XCPE Botnet, Bans Android TV Maker Over Preinstalled
+        Malware
+      url: https://cybersecuritynews.com/google-dismantles-xcpe-botnet
+      source: Cybersecurity News
+      published: '2026-11-03T02:24:38+00:00'
+    - title: Tech Firms Dismantle Botnet That Turned 1.3M TV Boxes Into Proxies
+      url: https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies
+      source: Krebs on Security
+      published: '2026-11-03T02:24:31+00:00'
+    - title: Google shuts down global botnet running on certified Android devices
+      url: https://cyberscoop.com/google-disrupts-xcpe-botnet-videostrong-android-devices
+      source: CyberScoop
+      published: '2026-11-02T21:58:24+00:00'
+    - title: Google disrupts million-device XCPE Android malware botnet, bans TV box maker
+      url: https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker
+      source: BleepingComputer
+      published: '2026-11-02T18:16:34+00:00'
+    - title: Google disrupts XCPE botnet, bans the company behind it
+      url: https://www.helpnetsecurity.com/2026/11/02/xcpe-botnet-android-backdoor
+      source: Help Net Security
+      published: '2026-11-02T15:50:46+00:00'
+    - title: Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access
+      url: https://thehackernews.com/2026/11/google-disrupts-13-million-device.html
+      source: The Hacker News
+      published: '2026-11-02T15:50:26+00:00'
+    published: '2026-11-02T14:00:00+00:00'
+    is_carryover: true
+  - id: a32e7948b375
+    rank: 2
+    title: PyPI LiteLLM release pipeline compromised to ship credential stealer
+    summary: Attackers compromised the release pipeline of the LiteLLM Python package, shipping version
+      1.107.0 built from a lookalike repository using stolen developer GitHub tokens. The wheel contains
+      a credential stealer that executes on any Python start, including pip. Developers who installed
+      or depend on 1.107.0 should treat it as compromised, audit lockfiles, and rotate credentials.
+    url: https://pkgwarden.com/incidents
+    image: https://pkgwarden.com/og-image.png
+    sources:
+    - pkgwarden
+    labels:
+    - supply-chain
+    - malicious-package
+    - pypi
+    rationale: Concrete malicious package incident in PyPI with clear action for users. LiteLLM's popularity
+      makes this high impact, and the detail on the release-pipeline compromise provides actionable indicators.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a32e7948b375
+    cluster_key: compromised-credential-litellm-pipeline-pypi-release-ship-stealer
+    coverage:
+    - title: Supply chain incident recaps | pkgwarden
+      url: https://pkgwarden.com/incidents
+      source: pkgwarden
+      published: '2026-11-03T07:03:45.266720+00:00'
+    published: '2026-11-03T07:03:45.266720+00:00'
+    is_carryover: true
+  - id: e41970bb5a4c
+    rank: 3
+    title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+    summary: Attackers compromised two legitimate MemTensor packages on npm and PyPI and used them to
+      distribute sckit, a Go-based credential stealer that runs on Windows, Linux, and macOS. Developers
+      who installed or depend on the affected packages should treat them as compromised, audit lockfiles
+      and installed artifacts, and rotate any credentials or tokens stored on affected systems.
+    url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFThFSFsti-2SIka75bNuMKpyJHtOW2ZPrZtcSjbjFQ64GCNn0WtdssYuWlVTbhaLB5cAJ0vu8FgyNmNsDa8g0Ijy-D1zP4FW7ihVfAjk9xWMYDMMdfZPICGyVdjeDwH3-jyKLHOUnjfaXBJIMxGn_3ngeXFsbb4CLnOibRd4fbwXHYpBkMQTcBQAf0edq/s1600/npm-pypi.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - malicious-package
+    - npm
+    - pypi
+    - supply chain
+    rationale: Direct software supply-chain compromise of legitimate npm/PyPI packages affecting developers
+      on three OSes; downstream users need concrete steps to check and rotate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e41970bb5a4c
+    cluster_key: and-compromised-credential-deliver-memtensor-npm-packages-pypi-sckit-stealer-via
+    coverage:
+    - title: Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI
+      url: https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html
+      source: The Hacker News
+      published: '2026-11-02T07:03:55.662129+00:00'
+    published: '2026-11-02T07:03:55.662129+00:00'
+    is_carryover: true
   threats:
   - id: 16d2110a854e
     rank: 1
@@ -822,3 +1010,55 @@ topics:
       source: CISA
       published: '2026-11-03T12:00:00+00:00'
     published: '2026-11-03T12:00:00+00:00'
+  - id: b22a155c12f9
+    rank: 3
+    title: Cisco releases security updates for exploited ASA/FTD SSL VPN zero-day CVE-2026-76418
+    summary: Cisco has released security updates for CVE-2026-76418, a high-severity denial-of-service
+      flaw in ASA and Firepower Threat Defense that unauthenticated remote attackers are exploiting to
+      crash devices with SSL VPN enabled. Apply the updates immediately; the bug is also in CISA's Known
+      Exploited Vulnerabilities catalog.
+    url: https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/29/Cisco-headpic.jpg
+    sources:
+    - BleepingComputer
+    - fieldeffect.com
+    - The Hacker News
+    labels:
+    - active exploitation
+    - security update
+    - CISA
+    rationale: Actively exploited zero-day in widely deployed Cisco firewall software, now with vendor
+      patches; direct patch action.
+    is_update: true
+    supersedes: 9b48cf8de90d
+    what_changed: Cisco has now shipped security updates for CVE-2026-76418, adding a fix to the previously
+      reported active exploitation.
+    cluster: 9b48cf8de90d
+    cluster_key: asa-cisco-day-exploited-for-ftd-releases-security-ssl-updates-vpn-zero
+    coverage:
+    - title: New Cisco firewall zero-day exploited to crash SSL VPN devices
+      url: https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices
+      source: BleepingComputer
+      published: '2026-11-03T07:03:45.266720+00:00'
+    - title: Citrix patches two actively exploited NetScaler vulnerabilities
+      url: https://fieldeffect.com/blog/citrix-patch-exploited-netscaler-vulnerabilities
+      source: fieldeffect.com
+      published: '2026-11-03T07:03:45.266720+00:00'
+    - title: Over 1,000 GitLab servers vulnerable to ongoing RCE attacks
+      url: https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks
+      source: BleepingComputer
+      published: '2026-11-02T12:47:00+00:00'
+    - title: Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors
+      url: https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html
+      source: The Hacker News
+      published: '2026-11-03T05:34:41+00:00'
+    - title: Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials
+      url: https://thehackernews.com/2026/11/attackers-target-unpatched.html
+      source: The Hacker News
+      published: '2026-11-03T05:34:37+00:00'
+    - title: Synology warns of C3RB3R ransomware attacks targeting NAS devices
+      url: https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks
+      source: BleepingComputer
+      published: '2026-11-02T11:28:42+00:00'
+    published: '2026-11-03T07:03:45.266720+00:00'
+    is_carryover: true

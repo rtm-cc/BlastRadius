@@ -144,6 +144,21 @@ class BackfillTest(unittest.TestCase):
 
         self.assertEqual([s["id"] for s in board["threats"]], ["b1"])
 
+    def test_never_carries_a_carryover_again(self):
+        """Otherwise one card chains from day to day, past max_days."""
+        topic = Topic(id="tech", name="Tech", min_items=2)
+        old = make_story("Old", "https://example.com/old")
+        self.archive.save_day("2026-10-28", {"tech": [old]}, datetime.now(UTC))
+        self.archive.save_day("2026-10-31", {"tech": [{**old, "is_carryover": True}]}, datetime.now(UTC))
+        self.archive.save_day(
+            "2026-10-30", {"tech": [make_story("Fresh", "https://example.com/fresh")]}, datetime.now(UTC)
+        )
+        board = {"tech": []}
+
+        _backfill_empty_topics(board, [topic], self.archive, "2026-11-01")
+
+        self.assertEqual([s["title"] for s in board["tech"]], ["Fresh"])
+
     def test_skips_a_story_superseded_today_even_without_a_cluster(self):
         topic = Topic(id="threats", name="Active Threats", min_items=1)
         old = make_story("Old story", "https://example.com/old")
