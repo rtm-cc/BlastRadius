@@ -1,0 +1,858 @@
+date: '2026-11-05'
+updated_at: '2026-11-05T07:07:06+00:00'
+topics:
+  ai_security:
+  - id: 7e3586e581bf
+    rank: 1
+    title: Meta Shares Top Muse Bug Bounty Findings as Payouts Reach $1.2 Million
+    summary: Meta disclosed top bug bounty findings for its Muse AI assistant, including a $300,000 award
+      for a pre-launch flaw that exposed conversations and tokens on internal test VMs used by Meta staff.
+      Total payouts have reached $1.2 million, highlighting real security vulnerabilities in AI assistants
+      and the value of proactive disclosure.
+    url: https://www.securityweek.com/meta-shares-top-muse-bug-bounty-findings-as-payouts-reach-1-2-million
+    image: https://www.securityweek.com/wp-content/uploads/2026/11/Meta-Muse.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - AI assistant
+    - AI security research
+    - data protection
+    rationale: Concrete vulnerabilities in Meta's AI assistant Muse, including exposure of conversations
+      and tokens, were found through bug bounty research—demonstrating real attack surface in AI products.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7e3586e581bf
+    cluster_key: bounty-bug-findings-meta-million-muse-payouts-reach-shares-top
+    coverage:
+    - title: Meta Shares Top Muse Bug Bounty Findings as Payouts Reach $1.2 Million
+      url: https://www.securityweek.com/meta-shares-top-muse-bug-bounty-findings-as-payouts-reach-1-2-million
+      source: SecurityWeek
+      published: '2026-11-04T08:27:05+00:00'
+    published: '2026-11-04T08:27:05+00:00'
+  - id: a53e9190822b
+    rank: 2
+    title: Haiou Codex Jailbreak Toolkit Injects Ads Into AI Responses via Persistent 'Prompt Adware'
+    summary: Check Point Research found Haiou, a Chinese-language jailbreak toolkit for OpenAI Codex that
+      persistently alters the coding agent's trusted instructions — global prompts, skills, and configuration
+      files — so ordinary prompts trigger ads for a third-party AI gateway. Dubbed 'prompt adware,' the
+      technique shows how unofficial AI add-ons can modify agent behavior without a conventional executable
+      payload.
+    url: https://blog.checkpoint.com/security/prompt-adware-how-hidden-ai-instructions-could-create-a-new-enterprise-security-risk
+    image: https://blog.checkpoint.com/wp-content/uploads/2026/11/blog_800x400_3.png
+    sources:
+    - Check Point Blog
+    - CyberSecurityNews
+    - Cybersecurity News
+    labels:
+    - AI cybercrime
+    - prompt injection
+    - AI agents
+    rationale: Newly documented, reproducible subversion of an AI coding agent's trusted instructions,
+      demonstrated by Check Point Research and directly relevant to AI security.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a53e9190822b
+    cluster_key: ads-adware-codex-haiou-injects-into-jailbreak-persistent-prompt-responses-toolkit-via
+    coverage:
+    - title: 'Prompt Adware: A New AI Security Risk'
+      url: https://blog.checkpoint.com/security/prompt-adware-how-hidden-ai-instructions-could-create-a-new-enterprise-security-risk
+      source: Check Point Blog
+      published: '2026-11-03T13:00:57+00:00'
+    - title: Hackers Use OpenAI Codex Jailbreak Toolkit That Secretly Injects Ads Into AI Responses
+      url: https://news.google.com/rss/articles/CBMiY0FVX3lxTE9QVVFPaVBDaXZQWEJwbGg0UVQ5UVN6U3pTbFdBNmxCOWNhdEViX2IzcUloNUdVZlZkTkRWMnNKZDNvS2FudGhIWGI2eXVIU2pwNGdNNFo1UFlfWnczOU42d1FpRdIBaEFVX3lxTE5tbFVpVUVMejRPVTlfQUhWU193WDQ1dFJTeGFuYUJVSnlOTVNRc2lQQWNibFVEWGNaeEpELUNIV0pPWTFTalVfei03akVoS25SUzdORFFreENVTExpR0NhZm5mdlJ5cExD
+      source: CyberSecurityNews
+      published: '2026-11-04T05:26:15+00:00'
+    - title: Hackers Use OpenAI Codex Jailbreak Toolkit That Secretly Injects Ads Into AI Responses
+      url: https://cybersecuritynews.com/openai-codex-jailbreak
+      source: Cybersecurity News
+      published: '2026-11-04T05:22:19+00:00'
+    published: '2026-11-03T13:00:57+00:00'
+    is_carryover: true
+  breaches:
+  - id: 07c7d737d783
+    rank: 1
+    title: DigiCert Confirms Data Breach Exposing Customer Details and Sensitive Identity Documents
+    summary: DigiCert confirmed a data breach involving an internal business system storing customer contact
+      details and identity documents. Unauthorized access exposed names, business email addresses, phone
+      numbers, and business addresses; a small minority of affected accounts also contained passports,
+      driver's licenses, or utility bills. The company says only a small proportion of customers were
+      affected.
+    url: https://cybersecuritynews.com/digicert-confirms-data-breach
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/DigiCert-Confirms-Data-Breach.webp
+    sources:
+    - Cybersecurity News
+    - BleepingComputer
+    - SecurityWeek
+    labels:
+    - data breach
+    - data protection
+    rationale: Newly disclosed breach at a major certificate authority affecting customer identity documents;
+      affected users need to watch for identity theft.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 07c7d737d783
+    cluster_key: and-breach-confirms-customer-data-details-digicert-documents-exposing-identity-sensitive
+    coverage:
+    - title: DigiCert Confirms Data Breach Exposing Customer Details and Sensitive Identity Documents
+      url: https://cybersecuritynews.com/digicert-confirms-data-breach
+      source: Cybersecurity News
+      published: '2026-11-05T06:21:35+00:00'
+    - title: DreamHost Confirms Data Breach – Hackers Stole Customer Credentials and Accessed Emails
+      url: https://cybersecuritynews.com/dreamhost-confirms-data-breach
+      source: Cybersecurity News
+      published: '2026-11-05T03:00:40+00:00'
+    - title: DreamHost confirms data breach exposed FTP logins and webmail sessions
+      url: https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions
+      source: BleepingComputer
+      published: '2026-11-04T19:05:19+00:00'
+    - title: Malicious cPGuard Updates Served in OpsShield Supply Chain Attack
+      url: https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack
+      source: SecurityWeek
+      published: '2026-11-04T10:54:48+00:00'
+    - title: NIKKE PC game launcher hacked to spread remote access, data-stealing malware
+      url: https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware
+      source: BleepingComputer
+      published: '2026-11-04T16:58:46+00:00'
+    - title: Massive ChainDrop npm supply-chain attack infects hundreds of packages
+      url: https://www.bleepingcomputer.com/news/security/massive-chaindrop-npm-supply-chain-attack-infects-hundreds-of-packages
+      source: BleepingComputer
+      published: '2026-11-05T07:03:55.734065+00:00'
+    published: '2026-11-05T06:21:35+00:00'
+  - id: f2d8c415c9b6
+    rank: 2
+    title: Student Data Breach Affects Up to 16 Icelandic Schools
+    summary: A security breach affected Inna, the student-information system used by Icelandic upper-secondary
+      schools, allowing a student to attempt to alter other pupils' grades and attendance records. Iceland's
+      Data Protection Authority has received three notifications, and schools and the system operator
+      are still investigating what information may have been accessed.
+    url: https://databreaches.net/2026/11/04/student-data-breach-affects-up-to-16-icelandic-schools
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - education
+    - investigation
+    rationale: Confirmed breach affecting a student-information system used by multiple schools; investigation
+      ongoing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f2d8c415c9b6
+    cluster_key: affects-breach-data-icelandic-schools-student
+    coverage:
+    - title: Student Data Breach Affects Up to 16 Icelandic Schools
+      url: https://databreaches.net/2026/11/04/student-data-breach-affects-up-to-16-icelandic-schools
+      source: DataBreaches.net
+      published: '2026-11-04T22:48:25+00:00'
+    published: '2026-11-04T22:48:25+00:00'
+  - id: 83adc9680ae1
+    rank: 3
+    title: More Asian Airlines Announce Data Breaches After Attack on Spanish IT Provider Amadeus
+    summary: Japan Airlines, Cathay Pacific, Korean Air, Asiana Airlines, Singapore Airlines, and Malaysia
+      Airlines have all reported data breaches traced back to Amadeus IT Group, the Spanish provider that
+      builds platforms for flight reservation, ticketing, and check-in. The disclosures over the past
+      week broaden the scope of an incident first tied to Japan Airlines.
+    url: https://therecord.media/asian-airlines-announce-data-breach-it-provider-incident
+    image: http://cms.therecord.media/uploads/airplane_airport_d009f47cb4.jpg
+    sources:
+    - The Record
+    - Cybersecurity News
+    labels:
+    - data breach
+    - supply-chain
+    - data protection
+    rationale: Material expansion of the Amadeus breach to six airlines; updates earlier Japan Airlines-only
+      reporting.
+    is_update: true
+    supersedes: f654203effd0
+    what_changed: Multiple additional airlines – Cathay Pacific, Korean Air, Asiana Airlines, Singapore
+      Airlines, Malaysia Airlines – disclosed impact from the same Amadeus incident, beyond the initially
+      reported Japan Airlines.
+    cluster: c5aae416fb99
+    cluster_key: after-airlines-amadeus-announce-asian-attack-breaches-data-more-provider-spanish
+    coverage:
+    - title: More Asian airlines announce data breaches after attack on Spanish IT provider Amadeus
+      url: https://therecord.media/asian-airlines-announce-data-breach-it-provider-incident
+      source: The Record
+      published: '2026-11-04T21:30:00+00:00'
+    - title: DigiCert Confirms Data Breach Exposing Customer Details and Sensitive Identity Documents
+      url: https://cybersecuritynews.com/digicert-confirms-data-breach
+      source: Cybersecurity News
+      published: '2026-11-05T06:21:35+00:00'
+    published: '2026-11-04T21:30:00+00:00'
+  - id: d57921594bbe
+    rank: 4
+    title: French Bank Confirms Cyber Heist, Hackers Suspected to Have Stolen $133 Million
+    summary: Crédit Mutuel Arkéa confirmed a cyber heist in which attackers were able to make transfers
+      using the bank's own account after compromising an unnamed supplier. The bank is investigating,
+      with the suspected loss estimated at around $133 million.
+    url: https://therecord.media/french-bank-confirms-cyber-heist
+    image: http://cms.therecord.media/uploads/euros_41ac60ccd6.jpg
+    sources:
+    - The Record
+    labels:
+    - data breach
+    - cybercrime
+    - cyberattack
+    rationale: Confirmed large-scale financial fraud at a named bank involving third-party compromise;
+      customers and other banks should watch for fraud.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d57921594bbe
+    cluster_key: 133-bank-confirms-cyber-french-hackers-have-heist-million-stolen-suspected
+    coverage:
+    - title: French bank confirms cyber heist, hackers suspected to have stolen an estimated $133 million
+      url: https://therecord.media/french-bank-confirms-cyber-heist
+      source: The Record
+      published: '2026-11-04T18:58:00+00:00'
+    published: '2026-11-04T18:58:00+00:00'
+  - id: 3cb98aaf5fa6
+    rank: 5
+    title: Hackers Steal 320,000 UK School Files and Publish Them on Dark Web
+    summary: At least 320,000 school files stolen during a cyberattack on Bristol City Council's servers
+      have been posted to the dark web. The attack targeted the council's Trading with Schools platform
+      and accessed data from 39 schools across the region in September; specialist investigations have
+      identified a significant exposed dataset.
+    url: https://databreaches.net/2026/11/04/hackers-steal-320000-uk-school-files-and-publish-them-on-dark-web
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - education
+    - cybercrime
+    rationale: Confirmed theft and publication of a large volume of school records; affected families
+      need to be aware.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3cb98aaf5fa6
+    cluster_key: 000-320-and-dark-files-hackers-publish-school-steal-them-web
+    coverage:
+    - title: Hackers steal 320,000 UK school files and publish them on dark web
+      url: https://databreaches.net/2026/11/04/hackers-steal-320000-uk-school-files-and-publish-them-on-dark-web
+      source: DataBreaches.net
+      published: '2026-11-04T18:15:35+00:00'
+    published: '2026-11-04T18:15:35+00:00'
+  fraud_phishing:
+  - id: 215f5a2353d5
+    rank: 1
+    title: Google Calendar Phishing Campaign Hijacks Sessions and Bypasses MFA
+    summary: Attackers are running a phishing campaign that uses Google Calendar invites and trusted redirect
+      links to route corporate users to fake Google login pages. Entering credentials hands over valid
+      session cookies, letting attackers bypass MFA. Material Security's Operation CloudFire analysis
+      covered blocked messages and the takedown of nearly 900 attacker-controlled domains. The lure works
+      because the calendar invite looks legitimate and the redirect chain starts on trusted infrastructure.
+    url: https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa
+    image: https://www.bleepstatic.com/content/hl-images/2026/09/22/google-workspace-breach.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - phishing
+    - account takeover
+    - targeted attacks
+    rationale: Concrete calendar-invite phishing campaign targeting corporate Google accounts, with a
+      recognizable lure and MFA bypass technique. Fits Fraud & Phishing directly and is not a repeat of
+      the already-published general calendar-phishing interview.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 215f5a2353d5
+    cluster_key: and-bypasses-calendar-campaign-google-hijacks-mfa-phishing-sessions
+    coverage:
+    - title: Google Calendar phishing campaign hijacks sessions, bypasses MFA
+      url: https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa
+      source: BleepingComputer
+      published: '2026-11-04T15:00:10+00:00'
+    published: '2026-11-04T15:00:10+00:00'
+  - id: 592e2cff4bbb
+    rank: 2
+    title: SkyW4lker Device Code Phishing Expands Against US Enterprise Microsoft 365 Accounts
+    summary: The SkyW4lker phishing kit, also branded as SkyW4lker x365 Sentinel, is expanding its campaign
+      against US enterprises. Instead of stealing passwords, it tricks employees into approving a legitimate
+      Microsoft device-code sign-in on a fake Microsoft 365 page, handing attackers a valid session to
+      corporate mailboxes, documents, and connected apps. ANY.RUN has linked 618 sandbox analyses to the
+      kit, which has been active since June 2026 and is accelerating.
+    url: https://cybersecuritynews.com/skyw4lker-phishing-campaign-expands-threatening-us-enterprises-with-microsoft-365-account-takeovers
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/SkyW4lker_Campaign_Expands.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - phishing
+    - account takeover
+    - targeted attacks
+    rationale: Update on the already-published Skyw4lker device-code phishing campaign, adding ANY.RUN
+      metrics and Microsoft 365 enterprise targeting details. Fits the Fraud & Phishing topic as a concrete
+      device-code social engineering campaign.
+    is_update: true
+    supersedes: 696dfcfd2e73
+    what_changed: ANY.RUN now reports the kit has expanded since June 2026, with 618 sandbox analyses
+      tied to it and a sharper focus on hijacking Microsoft 365 sessions via device-code sign-in.
+    cluster: 696dfcfd2e73
+    cluster_key: 365-accounts-against-code-device-enterprise-expands-microsoft-phishing-skyw4lker
+    coverage:
+    - title: SkyW4lker Phishing Campaign Expands, Threatening US Enterprises with Microsoft 365 Account
+        Takeovers
+      url: https://cybersecuritynews.com/skyw4lker-phishing-campaign-expands-threatening-us-enterprises-with-microsoft-365-account-takeovers
+      source: Cybersecurity News
+      published: '2026-11-04T18:43:01+00:00'
+    published: '2026-11-04T18:43:01+00:00'
+  - id: 9703f1f6097b
+    rank: 3
+    title: Fake $750 Apple Cash Reward Scam Pays Out Nothing
+    summary: A consumer scam promises a $750 Apple Cash reward, typically arriving as an unsolicited message
+      or pop-up. Victims are steered through a fake 'claim' flow designed to capture personal or Apple
+      account details, but no payout ever arrives. Recognize it by the unexpected reward offer and any
+      request to log in, verify payment info, or share credentials to collect money.
+    url: https://www.malwarebytes.com/blog/scams/2026/11/the-fake-750-apple-cash-reward-that-pays-out-nothing
+    image: https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/11/apple-cash-scam-1.png
+    sources:
+    - Malwarebytes
+    labels:
+    - phishing
+    - social engineering
+    rationale: A consumer-facing fake reward scam with a recognizable lure that many people could receive.
+      Directly matches the Fraud & Phishing topic and is not already published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9703f1f6097b
+    cluster_key: 750-apple-cash-fake-nothing-out-pays-reward-scam
+    coverage:
+    - title: The fake $750 Apple Cash reward that pays out nothing
+      url: https://www.malwarebytes.com/blog/scams/2026/11/the-fake-750-apple-cash-reward-that-pays-out-nothing
+      source: Malwarebytes
+      published: '2026-11-04T18:49:13+00:00'
+    published: '2026-11-04T18:49:13+00:00'
+  policy:
+  - id: 19ef75258e05
+    rank: 1
+    title: US Charges Two Canadians With Hacking Universities for Cryptomining; One Extradited
+    summary: A federal grand jury indicted two Canadians, Ryan James Roach and Mathiew James Stubbings,
+      for breaking into networks of at least four US universities between mid-2016 and late 2019 and using
+      compromised systems to mine Electroneum cryptocurrency. Roach has been extradited to the US to face
+      the charges.
+    url: https://cyberscoop.com/canadian-extradited-cryptomining-universities
+    image: https://cyberscoop.com/wp-content/uploads/sites/3/2026/11/GettyImages-1065531746.jpg
+    sources:
+    - CyberScoop
+    - The Record
+    - BleepingComputer
+    - SecurityWeek
+    labels:
+    - law enforcement
+    - indictment
+    - cybercrime
+    - cryptocurrency
+    rationale: This is a direct law enforcement action involving an indictment, extradition, and criminal
+      charges for cyber intrusions, fitting the Policy & Enforcement topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 19ef75258e05
+    cluster_key: canadians-charges-cryptomining-extradited-for-hacking-one-two-universities-with
+    coverage:
+    - title: Officials extradite Canadian man to US for alleged cryptomining spree
+      url: https://cyberscoop.com/canadian-extradited-cryptomining-universities
+      source: CyberScoop
+      published: '2026-11-04T19:59:57+00:00'
+    - title: Canadian extradited to US for allegedly hacking schools in at least four states
+      url: https://therecord.media/canadian-nationals-accused-us-education-hacks-cryptomining
+      source: The Record
+      published: '2026-11-04T19:17:00+00:00'
+    - title: US charges two Canadians accused of hacking US universities
+      url: https://www.bleepingcomputer.com/news/security/us-charges-two-canadians-accused-of-hacking-us-universities
+      source: BleepingComputer
+      published: '2026-11-04T13:13:20+00:00'
+    - title: Canadian Extradited to US Over Cryptomining Hacks on University Supercomputers
+      url: https://www.securityweek.com/canadian-extradited-to-us-over-cryptomining-hacks-on-university-supercomputers
+      source: SecurityWeek
+      published: '2026-11-04T12:27:58+00:00'
+    published: '2026-11-04T19:59:57+00:00'
+  - id: 81a14654f7dc
+    rank: 2
+    title: Europol Dismantles Investment Fraud Service Used Across 50 Countries
+    summary: Europol coordinated a takedown of an investment fraud scheme that supplied fraudulent trading
+      websites to criminal groups. Seven people were arrested, more than 100 servers were seized, and
+      searches were carried out across 17 countries; potential victims span more than 50 countries and
+      estimated losses are at least $4.5 million. The investigation began after a German couple reported
+      being unable to withdraw savings from an online trading platform.
+    url: https://cyberscoop.com/europol-investment-scam-takedown
+    image: https://cyberscoop.com/wp-content/uploads/sites/3/2021/12/GettyImages-1253014959.jpg
+    sources:
+    - CyberScoop
+    - Dark Reading
+    - Help Net Security
+    - BleepingComputer
+    labels:
+    - law enforcement
+    - cybercrime
+    - takedown
+    - investigation
+    rationale: International law enforcement action that removes criminal infrastructure and arrests suspects,
+      directly fitting the Policy & Enforcement scope.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 81a14654f7dc
+    cluster_key: across-countries-dismantles-europol-fraud-investment-service-used
+    coverage:
+    - title: Europol dismantles investment scheme that impacted potential victims in 50 countries
+      url: https://cyberscoop.com/europol-investment-scam-takedown
+      source: CyberScoop
+      published: '2026-11-03T17:02:27+00:00'
+    - title: Germany Busts 'Crime-as-a-Service' Investment Fraud Outfit
+      url: https://www.darkreading.com/cybersecurity-operations/germany-crime-service-investment-fraud
+      source: Dark Reading
+      published: '2026-11-03T21:57:12+00:00'
+    - title: Police seize over 100 servers linked to investment fraud with more than €4 million in losses
+      url: https://www.helpnetsecurity.com/2026/11/03/investment-fraud-network-servers-seized
+      source: Help Net Security
+      published: '2026-11-03T14:31:51+00:00'
+    - title: Police seizes over 100 servers in investment scam crackdown
+      url: https://www.bleepingcomputer.com/news/security/police-seizes-over-100-servers-in-investment-scam-crackdown
+      source: BleepingComputer
+      published: '2026-11-03T13:33:49+00:00'
+    published: '2026-11-03T17:02:27+00:00'
+    is_carryover: true
+  threats:
+  - id: 416f06a674e3
+    rank: 1
+    title: APT29 Watering Hole Hijacks Ukrainian Analytics Script to Target iOS and Android Users
+    summary: APT29 is believed to be running a large-scale watering hole campaign against iOS and Android
+      users. The attackers compromised websites, created lookalike domains, and hijacked the Ukrainian
+      Plerdy SEO Tracker analytics script to serve n-day exploits, including some zero-click chains, that
+      steal cookies, messages, and Wi-Fi passwords from unpatched mobile devices.
+    url: https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx1cus2o8fkYGLhQu9BfPgGtAUwnmTAMucLagfAodBuRoYnyxGIJKgpqtKFyCSV-WSG3pDqmPujhj-iwoOZB-zF8JjbQMrLzDHYtdTPA3hD3Kc3rqYQM4CQwkICwZkh8K6O8ZSt-WAA_PBoUA6lHwh_55dbDlKizsjzcTN847c9BSHsWHmrAP42JHRHIYS/s1600/ios-exploit.jpg
+    sources:
+    - The Hacker News
+    - Help Net Security
+    - Infosecurity Magazine
+    - BleepingComputer
+    labels:
+    - espionage
+    - targeted attacks
+    - Android
+    - Apple
+    - active exploitation
+    - supply-chain
+    - malware
+    rationale: Active nation-state watering hole with real exploit delivery and a third-party supply-chain
+      vector; defenders can block indicators and prioritize mobile patching.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 416f06a674e3
+    cluster_key: analytics-and-android-apt29-hijacks-hole-ios-script-target-ukrainian-users-watering
+    coverage:
+    - title: APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits
+      url: https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html
+      source: The Hacker News
+      published: '2026-11-04T14:27:52+00:00'
+    - title: Russian hackers target iOS and Android users with n-day exploits
+      url: https://www.helpnetsecurity.com/2026/11/04/apt29-watering-hole-mobile-devices-n-day-exploits
+      source: Help Net Security
+      published: '2026-11-04T14:38:37+00:00'
+    - title: APT29 Watering Holes Target Unpatched iPhones and Android Devices
+      url: https://www.infosecurity-magazine.com/news/apt29-watering-holes-iphones
+      source: Infosecurity Magazine
+      published: '2026-11-04T14:00:00+00:00'
+    - title: Hackers use n-day exploits in zero-click attacks on iOS, Android devices
+      url: https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices
+      source: BleepingComputer
+      published: '2026-11-04T09:39:54+00:00'
+    published: '2026-11-04T14:27:52+00:00'
+  - id: 54d5178a71bf
+    rank: 2
+    title: China-Aligned SlippyNunchucks Hijacks Sogou DNS to Deploy DarkVigil Backdoor
+    summary: China-aligned actor SlippyNunchucks used DNS hijacking of insecure HTTP traffic in Sogou
+      Input Method for Windows to redirect targeted organizations to malicious infrastructure. The campaign,
+      active since July 2026, deploys the DarkVigil (FDMTP) backdoor as part of a surveillance operation.
+    url: https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMawvNNOvRYRm-k7ii9yDdw214v4kwQ7h5fAfOaUVkvMetNwArral8qumlObtaftjOcBsibL9vkqM1UT0-9l9jYPjj3M3C9NcPfg5pdIuENUfdKlK7lyseCS30AVhgLLs6a-2fdXlSDymSVeyIziO7IC13HFCaOf1v4sjbgmkeKfewWNsbTJCJ0WR2zLBZ/s1600/key.jpg
+    sources:
+    - The Hacker News
+    - Infosecurity Magazine
+    labels:
+    - espionage
+    - supply-chain
+    - malware
+    - targeted attacks
+    rationale: Documented China-aligned espionage campaign abusing a trusted input method; relevant to
+      defenders in targeted sectors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 54d5178a71bf
+    cluster_key: aligned-backdoor-china-darkvigil-deploy-dns-hijacks-slippynunchucks-sogou
+    coverage:
+    - title: China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor
+      url: https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html
+      source: The Hacker News
+      published: '2026-11-04T11:24:31+00:00'
+    - title: China-Aligned Group Abuses Sogou Input Method to Deliver Malware
+      url: https://www.infosecurity-magazine.com/news/slippynunchucks-sogou-dns-hijacking
+      source: Infosecurity Magazine
+      published: '2026-11-04T15:00:00+00:00'
+    published: '2026-11-04T11:24:31+00:00'
+  - id: d390c0bb110c
+    rank: 3
+    title: Cyberattack Wipes Cloud Data at Russian Hosting Provider Beget
+    summary: A cyberattack on Russian hosting provider Beget destroyed data across its cloud infrastructure
+      and disrupted hundreds of websites. The company is still restoring services; the incident is being
+      treated as a destructive attack.
+    url: https://therecord.media/russia-cyberattack-beget-cloud
+    image: http://cms.therecord.media/uploads/Beget_de93fe90b7.jpg
+    sources:
+    - The Record
+    - DataBreaches.net
+    labels:
+    - cyberattack
+    - malware
+    rationale: Widespread destructive cyberattack affecting a major hosting provider and hundreds of sites.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d390c0bb110c
+    cluster_key: beget-cloud-cyberattack-data-hosting-provider-russian-wipes
+    coverage:
+    - title: Cyberattack wipes cloud data at major Russian hosting provider Beget
+      url: https://therecord.media/russia-cyberattack-beget-cloud
+      source: The Record
+      published: '2026-11-04T14:00:00+00:00'
+    - title: Ukrainian news outlet Kyiv Independent hit by suspected Russian cyberattack
+      url: https://therecord.media/ukraine-kyiv-independent-cyberattack
+      source: The Record
+      published: '2026-11-04T16:15:00+00:00'
+    - title: Cyberattack wipes cloud data at major Russian hosting provider Beget
+      url: https://databreaches.net/2026/11/04/cyberattack-wipes-cloud-data-at-major-russian-hosting-provider-beget
+      source: DataBreaches.net
+      published: '2026-11-04T18:13:39+00:00'
+    published: '2026-11-04T14:00:00+00:00'
+  - id: de8074c397d3
+    rank: 4
+    title: Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers
+    summary: Kaspersky documented three threat clusters — NightEagle (APT-Q-95), Hacking Cat, and Toy
+      Ghouls — targeting Russian enterprises with backdoors, ransomware, and wipers. The campaigns show
+      ongoing, multi-group pressure on Russian organizations.
+    url: https://thehackernews.com/2026/09/three-threat-groups-target-russian.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMMZZrs8eh-baUC-73E9tejQYA0JZzWyoElUJGhCi0N4_f2EzmPPhQW3xY0kmNZv775T26ywu4czdta-vHaLp1gaI03eqho2SSe3riHMZP8hLTrU1ETnIv-k1ywOpnBFvbkyQJNZt7F4Xx4NndvvS8esTt1jzaCdeN9JZNkNB8sBU1vytibSRAjMsLZzc6/s1600/russian-groups.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - ransomware
+    - malware
+    - espionage
+    - targeted attacks
+    rationale: Threat researcher documentation of multiple active criminal/espionage clusters using ransomware
+      and wipers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: de8074c397d3
+    cluster_key: and-backdoors-enterprises-groups-ransomware-russian-target-threat-three-wipers-with
+    coverage:
+    - title: Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers
+      url: https://thehackernews.com/2026/09/three-threat-groups-target-russian.html
+      source: The Hacker News
+      published: '2026-11-05T07:03:55.734065+00:00'
+    published: '2026-11-05T07:03:55.734065+00:00'
+  vulnerabilities:
+  - id: 9156811931a6
+    rank: 1
+    title: Zyxel Patches Zero-Day Exploited to Hack Nearly 1,000 Network Switches
+    summary: Zyxel released a firmware update for a zero-day in its GS1900 series network switches that
+      attackers used to compromise close to 1,000 devices worldwide and steal configuration files and
+      credentials. The flaw was exploited before a patch existed. Apply the firmware update immediately
+      and audit switch configurations and credentials.
+    url: https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/04/zyxel-gs1900.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - zero-day
+    - exploited in the wild
+    - patch
+    rationale: Exploited zero-day in widely deployed network switches with a fix available; active exploitation
+      in the wild makes this a top action item.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9156811931a6
+    cluster_key: 000-day-exploited-hack-nearly-network-patches-switches-zero-zyxel
+    coverage:
+    - title: Zyxel fixes zero-day exploited to hack nearly 1,000 network switches
+      url: https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches
+      source: BleepingComputer
+      published: '2026-11-04T20:58:19+00:00'
+    published: '2026-11-04T20:58:19+00:00'
+  - id: 43e5415f8665
+    rank: 2
+    title: CISA Adds Actively Exploited Apple Flaw CVE-2024-27834 to KEV
+    summary: CISA added CVE-2024-27834, an improper-authentication flaw affecting multiple Apple operating
+      systems, to its Known Exploited Vulnerabilities catalog after reports of active exploitation. Attackers
+      are using the patched flaw to deliver info-stealing malware. Update affected Apple devices to the
+      latest available OS version.
+    url: https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkv0B0acGnMDLnCJQYXNCkpzSeKKr_1m4-a10Q2Iy6DZOorGLb35YDD9vw3iQQA9fZTi7QGIZYlSsvTSmxc8w0UbgN_Xtl-QPyTngA9qhOuoryee3Z8X8CZRnHiUAY3wuIXG_UIO1DyDnjnfS5cOilt3WPzRnYYqFDZ1NHbXS0OVAsrVYHSeFuc7zglZw5/s1600/apple-0day.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - KEV
+    - CISA
+    - exploited in the wild
+    rationale: Actively exploited flaw added to CISA KEV, so federal agencies must remediate and the public
+      should patch promptly.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 43e5415f8665
+    cluster_key: 2024-27834-actively-adds-apple-cisa-cve-exploited-flaw-kev
+    coverage:
+    - title: Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says
+      url: https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html
+      source: The Hacker News
+      published: '2026-11-05T05:17:04+00:00'
+    published: '2026-11-05T05:17:04+00:00'
+  - id: d0512444f828
+    rank: 3
+    title: Chrome 157 Fixes 213 Security Issues, Including Seven Critical
+    summary: Google's Chrome 157 stable update patches 213 security issues, including seven rated critical,
+      covering memory safety bugs and incorrect/missing authorization checks on Windows, Mac, Linux, and
+      Android. The update is rolling out; install it as soon as possible given the broad attack surface.
+    url: https://www.malwarebytes.com/blog/bugs/2026/11/chrome-157-fixes-213-security-issues-including-7-critical-flaws
+    image: https://www.malwarebytes.com/wp-content/uploads/sites/2/2023/11/Chrome-1200.png
+    sources:
+    - Malwarebytes
+    - SecurityWeek
+    labels:
+    - patch
+    - security update
+    - vulnerability
+    rationale: Huge number of fixes including seven criticals in the world's most widely deployed browser;
+      act-on-it relevance is high.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d0512444f828
+    cluster_key: 157-213-chrome-critical-fixes-including-issues-security-seven
+    coverage:
+    - title: Chrome 157 fixes 213 security issues, including 7 critical flaws
+      url: https://www.malwarebytes.com/blog/bugs/2026/11/chrome-157-fixes-213-security-issues-including-7-critical-flaws
+      source: Malwarebytes
+      published: '2026-11-04T12:16:25+00:00'
+    - title: Chrome 157 Rolls Out With 213 Security Fixes, Seven Rated Critical
+      url: https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical
+      source: SecurityWeek
+      published: '2026-11-04T10:38:46+00:00'
+    published: '2026-11-04T12:16:25+00:00'
+  - id: 6b1fedf1cf55
+    rank: 4
+    title: Debian/Ubuntu APT Flaw Lets Attackers Run Code as Root (CVE-2026-109518)
+    summary: CVE-2026-109518 in APT, the package manager used by Debian and Ubuntu, lets a network attacker
+      who can intercept package downloads swap a verified package for a malicious one; the attacker's
+      code then runs as root. The attack relies on APT retrying failed downloads, which is the default
+      from Debian 12 onward. Debian, Ubuntu, and APT developers published advisories on November 4; apply
+      the APT update.
+    url: https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUPaNgRQEg3TU6-9BBgKse77CGVpbBFbn48cBnN1aanKvaMzk_mT74RxyWZA3_NbcrYe0UnRAQlELRYKGiGNrLUDcBMSKXFgRNxaND7RoaVFOs1Q7rkFFtlpoAzYQ7C8i6RAY4bNNTarEMUI-iFR4A_IfjIkFE9vpyQjG-0QFngy5cRE8f2GhGfTltkaI/s1600/linux-apt.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - security update
+    - patch
+    - remote code execution
+    rationale: Root-code-execution flaw in the package manager of two of the most widely used Linux distributions,
+      with a fix available.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6b1fedf1cf55
+    cluster_key: 109518-2026-apt-attackers-code-cve-debian-flaw-lets-root-run-ubuntu
+    coverage:
+    - title: Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root
+      url: https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html
+      source: The Hacker News
+      published: '2026-11-04T17:00:46+00:00'
+    - title: Debian and Ubuntu APT Flaw Lets Hackers Hijack Software Updates and Execute Code as Root
+      url: https://cybersecuritynews.com/debian-apt-flaw-lets-hackers-hijack-updates
+      source: Cybersecurity News
+      published: '2026-11-04T16:36:54+00:00'
+    published: '2026-11-04T17:00:46+00:00'
+  - id: 3e3dcd0c1589
+    rank: 5
+    title: Critical Rails Active Storage Flaw Enables Arbitrary File Write (CVSS 9.8)
+    summary: A critical flaw (CVSS 9.8) in Ruby on Rails Active Storage lets an unauthenticated attacker
+      write arbitrary files on the server by uploading a crafted image processed by ImageMagick; when
+      the Disk storage service is used, the same upload can also read files. The Rails project fixed it
+      in versions 8.1.4.1 and 8.0.5.2, with the advisory published November 4 and no CVE assigned yet.
+      Upgrade Rails immediately.
+    url: https://www.darkreading.com/application-security/critical-rails-bug-derail-vulnerable-servers
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt1200a12331479a63/6aeb910a69108565761c02f3/metal_guardrails-viti-GettyImages-897806150.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    - Cybersecurity News
+    - The Hacker News
+    labels:
+    - remote code execution
+    - patch
+    - vulnerability
+    rationale: CVSS 9.8 critical flaw in a ubiquitous web framework, exploitable without authentication;
+      fix shipped and should be applied immediately.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3e3dcd0c1589
+    cluster_key: active-arbitrary-critical-cvss-enables-file-flaw-rails-storage-write
+    coverage:
+    - title: Critical Rails Bug Threatens to Derail Vulnerable Servers
+      url: https://www.darkreading.com/application-security/critical-rails-bug-derail-vulnerable-servers
+      source: Dark Reading
+      published: '2026-11-04T21:48:18+00:00'
+    - title: Critical Ruby on Rails Flaw Could Let Hackers Steal Server Secrets Through Malicious Image
+        Uploads
+      url: https://cybersecuritynews.com/critical-ruby-on-rails-flaw
+      source: Cybersecurity News
+      published: '2026-11-04T17:01:17+00:00'
+    - title: Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads
+      url: https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html
+      source: The Hacker News
+      published: '2026-11-04T12:07:04+00:00'
+    published: '2026-11-04T21:48:18+00:00'
+  - id: 778c9d0a2b08
+    rank: 6
+    title: Xen Hypervisor Flaws Let a Guest VM Read/Write Other VMs' Memory
+    summary: Two flaws in the Xen hypervisor let a malicious guest VM read and write the memory of other
+      VMs on the same host, including dom0, which has full host privileges. Patches are available and
+      there is no known mitigation; all Xen versions from 4.6 onward are vulnerable. Update Xen hosts
+      as a priority.
+    url: https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAVPXiuTBfhBnpwaZHMfSDWymKJrXbS88kOEO1Xuh5t11qAnwSKeFTHGQy6ZG9Sr2N-wRYrJg58x3lKFbybvU9p1a85lxaCHfBa61vO1DfjEhUi5Yzf6bQS1eN7Mu-s_sUwkE-JGc-UznJ1p0qfmwMDusXFzWawXKXMt6jj-vENxyQG12uAUDUe0p0gtg/s1600/xen.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - privilege escalation
+    - vulnerability
+    - patch
+    rationale: Multi-tenant isolation break in a major hypervisor, a severe cross-VM flaw with patches
+      available and no workaround.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 778c9d0a2b08
+    cluster_key: flaws-guest-hypervisor-let-memory-other-read-vms-write-xen
+    coverage:
+    - title: Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory
+      url: https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html
+      source: The Hacker News
+      published: '2026-11-04T11:46:27+00:00'
+    published: '2026-11-04T11:46:27+00:00'
+  - id: cf393ae53615
+    rank: 7
+    title: Barracuda ESG Authentication Bypass + Command Injection Chain to Root
+    summary: An authentication bypass flaw combined with a command injection vulnerability can be chained
+      to gain root access on Barracuda Email Security Gateway appliances, according to SecurityWeek. These
+      widely deployed email security appliances should be updated to the latest firmware to close the
+      chain.
+    url: https://www.securityweek.com/barracuda-email-security-gateway-authentication-bypass-opens-path-to-root
+    image: https://www.securityweek.com/wp-content/uploads/2023/08/Email-Security.jpg
+    sources:
+    - SecurityWeek
+    labels:
+    - authentication
+    - privilege escalation
+    - vulnerability
+    rationale: Chained authentication bypass and command injection leading to root on a widely deployed
+      email security gateway; fix required.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cf393ae53615
+    cluster_key: authentication-barracuda-bypass-chain-command-esg-injection-root
+    coverage:
+    - title: Barracuda ESG Authentication Bypass Flaw Opens Path to Root
+      url: https://www.securityweek.com/barracuda-email-security-gateway-authentication-bypass-opens-path-to-root
+      source: SecurityWeek
+      published: '2026-11-04T14:24:54+00:00'
+    published: '2026-11-04T14:24:54+00:00'
+  - id: 22a941466918
+    rank: 8
+    title: OpenAI's Cyber Model Finds and Patches 948 Linux Kernel LPE Flaws
+    summary: OpenAI detailed an automated pipeline using an upcoming cyber-focused AI model that analyzed
+      5,034 kernel audit targets (~2.8 million lines of code), dynamically reproduced 1,724 vulnerabilities,
+      and produced patches for 948 local privilege escalation flaws in the Linux kernel for $1.2M in API
+      costs. The findings and fixes demonstrate a new scale of AI-assisted vulnerability research.
+    url: https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje4ZiJMrWCzkoOXuOcWQkB02TmQLM81NWPvzQ8yw9iComqPyLIP0_TAzy8AHMkNfzyXw2Fw-8kBhWIohuXc_dGl39AI4Kw_n4Tll0DImNrRfcPrk1eZNQCP9QtOich_dhNW-ly5DIuZSzmWspWsWXU9QiGwnS5W7qzVDiIBVc4oggC__f6tsL1AOIP8opc/s1600/linux-lpe.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    - Startup Fortune
+    labels:
+    - AI security research
+    - Linux kernel
+    - remote code execution
+    rationale: Large-scale AI-driven discovery and patching of Linux kernel privilege escalation flaws;
+      relevant to anyone running Linux.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 22a941466918
+    cluster_key: 948-and-cyber-finds-flaws-kernel-linux-lpe-model-openai-patches
+    coverage:
+    - title: OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run
+      url: https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html
+      source: The Hacker News
+      published: '2026-11-05T04:31:16+00:00'
+    - title: OpenAI Cyber Model Uncovers 948 Linux Kernel Privilege Escalation Vulnerabilities
+      url: https://cybersecuritynews.com/openai-uncovers-948-linux-kernel-vulnerabilities
+      source: Cybersecurity News
+      published: '2026-11-05T02:42:57+00:00'
+    - title: OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run
+      url: https://news.google.com/rss/articles/CBMigwFBVV95cUxNTjBhVWJNR1E4TFpreTFWVVNQTzhVT29FbFU2RjFiQzJlOXhRRWlJejhwMUZPMzFhaGJMbm9GakpFR3NDZzZwZFJWQ2gzdjNQeXFzQ3JpNTh6ZXVKcE1tTGZfYlhnQ3RXZ2RWM2JxTWJXN0hrMzVmMDdnRlIyM0s0cjZXUQ
+      source: The Hacker News
+      published: '2026-11-05T04:31:00+00:00'
+    - title: OpenAI's AI pipeline turned 2,308 Linux kernel bugs into 948 root exploits
+      url: https://news.google.com/rss/articles/CBMiogFBVV95cUxQaDJ1bFk2eWJxd2VRYkpLR2Mxck9kUjRJSkpKXzBNalhKdHRWcDQ2cDZkbXNJRUw3T3dEOUtlN2NJeVYzNGlZRVR0NWdjbXBWdHhvZVZxM2YyOUxia1RHTkkwTGpLS0VzTGV6cmtoOHZxcXlVS2ZDMGpqcGFFT3p4ZElmazBGVDZtcWZHWXhzU2xUZm9KOXplZHZxMFNWMkJhelE
+      source: Startup Fortune
+      published: '2026-11-05T00:19:23+00:00'
+    published: '2026-11-05T04:31:16+00:00'
+  - id: 728b7947ecb0
+    rank: 9
+    title: SonicWall Won't Patch End-of-Life GMS Flaws (CVE-2026-109593)
+    summary: SonicWall warned of two vulnerabilities in end-of-life Global Management System (GMS) software
+      that will not be patched — including CVE-2026-109593 (CVSS 9.1), an unauthenticated file read —
+      along with a second flaw that could alter database records. GMS 9.5.2 and earlier are affected;
+      organizations should plan to retire these systems or isolate and firewall them since no fix will
+      come.
+    url: https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgME1T4MkjI8UEzzSmlLgbPG6a__VNQNoKkhuxiaW5zF5fnHLPmsTdkGoIL06JTeER1jcOMH-WLuNYyva_sSW_8DnZojbMC8ikgNME3ZPUAdkij-9nVm8joHHdaZRoLNbVgcSVLNSc6Tt7UJ3YPhQmea3OtQwg-H2UzUPIgWq7nFwoEQcMsGCKf-0fImEvd/s1600/sonic.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    labels:
+    - vulnerability
+    rationale: Unpatched CVSS 9.1 unauthenticated file read in end-of-life management software; no fix
+      exists, so exposure control is the only mitigation.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 728b7947ecb0
+    cluster_key: 109593-2026-cve-end-flaws-gms-life-patch-sonicwall-won
+    coverage:
+    - title: SonicWall Won't Patch EoL GMS Flaws That Could Expose Files, Alter Database Records
+      url: https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html
+      source: The Hacker News
+      published: '2026-11-04T17:00:38+00:00'
+    - title: SonicWall warns of unpatched flaws in end-of-life GMS software
+      url: https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software
+      source: BleepingComputer
+      published: '2026-11-04T14:42:25+00:00'
+    published: '2026-11-04T17:00:38+00:00'
