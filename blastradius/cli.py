@@ -100,6 +100,7 @@ def _backfill_empty_topics(
     topics: list[Topic],
     archive: Archive,
     today: str,
+    taken: list[Story] | None = None,
     max_days: int = 3,
 ) -> None:
     """For any enabled topic that has fewer stories than its min_items quota
@@ -107,17 +108,22 @@ def _backfill_empty_topics(
     max_days back) marked with is_carryover=True.
 
     It runs before the cross-topic review, so the review sees the carryovers
-    too. A past story is skipped when today's board already carries it in
-    any column: by URL, by cluster - today's update of a story joins that
-    story's cluster - or because a card today supersedes it. On 2026-11-03 a
-    URL check alone let yesterday's BTCPay card back into Active Threats
-    beside today's update of it in Vulnerabilities.
+    too, and again after it, because the review can take a column's cards
+    away. On 2026-11-04 and 11-05 it moved every Supply Chain card to another
+    column, and with nothing refilling it the column vanished from the board.
+
+    A past story is skipped when today's board already carries it in any
+    column - or `taken` holds it: cards the review removed, and the cards of
+    columns this run leaves as they were - by URL, by cluster (today's update
+    of a story joins that story's cluster) or because a card today supersedes
+    it. On 2026-11-03 a URL check alone let yesterday's BTCPay card back into
+    Active Threats beside today's update of it in Vulnerabilities.
     """
     from datetime import date, timedelta
 
     from .crosstopic import _story_urls
 
-    today_stories = [s for records in board.values() for s in records]
+    today_stories = [s for records in board.values() for s in records] + (taken or [])
     used_urls = {u for s in today_stories for u in _story_urls(s)}
     used_clusters = {s["cluster"] for s in today_stories if s.get("cluster")}
     used_ids = {s["id"] for s in today_stories if s.get("id")} | {
@@ -144,8 +150,12 @@ def _backfill_empty_topics(
 
         for past_day in lookback_days:
             past_stories = archive.load_day(past_day).get(topic.id, [])
+            # A past carryover is not carried again: that would chain a card
+            # from day to day, past max_days.
             valid_stories = [
-                s for s in past_stories if s.get("url") and is_article_url(s["url"]) and not on_board_already(s)
+                s
+                for s in past_stories
+                if not s.get("is_carryover") and s.get("url") and is_article_url(s["url"]) and not on_board_already(s)
             ]
             for s in valid_stories:
                 if len(carried) >= needed:
@@ -276,13 +286,18 @@ def cmd_run(args: argparse.Namespace) -> int:
         _print("Every topic failed to curate. The board is unchanged.")
         return EXIT_FAILED
 
+    # Today's cards of topics this run did not curate - a --topic run, or a
+    # topic with no candidates on a rerun: they stay as they are, so they are
+    # neither topped up nor removed, only checked against.
+    fixed = {t: s for t, s in existing_today.items() if t not in board and t in by_id and by_id[t].enabled}
+    to_fill = [t for t in topics if t.id not in fixed]
+    taken = [s for stories in fixed.values() for s in stories]
+
     # Before the review, so the review checks carried-over cards as well as
     # fresh ones; a carryover always loses to a fresh card of the same event.
-    _backfill_empty_topics(board, cfg.enabled_topics, archive, today)
+    _backfill_empty_topics(board, to_fill, archive, today, taken)
 
     if settings.curation.cross_topic_review and board:
-        # Today's cards of topics this run did not curate: context only.
-        fixed = {t: s for t, s in existing_today.items() if t not in board and t in by_id and by_id[t].enabled}
         review = crosstopic.review(
             board,
             fixed,
@@ -300,9 +315,11 @@ def cmd_run(args: argparse.Namespace) -> int:
                 f"  {r.topic} -> kept in {r.kept_topic}: {r.story['title'][:80]}"
                 + (f" ({r.reason})" if r.reason else "")
             )
-        # A topic the review emptied stays in `board` as []: publishing it
-        # clears that topic for today rather than leaving an earlier rerun's
-        # cards behind.
+        # The review can leave a column short, or empty. Top it up again,
+        # never with a card the review just removed. A topic still empty
+        # stays in `board` as []: publishing it clears that topic for today
+        # rather than leaving an earlier rerun's cards behind.
+        _backfill_empty_topics(board, to_fill, archive, today, taken + [r.story for r in review.removed])
 
     # Only now, so no page is fetched for a card the review removed.
     _resolve_images([r for records in board.values() for r in records], cfg)

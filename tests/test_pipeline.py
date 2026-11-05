@@ -351,7 +351,7 @@ class RunTest(unittest.TestCase):
             p.start()
             self.addCleanup(p.stop)
 
-    def run_with(self, replies, results):
+    def run_with(self, replies, results, args=()):
         """`replies` maps a topic name to what the model answers for it.
         Topics are curated in parallel, so routing by topic rather than by
         call order keeps the test deterministic."""
@@ -367,7 +367,69 @@ class RunTest(unittest.TestCase):
 
         with mock.patch.object(cli.fetch, "fetch_all", fake_fetch), mock.patch.object(openrouter, "chat_json", chat):
             with contextlib.redirect_stdout(io.StringIO()):
-                return cli.main(["run"])
+                return cli.main(["run", *args])
+
+    def seed(self, day, topic_id, *names):
+        """An earlier board: one card per name in topic_id."""
+        archive = Archive(self.dir / "archive")
+        stories = []
+        for rank, name in enumerate(names, start=1):
+            url = f"https://{topic_id}.example/{name}"
+            stories.append(
+                {
+                    "id": f"{topic_id}-{name}",
+                    "rank": rank,
+                    "title": f"Earlier story {name}",
+                    "summary": "",
+                    "url": url,
+                    "image": "",
+                    "sources": ["S"],
+                    "labels": [],
+                    "coverage": [{"title": name, "url": url, "source": "S"}],
+                }
+            )
+        archive.save_day(day, {**archive.load_day(day), topic_id: stories}, NOW)
+
+    def today(self):
+        return cli.utc_now().astimezone(config.load().settings.tz).date()
+
+    def test_a_column_the_review_empties_is_refilled(self):
+        """2026-11-04: the review moved every Supply Chain card to another
+        column, and the column vanished from the board."""
+        yesterday = (self.today() - timedelta(days=1)).isoformat()
+        self.seed(yesterday, "space", "old1", "old2", "old3")
+        # Board order: s1 tech's card; s2 space's own, s3 and s4 the
+        # carryovers old1 and old2. The review takes all three from space.
+        review = json.dumps({"duplicates": [{"keep": "s1", "remove": ["s2", "s3", "s4"], "reason": "same"}]})
+        code = self.run_with(
+            {
+                "Technology": answer(pick("https://t.example/1", title="Launch slips a week")),
+                "Space": answer(pick("https://s.example/1", title="Rocket launch delayed", topic="Space")),
+                "review": review,
+            },
+            {
+                "t": [candidate("https://t.example/1", title="Launch slips a week", topic="tech")],
+                "s": [candidate("https://s.example/1", title="Rocket launch delayed", topic="space")],
+            },
+        )
+        self.assertEqual(code, cli.EXIT_OK)
+        board = Archive(self.dir / "archive").load_day(self.today().isoformat())
+        # Refilled, but never with a card the review just removed.
+        self.assertEqual([s["url"] for s in board["space"]], ["https://space.example/old3"])
+        self.assertTrue(board["space"][0]["is_carryover"])
+
+    def test_a_topic_run_leaves_the_other_columns_alone(self):
+        today = self.today().isoformat()
+        self.seed((self.today() - timedelta(days=1)).isoformat(), "space", "old1", "old2")
+        self.seed(today, "space", "earlier-run")
+        code = self.run_with(
+            {"Technology": answer(pick("https://t.example/1"))},
+            {"t": [candidate("https://t.example/1", topic="tech")]},
+            args=["--topic", "tech"],
+        )
+        self.assertEqual(code, cli.EXIT_OK)
+        board = Archive(self.dir / "archive").load_day(today)
+        self.assertEqual([s["url"] for s in board["space"]], ["https://space.example/earlier-run"])
 
     def test_publishes_and_builds(self):
         code = self.run_with(
