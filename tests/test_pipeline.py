@@ -43,6 +43,17 @@ class WindowTest(unittest.TestCase):
         self.assertEqual(resolve(NOW, NOW - timedelta(days=14), self.settings).hours, 96)
         self.assertEqual(resolve(NOW, NOW - timedelta(hours=1), self.settings).hours, 6)
 
+    def test_a_rerun_covers_the_whole_day(self):
+        """A rerun at 10:00 after a 07:00 run replaces the day's columns, so
+        it must see from where the 07:00 run's window started - not just 6h."""
+        first_since = NOW - timedelta(hours=27)
+        window = resolve(NOW, NOW - timedelta(hours=3), self.settings, board_since=first_since)
+        self.assertEqual(window.since, first_since)
+
+    def test_since_hours_overrides_a_rerun(self):
+        window = resolve(NOW, NOW - timedelta(hours=3), self.settings, 2, board_since=NOW - timedelta(hours=27))
+        self.assertEqual(window.hours, 2)
+
 
 class ConfigTest(unittest.TestCase):
     def setUp(self):
@@ -186,6 +197,19 @@ class ArchiveTest(unittest.TestCase):
         self.assertFalse((self.dir / "state.json").exists())
         self.assertEqual(load_yaml((self.dir / "state.yaml").read_text())["runs"], 4)
 
+    def test_state_keeps_where_the_days_first_window_started(self):
+        state = State(self.dir)
+        first = NOW - timedelta(hours=24)
+        state.record_run(NOW, 5, 0.07, "2026-10-27", first)
+        # A rerun's window starts there too; recording it changes nothing.
+        state.record_run(NOW + timedelta(hours=3), 5, 0.07, "2026-10-27", first)
+        self.assertEqual(state.board_since("2026-10-27"), first)
+        self.assertEqual(state.last_run, NOW + timedelta(hours=3))
+        self.assertIsNone(state.board_since("2026-10-28"))
+        # The next day's first run starts a new day.
+        state.record_run(NOW + timedelta(days=1), 5, 0.07, "2026-10-28", NOW + timedelta(hours=3))
+        self.assertEqual(state.board_since("2026-10-28"), NOW + timedelta(hours=3))
+
 
 RSS = b"""<?xml version="1.0"?><rss version="2.0"><channel><title>Feed</title>
 <item><title>New &amp; fresh</title><link>https://example.com/new?utm_source=rss</link>
@@ -225,6 +249,42 @@ class FeedTest(unittest.TestCase):
         self.assertEqual(
             (c.title, c.source_name, c.url), ("Summit ends", "Reuters", "https://news.google.com/rss/articles/CBMi1")
         )
+
+    KEV = Source(id="k", topic="t", type="cisa_kev", name="CISA KEV", url="https://example.com/kev.json")
+
+    def test_cisa_kev_entries_added_in_the_window(self):
+        def entry(cve, added, **extra):
+            return {
+                "cveID": cve,
+                "vulnerabilityName": f"Acme {cve} Flaw",
+                "dateAdded": added,
+                "shortDescription": "Acme <b>Widget</b> has a flaw.",
+                **extra,
+            }
+
+        body = json.dumps(
+            {
+                "vulnerabilities": [
+                    entry("CVE-2026-1", "2026-10-25"),  # the day before: an earlier run's
+                    entry("CVE-2026-2", "2026-10-26", knownRansomwareCampaignUse="Known", dueDate="2026-11-16"),
+                    entry("CVE-2026-3", "not a date"),
+                ]
+            }
+        ).encode()
+        result = self.fetch(body, self.KEV)
+        self.assertEqual(result.parsed_count, 3)
+        [c] = result.candidates
+        self.assertEqual(c.url, "https://nvd.nist.gov/vuln/detail/CVE-2026-2")
+        self.assertEqual(c.title, "CISA adds CVE-2026-2 to Known Exploited Vulnerabilities: Acme CVE-2026-2 Flaw")
+        self.assertEqual(
+            c.excerpt,
+            "Acme Widget has a flaw. Known ransomware use: Known. US federal agencies must fix it by 2026-11-16.",
+        )
+        self.assertEqual((c.source_name, c.published.isoformat()), ("CISA KEV", "2026-10-26T12:00:00+00:00"))
+
+    def test_a_kev_payload_that_is_not_the_catalog_is_an_error(self):
+        self.assertIn("not a KEV catalog", self.fetch(b'{"error": "maintenance"}', self.KEV).error)
+        self.assertTrue(self.fetch(b"<html>Access Denied</html>", self.KEV).error)
 
     def test_a_broken_feed_is_a_value(self):
         result = self.fetch(

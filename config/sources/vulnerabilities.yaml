@@ -2,6 +2,17 @@
 # sources/shared.yaml. Every field is explained in config/README.md.
 
 sources:
+  - id: cisa_kev
+    type: cisa_kev
+    name: CISA KEV
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    notes: >-
+      CISA's Known Exploited Vulnerabilities catalog, ~1-2 additions a day:
+      the "exploited in the wild" signal, one candidate per CVE added, linked
+      to its NVD page. The JSON feed CISA publishes for programs; the
+      advisories RSS in shared.yaml often answers scripts with HTTP 403
+      (seen 2026-11-05) and is kept for the days it works. About 1.7 MB.
+
   - id: project_zero
     type: rss
     name: Google Project Zero

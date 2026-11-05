@@ -246,10 +246,12 @@ def _pick_keeper_topic(
             keeper_topic = "ai_security"
     elif "breaches" in (topic1, topic2) and ("breach" in text or "data breach" in text):
         keeper_topic = "breaches"
-    elif "threats" in (topic1, topic2) and ("malware" in text or "infostealer" in text or "ransomware" in text):
-        keeper_topic = "threats"
+    # Before threats: a poisoned package nearly always carries malware, and
+    # the review prompt puts a malicious npm package in Supply Chain.
     elif "supply_chain" in (topic1, topic2) and ("package" in text or "npm" in text or "pypi" in text):
         keeper_topic = "supply_chain"
+    elif "threats" in (topic1, topic2) and ("malware" in text or "infostealer" in text or "ransomware" in text):
+        keeper_topic = "threats"
     elif "vulnerabilities" in (topic1, topic2) and ("cve" in text or "vulnerability" in text or "patch" in text):
         keeper_topic = "vulnerabilities"
     else:

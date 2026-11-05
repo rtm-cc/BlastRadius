@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any
 
-SOURCE_TYPES = ("rss", "google_news", "web_search")
+SOURCE_TYPES = ("rss", "google_news", "web_search", "cisa_kev")
 
 
 @dataclass(frozen=True)
@@ -37,7 +37,7 @@ class Source:
     max_age_hours: float | None = None
     max_items: int | None = None
     notes: str = ""
-    # rss
+    # rss and cisa_kev
     url: str = ""
     # google_news
     google_topic: str = ""

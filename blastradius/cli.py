@@ -101,11 +101,15 @@ def _backfill_empty_topics(
     archive: Archive,
     today: str,
     taken: list[Story] | None = None,
-    max_days: int = 3,
+    max_days: int = 14,
 ) -> None:
     """For any enabled topic that has fewer stories than its min_items quota
     after curation, top it up with stories from recent archive days (up to
-    max_days back) marked with is_carryover=True.
+    max_days back) marked with is_carryover=True. Days are read newest first,
+    so a normal top-up takes yesterday's cards; the long reach only matters
+    for a column with no fresh card for days - Supply Chain had none of its
+    own on 11-04 and 11-05, and with carryovers never re-carried, a three-day
+    reach would have emptied it on 11-07.
 
     It runs before the cross-topic review, so the review sees the carryovers
     too, and again after it, because the review can take a column's cards
@@ -205,8 +209,8 @@ def cmd_run(args: argparse.Namespace) -> int:
     archive = Archive(Path(settings.archive.directory))
     state = State(archive.directory)
     started = utc_now()
-    window = resolve(started, state.last_run, settings.window, args.since_hours)
     today = started.astimezone(settings.tz).date().isoformat()
+    window = resolve(started, state.last_run, settings.window, args.since_hours, state.board_since(today))
     _print(f"board {today}, window {window.hours:.1f}h ({window.reason})")
     _print(f"topics {', '.join(topic_ids)}; {len(sources)} sources\n")
 
@@ -337,7 +341,7 @@ def cmd_run(args: argparse.Namespace) -> int:
     finished = utc_now()
     path = archive.publish(today, board, finished)
     removed = archive.prune(today, settings.archive.keep_days)
-    state.record_run(finished, sum(len(r) for r in board.values()), cost)
+    state.record_run(window.until, sum(len(r) for r in board.values()), cost, today, window.since)
     out = site.build(cfg, archive, finished)
     _print(f"\nwrote {path}; site in {out}/")
     if removed:

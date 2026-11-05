@@ -17,6 +17,7 @@ than whichever of the newest ten happen to be recent.
 from __future__ import annotations
 
 import calendar
+import json
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import UTC, datetime, timedelta
@@ -222,10 +223,64 @@ def _fetch_web_search(source: Source, settings: Settings, window: Window, result
     result.candidates = _limit(candidates, source, window, None)
 
 
+def _kev_published(date_added: object) -> datetime | None:
+    """The catalog dates an entry by day only. Noon UTC puts each day's
+    additions inside exactly one daily run's window: a 07:00 run's window
+    reaches back 30h, past yesterday noon but not the day before's."""
+    try:
+        day = datetime.strptime(str(date_added), "%Y-%m-%d")
+    except ValueError:
+        return None
+    return day.replace(hour=12, tzinfo=UTC)
+
+
+def _fetch_cisa_kev(source: Source, settings: Settings, window: Window, result: FetchResult) -> None:
+    """CISA's Known Exploited Vulnerabilities catalog, as the JSON feed it
+    publishes for programs - the "exploited in the wild" signal. Its
+    advisories RSS often answers scripts with HTTP 403; this feed does not.
+    One candidate per entry added in the window, linked to its NVD page."""
+    data = json.loads(_download(source.url, settings))
+    entries = data.get("vulnerabilities") if isinstance(data, dict) else None
+    if not isinstance(entries, list):
+        raise ValueError("not a KEV catalog: no vulnerabilities list")
+    result.parsed_count = len(entries)
+
+    candidates = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        cve = str(entry.get("cveID") or "").strip()
+        published = _kev_published(entry.get("dateAdded"))
+        if not cve.startswith("CVE-") or published is None:
+            continue
+        name = strip_html(str(entry.get("vulnerabilityName") or "")) or cve
+        excerpt = strip_html(str(entry.get("shortDescription") or ""))
+        ransomware = str(entry.get("knownRansomwareCampaignUse") or "").strip()
+        if ransomware:
+            excerpt += f" Known ransomware use: {ransomware}."
+        if entry.get("dueDate"):
+            excerpt += f" US federal agencies must fix it by {entry['dueDate']}."
+        candidates.append(
+            Candidate(
+                url=normalize_url(f"https://nvd.nist.gov/vuln/detail/{cve}"),
+                title=f"CISA adds {cve} to Known Exploited Vulnerabilities: {name}",
+                excerpt=truncate(excerpt.strip(), EXCERPT_CHARS),
+                source_name=source.name,
+                source_id=source.id,
+                topic=source.topic,
+                published=published,
+            )
+        )
+    # Newest first, as a feed lists them, so max_items keeps the latest.
+    candidates.sort(key=lambda c: c.published or _EARLIEST_SANE, reverse=True)
+    result.candidates = _limit(candidates, source, window, source.max_items)
+
+
 _FETCHERS = {
     "rss": _fetch_rss,
     "google_news": _fetch_google_news,
     "web_search": _fetch_web_search,
+    "cisa_kev": _fetch_cisa_kev,
 }
 
 

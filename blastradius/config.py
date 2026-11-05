@@ -415,9 +415,9 @@ def _check_source(source: Source, where: str) -> None:
         if value is not None and (not isinstance(value, (int, float)) or value <= 0):
             raise ConfigError(f"{where}: {key} must be a positive number.")
 
-    if source.type == "rss":
+    if source.type in ("rss", "cisa_kev"):
         if not source.url.startswith(("http://", "https://")):
-            raise ConfigError(f"{where}: an rss source needs a url starting with http(s)://.")
+            raise ConfigError(f"{where}: an {source.type} source needs a url starting with http(s)://.")
     elif source.type == "google_news":
         if bool(source.google_topic) == bool(source.query):
             raise ConfigError(f"{where}: a google_news source needs exactly one of google_topic or query.")

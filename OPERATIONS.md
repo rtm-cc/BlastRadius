@@ -137,8 +137,8 @@ All in `config/settings.yaml`; every key is optional.
 | `models.curate` | `deepseek/deepseek-v4-flash-0731` | Curates every column and runs the cross-topic review. |
 | `models.search` | `deepseek/deepseek-v4-flash` | Runs the `web_search` sources only. |
 | `window.default_hours` | 24 | The very first run. |
-| `window.overlap_minutes` | 30 | Each run starts this long before the previous one ended. |
-| `window.min_hours` / `max_hours` | 6 / 96 | Limits on the window. |
+| `window.overlap_minutes` | 30 | Each run starts this long before the previous one read its sources. |
+| `window.min_hours` / `max_hours` | 30 / 96 | Limits on the window: always at least the past 30h (a ~6h overlap with yesterday's run), at most 4 days of catch-up after missed runs. |
 | `curation.candidate_limit` | 300 | At most this many candidates per column reach the model. The cost ceiling. |
 | `curation.history_scope` | `board` | Every column sees the whole board's recent stories, labelled by column, so a story is never repeated in another column and an update keeps its Developments timeline when it moves between columns. `topic`: each column sees only its own. |
 | `curation.published_days` / `published_limit` | 14 / 300 | How far back, and how many, of those stories each column sees - about a week of the whole board. Each story costs ~100 prompt tokens per column: 300 is about $0.02 a run; 150 halves that but remembers about three days. |

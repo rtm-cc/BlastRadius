@@ -148,7 +148,8 @@ class BackfillTest(unittest.TestCase):
         """Otherwise one card chains from day to day, past max_days."""
         topic = Topic(id="tech", name="Tech", min_items=2)
         old = make_story("Old", "https://example.com/old")
-        self.archive.save_day("2026-10-28", {"tech": [old]}, datetime.now(UTC))
+        # Fresh 22 days ago - beyond the reach - and carried over since.
+        self.archive.save_day("2026-10-10", {"tech": [old]}, datetime.now(UTC))
         self.archive.save_day("2026-10-31", {"tech": [{**old, "is_carryover": True}]}, datetime.now(UTC))
         self.archive.save_day(
             "2026-10-30", {"tech": [make_story("Fresh", "https://example.com/fresh")]}, datetime.now(UTC)
@@ -158,6 +159,21 @@ class BackfillTest(unittest.TestCase):
         _backfill_empty_topics(board, [topic], self.archive, "2026-11-01")
 
         self.assertEqual([s["title"] for s in board["tech"]], ["Fresh"])
+
+    def test_reaches_past_days_of_carryovers_only(self):
+        """Supply Chain on 2026-11-07: the three days before held nothing but
+        carryovers. The newest fresh cards are further back."""
+        topic = Topic(id="supply_chain", name="Supply Chain", min_items=3)
+        fresh = [make_story(f"Fresh {i}", f"https://example.com/f{i}") for i in range(3)]
+        self.archive.save_day("2026-11-02", {"supply_chain": fresh}, datetime.now(UTC))
+        for day in ("2026-11-04", "2026-11-05", "2026-11-06"):
+            carried = [{**s, "is_carryover": True} for s in fresh]
+            self.archive.save_day(day, {"supply_chain": carried}, datetime.now(UTC))
+        board: dict = {"supply_chain": []}
+
+        _backfill_empty_topics(board, [topic], self.archive, "2026-11-07")
+
+        self.assertEqual([s["title"] for s in board["supply_chain"]], ["Fresh 0", "Fresh 1", "Fresh 2"])
 
     def test_skips_a_story_superseded_today_even_without_a_cluster(self):
         topic = Topic(id="threats", name="Active Threats", min_items=1)

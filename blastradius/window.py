@@ -40,7 +40,10 @@ def resolve(
     last_run: datetime | None,
     settings: WindowSettings,
     override_hours: float | None = None,
+    board_since: datetime | None = None,
 ) -> Window:
+    """`board_since`: where the window of today's first run started, when
+    this run is a rerun of a day already published (State.board_since)."""
     if override_hours is not None:
         return Window(now - timedelta(hours=override_hours), now, f"--since-hours {override_hours:g}")
 
@@ -50,6 +53,14 @@ def resolve(
     else:
         start = now - timedelta(hours=settings.default_hours)
         reason = f"first run, {settings.default_hours:g}h default"
+
+    # A rerun replaces the day's columns, so it must see the whole day the
+    # first run saw, not only the hours since.
+    if board_since is not None and board_since < start:
+        start, reason = (
+            board_since,
+            f"rerun of today's board, from its first run's start {board_since:%Y-%m-%d %H:%M} UTC",
+        )
 
     floor = now - timedelta(hours=settings.max_hours)
     ceiling = now - timedelta(hours=settings.min_hours)

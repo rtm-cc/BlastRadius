@@ -162,3 +162,12 @@ class CarryoverTest(unittest.TestCase):
         self.assertEqual(b["threats"], [])
         self.assertEqual([s["id"] for s in b["vulns"]], ["0f68334e8489"])
         self.assertIn("(carried over) BTCPay Server Urges", chat.prompts[0])
+
+
+class KeeperTopicTest(unittest.TestCase):
+    def test_a_poisoned_package_stays_in_supply_chain(self):
+        """It nearly always carries malware, so the threats rule used to win."""
+        threats = story("Malicious npm package drops infostealer", "https://t/1")
+        supply = story("Malicious npm package drops infostealer", "https://s/1")
+        keeper_topic, *_ = crosstopic._pick_keeper_topic("threats", threats, "supply_chain", supply, {})
+        self.assertEqual(keeper_topic, "supply_chain")
