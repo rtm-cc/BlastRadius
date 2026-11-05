@@ -91,8 +91,8 @@ Mind the volume: a shared feed is offered to all seven columns, so its cost coun
 | Field | |
 | --- | --- |
 | `id` | Required, snake_case, unique across all the files. |
-| `type` | `rss`, `google_news` or `web_search`. |
-| `name` | Shown on the card for `rss`; `google_news` shows each item's own publisher. |
+| `type` | `rss`, `google_news`, `web_search` or `cisa_kev`. |
+| `name` | Shown on the card for `rss` and `cisa_kev`; `google_news` shows each item's own publisher. |
 | `enabled` | `false` parks it without deleting it. |
 | `max_age_hours` | Drop items older than this, on top of the run window. |
 | `max_items` | Keep at most this many, newest first, after the age filter. |
@@ -125,3 +125,15 @@ One paid search through OpenRouter per run, about half a cent.
 | `max_results` | Default 5. |
 
 Every result is loaded before it becomes a candidate, so a citation that does not open is dropped.
+
+### `cisa_kev`
+
+CISA's Known Exploited Vulnerabilities catalog. Each entry added in the run
+window becomes one candidate - "CISA adds CVE-… to Known Exploited
+Vulnerabilities: …" - linked to the CVE's NVD page. The catalog dates entries
+by day only, so each is stamped noon UTC of that day: inside exactly one daily
+run's window.
+
+| Field | |
+| --- | --- |
+| `url` | The catalog's JSON feed, `https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json`. |

@@ -250,6 +250,42 @@ class FeedTest(unittest.TestCase):
             (c.title, c.source_name, c.url), ("Summit ends", "Reuters", "https://news.google.com/rss/articles/CBMi1")
         )
 
+    KEV = Source(id="k", topic="t", type="cisa_kev", name="CISA KEV", url="https://example.com/kev.json")
+
+    def test_cisa_kev_entries_added_in_the_window(self):
+        def entry(cve, added, **extra):
+            return {
+                "cveID": cve,
+                "vulnerabilityName": f"Acme {cve} Flaw",
+                "dateAdded": added,
+                "shortDescription": "Acme <b>Widget</b> has a flaw.",
+                **extra,
+            }
+
+        body = json.dumps(
+            {
+                "vulnerabilities": [
+                    entry("CVE-2026-1", "2026-10-25"),  # the day before: an earlier run's
+                    entry("CVE-2026-2", "2026-10-26", knownRansomwareCampaignUse="Known", dueDate="2026-11-16"),
+                    entry("CVE-2026-3", "not a date"),
+                ]
+            }
+        ).encode()
+        result = self.fetch(body, self.KEV)
+        self.assertEqual(result.parsed_count, 3)
+        [c] = result.candidates
+        self.assertEqual(c.url, "https://nvd.nist.gov/vuln/detail/CVE-2026-2")
+        self.assertEqual(c.title, "CISA adds CVE-2026-2 to Known Exploited Vulnerabilities: Acme CVE-2026-2 Flaw")
+        self.assertEqual(
+            c.excerpt,
+            "Acme Widget has a flaw. Known ransomware use: Known. US federal agencies must fix it by 2026-11-16.",
+        )
+        self.assertEqual((c.source_name, c.published.isoformat()), ("CISA KEV", "2026-10-26T12:00:00+00:00"))
+
+    def test_a_kev_payload_that_is_not_the_catalog_is_an_error(self):
+        self.assertIn("not a KEV catalog", self.fetch(b'{"error": "maintenance"}', self.KEV).error)
+        self.assertTrue(self.fetch(b"<html>Access Denied</html>", self.KEV).error)
+
     def test_a_broken_feed_is_a_value(self):
         result = self.fetch(
             b"<html>nope</html>", Source(id="f", topic="t", type="rss", name="Feed", url="https://example.com/feed")
