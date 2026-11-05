@@ -43,6 +43,17 @@ class WindowTest(unittest.TestCase):
         self.assertEqual(resolve(NOW, NOW - timedelta(days=14), self.settings).hours, 96)
         self.assertEqual(resolve(NOW, NOW - timedelta(hours=1), self.settings).hours, 6)
 
+    def test_a_rerun_covers_the_whole_day(self):
+        """A rerun at 10:00 after a 07:00 run replaces the day's columns, so
+        it must see from where the 07:00 run's window started - not just 6h."""
+        first_since = NOW - timedelta(hours=27)
+        window = resolve(NOW, NOW - timedelta(hours=3), self.settings, board_since=first_since)
+        self.assertEqual(window.since, first_since)
+
+    def test_since_hours_overrides_a_rerun(self):
+        window = resolve(NOW, NOW - timedelta(hours=3), self.settings, 2, board_since=NOW - timedelta(hours=27))
+        self.assertEqual(window.hours, 2)
+
 
 class ConfigTest(unittest.TestCase):
     def setUp(self):
@@ -185,6 +196,19 @@ class ArchiveTest(unittest.TestCase):
         state.record_run(NOW, 5, 0.07)
         self.assertFalse((self.dir / "state.json").exists())
         self.assertEqual(load_yaml((self.dir / "state.yaml").read_text())["runs"], 4)
+
+    def test_state_keeps_where_the_days_first_window_started(self):
+        state = State(self.dir)
+        first = NOW - timedelta(hours=24)
+        state.record_run(NOW, 5, 0.07, "2026-10-27", first)
+        # A rerun's window starts there too; recording it changes nothing.
+        state.record_run(NOW + timedelta(hours=3), 5, 0.07, "2026-10-27", first)
+        self.assertEqual(state.board_since("2026-10-27"), first)
+        self.assertEqual(state.last_run, NOW + timedelta(hours=3))
+        self.assertIsNone(state.board_since("2026-10-28"))
+        # The next day's first run starts a new day.
+        state.record_run(NOW + timedelta(days=1), 5, 0.07, "2026-10-28", NOW + timedelta(hours=3))
+        self.assertEqual(state.board_since("2026-10-28"), NOW + timedelta(hours=3))
 
 
 RSS = b"""<?xml version="1.0"?><rss version="2.0"><channel><title>Feed</title>
