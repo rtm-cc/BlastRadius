@@ -59,7 +59,7 @@ A modern, high-performance Chrome Extension for [Blast Radius Digest](https://ne
 2. Navigate to `chrome://extensions`.
 3. Toggle on **Developer mode** in the top-right corner.
 4. Click **Load unpacked** in the top-left corner.
-5. Select the `extension/chrome` directory from this repository.
+5. Select the `extensions/chrome` directory from this repository.
 6. The **Blast Radius Digest** icon will appear in your extensions toolbar. Click the pin icon to keep it visible!
 
 ---
@@ -67,7 +67,7 @@ A modern, high-performance Chrome Extension for [Blast Radius Digest](https://ne
 ## File Structure
 
 ```
-extension/chrome/
+extensions/chrome/
 ├── manifest.json       # Manifest V3 configuration & permissions
 ├── background.js       # Service worker for periodic alarms, alerts, and badges
 ├── parser.js           # Zero-dependency, pure JS RSS 2.0 XML parser
@@ -80,21 +80,6 @@ extension/chrome/
 
 ---
 
-## Firefox Porting Guide
+## Firefox Extension
 
-The codebase is built strictly on standard WebExtensions and Manifest V3 APIs without vendor proprietary prefixes. To create a Firefox build (`extension/firefox`):
-1. Copy `extension/chrome` to `extension/firefox`.
-2. In `manifest.json`, replace `"service_worker": "background.js"` with:
-   ```json
-   "background": {
-     "scripts": ["background.js"],
-     "type": "module"
-   },
-   "browser_specific_settings": {
-     "gecko": {
-       "id": "blastradius@rtm.cc",
-       "strict_min_version": "109.0"
-     }
-   }
-   ```
-3. Test using `about:debugging` in Firefox.
+A dedicated Firefox build is available in [`extensions/firefox`](../firefox).
