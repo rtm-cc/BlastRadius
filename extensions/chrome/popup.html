@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blast Radius Digest</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="app-header">
+    <div class="brand-group">
+      <a href="https://news.rtm.cc" target="_blank" rel="noopener" class="brand-link" title="Open Blast Radius website">
+        <img src="icons/icon32.png" alt="" class="brand-icon" width="22" height="22">
+        <span class="brand-title">Blast Radius</span>
+      </a>
+      <a href="https://rtm.cc" target="_blank" rel="noopener" class="brand-credit">by RTM</a>
+    </div>
+
+    <div class="header-actions">
+      <!-- Search Toggle Button -->
+      <button type="button" id="btn-toggle-search" class="icon-btn" aria-label="Toggle search" title="Search stories (/)">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="9" cy="9" r="6"/>
+          <path d="M13.5 13.5 18 18"/>
+        </svg>
+      </button>
+
+      <!-- Force Refresh Button -->
+      <button type="button" id="btn-refresh" class="icon-btn" aria-label="Refresh news feed" title="Force refresh feed">
+        <svg class="refresh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+          <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+        </svg>
+      </button>
+
+      <!-- Alerts / Watchlist Button -->
+      <button type="button" id="btn-watchlist" class="icon-btn" aria-label="Keywords Watchlist" title="Alerts & Keyword Watchlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+        <span id="watchlist-badge-dot" class="badge-dot hidden"></span>
+      </button>
+
+      <!-- Theme Switcher Button -->
+      <button type="button" id="btn-theme" class="icon-btn" aria-label="Toggle theme" title="Switch light/dark theme">
+        <svg class="theme-icon-sun" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <circle cx="8" cy="8" r="3.2"/>
+          <path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <svg class="theme-icon-moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M13.2 10.2A6 6 0 1 1 5.8 2.8a6.5 6.5 0 0 0 7.4 7.4Z"/>
+        </svg>
+      </button>
+
+      <!-- Web Link Button -->
+      <a href="https://news.rtm.cc" target="_blank" rel="noopener" class="icon-btn" aria-label="Open Blast Radius website" title="Visit news.rtm.cc">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 9v4H3V4h4M9 2h5v5M6.5 9.5 13.8 2.2"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Collapsible Search Row -->
+  <div id="search-container" class="search-container hidden">
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="9" cy="9" r="6"/>
+        <path d="M13.5 13.5 18 18"/>
+      </svg>
+      <input type="search" id="search-input" placeholder="Filter today's stories or tags..." autocomplete="off" spellcheck="false" aria-label="Search stories">
+      <button type="button" id="btn-clear-search" class="clear-btn" aria-label="Clear search" title="Clear">✕</button>
+    </div>
+    <div id="search-stats" class="search-stats hidden"></div>
+  </div>
+
+  <!-- Topics Filter Bar with Floating Edge Fades & Sleek Chevrons -->
+  <div class="topics-nav-wrapper">
+    <div id="topics-fade-left" class="topics-fade left is-hidden">
+      <button type="button" id="btn-scroll-topics-left" class="topics-scroll-btn" aria-label="Scroll categories left" title="Scroll left">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 3 5 8l5 5"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="topics-bar" id="topics-bar" aria-label="Topic categories">
+      <!-- Injected dynamically with pills: All, Threats, Vulnerabilities, Breaches, AI Security, etc. -->
+    </nav>
+    <div id="topics-fade-right" class="topics-fade right is-hidden">
+      <button type="button" id="btn-scroll-topics-right" class="topics-scroll-btn" aria-label="Scroll categories right" title="Scroll right">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 3 5 5-5 5"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Active Alert Banner (shown if watched keywords matched today) -->
+  <div id="alert-banner" class="alert-banner hidden">
+    <div class="alert-banner-content">
+      <span class="alert-icon">⚡</span>
+      <span id="alert-banner-text" class="alert-banner-text"></span>
+    </div>
+    <button type="button" id="btn-view-alert-matches" class="alert-banner-btn">View matches</button>
+    <button type="button" id="btn-dismiss-alert-banner" class="alert-banner-close" aria-label="Dismiss alert banner">✕</button>
+  </div>
+
+  <!-- Main News Feed Container -->
+  <main class="feed-container" id="feed-container">
+    <!-- Story Cards injected here -->
+    <div id="loading-spinner" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading curated threat intel...</p>
+    </div>
+    <div id="error-banner" class="error-state hidden">
+      <p id="error-message">Unable to load feed.</p>
+      <button type="button" id="btn-retry" class="secondary-btn">Retry</button>
+    </div>
+    <div id="stories-list" class="stories-list"></div>
+    <div id="empty-state" class="empty-state hidden">
+      <p>No stories found matching your filter.</p>
+    </div>
+  </main>
+
+  <!-- Watchlist Modal / Drawer -->
+  <aside id="watchlist-modal" class="watchlist-modal hidden" aria-modal="true" role="dialog" aria-labelledby="watchlist-title">
+    <div class="watchlist-content">
+      <div class="watchlist-header">
+        <div class="watchlist-title-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <h2 id="watchlist-title">Keyword & Tag Watchlist</h2>
+        </div>
+        <button type="button" id="btn-close-watchlist" class="icon-btn" aria-label="Close watchlist">✕</button>
+      </div>
+
+      <p class="watchlist-desc">
+        Add terms, phrases, or regular expressions. Plain terms match <strong>case-insensitively (icase)</strong>. Matched stories trigger an alarm-red badge and in-card alerts.
+      </p>
+
+      <form id="watchlist-form" class="watchlist-form">
+        <div class="watchlist-input-row">
+          <div class="watchlist-input-wrap">
+            <input type="text" id="watchlist-input" placeholder="e.g. ransomware, CVE-2026, /CVE-\d+/i" autocomplete="off" spellcheck="false" required>
+            <button type="button" id="btn-toggle-regex-mode" class="mode-toggle-pill" title="Toggle regular expression mode">
+              <span class="mode-icon">.*</span>
+              <span class="mode-text">Regex</span>
+            </button>
+          </div>
+          <button type="submit" class="primary-btn">Add</button>
+        </div>
+        <div id="watchlist-error-msg" class="watchlist-error-msg hidden"></div>
+        <p class="watchlist-hint">
+          Tip: Plain terms match case-insensitively. For regex, use <code>/pattern/flags</code> or toggle the <code>.* Regex</code> button.
+        </p>
+      </form>
+
+      <div class="watchlist-tags-section">
+        <label class="section-label">Active Watched Terms (<span id="watchlist-count">0</span>):</label>
+        <div id="watchlist-tags" class="watchlist-tags">
+          <!-- Chips injected here -->
+        </div>
+      </div>
+
+      <div class="watchlist-settings">
+        <label class="toggle-control">
+          <input type="checkbox" id="chk-desktop-notifications">
+          <span class="toggle-slider"></span>
+          <span class="toggle-label">Desktop notifications on keyword match</span>
+        </label>
+      </div>
+
+      <div class="watchlist-footer">
+        <button type="button" id="btn-clear-alert-badge" class="secondary-btn">Reset Alert Badge</button>
+        <button type="button" id="btn-done-watchlist" class="primary-btn">Done</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Extension Footer -->
+  <footer class="app-footer">
+    <div class="footer-edition">
+      <span id="footer-edition-date">Today's Edition</span>
+      <span class="bullet">•</span>
+      <span id="footer-story-count">0 stories</span>
+    </div>
+    <a href="https://news.rtm.cc" target="_blank" rel="noopener" class="footer-archive-link">
+      <span>View Full Archive & Past Days</span>
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" width="11" height="11" aria-hidden="true">
+        <path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8"/>
+      </svg>
+    </a>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
