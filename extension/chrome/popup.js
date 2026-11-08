@@ -750,6 +750,56 @@ function attachEventListeners() {
 
   topicsBar.addEventListener('scroll', updateTopicScrollButtons, { passive: true });
 
+  // Topics Click & Drag to Scroll
+  let isDown = false;
+  let startX = 0;
+  let initialScrollLeft = 0;
+  let hasDragged = false;
+
+  topicsBar.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return;
+    isDown = true;
+    hasDragged = false;
+    startX = e.pageX - topicsBar.offsetLeft;
+    initialScrollLeft = topicsBar.scrollLeft;
+    topicsBar.classList.add('is-dragging');
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    const x = e.pageX - topicsBar.offsetLeft;
+    const walk = x - startX;
+    if (Math.abs(walk) > 4) {
+      hasDragged = true;
+    }
+    if (hasDragged) {
+      e.preventDefault();
+      topicsBar.scrollLeft = initialScrollLeft - walk;
+      updateTopicScrollButtons();
+    }
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!isDown) return;
+    isDown = false;
+    topicsBar.classList.remove('is-dragging');
+    setTimeout(() => {
+      hasDragged = false;
+    }, 60);
+  });
+
+  // Intercept click on capture phase so dragging doesn't trigger pill selection
+  topicsBar.addEventListener(
+    'click',
+    (e) => {
+      if (hasDragged) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    },
+    true
+  );
+
   topicsBar.addEventListener(
     'wheel',
     (e) => {

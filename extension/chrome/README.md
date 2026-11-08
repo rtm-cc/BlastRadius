@@ -25,7 +25,7 @@ A modern, high-performance Chrome Extension for [Blast Radius Digest](https://ne
   - **Breaches** (`hsl(0, ...)` Red)
   - **Fraud & Phishing** (`hsl(45, ...)` Amber)
   - **Policy & Enforcement** (`hsl(225, ...)` Blue)
-- Story counts are displayed right on each topic pill, and mouse wheel horizontal scrolling is fully supported.
+- **Intuitive Navigation**: Full click-and-drag mouse support, mouse wheel horizontal scrolling, and floating chevron buttons let you glide across all topics effortlessly. Story counts are displayed right on each topic pill.
 
 ### 4. Space-Efficient Instant Search
 - **Collapsible Search Row**: Takes minimal space (~32px) and doesn't push content down when closed.

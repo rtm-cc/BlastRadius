@@ -453,6 +453,24 @@ body {
   scroll-behavior: smooth;
   scroll-padding: 0 28px;
   scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.topics-bar:active {
+  cursor: grabbing;
+}
+
+.topics-bar.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto; /* Instant tracking without inertia lag while actively dragging */
+}
+
+.topics-bar.is-dragging * {
+  cursor: grabbing !important;
+  user-select: none !important;
+  pointer-events: none; /* Prevents pill hover effects and text selection while dragging */
 }
 
 .topics-bar::-webkit-scrollbar {
