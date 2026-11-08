@@ -1,0 +1,742 @@
+date: '2026-11-08'
+updated_at: '2026-11-08T07:06:03+00:00'
+topics:
+  ai_security:
+  - id: 18a98202fb62
+    rank: 1
+    title: Claude Code's 'Don't Ask Again' Option Can Leak Passwords and API Keys to Public GitHub Repos
+    summary: Apiiro researchers found that when Claude Code users select "Yes, and don't ask again," the
+      AI coding assistant can save the approved command word-for-word — including embedded passwords and
+      API keys — into project settings files that later reach public GitHub repositories. The research
+      identified 2,539 distinct secrets across 1,994 public repositories and 63 affected organizations,
+      with exposed data including an admin-level cloud key and a production Azure PostgreSQL password.
+      Developers should audit Claude Code project settings and rotate any credentials that may have been
+      committed.
+    url: https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Claude-Codes-Yes-and-Dont-Ask-Again.webp
+    sources:
+    - Cybersecurity News
+    - The Hacker News
+    labels:
+    - AI assistants
+    - exposed credentials
+    - github
+    - AI security research
+    rationale: New demonstrated data-leakage issue in an AI coding assistant, with concrete secret counts
+      and affected repositories.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 18a98202fb62
+    cluster_key: again-and-api-ask-can-claude-code-don-keys-leak-option-passwords
+    coverage:
+    - title: Claude Code’s “Yes, and Don’t Ask Again” Option Can Leak Passwords and API Keys to GitHub
+      url: https://cybersecuritynews.com/claude-codes-yes-and-dont-ask-again
+      source: Cybersecurity News
+      published: '2026-11-07T08:20:25+00:00'
+    - title: Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on
+        GitHub
+      url: https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html
+      source: The Hacker News
+      published: '2026-11-07T06:44:17+00:00'
+    published: '2026-11-07T08:20:25+00:00'
+  - id: 9a2a8623e895
+    rank: 2
+    title: Phishing Campaigns Target the AI Assistant Reading Your Email
+    summary: Cybersecurity Insiders reports that phishing is increasingly aimed at AI assistants that
+      read or process users' email, creating a new attack surface as assistants are given access to inboxes.
+      Malicious messages can be crafted to manipulate the assistant or extract sensitive information,
+      rather than only trying to trick a human recipient. The report highlights the need for prompt-injection
+      and data-exposure safeguards around email-connected AI assistants.
+    url: https://news.google.com/rss/articles/CBMiowFBVV95cUxNR0JyNW05Q2N5R2oyNFBBekZZdzFlZnlvQ08zeHFaMmlQSWl6Q0FWc01qTmo5WTI4UnpsZktMQktyLU1ZR1JrRmxCNUlOQXZxbDE2Y1pNeHZBeWpaNVZ0cFZkbHpMa2pRNFc1SDlUVjYtTkZRUU5KNlk1b3diWjRUbGtkTjVzNHJnYkpyaVJuVGNlNEZlck5iYmlIMC1RbFhDbG9R
+    image: ''
+    sources:
+    - Cybersecurity Insiders
+    labels:
+    - phishing
+    - AI assistants
+    rationale: 'Selects a distinct AI-security angle: phishing aimed at email-reading AI assistants rather
+      than at human recipients.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9a2a8623e895
+    cluster_key: assistant-campaigns-email-phishing-reading-target-the-your
+    coverage:
+    - title: 'Phishing Has a New Target: The AI Assistant Reading Your Email'
+      url: https://news.google.com/rss/articles/CBMiowFBVV95cUxNR0JyNW05Q2N5R2oyNFBBekZZdzFlZnlvQ08zeHFaMmlQSWl6Q0FWc01qTmo5WTI4UnpsZktMQktyLU1ZR1JrRmxCNUlOQXZxbDE2Y1pNeHZBeWpaNVZ0cFZkbHpMa2pRNFc1SDlUVjYtTkZRUU5KNlk1b3diWjRUbGtkTjVzNHJnYkpyaVJuVGNlNEZlck5iYmlIMC1RbFhDbG9R
+      source: Cybersecurity Insiders
+      published: '2026-11-07T15:45:33+00:00'
+    published: '2026-11-07T15:45:33+00:00'
+  - id: a20f214229a1
+    rank: 3
+    title: AI-Driven Hacks Test South Korean Banks as Older Defenses Hit Limits
+    summary: Chosunbiz reports that AI-driven hacking activity is testing South Korean banks, with conventional
+      security defenses reaching their limits. The coverage frames AI-enabled attacks as increasing pressure
+      on financial-sector defenders and prompting a reassessment of existing controls.
+    url: https://news.google.com/rss/articles/CBMiekFVX3lxTE54MTR3ZktDbGtuNnhabm42eFk5N3BIMmFUQTdVNzBuNkNuenNJbWtDSEtRa2NNUXotWFJIaW96bmxmSThYTDJBSURBYW5oNzhMYWJSTkJQZDVxMTJjVUx4UFk2eElqWVNuQWRpSTA5cHlUMzJBX2dNUHFR0gGOAUFVX3lxTFBva0FIV2RIelB1ZG4tSmNKcTZyYjBqbjZWVTl5TlVQWUI3em5tVjFqeHJzdm9FQVdtWmhPdV9KVF9Rbkg4OEdiY1pXU1p0S1ltNG9lbENlTTNkTUpOMld3YUtpRm5Uc3hjLVFmY0VWdV9Ma0MtRW0yTEQ5S08yMXd5M3JrVkExU1l5clhhRlE
+    image: ''
+    sources:
+    - Chosunbiz
+    labels:
+    - AI cybercrime
+    - cyberattack
+    rationale: Adds a real-operations angle on AI-enabled attacks against financial institutions, distinct
+      from already-published stories.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a20f214229a1
+    cluster_key: banks-defenses-driven-hacks-hit-korean-limits-older-south-test
+    coverage:
+    - title: AI-driven hacks test Korea’s banks as old defenses hit limits
+      url: https://news.google.com/rss/articles/CBMiekFVX3lxTE54MTR3ZktDbGtuNnhabm42eFk5N3BIMmFUQTdVNzBuNkNuenNJbWtDSEtRa2NNUXotWFJIaW96bmxmSThYTDJBSURBYW5oNzhMYWJSTkJQZDVxMTJjVUx4UFk2eElqWVNuQWRpSTA5cHlUMzJBX2dNUHFR0gGOAUFVX3lxTFBva0FIV2RIelB1ZG4tSmNKcTZyYjBqbjZWVTl5TlVQWUI3em5tVjFqeHJzdm9FQVdtWmhPdV9KVF9Rbkg4OEdiY1pXU1p0S1ltNG9lbENlTTNkTUpOMld3YUtpRm5Uc3hjLVFmY0VWdV9Ma0MtRW0yTEQ5S08yMXd5M3JrVkExU1l5clhhRlE
+      source: Chosunbiz
+      published: '2026-11-08T01:14:00+00:00'
+    published: '2026-11-08T01:14:00+00:00'
+  breaches:
+  - id: 21c9cab78398
+    rank: 1
+    title: Chainalysis says breach exposed credentials for all customers
+    summary: Blockchain analytics firm Chainalysis disclosed that the breach first reported last week
+      went further than previously known, exposing credentials for all of its customers. The earlier disclosure
+      said attackers using 'offensive agentic techniques' accessed customer names, email addresses, user
+      IDs, and organizational role labels; the company now says credentials were also exposed. Customers
+      should assume their credentials are compromised and rotate them and any related session tokens immediately.
+    url: https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/06/0_Chainalysis.jpg
+    sources:
+    - BleepingComputer
+    - DataBreaches.net
+    labels:
+    - data breach
+    - exposed credentials
+    rationale: 'Material update to the previously published Chainalysis breach: the scope is now confirmed
+      to include credentials for all customers, not just contact and organizational data. This falls squarely
+      under breach disclosures and warrants a credential-reset advisory.'
+    is_update: true
+    supersedes: 79d084f37c8e
+    what_changed: Chainalysis confirmed the breach also exposed credentials for all customers, widening
+      the scope beyond the names, email addresses, user IDs, and role labels disclosed in the initial
+      report.
+    cluster: 79d084f37c8e
+    cluster_key: all-breach-chainalysis-credentials-customers-exposed-for-says
+    coverage:
+    - title: Chainalysis says breach exposed credentials for all customers
+      url: https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers
+      source: BleepingComputer
+      published: '2026-11-08T07:03:45.490564+00:00'
+    - title: Norad targeted by cyberattack
+      url: https://databreaches.net/2026/11/07/norad-targeted-by-cyberattack
+      source: DataBreaches.net
+      published: '2026-11-07T15:05:43+00:00'
+    published: '2026-11-08T07:03:45.490564+00:00'
+  - id: 4aaee9a454e9
+    rank: 2
+    title: Sussex County, New Jersey Prosecutor's Office discloses data privacy incident
+    summary: The Sussex County Prosecutor's Office in New Jersey disclosed a data privacy event involving
+      personal information. It received alerts of a network disruption on or about August 10, 2026, and
+      launched an investigation with outside cybersecurity experts. The specific data exposed and the
+      number of affected individuals have not yet been published; those affected are being notified as
+      the review continues.
+    url: https://databreaches.net/2026/11/07/county-of-sussex-new-jersey-notice-of-data-privacy-incident
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - government
+    rationale: A confirmed breach disclosure at a government prosecutorial office involving personal information.
+      No superseding prior coverage on the board, so this is a new story.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4aaee9a454e9
+    cluster_key: county-data-discloses-incident-jersey-new-office-privacy-prosecutor-sussex
+    coverage:
+    - title: County of Sussex, New Jersey Notice of Data Privacy Incident
+      url: https://databreaches.net/2026/11/07/county-of-sussex-new-jersey-notice-of-data-privacy-incident
+      source: DataBreaches.net
+      published: '2026-11-07T15:06:29+00:00'
+    published: '2026-11-07T15:06:29+00:00'
+  - id: 4197fa9cb35c
+    rank: 3
+    title: 'DigiCert Breach Root Cause: Server Migration Exposed Internal System'
+    summary: New details on the DigiCert data breach show an internal business system storing customer
+      contact details and identity documents became externally accessible after a server migration, and
+      an attacker created an unauthorized account. Exposed data included names, business email addresses,
+      phone numbers and business addresses, with a small minority of accounts also containing passports
+      and driver's licenses. The certificate authority says affected records make up a small portion of
+      its archived customer data.
+    url: https://therecord.media/digicert-certificate-authority-reports-data-breach
+    image: http://cms.therecord.media/uploads/digicert_logo_8468cb0d4a.jpg
+    sources:
+    - The Record
+    - SecurityWeek
+    - DataBreaches.net
+    labels:
+    - data breach
+    rationale: Material update identifying the root cause of the confirmed DigiCert breach — unintentional
+      external exposure after a server migration and an unauthorized account — and confirming identity
+      document exposure for a minority of accounts.
+    is_update: true
+    supersedes: 07c7d737d783
+    what_changed: 'Root cause identified: unintentional external exposure of an internal business system
+      after a server migration, with an attacker-created unauthorized account.'
+    cluster: 07c7d737d783
+    cluster_key: breach-cause-digicert-exposed-internal-migration-root-server-system
+    coverage:
+    - title: Certificate authority DigiCert reports data breach involving business customer info
+      url: https://therecord.media/digicert-certificate-authority-reports-data-breach
+      source: The Record
+      published: '2026-11-06T18:56:00+00:00'
+    - title: DigiCert Data Breach Impacts Business Customer Information
+      url: https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information
+      source: SecurityWeek
+      published: '2026-11-06T14:00:07+00:00'
+    - title: DigiCert data breach exposes customer information, identity documents
+      url: https://databreaches.net/2026/11/06/digicert-data-breach-exposes-customer-information-identity-documents
+      source: DataBreaches.net
+      published: '2026-11-06T13:42:29+00:00'
+    published: '2026-11-06T18:56:00+00:00'
+    is_carryover: true
+  fraud_phishing:
+  - id: 90463bc0541e
+    rank: 1
+    title: Fake Gift Card Scams Impersonate Trusted Brands to Harvest Details and Push Subscriptions
+    summary: Scammers are impersonating major brands and celebrities to run fake gift card giveaways that
+      promise a reward but instead collect personal information and sign victims up for unwanted subscription
+      services. CTM360's analysis shows the campaigns use deceptive verification steps and affiliate networks
+      to generate revenue without ever delivering the promised prize. The lure is the unsolicited offer
+      of a free gift card from a familiar brand, and victims are steered through a fake 'claim' or verification
+      flow designed to capture personal and account details.
+    url: https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands
+    image: https://www.bleepstatic.com/content/posts/2026/11/06/ctm360-gift-card-scam.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - phishing
+    - social engineering
+    rationale: Only candidate in the pool that is a new fraud/phishing campaign aimed at consumers, describing
+      a recognizable lure (fake brand and celebrity gift card giveaways) that targets a broad audience.
+      Other candidates in the pool are either generic awareness content, already-published breach or vulnerability
+      stories, or events better fitting other topics.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 90463bc0541e
+    cluster_key: and-brands-card-details-fake-gift-harvest-impersonate-push-scams-subscriptions-trusted
+    coverage:
+    - title: CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands
+      url: https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands
+      source: BleepingComputer
+      published: '2026-11-07T14:10:19+00:00'
+    published: '2026-11-07T14:10:19+00:00'
+  - id: d94dee37eefe
+    rank: 2
+    title: Fake OpenAI, SpaceX, and Anthropic Event Invitations Phish Microsoft and Google Accounts
+    summary: Hackers are sending employees fake invitations to OpenAI, SpaceX, and Anthropic events, routing
+      them through two different phishing-as-a-service platforms. The lures look like legitimate event
+      registration and use familiar branding to build trust; the goal is to steal Microsoft and Google
+      account credentials and hijack active authentication sessions, so victims may be logged into everything
+      connected to those accounts. Look for unsolicited event invites, especially from tech-industry names,
+      that link to unfamiliar registration domains.
+    url: https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts
+    image: https://www.bleepstatic.com/content/hl-images/2022/08/23/phishing-hook.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - phishing
+    - AI-generated phishing
+    - account takeover
+    rationale: A new phishing campaign impersonating recognizable tech brands to phish enterprise credentials,
+      with the lure clearly described.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d94dee37eefe
+    cluster_key: accounts-and-and-anthropic-event-fake-google-invitations-microsoft-openai-phish-spacex
+    coverage:
+    - title: Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts
+      url: https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts
+      source: BleepingComputer
+      published: '2026-11-05T21:30:30+00:00'
+    published: '2026-11-05T21:30:30+00:00'
+    is_carryover: true
+  - id: 04438236920a
+    rank: 3
+    title: Rental Platform Phishing Sites Use Live Chat to Reel in Holiday Travelers
+    summary: 'Fortra''s FIRE team spotted phishing pages that clone popular holiday rental marketplaces,
+      complete with copied property listings, host names, ratings, and reviews, and add a live-chat feature
+      to reassure hesitant visitors. Targets are asked for their passwords, personal details, and credit
+      card numbers under the pretense of completing a reservation. Red flags: an offer or booking request
+      arriving by email with urgen messaging, and a checkout flow that asks for your login password or
+      card data on a site you didn''t navigate to yourself.'
+    url: https://www.helpnetsecurity.com/2026/11/06/holiday-rental-platform-phishing-travelers
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2024/07/07135238/travel_scams.webp
+    sources:
+    - Help Net Security
+    labels:
+    - phishing
+    - social engineering
+    rationale: Consumer-facing phishing campaign with a realistic lure and social-engineering live chat,
+      affecting holiday travelers broadly.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 04438236920a
+    cluster_key: chat-holiday-live-phishing-platform-reel-rental-sites-travelers-use
+    coverage:
+    - title: Rental phishing sites use live chat to win over hesitant travelers
+      url: https://www.helpnetsecurity.com/2026/11/06/holiday-rental-platform-phishing-travelers
+      source: Help Net Security
+      published: '2026-11-06T05:00:41+00:00'
+    published: '2026-11-06T05:00:41+00:00'
+    is_carryover: true
+  policy:
+  - id: 9a9b873fd179
+    rank: 1
+    title: Japan Announces Emergency Cybersecurity Package After Wave of Attacks
+    summary: Following a series of unauthorized access incidents and client-data leaks at dozens of Japanese
+      companies and government agencies, Japan announced an emergency cybersecurity package. The government
+      response aims to address a wave of attacks that has caused widespread unease across the country.
+    url: https://www.securityweek.com/japan-announces-emergency-cybersecurity-package-following-a-wave-of-attacks
+    image: https://www.securityweek.com/wp-content/uploads/2025/11/Geopolitics-Cybersecurity.jpg
+    sources:
+    - SecurityWeek
+    labels:
+    - government
+    - cyberattack
+    - data breach
+    rationale: Concrete national policy response to a sustained wave of cyberattacks affecting both private
+      and public sector organizations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9a9b873fd179
+    cluster_key: after-announces-attacks-cybersecurity-emergency-japan-package-wave
+    coverage:
+    - title: Japan Announces Emergency Cybersecurity Package Following a Wave of Attacks
+      url: https://www.securityweek.com/japan-announces-emergency-cybersecurity-package-following-a-wave-of-attacks
+      source: SecurityWeek
+      published: '2026-11-06T18:28:41+00:00'
+    published: '2026-11-06T18:28:41+00:00'
+    is_carryover: true
+  - id: b68b2bb89c05
+    rank: 2
+    title: EU Commission Preliminarily Finds TikTok's For You Feed Breaches DSA
+    summary: The European Commission preliminarily found that TikTok's 'For You' recommender system breaches
+      the Digital Services Act because it can create harmful 'rabbit hole' effects, including around mental
+      health and body image content. The finding is a formal step in the DSA enforcement process and could
+      lead to fines and binding remedies for TikTok.
+    url: https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes
+    image: https://digital-strategy.ec.europa.eu/sites/default/files/styles/newsroom_large/public/newsroom/items/DSA_variation_v3_tCaOLMFzpo0EqgIcqyulWXEvAvQ_251500.png?itok=wiznj0-z
+    sources:
+    - EC Digital Strategy
+    labels:
+    - DSA
+    - government
+    rationale: Formal regulatory preliminary finding under the Digital Services Act with potential fines
+      and binding obligations for a major platform.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b68b2bb89c05
+    cluster_key: breaches-commission-dsa-feed-finds-for-preliminarily-tiktok-you
+    coverage:
+    - title: Commission preliminarily finds TikTok’s ‘For You’ feed in breach of Digital Services Act
+        for harmful ‘rabbit holes’ effect
+      url: https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes
+      source: EC Digital Strategy
+      published: '2026-11-06T11:09:12+00:00'
+    published: '2026-11-06T11:09:12+00:00'
+    is_carryover: true
+  - id: 0cf62ab5ba13
+    rank: 3
+    title: Medical Services Firm Settles With Four States Over 2023 Patient Data Breach
+    summary: The attorneys general of Connecticut, New Jersey, New York and Michigan settled with the
+      Nevada-based Perry Johnson Companies over a 2023 hack that exposed sensitive patient records. The
+      case targeted the company's medical transcription, coding and imaging subsidiaries and resulted
+      in state-level data security obligations.
+    url: https://therecord.media/medical-services-company-settles-with-4-state-ags
+    image: http://cms.therecord.media/uploads/healthcare_data_getty_images_unsplash_600f103bc9.jpg
+    sources:
+    - The Record
+    - DataBreaches.net
+    labels:
+    - settlement
+    - data breach
+    - healthcare
+    - data protection
+    rationale: State attorney general enforcement action resolving a health data breach and imposing security
+      obligations on the company.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0cf62ab5ba13
+    cluster_key: 2023-breach-data-firm-four-medical-over-patient-services-settles-states-with
+    coverage:
+    - title: Medical services company settles with 4 states over 2023 hack of sensitive patient records
+      url: https://therecord.media/medical-services-company-settles-with-4-state-ags
+      source: The Record
+      published: '2026-11-06T19:06:00+00:00'
+    - title: State attorneys general secure up to $10 million and corrective action plan from Perry Johnson
+        companies after 2023 breach
+      url: https://databreaches.net/2026/11/06/state-attorneys-general-secure-up-to-10-million-and-corrective-action-plan-from-perry-johnson-companies-after-2023-breach
+      source: DataBreaches.net
+      published: '2026-11-06T20:28:33+00:00'
+    published: '2026-11-06T19:06:00+00:00'
+    is_carryover: true
+  supply_chain:
+  - id: 916669dc192c
+    rank: 1
+    title: First supply-chain attack hits pub.dev as two malicious packages are published
+    summary: Two malicious packages have been published to pub.dev, the official Dart package registry,
+      in what OSSprey describes as the first supply-chain attack on the platform. Flutter and Dart developers
+      should review pubspec.lock and audit recently added dependencies for unfamiliar or unexpected packages.
+    url: https://www.ossprey.com/blog/pub-dev-compromise
+    image: https://framerusercontent.com/images/lRkGiXhRW8kkYiwIKvdIV3HI.png
+    sources:
+    - ossprey.com
+    - pkgwarden
+    labels:
+    - malicious-package
+    - supply-chain
+    rationale: New platform targeted in a registry supply-chain attack; pub.dev users need to check their
+      dependencies.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 916669dc192c
+    cluster_key: are-attack-chain-dev-first-hits-malicious-packages-pub-published-supply-two
+    coverage:
+    - title: The supply chain attack map keeps growing, Pub.dev just got added
+      url: https://www.ossprey.com/blog/pub-dev-compromise
+      source: ossprey.com
+      published: '2026-11-08T07:03:45.490564+00:00'
+    - title: 'Supply chain research: incident recaps and analysis | pkgwarden'
+      url: https://pkgwarden.com/research
+      source: pkgwarden
+      published: '2026-11-08T07:03:45.490564+00:00'
+    published: '2026-11-08T07:03:45.490564+00:00'
+  - id: 9b196b98b414
+    rank: 2
+    title: GitHub to Block pull_request_target Workflows by Default Starting December 2
+    summary: GitHub will block GitHub Actions workflows triggered by pull_request_target in public repositories
+      by default on December 2, 2026, extending protections against a class of CI/CD vulnerabilities that
+      has enabled credential theft and compromised open source releases. Maintainers using affected workflows
+      must add an explicit Actions event policy before the change.
+    url: https://socket.dev/blog/github-to-block-pull-request-target
+    image: https://cdn.sanity.io/images/cgdhsj6q/production/34adb0fa8df2fe073db75712dfab2e7d8faeb54f-1672x941.png?w=1000&q=95&fit=max&auto=format
+    sources:
+    - Socket Threat Intel
+    labels:
+    - ci-cd
+    - github
+    - supply-chain
+    rationale: Concrete CI/CD supply-chain hardening action tied to a vulnerability class that has repeatedly
+      led to credential theft in open source projects.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9b196b98b414
+    cluster_key: block-december-default-github-pull-request-starting-target-workflows
+    coverage:
+    - title: GitHub to Block pull_request_target Workflows by Default Starting December 2
+      url: https://socket.dev/blog/github-to-block-pull-request-target
+      source: Socket Threat Intel
+      published: '2026-11-05T15:01:39+00:00'
+    published: '2026-11-05T15:01:39+00:00'
+    is_carryover: true
+  - id: 507fd788b23c
+    rank: 3
+    title: Truffle Security Launches Free Program to Revoke 1.4 Million Exposed Secrets
+    summary: Truffle Security's new Secrets Revocation Program helps API key issuers revoke 1.4 million
+      publicly exposed secrets that remain valid. The free initiative gives vendors a concrete way to
+      rotate credentials that could otherwise be abused.
+    url: https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/05/keus.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - exposed credentials
+    - github
+    - supply-chain
+    rationale: Directly actionable remediation for exposed credentials in public repositories, a recurring
+      supply-chain risk with concrete rotation steps.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 507fd788b23c
+    cluster_key: exposed-free-launches-million-program-revoke-secrets-security-truffle
+    coverage:
+    - title: Nearly 1.5 million exposed secrets targeted in new revocation program
+      url: https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets
+      source: BleepingComputer
+      published: '2026-11-05T20:15:08+00:00'
+    published: '2026-11-05T20:15:08+00:00'
+    is_carryover: true
+  threats:
+  - id: d76b6e2b1fbb
+    rank: 1
+    title: 'Ransomware Leak-Site Digest: N0N and Akira Lead Latest Listings'
+    summary: Ransomnews' daily tracker counts 38 victims listed on ransomware leak sites on November 5,
+      with 20 organizations added in the prior 24 hours across 11 operators, led by N0N (7) and Akira
+      (4). The seven-day average is 37.3 listings per day, with 192 so far in November. It provides defenders
+      a current snapshot of active ransomware groups and their recent victims.
+    url: https://ransomnews.com/ransomware-attacks-today
+    image: https://ransomnews.com/wp-content/uploads/2026/10/ransomware-attacks-today-daily-digest-cover-1024x576.png
+    sources:
+    - Ransomnews
+    labels:
+    - ransomware
+    rationale: Current ransomware leak-site activity with named operators and victim counts; directly
+      relevant to tracking active ransomware campaigns.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d76b6e2b1fbb
+    cluster_key: akira-and-digest-latest-lead-leak-listings-n0n-ransomware-site
+    coverage:
+    - title: 'Ransomware attacks today: 38 victims listed, 8 Nov 2026'
+      url: https://ransomnews.com/ransomware-attacks-today
+      source: Ransomnews
+      published: '2026-11-08T07:03:45.490564+00:00'
+    published: '2026-11-08T07:03:45.490564+00:00'
+  - id: 283d265e2bc6
+    rank: 2
+    title: QNAP Warns of Active Plex2Shell Attacks on NAS Devices
+    summary: QNAP says hackers are actively exploiting the Plex2Shell vulnerability chain to breach NAS
+      devices. The company urges users to update Plex Media Server to the latest version available in
+      the QNAP App Center as soon as possible.
+    url: https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/06/QNAP.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - active exploitation
+    - vulnerability
+    - embedded
+    - advisory
+    rationale: Vendor-confirmed active exploitation of network-attached storage devices; exposed NAS users
+      need to apply the Plex Media Server update urgently.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 283d265e2bc6
+    cluster_key: active-attacks-devices-nas-plex2shell-qnap-warns
+    coverage:
+    - title: QNAP says hackers breaching NAS devices in Plex2Shell attacks
+      url: https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks
+      source: BleepingComputer
+      published: '2026-11-06T17:04:23+00:00'
+    published: '2026-11-06T17:04:23+00:00'
+    is_carryover: true
+  - id: bba4ca9ffc76
+    rank: 3
+    title: Unit 42 and US Agencies Detail Attacks on Cold-Chain and Refrigeration Systems
+    summary: CISA, the FBI, HHS, USDA and DOT issued a joint advisory on active attacks against industrial
+      refrigeration and cold-chain systems after attackers tampered with supermarket and blood-storage
+      units in Europe. Unit 42 followed up with a technical analysis of how the attacks spread and what
+      operators should do to harden their networks.
+    url: https://unit42.paloaltonetworks.com/europes-refrigeration-systems-attacks
+    image: https://unit42.paloaltonetworks.com/wp-content/uploads/2026/11/06_Myth-Busting_Category_1505x922.jpg
+    sources:
+    - Palo Alto Unit 42
+    - Dark Reading
+    - SecurityWeek
+    - Malwarebytes
+    - Infosecurity Magazine
+    - Help Net Security
+    labels:
+    - critical infrastructure
+    - advisory
+    - active exploitation
+    - healthcare
+    rationale: Follow-up technical analysis and a five-agency advisory on an ongoing, high-impact attack
+      campaign against food and medical cold-chain infrastructure.
+    is_update: true
+    supersedes: 9942623103aa
+    what_changed: Unit 42 published a technical deep-dive into how the European refrigeration attacks
+      spread, adding root-cause and mitigation detail beyond the joint advisory.
+    cluster: f85978e12192
+    cluster_key: agencies-and-and-attacks-chain-cold-detail-refrigeration-systems-unit
+    coverage:
+    - title: 'Turning Up the Heat: Inside the Attacks on Europe’s Refrigeration System'
+      url: https://unit42.paloaltonetworks.com/europes-refrigeration-systems-attacks
+      source: Palo Alto Unit 42
+      published: '2026-11-06T21:15:09+00:00'
+    - title: Why Europe's Freezer Hacks Spread So Far, So Fast
+      url: https://www.darkreading.com/ics-ot-security/europes-freezer-hacks-spread-so-far-so-fast
+      source: Dark Reading
+      published: '2026-11-06T14:00:00+00:00'
+    - title: US Agencies Urge Organizations to Harden Refrigeration Controllers
+      url: https://www.securityweek.com/us-agencies-urge-organizations-to-harden-refrigeration-controllers
+      source: SecurityWeek
+      published: '2026-11-06T13:02:26+00:00'
+    - title: Attacks on supermarket and blood storage systems prompt US warning
+      url: https://www.malwarebytes.com/blog/news/2026/11/attacks-on-supermarket-and-blood-storage-systems-prompt-us-warning
+      source: Malwarebytes
+      published: '2026-11-06T12:02:17+00:00'
+    - title: CISA, FBI Urge Action to Protect Industrial Refrigeration Networks
+      url: https://www.infosecurity-magazine.com/news/cisa-protect-refrigeration-networks
+      source: Infosecurity Magazine
+      published: '2026-11-06T11:50:00+00:00'
+    - title: US agencies warn attackers are targeting refrigeration systems that protect food and medicine
+      url: https://www.helpnetsecurity.com/2026/11/06/cyberattacks-refrigeration-systems-cisa-fbi
+      source: Help Net Security
+      published: '2026-11-06T09:04:36+00:00'
+    published: '2026-11-06T21:15:09+00:00'
+    is_carryover: true
+  vulnerabilities:
+  - id: 5a764c73584a
+    rank: 1
+    title: Insignary Releases Free Tool to Detect PHP2Shell and Node2Shell Exposure
+    summary: Insignary released a free, read-only scanner called insignary-chk that helps organizations
+      identify Linux servers and container images exposed to PHP2Shell and Node2Shell, two actively exploited
+      vulnerability families affecting PHP and Node.js runtimes. The tool is meant for exposure detection;
+      affected systems found by the scan should be patched or mitigated according to vendor guidance.
+    url: https://cybersecuritynews.com/insignary-releases-free-insignary-chk-tool-to-detect-php2shell-and-node2shell-exposure
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjR2BJe1Sq8YsZi51I159IrbS3JJ_QryD7WlctfsPN0Rp02xSkZ_Gd-HeJZ6rw9PyB5Sr43hLCho4Mt8XzCEm-1yM4IccdBBXZYZi5vv5hb-OQP-8su9oi2QSlU1rMN6z_66Q9EPk1w1_HzoOiLxrWslxwPQe0gr74EeTWOmYNqsVfbsaRitUFo6O3rSjk/s1600/Insignary%20Launches%20Clarity%20On-Demand_%20SBOMs,%20No%20Annual%20Commitment%20Required%20Toronto,%20Canada,%20July%2015th,%202026,%20CyberNewswire%20Enterprise-grade%20binary%20software%20verification%20for%20one%20project,%20one%20team,%20or%20%20(66.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - PHP2Shell
+    - Node2Shell
+    - active exploitation
+    rationale: Only new Vulnerabilities & Patches story in this candidate batch that is not already published
+      or off-topic; the other candidates duplicate existing stories or belong to AI Security, Breaches,
+      or Fraud topics. The tool is a practical, actionable response to two actively exploited vulnerability
+      families.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5a764c73584a
+    cluster_key: and-detect-exposure-free-insignary-node2shell-php2shell-releases-tool
+    coverage:
+    - title: Insignary Releases Free Insignary-Chk Tool to Detect PHP2Shell and Node2Shell Exposure
+      url: https://cybersecuritynews.com/insignary-releases-free-insignary-chk-tool-to-detect-php2shell-and-node2shell-exposure
+      source: Cybersecurity News
+      published: '2026-11-07T02:06:17+00:00'
+    published: '2026-11-07T02:06:17+00:00'
+  - id: 6926bbdc415f
+    rank: 2
+    title: SonicWall Warns of SSL-VPN MFA Bypass Flaw Exploited in Attacks; CISA Adds CVE-2026-19868 to
+      KEV
+    summary: SonicWall released SonicOS updates for an SSL-VPN authentication bypass tracked as CVE-2026-19868
+      that is being exploited in attacks. The flaw lets credentials from an alternate authentication method
+      bypass SAML-enforced MFA. CISA added the vulnerability to its Known Exploited Vulnerabilities catalog,
+      requiring federal agencies to patch by November 20, 2026.
+    url: https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks
+    image: https://www.bleepstatic.com/content/hl-images/2025/05/08/SonicWall.jpg
+    sources:
+    - BleepingComputer
+    - CISA
+    - CISA KEV
+    - The Hacker News
+    - Help Net Security
+    - SecurityWeek
+    - Risky Business News
+    labels:
+    - CISA
+    - KEV
+    - exploited in the wild
+    - security update
+    - authentication
+    rationale: Actively exploited SSL-VPN auth bypass in widely deployed SonicWall firewalls, now in CISA
+      KEV with a mandated remediation deadline.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6926bbdc415f
+    cluster_key: adds-attacks-bypass-cisa-cve-exploited-flaw-mfa-sonicwall-ssl-vpn-warns
+    coverage:
+    - title: SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks
+      source: BleepingComputer
+      published: '2026-11-07T00:00:55+00:00'
+    - title: CISA Adds One Known Exploited Vulnerability to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog
+      source: CISA
+      published: '2026-11-06T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-19868 to Known Exploited Vulnerabilities: SonicWall SonicOS SSLVPN Use
+        of Single-factor Authentication Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-19868
+      source: CISA KEV
+      published: '2026-11-06T12:00:00+00:00'
+    - title: Citrix patches NetScaler SAML zero-day exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks
+      source: BleepingComputer
+      published: '2026-11-07T07:03:51.725849+00:00'
+    - title: Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot
+      url: https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html
+      source: The Hacker News
+      published: '2026-11-06T15:21:49+00:00'
+    - title: OpenSSH flaw exploited in the wild just hours after disclosure (CVE-2026-123158)
+      url: https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation
+      source: Help Net Security
+      published: '2026-11-06T12:49:41+00:00'
+    - title: OpenSSH Rushes Patches for ‘SSHole’ Authentication Bypass
+      url: https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass
+      source: SecurityWeek
+      published: '2026-11-06T12:07:42+00:00'
+    - title: OpenSSH auth bypass bug hits Alpine Linux, OperWRT
+      url: https://risky.biz/RBNEWS630
+      source: Risky Business News
+      published: '2026-11-06T03:32:33+00:00'
+    published: '2026-11-07T00:00:55+00:00'
+    is_carryover: true
+  - id: 7a0b87725700
+    rank: 3
+    title: Cisco Patches Secure Email Gateway Zero-Day Exploited to Execute Commands as Root
+    summary: Cisco warned customers to patch a critical Secure Email Gateway zero-day that threat actors
+      are actively exploiting. Public reporting says the flaw can be used to execute commands as root.
+      The fix is available; apply it immediately.
+    url: https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root
+    image: https://www.bleepstatic.com/content/hl-images/2026/08/11/Cisco.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    - Help Net Security
+    - SecurityWeek
+    - Risky Business News
+    labels:
+    - Cisco
+    - zero-day
+    - exploited in the wild
+    - security update
+    - remote code execution
+    rationale: Actively exploited critical flaw in a widely deployed Cisco email security appliance with
+      a patch available.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7a0b87725700
+    cluster_key: cisco-commands-day-email-execute-exploited-gateway-patches-root-secure-zero
+    coverage:
+    - title: Cisco patches Secure Email Gateway zero-day exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root
+      source: BleepingComputer
+      published: '2026-11-07T07:03:51.725849+00:00'
+    - title: Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot
+      url: https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html
+      source: The Hacker News
+      published: '2026-11-06T15:21:49+00:00'
+    - title: OpenSSH flaw exploited in the wild just hours after disclosure (CVE-2026-123158)
+      url: https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation
+      source: Help Net Security
+      published: '2026-11-06T12:49:41+00:00'
+    - title: OpenSSH Rushes Patches for ‘SSHole’ Authentication Bypass
+      url: https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass
+      source: SecurityWeek
+      published: '2026-11-06T12:07:42+00:00'
+    - title: OpenSSH auth bypass bug hits Alpine Linux, OperWRT
+      url: https://risky.biz/RBNEWS630
+      source: Risky Business News
+      published: '2026-11-06T03:32:33+00:00'
+    - title: Experts Demonstrate Barracuda Email Security Gateway Chain Enabling Root Access Without Login
+      url: https://thehackernews.com/2026/11/experts-demonstrate-barracuda-email.html
+      source: The Hacker News
+      published: '2026-11-06T05:39:10+00:00'
+    published: '2026-11-07T07:03:51.725849+00:00'
+    is_carryover: true
