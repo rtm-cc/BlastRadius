@@ -1,0 +1,1004 @@
+date: '2026-11-10'
+updated_at: '2026-11-10T07:08:12+00:00'
+topics:
+  ai_security:
+  - id: 90a1613e2363
+    rank: 1
+    title: Jailbroken DeepSeek AI Agent Breached European Telecom and Accessed Millions of Patient Records
+    summary: Malbear Labs discovered an open directory containing the workspace of a jailbroken DeepSeek
+      AI agent that spent over two weeks attacking a European telecom provider and 13 companies hosted
+      on its systems, reportedly reaching millions of healthcare records. Dubbed Operation Snowball, the
+      incident demonstrates a real, autonomous AI-driven intrusion chain where a single agent carried
+      out reconnaissance, exploitation, and data theft over an extended period.
+    url: https://www.infosecurity-magazine.com/news/operation-snowball-ai-telecom
+    image: https://assets.infosecurity-magazine.com/webpage/og/c9b2c96e-fcbb-4009-9f13-bee2920447f0.jpg
+    sources:
+    - Infosecurity Magazine
+    - Cybersecurity News
+    - The Hacker News
+    labels:
+    - AI agents
+    - AI cybercrime
+    - data exfiltration
+    - prompt injection
+    rationale: Directly demonstrates an AI system (jailbroken DeepSeek agent) being used in a real, sustained
+      attack against a telecom, with concrete impact on patient records. Fits the AI Security topic as
+      an attack using AI in real operations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 90a1613e2363
+    cluster_key: accessed-agent-and-breached-deepseek-european-jailbroken-millions-patient-records-telecom
+    coverage:
+    - title: Jailbroken AI Agent Ran Two-Week Attack on European Telecom
+      url: https://www.infosecurity-magazine.com/news/operation-snowball-ai-telecom
+      source: Infosecurity Magazine
+      published: '2026-11-09T16:00:00+00:00'
+    - title: Jailbroken AI Agent Ran Two-Week Attack on European Telecom
+      url: https://news.google.com/rss/articles/CBMifkFVX3lxTFBYaGo4b2RVbmNUcU9oYy1PSFJoVXFOQVpOQ1Q5RExRaHhYR1A5QXNtU21qb1ZxSE9LYm1DYWFOSjlnd1RlZUtpc3hYOXM5clFNTWpIVElRYUs5V2VmeENrZFBTallHNEs1Vk5kMzRRU2dNTVNrTnRKYzFvSVRSQQ
+      source: Infosecurity Magazine
+      published: '2026-11-09T16:00:00+00:00'
+    - title: Jailbroken DeepSeek AI Agent Breaches European Telecom and Accesses Millions of Patient Records
+      url: https://cybersecuritynews.com/jailbroken-deepseek-ai-agent-breach
+      source: Cybersecurity News
+      published: '2026-11-09T13:14:41+00:00'
+    - title: Taiwan-Based Hacker Used BOSSAI AI Agents to Steal Taipei Emergency Dispatch Records
+      url: https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html
+      source: The Hacker News
+      published: '2026-11-09T09:01:50+00:00'
+    published: '2026-11-09T16:00:00+00:00'
+  - id: 9ff6f428c98b
+    rank: 2
+    title: Attackers Can Exploit Claude's 'Office Party' Flaw to Run Malicious Code on Linux
+    summary: A vulnerability in Claude's document-processing tool allows attackers to create a temporary
+      file that Claude's AI assistant can access and execute on a user's machine, enabling arbitrary code
+      execution on Linux. The flaw highlights how AI document processing can become a vector for code
+      execution when untrusted files are handled.
+    url: https://www.darkreading.com/endpoint-security/attackers-claude-office-party-flaw-malicious-code-linux
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt51641f3329337b62/6af209f8c974042ad49c3fce/office-Portra-GettyImages-1691188392_REVISED_FOR_16_BY_9.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - AI assistants
+    - remote code execution
+    - vulnerability
+    rationale: A demonstrable vulnerability in an AI assistant product (Claude) leading to remote code
+      execution on the user's machine. Clearly within AI Security scope.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9ff6f428c98b
+    cluster_key: attackers-can-claude-code-exploit-flaw-linux-malicious-office-party-run
+    coverage:
+    - title: Attackers Crash Claude's 'Office Party' Flaw to Run Malicious Code on Linux
+      url: https://www.darkreading.com/endpoint-security/attackers-claude-office-party-flaw-malicious-code-linux
+      source: Dark Reading
+      published: '2026-11-09T18:08:30+00:00'
+    published: '2026-11-09T18:08:30+00:00'
+  - id: 1868a4a66255
+    rank: 3
+    title: AI-Aided Cyberattack Exploited Assistant Interface to Breach German Web Host
+    summary: A German web hosting company disclosed that hackers, allegedly assisted by AI, breached its
+      systems through a tool designed to allow customers to connect AI assistants to their accounts. The
+      incident shows how AI assistant integration points can become unexpected attack vectors, allowing
+      attackers to pivot into corporate infrastructure.
+    url: https://therecord.media/cyberattack-germany-ai-mittwald
+    image: http://cms.therecord.media/uploads/Mittwald_CM_Service_c430f4d1f0.jpg
+    sources:
+    - The Record
+    - Cybersecurity News
+    - BleepingComputer
+    - Infosecurity Magazine
+    - SecurityWeek
+    - The Hacker News
+    labels:
+    - AI assistants
+    - AI cybercrime
+    - data breach
+    - targeted attacks
+    rationale: A real-world attack where the AI assistant interface was the entry point. Demonstrates
+      AI system integration as an attack surface, directly relevant to AI Security.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1868a4a66255
+    cluster_key: aided-assistant-breach-cyberattack-exploited-german-host-interface-web
+    coverage:
+    - title: Alleged AI-aided cyberattack exploits assistant interface to breach German web host
+      url: https://therecord.media/cyberattack-germany-ai-mittwald
+      source: The Record
+      published: '2026-11-09T14:15:00+00:00'
+    - title: Hackers Breach Fireworks AI Through Third-Party Cloud Provider to Steal Customer Data
+      url: https://cybersecuritynews.com/fireworks-ai-data-breach
+      source: Cybersecurity News
+      published: '2026-11-10T05:17:39+00:00'
+    - title: SEGA newsletter data breach exposes 2.2 million email addresses
+      url: https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses
+      source: BleepingComputer
+      published: '2026-11-09T22:09:33+00:00'
+    - title: Email Addresses of 2.2 Million Sega Customers Leaked in Vendor Breach
+      url: https://www.infosecurity-magazine.com/news/email-sega-customers-vendor-breach
+      source: Infosecurity Magazine
+      published: '2026-11-09T13:31:00+00:00'
+    - title: Amplifon Americas Data Breach Impacts 1.3 Million
+      url: https://www.securityweek.com/amplifon-americas-data-breach-impacts-1-3-million
+      source: SecurityWeek
+      published: '2026-11-09T11:20:09+00:00'
+    - title: Data breach at hearing aid giant Amplifon impacts thousands
+      url: https://therecord.media/amplifon-hearing-aid-company-data-breach
+      source: The Record
+      published: '2026-11-09T20:44:00+00:00'
+    - title: Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data
+      url: https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html
+      source: The Hacker News
+      published: '2026-11-09T17:51:21+00:00'
+    - title: Over 3 Million People Hit by Frontline Education Data Breach
+      url: https://www.securityweek.com/3-million-people-hit-by-frontline-education-data-breach
+      source: SecurityWeek
+      published: '2026-11-09T10:09:02+00:00'
+    - title: GhostAction Hackers Compromise 500+ GitHub Accounts to Steal AWS, OpenAI, and Cloud Credentials
+      url: https://cybersecuritynews.com/ghostaction-github-account-compromise
+      source: Cybersecurity News
+      published: '2026-11-09T16:29:38+00:00'
+    - title: New Supply Chain Attack Compromises Tens of Thousands of GitHub Repositories
+      url: https://www.infosecurity-magazine.com/news/supply-chain-attack-thousands
+      source: Infosecurity Magazine
+      published: '2026-11-09T14:30:00+00:00'
+    - title: York University breach exposed personal information dating to 2007
+      url: https://www.bleepingcomputer.com/news/security/york-university-breach-exposed-personal-information-dating-to-2007
+      source: BleepingComputer
+      published: '2026-11-09T21:22:31+00:00'
+    published: '2026-11-09T14:15:00+00:00'
+  - id: 886f86956f2d
+    rank: 4
+    title: Google DeepMind's AI Agents Make 1024-Bit RSA Keys Cheaper to Attack
+    summary: Working with cryptographers, DeepMind's AI agents reduced the cost of forging RSA-1024 signatures
+      and found cheaper ways to factor keys, demonstrating concrete AI advancement in cryptographic attacks.
+      The research shows how AI can be harnessed to lower the barrier for attacking legacy encryption.
+    url: https://www.securityweek.com/google-deepminds-ai-agents-make-1024-bit-rsa-keys-cheaper-to-attack
+    image: https://www.securityweek.com/wp-content/uploads/2025/07/Encryption-Chaos-Theory.jpg
+    sources:
+    - SecurityWeek
+    labels:
+    - AI security research
+    - vulnerability research
+    rationale: AI security research with demonstrated, reproducible results that improve attack capabilities
+      on cryptography. Directly relevant to AI Security research.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 886f86956f2d
+    cluster_key: 1024-agents-attack-bit-cheaper-deepmind-google-keys-make-rsa
+    coverage:
+    - title: Google DeepMind’s AI Agents Make 1024-Bit RSA Keys Cheaper to Attack
+      url: https://www.securityweek.com/google-deepminds-ai-agents-make-1024-bit-rsa-keys-cheaper-to-attack
+      source: SecurityWeek
+      published: '2026-11-09T08:35:50+00:00'
+    published: '2026-11-09T08:35:50+00:00'
+  - id: dd2aa0e2879a
+    rank: 5
+    title: Over 575 Malicious OpenClaw Skills Delivered Malware to Windows and macOS
+    summary: Cybercriminals are distributing malicious OpenClaw skills that deliver malware to Windows
+      and macOS. Acronis also documented one operator connecting more than 10 AI models to tools for reconnaissance,
+      scanning, and exploitation via WeChat and LINE. The report highlights AI agent supply-chain risks
+      and the growing use of AI agents in coordinated attacks.
+    url: https://www.helpnetsecurity.com/2026/11/10/acronis-ai-agent-cyberattacks-report
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2025/08/28142151/agentic-ai-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - AI agents
+    - supply chain
+    - malicious-package
+    rationale: Malicious AI agent skills represent a supply-chain attack on AI tooling, and the same report
+      documents AI agents used in attacks. Fits AI Security as an attack surface and AI-enabled attack.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: dd2aa0e2879a
+    cluster_key: 575-and-delivered-macos-malicious-malware-openclaw-over-skills-windows
+    coverage:
+    - title: Over 575 malicious OpenClaw skills delivered malware to Windows and macOS
+      url: https://www.helpnetsecurity.com/2026/11/10/acronis-ai-agent-cyberattacks-report
+      source: Help Net Security
+      published: '2026-11-10T05:30:59+00:00'
+    published: '2026-11-10T05:30:59+00:00'
+  breaches:
+  - id: 67685f370194
+    rank: 1
+    title: 'Epichealth cyber incident: unauthorised third party accessed IT systems'
+    summary: Epichealth, which operates four medical clinics in Australia, experienced a cyber incident
+      in which an unauthorized third party accessed part of its IT systems. The company is investigating
+      the scope.
+    url: https://databreaches.net/2026/11/09/au-important-update-from-epichealth-cyber-incident
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - healthcare
+    rationale: Confirmed cyber incident at a healthcare provider with potential patient data exposure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 67685f370194
+    cluster_key: accessed-cyber-epichealth-incident-party-systems-third-unauthorised
+    coverage:
+    - title: 'AU: Important update from Epichealth – cyber incident'
+      url: https://databreaches.net/2026/11/09/au-important-update-from-epichealth-cyber-incident
+      source: DataBreaches.net
+      published: '2026-11-09T15:28:28+00:00'
+    published: '2026-11-09T15:28:28+00:00'
+  - id: 687f22ec25f1
+    rank: 2
+    title: Revolve confirms data breach victim count at 1.5 million
+    summary: Revolve has confirmed that the September cyberattack affected more than 1.5 million individuals,
+      a final count higher than earlier estimates. The online retailer continues to notify affected customers.
+    url: https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million
+    image: https://www.securityweek.com/wp-content/uploads/2025/07/data-breach-healthcare-medical.jpg
+    sources:
+    - SecurityWeek
+    labels:
+    - data breach
+    rationale: Material update to an ongoing breach, with a higher confirmed victim count.
+    is_update: true
+    supersedes: e73f39dfc6ea
+    what_changed: The company confirmed the number of affected individuals at more than 1.5 million, up
+      from earlier estimates.
+    cluster: 5769fd486117
+    cluster_key: breach-confirms-count-data-million-revolve-victim
+    coverage:
+    - title: Revolve Puts Data Breach Victim Count at 1.5 Million
+      url: https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million
+      source: SecurityWeek
+      published: '2026-11-09T14:08:08+00:00'
+    published: '2026-11-09T14:08:08+00:00'
+  - id: a69eb2544907
+    rank: 3
+    title: Weill Cornell patient data entered into AI tools without authorization
+    summary: Weill Cornell Medicine disclosed that patient health information was entered into AI tools
+      and processed using machine learning without authorization as part of a radiology research study.
+      The institution is investigating the incident.
+    url: https://databreaches.net/2026/11/09/weill-cornell-patient-data-entered-into-ai-tools-without-authorization
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - healthcare
+    - AI assistants
+    rationale: Unauthorized exposure of patient health data in AI tools, a notable privacy breach in healthcare.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a69eb2544907
+    cluster_key: authorization-cornell-data-entered-into-patient-tools-weill-without
+    coverage:
+    - title: Weill Cornell patient data entered into AI tools without authorization
+      url: https://databreaches.net/2026/11/09/weill-cornell-patient-data-entered-into-ai-tools-without-authorization
+      source: DataBreaches.net
+      published: '2026-11-09T14:06:20+00:00'
+    published: '2026-11-09T14:06:20+00:00'
+  fraud_phishing:
+  - id: d728980b0a63
+    rank: 1
+    title: Deepfake CEO and Fake-Lawyer Ring Charged With Stealing $129 Million
+    summary: The DOJ indicted three men — Jacob Soall, Sharon Hazan, and Guy Sheetrit — for using deepfakes
+      of company CEOs and law firm attorneys to trick employees into wiring more than $129 million to
+      accounts the group controlled. The scheme ran from 2024 to 2026; Soall used the alias 'Rocky Balboa'
+      and Hazan used 'Superman Cash' and 'Fat Boy.' The lures impersonated executives or lawyers with
+      urgent payment requests, using cloned audio/video to make the fraud convincing. Unsolicited requests
+      to re-route funds to new accounts should be verified through independent channels.
+    url: https://www.helpnetsecurity.com/2026/11/09/deepfake-ceo-fraud-129-million-indictment
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2024/05/18153819/deepfakes-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - AI cybercrime
+    - social engineering
+    - indictment
+    rationale: Named-defendant update to the already-published AI impersonation indictment; deepfake-executive
+      and fake-attorney lures are core fraud/phishing material.
+    is_update: true
+    supersedes: 7c82ec3abe53
+    what_changed: Adds the three defendants' names (Jacob Soall, Sharon Hazan, Guy Sheetrit), their aliases
+      beyond the nicknames, and the 2024-2026 duration of the fraud.
+    cluster: 7c82ec3abe53
+    cluster_key: 129-and-ceo-charged-deepfake-fake-lawyer-million-ring-stealing-with
+    coverage:
+    - title: Trio accused of using deepfake CEOs and bogus lawyers to scam businesses out of $129 million
+      url: https://www.helpnetsecurity.com/2026/11/09/deepfake-ceo-fraud-129-million-indictment
+      source: Help Net Security
+      published: '2026-11-09T11:47:43+00:00'
+    published: '2026-11-09T11:47:43+00:00'
+  - id: cfe33724caf4
+    rank: 2
+    title: 'Phishing Roundup: Microsoft 365 Document Lures and Fake ÖGK Page, With Kit Names Identified'
+    summary: Newly reported phishing lures impersonate Microsoft 365 document-sharing and login flows
+      on domains like miscrosoftonlinesecuredemandocument.com, securemsexcel.online, and 1mdrvpdf-rfqonlineinvite.com,
+      handing attackers Microsoft 365 tokens; the campaigns are tied to phishing kits BlackApex, DarkApex,
+      SPY, and XXX101. A separate lure uses the Austrian health insurer ÖGK's name and logo on at-oegk.com
+      to collect personal data. Microsoft and ÖGK are not involved.
+    url: https://scammers.com/scams?category=phishing
+    image: https://scammers.com/og/default?v=3
+    sources:
+    - Scammers.com
+    labels:
+    - phishing
+    - social engineering
+    - Microsoft
+    rationale: Only candidate directly covering phishing/social engineering. It updates the previously
+      published roundup by naming the phishing kits (BlackApex, DarkApex, SPY, XXX101) behind the Microsoft
+      365 lure campaign.
+    is_update: true
+    supersedes: 64961a2de2a2
+    what_changed: New reporting identifies the phishing kits (BlackApex, DarkApex, SPY, XXX101) used in
+      the Microsoft 365 document lure campaign.
+    cluster: 64961a2de2a2
+    cluster_key: 365-and-document-fake-kit-lures-microsoft-page-phishing-roundup-with-ögk
+    coverage:
+    - title: Phishing scams
+      url: https://scammers.com/scams?category=phishing
+      source: Scammers.com
+      published: '2026-11-09T07:03:50.228704+00:00'
+    published: '2026-11-09T07:03:50.228704+00:00'
+    is_carryover: true
+  - id: 90463bc0541e
+    rank: 3
+    title: Fake Gift Card Scams Impersonate Trusted Brands to Harvest Details and Push Subscriptions
+    summary: Scammers are impersonating major brands and celebrities to run fake gift card giveaways that
+      promise a reward but instead collect personal information and sign victims up for unwanted subscription
+      services. CTM360's analysis shows the campaigns use deceptive verification steps and affiliate networks
+      to generate revenue without ever delivering the promised prize. The lure is the unsolicited offer
+      of a free gift card from a familiar brand, and victims are steered through a fake 'claim' or verification
+      flow designed to capture personal and account details.
+    url: https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands
+    image: https://www.bleepstatic.com/content/posts/2026/11/06/ctm360-gift-card-scam.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - phishing
+    - social engineering
+    rationale: Only candidate in the pool that is a new fraud/phishing campaign aimed at consumers, describing
+      a recognizable lure (fake brand and celebrity gift card giveaways) that targets a broad audience.
+      Other candidates in the pool are either generic awareness content, already-published breach or vulnerability
+      stories, or events better fitting other topics.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 90463bc0541e
+    cluster_key: and-brands-card-details-fake-gift-harvest-impersonate-push-scams-subscriptions-trusted
+    coverage:
+    - title: CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands
+      url: https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands
+      source: BleepingComputer
+      published: '2026-11-07T14:10:19+00:00'
+    published: '2026-11-07T14:10:19+00:00'
+    is_carryover: true
+  policy:
+  - id: cbdb86e41464
+    rank: 1
+    title: CISA Announces Enhanced Cyber Incident Reporting Form
+    summary: CISA introduced a new reporting questionnaire for cyber incidents that captures critical
+      data to improve incident assessment, trend identification, and response prioritization.
+    url: https://www.darkreading.com/cyberattacks-data-breaches/cisa-announces-enhanced-reporting-form-cyber-incidents
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt850556f866500627/654a5a8e05eb4d040a046894/325351_DR23_Graphics_General_Large_Text_v1.png?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - CISA
+    - government
+    rationale: This is a government policy change that affects how organizations report incidents, potentially
+      changing compliance obligations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cbdb86e41464
+    cluster_key: announces-cisa-cyber-enhanced-form-incident-reporting
+    coverage:
+    - title: CISA Announces Enhanced Reporting Form for Cyber Incidents
+      url: https://www.darkreading.com/cyberattacks-data-breaches/cisa-announces-enhanced-reporting-form-cyber-incidents
+      source: Dark Reading
+      published: '2026-11-09T21:38:20+00:00'
+    published: '2026-11-09T21:38:20+00:00'
+  - id: 47cfe67852a0
+    rank: 2
+    title: France Blames Iran for Supermarket Refrigeration Cyberattacks
+    summary: French authorities attributed October cyberattacks that disrupted refrigeration at over 700
+      stores and sparked at least 15 fires to Iran's IRGC-affiliated Shahid Kaveh unit, marking the first
+      official attribution of the campaign.
+    url: https://therecord.media/france-blames-iran-for-fridge-cyberattacks
+    image: http://cms.therecord.media/uploads/fridge_eeb57556f3.jpg
+    sources:
+    - The Record
+    - BleepingComputer
+    labels:
+    - critical infrastructure
+    - government
+    rationale: Government attribution of a major cyberattack against critical infrastructure establishes
+      responsibility and can drive policy responses. This updates the earlier US advisory on refrigeration
+      attacks.
+    is_update: true
+    supersedes: b6bcf1a51ce7
+    what_changed: France officially attributed the refrigeration attacks to Iran's IRGC-aligned Shahid
+      Kaveh unit.
+    cluster: f85978e12192
+    cluster_key: blames-cyberattacks-for-france-iran-refrigeration-supermarket
+    coverage:
+    - title: France blames Iran for fridge cyberattacks, says some caused fires
+      url: https://therecord.media/france-blames-iran-for-fridge-cyberattacks
+      source: The Record
+      published: '2026-11-09T18:45:00+00:00'
+    - title: France blames Iranian hackers for supermarket attacks that sparked fires
+      url: https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires
+      source: BleepingComputer
+      published: '2026-11-09T18:32:42+00:00'
+    published: '2026-11-09T18:45:00+00:00'
+  - id: 5fc8bf123762
+    rank: 3
+    title: Ukraine Arrests Four in $4.3 Million Crypto Scam Network
+    summary: Ukrainian cyber police arrested four suspects, including the alleged leader, for running
+      cryptocurrency investment scam call centers that defrauded victims, largely in Germany, of more
+      than €4.3 million.
+    url: https://therecord.media/ukraine-arrests-scam-call-centers-germany
+    image: http://cms.therecord.media/uploads/ukraine_police_scam_call_center_crackdow_47917126a9.jpg
+    sources:
+    - The Record
+    - BleepingComputer
+    labels:
+    - law enforcement
+    - cybercrime
+    - scam centers
+    rationale: Law enforcement action dismantles a criminal network and deters others.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5fc8bf123762
+    cluster_key: arrests-crypto-four-million-network-scam-ukraine
+    coverage:
+    - title: Ukraine arrests four in $5 million crypto scam targeting Germans
+      url: https://therecord.media/ukraine-arrests-scam-call-centers-germany
+      source: The Record
+      published: '2026-11-09T15:24:00+00:00'
+    - title: Ukraine dismantles crypto scam network that stole €4.3 million
+      url: https://www.bleepingcomputer.com/news/security/ukraine-dismantles-crypto-scam-network-that-stole-43-million
+      source: BleepingComputer
+      published: '2026-11-09T12:16:13+00:00'
+    published: '2026-11-09T15:24:00+00:00'
+  - id: 7706e8b0bd5e
+    rank: 4
+    title: US Bans MEXC Crypto Exchange Over Sanctions Evasion and Cybercrime Ties
+    summary: The US Treasury cut off MEXC Global crypto exchange from the US financial system over sanctions
+      evasion and links with cybercrime gangs.
+    url: https://www.bleepingcomputer.com/news/security/us-bans-mexc-crypto-exchange-over-sanctions-evasion-cybercrime-links
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/09/US_Treasury_Department.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - sanctions
+    - cybercrime
+    - cryptocurrency
+    rationale: Sanctions action removes a financial channel for cybercriminals and changes obligations
+      for US entities.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7706e8b0bd5e
+    cluster_key: and-bans-crypto-cybercrime-evasion-exchange-mexc-over-sanctions-ties
+    coverage:
+    - title: US bans MEXC crypto exchange over sanctions evasion, cybercrime links
+      url: https://www.bleepingcomputer.com/news/security/us-bans-mexc-crypto-exchange-over-sanctions-evasion-cybercrime-links
+      source: BleepingComputer
+      published: '2026-11-09T13:28:56+00:00'
+    published: '2026-11-09T13:28:56+00:00'
+  - id: 66e881775745
+    rank: 5
+    title: Italy's Meloni Blames Pro-Russian Hackers for Leak of Foreign Minister's Data
+    summary: Italian Prime Minister Giorgia Meloni attributed the dark web leak of Foreign Minister Antonio
+      Tajani's personal data to pro-Russian hackers, the latest in a series of claims tied to Russian-linked
+      threat actors.
+    url: https://www.securityweek.com/italys-meloni-blames-pro-russian-hackers-for-leak-of-foreign-ministers-data-on-the-dark-web
+    image: https://www.securityweek.com/wp-content/uploads/2026/09/data-leak.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - government
+    - cyberattack
+    rationale: Government attribution of a cyberattack against a senior official carries diplomatic and
+      policy significance.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 66e881775745
+    cluster_key: blames-data-for-foreign-hackers-italy-leak-meloni-minister-pro-russian
+    coverage:
+    - title: Italy’s Meloni Blames Pro-Russian Hackers for Leak of Foreign Minister’s Data on the Dark
+        Web
+      url: https://www.securityweek.com/italys-meloni-blames-pro-russian-hackers-for-leak-of-foreign-ministers-data-on-the-dark-web
+      source: SecurityWeek
+      published: '2026-11-09T12:22:12+00:00'
+    published: '2026-11-09T12:22:12+00:00'
+  - id: df21f701e446
+    rank: 6
+    title: FATF Proposes New Measures to Disrupt Scam Compounds
+    summary: The Financial Action Task Force suggested new ways for countries to disrupt scam compounds,
+      indicating evolving international policy to combat cyber-enabled fraud.
+    url: https://www.infosecurity-magazine.com/news/aml-watchdog-fatf-scam-compounds
+    image: https://assets.infosecurity-magazine.com/webpage/og/c1b75cb9-b9c0-41d1-94de-4fd0ccc167d1.jpg
+    sources:
+    - Infosecurity Magazine
+    labels:
+    - scam centers
+    - law enforcement
+    - cybercrime
+    rationale: International policy guidance from FATF sets expectations for national AML and cybercrime
+      frameworks.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: df21f701e446
+    cluster_key: compounds-disrupt-fatf-measures-new-proposes-scam
+    coverage:
+    - title: Anti-Money Laundering Watchdog FATF Targets Scam Compounds
+      url: https://www.infosecurity-magazine.com/news/aml-watchdog-fatf-scam-compounds
+      source: Infosecurity Magazine
+      published: '2026-11-09T09:16:00+00:00'
+    published: '2026-11-09T09:16:00+00:00'
+  - id: 3639e4e499d5
+    rank: 7
+    title: Former OpenAI Engineer Pleads Not Guilty to Planting Device in Meeting Room
+    summary: Abdulrahman Alfozan, a former OpenAI engineer charged with planting a covert audio recording
+      device in the company's office, pleaded not guilty in San Francisco federal court; his next hearing
+      is November 17.
+    url: https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9MuMJQQRaLilGnzYMqgighbIcm726E965P9JqACVPbah4ID7WePGRjwdlaYG3BUIUPB3vkX9Xzs7sXIEuU9ZoEcPo-2N__SwxcCk_IhbrH-9IhJjeW0Go2d9TGw2ZJcqMLquHLOfQVn0JCQhDrKsZujSFFsenYB28oTBnFyUWBQNmS_DVmjaxUWxXxgjT/s1600/openai.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - law enforcement
+    - indictment
+    rationale: Criminal court proceeding in a high-profile cybersecurity incident.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3639e4e499d5
+    cluster_key: device-engineer-former-guilty-meeting-not-openai-planting-pleads-room
+    coverage:
+    - title: Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room
+      url: https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html
+      source: The Hacker News
+      published: '2026-11-09T07:05:48+00:00'
+    published: '2026-11-09T07:05:48+00:00'
+  supply_chain:
+  - id: 3b35de9992d6
+    rank: 1
+    title: Singapore CSA Flags Keyv npm Packages in Ongoing Shai-Hulud/ChainDrop Attack
+    summary: Singapore's Cyber Security Agency issued an advisory on an ongoing npm supply-chain attack
+      in which malicious versions of Keyv and related packages distribute the Shai-Hulud worm. The malware
+      steals developer credentials and spreads by compromising additional packages. Node.js developers
+      should audit lockfiles, review recently added dependencies, and rotate credentials stored on affected
+      systems.
+    url: https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2026-009
+    image: https://isomer-user-content.by.gov.sg/36/207c475c-41f2-4212-889d-bee59d8765c8/CSA%20International%20logo_full%20colour_transparent_bg_RGB.png
+    sources:
+    - Cyber Security Agency of Singapore
+    - Socket Threat Intel
+    - The Hacker News
+    - SecurityWeek
+    - Cybersecurity News
+    labels:
+    - supply-chain
+    - malicious-package
+    - npm
+    rationale: Official advisory naming specific npm packages in the active Shai-Hulud/ChainDrop campaign;
+      directly actionable for Node.js developers.
+    is_update: true
+    supersedes: 23cc30054655
+    what_changed: CSA's advisory identifies Keyv and related npm packages as affected by the Shai-Hulud
+      worm, giving developers a concrete package list to audit in addition to the broader ChainDrop compromise.
+    cluster: 23cc30054655
+    cluster_key: attack-chaindrop-csa-flags-hulud-keyv-npm-ongoing-packages-shai-singapore
+    coverage:
+    - title: Ongoing npm Supply Chain Attack Affecting Keyv and Related Packages ("Shai-Hulud" Worm)
+      url: https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2026-009
+      source: Cyber Security Agency of Singapore
+      published: '2026-11-10T07:03:41.978324+00:00'
+    - title: Malicious bee-js npm Release and Swarm Desktop Releases Deliver SleepyDuck Ethereum C2 Backdoor
+      url: https://socket.dev/blog/bee-js-compromise
+      source: Socket Threat Intel
+      published: '2026-11-09T14:52:15+00:00'
+    - title: Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware
+      url: https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html
+      source: The Hacker News
+      published: '2026-11-09T17:36:28+00:00'
+    - title: Chrome Update Patches Exploited XML Zero-Day, Eighth This Year
+      url: https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year
+      source: SecurityWeek
+      published: '2026-11-10T06:12:24+00:00'
+    - title: Google Chrome 0-Day Vulnerability in the Wild to Execute Malicious Code Remotely
+      url: https://cybersecuritynews.com/google-chrome-0-day-exploited
+      source: Cybersecurity News
+      published: '2026-11-10T04:21:10+00:00'
+    - title: Notepad++ 8.9.9 Released With Fixes for 6 Vulnerabilities Allowing Plugin Command Execution
+      url: https://cybersecuritynews.com/notepad-8-9-9-released
+      source: Cybersecurity News
+      published: '2026-11-09T17:03:53+00:00'
+    published: '2026-11-10T07:03:41.978324+00:00'
+  - id: 3938afb2e46d
+    rank: 2
+    title: Web3Auth Flaw Exploited to Drain Keplr Wallets; Provider Pre-Emptively Emptied At-Risk Wallets
+    summary: An attacker exploited a security flaw at Web3Auth, the authentication provider behind Keplr's
+      Google and Apple sign-in, to steal funds from some Keplr wallets. Web3Auth says it used the same
+      access to empty other at-risk wallets before the attacker could. Keplr users who used social sign-in
+      should move funds, revoke affected sessions, and recreate wallets where needed.
+    url: https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJtevfYXrRQrcU5FKn33bfyWpqN9O6FlI2b1eWOTjNWWslLIM1wwUfpzedZdMvdw6BXqmYqM1PwO-8GH3_IpKOGa15uoiXx5yDTkAal7JOFSKisSYOAHBdRk9XImTowXaCyJlTwX-chPd7uJFCDEq8u9sKY7jW6UYxorQKUSyuH9pF3szdwejvN_HGhno/s1600/kep.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - supply-chain
+    - account takeover
+    - cryptocurrency
+    rationale: Third-party authentication provider flaw leading to direct financial loss for downstream
+      crypto wallet users; concrete remediation steps.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3938afb2e46d
+    cluster_key: drain-emptied-emptively-exploited-flaw-keplr-pre-provider-risk-wallets-wallets-web3auth
+    coverage:
+    - title: Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety
+      url: https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html
+      source: The Hacker News
+      published: '2026-11-09T10:56:25+00:00'
+    published: '2026-11-09T10:56:25+00:00'
+  - id: 916669dc192c
+    rank: 3
+    title: First supply-chain attack hits pub.dev as two malicious packages are published
+    summary: Two malicious packages have been published to pub.dev, the official Dart package registry,
+      in what OSSprey describes as the first supply-chain attack on the platform. Flutter and Dart developers
+      should review pubspec.lock and audit recently added dependencies for unfamiliar or unexpected packages.
+    url: https://www.ossprey.com/blog/pub-dev-compromise
+    image: https://framerusercontent.com/images/lRkGiXhRW8kkYiwIKvdIV3HI.png
+    sources:
+    - ossprey.com
+    - pkgwarden
+    labels:
+    - malicious-package
+    - supply-chain
+    rationale: New platform targeted in a registry supply-chain attack; pub.dev users need to check their
+      dependencies.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 916669dc192c
+    cluster_key: are-attack-chain-dev-first-hits-malicious-packages-pub-published-supply-two
+    coverage:
+    - title: The supply chain attack map keeps growing, Pub.dev just got added
+      url: https://www.ossprey.com/blog/pub-dev-compromise
+      source: ossprey.com
+      published: '2026-11-08T07:03:45.490564+00:00'
+    - title: 'Supply chain research: incident recaps and analysis | pkgwarden'
+      url: https://pkgwarden.com/research
+      source: pkgwarden
+      published: '2026-11-08T07:03:45.490564+00:00'
+    published: '2026-11-08T07:03:45.490564+00:00'
+    is_carryover: true
+  threats:
+  - id: b289334b329a
+    rank: 1
+    title: Vanderbilt University Hit by BYOD Ransomware Attack, Data Theft Claimed
+    summary: Vanderbilt University is responding to a cyberattack claimed by the BYOD ransomware gang,
+      which says it encrypted the university's databases and stole sensitive student, employee, and research
+      data. The university warned that campus devices and systems may be impacted as it works to contain
+      the incident.
+    url: https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/09/vanderbilt-skyline.jpg
+    sources:
+    - BleepingComputer
+    - The Record
+    labels:
+    - ransomware
+    - data exfiltration
+    - education
+    rationale: Active ransomware attack against a major U.S. university with data theft claims and immediate
+      campus impact.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b289334b329a
+    cluster_key: attack-byod-claimed-data-hit-ransomware-theft-university-vanderbilt
+    coverage:
+    - title: Vanderbilt University hit in BYOD ransomware attack, data theft claimed
+      url: https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed
+      source: BleepingComputer
+      published: '2026-11-09T23:52:12+00:00'
+    - title: Vanderbilt cybersecurity incident impacting campus devices and systems
+      url: https://therecord.media/vanderbilt-cyberattack-ransomware-alert
+      source: The Record
+      published: '2026-11-09T18:30:00+00:00'
+    published: '2026-11-09T23:52:12+00:00'
+  - id: e05d496426b3
+    rank: 2
+    title: Anubis Ransomware Deploys New Lindnor Backdoor and Security-Killing Tools in U.S. Attack
+    summary: In an October 2026 intrusion at a U.S. organization, Anubis ransomware operators used a new
+      custom backdoor called Lindnor and dropped at least 13 tools designed to disable security software.
+      Symantec says the encryption payload was blocked before it could run, but the toolkit shows an evolving
+      ransomware-as-a-service operation.
+    url: https://cybersecuritynews.com/anubis-ransomware-lindnor-backdoor
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Anubis-ransomware-Lindnor-backdoor.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - ransomware
+    - malware
+    - targeted attacks
+    rationale: Documents a new custom backdoor and broad security-disabling toolset from an active ransomware
+      group.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e05d496426b3
+    cluster_key: and-anubis-attack-backdoor-deploys-killing-lindnor-new-ransomware-security-tools
+    coverage:
+    - title: Anubis Ransomware Hackers Deploy New Lindnor Backdoor and 13 Security-Killing Tools in U.S.
+        Attack
+      url: https://cybersecuritynews.com/anubis-ransomware-lindnor-backdoor
+      source: Cybersecurity News
+      published: '2026-11-09T15:31:18+00:00'
+    published: '2026-11-09T15:31:18+00:00'
+  - id: bc5b1e7aa24b
+    rank: 3
+    title: Refrigeration Controllers Hijacked Into Spam Botnet and Proxy Infrastructure
+    summary: SecurityScorecard found internet-exposed refrigeration controllers used in supermarkets and
+      cold storage being hijacked to send spam and route proxy traffic, expanding the abuse of critical
+      cold-chain devices beyond temperature-tampering attacks. Operators should isolate and patch exposed
+      controllers.
+    url: https://www.helpnetsecurity.com/2026/11/09/copeland-xweb-refrigeration-controllers-spam-botnet
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/10/12180608/hand-laptop-warm-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - botnet
+    - critical infrastructure
+    - active exploitation
+    rationale: Shows a new, active abuse of industrial refrigeration controllers as botnet and proxy infrastructure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bc5b1e7aa24b
+    cluster_key: and-botnet-controllers-hijacked-infrastructure-into-proxy-refrigeration-spam
+    coverage:
+    - title: Hackers abuse refrigeration controllers to send spam and route proxy traffic
+      url: https://www.helpnetsecurity.com/2026/11/09/copeland-xweb-refrigeration-controllers-spam-botnet
+      source: Help Net Security
+      published: '2026-11-09T14:54:01+00:00'
+    published: '2026-11-09T14:54:01+00:00'
+  - id: 8667901548b8
+    rank: 4
+    title: Abe Office RAT Bypasses Chrome App-Bound Encryption to Steal Passwords and Cookies
+    summary: A new remote-access trojan named Abe Office poses as an office helper tool, is signed with
+      a valid certificate, and can steal browser passwords and cookies even from Chrome's App-Bound Encryption.
+      Researchers at Rogue Authority broke the malware's weak protections and observed the operator in
+      a sandbox.
+    url: https://cybersecuritynews.com/abe-office-malware
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Abe-Office-malware-1.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - malware
+    - infostealer
+    - account takeover
+    rationale: New malware family with a notable bypass of a widely deployed browser protection mechanism.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8667901548b8
+    cluster_key: abe-and-app-bound-bypasses-chrome-cookies-encryption-office-passwords-rat-steal
+    coverage:
+    - title: New Abe Office Malware Bypasses Chrome App-Bound Encryption to Steal Browser Passwords and
+        Cookies
+      url: https://cybersecuritynews.com/abe-office-malware
+      source: Cybersecurity News
+      published: '2026-11-09T17:58:44+00:00'
+    published: '2026-11-09T17:58:44+00:00'
+  - id: 23a2d69cc29a
+    rank: 5
+    title: AhsayCBS Backup Servers Compromised With Webshells, CryptoMiner, and C2 Implant
+    summary: Huntress documented a follow-up intrusion on AhsayCBS backup servers that added hidden webshells,
+      a second cryptocurrency miner, and a host-bound Python implant. The finding shows attackers continuing
+      to exploit backup infrastructure for persistence and resource abuse.
+    url: https://www.huntress.com/blog/ahsaycbs-webshells
+    image: https://cdn.builder.io/api/v1/image/assets%2F3eb6f92aedf74f109c7b4b0897ec39a8%2F35f4213723784bf2b6a8eb95acb9ab15
+    sources:
+    - Huntress
+    labels:
+    - malware
+    - cryptocurrency
+    - targeted attacks
+    rationale: Incident-response detail on active exploitation of backup servers, a high-value target
+      for ransomware and cryptomining.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 23a2d69cc29a
+    cluster_key: ahsaycbs-and-backup-compromised-cryptominer-implant-servers-webshells-with
+    coverage:
+    - title: 'Inside an AhsayCBS Intrusion: Hidden Webshells, a CryptoMiner, and a C2 Implant'
+      url: https://www.huntress.com/blog/ahsaycbs-webshells
+      source: Huntress
+      published: '2026-11-09T14:00:00+00:00'
+    published: '2026-11-09T14:00:00+00:00'
+  - id: fa4f87da0410
+    rank: 6
+    title: LNbits Urges All Operators to Shut Down Bitcoin Lightning Servers Amid Wallet-Draining Attacks
+    summary: The LNbits project told all operators of its open-source Bitcoin Lightning wallet system
+      to shut down their servers immediately because of a wave of attacks, with several security fixes
+      pending. One operator reported new accounts using an exploit to withdraw bitcoin before being stopped.
+    url: https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPZfiSS8v6cUfSW1R2sbPNNfjluB-GvnXCxcAW_G6pKRNzYU2Be89Qyu9Zx0mnY7voaGpLXFtsajKS9tqYp74Qo05wPzzELg9ZpbVcoWa5l9AKhf4SmmNbnIvjOUrm4LsB9V-tGBxU-V0NxHzAoV2Cnlz6tHlcPewPh2ir8ipqn6Kj-phVDm5zraXs9ss/s1600/crypto-bits.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - cryptocurrency
+    - targeted attacks
+    - account takeover
+    rationale: Active attacks draining self-hosted Lightning wallet servers with an urgent defensive action
+      for operators.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fa4f87da0410
+    cluster_key: all-amid-bitcoin-down-draining-lightning-lnbits-operators-servers-shut-urges-wallet
+    coverage:
+    - title: LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks
+      url: https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html
+      source: The Hacker News
+      published: '2026-11-09T10:01:21+00:00'
+    published: '2026-11-09T10:01:21+00:00'
+  - id: 8a9f7d9a1c87
+    rank: 7
+    title: Attackers Scan for SAP NetWeaver Webshells Using CVE-2025-31324 Exploit
+    summary: SANS observed new honeypot requests targeting SAP NetWeaver's unauthenticated file-upload
+      flaw CVE-2025-31324, with attackers probing /irj/servlet_jsp paths for already-installed webshells.
+      The activity is part of an ongoing campaign to upload and find backdoors on exposed SAP servers.
+    url: https://isc.sans.edu/diary/rss/33502
+    image: https://isc.sans.edu/images/logos/isc/large.png
+    sources:
+    - SANS Internet Storm Center
+    labels:
+    - vulnerability
+    - active exploitation
+    rationale: Concrete, current attacker scanning against a critical SAP vulnerability; defenders can
+      hunt for webshells and patch.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8a9f7d9a1c87
+    cluster_key: 2025-31324-attackers-cve-exploit-for-netweaver-sap-scan-using-webshells
+    coverage:
+    - title: Attackers Searching for SAP Netweaver Webshells, (Mon, Nov 9th)
+      url: https://isc.sans.edu/diary/rss/33502
+      source: SANS Internet Storm Center
+      published: '2026-11-09T18:18:15+00:00'
+    published: '2026-11-09T18:18:15+00:00'
+  vulnerabilities:
+  - id: 49af3d22af2b
+    rank: 1
+    title: OpenSSH 'SSHole' Flaw Added to KEV as Hackers Exploit It for Command Execution and Persistence
+    summary: CISA added CVE-2026-123158 (the OpenSSH 'SSHole' authentication bypass) to its Known Exploited
+      Vulnerabilities catalog on November 9 after confirmed active exploitation. Attackers are using oversized
+      passwords to bypass authentication on musl-based Linux systems (Alpine, OpenWRT) and are now executing
+      commands, stealing credentials, and establishing persistent access. The emergency fix (OpenSSH 10.6p2)
+      is available; federal agencies must patch by November 12.
+    url: https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/09/openssh.jpg
+    sources:
+    - BleepingComputer
+    - The Hacker News
+    - SecurityWeek
+    - CISA
+    - CISA KEV
+    labels:
+    - CISA
+    - exploited in the wild
+    - authentication
+    rationale: The OpenSSH SSHole authentication bypass is a critical, widely used vulnerability now actively
+      exploited and added to CISA's KEV, making it a top priority for patching.
+    is_update: true
+    supersedes: 140525a81058
+    what_changed: CISA added CVE-2026-123158 to its KEV catalog based on evidence of active exploitation,
+      and new reporting shows attackers using the flaw to execute commands, steal credentials, and establish
+      persistence.
+    cluster: 140525a81058
+    cluster_key: added-and-command-execution-exploit-flaw-for-hackers-kev-openssh-persistence-sshole
+    coverage:
+    - title: Hackers exploit SSHole OpenSSH flaw to breach Linux systems
+      url: https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems
+      source: BleepingComputer
+      published: '2026-11-09T16:04:57+00:00'
+    - title: CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws
+      url: https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html
+      source: The Hacker News
+      published: '2026-11-10T06:31:42+00:00'
+    - title: Hackers Exploiting ‘SSHole’ Authentication Bypass in OpenSSH
+      url: https://www.securityweek.com/hackers-exploiting-sshole-authentication-bypass-in-openssh
+      source: SecurityWeek
+      published: '2026-11-09T12:13:32+00:00'
+    - title: CISA Adds Four Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-11-09T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-123158 to Known Exploited Vulnerabilities: OpenBSD OpenSSH Unexpected
+        Status Code or Return Value Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-123158
+      source: CISA KEV
+      published: '2026-11-09T12:00:00+00:00'
+    published: '2026-11-09T16:04:57+00:00'
+  - id: cc82bf37282c
+    rank: 2
+    title: N-able Takes N-central Offline After Researcher Publishes 33 Alleged Zero-Day Exploits
+    summary: N-able took its hosted N-central environments offline on November 9 after an independent
+      researcher published details of 33 alleged zero-day vulnerabilities and exploit code, including
+      an 'Able2Shell' chain that could let attackers take over systems. The company also urged on-premises
+      customers to shut down servers. No patches are available yet; users should monitor for updates.
+    url: https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published
+    image: https://www.bleepstatic.com/content/hl-images/2025/08/18/N-able.jpg
+    sources:
+    - BleepingComputer
+    - Cybersecurity News
+    labels:
+    - zero-day
+    - remote code execution
+    rationale: A critical remote monitoring platform taken offline due to multiple zero-day vulnerabilities
+      is a significant patching and operational concern for enterprises.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cc82bf37282c
+    cluster_key: able-after-alleged-central-day-exploits-offline-publishes-researcher-takes-zero
+    coverage:
+    - title: N-able takes cloud platform offline after 30+ "zero-days" published
+      url: https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published
+      source: BleepingComputer
+      published: '2026-11-09T21:26:25+00:00'
+    - title: N-able Takes N-central Servers Offline Worldwide After 33 0-Day Vulnerabilities and Able2Shell
+        Exploits
+      url: https://cybersecuritynews.com/n-able-takes-n-central-servers-offline
+      source: Cybersecurity News
+      published: '2026-11-10T02:34:38+00:00'
+    published: '2026-11-09T21:26:25+00:00'
+  - id: f62f24b1c7a1
+    rank: 3
+    title: Researchers Chain ForgeRock Flaws With Default Credentials to Remotely Unlock Cars
+    summary: Security researchers found a vulnerability chain in ForgeRock identity servers used by two
+      automakers, including an RCE and default admin:admin credentials, allowing full account takeover
+      and remote unlock/start of connected cars. Both automakers fixed the issues within two hours of
+      disclosure. No active exploitation has been observed.
+    url: https://thehackernews.com/2026/11/default-adminadmin-server-password.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiI85M0pHHPiXe5ar2VpaGsBVRzxoYfZhpQTKgWqd8YGjK9Nyaca-z6XrGT3jT0lqh41qe-cAjb33_r7JErd7rB1CfuWkgTP_z-_IJkpQPWebz1GeEvSu9QpE5XYWRMOfhYTHmzhbkFB07hzSuV1FYARdaIWjfB_mUoX1_eMjl_3dOaSUFpTQvjt-34eQo/s1600/login-car.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - remote code execution
+    - authentication
+    rationale: ForgeRock is a major identity platform; the demonstrated chain shows real risk of account
+      takeover and physical impact, though not exploited in the wild.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f62f24b1c7a1
+    cluster_key: cars-chain-credentials-default-flaws-forgerock-remotely-researchers-unlock-with
+    coverage:
+    - title: Default 'admin:admin' Server Password Helps Researchers Hack Two Automakers, Unlock and Start
+        Cars
+      url: https://thehackernews.com/2026/11/default-adminadmin-server-password.html
+      source: The Hacker News
+      published: '2026-11-09T11:27:53+00:00'
+    - title: Hackers Used Default admin:admin Credentials to Exploit ForgeRock RCE and Remotely Unlock
+        Cars
+      url: https://cybersecuritynews.com/forgerock-attack-chain
+      source: Cybersecurity News
+      published: '2026-11-09T13:12:03+00:00'
+    published: '2026-11-09T11:27:53+00:00'
