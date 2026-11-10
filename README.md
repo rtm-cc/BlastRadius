@@ -1,10 +1,31 @@
 # <img src="blastradius/assets/favicon.svg" alt="Blast Radius logo" width="30" height="30" valign="bottom"> Blast Radius Digest
 
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/blast-radius-digest/cjcockadimcmobekplcdofhempfkjipi)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+
 A serverless daily cybersecurity news board curated by AI. It aggregates threat intelligence, zero-day vulnerabilities, data breaches, and policy updates from trusted security sources into a clean, searchable dashboard.
 
+- **Chrome Extension:** [Install from Chrome Web Store](https://chromewebstore.google.com/detail/blast-radius-digest/cjcockadimcmobekplcdofhempfkjipi)
 - **Live Board:** [news.rtm.cc](https://news.rtm.cc/)
 - **RSS Feed:** [news.rtm.cc/feed](https://news.rtm.cc/feed)
 - **Operations Guide:** [OPERATIONS.md](OPERATIONS.md)
+
+---
+
+## Browser Extension
+
+Monitor threat intel directly from your browser without opening a new tab:
+
+<a href="https://chromewebstore.google.com/detail/blast-radius-digest/cjcockadimcmobekplcdofhempfkjipi">
+  <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" width="22" height="22" alt="Chrome logo" valign="middle"> <strong>Get Blast Radius on Chrome Web Store</strong>
+</a>
+
+* **Daily Intel at a Glance:** Instant access to today's curated edition of exploits, breaches, and patches.
+* **Custom Watchlist & Regex Alerts:** Get red badge notifications and in-card alerts for watched terms or CVE patterns.
+* **Instant Search:** Press `/` anywhere to filter stories, tags, and topics with zero latency.
+* **Fluid Category Navigation:** Smooth click-and-drag, mouse wheel, or floating chevron buttons.
+* **Dark & Light Themes:** 1:1 visual parity with [news.rtm.cc](https://news.rtm.cc).
+* **Firefox Support:** An unpacked Firefox build is also provided in [`extensions/firefox/`](extensions/firefox/).
 
 ---
 

@@ -1,6 +1,10 @@
 # Blast Radius Digest — Chrome Extension
 
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/blast-radius-digest/cjcockadimcmobekplcdofhempfkjipi)
+
 A modern, high-performance Chrome Extension for [Blast Radius Digest](https://news.rtm.cc) that allows you to monitor daily curated cybersecurity intelligence, threats, vulnerabilities, and breaches directly from your browser.
+
+👉 [**Install from the Chrome Web Store**](https://chromewebstore.google.com/detail/blast-radius-digest/cjcockadimcmobekplcdofhempfkjipi)
 
 ---
 
@@ -53,8 +57,12 @@ A modern, high-performance Chrome Extension for [Blast Radius Digest](https://ne
 
 ---
 
-## Installation (Developer Mode)
+## Installation
 
+### Option 1: Chrome Web Store (Recommended)
+Install directly with one click from the [**Chrome Web Store**](https://chromewebstore.google.com/detail/blast-radius-digest/cjcockadimcmobekplcdofhempfkjipi).
+
+### Option 2: Developer Mode (Manual / Unpacked)
 1. Open Google Chrome (or Brave, Microsoft Edge, Vivaldi, Arc).
 2. Navigate to `chrome://extensions`.
 3. Toggle on **Developer mode** in the top-right corner.
