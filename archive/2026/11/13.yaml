@@ -1,0 +1,1143 @@
+date: '2026-11-13'
+updated_at: '2026-11-13T07:22:26+00:00'
+topics:
+  ai_security:
+  - id: 5c5d0726847f
+    rank: 1
+    title: Attackers Use Autonomous AI to Target Semiconductor, Defense and Civil Society Sectors
+    summary: Palo Alto Networks Unit 42 details how attackers used the open-source Cairn AI agent framework
+      to autonomously breach semiconductor, defense and civil society targets. The analysis documents
+      another live case of agentic AI being used in real intrusions.
+    url: https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks
+    image: https://unit42.paloaltonetworks.com/wp-content/uploads/2026/11/AdobeStock_992950050-5.jpg
+    sources:
+    - Palo Alto Unit 42
+    labels:
+    - autonomous exploitation
+    - AI agents
+    - targeted attacks
+    rationale: Unit 42 documents real-world use of the Cairn AI agent framework for autonomous intrusions,
+      showing agentic AI in active attacks.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5c5d0726847f
+    cluster_key: and-attackers-autonomous-civil-defense-sectors-semiconductor-society-target-use
+    coverage:
+    - title: Attackers Use Autonomous AI to Target Semiconductor, Defense and Civil Society Sectors
+      url: https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks
+      source: Palo Alto Unit 42
+      published: '2026-11-12T15:00:31+00:00'
+    published: '2026-11-12T15:00:31+00:00'
+  - id: bf0ae5e5aad8
+    rank: 2
+    title: 'Microsoft: Post-Training Supply-Chain Attacks Can Hijack Coding Agents'
+    summary: 'Microsoft Threat Intelligence describes post-training supply-chain attacks against AI coding
+      agents: dataset poisoning can teach agents to discover and misuse tools, while model poisoning builds
+      reliable backdoors that persist and transfer. The post includes mitigation guidance for securing
+      agents beyond the model itself.'
+    url: https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents
+    image: https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2026/03/MS_Actional-Insights_AI-agents.jpg
+    sources:
+    - Microsoft Threat Intelligence
+    labels:
+    - model poisoning
+    - model backdoors
+    - AI agents
+    - supply chain
+    rationale: Microsoft describes concrete post-training poisoning attacks that can backdoor coding agents,
+      a core AI supply-chain and security research topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bf0ae5e5aad8
+    cluster_key: agents-attacks-can-chain-coding-hijack-microsoft-post-supply-training
+    coverage:
+    - title: 'Trained to betray: How post-training supply chain attacks hijack coding agents'
+      url: https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents
+      source: Microsoft Threat Intelligence
+      published: '2026-11-12T17:00:00+00:00'
+    published: '2026-11-12T17:00:00+00:00'
+  - id: 337dd945a40b
+    rank: 3
+    title: Inside an AI-Assisted Attack Against a US Retailer
+    summary: Dark Reading details an intrusion in which an attacker's hand-typed commands failed, so they
+      switched to AI-generated scripts and achieved lateral movement in minutes. The case illustrates
+      attackers using AI in real operations to accelerate intrusion steps.
+    url: https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blte38664ed1dd3c978/6af4c35c1e561a1b3aa196c5/broken_lock-TU_IS-GettyImages-1369792495.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - AI cybercrime
+    - targeted attacks
+    - AI agents
+    rationale: Case study of an attacker using AI-generated scripts to move laterally in a live intrusion,
+      demonstrating AI use in real operations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 337dd945a40b
+    cluster_key: against-assisted-attack-inside-retailer
+    coverage:
+    - title: Inside an AI Attack Against a US Retailer
+      url: https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer
+      source: Dark Reading
+      published: '2026-11-12T11:00:00+00:00'
+    published: '2026-11-12T11:00:00+00:00'
+  - id: 831bb6a4ef47
+    rank: 4
+    title: 'GPT-6 Astra Jailbreak Test: Safe-Answer Rate in Cyber Scenarios Jumps to 91.5%'
+    summary: OpenAI published research on 'fuzzy robustness' showing that GPT-6 Astra, trained with automated
+      red-teaming, reached a 91.5% safe-answer rate on fixed jailbreak tests in cybersecurity scenarios,
+      up from GPT-5.6's 59%. The result measures real improvements in model resistance to cyber-domain
+      jailbreaks.
+    url: https://toolnavs.com/article/3370-gpt-6-astra-jailbreak-test-safe-answer-rate-in-cyber-scenarios-jumps-from-59-to
+    image: https://toolnavs.com/uploads/articles/20261113-openai-fuzzy-robustness-cover.jpg
+    sources:
+    - AI Tools Navigator
+    labels:
+    - AI security research
+    - model behavior
+    rationale: OpenAI's fuzzy-robustness research quantifies jailbreak resistance of GPT-6 Astra in cyber
+      scenarios, demonstrating AI model security improvements.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 831bb6a4ef47
+    cluster_key: answer-astra-cyber-gpt-jailbreak-jumps-rate-safe-scenarios-test
+    coverage:
+    - title: 'GPT-6 Astra Jailbreak Test: Safe-Answer Rate in Cyber Scenarios Jumps from 59% to 91.5%'
+      url: https://toolnavs.com/article/3370-gpt-6-astra-jailbreak-test-safe-answer-rate-in-cyber-scenarios-jumps-from-59-to
+      source: AI Tools Navigator
+      published: '2026-11-12T21:35:25.436000+00:00'
+    published: '2026-11-12T21:35:25.436000+00:00'
+  - id: 61fa78b96dcb
+    rank: 5
+    title: Perplexity Finds Blind Spot in Its SPACE Sandbox Red-Teaming Tests
+    summary: 'Perplexity published ''Escaping SPACE: Part II'', analyzing how 12 models behaved during
+      sandbox red-teaming. Standard Capture the Flag prompts steered agents away from the actual security
+      boundary under test, and 9 of 12 models spent at most 4% of their effort attacking the VM-host boundary.'
+    url: https://hermes-ai.net/news/topic/security
+    image: https://hermes-ai.net/img/hermes-banner.png
+    sources:
+    - Hermes AI
+    labels:
+    - AI security research
+    - AI agents
+    - vulnerability research
+    rationale: Perplexity's SPACE sandbox red-team study shows how evaluation design can mask real AI
+      security boundary failures; fits AI security research.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 61fa78b96dcb
+    cluster_key: blind-finds-its-perplexity-red-sandbox-space-spot-teaming-tests
+    coverage:
+    - title: Security AI News | Hermes AI
+      url: https://hermes-ai.net/news/topic/security
+      source: Hermes AI
+      published: '2026-11-13T07:02:08.058000+00:00'
+    published: '2026-11-13T07:02:08.058000+00:00'
+  - id: afca4e8e5faa
+    rank: 6
+    title: Pinned MCP Servers Silently Drift Dependencies, Widening Supply-Chain Risk
+    summary: Corelight's James Lagermann found that an MCP server configured to run one fixed release
+      on an administrator's workstation actually ran with 15 different dependency sets over five weeks
+      without any configuration change. Twenty-three of the server's 69 packages changed, including the
+      cryptography, JWT and MCP SDK libraries, expanding the attack surface for AI coding assistants.
+    url: https://www.helpnetsecurity.com/2026/11/13/corelight-mcp-server-supply-chain
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/12084241/ai-hand-robot-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - AI agents
+    - supply chain
+    - vulnerability research
+    rationale: New Corelight research shows pinned MCP servers silently drift dependencies, directly extending
+      the previously reported MCP supply-chain risk.
+    is_update: true
+    supersedes: 32a105f6dbb5
+    what_changed: New research shows that even a version-pinned MCP server silently changed 23 of its
+      69 dependency packages over five weeks, including cryptography and JWT libraries, dramatically widening
+      the window for supply-chain compromise.
+    cluster: 32a105f6dbb5
+    cluster_key: chain-dependencies-drift-mcp-pinned-risk-servers-silently-supply-widening
+    coverage:
+    - title: Your pinned MCP server may not be as pinned as you think
+      url: https://www.helpnetsecurity.com/2026/11/13/corelight-mcp-server-supply-chain
+      source: Help Net Security
+      published: '2026-11-13T05:30:22+00:00'
+    published: '2026-11-13T05:30:22+00:00'
+  breaches:
+  - id: 76b72cf671fd
+    rank: 1
+    title: TSMC data breach exposes employee data via third-party cloud provider
+    summary: TSMC confirmed that personal data belonging to some current and former employees appeared
+      online. The exposed information matched records held by an outside cloud service provider, and TSMC
+      says there is no evidence its own systems were compromised. A seller on an underground forum claims
+      to have 46,000 employee records (6.9GB).
+    url: https://cybersecuritynews.com/tsmc-data-breach
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/TSMC-Data-Breach-Employee-Data-Exposed-via-Third-Party-Cloud-Provider.webp
+    sources:
+    - Cybersecurity News
+    - DataBreaches.net
+    - BleepingComputer
+    labels:
+    - data breach
+    - supply chain
+    rationale: Confirmed breach at a major named organization involving employee personal data exposed
+      through a third-party cloud provider, with a reported 46,000 records at risk.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 76b72cf671fd
+    cluster_key: breach-cloud-data-data-employee-exposes-party-provider-third-tsmc-via
+    coverage:
+    - title: TSMC Data Breach – Employee Data Exposed via Third-Party Cloud Provider
+      url: https://cybersecuritynews.com/tsmc-data-breach
+      source: Cybersecurity News
+      published: '2026-11-13T05:25:43+00:00'
+    - title: TSMC has reportedly leaked the personal data of 46,000 employees, but emphasized that no
+        evidence of intrusion was found in the system.
+      url: https://databreaches.net/2026/11/12/tsmc-has-reportedly-leaked-the-personal-data-of-46000-employees-but-emphasized-that-no-evidence-of-intrusion-was-found-in-the-system
+      source: DataBreaches.net
+      published: '2026-11-12T21:26:33+00:00'
+    - title: Apify rotates API tokens, prompts 2FA resets after breach
+      url: https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach
+      source: BleepingComputer
+      published: '2026-11-12T14:36:47+00:00'
+    published: '2026-11-13T05:25:43+00:00'
+  - id: 0dc892793a11
+    rank: 2
+    title: Hong Kong retailers Sogo and Chow Sang Sang disclose data breaches
+    summary: Hong Kong's Privacy Commissioner disclosed that Sogo and Chow Sang Sang have suffered separate
+      data breaches after unauthorized parties accessed their systems. Up to 820,000 Sogo loyalty members'
+      personal information may be at risk; both retailers are investigating and notifying customers.
+    url: https://databreaches.net/2026/11/12/hong-kong-sogo-data-breach-puts-personal-information-of-820000-members-at-risk
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - data protection
+    rationale: Regulator-confirmed retail data breaches affecting a large loyalty-member population at
+      named Hong Kong retailers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0dc892793a11
+    cluster_key: and-breaches-chow-data-disclose-hong-kong-retailers-sang-sang-sogo
+    coverage:
+    - title: Hong Kong Sogo data breach puts personal information of 820,000 members at risk
+      url: https://databreaches.net/2026/11/12/hong-kong-sogo-data-breach-puts-personal-information-of-820000-members-at-risk
+      source: DataBreaches.net
+      published: '2026-11-12T15:42:32+00:00'
+    published: '2026-11-12T15:42:32+00:00'
+  - id: f99ecf5364c7
+    rank: 3
+    title: Unocoin exchange goes dark after detecting unauthorized access
+    summary: Indian cryptocurrency exchange Unocoin says it discovered unauthorized access to its servers
+      on November 9, temporarily disabled user logins, and launched an investigation. Days later its website
+      remained offline, with observers reporting that 81,000 wallets showed zero holdings.
+    url: https://databreaches.net/2026/11/12/unocoin-goes-dark-as-81000-wallets-show-zero-holdings
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - cryptocurrency
+    rationale: A named crypto exchange's confirmed security incident, with reports of 81,000 wallets potentially
+      drained.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f99ecf5364c7
+    cluster_key: access-after-dark-detecting-exchange-goes-unauthorized-unocoin
+    coverage:
+    - title: Unocoin Goes Dark As 81,000 Wallets Show Zero Holdings
+      url: https://databreaches.net/2026/11/12/unocoin-goes-dark-as-81000-wallets-show-zero-holdings
+      source: DataBreaches.net
+      published: '2026-11-12T15:40:24+00:00'
+    published: '2026-11-12T15:40:24+00:00'
+  - id: 7d3c6fd59d2a
+    rank: 4
+    title: Notion customer data exposed through Fireworks AI breach
+    summary: Attackers who breached AI infrastructure provider Fireworks AI accessed chat transcripts
+      for fewer than 1% of Notion workspaces. Most of the transcripts could not be attributed to specific
+      users. Notion is notifying affected customers and advising them to review their data.
+    url: https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack
+    image: https://www.securityweek.com/wp-content/uploads/2025/10/bank-finance-lender-credit-union-hack.jpeg
+    sources:
+    - SecurityWeek
+    labels:
+    - data breach
+    - supply chain
+    rationale: Third-party AI-vendor breach that exposed Notion customer data, a named-organization breach
+      with cross-vendor impact.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7d3c6fd59d2a
+    cluster_key: breach-customer-data-exposed-fireworks-notion-through
+    coverage:
+    - title: Notion Customer Data Compromised in Fireworks AI Hack
+      url: https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack
+      source: SecurityWeek
+      published: '2026-11-12T11:08:52+00:00'
+    published: '2026-11-12T11:08:52+00:00'
+  - id: 5a9db5aa9eb0
+    rank: 5
+    title: LEGO takes BrickLink marketplace offline after detecting unusual activity
+    summary: LEGO took its BrickLink marketplace offline after detecting unusual activity and launched
+      an investigation. The company has not disclosed whether customer data was exposed. Users are advised
+      to watch for account issues and further updates.
+    url: https://www.malwarebytes.com/blog/news/2026/11/legos-bricklink-taken-offline-after-unusual-activity-what-users-should-know
+    image: https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/11/This_will_hurt.png
+    sources:
+    - Malwarebytes
+    - Infosecurity Magazine
+    labels:
+    - investigation
+    - e-commerce
+    rationale: Security incident at a major e-commerce marketplace; company investigating, with possible
+      data exposure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5a9db5aa9eb0
+    cluster_key: activity-after-bricklink-detecting-lego-marketplace-offline-takes-unusual
+    coverage:
+    - title: 'LEGO’s BrickLink taken offline: What users should know'
+      url: https://www.malwarebytes.com/blog/news/2026/11/legos-bricklink-taken-offline-after-unusual-activity-what-users-should-know
+      source: Malwarebytes
+      published: '2026-11-12T14:25:49+00:00'
+    - title: Lego Takes BrickLink Marketplace Offline After Detecting Unusual Activity
+      url: https://www.infosecurity-magazine.com/news/lego-takes-bricklink-marketplace
+      source: Infosecurity Magazine
+      published: '2026-11-12T14:00:00+00:00'
+    published: '2026-11-12T14:25:49+00:00'
+  fraud_phishing:
+  - id: 9346724eb5bc
+    rank: 1
+    title: Suspected North Korean IT Workers Reached Onboarding at Companies, Exposing Files With Social
+      Security Numbers
+    summary: 'Material Security tracked suspected North Korean fake IT workers through hiring pipelines
+      for a year and counted 27 fabricated personas that reached onboarding. The personas come with résumés
+      and faces and apply for remote engineering roles. At one company where a persona got that far, about
+      277,000 files containing Social Security numbers were shared company-wide or by public link. The
+      scheme shows how identity fraud is used to infiltrate employers: candidates appear legitimate on
+      paper and push through remote hiring and onboarding processes.'
+    url: https://www.helpnetsecurity.com/2026/11/13/north-korean-it-workers-onboarding
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/12094429/fake-it-worker-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - North Korea
+    - social engineering
+    - espionage
+    - targeted attacks
+    rationale: Documented impersonation and social-engineering campaign against employers; new reporting
+      not previously on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9346724eb5bc
+    cluster_key: companies-exposing-files-korean-north-onboarding-reached-security-social-suspected-with-workers
+    coverage:
+    - title: Suspected North Korean IT workers reached onboarding at companies with open data
+      url: https://www.helpnetsecurity.com/2026/11/13/north-korean-it-workers-onboarding
+      source: Help Net Security
+      published: '2026-11-13T06:00:22+00:00'
+    published: '2026-11-13T06:00:22+00:00'
+  - id: 2112aa5696ce
+    rank: 2
+    title: Fake AI Tool Domains Push ClickFix Lures and Browser Hijackers
+    summary: Researchers at Island found 186 lookalike domains masquerading as AI tools, a pattern they
+      call TypoPrompting. Users trying to reach a familiar AI app are redirected to a fake page that asks
+      them to complete a verification step; doing so leads to ClickFix-style lures, browser malware, and
+      search-hijacking extensions. The scam exploits trust in well-known AI brands, so check the domain
+      spelling and be suspicious of any 'verify you are human' prompt on a tool's login page.
+    url: https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirJnc36Fxj4oKOmKhcPvspB_xQpv3VgpXjYnu29SOv8NbVJHeaGNKT26851QIPQbHozxeF5vmq5otdRbJBKEaN9557MtuxLwp5fxX-pQVDVKwvZJtPR9ayT2Njx83svW7TVsVkVpFUOt5JHqhdSkSI7uV0d4dxlf5pWAmHISttTHWjURyOpuuy0CzVCSmK/s1600/lauce.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - phishing
+    - social engineering
+    - malware
+    rationale: Concrete campaign abusing AI-brand trust to deliver malware; highly relevant to fraud and
+      phishing and new.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2112aa5696ce
+    cluster_key: and-browser-clickfix-domains-fake-hijackers-lures-push-tool
+    coverage:
+    - title: 186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers
+      url: https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html
+      source: The Hacker News
+      published: '2026-11-12T15:15:40+00:00'
+    published: '2026-11-12T15:15:40+00:00'
+  - id: dfc4b63ed36e
+    rank: 3
+    title: Scammers Abuse Browser Push Notifications to Flood Users With Fake Virus and Debt Alerts
+    summary: Scammers get users to click 'Allow' on a website notification prompt to start a quiz or read
+      an interesting story. Later, the device starts showing fake virus warnings, missed payments, or
+      legal trouble, making each alert look like a new security problem. Malwarebytes and other investigations
+      found the permission turns a passing visit into persistent access to the user's attention. The red
+      flag is a site that demands notification permission before showing ordinary content.
+    url: https://www.malwarebytes.com/blog/mobile/2026/11/why-scammers-want-you-to-allow-notifications
+    image: https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/11/push_not_Header.png
+    sources:
+    - Malwarebytes
+    labels:
+    - social engineering
+    - phishing
+    rationale: Concrete consumer scam technique with a recognizable permission-abuse lure; fits the fraud
+      and phishing topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: dfc4b63ed36e
+    cluster_key: abuse-and-browser-debt-fake-flood-notifications-push-scammers-users-virus-with
+    coverage:
+    - title: Why scammers want you to allow push notifications
+      url: https://www.malwarebytes.com/blog/mobile/2026/11/why-scammers-want-you-to-allow-notifications
+      source: Malwarebytes
+      published: '2026-11-12T10:52:57+00:00'
+    published: '2026-11-12T10:52:57+00:00'
+  policy:
+  - id: 41a3ad1ce4ca
+    rank: 1
+    title: Europol Dismantles Gootloader, CastleRAT, and StealC Malware Infrastructure
+    summary: Europol and law enforcement agencies from nine countries disrupted infrastructure behind
+      the Gootloader, CastleRAT, and StealC malware operations, seizing 235 servers and 257 domains and
+      recovering 6.4 million stolen credentials. The action, another phase of Operation Endgame, targeted
+      the cybercrime-as-a-service model that enables ransomware and data theft.
+    url: https://cyberscoop.com/operation-endgame-malware-takedown-gootloader-stealc-europol
+    image: https://cyberscoop.com/wp-content/uploads/sites/3/2026/11/Screenshot-2026-11-12-at-11.44.40-AM.png
+    sources:
+    - CyberScoop
+    - Cybersecurity News
+    - BleepingComputer
+    - The Record
+    labels:
+    - law enforcement
+    - takedown
+    - cybercrime
+    - malware
+    rationale: Law enforcement takedown removing real criminal infrastructure behind three malware families;
+      fits the policy/enforcement mandate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 41a3ad1ce4ca
+    cluster_key: and-castlerat-dismantles-europol-gootloader-infrastructure-malware-stealc
+    coverage:
+    - title: International operation dismantles malware networks, exposes 6.4 million stolen credentials
+      url: https://cyberscoop.com/operation-endgame-malware-takedown-gootloader-stealc-europol
+      source: CyberScoop
+      published: '2026-11-12T16:55:34+00:00'
+    - title: Europol Takes Down 235 Servers and 257 Domains Linked to Gootloader, CastleRAT, and StealC
+        Malware
+      url: https://cybersecuritynews.com/malware-infrastructure-disrupted
+      source: Cybersecurity News
+      published: '2026-11-12T16:58:22+00:00'
+    - title: Police dismantle Gootloader, CastleRAT, StealC malware infrastructure
+      url: https://www.bleepingcomputer.com/news/security/police-dismantles-gootloader-castlerat-stealc-malware-infrastructure
+      source: BleepingComputer
+      published: '2026-11-12T15:07:20+00:00'
+    - title: European authorities take down SteaIC malware servers for second time this year
+      url: https://therecord.media/european-authorities-take-down-stealic-malware-second-time
+      source: The Record
+      published: '2026-11-12T16:21:00+00:00'
+    published: '2026-11-12T16:55:34+00:00'
+  - id: 70a9b24e6c95
+    rank: 2
+    title: Britain and France Publish First Guidelines for Commercial Hacking Firms
+    summary: The UK and France issued a first set of guidelines for commercial cyber intrusion capabilities
+      (CCICs), calling on companies that develop, sell, or finance such tools to vet customers, build
+      in safeguards against misuse, and maintain monitoring and reporting mechanisms.
+    url: https://therecord.media/britain-france-set-out-guidelines-for-commercial-hacking-firms
+    image: http://cms.therecord.media/uploads/digital_city_cb3009f983.jpg
+    sources:
+    - The Record
+    labels:
+    - government
+    - advisory
+    rationale: New official guidance sets baseline expectations for commercial hacking vendors and is
+      a direct policy/enforcement development.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 70a9b24e6c95
+    cluster_key: and-britain-commercial-firms-first-for-france-guidelines-hacking-publish
+    coverage:
+    - title: Britain, France set out first guidelines for commercial hacking firms
+      url: https://therecord.media/britain-france-set-out-guidelines-for-commercial-hacking-firms
+      source: The Record
+      published: '2026-11-11T13:11:00+00:00'
+    published: '2026-11-11T13:11:00+00:00'
+    is_carryover: true
+  - id: 3ca9b2422bed
+    rank: 3
+    title: EDPB Adopts Korea Adequacy Review Statement, BCR Recommendations, and 2027 Enforcement Topic
+    summary: The European Data Protection Board adopted a statement on its review of the Republic of Korea's
+      adequacy decision, issued recommendations for processor Binding Corporate Rules, and selected the
+      topic for the 2027 coordinated enforcement action.
+    url: https://www.edpb.europa.eu/news/edpb-adopts-statement-on-review-of-the-republic-of-korea-adequacy-processor-bcr_en
+    image: https://www.edpb.europa.eu/themes/custom/frontend/src/images/linkedin.svg
+    sources:
+    - European Data Protection Board
+    labels:
+    - data protection
+    - government
+    rationale: Official EDPB actions shape cross-border data-transfer obligations and set the agenda for
+      coordinated EU enforcement.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3ca9b2422bed
+    cluster_key: 2027-adequacy-adopts-and-bcr-edpb-enforcement-korea-recommendations-review-statement-topic
+    coverage:
+    - title: EDPB adopts statement on review of the Republic of Korea adequacy, processor BCR recommendations,
+        and selects topic for 2027 coordinated enforcement action
+      url: https://www.edpb.europa.eu/news/edpb-adopts-statement-on-review-of-the-republic-of-korea-adequacy-processor-bcr_en
+      source: European Data Protection Board
+      published: '2026-11-11T11:11:13+00:00'
+    published: '2026-11-11T11:11:13+00:00'
+    is_carryover: true
+  supply_chain:
+  - id: 2baf92fd56cf
+    rank: 1
+    title: Malicious Rust crates arrayref, internment and append-only-vec removed from crates.io
+    summary: Malicious releases of arrayref 0.3.10, internment 0.8.7, and append-only-vec 0.1.9 were published
+      to crates.io using a compromised maintainer account and included a typosquatted dependency. The
+      Rust Project removed them; developers who used these versions should audit lockfiles, review dependency
+      trees for unexpected packages, and treat affected builds as untrusted.
+    url: https://secarma.com/21-08-2026-rust-supply-chain-attack
+    image: https://secarma.com/images/assets/purple-right-arrow.svg
+    sources:
+    - Secarma Ltd
+    labels:
+    - supply-chain
+    - malicious-package
+    - account takeover
+    rationale: Direct supply-chain compromise of widely used crates via a compromised maintainer account;
+      downstream users need concrete audit and remediation steps.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2baf92fd56cf
+    cluster_key: and-append-arrayref-crates-crates-from-internment-malicious-only-removed-rust-vec
+    coverage:
+    - title: 'Rust supply chain attack compromises packages with 245 million downloads - Secarma: Penetration
+        Testing and Cybersecurity Company'
+      url: https://secarma.com/21-08-2026-rust-supply-chain-attack
+      source: Secarma Ltd
+      published: '2026-11-13T07:03:45.028262+00:00'
+    published: '2026-11-13T07:03:45.028262+00:00'
+  - id: e7c9f5b9da2d
+    rank: 2
+    title: wfx-loot campaign hijacks 4,837 GitHub accounts to plant CI secret stealer
+    summary: In the wfx-loot campaign, attackers used credentials for 4,837 hijacked GitHub accounts to
+      probe 61,764 repositories and push a CI secret stealer that ran in at least 1,806 repos, harvesting
+      cloud credentials accessible to workflows. Maintainers should audit account activity and workflow
+      logs, rotate any exposed secrets, and enforce 2FA and token limits.
+    url: https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/08/github.jpg
+    sources:
+    - BleepingComputer
+    - SecurityWeek
+    - The Hacker News
+    labels:
+    - supply-chain
+    - ci-cd
+    - github
+    - token theft
+    rationale: Large-scale CI/CD credential theft via hijacked GitHub accounts, with clear audit, rotation,
+      and hardening actions for affected maintainers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e7c9f5b9da2d
+    cluster_key: 837-accounts-campaign-github-hijacks-loot-plant-secret-stealer-wfx
+    coverage:
+    - title: Hackers compromise 4,800 GitHub accounts to steal cloud credentials
+      url: https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials
+      source: BleepingComputer
+      published: '2026-11-12T22:25:30+00:00'
+    - title: Attacker Targets 60,000 GitHub Repositories in Credential Theft Campaign
+      url: https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign
+      source: SecurityWeek
+      published: '2026-11-12T13:39:03+00:00'
+    - title: Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories
+      url: https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html
+      source: The Hacker News
+      published: '2026-11-12T06:42:47+00:00'
+    published: '2026-11-12T22:25:30+00:00'
+  - id: ba417a1919d7
+    rank: 3
+    title: Critical Red Hat Quay flaw lets attackers read and overwrite private container images
+    summary: A critical Red Hat Quay flaw lets an attacker with registry access — no account required
+      while anonymous access is enabled — read and overwrite private container images in every repository.
+      Red Hat released fixed builds for eight Quay versions; update immediately and audit image digests
+      and repository history for tampering.
+    url: https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtLHm05FB2LmoHZMLAD5nDmfo_G2tdIqO4URdUwukuooBCVwIJhKC2rUDbDNtsGB8_lwium1MEUD1CxYcix4WMVpCoS58DJivMBSmb9LcIGswQu0nKUNE_sbfH8EsgFfhPrKEgEY7MJHWKyhFqX61ne-AOFKnTNuqIkWez1bec-kq-3Cz8BFbPLrgiV8k/s1600/redhat.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    labels:
+    - supply-chain
+    - vulnerability
+    rationale: A registry vulnerability enabling private image tampering and potential poisoning of downstream
+      container-based software supply chains.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ba417a1919d7
+    cluster_key: and-attackers-container-critical-flaw-hat-lets-overwrite-private-quay-read-red
+    coverage:
+    - title: Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images
+        in a Registry
+      url: https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html
+      source: The Hacker News
+      published: '2026-11-12T16:27:01+00:00'
+    - title: Critical Red Hat Quay Vulnerability Could Expose Private Container Images
+      url: https://www.securityweek.com/critical-red-hat-quay-vulnerability-could-expose-private-container-images
+      source: SecurityWeek
+      published: '2026-11-12T09:23:21+00:00'
+    published: '2026-11-12T16:27:01+00:00'
+  threats:
+  - id: fc197210db5e
+    rank: 1
+    title: North Korean FaceStealer scheme steals $400M in crypto via fake Zoom and Teams calls
+    summary: The FBI warns that North Korean state hackers stole more than $400 million in cryptocurrency
+      over 18 months using fake Zoom and Teams calls built around recordings of earlier victims; more
+      than 900 recordings were seized. Crypto and web3 workers and open-source maintainers are urged to
+      verify identities before joining calls.
+    url: https://www.helpnetsecurity.com/2026/11/13/fbi-north-korean-fake-zoom-calls
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/13072144/face-north_korea.webp
+    sources:
+    - Help Net Security
+    - SecurityWeek
+    - CyberScoop
+    - The Record
+    labels:
+    - North Korea
+    - social engineering
+    - cryptocurrency
+    - targeted attacks
+    rationale: Active nation-state social-engineering operation with confirmed financial losses and official
+      FBI warning.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fc197210db5e
+    cluster_key: 400m-and-crypto-facestealer-fake-korean-north-scheme-steals-teams-via-zoom
+    coverage:
+    - title: Stolen webcam clips of 900+ victims feed North Korea’s $400 million fake Zoom scheme
+      url: https://www.helpnetsecurity.com/2026/11/13/fbi-north-korean-fake-zoom-calls
+      source: Help Net Security
+      published: '2026-11-13T06:30:30+00:00'
+    - title: FBI Says US Seized $1.2 Billion Worth of Cryptocurrency Stolen From Binance
+      url: https://www.securityweek.com/fbi-says-us-seized-1-2-billion-worth-of-cryptocurrency-stolen-from-binance
+      source: SecurityWeek
+      published: '2026-11-13T02:28:21+00:00'
+    - title: US seizes North Korean hacking infrastructure, $1.2 billion in cryptocurrency stolen from
+        Binance
+      url: https://cyberscoop.com/us-seizes-north-korea-hacking-infrastructure-binance
+      source: CyberScoop
+      published: '2026-11-13T00:32:19+00:00'
+    - title: Feds announce seizure of $1.2 billion from Binance theft; also takedown of ‘FaceStealer’
+        tools
+      url: https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted
+      source: The Record
+      published: '2026-11-12T21:42:00+00:00'
+    - title: How attackers turned a Teams meeting booking into a device code phishing trap
+      url: https://www.helpnetsecurity.com/2026/11/13/microsoft-teams-device-code-phishing
+      source: Help Net Security
+      published: '2026-11-13T06:15:48+00:00'
+    published: '2026-11-13T06:30:30+00:00'
+  - id: a15f82665238
+    rank: 2
+    title: Check Point firewall exploits chain to root access, backdoors and ESXi wiper attacks
+    summary: Attackers chained Check Point firewall vulnerabilities to gain root access, plant backdoors,
+      and deploy destructive malware on a VMware ESXi host, starting October 30 against Israeli organizations
+      and expanding worldwide. Check Point confirmed the privilege escalation flaw was exploited against
+      a couple dozen customers.
+    url: https://cybersecuritynews.com/hackers-exploit-check-point-firewall-flaws
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Hackers-Exploit-Check-Point-Firewall-Flaws-to-Gain-Root-Access-and-Deploy-Wiper-Malware-on-VMware-ESXi.webp
+    sources:
+    - Cybersecurity News
+    - Infosecurity Magazine
+    labels:
+    - targeted attacks
+    - malware
+    - active exploitation
+    rationale: Confirmed active exploitation of perimeter firewalls leading to root access and destructive
+      payloads.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a15f82665238
+    cluster_key: access-and-attacks-backdoors-chain-check-esxi-exploits-firewall-point-root-wiper
+    coverage:
+    - title: Hackers Exploit Check Point Firewall Flaws to Gain Root Access and Deploy Wiper Malware on
+        VMware ESXi
+      url: https://cybersecuritynews.com/hackers-exploit-check-point-firewall-flaws
+      source: Cybersecurity News
+      published: '2026-11-13T06:38:59+00:00'
+    - title: Weak Passwords Expose SQL Servers to Cryptominer and Gh0st RAT
+      url: https://www.infosecurity-magazine.com/news/fortinet-sql-server-cryptominer
+      source: Infosecurity Magazine
+      published: '2026-11-12T16:00:00+00:00'
+    published: '2026-11-13T06:38:59+00:00'
+  - id: dfcb787d94ae
+    rank: 3
+    title: SCKit ScreenConnect attacks tied to patched flaw CVE-2026-84869; ConnectWise disables third-party
+      extensions
+    summary: The ScreenConnect campaign that hit at least 288 endpoints across 48 organizations exploited
+      a now-patched critical vulnerability (CVE-2026-84869) in a third-party extension rather than new
+      ScreenConnect code, according to Blackpoint Cyber. ConnectWise disabled five third-party extensions
+      while investigating, and Huntress documented SCKit spreading from customer devices toward MSP technicians.
+    url: https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4r5n0I6Rd7yb3jS6hfXTyM5foZU5uEiCD1I2Kgth1qgf_pzohrD9jPeDesEopB6Gjo0VaQZF2XesdqU6W32eFADzI3_xhBF4026h6uGqn6eExdfS_A29SvYA3cdIJkhWmPG-k15_DdsGGcqFfWS-E3cgyKkdEQ3Sxa9gayFkkMXggVJpkeH7DoLNLZxm9/s1600/screen.jpg
+    sources:
+    - The Hacker News
+    - BleepingComputer
+    - CyberScoop
+    - The Record
+    - SecurityWeek
+    - Huntress
+    labels:
+    - malware
+    - supply-chain
+    - targeted attacks
+    - third-party-script
+    rationale: 'Material update to the published ScreenConnect story: root cause identified as a patched
+      third-party extension CVE plus ConnectWise mitigation.'
+    is_update: true
+    supersedes: 97cfffd362d8
+    what_changed: Root cause identified as exploitation of CVE-2026-84869 in a third-party extension;
+      ConnectWise disabled five extensions; SCKit documented spreading toward MSP technicians.
+    cluster: 096e04690239
+    cluster_key: 2026-84869-attacks-connectwise-cve-disables-flaw-patched-sckit-screenconnect-third-tied
+    coverage:
+    - title: SCKit Malware Turns ScreenConnect Support Sessions Into Potential MSP Attack Paths
+      url: https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html
+      source: The Hacker News
+      published: '2026-11-12T13:08:28+00:00'
+    - title: New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks
+      url: https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks
+      source: BleepingComputer
+      published: '2026-11-12T22:53:10+00:00'
+    - title: Rogue remote-access campaign spread through ScreenConnect add-on, researchers say
+      url: https://cyberscoop.com/connectwise-screenconnect-sckit-attack
+      source: CyberScoop
+      published: '2026-11-12T20:58:17+00:00'
+    - title: ConnectWise investigates ScreenConnect breaches after reports of incidents at nearly 50 organizations
+      url: https://therecord.media/connectwise-screenconnect-breaches-third-party-tool
+      source: The Record
+      published: '2026-11-12T16:16:00+00:00'
+    - title: Hackers Deploy Malware in Fresh ScreenConnect Campaign
+      url: https://www.securityweek.com/hackers-deploy-malware-in-fresh-screenconnect-campaign
+      source: SecurityWeek
+      published: '2026-11-12T10:39:34+00:00'
+    - title: ScreenConnect Attacks Target at Least 288 Endpoints Across 48 Organizations With Rogue Clients
+      url: https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html
+      source: The Hacker News
+      published: '2026-11-12T04:39:48+00:00'
+    - title: SCKit Worm Installs Rogue ScreenConnect Clients and Session Cookie Relays Across Hundreds
+        of Endpoints
+      url: https://www.huntress.com/blog/sckit-worm-rogue-screenconnect
+      source: Huntress
+      published: '2026-11-12T02:00:00+00:00'
+    published: '2026-11-12T13:08:28+00:00'
+  - id: 1313d13a2f05
+    rank: 4
+    title: SilentAir and Liminal Panda hacked Asian telcos to intercept Taiwanese calls and texts
+    summary: Enea linked attacks on Asian mobile operators to Chinese-nexus groups SilentAir and Liminal
+      Panda, which exploited SS7 and Diameter protocol weaknesses to intercept communications involving
+      Taiwan. The activity underscores telecommunications infrastructure being used for targeted surveillance.
+    url: https://www.infosecurity-magazine.com/news/silentair-liminal-panda-telco
+    image: https://assets.infosecurity-magazine.com/webpage/og/81281f73-d1b1-4189-a42d-281089d49b9f.jpg
+    sources:
+    - Infosecurity Magazine
+    - Risky Business News
+    labels:
+    - espionage
+    - targeted attacks
+    - critical infrastructure
+    rationale: Nation-state espionage against telecom infrastructure with SS7 and Diameter abuse, an active
+      and high-impact signal.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1313d13a2f05
+    cluster_key: and-and-asian-calls-hacked-intercept-liminal-panda-silentair-taiwanese-telcos-texts
+    coverage:
+    - title: Hacked Asian Telcos Used to Intercept Taiwanese Calls and Texts
+      url: https://www.infosecurity-magazine.com/news/silentair-liminal-panda-telco
+      source: Infosecurity Magazine
+      published: '2026-11-12T14:30:00+00:00'
+    - title: 'Risky Bulletin: Chinese APT exploits SS7, Diameter to spy on targets'
+      url: https://risky.biz/RBNEWS633
+      source: Risky Business News
+      published: '2026-11-13T03:03:12+00:00'
+    published: '2026-11-12T14:30:00+00:00'
+  - id: 6e1cf7b9f657
+    rank: 5
+    title: Macfinger ClickFix campaign distributes DownTheDRAIN infostealer for macOS
+    summary: SANS documented a macOS infostealer dubbed DownTheDRAIN distributed through the Macfinger
+      ClickFix campaign; a sample collected on November 11 was blocked by macOS 26.7.3 before running.
+      The campaign relies on fake CAPTCHA-style verification prompts to convince users to paste and run
+      malicious commands.
+    url: https://isc.sans.edu/diary/rss/33518
+    image: https://isc.sans.edu/diaryimages/images/2026-11-13-ISC-diary-image-01.png
+    sources:
+    - SANS Internet Storm Center
+    - Help Net Security
+    labels:
+    - infostealer
+    - malware
+    - social engineering
+    rationale: Active macOS-specific malware campaign with technical sample analysis and user-level mitigation.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6e1cf7b9f657
+    cluster_key: campaign-clickfix-distributes-downthedrain-for-infostealer-macfinger-macos
+    coverage:
+    - title: Macfinger ClickFix campaign sends DownTheDRAIN infostealer for macOS, (Fri, Nov 13th)
+      url: https://isc.sans.edu/diary/rss/33518
+      source: SANS Internet Storm Center
+      published: '2026-11-13T03:41:41+00:00'
+    - title: Fake Zillow pages use ClickFix NetSupport RAT to target apartment hunters
+      url: https://www.helpnetsecurity.com/2026/11/13/fake-zillow-clickfix-netsupport-rat
+      source: Help Net Security
+      published: '2026-11-12T23:15:23+00:00'
+    published: '2026-11-13T03:41:41+00:00'
+  - id: a1ed20e7fce2
+    rank: 6
+    title: Fake Zillow pages use ClickFix to install NetSupport RAT on Windows
+    summary: EfficientIP traced a ClickFix campaign using fake Zillow apartment-review pages to copy a
+      PowerShell command to visitors' clipboards; pasting it installs a hidden, persistent NetSupport
+      RAT. The campaign targets apartment hunters searching for rentals on Windows machines.
+    url: https://www.helpnetsecurity.com/2026/11/13/fake-zillow-clickfix-netsupport-rat
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/11181918/zillow-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - malware
+    - social engineering
+    rationale: Active ClickFix malvertising-style campaign with a known payload and persistence mechanism.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a1ed20e7fce2
+    cluster_key: clickfix-fake-install-netsupport-pages-rat-use-windows-zillow
+    coverage:
+    - title: Fake Zillow pages use ClickFix NetSupport RAT to target apartment hunters
+      url: https://www.helpnetsecurity.com/2026/11/13/fake-zillow-clickfix-netsupport-rat
+      source: Help Net Security
+      published: '2026-11-12T23:15:23+00:00'
+    published: '2026-11-12T23:15:23+00:00'
+  - id: 29b8578274a7
+    rank: 7
+    title: Luna Moth extortion group retargets law firms that refused to pay
+    summary: The Luna Moth extortion group is returning to law firms that declined its first ransom, using
+      a social-engineering con designed to steal Microsoft access tokens. The repeat targeting suggests
+      attackers are using stolen tokens to regain access after initial refusals.
+    url: https://www.darkreading.com/data-privacy/extortion-luna-moth-law-firms-second-time
+    image: https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/bltd72cfa843f157710/6af61e08fa93fcee56324598/black_and_white_moth-powerofforever-GettyImages-1920014051.jpg?width=720&quality=80&disable=upscale
+    sources:
+    - Dark Reading
+    labels:
+    - cybercrime
+    - social engineering
+    - targeted attacks
+    - account takeover
+    rationale: Active extortion campaign with repeat targeting of a specific sector and a clear token-theft
+      tactic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 29b8578274a7
+    cluster_key: extortion-firms-group-law-luna-moth-pay-refused-retargets-that
+    coverage:
+    - title: Extortion Group Luna Moth Flits Into Law Firms a Second Time
+      url: https://www.darkreading.com/data-privacy/extortion-luna-moth-law-firms-second-time
+      source: Dark Reading
+      published: '2026-11-12T20:09:41+00:00'
+    published: '2026-11-12T20:09:41+00:00'
+  vulnerabilities:
+  - id: 9468745e1133
+    rank: 1
+    title: CISA Confirms Active Exploitation of Outlook Zero-Day CVE-2026-124194
+    summary: CISA confirmed active exploitation of CVE-2026-124194, a Microsoft Outlook zero-day that
+      can expose NTLMv2 hashes when a user opens a crafted message file. Microsoft released a fix in the
+      November 2026 Patch Tuesday; apply the update and review KEV guidance.
+    url: https://cybersecuritynews.com/active-exploitation-of-outlook-0-day-vulnerability
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/CISA-Confirms-Active-Exploitation-of-Outlook-User-Interaction-0-Day-Vulnerability-1.webp
+    sources:
+    - Cybersecurity News
+    - X (formerly Twitter)
+    labels:
+    - exploited in the wild
+    - zero-day
+    - CISA
+    - KEV
+    - Microsoft
+    - security update
+    rationale: Actively exploited zero-day in Microsoft 365/Outlook, now confirmed by CISA; patch available.
+    is_update: true
+    supersedes: 2ec1e546553d
+    what_changed: CISA confirmed active exploitation and added CVE-2026-124194 to its KEV catalog; remediation
+      remains the November Patch Tuesday update.
+    cluster: 2ec1e546553d
+    cluster_key: 124194-2026-active-cisa-confirms-cve-day-exploitation-outlook-zero
+    coverage:
+    - title: CISA Confirms Active Exploitation of Outlook User Interaction 0-Day Vulnerability
+      url: https://cybersecuritynews.com/active-exploitation-of-outlook-0-day-vulnerability
+      source: Cybersecurity News
+      published: '2026-11-12T14:11:54+00:00'
+    - title: Cyber Security News (@The_Cyber_News) on X
+      url: https://x.com/The_Cyber_News/status/2120885417524216117
+      source: X (formerly Twitter)
+      published: '2026-11-12T14:24:22+00:00'
+    published: '2026-11-12T14:11:54+00:00'
+  - id: 78d953171f91
+    rank: 2
+    title: New N-able N-central '4EverAble2Shell' Zero-Days Exploited Hours After Disclosure
+    summary: Attackers are exploiting newly disclosed N-able N-central zero-days (4EverAble2Shell, Agent2Shell)
+      to compromise servers and deploy cryptocurrency miners. Huntress reported at least 21 affected systems,
+      19 running the latest hotfix; N-able is restricting features while remediation continues.
+    url: https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released
+    image: https://www.bleepstatic.com/content/hl-images/2025/08/18/N-able.jpg
+    sources:
+    - BleepingComputer
+    - ScyScan
+    - The Hacker News
+    - Cybersecurity News
+    - SecurityWeek
+    labels:
+    - exploited in the wild
+    - zero-day
+    - remote code execution
+    - security update
+    - vulnerability
+    rationale: Actively exploited zero-days in a widely used RMM platform, with failures of the previous
+      hotfix; urgent action needed.
+    is_update: true
+    supersedes: f0435b96c47e
+    what_changed: New 4EverAble2Shell/Agent2Shell exploits were published after the HF2 hotfix and exploited
+      within hours; 21 servers compromised, including 19 on the latest build.
+    cluster: cc82bf37282c
+    cluster_key: 4everable2shell-able-after-central-days-disclosure-exploited-hours-new-zero
+    coverage:
+    - title: New N-able "4EverAble2Shell" zero-day exploited hours after PoC released
+      url: https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released
+      source: BleepingComputer
+      published: '2026-11-12T19:51:16+00:00'
+    - title: New N-able "4EverAble2Shell" zero-day exploited hours after PoC released
+      url: https://www.scyscan.com/news/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released
+      source: ScyScan
+      published: '2026-11-13T07:03:45.028262+00:00'
+    - title: N-able releases security hotfixes for zero-day vulnerabilities
+      url: https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities
+      source: BleepingComputer
+      published: '2026-11-13T07:03:45.028262+00:00'
+    - title: Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2
+      url: https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html
+      source: The Hacker News
+      published: '2026-11-13T05:43:28+00:00'
+    - title: New N-able N-central Zero-Day Exploits Target Patched Servers, Claiming Unauthenticated Root
+        Access
+      url: https://cybersecuritynews.com/n-able-n-central-zero-day-exploits
+      source: Cybersecurity News
+      published: '2026-11-12T16:53:00+00:00'
+    - title: New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows SYSTEM Access
+      url: https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html
+      source: The Hacker News
+      published: '2026-11-12T11:51:43+00:00'
+    - title: Hackers Target N-central Zero-Days as N-able Rushes Patches
+      url: https://www.securityweek.com/hackers-target-n-central-zero-days-as-n-able-rushes-patches
+      source: SecurityWeek
+      published: '2026-11-12T09:39:55+00:00'
+    published: '2026-11-12T19:51:16+00:00'
+  - id: 103b8d8253e9
+    rank: 3
+    title: 'CISA Advisories: Siemens Industrial Products Exposed to Actively Exploited Node2Shell and
+      PHP2Shell Flaws'
+    summary: New CISA advisories detail Siemens product impact from the actively exploited Node2Shell
+      (CVE-2026-111497) and PHP2Shell (CVE-2026-109618, CVE-2026-109619) vulnerabilities. Affected products
+      include Desigo, Gridscale, RUGGEDCOM APE1808, Industrial Edge, and building automation/energy systems;
+      Siemens released updates for some and workarounds for others.
+    url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-02
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - The Hacker News
+    labels:
+    - CISA
+    - critical infrastructure
+    - security update
+    - exploited in the wild
+    - remote code execution
+    rationale: Actively exploited RCE flaws now formally mapped to Siemens ICS products; critical infrastructure
+      operators need mitigations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 103b8d8253e9
+    cluster_key: actively-advisories-and-cisa-exploited-exposed-flaws-industrial-node2shell-php2shell-products-siemens
+    coverage:
+    - title: Siemens Desigo, Gridscale
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-02
+      source: CISA
+      published: '2026-11-12T12:00:00+00:00'
+    - title: Siemens RUGGEDCOM APE1808
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-05
+      source: CISA
+      published: '2026-11-12T12:00:00+00:00'
+    - title: Siemens RUGGEDCOM APE1808
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-04
+      source: CISA
+      published: '2026-11-12T12:00:00+00:00'
+    - title: Siemens Building Automation and Energy Products
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-01
+      source: CISA
+      published: '2026-11-12T12:00:00+00:00'
+    - title: Siemens Industrial Edge Management
+      url: https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-03
+      source: CISA
+      published: '2026-11-12T12:00:00+00:00'
+    - title: Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass
+      url: https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html
+      source: The Hacker News
+      published: '2026-11-12T15:38:49+00:00'
+    published: '2026-11-12T12:00:00+00:00'
+  - id: 63622562526a
+    rank: 4
+    title: Exploit Attempts Target GPUStack Authentication Bypass CVE-2026-102895
+    summary: SANS observed exploit attempts against CVE-2026-102895, a trivial authentication bypass in
+      GPUStack, an open-source GPU cluster manager. Versions before 2.2.0 are affected; the fix was released
+      at the end of June. Users should update immediately and restrict access to management interfaces.
+    url: https://isc.sans.edu/diary/rss/33514
+    image: https://isc.sans.edu/diaryimages/images/Screenshot%202026-11-12%20at%206_49_09%E2%80%AFAM.png
+    sources:
+    - SANS Internet Storm Center
+    labels:
+    - exploited in the wild
+    - authentication
+    - vulnerability
+    rationale: Actively exploited authentication bypass in GPU management software; patch available.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 63622562526a
+    cluster_key: 102895-2026-attempts-authentication-bypass-cve-exploit-gpustack-target
+    coverage:
+    - title: Exploit Attempts for GPUStack Authentication Bypass (CVE-2026-102895), (Thu, Nov 12th)
+      url: https://isc.sans.edu/diary/rss/33514
+      source: SANS Internet Storm Center
+      published: '2026-11-12T11:56:24+00:00'
+    published: '2026-11-12T11:56:24+00:00'
+  - id: fa17fa8ab8e1
+    rank: 5
+    title: Chrome and Firefox Updates Patch Over 180 Vulnerabilities
+    summary: Google's Chrome 157 release fixes 83 security flaws and Mozilla's Firefox 160 addresses 99
+      bugs. Users should update browsers as soon as possible; the updates include fixes for memory safety
+      and other high-impact issues.
+    url: https://www.securityweek.com/chrome-firefox-updates-patch-180-vulnerabilities
+    image: https://www.securityweek.com/wp-content/uploads/2025/01/Chrome-Firefox.jpeg
+    sources:
+    - SecurityWeek
+    - The Hacker News
+    - Daily Security Review
+    - Help Net Security
+    labels:
+    - security update
+    - vulnerability
+    rationale: Widely deployed browsers receive large security updates; applying them reduces exposure
+      to memory safety and other browser flaws.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: fa17fa8ab8e1
+    cluster_key: 180-and-chrome-firefox-over-patch-updates-vulnerabilities
+    coverage:
+    - title: Chrome, Firefox Updates Patch Over 180 Vulnerabilities
+      url: https://www.securityweek.com/chrome-firefox-updates-patch-180-vulnerabilities
+      source: SecurityWeek
+      published: '2026-11-12T13:42:09+00:00'
+    - title: Node.js Fixes 16 Flaws, Including HTTP/2 Bugs That Crash Servers and Leak Other Connections'
+        Data
+      url: https://thehackernews.com/2026/11/nodejs-fixes-16-flaws-including-http2.html
+      source: The Hacker News
+      published: '2026-11-12T08:20:37+00:00'
+    - title: CVE Vulnerability Alerts - Daily Security Review
+      url: https://dailysecurityreview.com/resources/cve-vulnerability-alerts
+      source: Daily Security Review
+      published: '2026-11-13T07:03:45.028262+00:00'
+    - title: PostgreSQL security update fixes 52 vulnerabilities, ends support for PostgreSQL 14
+      url: https://www.helpnetsecurity.com/2026/11/13/postgresql-security-update-november-2026
+      source: Help Net Security
+      published: '2026-11-12T23:05:33+00:00'
+    published: '2026-11-12T13:42:09+00:00'
+  - id: 10678abb1509
+    rank: 6
+    title: Google Cloud Warns of AMD Turin CPU Side-Channel Flaws in VMs
+    summary: Google Cloud warned that three AMD Turin CPU flaws could let an attacker with code on the
+      same processor core infer data from other processes or the kernel inside a VM. Google has applied
+      cross-VM and host mitigations; customers should install guest OS patches and perform a stop/start
+      to fully protect VMs.
+    url: https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikEkIc_eg4_tE5XE6CQrLFl74Gk0QwxcqaGXBnDAlitVIbzreq8faf57QtAqFh8rEn7HgTJzvGUZl2yNBhWVKOKo9KqnJHfduQfoT_HqUTlKhE-FzshzDrpIskiMQ3_Lz2hImNMbt9VdCj0O725_WyZsDXDB91phFceXh6Y_qzHgv1nJPMNjv8a7AU52c/s1600/amd.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - vulnerability
+    - security update
+    rationale: CPU side-channel flaws affecting cloud VMs on AMD Turin; guest OS patch and VM restart
+      required.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 10678abb1509
+    cluster_key: amd-channel-cloud-cpu-flaws-google-side-turin-vms-warns
+    coverage:
+    - title: Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in VMs
+      url: https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html
+      source: The Hacker News
+      published: '2026-11-12T12:09:14+00:00'
+    published: '2026-11-12T12:09:14+00:00'
+  - id: 9040d064d67d
+    rank: 7
+    title: PTC Patches Critical Windchill and FlexPLM RCE Flaw CVE-2026-126325
+    summary: PTC released patches for CVE-2026-126325, a CVSS 9.2 improper input validation and deserialization
+      flaw in Windchill and FlexPLM that can lead to remote code execution. Apply the vendor updates to
+      affected PLM deployments.
+    url: https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi01pvi78xYUtyxbtWQ4L5ddMr1yT2-WBSbAnp3wKXa-bpagXqtyQdxPqA43I1NxJGNLk4He30PS-GYUcd1sOaErtMAtNWL-qQUGfD0Y7wSxAzeYJXRf2lA5yFuznu8m2zRgf2llXMiR3w1H6YOOte5qs_DvRxcv0aPeOxWeIDybl1n58VlpuZPUJ0icWDL/s1600/ptc-flaw.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - remote code execution
+    - security update
+    - vulnerability
+    rationale: Critical RCE in widely used PLM software; patch available.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9040d064d67d
+    cluster_key: 126325-2026-and-critical-cve-flaw-flexplm-patches-ptc-rce-windchill
+    coverage:
+    - title: PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution
+      url: https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html
+      source: The Hacker News
+      published: '2026-11-12T11:33:15+00:00'
+    published: '2026-11-12T11:33:15+00:00'
