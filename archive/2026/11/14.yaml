@@ -1,6 +1,82 @@
 date: '2026-11-14'
 updated_at: '2026-11-14T07:08:20+00:00'
 topics:
+  security_tools:
+  - id: d4e1f7a2b9c3
+    rank: 1
+    title: 'ecapture v2.11.0: Capture SSL/TLS Cleartext and Bash Commands Using eBPF'
+    summary: The open-source eBPF monitoring utility ecapture reached version 2.11.0. The release enables security teams, threat hunters, and DFIR analysts to capture plaintext SSL/TLS traffic, bash commands, and database queries directly from the Linux kernel without injecting userland CA certificates or modifying running applications.
+    url: https://www.kitploit.com/2026/11/ecapture-v2110-capture-ssltls.html
+    image: ''
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - eBPF
+    - DFIR
+    - traffic inspection
+    rationale: Version 2.11.0 release of the primary open-source eBPF network and command sniffing framework.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d4e1f7a2b9c3
+    cluster_key: bash-capture-cleartext-commands-ebpf-ecapture-ssltls-using-v2110
+    coverage:
+    - title: 'ecapture v2.11.0'
+      url: https://www.kitploit.com/2026/11/ecapture-v2110-capture-ssltls.html
+      source: KitPloit
+      published: '2026-11-14T11:30:00+00:00'
+    published: '2026-11-14T11:30:00+00:00'
+  - id: e5b2a9d8c1f4
+    rank: 2
+    title: 'OsintHunter: Open-Source Reconnaissance and Attack Surface Mapping Framework'
+    summary: Security researchers released OsintHunter, an automated open-source reconnaissance tool designed for red teams and security auditors. The framework coordinates passive asset discovery across public APIs, cloud buckets, exposed DNS records, and credential dumps, producing correlated visual relationship graphs.
+    url: https://www.kitploit.com/2026/11/osinthunter-automated-intelligence.html
+    image: ''
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - OSINT
+    - recon
+    - red team
+    rationale: New open-source reconnaissance and public attack surface correlation framework.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e5b2a9d8c1f4
+    cluster_key: attack-framework-mapping-opensource-osinthunter-reconnaissance-surface
+    coverage:
+    - title: 'OsintHunter - Automated Intelligence Gathering'
+      url: https://www.kitploit.com/2026/11/osinthunter-automated-intelligence.html
+      source: KitPloit
+      published: '2026-11-14T10:40:00+00:00'
+    published: '2026-11-14T10:40:00+00:00'
+  - id: f7c3e1b8a5d2
+    rank: 3
+    title: 'ph4ntom-vitrum: In-Memory Process Manipulation and Injection Inspection Tool'
+    summary: A new open-source utility, ph4ntom-vitrum, was published on GitHub for detection engineers and reverse engineers. The tool inspects memory allocations, detects unbacked executable pages, identifies API hook tampering, and isolates evasive in-memory payload injections.
+    url: https://www.kitploit.com/2026/11/ph4ntom-vitrum-memory-evasion.html
+    image: ''
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - malware analysis
+    - DFIR
+    - reverse engineering
+    rationale: New utility for analyzing in-memory evasion and hollowed process allocations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f7c3e1b8a5d2
+    cluster_key: inmemory-injection-inspection-manipulation-ph4ntomvitrum-process-tool
+    coverage:
+    - title: 'ph4ntom-vitrum - Memory Evasion Inspection'
+      url: https://www.kitploit.com/2026/11/ph4ntom-vitrum-memory-evasion.html
+      source: KitPloit
+      published: '2026-11-14T03:37:00+00:00'
+    published: '2026-11-14T03:37:00+00:00'
   ai_tools:
   - id: c8e3f9a1b2c4
     rank: 1

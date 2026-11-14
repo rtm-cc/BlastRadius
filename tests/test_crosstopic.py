@@ -182,3 +182,19 @@ class KeeperTopicTest(unittest.TestCase):
         vuln2 = story("Prompt injection vulnerability discovered in AI agent", "https://gh/2")
         keeper_vuln, *_ = crosstopic._pick_keeper_topic("ai_security", vuln1, "ai_tools", vuln2, {})
         self.assertEqual(keeper_vuln, "ai_security")
+
+    def test_security_tools_vs_threats_and_vulns(self):
+        tool1 = story("ecapture v2.11.0 released for eBPF SSL sniffing", "https://kit/1")
+        tool2 = story("ecapture v2.11.0 released for eBPF SSL sniffing", "https://gh/3")
+        keeper_tool, *_ = crosstopic._pick_keeper_topic("threats", tool1, "security_tools", tool2, {})
+        self.assertEqual(keeper_tool, "security_tools")
+
+        threat1 = story("Ransomware campaign targets hospitals", "https://rep/1")
+        threat2 = story("Ransomware campaign targets hospitals", "https://kit/2")
+        keeper_threat, *_ = crosstopic._pick_keeper_topic("threats", threat1, "security_tools", threat2, {})
+        self.assertEqual(keeper_threat, "threats")
+
+        cve1 = story("CVE-2026-9999 critical flaw patched in widget", "https://cve/1")
+        cve2 = story("CVE-2026-9999 critical flaw patched in widget", "https://kit/3")
+        keeper_cve, *_ = crosstopic._pick_keeper_topic("vulnerabilities", cve1, "security_tools", cve2, {})
+        self.assertEqual(keeper_cve, "vulnerabilities")

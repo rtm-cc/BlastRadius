@@ -244,6 +244,17 @@ def _pick_keeper_topic(
 
     if "ai_tools" in (topic1, topic2) and "ai_security" in (topic1, topic2):
         keeper_topic = "ai_security" if has_ai_vuln else "ai_tools"
+    elif "security_tools" in (topic1, topic2):
+        is_threat = any(w in text for w in ("ransomware", "campaign", "actor", "botnet", "gang", "breached"))
+        is_vuln = any(w in text for w in ("cve-", "zero-day", "0-day", "emergency patch", "patch tuesday"))
+        if "threats" in (topic1, topic2) and is_threat:
+            keeper_topic = "threats"
+        elif "vulnerabilities" in (topic1, topic2) and is_vuln:
+            keeper_topic = "vulnerabilities"
+        elif "ai_tools" in (topic1, topic2) and has_ai:
+            keeper_topic = "ai_tools"
+        else:
+            keeper_topic = "security_tools"
     elif "ai_tools" in (topic1, topic2) and (
         "tool" in text or "release" in text or "github" in text or "open-source" in text or "model" in text
     ):

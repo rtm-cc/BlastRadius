@@ -1,0 +1,49 @@
+# The Security Tools & Releases column's own sources, on top of sources/shared.yaml.
+# Every field is explained in config/README.md.
+
+sources:
+  - id: kitploit
+    type: rss
+    name: KitPloit
+    url: https://www.kitploit.com/feeds/posts/default
+    max_age_hours: 48
+    max_items: 20
+    notes: The primary tracker for newly released open source security tools, red team utilities, and GitHub repos; ~15/day.
+
+  - id: reddit_netsec
+    type: rss
+    name: "r/netsec"
+    url: https://www.reddit.com/r/netsec/.rss
+    max_age_hours: 48
+    max_items: 15
+    notes: Technical infosec community releases, whitepapers with open source code, and security tool announcements.
+
+  - id: show_hn_security
+    type: rss
+    name: "Show HN"
+    url: https://hnrss.org/show?q=security+OR+infosec+OR+pentest+OR+scanner
+    max_age_hours: 72
+    max_items: 10
+    notes: Developer launches of new security scanners, secret finding utilities, and open-source protection tools.
+
+  - id: projectdiscovery_blog
+    type: rss
+    name: ProjectDiscovery
+    url: https://blog.projectdiscovery.io/rss/
+    max_age_hours: 96
+    max_items: 5
+    notes: Updates and releases for community open source tooling (Nuclei, Subfinder, Katana, HTTPX).
+
+  - id: gnews_security_tools
+    type: google_news
+    name: "Google News: Security Tools"
+    query: '("security tool" OR "open source security" OR "pentesting tool" OR "threat hunting" OR "DFIR tool" OR "malware analysis tool" OR "vulnerability scanner") (release OR releases OR launched OR GitHub OR update)'
+    max_age_hours: 24
+    max_items: 15
+    notes: Aggregated coverage of open-source defensive and offensive security software updates across tech news.
+
+  - id: web_security_tools
+    type: web_search
+    name: "Web search: security tools & releases"
+    query: Trending and newly released open-source cybersecurity tools, penetration testing frameworks, DFIR utilities, and security scanners launched or updated on GitHub in the last 24 hours
+    engine: parallel
