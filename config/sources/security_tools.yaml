@@ -21,7 +21,7 @@ sources:
   - id: show_hn_security
     type: rss
     name: "Show HN"
-    url: https://hnrss.org/show?q=security+OR+infosec+OR+pentest+OR+scanner
+    url: https://hnrss.org/show?q=security+OR+infosec+OR+pentest+OR+scanner+OR+osint+OR+dfir+OR+malware
     max_age_hours: 72
     max_items: 10
     notes: Developer launches of new security scanners, secret finding utilities, and open-source protection tools.
@@ -30,14 +30,14 @@ sources:
     type: rss
     name: ProjectDiscovery
     url: https://blog.projectdiscovery.io/rss/
-    max_age_hours: 96
+    max_age_hours: 168
     max_items: 5
     notes: Updates and releases for community open source tooling (Nuclei, Subfinder, Katana, HTTPX).
 
   - id: gnews_security_tools
     type: google_news
     name: "Google News: Security Tools"
-    query: '("security tool" OR "open source security" OR "pentesting tool" OR "threat hunting" OR "DFIR tool" OR "malware analysis tool" OR "vulnerability scanner") (release OR releases OR launched OR GitHub OR update)'
+    query: '("security tool" OR "pentest" OR "vulnerability scanner" OR "threat hunting" OR "DFIR" OR "red team tool" OR "open-source security") (release OR released OR launches OR update OR GitHub)'
     max_age_hours: 24
     max_items: 15
     notes: Aggregated coverage of open-source defensive and offensive security software updates across tech news.
