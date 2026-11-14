@@ -265,6 +265,12 @@ body {
   outline-offset: 1px;
 }
 
+.icon-btn.active {
+  color: var(--accent);
+  background-color: var(--surface);
+  border-color: var(--border-focus);
+}
+
 .icon-btn svg {
   width: 16px;
   height: 16px;
@@ -341,6 +347,16 @@ body {
   box-shadow: 0 0 0 2px var(--accent-light);
 }
 
+/* Suppress browser native search cancel/clear button so only custom clear-btn shows */
+.search-wrap input::-webkit-search-cancel-button,
+.search-wrap input::-webkit-search-decoration,
+.search-wrap input::-webkit-search-results-button,
+.search-wrap input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
 .clear-btn {
   position: absolute;
   right: 6px;
@@ -366,6 +382,39 @@ body {
   font-size: 11px;
   color: var(--muted);
   padding: 0 2px;
+}
+
+/* Search Term Highlighting */
+mark.search-highlight {
+  background-color: rgba(245, 158, 11, 0.28);
+  color: #fbbf24;
+  border-radius: 2px;
+  padding: 0 2px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+:root[data-theme="light"] mark.search-highlight,
+:root:not([data-theme="dark"]) mark.search-highlight {
+  background-color: #fef08a;
+  color: #854d0e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) mark.search-highlight {
+    background-color: rgba(245, 158, 11, 0.32);
+    color: #fcd34d;
+  }
+}
+
+:root[data-theme="dark"] mark.search-highlight {
+  background-color: rgba(245, 158, 11, 0.32);
+  color: #fcd34d;
+}
+
+.tag.is-search-matched {
+  border-color: var(--warning) !important;
+  box-shadow: 0 0 0 1px var(--warning-border);
 }
 
 /* Topic Navigation Pills Bar with Floating Edge Fades */
@@ -470,7 +519,6 @@ body {
 .topics-bar.is-dragging * {
   cursor: grabbing !important;
   user-select: none !important;
-  pointer-events: none; /* Prevents pill hover effects and text selection while dragging */
 }
 
 .topics-bar::-webkit-scrollbar {

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Blast Radius Digest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Daily curated cybersecurity news and threat intel directly from your browser.",
   "icons": {
     "16": "icons/icon16.png",

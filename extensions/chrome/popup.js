@@ -25,6 +25,8 @@ const TOPIC_CONFIG = {
   ai_security: { name: 'AI Security', color: 160 },
   fraud_phishing: { name: 'Fraud & Phishing', color: 45 },
   policy: { name: 'Policy & Enforcement', color: 225 },
+  ai_tools: { name: 'AI Tools & Releases', color: 140 },
+  security_tools: { name: 'Security Tools & Releases', color: 200 },
 };
 
 // State
@@ -86,6 +88,60 @@ const footerStoryCount = document.getElementById('footer-story-count');
 
 function safeUrl(url) {
   return typeof url === 'string' && /^https?:\/\//i.test(url) ? url : '';
+}
+
+/**
+ * Safely renders text with search query terms highlighted using <mark class="search-highlight">.
+ * Built strictly with text nodes and DOM elements (zero innerHTML) to prevent XSS.
+ */
+function renderHighlightedText(container, text, query) {
+  container.innerHTML = '';
+  if (!text) return;
+  const cleanQuery = (query || '').trim();
+  if (!cleanQuery) {
+    container.textContent = text;
+    return;
+  }
+
+  const terms = Array.from(
+    new Set(
+      cleanQuery
+        .split(/\s+/)
+        .map((t) => t.trim())
+        .filter((t) => t.length > 0)
+    )
+  ).sort((a, b) => b.length - a.length);
+
+  if (terms.length === 0) {
+    container.textContent = text;
+    return;
+  }
+
+  const escapedTerms = terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  const regex = new RegExp(`(${escapedTerms.join('|')})`, 'gi');
+
+  const parts = text.split(regex);
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i];
+    if (!part) continue;
+
+    const isMatch = terms.some((term) => term.toLowerCase() === part.toLowerCase());
+    if (isMatch) {
+      const mark = document.createElement('mark');
+      mark.className = 'search-highlight';
+      mark.textContent = part;
+      container.appendChild(mark);
+    } else {
+      container.appendChild(document.createTextNode(part));
+    }
+  }
+}
+
+function cleanQueryTermsMatch(text, query) {
+  if (!text || !query) return false;
+  const lower = text.toLowerCase();
+  const terms = query.split(/\s+/).filter(Boolean);
+  return terms.some((t) => lower.includes(t.toLowerCase()));
 }
 
 /**
@@ -165,23 +221,35 @@ async function toggleTheme() {
 
 // --- Search Functionality ----------------------------------------------------
 
+function updateClearSearchButton() {
+  if (!btnClearSearch) return;
+  if (searchInput.value.trim().length > 0) {
+    btnClearSearch.classList.remove('hidden');
+  } else {
+    btnClearSearch.classList.add('hidden');
+  }
+}
+
 function toggleSearchRow(forceOpen) {
   const isHidden = searchContainer.classList.contains('hidden');
   const shouldOpen = forceOpen !== undefined ? forceOpen : isHidden;
 
   if (shouldOpen) {
     searchContainer.classList.remove('hidden');
+    updateClearSearchButton();
     searchInput.focus();
   } else {
     searchContainer.classList.add('hidden');
     searchInput.value = '';
     searchQuery = '';
+    updateClearSearchButton();
     applyFilters();
   }
 }
 
 function handleSearchInput() {
   searchQuery = searchInput.value.trim().toLowerCase();
+  updateClearSearchButton();
   applyFilters();
 }
 
@@ -309,6 +377,8 @@ const CANONICAL_TOPIC_NAMES = [
   'Breaches',
   'Fraud & Phishing',
   'Policy & Enforcement',
+  'AI Tools & Releases',
+  'Security Tools & Releases',
 ];
 
 function updateTopicScrollButtons() {
@@ -333,6 +403,7 @@ function updateTopicScrollButtons() {
 
 function renderTopicsBar() {
   topicsBar.innerHTML = '';
+  const normalizedActive = (activeTopic || 'all').trim().toLowerCase();
 
   // Calculate story counts per topic
   const countsByTopic = {};
@@ -344,9 +415,10 @@ function renderTopicsBar() {
   // 1. "All" Pill
   const allPill = document.createElement('button');
   allPill.type = 'button';
-  allPill.className = `topic-pill ${activeTopic === 'all' ? 'active' : ''}`;
+  allPill.className = `topic-pill ${normalizedActive === 'all' ? 'active' : ''}`;
   allPill.innerHTML = `All <span class="count">${allDayStories.length}</span>`;
-  allPill.addEventListener('click', () => {
+  allPill.addEventListener('click', (e) => {
+    e.stopPropagation();
     activeTopic = 'all';
     updateActiveTopicPills();
     applyFilters();
@@ -374,7 +446,8 @@ function renderTopicsBar() {
     const hue = getTopicHue(topicName);
     const pill = document.createElement('button');
     pill.type = 'button';
-    pill.className = `topic-pill ${activeTopic === topicName ? 'active' : ''}`;
+    const isTopicActive = normalizedActive === topicName.trim().toLowerCase();
+    pill.className = `topic-pill ${isTopicActive ? 'active' : ''}`;
     pill.style.setProperty('--pill-hue', String(hue));
     pill.dataset.topic = topicName;
 
@@ -390,11 +463,17 @@ function renderTopicsBar() {
     pill.appendChild(text);
     pill.appendChild(count);
 
-    pill.addEventListener('click', () => {
-      activeTopic = topicName;
+    pill.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if ((activeTopic || '').trim().toLowerCase() === topicName.trim().toLowerCase()) {
+        activeTopic = 'all';
+      } else {
+        activeTopic = topicName;
+      }
       updateActiveTopicPills();
       applyFilters();
-      pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      const targetPill = activeTopic === 'all' ? allPill : pill;
+      targetPill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       setTimeout(updateTopicScrollButtons, 200);
     });
 
@@ -407,10 +486,13 @@ function renderTopicsBar() {
 
 function updateActiveTopicPills() {
   const pills = topicsBar.querySelectorAll('.topic-pill');
+  const normalizedActive = (activeTopic || 'all').trim().toLowerCase();
+
   pills.forEach((p) => {
-    if (activeTopic === 'all' && !p.dataset.topic) {
+    const pillTopic = (p.dataset.topic || '').trim().toLowerCase();
+    if (normalizedActive === 'all' && !pillTopic) {
       p.classList.add('active');
-    } else if (p.dataset.topic === activeTopic) {
+    } else if (pillTopic && pillTopic === normalizedActive) {
       p.classList.add('active');
     } else {
       p.classList.remove('active');
@@ -421,22 +503,33 @@ function updateActiveTopicPills() {
 // --- Filtering & Card Rendering ----------------------------------------------
 
 function applyFilters() {
+  const normalizedActiveTopic = (activeTopic || 'all').trim().toLowerCase();
+
   filteredStories = allDayStories.filter((story) => {
     // Topic filter
-    if (activeTopic !== 'all' && story.topic !== activeTopic) {
-      return false;
+    if (normalizedActiveTopic !== 'all') {
+      const storyTopic = (story.topic || 'General').trim().toLowerCase();
+      if (storyTopic !== normalizedActiveTopic) {
+        return false;
+      }
     }
 
-    // Search query filter
+    // Search query filter (multi-word AND matching across title, summary, update, topic, labels)
     if (searchQuery) {
-      const matchInTitle = story.title.toLowerCase().includes(searchQuery);
-      const matchInSummary = story.summary.toLowerCase().includes(searchQuery);
-      const matchInUpdate = (story.update || '').toLowerCase().includes(searchQuery);
-      const matchInTopic = (story.topic || '').toLowerCase().includes(searchQuery);
-      const matchInLabels = (story.labels || []).some((l) =>
-        l.toLowerCase().includes(searchQuery)
-      );
-      if (!matchInTitle && !matchInSummary && !matchInUpdate && !matchInTopic && !matchInLabels) {
+      const terms = searchQuery.split(/\s+/).filter(Boolean);
+      const haystack = [
+        story.title,
+        story.summary,
+        story.update,
+        story.topic,
+        ...(story.labels || []),
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+
+      const allMatch = terms.every((term) => haystack.includes(term));
+      if (!allMatch) {
         return false;
       }
     }
@@ -444,11 +537,13 @@ function applyFilters() {
     return true;
   });
 
-  // Update search stats indicator
+  // Update search indicator on toggle button and stats line
   if (searchQuery) {
+    btnToggleSearch.classList.add('active');
     searchStats.classList.remove('hidden');
     searchStats.textContent = `Showing ${filteredStories.length} of ${allDayStories.length} stories`;
   } else {
+    btnToggleSearch.classList.remove('active');
     searchStats.classList.add('hidden');
   }
 
@@ -463,6 +558,7 @@ function renderStoryCards() {
     return;
   }
   emptyState.classList.add('hidden');
+  storiesList.scrollTop = 0;
 
   const evalRes = evaluateWatchlist(filteredStories, userWatchlist);
 
@@ -494,7 +590,10 @@ function renderStoryCards() {
     const topicDot = document.createElement('span');
     topicDot.className = 'story-topic-dot';
     topicSpan.appendChild(topicDot);
-    topicSpan.appendChild(document.createTextNode(story.topic || 'General'));
+
+    const topicTextSpan = document.createElement('span');
+    renderHighlightedText(topicTextSpan, story.topic || 'General', searchQuery);
+    topicSpan.appendChild(topicTextSpan);
 
     const timeSpan = document.createElement('span');
     timeSpan.className = 'story-time';
@@ -510,14 +609,14 @@ function renderStoryCards() {
     titleLink.href = safeUrl(story.link) || `${SITE_URL}/#${story.id}`;
     titleLink.target = '_blank';
     titleLink.rel = 'noopener noreferrer';
-    titleLink.textContent = story.title;
+    renderHighlightedText(titleLink, story.title, searchQuery);
     card.appendChild(titleLink);
 
     // 4. Story Summary
     if (story.summary) {
       const summaryP = document.createElement('p');
       summaryP.className = 'story-summary';
-      summaryP.textContent = story.summary;
+      renderHighlightedText(summaryP, story.summary, searchQuery);
       card.appendChild(summaryP);
     }
 
@@ -528,7 +627,9 @@ function renderStoryCards() {
       const strong = document.createElement('strong');
       strong.textContent = 'Update: ';
       updateBox.appendChild(strong);
-      updateBox.appendChild(document.createTextNode(story.update));
+      const updateText = document.createElement('span');
+      renderHighlightedText(updateText, story.update, searchQuery);
+      updateBox.appendChild(updateText);
       card.appendChild(updateBox);
     }
 
@@ -541,7 +642,12 @@ function renderStoryCards() {
         const tag = document.createElement('span');
         tag.className = 'tag';
         tag.style.setProperty('--tag-h', String(tagHue(label)));
-        tag.textContent = label;
+
+        if (searchQuery && cleanQueryTermsMatch(label, searchQuery)) {
+          tag.classList.add('is-search-matched');
+        }
+        renderHighlightedText(tag, label, searchQuery);
+
         // Clicking tag filters search instantly
         tag.style.cursor = 'pointer';
         tag.title = `Filter by "${label}"`;
@@ -762,15 +868,15 @@ function attachEventListeners() {
     hasDragged = false;
     startX = e.pageX - topicsBar.offsetLeft;
     initialScrollLeft = topicsBar.scrollLeft;
-    topicsBar.classList.add('is-dragging');
   });
 
   window.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     const x = e.pageX - topicsBar.offsetLeft;
     const walk = x - startX;
-    if (Math.abs(walk) > 4) {
+    if (!hasDragged && Math.abs(walk) > 7) {
       hasDragged = true;
+      topicsBar.classList.add('is-dragging');
     }
     if (hasDragged) {
       e.preventDefault();
@@ -783,22 +889,17 @@ function attachEventListeners() {
     if (!isDown) return;
     isDown = false;
     topicsBar.classList.remove('is-dragging');
-    setTimeout(() => {
-      hasDragged = false;
-    }, 60);
-  });
 
-  // Intercept click on capture phase so dragging doesn't trigger pill selection
-  topicsBar.addEventListener(
-    'click',
-    (e) => {
-      if (hasDragged) {
-        e.stopPropagation();
-        e.preventDefault();
-      }
-    },
-    true
-  );
+    if (hasDragged) {
+      // Swallows the synthetic click event immediately triggered upon releasing the drag
+      const preventClick = (clickEvent) => {
+        clickEvent.stopPropagation();
+        clickEvent.preventDefault();
+      };
+      window.addEventListener('click', preventClick, { capture: true, once: true });
+      hasDragged = false;
+    }
+  });
 
   topicsBar.addEventListener(
     'wheel',
@@ -817,9 +918,11 @@ function attachEventListeners() {
   // Search Toggle
   btnToggleSearch.addEventListener('click', () => toggleSearchRow());
   searchInput.addEventListener('input', handleSearchInput);
+  searchInput.addEventListener('search', handleSearchInput);
   btnClearSearch.addEventListener('click', () => {
     searchInput.value = '';
     searchQuery = '';
+    updateClearSearchButton();
     applyFilters();
     searchInput.focus();
   });
