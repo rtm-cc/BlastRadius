@@ -1,6 +1,83 @@
 date: '2026-11-14'
 updated_at: '2026-11-14T07:08:20+00:00'
 topics:
+  ai_tools:
+  - id: c8e3f9a1b2c4
+    rank: 1
+    title: 'llama.cpp Hits v1.0.0 Milestone: Stabilized C/C++ Inference API and GGUF Format'
+    summary: The seminal open-source local LLM inference runtime llama.cpp reached its official v1.0.0 release. The milestone stabilizes core C/C++ inference APIs, provides guaranteed backward-compatible GGUF quantization parsing, and brings substantial speedups across unified memory architectures.
+    url: https://huggingface.co/blog/llama-cpp-v1
+    image: ''
+    sources:
+    - Hugging Face
+    - r/LocalLLaMA
+    labels:
+    - open source
+    - local LLMs
+    - inference
+    - llama.cpp
+    rationale: Milestone v1.0.0 release of the primary local LLM inference engine in the open-source ecosystem.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c8e3f9a1b2c4
+    cluster_key: api-cpp-format-gguf-hits-inference-llamacpp-milestone-stabilized-v100
+    coverage:
+    - title: 'llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem'
+      url: https://huggingface.co/blog/llama-cpp-v1
+      source: Hugging Face
+      published: '2026-11-13T14:05:00+00:00'
+    published: '2026-11-13T14:05:00+00:00'
+  - id: a7b5d2e4f601
+    rank: 2
+    title: 'ARC 1.0: Open Decision Model for Routing AI Agents Across Cloud and Local Models'
+    summary: Researchers released ARC 1.0, an Apache 2.0 licensed 0.6B parameter decision model designed specifically to run locally on developer machines and intelligently route agent subtasks between zero-cost local LLMs and frontier cloud models based on task complexity.
+    url: https://github.com/arc-routing/arc
+    image: ''
+    sources:
+    - r/LocalLLaMA
+    labels:
+    - open source
+    - AI agents
+    - local LLMs
+    - model routing
+    rationale: Open-source release of an on-device decision model for routing agent workloads.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a7b5d2e4f601
+    cluster_key: across-agents-arc-cloud-decision-local-model-models-open-routing
+    coverage:
+    - title: 'ARC 1.0: A decision model for routing AI agents across cloud and local models (0.6B, Apache 2.0)'
+      url: https://github.com/arc-routing/arc
+      source: r/LocalLLaMA
+      published: '2026-11-14T13:20:00+00:00'
+    published: '2026-11-14T13:20:00+00:00'
+  - id: f3d1c8e9b5a2
+    rank: 3
+    title: 'Langfuse AI Gateway: Open Source Rust Gateway to Trace, Cache, and Route LLM Calls'
+    summary: Langfuse introduced an open-source, high-performance API gateway written in Rust designed for production AI applications. It provides unified multi-model routing, prompt caching, token rate limiting, and real-time observability tracing across local and cloud LLM providers.
+    url: https://github.com/langfuse/langfuse-gateway
+    image: ''
+    sources:
+    - Show HN
+    labels:
+    - open source
+    - LLM tooling
+    - developer tools
+    - Rust
+    rationale: New open-source infrastructure tool for tracing and proxying LLM applications.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f3d1c8e9b5a2
+    cluster_key: cache-calls-gateway-langfuse-llm-open-route-rust-source-trace
+    coverage:
+    - title: 'Show HN: Langfuse AI Gateway, open source rust gateway to trace every LLM call'
+      url: https://github.com/langfuse/langfuse-gateway
+      source: Show HN
+      published: '2026-11-13T15:10:00+00:00'
+    published: '2026-11-13T15:10:00+00:00'
   ai_security:
   - id: be91d199b4fe
     rank: 1

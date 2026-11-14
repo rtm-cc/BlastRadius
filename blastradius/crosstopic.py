@@ -238,8 +238,17 @@ def _pick_keeper_topic(
     text = (story1.get("title", "") + " " + story2.get("title", "")).lower()
     labels = [lbl.lower() for lbl in (story1.get("labels") or []) + (story2.get("labels") or [])]
     has_ai = any("ai" in lbl for lbl in labels) or "agentic" in text or "prompt injection" in text
+    has_ai_vuln = any(
+        w in text for w in ("prompt injection", "jailbreak", "vulnerability", "exploit", "attack", "backdoor", "cve")
+    ) or any(w in lbl for lbl in labels for w in ("exploit", "vulnerability", "jailbreak", "threat"))
 
-    if has_ai and "ai_security" in (topic1, topic2):
+    if "ai_tools" in (topic1, topic2) and "ai_security" in (topic1, topic2):
+        keeper_topic = "ai_security" if has_ai_vuln else "ai_tools"
+    elif "ai_tools" in (topic1, topic2) and (
+        "tool" in text or "release" in text or "github" in text or "open-source" in text or "model" in text
+    ):
+        keeper_topic = "ai_tools"
+    elif has_ai and "ai_security" in (topic1, topic2):
         if "northflank" in text:
             keeper_topic = "breaches" if "breaches" in (topic1, topic2) else "ai_security"
         else:

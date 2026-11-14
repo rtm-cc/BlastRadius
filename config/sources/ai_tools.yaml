@@ -1,0 +1,57 @@
+# The AI Tools & Releases column's own sources, on top of sources/shared.yaml.
+# Every field is explained in config/README.md.
+
+sources:
+  - id: show_hn_ai
+    type: rss
+    name: "Show HN"
+    url: https://hnrss.org/show?q=AI
+    max_age_hours: 48
+    max_items: 15
+    notes: Real developer launches of new AI tools, agent frameworks, CLI assistants, and MCP servers directly on GitHub.
+
+  - id: reddit_localllama
+    type: rss
+    name: "r/LocalLLaMA"
+    url: https://www.reddit.com/r/LocalLLaMA/.rss
+    max_age_hours: 36
+    max_items: 15
+    notes: Community releases of open-weight models, local inference runtimes (llama.cpp, vLLM, Ollama), fine-tuning tools, and open-source utilities.
+
+  - id: huggingface_blog
+    type: rss
+    name: Hugging Face
+    url: https://huggingface.co/blog/feed.xml
+    max_age_hours: 48
+    max_items: 10
+    notes: Major open model weights, inference libraries, tokenizers, and ecosystem tools from Hugging Face and partners.
+
+  - id: simon_willison_tools
+    type: rss
+    name: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    max_age_hours: 48
+    max_items: 10
+    notes: High-signal coverage of open source LLM tooling, CLI utilities, plugins, and GitHub repositories.
+
+  - id: github_blog_ai
+    type: rss
+    name: GitHub AI Blog
+    url: https://github.blog/category/ai-and-ml/feed/
+    max_age_hours: 72
+    max_items: 5
+    notes: Official GitHub AI features, Copilot developer tooling, and agentic workflows.
+
+  - id: gnews_ai_tools
+    type: google_news
+    name: "Google News: AI Tools & Releases"
+    query: '("GitHub" OR "open-source" OR "Hugging Face") ("AI tool" OR "AI agent" OR "LLM framework" OR "coding assistant" OR "AI model") (release OR launched OR "v0." OR "v1." OR update)'
+    max_age_hours: 24
+    max_items: 15
+    notes: Aggregated coverage of new open source AI software, developer tools, and model updates across tech publishers.
+
+  - id: web_ai_tools
+    type: web_search
+    name: "Web search: AI tools & releases"
+    query: Trending and newly released open-source AI tools, developer utilities, autonomous agents, and LLM frameworks launched or updated on GitHub in the last 24 hours
+    engine: parallel

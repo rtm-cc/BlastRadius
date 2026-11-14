@@ -171,3 +171,14 @@ class KeeperTopicTest(unittest.TestCase):
         supply = story("Malicious npm package drops infostealer", "https://s/1")
         keeper_topic, *_ = crosstopic._pick_keeper_topic("threats", threats, "supply_chain", supply, {})
         self.assertEqual(keeper_topic, "supply_chain")
+
+    def test_ai_tools_vs_ai_security(self):
+        s1 = story("Llama.cpp v1.0.0 released with new inference engine", "https://hf/1")
+        s2 = story("Llama.cpp v1.0.0 released with new inference engine", "https://gh/1")
+        keeper, *_ = crosstopic._pick_keeper_topic("ai_security", s1, "ai_tools", s2, {})
+        self.assertEqual(keeper, "ai_tools")
+
+        vuln1 = story("Prompt injection vulnerability discovered in AI agent", "https://sec/1")
+        vuln2 = story("Prompt injection vulnerability discovered in AI agent", "https://gh/2")
+        keeper_vuln, *_ = crosstopic._pick_keeper_topic("ai_security", vuln1, "ai_tools", vuln2, {})
+        self.assertEqual(keeper_vuln, "ai_security")

@@ -55,6 +55,13 @@ topics:
     max_items: 8
     color: 160
 
+  - id: ai_tools
+    name: AI Tools & Releases
+    language: en
+    min_items: 3
+    max_items: 8
+    color: 310
+
   - id: fraud_phishing
     name: Fraud & Phishing
     language: en
@@ -76,6 +83,6 @@ board:
   columns:
     - [threats]
     - [vulnerabilities]
-    - [ai_security]
+    - [ai_security, ai_tools]
     - [supply_chain, breaches]
     - [fraud_phishing, policy]
