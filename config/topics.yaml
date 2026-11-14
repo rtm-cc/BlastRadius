@@ -62,12 +62,14 @@ topics:
     max_items: 8
     color: 160
 
+  # Kept disabled for historical reasons; no longer curated.
   - id: ai_tools
     name: AI Tools & Releases
     language: en
     min_items: 3
     max_items: 8
     color: 310
+    enabled: false
 
   - id: fraud_phishing
     name: Fraud & Phishing
@@ -89,7 +91,8 @@ topics:
 board:
   columns:
     - [threats]
-    - [vulnerabilities, security_tools]
-    - [ai_security, ai_tools]
+    - [vulnerabilities]
+    - [ai_security]
     - [supply_chain, breaches]
     - [fraud_phishing, policy]
+    - [security_tools]
