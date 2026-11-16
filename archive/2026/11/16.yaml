@@ -1,0 +1,914 @@
+date: '2026-11-16'
+updated_at: '2026-11-16T07:08:58+00:00'
+topics:
+  ai_security:
+  - id: 0fcf761397c9
+    rank: 1
+    title: FBI Warns ARTEX AI Hacking Tool Is Powering Global Cyberattacks
+    summary: The FBI is warning that hackers are using the open-source ARTEX AI penetration-testing framework
+      to automate attacks against organizations worldwide, including a recent ConnectWise supply-chain
+      breach that compromised Microsoft 365 customer environments. The alert adds law-enforcement confirmation
+      that agentic AI tools are now part of real intrusions.
+    url: https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks
+    image: https://www.bleepstatic.com/content/hl-images/2025/10/23/AI-2.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - AI cybercrime
+    - automated attacks
+    - law enforcement
+    rationale: 'Material update to the previously published FBI ARTEX flash alert: the FBI now explicitly
+      ties ARTEX to a ConnectWise supply-chain breach affecting Microsoft 365 customer environments.'
+    is_update: true
+    supersedes: be91d199b4fe
+    what_changed: The FBI's warning now explicitly ties ARTEX to a recent ConnectWise supply-chain breach
+      that compromised Microsoft 365 customer environments.
+    cluster: 29cf1def5da9
+    cluster_key: artex-cyberattacks-fbi-global-hacking-powering-tool-warns
+    coverage:
+    - title: FBI warns ARTEX AI hacking tool is powering global cyberattacks
+      url: https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks
+      source: BleepingComputer
+      published: '2026-11-15T18:29:53+00:00'
+    published: '2026-11-15T18:29:53+00:00'
+  - id: 76aa3df41e56
+    rank: 2
+    title: NTT Develops In-House AI That Analyzes Vulnerabilities Without Sending Confidential Code Externally
+    summary: NTT says it built a sovereign AI system that analyzes source code for vulnerabilities without
+      sending confidential code to external services, achieving a 63% detection success rate. The approach
+      is aimed at organizations that need AI-assisted auditing while keeping proprietary code on-premises.
+    url: https://news.google.com/rss/articles/CBMitwFBVV95cUxQakRHbkxZckNubXFvSzRxMW9lbUFNbkRtYml5cWI1ZFRzQ3ZiNVBEeU9qd3pCdTFGN1VFT202TmpJSTJKTlc0MVhSV1lCc09iaGVFX0kxV0RUR2FwS1dFRy1xMTc5QzBpVmZDWnNhLXVRS0lmd3hwOVZsbnQ5XzRXQ255SUprNW1JMkZ2TktNLXRrX3lKc3VOOVk2R1lFaU5ZTHYzWDF4VGFnNEFZSW9GbU1vN095WmM
+    image: ''
+    sources:
+    - Telecompaper
+    - BigGo Finance
+    labels:
+    - AI security research
+    - vulnerability research
+    rationale: 'New AI security research with a concrete result: on-premises vulnerability detection with
+      a 63% success rate, relevant to protecting confidential code.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 76aa3df41e56
+    cluster_key: analyzes-code-confidential-develops-externally-house-ntt-sending-that-vulnerabilities-without
+    coverage:
+    - title: NTT develops sovereign AI technology for software vulnerability detection
+      url: https://news.google.com/rss/articles/CBMitwFBVV95cUxQakRHbkxZckNubXFvSzRxMW9lbUFNbkRtYml5cWI1ZFRzQ3ZiNVBEeU9qd3pCdTFGN1VFT202TmpJSTJKTlc0MVhSV1lCc09iaGVFX0kxV0RUR2FwS1dFRy1xMTc5QzBpVmZDWnNhLXVRS0lmd3hwOVZsbnQ5XzRXQ255SUprNW1JMkZ2TktNLXRrX3lKc3VOOVk2R1lFaU5ZTHYzWDF4VGFnNEFZSW9GbU1vN095WmM
+      source: Telecompaper
+      published: '2026-11-16T05:32:41+00:00'
+    - title: Japan's NTT Develops In-House AI That Analyzes Vulnerabilities Without Sending Confidential
+        Code Externally, Achieving 63% Detection Success Rate
+      url: https://news.google.com/rss/articles/CBMidkFVX3lxTE9kakxPYU9RTXAwNjUtS3AyS3FTLTdzS080eWpaaUlSVHhYcGdTZXZVaVVBWEZhWVFWbHAtT1k1bVRCaEVLU2xOelI4bXpRZFZ2SHd4cUNQSlNyZ3ZVY3ZjMHB4RXVRRVFZMkxYY0lXOUEyWTBPb1E
+      source: BigGo Finance
+      published: '2026-11-16T03:25:00+00:00'
+    published: '2026-11-16T05:32:41+00:00'
+  - id: 66de8eff771b
+    rank: 3
+    title: Luxor hit by AI-enabled attack that redirected client hashrate, says vulnerability patched
+    summary: Bitcoin mining pool Luxor said it was hit by an AI-enabled attack that redirected client
+      hashrate, and that the underlying vulnerability has been patched. The incident is a concrete example
+      of AI being used in an attack against crypto infrastructure.
+    url: https://news.google.com/rss/articles/CBMijAFBVV95cUxOTUljUVpKaWRERzhmcmlwcTl1aXgzTmYyNVljZzNEMGdUSEJEMkxqV2liT1RJczdSWk01STVGckNYWHBwY1BMeVNWbXZTVTAzRkxRYlppYVdpZUV1WDFWd3hpeVFoNEpvYXRwYkNSTnk5V1VHVVN2VzFJMFdKN3JQSzVHc3dtVzBsM3MtVg
+    image: ''
+    sources:
+    - The Block
+    labels:
+    - AI cybercrime
+    - cyberattack
+    - cryptocurrency
+    rationale: A real-world AI-enabled attack against a cryptocurrency mining pool with a confirmed patch,
+      fitting the topic's focus on attackers using AI in operations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 66de8eff771b
+    cluster_key: attack-client-enabled-hashrate-hit-luxor-patched-redirected-says-that-vulnerability
+    coverage:
+    - title: Luxor hit by AI-enabled attack that redirected client hashrate, says vulnerability patched
+      url: https://news.google.com/rss/articles/CBMijAFBVV95cUxOTUljUVpKaWRERzhmcmlwcTl1aXgzTmYyNVljZzNEMGdUSEJEMkxqV2liT1RJczdSWk01STVGckNYWHBwY1BMeVNWbXZTVTAzRkxRYlppYVdpZUV1WDFWd3hpeVFoNEpvYXRwYkNSTnk5V1VHVVN2VzFJMFdKN3JQSzVHc3dtVzBsM3MtVg
+      source: The Block
+      published: '2026-11-16T04:35:00+00:00'
+    published: '2026-11-16T04:35:00+00:00'
+  - id: 327c2028b4a9
+    rank: 4
+    title: Anthropic Says Anvil Found Vulnerabilities With Only 1/235 of the Request Volume of Humans
+    summary: Anthropic reports that its Anvil automated vulnerability-discovery system found vulnerabilities
+      using only 1/235 of the request volume that human experts required, according to the AI Safety Daily
+      digest. The result underscores how AI-driven vulnerability research is becoming more efficient.
+    url: https://aisafetyhot.com/en/daily
+    image: https://aisafetyhot.com/og/pages/daily.png?lang=en
+    sources:
+    - AI Safety HOT
+    labels:
+    - AI security research
+    - vulnerability research
+    rationale: Demonstrated AI security research result from Anthropic on vulnerability discovery efficiency;
+      not previously published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 327c2028b4a9
+    cluster_key: 235-anthropic-anvil-found-humans-only-request-says-the-volume-vulnerabilities-with
+    coverage:
+    - title: AI Safety Daily
+      url: https://aisafetyhot.com/en/daily
+      source: AI Safety HOT
+      published: '2026-11-16T07:03:53.087927+00:00'
+    published: '2026-11-16T07:03:53.087927+00:00'
+  - id: 4d909518e2e5
+    rank: 5
+    title: CapLite Tests Prompt-Injection Defenses for SLM Agents
+    summary: CapLite is a new testing framework for evaluating prompt-injection defenses in small language
+      model (SLM) agents, announced by CASRAI. It gives developers a way to measure how well smaller agent
+      models resist injected instructions.
+    url: https://news.google.com/rss/articles/CBMiiwFBVV95cUxPaW9HOXdFSm9OOWtSc1dVQkdPVkVLNHl2RVRDVl9pUS0xYUNnUk42Y01keWRDQl9yaENBWDZkM242blRKdHlOYVFHQ1Y2UGVqU3ZTQ3FReXN6bFc2bWNnZ1RnVkNCSXlNU2dXdnZ4VEZRWlRzVDFSTy1pVUVTSDE4RmFBV3VBaEx0WEVJ
+    image: ''
+    sources:
+    - CASRAI
+    labels:
+    - prompt injection
+    - AI security research
+    rationale: Directly relevant to prompt-injection defenses for AI agents, a core AI security topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4d909518e2e5
+    cluster_key: agents-caplite-defenses-for-injection-prompt-slm-tests
+    coverage:
+    - title: CapLite Tests Prompt-Injection Defenses for SLM Agents
+      url: https://news.google.com/rss/articles/CBMiiwFBVV95cUxPaW9HOXdFSm9OOWtSc1dVQkdPVkVLNHl2RVRDVl9pUS0xYUNnUk42Y01keWRDQl9yaENBWDZkM242blRKdHlOYVFHQ1Y2UGVqU3ZTQ3FReXN6bFc2bWNnZ1RnVkNCSXlNU2dXdnZ4VEZRWlRzVDFSTy1pVUVTSDE4RmFBV3VBaEx0WEVJ
+      source: CASRAI
+      published: '2026-11-15T12:28:15+00:00'
+    published: '2026-11-15T12:28:15+00:00'
+  breaches:
+  - id: 77bd6ecbc92f
+    rank: 1
+    title: La Poste's Maileva Unit Breach Exposes Personal Data of 22 Million People
+    summary: A cyberattack on Maileva, the digital subsidiary of France's La Poste Group, exposed the
+      personal data of about 22 million people. La Poste confirmed that the mid-September attack exposed
+      first names, last names, and postal addresses; the full scope of the incident is still being assessed.
+    url: https://databreaches.net/2026/11/15/hack-at-french-postal-unit-exposes-22-million-peoples-data
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    rationale: Confirmed breach at a named organization affecting roughly 22 million people; no prior
+      board coverage of this incident.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 77bd6ecbc92f
+    cluster_key: breach-data-exposes-maileva-million-people-personal-poste-unit
+    coverage:
+    - title: Hack at French postal unit exposes 22 million people’s data
+      url: https://databreaches.net/2026/11/15/hack-at-french-postal-unit-exposes-22-million-peoples-data
+      source: DataBreaches.net
+      published: '2026-11-15T15:49:15+00:00'
+    published: '2026-11-15T15:49:15+00:00'
+  - id: 7aa3f61bfd21
+    rank: 2
+    title: Fireworks AI Breach Widens to Customer Datasets, Model Weights, Notion Chats and Uber Driver
+      Data
+    summary: Fireworks AI confirmed that its breach was broader than first reported, affecting customer
+      datasets, model weights and Notion AI chat transcripts for a subset of workspaces. Separately, Uber
+      disclosed that driver's license data for thousands of U.S. drivers was exposed because records were
+      held by Fireworks AI. Fireworks is notifying affected customers and Uber is notifying affected drivers.
+    url: https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-mBJN_E4CjW3MXyjYYdeCGcyR052aVnG3uUWjaEfafvPAdatcJhn9LbtngqXBb5JsVwJVoorc8i41nTbYR9UcwVrwWNzU-WAfVk2yL32hYW1elVMJtwauW53nhRG37EwbovnFCW8InensI8tKoR9pqcWnZx54t6xOU_HsjjR9KWTLwVr_MBcknFeGShZU/s1600/fire.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    - SecurityWeek
+    - Brandefense
+    labels:
+    - data breach
+    - supply-chain
+    rationale: Confirms a materially wider scope for the Fireworks AI incident already published via Notion,
+      including model weights and a new named victim, Uber.
+    is_update: true
+    supersedes: 7d3c6fd59d2a
+    what_changed: Fireworks AI disclosed that the breach affected customer datasets and model weights,
+      not just a subset of Notion workspaces, and Uber confirmed driver's license data was exposed via
+      the same provider.
+    cluster: 7d3c6fd59d2a
+    cluster_key: and-breach-chats-customer-datasets-driver-fireworks-model-notion-uber-weights-widens
+    coverage:
+    - title: Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion
+        AI Chats
+      url: https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html
+      source: The Hacker News
+      published: '2026-11-14T07:04:06.105832+00:00'
+    - title: Uber Confirms Data Breach – Hackers Stole Users’ Personal Information
+      url: https://cybersecuritynews.com/uber-confirms-data-breach
+      source: Cybersecurity News
+      published: '2026-11-14T01:19:57+00:00'
+    - title: Apify Confirms Customer Data Accessed in Cyberattack
+      url: https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack
+      source: SecurityWeek
+      published: '2026-11-13T12:41:01+00:00'
+    - title: Caixa Seguridade Customer Data Incident 2026 - Brandefense
+      url: https://brandefense.io/security-news/caixa-seguridade-customer-data-incident-2026
+      source: Brandefense
+      published: '2026-11-14T01:02:37+03:00'
+    published: '2026-11-14T07:04:06.105832+00:00'
+    is_carryover: true
+  - id: 8a0ce5a9418d
+    rank: 3
+    title: City of Osaka data breach may affect 1 million people
+    summary: Osaka, Japan's third-largest city, warned its 2.8 million residents to be wary of suspicious
+      emails appearing to come from the local government after a data breach affecting about 1 million
+      people. The city is investigating and has not detailed which personal information was exposed.
+    url: https://therecord.media/city-of-osaka-japan-email-data-breach
+    image: http://cms.therecord.media/uploads/Osaka_City_Hall_2026_19ba5dd07a.jpg
+    sources:
+    - The Record
+    labels:
+    - data breach
+    - government
+    rationale: Large confirmed government data breach in Japan affecting roughly one million people and
+      triggering public warnings.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8a0ce5a9418d
+    cluster_key: affect-breach-city-data-may-million-osaka-people
+    coverage:
+    - title: City of Osaka warns of data breach impacting 1 million as Japan reels from dozens of cyber
+        incidents
+      url: https://therecord.media/city-of-osaka-japan-email-data-breach
+      source: The Record
+      published: '2026-11-13T19:43:00+00:00'
+    published: '2026-11-13T19:43:00+00:00'
+    is_carryover: true
+  fraud_phishing:
+  - id: cd0e639caca3
+    rank: 1
+    title: Active Bradesco Phishing Campaign Uses 23 Lookalike Domains
+    summary: NetTool's automated report details an ongoing phishing campaign targeting Bradesco bank customers.
+      The campaign uses 23 lookalike domains across .org, .br, and .com, first seen on September 23, 2026,
+      and active as of November 11, 2026. The domains are flagged by Google Safe Browsing and Spamhaus.
+      The campaign likely spoofs Bradesco's login or communication pages to steal credentials. Users should
+      verify official URLs and avoid entering banking details on unverified domains.
+    url: https://nettool.nl/reports
+    image: ''
+    sources:
+    - nettool.nl
+    labels:
+    - phishing
+    - cybercrime
+    rationale: This is the only candidate that describes a concrete phishing campaign targeting individuals
+      (bank customers). It provides specific details about domains and detection, making it eligible for
+      the Fraud & Phishing topic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cd0e639caca3
+    cluster_key: active-bradesco-campaign-domains-lookalike-phishing-uses
+    coverage:
+    - title: Security reports — detected phishing campaigns
+      url: https://nettool.nl/reports
+      source: nettool.nl
+      published: '2026-11-16T07:03:53.087927+00:00'
+    published: '2026-11-16T07:03:53.087927+00:00'
+  - id: 30f8b8be0e6e
+    rank: 2
+    title: Active password-stealing campaign exploits Microsoft 365 service disruption
+    summary: Microsoft is warning about an active phishing campaign that abuses the November 12 Microsoft
+      365 service disruption. Attackers send emails copying Microsoft service health notices and citing
+      the real Exchange Online incident ID EX1550543, claiming held messages will be deleted within 24
+      hours and pushing recovery links that steal credentials. The lures look like official outage notifications,
+      making them convincing during an ongoing business disruption.
+    url: https://cybersecuritynews.com/active-password-stealing-attack-microsoft-365
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Active-Password-Stealing-Attack-Microsoft-365.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - phishing
+    - Microsoft
+    rationale: This is a concrete, ongoing phishing campaign tied to a real service outage, with a recognizable
+      lure (fake recovery links referencing the actual incident ID). It fits the topic directly and is
+      not covered by any previously published story.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 30f8b8be0e6e
+    cluster_key: 365-active-campaign-disruption-exploits-microsoft-password-service-stealing
+    coverage:
+    - title: Microsoft Warns of Active Password Stealing Attack Exploiting the Microsoft 365 Service Disruption
+      url: https://cybersecuritynews.com/active-password-stealing-attack-microsoft-365
+      source: Cybersecurity News
+      published: '2026-11-14T10:57:32+00:00'
+    published: '2026-11-14T10:57:32+00:00'
+    is_carryover: true
+  - id: 37464796c9c3
+    rank: 3
+    title: Crypto Impersonation Scams Surge Nearly 130% After Binance Heist
+    summary: In the wake of the $6.4 billion Binance theft, researchers document a spike in phishing campaigns
+      impersonating Binance. Scammers send emails and messages that appear to come from Binance support
+      or recovery services, claiming to help victims restore access or recover funds. The lures direct
+      users to fake login pages or recovery tools that harvest credentials and cryptocurrency wallet details,
+      riding on the outage chaos to appear urgent and legitimate.
+    url: https://blog.knowbe4.com/binance-heist-fallout-crypto-impersonation-phishing-scams
+    image: https://blog.knowbe4.com/hubfs/CR-1352%20Threat%20Lab%20Blog%20Post%20Featured%20Image%20Request%20(Binance%20Cryptocurrency%20Scams)_blog_web%20images_Thumbnail_1200x628.jpg
+    sources:
+    - KnowBe4 Research
+    labels:
+    - phishing
+    - cryptocurrency
+    - social engineering
+    rationale: Concrete post-heist impersonation campaign targeting a huge user base; describes a recognizable
+      lure that could reach many Binance users.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 37464796c9c3
+    cluster_key: 130-after-binance-crypto-heist-impersonation-nearly-scams-surge
+    coverage:
+    - title: 'The Binance Aftershocks: Tracking the Nearly 130% Spike in Crypto Impersonation Scams'
+      url: https://blog.knowbe4.com/binance-heist-fallout-crypto-impersonation-phishing-scams
+      source: KnowBe4 Research
+      published: '2026-11-13T17:00:02+00:00'
+    published: '2026-11-13T17:00:02+00:00'
+    is_carryover: true
+  policy:
+  - id: 6e7240be739a
+    rank: 1
+    title: Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent
+    summary: Italy's data protection authority, the Garante, fined Meta €805 million over a Facebook for
+      Android feature that accessed users' phone galleries without explicit consent. The feature was enabled
+      by default and collected photos, videos, and related metadata. Meta has 60 days to comply with the
+      ruling.
+    url: https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdTCjpbsG3Dp62JM1KZqfSvZpuBnxwaCxXsplW3dAt2b4Ym0KAWPfxkHf4DT-02VK3jJESLmgasdE6D36qGegWu7dk9YSLN4DZxRVsgrM9lIEXXHUvQ0VzaZ1_gFqpjtA4cP3rlt82g5WnK2sXNZHJd5F_rEk4VSTGnMKOuXziSM1R85Vqhway3lajwTA/s1600/facebook-fine.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - data protection
+    - policy
+    rationale: Major data protection ruling by a national regulator, imposing a significant fine for a
+      default-enabled consent violation, which sets a precedent for enforcement of explicit consent obligations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6e7240be739a
+    cluster_key: 805-access-android-explicit-facebook-fines-gallery-italy-meta-million-over-without
+    coverage:
+    - title: Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent
+      url: https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html
+      source: The Hacker News
+      published: '2026-11-15T11:27:31+00:00'
+    published: '2026-11-15T11:27:31+00:00'
+  - id: f2c497e6d591
+    rank: 2
+    title: US Disrupts North Korean FaceStealer Campaign Behind $400M in Crypto Theft
+    summary: The U.S. government has disrupted 'FaceStealer', a North Korean social engineering campaign
+      that stole more than $400 million in cryptocurrency through fake Zoom and Teams calls built around
+      recordings of earlier victims. The disruption is a law enforcement action that follows the FBI's
+      earlier warning about the scheme, which seized more than 900 recordings.
+    url: https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/21/DPRK.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - North Korea
+    - cryptocurrency
+    - law enforcement
+    - social engineering
+    rationale: US government disruption of a state-linked crypto-theft campaign is a law enforcement action
+      that removes threat actor capability and imposes obligations on crypto platforms to block associated
+      activity.
+    is_update: true
+    supersedes: fc197210db5e
+    what_changed: The US government has now disrupted the FaceStealer campaign, a concrete law enforcement
+      action following the earlier FBI warning about the scheme.
+    cluster: fc197210db5e
+    cluster_key: 400m-behind-campaign-crypto-disrupts-facestealer-korean-north-theft
+    coverage:
+    - title: US disrupts North Korean campaign behind $400 million crypto theft
+      url: https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft
+      source: BleepingComputer
+      published: '2026-11-14T15:15:49+00:00'
+    published: '2026-11-14T15:15:49+00:00'
+    is_carryover: true
+  - id: 2e996d9bff33
+    rank: 3
+    title: Germany Passes Landmark Law Granting Spy Agencies Hacking and Sabotage Powers
+    summary: Germany's Bundestag approved a major overhaul of the country's spy laws, giving intelligence
+      agencies legal authority to conduct hacking and sabotage operations. The bill passed 308-190, marking
+      the biggest change to German spy legislation in the postwar era.
+    url: https://therecord.media/german-parliament-passes-law-giving-spy-agencies-hacking-power
+    image: http://cms.therecord.media/uploads/rasmus_gundorff_saederup_k_C_Dr4i_Pax7c_unsplash_cf20643196.jpg
+    sources:
+    - The Record
+    labels:
+    - government
+    - law enforcement
+    rationale: A new law that fundamentally changes the legal framework for offensive cyber operations,
+      with direct implications for organizations and citizens.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2e996d9bff33
+    cluster_key: agencies-and-germany-granting-hacking-landmark-law-passes-powers-sabotage-spy
+    coverage:
+    - title: German parliament passes law giving spy agencies hacking, sabotage powers
+      url: https://therecord.media/german-parliament-passes-law-giving-spy-agencies-hacking-power
+      source: The Record
+      published: '2026-11-13T16:32:00+00:00'
+    published: '2026-11-13T16:32:00+00:00'
+    is_carryover: true
+  security_tools:
+  - id: 2c05215a671b
+    rank: 1
+    title: 'brainproxy: AI-First Rust Web Security Testing Toolkit'
+    summary: brainproxy is a new open-source Rust toolkit positioned as an alternative to ZAP and Burp
+      Suite. It provides an intercepting proxy, scanner, fuzzer, and reporting as a JSON CLI with an MCP
+      server and desktop app.
+    url: https://kitploit.com/en/tools/github/r4nd0mth1ngs/brainproxy
+    image: https://assets.kitploit.com/production/public/tools/60101/d42ff43834fccb709dc0ee26592ad012e5b1be1c435679c4a88aebfd3902f30b-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - Rust
+    - vulnerability research
+    rationale: Installable, inspectable Rust web-security toolkit that gives pentesters a modern open-source
+      proxy/scanner/fuzzer; fits the tools column directly.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2c05215a671b
+    cluster_key: brainproxy-first-rust-security-testing-toolkit-web
+    coverage:
+    - title: brainproxy
+      url: https://kitploit.com/en/tools/github/r4nd0mth1ngs/brainproxy
+      source: KitPloit
+      published: '2026-11-16T01:35:12+00:00'
+    published: '2026-11-16T01:35:12+00:00'
+  - id: 8adb4989e714
+    rank: 2
+    title: 'Prism-Platform: Self-Hosted OSINT Platform With 26 Parallel Modules'
+    summary: Prism-platform is a self-hosted OSINT platform that runs 26 parallel modules against a domain,
+      IP, email, phone, or username, including WHOIS, DNS, threat intel, breaches, and username search.
+      It provides a dashboard, exposure score, entity graph, and HTML/PDF reports.
+    url: https://kitploit.com/en/tools/gitlab/entropq2/prism-platform
+    image: https://assets.kitploit.com/production/public/tools/60053/be4d8e3d36ffe7763393f20a1f91ad30de91c9791e3db75d99332a835696918d-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - OSINT
+    - recon
+    rationale: Self-hosted OSINT framework with broad data-source coverage and reporting; directly relevant
+      downloadable recon tooling.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8adb4989e714
+    cluster_key: hosted-modules-osint-parallel-platform-platform-prism-self-with
+    coverage:
+    - title: Prism-platform
+      url: https://kitploit.com/en/tools/gitlab/entropq2/prism-platform
+      source: KitPloit
+      published: '2026-11-16T06:35:15+00:00'
+    - title: Prism-platform
+      url: https://kitploit.com/en/tools/gitlab/novacode1337/prism-platform
+      source: KitPloit
+      published: '2026-11-15T23:34:49+00:00'
+    published: '2026-11-16T06:35:15+00:00'
+  - id: afd4e23d57f2
+    rank: 3
+    title: 'YARA-X 1.23.0 Released: Pattern-Matching Engine Gains Improvements and Bugfixes'
+    summary: YARA-X 1.23.0, the Rust rewrite of the YARA malware pattern-matching engine, ships with four
+      improvements and 16 bugfixes. Detection engineers and malware analysts should update the rule engine
+      for ongoing threat-hunting workflows.
+    url: https://isc.sans.edu/diary/rss/33496
+    image: ''
+    sources:
+    - SANS Internet Storm Center
+    labels:
+    - open source
+    - malware analysis
+    - Rust
+    rationale: Significant release of a widely used open-source malware-analysis and detection tool; useful
+      to a broad segment of the security community.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: afd4e23d57f2
+    cluster_key: and-bugfixes-engine-gains-improvements-matching-pattern-released-yara
+    coverage:
+    - title: YARA-X 1.23.0 Release, (Sun, Nov 15th)
+      url: https://isc.sans.edu/diary/rss/33496
+      source: SANS Internet Storm Center
+      published: '2026-11-15T18:17:27+00:00'
+    published: '2026-11-15T18:17:27+00:00'
+  - id: 8fd9f008bb92
+    rank: 4
+    title: 'BloodTrail: In-Memory Graph Engine Driver Accelerates BloodHound CE'
+    summary: BloodTrail is an open-source in-memory graph engine driver for BloodHound CE that accelerates
+      attack-path and Cypher queries across large Active Directory and Entra ID forests, delegating inexact
+      reads to PostgreSQL. It helps red and blue teams handle large AD environments without slowing BloodHound.
+    url: https://kitploit.com/en/tools/github/mihhailsokolov/bloodtrail
+    image: https://assets.kitploit.com/production/public/tools/60092/9be0e431678f211eb2030cd35fde954ff2eaa6a84834609c5f1e97306431160e-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - red team
+    - Microsoft
+    rationale: Practical performance tooling for the widely used BloodHound attack-path platform; concrete
+      and useful for AD/Entra assessment teams.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8fd9f008bb92
+    cluster_key: accelerates-bloodhound-bloodtrail-driver-engine-graph-memory
+    coverage:
+    - title: BloodTrail
+      url: https://kitploit.com/en/tools/github/mihhailsokolov/bloodtrail
+      source: KitPloit
+      published: '2026-11-15T22:34:41+00:00'
+    published: '2026-11-15T22:34:41+00:00'
+  - id: 0c911b4d1d11
+    rank: 5
+    title: 'badbox-tv-audit: Android TV Malware Audit and Remediation Tool'
+    summary: badbox-tv-audit audits Android TV and Google TV devices over ADB for BadBox, XCPE, and Vo1d
+      malware, and adds a VPN traffic sentinel, IoC blocklists, and reversible remediation. It gives defenders
+      a hands-on way to detect and clean infected streaming devices.
+    url: https://kitploit.com/en/tools/github/mafarricos/badbox-tv-audit
+    image: https://assets.kitploit.com/production/public/tools/60070/e990221c933da27b51da5b0c891cbdc374bf23f2ee60d924331712a3d8f36ab5-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - Android
+    - DFIR
+    - malware analysis
+    rationale: Directly addresses a current Android TV malware problem with an installable ADB-based audit
+      and cleaning tool; strong DFIR relevance.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0c911b4d1d11
+    cluster_key: and-android-audit-audit-badbox-malware-remediation-tool
+    coverage:
+    - title: badbox-tv-audit
+      url: https://kitploit.com/en/tools/github/mafarricos/badbox-tv-audit
+      source: KitPloit
+      published: '2026-11-15T21:35:21+00:00'
+    published: '2026-11-15T21:35:21+00:00'
+  - id: 21733b5c6a3c
+    rank: 6
+    title: 'lamda v10.12: Android Full-Stack Device Control and Testing Platform'
+    summary: lamda v10.12 is an Android full-stack device control platform with WebRTC/H.264 remote desktop,
+      UI/OCR/image-matching automation, one-click MITM, built-in Frida, proxy/VPN/FRP/P2P networking,
+      and 160+ APIs. It is built for multi-device clusters and mobile security-testing deployments.
+    url: https://kitploit.com/en/posts/lamda-beb0588f43fda8da
+    image: https://assets.kitploit.com/production/public/tools/7312/75917ce25b1633e21ddbd6c56de557586171dedb0863597c014589892eb31d97.png
+    sources:
+    - KitPloit
+    labels:
+    - Android
+    - open source
+    - red team
+    rationale: Feature-rich mobile red-team and device-testing platform, including MITM and Frida integration;
+      concrete open-source tooling for Android work.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 21733b5c6a3c
+    cluster_key: and-android-control-device-full-lamda-platform-stack-testing-v10
+    coverage:
+    - title: lamda v10.12
+      url: https://kitploit.com/en/posts/lamda-beb0588f43fda8da
+      source: KitPloit
+      published: '2026-11-16T03:36:35+00:00'
+    published: '2026-11-16T03:36:35+00:00'
+  - id: bd07f920b690
+    rank: 7
+    title: 'ipsw v3.1.747: iOS/macOS Research Swiss Army Knife'
+    summary: ipsw v3.1.747 is an open-source research toolkit for iOS and macOS firmware, used for parsing,
+      decrypting, and analyzing IPSW files and related artifacts. This update keeps the platform current
+      for Apple reverse-engineering and DFIR work.
+    url: https://kitploit.com/en/posts/ipsw-8a4a6e83dfdf8a85
+    image: https://assets.kitploit.com/production/public/tools/50810/46258692ce873187b5cc75978fd83d1d3634f431267d5cf99cc16c1071da575b-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - reverse engineering
+    - Apple
+    - open source
+    rationale: Widely used open-source firmware-analysis utility for Apple platforms; a useful, versioned
+      release for RE and forensic workflows.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bd07f920b690
+    cluster_key: 747-army-ios-ipsw-knife-macos-research-swiss
+    coverage:
+    - title: ipsw v3.1.747
+      url: https://kitploit.com/en/posts/ipsw-8a4a6e83dfdf8a85
+      source: KitPloit
+      published: '2026-11-15T15:34:33+00:00'
+    published: '2026-11-15T15:34:33+00:00'
+  supply_chain:
+  - id: e2661a37c3f5
+    rank: 1
+    title: Germany Grounds UAVs After Supply-Chain Attack
+    summary: Germany has grounded UAVs following a supply-chain attack, according to Risky Business News.
+      The incident follows the October cyberattack on German military drone maker Quantum Systems that
+      disrupted military drone operations, and the new reporting indicates the attack is now being characterized
+      as a supply-chain compromise.
+    url: https://risky.biz/RBNEWS634
+    image: https://risky.biz/static/img/RB-OG-Social.jpg
+    sources:
+    - Risky Business News
+    labels:
+    - supply chain
+    - government
+    - cyberattack
+    rationale: 'Material follow-up to the Quantum Systems incident: Germany grounded UAVs and the attack
+      is now described as a supply-chain attack.'
+    is_update: true
+    supersedes: a6f758f9bd4a
+    what_changed: Germany has grounded UAVs and the incident is now characterized as a supply-chain attack;
+      earlier reporting described an active cyberattack by hostile actors affecting military drone operations.
+    cluster: a6f758f9bd4a
+    cluster_key: after-attack-chain-germany-grounds-supply-uavs
+    coverage:
+    - title: 'Risky Bulletin: Cyberattack grounds German UAVs'
+      url: https://risky.biz/RBNEWS634
+      source: Risky Business News
+      published: '2026-11-16T00:04:19+00:00'
+    published: '2026-11-16T00:04:19+00:00'
+  - id: fae06fdf5f05
+    rank: 2
+    title: TSMC Employee Data Leak Tied to Cloud Provider, 6.9GB Auctioned
+    summary: TSMC confirmed that personal employee data has leaked online after a threat actor put 6.9GB
+      of information allegedly stolen from the company up for auction. The exposed data matches records
+      held by an outside cloud service provider, and TSMC says there is no evidence its own systems were
+      compromised.
+    url: https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/13/TSMC.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - supply chain
+    - data breach
+    rationale: 'Update to the previously published TSMC breach: the leaked data is now confirmed as 6.9GB
+      and has been put up for auction, with the incident traced to a third-party cloud provider.'
+    is_update: true
+    supersedes: 76b72cf671fd
+    what_changed: The threat actor is now auctioning 6.9GB of allegedly stolen data; earlier reporting
+      said employee data appeared online and matched records held by a cloud service provider.
+    cluster: 76b72cf671fd
+    cluster_key: 9gb-auctioned-cloud-data-employee-leak-provider-tied-tsmc
+    coverage:
+    - title: TSMC employee data breach linked to cloud provider
+      url: https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider
+      source: BleepingComputer
+      published: '2026-11-15T15:23:48+00:00'
+    published: '2026-11-15T15:23:48+00:00'
+  - id: fe30e1d119f7
+    rank: 3
+    title: 'Supply-Chain Attack Tracker Update: 2,961 Malicious Packages in Last 60 Days'
+    summary: The live malicious-package tracker, generated from the OpenSSF malicious-packages database,
+      now lists 2,961 malicious package records in the last 60 days as of November 11, 2026, up from 2,691
+      in the previous snapshot. It continues to prioritize reviewed hijacks of widely used npm, PyPI,
+      RubyGems, and crates.io packages; maintainers and developers should re-check recent dependencies
+      and lockfiles.
+    url: https://vulnpocalypse.dev/supply-chain
+    image: https://vulnpocalypse.dev/og/psupply-chain.png
+    sources:
+    - Vulnpocalypse
+    labels:
+    - supply-chain
+    - malicious-package
+    - open source
+    rationale: 'Follow-up to the already published tracker card with a materially updated snapshot: the
+      60-day malicious package count rose by 270 records, indicating continued registry-wide supply-chain
+      activity.'
+    is_update: true
+    supersedes: 2ae5f5563fdb
+    what_changed: Tracker snapshot updated to 2026-11-11; malicious package records in the last 60 days
+      increased from 2,691 to 2,961.
+    cluster: 2ae5f5563fdb
+    cluster_key: 961-attack-chain-days-last-malicious-packages-supply-tracker-update
+    coverage:
+    - title: 'Supply-chain attack tracker: hijacked npm and PyPI packages'
+      url: https://vulnpocalypse.dev/supply-chain
+      source: Vulnpocalypse
+      published: '2026-11-15T07:03:52.901702+00:00'
+    published: '2026-11-15T07:03:52.901702+00:00'
+    is_carryover: true
+  threats:
+  - id: 12a1ff548791
+    rank: 1
+    title: Retadup USB worm resurfaces to spread new CoffeeLoader variant
+    summary: Kaspersky detected a new CoffeeLoader variant in the wild in August 2026, distributed via
+      the Retadup USB worm. The NSIS installer drops a patched 7z.dll containing self-decrypting shellcode
+      that is a new version of the Armoury packer, marking a second life for the older worm.
+    url: https://securelist.com/retadup-delivers-coffeeloader/121908
+    image: https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2026/11/12144618/retadup-1_securelist-featured_1200x600_x2.jpg
+    sources:
+    - Securelist
+    labels:
+    - malware
+    - malware analysis
+    rationale: Active malware campaign analysis from Kaspersky Securelist describing a new CoffeeLoader
+      variant distributed by the Retadup USB worm; not previously published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 12a1ff548791
+    cluster_key: coffeeloader-new-resurfaces-retadup-spread-usb-variant-worm
+    coverage:
+    - title: 'A USB worm’s second life: Retadup spreading CoffeeLoader'
+      url: https://securelist.com/retadup-delivers-coffeeloader/121908
+      source: Securelist
+      published: '2026-11-16T07:00:37+00:00'
+    published: '2026-11-16T07:00:37+00:00'
+  - id: 7c9e29b5341b
+    rank: 2
+    title: 'DOJ: Gootloader Tied to 44 Ransomware Attacks Costing $29 Million'
+    summary: The DOJ said Gootloader has been used in at least 44 ransomware attacks that cost victims
+      $29 million since 2018, adding new impact details as law enforcement continues to dismantle the
+      malware's infrastructure. The loader's role in ransomware campaigns makes it a continued threat
+      for defenders.
+    url: https://therecord.media/gootloader-ransomware-doj-details
+    image: https://cms.therecord.media/uploads/gootloader_page_operation_endgame_d490d02942.png
+    sources:
+    - therecord.media
+    labels:
+    - ransomware
+    - malware
+    - law enforcement
+    - cybercrime
+    rationale: New DOJ quantification of a long-running ransomware-enabling malware, updating the Endgame
+      takedown coverage.
+    is_update: true
+    supersedes: 41a3ad1ce4ca
+    what_changed: DOJ disclosed that Gootloader has been tied to at least 44 ransomware attacks costing
+      $29 million since 2018, quantifying the impact of the malware after the Europol-led takedown.
+    cluster: 41a3ad1ce4ca
+    cluster_key: attacks-costing-doj-gootloader-million-ransomware-tied
+    coverage:
+    - title: 'DOJ: Gootloader used in at least 44 ransomware attacks costing $29 million since 2018'
+      url: https://therecord.media/gootloader-ransomware-doj-details
+      source: therecord.media
+      published: '2026-11-15T07:03:52.901702+00:00'
+    published: '2026-11-15T07:03:52.901702+00:00'
+    is_carryover: true
+  - id: 361215fead59
+    rank: 3
+    title: Microsoft Confirms SCKit ScreenConnect Attacks Target MSP Technician Sessions
+    summary: Microsoft Threat Intelligence confirmed the active campaign against cloud-hosted ConnectWise
+      ScreenConnect instances, in which attackers gain unauthorized access to MSP environments and deploy
+      the SCKit toolkit. The operators disguise unauthorized sessions behind fake crypto-exchange names
+      and are specifically targeting technician sessions to expand access. Microsoft published the attack
+      chain, IOCs, and mitigation guidance.
+    url: https://www.microsoft.com/en-us/security/blog/2026/11/13/sckit-abuses-screenconnect-deploy-remote-access-target-technician-sessions
+    image: https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2026/06/MS_Actional-Insights_Malware-ransomware-2.jpg
+    sources:
+    - Microsoft Threat Intelligence
+    - Huntress
+    labels:
+    - active exploitation
+    - malware
+    - Microsoft
+    - supply-chain
+    rationale: Microsoft's independent analysis reveals technician-session targeting and provides new
+      IOCs, updating the SCKit campaign.
+    is_update: true
+    supersedes: dfcb787d94ae
+    what_changed: Microsoft threat intelligence published a new technical breakdown of the SCKit campaign,
+      including targeting of technician sessions, fake crypto-exchange disguise, and fresh IOCs.
+    cluster: 096e04690239
+    cluster_key: attacks-confirms-microsoft-msp-sckit-screenconnect-sessions-target-technician
+    coverage:
+    - title: SCKit abuses ScreenConnect to deploy remote access and target technician sessions
+      url: https://www.microsoft.com/en-us/security/blog/2026/11/13/sckit-abuses-screenconnect-deploy-remote-access-target-technician-sessions
+      source: Microsoft Threat Intelligence
+      published: '2026-11-13T21:31:44+00:00'
+    - title: Attackers use Crypto Exchange Names to Disguise Unauthorized Sessions on 100+ ScreenConnect
+        Servers
+      url: https://www.huntress.com/blog/fake-crypto-exchange-sessions-screenconnect
+      source: Huntress
+      published: '2026-11-14T01:50:00+00:00'
+    published: '2026-11-13T21:31:44+00:00'
+    is_carryover: true
+  vulnerabilities:
+  - id: 52ce85583e97
+    rank: 1
+    title: Six Pre-Auth RCE Flaws Found in Danfoss Supermarket Refrigeration Controllers
+    summary: Researchers found six pre-authentication remote code execution vulnerabilities in the Danfoss
+      AK-SM800A supermarket refrigeration controller, all stack-based buffer overflows affecting firmware
+      up to 5.3.2, with no CVE numbers assigned yet. The disclosure comes amid waves of attacks since
+      October 11 against internet-exposed Danfoss and Copeland controllers across Europe.
+    url: https://cybersecuritynews.com/supermarket-refrigeration-systems-0-day
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Supermarket-Refrigeration-Systems.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - remote code execution
+    - critical infrastructure
+    - vulnerability research
+    rationale: Pre-auth RCE in cold-chain controllers currently targeted by active attacks; operators
+      should isolate or patch exposed devices.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 52ce85583e97
+    cluster_key: auth-controllers-danfoss-flaws-found-pre-rce-refrigeration-six-supermarket
+    coverage:
+    - title: Researchers Find Six 0-Days Allowing Unauthorized Takeover of Supermarket Refrigeration Systems
+      url: https://cybersecuritynews.com/supermarket-refrigeration-systems-0-day
+      source: Cybersecurity News
+      published: '2026-11-15T15:23:22+00:00'
+    published: '2026-11-15T15:23:22+00:00'
+  - id: cb5f96972fa0
+    rank: 2
+    title: 11-Year-Old Linux Kernel Flaw NoisyTCP Lets Remote Attackers Crash Servers (CVE-2026-99288)
+    summary: A Linux kernel flaw tracked as CVE-2026-99288, dubbed NoisyTCP, lets an unauthenticated remote
+      attacker crash a server via plain TCP listeners without any special configuration. The 11-year-old
+      bug was reported and patched by Hyunwoo Kim; no active exploitation has been reported.
+    url: https://cybersecuritynews.com/noisytcp-linux-kernel-vulnerability
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/NoisyTCP-11-Year-Old-Linux-Kernel-Flaw-Lets-Unauthenticated-Attackers-Crash-Servers-Remotely.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - Linux kernel
+    - vulnerability
+    rationale: Remotely triggerable DoS in the widely used Linux kernel with a patch available; important
+      for server administrators.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cb5f96972fa0
+    cluster_key: attackers-crash-cve-flaw-kernel-lets-linux-noisytcp-old-remote-servers-year
+    coverage:
+    - title: 'NoisyTCP: 11-Year-Old Linux Kernel Flaw Lets Unauthenticated Attackers Crash Servers Remotely'
+      url: https://cybersecuritynews.com/noisytcp-linux-kernel-vulnerability
+      source: Cybersecurity News
+      published: '2026-11-16T05:26:51+00:00'
+    published: '2026-11-16T05:26:51+00:00'
+  - id: af34a15f4d75
+    rank: 3
+    title: Tor Releases Emergency Update 0.4.9.17 to Mitigate Ongoing DDoS Attack on Relays
+    summary: The Tor Project released Tor 0.4.9.17 to mitigate an ongoing distributed denial-of-service
+      attack that is overwhelming network relays. The stable update includes security fixes, including
+      IPv6 handling in relay DDoS defenses; relay operators are urged to upgrade immediately.
+    url: https://cybersecuritynews.com/tor-ddos-attack
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Tor-DDoS-Attack.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - security update
+    - cyberattack
+    rationale: Emergency security update for the Tor network under active DDoS; relay operators should
+      upgrade immediately.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: af34a15f4d75
+    cluster_key: attack-ddos-emergency-mitigate-ongoing-relays-releases-tor-update
+    coverage:
+    - title: Tor Releases Emergency Security Update as Ongoing DDoS Attack Overwhelms Network Relays
+      url: https://cybersecuritynews.com/tor-ddos-attack
+      source: Cybersecurity News
+      published: '2026-11-16T03:23:56+00:00'
+    published: '2026-11-16T03:23:56+00:00'
+  - id: cd37d19a8198
+    rank: 4
+    title: AI Models Uncover 99 Vulnerabilities in TCP/IP Stacks, Many in Discontinued Devices
+    summary: Forescout researchers used generally available AI models to find 99 vulnerabilities across
+      10 TCP/IP stacks, 66 previously unknown, with 52% of the new flaws rated high severity. Many affected
+      devices are discontinued, leaving no vendor to provide patches.
+    url: https://www.helpnetsecurity.com/2026/11/16/forescout-ai-models-vulnerability-research
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/05/27143607/magnify-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - vulnerability research
+    - AI security research
+    rationale: Material update to the previously published Forescout AI bug-hunting story, adding total
+      vulnerability count, severity, and the lack of patches for discontinued devices.
+    is_update: true
+    supersedes: 6f4339397873
+    what_changed: Follow-up reporting adds the total confirmed vulnerability count (99), the severity
+      breakdown (52% of new flaws high severity), and the angle that many affected devices are discontinued
+      with no vendor to patch them.
+    cluster: 6f4339397873
+    cluster_key: devices-discontinued-many-models-stacks-tcp-uncover-vulnerabilities
+    coverage:
+    - title: AI uncovers flaws in discontinued devices with no vendor left to patch them
+      url: https://www.helpnetsecurity.com/2026/11/16/forescout-ai-models-vulnerability-research
+      source: Help Net Security
+      published: '2026-11-16T05:00:22+00:00'
+    - title: AI uncovers flaws in discontinued devices with no vendor left to patch them
+      url: https://news.google.com/rss/articles/CBMijwFBVV95cUxNZUh1V0dwV0hpLWdnc1VQa3FZam9YWHhmTk13RXFFdkFMVnpTeGtlR1BMZ1pxT1RNZ2lPeHZGa2swWWNJQS1OZlZRS0E3eWV4ZUlKSldvaGJXSDI3R1pzbG0ySksxbkx4emxsUTJWQlJ1cS01cV9HRE5kcl8ySHAxX1JhMGZLTWhzTGFydEUzaw
+      source: Help Net Security
+      published: '2026-11-16T05:00:22+00:00'
+    published: '2026-11-16T05:00:22+00:00'
