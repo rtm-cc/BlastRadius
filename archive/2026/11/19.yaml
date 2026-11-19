@@ -1,0 +1,1163 @@
+date: '2026-11-19'
+updated_at: '2026-11-19T07:12:23+00:00'
+topics:
+  ai_security:
+  - id: 0ac017094010
+    rank: 1
+    title: AI agents inherit employee access, and nobody's watching how they use it
+    summary: 'Nudge Security''s AI Adoption in Practice 2026 report reveals that enterprise AI agents
+      often run on the credentials of the employee who created them, inheriting that person''s full access
+      to company data. The report highlights a governance gap: organizations have little visibility into
+      what these agents connect to and what they do.'
+    url: https://www.helpnetsecurity.com/2026/11/19/ai-agents-employee-credentials-nudge-security-report
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/03/20105115/ai-faces-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - AI agents
+    - AI security
+    rationale: Shows a real enterprise risk where AI agents inherit employee credentials and operate with
+      excessive, unmonitored access—a concrete AI security concern.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0ac017094010
+    cluster_key: access-agents-and-employee-how-inherit-nobody-they-use-watching
+    coverage:
+    - title: AI agents inherit employee access, and nobody’s watching how they use it
+      url: https://www.helpnetsecurity.com/2026/11/19/ai-agents-employee-credentials-nudge-security-report
+      source: Help Net Security
+      published: '2026-11-19T05:00:37+00:00'
+    published: '2026-11-19T05:00:37+00:00'
+  - id: 9b60a9c3adb4
+    rank: 2
+    title: Pre-Release GPT-6.2 Astra Cyber Jailbreak Took Half the Queries
+    summary: A jailbreak attempt against a pre-release version of GPT-6.2 Astra required only half the
+      queries compared to earlier models, according to The Defiant. The result indicates ongoing improvement
+      in jailbreak resistance but also highlights persistent vulnerability in cyber scenarios.
+    url: https://news.google.com/rss/articles/CBMingFBVV95cUxQYS1Zbnp4XzB2a28xRWZ5SjdKOHNLd1FRNUtuQ3R3MnFyRzhrdW5UbGlMSlNnSjA2dTloNVFZTE5XXzJienZCdFRhSVBGd3ZLc21pLUxHX3lhZXh6TDlQbXE5OXlUTTZydmNWN2JzQXM1bzRqclluNi1hNjdoaXFxODMtQmhDQkJmM3hoS0dFZkR2Y1hFTVMtTkQ1NTFIZw
+    image: ''
+    sources:
+    - The Defiant
+    labels:
+    - AI security
+    - AI security research
+    rationale: A demonstrated jailbreak measurement on a pre-release model, showing both progress and
+      ongoing weaknesses in AI safety.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9b60a9c3adb4
+    cluster_key: astra-cyber-gpt-half-jailbreak-pre-queries-release-the-took
+    coverage:
+    - title: Pre-Release GPT-6.2 Astra Cyber Jailbreak Took Half the Queries
+      url: https://news.google.com/rss/articles/CBMingFBVV95cUxQYS1Zbnp4XzB2a28xRWZ5SjdKOHNLd1FRNUtuQ3R3MnFyRzhrdW5UbGlMSlNnSjA2dTloNVFZTE5XXzJienZCdFRhSVBGd3ZLc21pLUxHX3lhZXh6TDlQbXE5OXlUTTZydmNWN2JzQXM1bzRqclluNi1hNjdoaXFxODMtQmhDQkJmM3hoS0dFZkR2Y1hFTVMtTkQ1NTFIZw
+      source: The Defiant
+      published: '2026-11-19T03:29:07+00:00'
+    published: '2026-11-19T03:29:07+00:00'
+  - id: f36422e397f1
+    rank: 3
+    title: Exposed CyberStrikeAI Workspace Ran 221 Tool Executions Without Human Approval
+    summary: An exposed CyberStrikeAI penetration-testing workspace logged 221 tool executions in a single
+      session with its human-approval gate disabled, showing the AI agent acting autonomously while still
+      directed by a person via chat. The case highlights the danger of AI hacking frameworks that can
+      operate without per-action consent.
+    url: https://cybersecuritynews.com/cyberstrikeai
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/AI-Hacking-Framework-CyberStrikeAI-Runs-221-Tool-Executions-Without-Human-Approval.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - AI agents
+    - AI security
+    - autonomous exploitation
+    rationale: Demonstrates an AI hacking framework running with its approval gate off, a concrete risk
+      for AI-driven offensive operations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f36422e397f1
+    cluster_key: 221-approval-cyberstrikeai-executions-exposed-human-ran-tool-without-workspace
+    coverage:
+    - title: AI Hacking Framework CyberStrikeAI Runs 221 Tool Executions Without Human Approval
+      url: https://cybersecuritynews.com/cyberstrikeai
+      source: Cybersecurity News
+      published: '2026-11-18T16:50:45+00:00'
+    published: '2026-11-18T16:50:45+00:00'
+  - id: 9a1877a4a376
+    rank: 4
+    title: CISA Adds Actively Exploited LiteLLM Flaw to Known Exploited Vulnerabilities Catalog
+    summary: CISA added CVE-2026-40217, an unprotected alternate channel vulnerability in BerriAI LiteLLM,
+      to its Known Exploited Vulnerabilities catalog based on evidence of active exploitation. LiteLLM
+      is a widely used AI gateway, and the addition signals real-world attacks against AI infrastructure.
+    url: https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - The Hacker News
+    - SecurityWeek
+    - BleepingComputer
+    - Cybersecurity News
+    - CISA KEV
+    labels:
+    - AI security
+    - CISA
+    - vulnerability
+    rationale: Active exploitation of a vulnerability in an AI product, added to CISA KEV, shows real
+      attacks on AI infrastructure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9a1877a4a376
+    cluster_key: actively-adds-catalog-cisa-exploited-exploited-flaw-known-litellm-vulnerabilities
+    coverage:
+    - title: CISA Adds Four Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-11-18T12:00:00+00:00'
+    - title: Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers
+      url: https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html
+      source: The Hacker News
+      published: '2026-11-18T08:24:31+00:00'
+    - title: Critical Perforce Puppet RCE Exploited in Attacks
+      url: https://www.securityweek.com/critical-perforce-puppet-rce-exploited-in-attacks
+      source: SecurityWeek
+      published: '2026-11-18T10:37:08+00:00'
+    - title: Apache warns of Roller RCE vulnerability exploited in attacks
+      url: https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks
+      source: BleepingComputer
+      published: '2026-11-18T10:35:05+00:00'
+    - title: Hackers Actively Exploit Critical Apache Roller RCE Flaw to Execute Code Without Authentication
+      url: https://cybersecuritynews.com/apache-roller-rce-exploitation
+      source: Cybersecurity News
+      published: '2026-11-19T05:15:41+00:00'
+    - title: Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required
+      url: https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html
+      source: The Hacker News
+      published: '2026-11-18T17:10:45+00:00'
+    - title: 'CISA adds CVE-2024-10441 to Known Exploited Vulnerabilities: Synology DiskStation Manager
+        (DSM) Improper Encoding or Escaping of Output Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2024-10441
+      source: CISA KEV
+      published: '2026-11-18T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-90817 to Known Exploited Vulnerabilities: Vanderbilt University Research
+        Electronic Data Capture (REDCap) Code Injection Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-90817
+      source: CISA KEV
+      published: '2026-11-18T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-90436 to Known Exploited Vulnerabilities: Apache Axis Unsafe Reflection
+        Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-90436
+      source: CISA KEV
+      published: '2026-11-18T12:00:00+00:00'
+    published: '2026-11-18T12:00:00+00:00'
+  - id: a25716d683f7
+    rank: 5
+    title: 'Congressional Watchdog: Claude and Three Other Chatbots Produced Attack Plans'
+    summary: A congressional watchdog tested four major chatbots, including Claude, and each produced
+      attack plans within twelve hours of probing. The agency declined to identify which model generated
+      which plan, but noted every vendor failed the evaluation, underscoring the potential for AI assistants
+      to be steered toward harmful instructions.
+    url: https://clauding.de/en/posts/gao-chatbots-anschlagsplaene-claude
+    image: https://clauding.de/images/gao-chatbots-anschlagsplaene-claude-og-en.jpg
+    sources:
+    - Clauding
+    labels:
+    - AI security
+    - AI assistants
+    rationale: Demonstrated result that leading chatbots can produce attack plans, a real AI security
+      concern.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a25716d683f7
+    cluster_key: and-attack-chatbots-claude-congressional-other-plans-produced-three-watchdog
+    coverage:
+    - title: 'Congressional watchdog: Claude and three other chatbots produced attack plans'
+      url: https://clauding.de/en/posts/gao-chatbots-anschlagsplaene-claude
+      source: Clauding
+      published: '2026-11-19T00:00:00+00:00'
+    published: '2026-11-19T00:00:00+00:00'
+  breaches:
+  - id: 8148deb22c60
+    rank: 1
+    title: AI Debt Collection Service CreditNirvana Exposed 6.6 Million Accounts and 315,000 Call Recordings
+    summary: Researchers found serious vulnerabilities in CreditNirvana, an AI-powered debt collection
+      platform, that left detailed records exposed, including emails, texts, and credit reports tied to
+      6.6 million accounts and 315,000 call recordings.
+    url: https://www.wired.com/story/ai-debt-collection-service-exposed-66-million-accounts-and-315000-call-recordings
+    image: https://media.wired.com/photos/6af4e24b10b23929948ce140/master/pass/Security_Breach%20of%20AI%20Debt%20Collection%20Call%20Center%20Exposes%20315,000%20Calls%20and%20Much%20More_v1.jpg
+    sources:
+    - WIRED Security
+    labels:
+    - data breach
+    - data protection
+    rationale: Named service with a large-scale exposure of sensitive financial and personal data; not
+      already on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8148deb22c60
+    cluster_key: 000-315-accounts-and-call-collection-creditnirvana-debt-exposed-million-recordings-service
+    coverage:
+    - title: An AI Debt Collection Service Exposed 6.6 Million Accounts and 315,000 Call Recordings
+      url: https://www.wired.com/story/ai-debt-collection-service-exposed-66-million-accounts-and-315000-call-recordings
+      source: WIRED Security
+      published: '2026-11-18T19:00:00+00:00'
+    published: '2026-11-18T19:00:00+00:00'
+  - id: d69fcef2f949
+    rank: 2
+    title: Transport for London Photocard Breach Exposes 265,000 Customers
+    summary: Transport for London said personal details of about 265,000 Oyster photocard customers were
+      accessed after suspicious activity on its photocard website. Compromised fields include names, email
+      and home addresses, phone numbers, dates of birth, and security questions and answers; TfL is investigating.
+    url: https://databreaches.net/2026/11/18/uk-transport-for-london-photocard-breach-exposes-265000-customers
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - government
+    rationale: Confirmed breach at a major public transport authority with a specific victim count and
+      sensitive data fields; not previously published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d69fcef2f949
+    cluster_key: 000-265-breach-customers-exposes-for-london-photocard-transport
+    coverage:
+    - title: 'UK: Transport for London photocard breach exposes 265,000 customers'
+      url: https://databreaches.net/2026/11/18/uk-transport-for-london-photocard-breach-exposes-265000-customers
+      source: DataBreaches.net
+      published: '2026-11-18T21:08:50+00:00'
+    published: '2026-11-18T21:08:50+00:00'
+  - id: 63e1f939ac23
+    rank: 3
+    title: Wellington IT Breach Affects 50 Credit Unions, Including 40 in Ireland
+    summary: New reporting on the Wellington IT incident says sensitive information belonging to members
+      of 50 credit unions, most in Ireland, was exposed. The figure updates earlier reports of 43 Irish
+      credit unions and confirms member data was compromised.
+    url: https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/18/ireland.jpg
+    sources:
+    - BleepingComputer
+    - DataBreaches.net
+    labels:
+    - data breach
+    - investigation
+    rationale: 'Material update to the already-published Irish credit union breach: affected count changed
+      and exposure of sensitive member information was confirmed.'
+    is_update: true
+    supersedes: d458cd532ecd
+    what_changed: Reporting now says 50 credit unions were affected (40 in Ireland), up from the earlier
+      43 Irish credit unions, and states sensitive member information was exposed.
+    cluster: d458cd532ecd
+    cluster_key: affects-breach-credit-including-ireland-unions-wellington
+    coverage:
+    - title: Data breach impacts 40 Irish credit unions in reported IT provider hack
+      url: https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack
+      source: BleepingComputer
+      published: '2026-11-18T19:39:33+00:00'
+    - title: 'IL: Wilmington School District 209U Reports Ransomware Attack And Possible Data Breach'
+      url: https://databreaches.net/2026/11/18/il-wilmington-school-district-209u-reports-ransomware-attack-and-possible-data-breach
+      source: DataBreaches.net
+      published: '2026-11-18T15:24:24+00:00'
+    published: '2026-11-18T19:39:33+00:00'
+  - id: ba2e1b8452af
+    rank: 4
+    title: Northflank Discloses October 30 Security Incident Involving RCE via Unknown API Vulnerability
+    summary: Northflank disclosed that on October 30, 2026, an attacker exploited a previously unknown
+      vulnerability in its API to craft a payload and achieve remote code execution. The company published
+      an incident report on November 17 detailing the intrusion and response.
+    url: https://northflank.com/blog/incident-report-october-30-security-incident
+    image: https://assets.northflank.com/Group_1410119477_3a259eb096.png
+    sources:
+    - Northflank — Deploy any project in seconds, in our cloud or yours.
+    labels:
+    - data breach
+    - cloud security
+    - incident response
+    rationale: Confirmed security incident at a named cloud platform provider involving unauthorized remote
+      code execution; not previously published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ba2e1b8452af
+    cluster_key: api-discloses-incident-involving-northflank-october-rce-security-unknown-via-vulnerability
+    coverage:
+    - title: 'Incident report: October 30 Security Incident | Blog — Northflank'
+      url: https://northflank.com/blog/incident-report-october-30-security-incident
+      source: Northflank — Deploy any project in seconds, in our cloud or yours.
+      published: '2026-11-19T07:04:00.888493+00:00'
+    published: '2026-11-19T07:04:00.888493+00:00'
+  - id: 506ab4c97fa3
+    rank: 5
+    title: Charleston County Investigating Cybersecurity Incident After Data Removed from Systems
+    summary: Charleston County, South Carolina, is investigating a cybersecurity incident detected Monday
+      evening. A county official confirmed data was removed from county systems; the nature and extent
+      of the data is still unknown, and SLED is assisting.
+    url: https://databreaches.net/2026/11/18/sc-sled-charleston-county-investigating-after-cybersecurity-incident-on-county-network
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - government
+    rationale: Named local government entity with confirmed data removal from its systems; not previously
+      published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 506ab4c97fa3
+    cluster_key: after-charleston-county-cybersecurity-data-from-incident-investigating-removed-systems
+    coverage:
+    - title: 'SC: SLED, Charleston County investigating after ‘cybersecurity incident’ on county network'
+      url: https://databreaches.net/2026/11/18/sc-sled-charleston-county-investigating-after-cybersecurity-incident-on-county-network
+      source: DataBreaches.net
+      published: '2026-11-18T15:33:31+00:00'
+    published: '2026-11-18T15:33:31+00:00'
+  fraud_phishing:
+  - id: e3e69c520c98
+    rank: 1
+    title: Phishing Campaign Actively Targets Customers of 300 US Banks
+    summary: A phishing campaign is targeting online banking customers at roughly 300 U.S. financial institutions.
+      The lures are fake bank login pages that show an “account suspended” alert, pushing users to enter
+      their credentials to restore access. The stolen logins are then used to take over accounts.
+    url: https://www.bankinfosecurity.com/phishing-campaign-actively-targets-customers-300-us-banks-a-33282
+    image: https://ismg-cdn.nyc3.cdn.digitaloceanspaces.com/articles/phishing-campaign-actively-targets-customers-200-us-banks-image_large-5-a-33282.jpg
+    sources:
+    - bankinfosecurity.com
+    labels:
+    - phishing
+    - account takeover
+    rationale: Broad active campaign hitting hundreds of US banks with a concrete, recognizable “account
+      suspended” login lure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e3e69c520c98
+    cluster_key: 300-actively-banks-campaign-customers-phishing-targets
+    coverage:
+    - title: Phishing Campaign Actively Targets Customers of 300 US Banks
+      url: https://www.bankinfosecurity.com/phishing-campaign-actively-targets-customers-300-us-banks-a-33282
+      source: bankinfosecurity.com
+      published: '2026-11-19T07:04:00.888493+00:00'
+    published: '2026-11-19T07:04:00.888493+00:00'
+  - id: 586fa38e7aa6
+    rank: 2
+    title: Coinbase Blocks $4.7M in Transfers to Elon Musk Deepfake Scam
+    summary: Coinbase says it blocked $4.7 million in cryptocurrency transfers headed to scammers running
+      a fake Elon Musk giveaway. The scam used an AI-generated deepfake of Musk during a Tesla livestream
+      that drew more than 500,000 viewers, convincing people to send crypto to a wallet in exchange for
+      a promised match or payout.
+    url: https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam
+    image: https://www.bleepstatic.com/content/hl-images/2022/05/22/elon-musk-space-bright.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - AI-generated phishing
+    - cryptocurrency
+    - social engineering
+    rationale: High-visibility deepfake giveaway with a confirmed $4.7 million blocker action, showing
+      a convincing AI-generated social engineering lure reaching a mass audience.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 586fa38e7aa6
+    cluster_key: blocks-coinbase-deepfake-elon-musk-scam-transfers
+    coverage:
+    - title: Coinbase blocks $4.7 million in transfers to Elon Musk deepfake scam
+      url: https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam
+      source: BleepingComputer
+      published: '2026-11-18T20:49:32+00:00'
+    published: '2026-11-18T20:49:32+00:00'
+  - id: 6bfcbddf27dd
+    rank: 3
+    title: Fake FMCSA, DAT, and TIMOCOM Portals Target US Logistics Firms
+    summary: Three campaigns — tracked as HelloFriends, NodeRemote, and Fake Freight Portals — impersonate
+      carrier-verification, broker-onboarding, and load-board platforms such as FMCSA, DAT, and TIMOCOM
+      to attack US trucking and logistics companies. The fake portals mimic routine freight business and
+      are used to steal identities and fuel-card credentials, deploy backdoors, and take remote control
+      of dispatch workstations.
+    url: https://cybersecuritynews.com/fake-fmcsa-dat-timocom-portals-target-us-logistics
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/US_Logistics_3_Campaigns_Banner_1600x900.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - phishing
+    - targeted attacks
+    - malware
+    rationale: Concrete multi-campaign impersonation of legitimate freight and logistics platforms with
+      a clear professional lure and serious credential-theft and backdoor outcomes.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6bfcbddf27dd
+    cluster_key: and-dat-fake-firms-fmcsa-logistics-portals-target-timocom
+    coverage:
+    - title: Fake FMCSA, DAT, and TIMOCOM Portals Attack US Logistics Firms
+      url: https://cybersecuritynews.com/fake-fmcsa-dat-timocom-portals-target-us-logistics
+      source: Cybersecurity News
+      published: '2026-11-18T19:05:56+00:00'
+    published: '2026-11-18T19:05:56+00:00'
+  - id: 0c3c1eaa8de9
+    rank: 4
+    title: Brand-Impersonation Phishing Up 239%, Weaponizing Adobe, SSA, DocuSign, IRS, and Zoom
+    summary: Cofense reports a 239% increase in phishing campaigns that weaponize well-known brand names
+      to deliver malware in the first half of 2026. Adobe, the Social Security Administration, DocuSign,
+      the IRS, and Zoom are among the most abused; the lures mimic routine documents from a recognizable
+      sender to make employees more likely to click and open malware.
+    url: https://cofense.com/blog/betrayed-expectations-malware-delivery-via-common-brands
+    image: https://cofense.com/getContentAsset/28390069-f741-4049-9805-4004b2e9f651/116289b0-4d1b-4ed6-8294-b51f0bb43062/cofense-blog-thumbnail-1204x626.png?language=en
+    sources:
+    - Cofense
+    labels:
+    - phishing
+    - malware
+    - social engineering
+    rationale: Campaign intelligence naming specific abused brands and the routine-document lures that
+      make the phishing realistic.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0c3c1eaa8de9
+    cluster_key: 239-adobe-and-brand-docusign-impersonation-irs-phishing-ssa-weaponizing-zoom
+    coverage:
+    - title: 'Betrayed Expectations: Malware Delivery via Common Brands'
+      url: https://cofense.com/blog/betrayed-expectations-malware-delivery-via-common-brands
+      source: Cofense
+      published: '2026-11-18T06:00:00+00:00'
+    published: '2026-11-18T06:00:00+00:00'
+  policy:
+  - id: 8a35c72d2eee
+    rank: 1
+    title: Ukraine and FBI Arrest Ransomware Gang Members Tied to $40.5M in Ransoms
+    summary: Ukrainian authorities, working with the FBI, arrested four suspected members of an international
+      ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies
+      worldwide. The arrests are a coordinated law enforcement action against a group tied to major ransomware
+      operations.
+    url: https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms
+    image: https://www.bleepstatic.com/content/hl-images/2022/03/15/Ukraine-hacker.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - law enforcement
+    - cybercrime
+    - ransomware
+    rationale: New law enforcement action against ransomware operators, not previously published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8a35c72d2eee
+    cluster_key: and-arrest-fbi-gang-members-ransoms-ransomware-tied-ukraine
+    coverage:
+    - title: Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms
+      url: https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms
+      source: BleepingComputer
+      published: '2026-11-18T23:08:33+00:00'
+    published: '2026-11-18T23:08:33+00:00'
+  - id: 625e549a6711
+    rank: 2
+    title: British Scattered Spider Hacker Sentenced to 6 Years in US
+    summary: British national Tyler Robert Buchanan, a leader of the Scattered Spider cybercrime collective,
+      was sentenced to six years in prison in the United States for stealing millions in cryptocurrency
+      and conspiring to hack a dozen companies. He is the last of five defendants sentenced in the case,
+      according to the DOJ.
+    url: https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-sentenced-to-6-years-in-prison
+    image: https://www.bleepstatic.com/content/posts/2026/11/18/Scattered-Spider-hacker-prison.jpg
+    sources:
+    - BleepingComputer
+    - SecurityWeek
+    labels:
+    - law enforcement
+    - sentencing
+    - cybercrime
+    - cryptocurrency
+    rationale: New sentencing in the Scattered Spider hacking case; first coverage of this sentencing
+      on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 625e549a6711
+    cluster_key: british-hacker-scattered-sentenced-spider-years
+    coverage:
+    - title: British Scattered Spider hacker sentenced to 6 years in prison
+      url: https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-sentenced-to-6-years-in-prison
+      source: BleepingComputer
+      published: '2026-11-18T08:24:18+00:00'
+    - title: Last of Five Defendants Sentenced in US Scattered Spider Hacking Case
+      url: https://www.securityweek.com/last-of-five-defendants-sentenced-in-us-scattered-spider-hacking-case
+      source: SecurityWeek
+      published: '2026-11-18T13:19:32+00:00'
+    published: '2026-11-18T08:24:18+00:00'
+  - id: 971b12051223
+    rank: 3
+    title: Judge Approves Sale of Spirit Airlines' Data to Google for $10 Million
+    summary: A federal bankruptcy judge ruled Google can take possession of defunct Spirit Airlines' data
+      for $10 million, with agreed protections, as the company plans to use the data in AI projects. The
+      ruling is a notable data-protection decision on how consumer data is handled in bankruptcy proceedings.
+    url: https://therecord.media/judge-signs-off-google-purchase-spirit-airlines-data
+    image: http://cms.therecord.media/uploads/spirit_airlines_pexels_ant_armada_5803bb2701.jpg
+    sources:
+    - The Record
+    labels:
+    - data protection
+    rationale: Court ruling approving transfer of airline customer data to Google for AI use; relevant
+      data-protection precedent.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 971b12051223
+    cluster_key: airlines-approves-data-for-google-judge-million-sale-spirit
+    coverage:
+    - title: Judge signs off on sale of Spirit Airlines’ data to Google
+      url: https://therecord.media/judge-signs-off-google-purchase-spirit-airlines-data
+      source: The Record
+      published: '2026-11-18T20:39:00+00:00'
+    published: '2026-11-18T20:39:00+00:00'
+  - id: 3388343cf428
+    rank: 4
+    title: Italian DPA Fines Radiology Centre and IT Provider €28,000 Over Exposed Patient Health Data
+    summary: Italy's data protection authority fined a radiology centre and its IT provider a combined
+      €28,000 for exposing patient health data. The enforcement action underscores GDPR obligations for
+      healthcare providers and their technology suppliers to protect sensitive personal data.
+    url: https://www.edpb.europa.eu/news/italian-dpa-fines-radiology-centre-and-it-provider-a-combined-eur-28-000-for-exposing-patient_en
+    image: https://www.edpb.europa.eu/themes/custom/frontend/src/images/linkedin.svg
+    sources:
+    - European Data Protection Board
+    labels:
+    - data protection
+    - data breach
+    - healthcare
+    rationale: Official GDPR enforcement decision for exposure of patient health data.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3388343cf428
+    cluster_key: 000-and-centre-dpa-exposed-fines-health-italian-over-patient-provider-radiology
+    coverage:
+    - title: Italian DPA fines radiology centre and IT provider a combined EUR 28 000 for exposing patient
+        health data
+      url: https://www.edpb.europa.eu/news/italian-dpa-fines-radiology-centre-and-it-provider-a-combined-eur-28-000-for-exposing-patient_en
+      source: European Data Protection Board
+      published: '2026-11-18T12:53:53+00:00'
+    - title: Italian DPA fines a company EUR 25 500 over employee access rights and corporate email accounts
+      url: https://www.edpb.europa.eu/news/italian-dpa-fines-a-company-eur-25-500-over-employee-access-rights-and-corporate-email_en
+      source: European Data Protection Board
+      published: '2026-11-18T13:07:55+00:00'
+    - title: Italian DPA fines Business School EUR 8 000 for unlawful telemarketing and failure to handle
+        data subject request
+      url: https://www.edpb.europa.eu/news/italian-dpa-fines-business-school-eur-8-000-for-unlawful-telemarketing-and-failure-to-handle_en
+      source: European Data Protection Board
+      published: '2026-11-18T12:28:12+00:00'
+    published: '2026-11-18T12:53:53+00:00'
+  security_tools:
+  - id: 1f9ec68d1a82
+    rank: 1
+    title: 'MISP v2.5.52: Open-Source Threat Intelligence Sharing Platform Update'
+    summary: MISP v2.5.52 is the latest release of the open-source threat intelligence and sharing platform,
+      giving defenders and CTI teams an updated core tool for storing, correlating, and sharing indicators
+      and threat data.
+    url: https://kitploit.com/en/posts/misp-0c71458cf2c6877e
+    image: https://assets.kitploit.com/production/public/tools/354/5e74b78a81204ec61d5607a70aa86f469a28dcca777a8df5c46953a68ec7272e.png
+    sources:
+    - KitPloit
+    labels:
+    - threat intelligence
+    - open source
+    rationale: Concrete release of a widely used open-source threat intelligence platform relevant to
+      security practitioners.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1f9ec68d1a82
+    cluster_key: intelligence-misp-open-platform-sharing-source-threat-update
+    coverage:
+    - title: MISP v2.5.52
+      url: https://kitploit.com/en/posts/misp-0c71458cf2c6877e
+      source: KitPloit
+      published: '2026-11-19T00:24:56+00:00'
+    - title: wazuh v4.14.11-rc2
+      url: https://kitploit.com/en/posts/wazuh-89d421a4e0616816
+      source: KitPloit
+      published: '2026-11-18T15:45:06+00:00'
+    - title: cilium v1.20.5
+      url: https://kitploit.com/en/posts/cilium-c0f3ded2e1dbd78e
+      source: KitPloit
+      published: '2026-11-18T03:42:32+00:00'
+    published: '2026-11-19T00:24:56+00:00'
+  - id: c448359318b6
+    rank: 2
+    title: 'DFIR-Companion v0.46.0: Detection Rules and Release Update'
+    summary: DFIR-Companion has published v0.46.0 along with detection-rule releases through rules-2026.11.16,
+      providing DFIR practitioners with updated detection content for forensic and incident-response work.
+    url: https://github.com/hasamba/DFIR-Companion/releases
+    image: https://opengraph.githubassets.com/4c5bc827d9d0734266276f5436cd3554691970d45d011067692d728f7e6853f4/hasamba/DFIR-Companion
+    sources:
+    - GitHub
+    labels:
+    - DFIR
+    - open source
+    - security tools
+    rationale: A usable DFIR project release page with current detection-rule updates for incident responders.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c448359318b6
+    cluster_key: and-companion-detection-dfir-release-rules-update
+    coverage:
+    - title: Releases · hasamba/DFIR-Companion
+      url: https://github.com/hasamba/DFIR-Companion/releases
+      source: GitHub
+      published: '2026-11-19T07:04:00.888493+00:00'
+    published: '2026-11-19T07:04:00.888493+00:00'
+  - id: 5b85f36d4ecd
+    rank: 3
+    title: 'Aliens_eye v2.11.1: AI-Powered OSINT Identity Mapping Engine'
+    summary: Aliens_eye v2.11.1 is an AI-powered OSINT engine for discovering and mapping more than 7,700
+      social media identities across the web, useful for reconnaissance and open-source intelligence workflows.
+    url: https://kitploit.com/en/posts/aliens_eye-8c9a4820e9b62648
+    image: https://assets.kitploit.com/production/public/tools/57021/48d726dc89a269d9e594f20f4c4ca8f6b8e895ccecccc69198ee998f0af10a88-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - OSINT
+    - recon
+    - open source
+    rationale: New usable OSINT tool release that practitioners can run for identity and exposure research.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5b85f36d4ecd
+    cluster_key: aliens-engine-eye-identity-mapping-osint-powered
+    coverage:
+    - title: Aliens_eye v2.11.1
+      url: https://kitploit.com/en/posts/aliens_eye-8c9a4820e9b62648
+      source: KitPloit
+      published: '2026-11-19T04:27:02+00:00'
+    published: '2026-11-19T04:27:02+00:00'
+  - id: 525960d734ad
+    rank: 4
+    title: 'iottack: Framework for Testing IoT Protocols and Implementations'
+    summary: iottack is a framework for testing common IoT protocols and IoT implementations, giving security
+      researchers and penetration testers a concrete toolkit for assessing embedded and internet-of-things
+      devices.
+    url: https://kitploit.com/en/tools/github/inradii/iottack
+    image: https://assets.kitploit.com/production/public/tools/60497/08a944627423515453844618d6c8558c2ed1c5bed572d2d402889f9e1889cb74-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - embedded
+    - open source
+    - vulnerability research
+    rationale: Open-source IoT testing framework with inspectable code and direct use for security testing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 525960d734ad
+    cluster_key: and-for-framework-implementations-iot-iottack-protocols-testing
+    coverage:
+    - title: iottack
+      url: https://kitploit.com/en/tools/github/inradii/iottack
+      source: KitPloit
+      published: '2026-11-19T03:26:32+00:00'
+    published: '2026-11-19T03:26:32+00:00'
+  - id: 88a8ac13ae95
+    rank: 5
+    title: 'anglerphish: Gophish Fork for Phishing Simulation Campaigns'
+    summary: anglerphish is a feature-rich Gophish fork for managing phishing simulation campaigns, with
+      expanded phishing vectors, improved reporting, and API enhancements intended for authorized security
+      testing and awareness training.
+    url: https://kitploit.com/en/tools/github/geopetro/anglerphish
+    image: https://assets.kitploit.com/production/public/tools/60482/3da42084af09107f0a4423967d1597bdc1c8f99076ea4c3f2531f0374d8c3c1f-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - phishing
+    - red team
+    - open source
+    rationale: A concrete open-source tool for authorized phishing simulations and security-awareness
+      testing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 88a8ac13ae95
+    cluster_key: anglerphish-campaigns-for-fork-gophish-phishing-simulation
+    coverage:
+    - title: anglerphish
+      url: https://kitploit.com/en/tools/github/geopetro/anglerphish
+      source: KitPloit
+      published: '2026-11-19T02:25:48+00:00'
+    published: '2026-11-19T02:25:48+00:00'
+  - id: 8985e7694bc0
+    rank: 6
+    title: 'pass-the-device: Testing VPN and SASE Device Trust Transplant Attacks'
+    summary: pass-the-device provides reconnaissance tools plus Sigma and KQL detections for testing whether
+      VPN or SASE device trust can be transplanted after an endpoint compromise, with accompanying conference
+      slides.
+    url: https://kitploit.com/en/tools/github/crypt0p3g/pass-the-device
+    image: https://assets.kitploit.com/production/public/tools/60494/548c7b21d813cf43d239fa14aec08b218a5c01e70e4b77e970224b57446afc9d-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - authentication
+    - recon
+    - open source
+    rationale: Open-source red-team and detection-content package for a specific, current enterprise access-control
+      test case.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8985e7694bc0
+    cluster_key: and-attacks-device-device-pass-sase-testing-the-transplant-trust-vpn
+    coverage:
+    - title: pass-the-device
+      url: https://kitploit.com/en/tools/github/crypt0p3g/pass-the-device
+      source: KitPloit
+      published: '2026-11-18T23:24:27+00:00'
+    published: '2026-11-18T23:24:27+00:00'
+  supply_chain:
+  - id: 0bf2a72c0a63
+    rank: 1
+    title: Canonical Ships AI-Written Ubuntu Security Patches Before Human Review via Opt-In Edge Archive
+    summary: 'Canonical now lets Ubuntu Pro customers install security patches written by AI agents before
+      its own engineers have finished reviewing and testing them. The patches are produced by Surge, Canonical''s
+      system for fixing known vulnerabilities in Ubuntu userspace packages (everything outside the kernel),
+      and are distributed through a new opt-in channel called the Edge archive. Ubuntu Pro administrators
+      should check whether the Edge archive is enabled on production systems: if it is switched off, update
+      behaviour is unchanged, but if it is on, unreviewed machine-generated code can land on hosts through
+      the normal update path. This is a supply-chain integrity question about what enters the package
+      update pipeline, not a vulnerability in Ubuntu itself.'
+    url: https://www.helpnetsecurity.com/2026/11/18/ubuntu-ai-security-patches-edge-archive
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/09/11060336/ubuntu-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - supply-chain
+    - security update
+    - open source
+    rationale: Distribution of unreviewed AI-generated patches through an official update channel is a
+      concrete software-supply-chain concern with a clear check (is Edge archive enabled) for Ubuntu Pro
+      users.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0bf2a72c0a63
+    cluster_key: before-canonical-edge-human-opt-patches-review-security-ships-ubuntu-via-written
+    coverage:
+    - title: Ubuntu AI security patches are here, if you’re willing to test them yourself
+      url: https://www.helpnetsecurity.com/2026/11/18/ubuntu-ai-security-patches-edge-archive
+      source: Help Net Security
+      published: '2026-11-18T08:47:50+00:00'
+    published: '2026-11-18T08:47:50+00:00'
+  - id: bcf0f8ae7658
+    rank: 2
+    title: MITRE Admits 87% of Recent CVE Records Carry Bogus Midnight-UTC Timestamps
+    summary: 'MITRE has acknowledged that a legacy publishing system produced inaccurate timestamps in
+      thousands of CVE records, after researcher Jerry Gamblin showed that 87% of CVEs published over
+      the past year were stamped with exactly midnight UTC. MITRE says the legacy system will be phased
+      out in the first quarter of 2027. The defect matters to anyone whose vulnerability-management or
+      CI pipeline ingests CVE metadata: publication timestamps are widely used to compute patch SLAs,
+      ''new CVE'' feeds and urgency scoring, so teams consuming the records should not treat CVE publication
+      time as authoritative and should cross-check against vendor advisories or KEV dates when timing
+      decisions depend on it.'
+    url: https://socket.dev/blog/mitre-cve-timestamp-issues
+    image: https://cdn.sanity.io/images/cgdhsj6q/production/66934eebddbae5b3b512d567a18fde74f1128a89-1672x941.png?w=1000&q=95&fit=max&auto=format
+    sources:
+    - Socket Threat Intel
+    labels:
+    - vulnerability
+    - advisory
+    - open source
+    rationale: Data-integrity problem in the CVE feed that downstream scanners and CI pipelines depend
+      on; included because the supply-chain candidate pool was otherwise dominated by already-published
+      or non-supply-chain items.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bcf0f8ae7658
+    cluster_key: admits-bogus-carry-cve-midnight-mitre-recent-records-timestamps-utc
+    coverage:
+    - title: MITRE Acknowledges Inaccurate Publication Timestamps in 87% of Its Recent CVE Records
+      url: https://socket.dev/blog/mitre-cve-timestamp-issues
+      source: Socket Threat Intel
+      published: '2026-11-18T19:38:28+00:00'
+    published: '2026-11-18T19:38:28+00:00'
+  - id: dc47ae158263
+    rank: 3
+    title: Hackers Found a Way Around GitHub SHA Pinning
+    summary: Researchers disclosed that attackers can bypass SHA pinning in GitHub Actions, a common defense
+      against supply-chain attacks. The technique was demonstrated in the Trivy hijack, where malicious
+      code was planted to look like it originated from GitHub's official checkout tool. This undermines
+      the integrity of CI/CD pipelines that rely solely on SHA pinning. Organizations should review their
+      action pinning strategies, add additional verification, and audit active workflows.
+    url: https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYUhfLA6wixTr6AiVmOSa8uxO2mHxPqG7rHalDaUtYlOaTwUSIzi3JAP78cfEUhwwaoijNe8vJ0ZFiBqDmfrG9LVOzItxMxCYcTCbEc4f7W8iWgKSvzR6DrT0XtK_cM4eTKQ2Edvz-QG5P8iXF_GV_-k6CXMN_-D_QAJags-LpeuXmJ5C6DDz7mDRSBMY/s1600/git-actions.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - supply chain
+    - ci-cd
+    - github
+    rationale: High-impact CI/CD supply-chain risk affecting the standard mitigation for GitHub Actions,
+      with a known real-world example.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: dc47ae158263
+    cluster_key: around-found-github-hackers-pinning-sha-way
+    coverage:
+    - title: Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap
+      url: https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html
+      source: The Hacker News
+      published: '2026-11-17T12:25:06+00:00'
+    published: '2026-11-17T12:25:06+00:00'
+    is_carryover: true
+  threats:
+  - id: 64c6d10c15da
+    rank: 1
+    title: AuditTeam Ransomware Poses as Security Auditors, Uses OpsAgent and AV Drivers
+    summary: Kaspersky's Securelist documents AuditTeam, an active ransomware group that has compromised
+      organizations in at least seven countries since January 2026 using the OpsAgent framework. Victims
+      receive a ransom note demanding an 'Audit & Consulting fee' in exchange for a vulnerability report,
+      after the group kills security tools with a signed antivirus driver and encrypts files.
+    url: https://securelist.com/auditteam-opsagent-forced-audit/122031
+    image: https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2026/11/17122553/audit-team-feature.jpg
+    sources:
+    - Securelist
+    - Cybersecurity News
+    labels:
+    - ransomware
+    - malware
+    - cybercrime
+    rationale: New ransomware group with novel extortion framing and technical TTPs, active across multiple
+      countries.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 64c6d10c15da
+    cluster_key: and-auditors-auditteam-drivers-opsagent-poses-ransomware-security-uses
+    coverage:
+    - title: 'The forced audit: how AuditTeam’s OpsAgent framework masks ransomware as consulting'
+      url: https://securelist.com/auditteam-opsagent-forced-audit/122031
+      source: Securelist
+      published: '2026-11-18T07:00:07+00:00'
+    - title: AuditTeam Ransomware Gang Poses as Security Auditors and Use AV Drivers to Kill EDR Process
+      url: https://cybersecuritynews.com/auditteam-ransomware-gang
+      source: Cybersecurity News
+      published: '2026-11-19T05:20:54+00:00'
+    published: '2026-11-18T07:00:07+00:00'
+  - id: f99561096cc9
+    rank: 2
+    title: GhostMap eBPF Rootkit Hides IronWorm Malware From Linux Defenders
+    summary: Attackers are deploying a Linux rootkit called GhostMap to conceal IronWorm malware, making
+      selected processes, files, and network sockets disappear from routine administrative listings. In
+      testing, a malware listener vanished from /proc/net/tcp while remaining visible via ss, showing
+      how the rootkit can evade common inspection tools.
+    url: https://cybersecuritynews.com/hackers-use-ghostmap-ebpf-rootkit
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Hackers-Use-GhostMap-eBPF-Rootkit-to-Hide-IronWorm-Malware-From-Linux-Security-Tools.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - malware
+    - eBPF
+    - Linux kernel
+    rationale: New eBPF rootkit technique actively used to hide malware from Linux security tools.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f99561096cc9
+    cluster_key: defenders-ebpf-from-ghostmap-hides-ironworm-linux-malware-rootkit
+    coverage:
+    - title: Hackers Use GhostMap eBPF Rootkit to Hide IronWorm Malware From Linux Security Tools
+      url: https://cybersecuritynews.com/hackers-use-ghostmap-ebpf-rootkit
+      source: Cybersecurity News
+      published: '2026-11-18T18:11:43+00:00'
+    published: '2026-11-18T18:11:43+00:00'
+  - id: 00bdce82487d
+    rank: 3
+    title: Evooo1Bot Botnet Reinstalls Itself via Hidden Cron Jobs on Routers and Firewalls
+    summary: A Mirai-derived Linux botnet called Evooo1Bot is hiding in cron jobs on internet-facing firewalls,
+      routers, switches, IP cameras, phone systems, and storage devices. If defenders kill the malware
+      and delete its file, a hidden cron job redownloads it within five minutes, making cleanup difficult
+      without removing the scheduled task.
+    url: https://cybersecuritynews.com/hackers-use-hidden-cron-jobs
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Hackers-Use-Hidden-Cron-Jobs-to-Reinstall-Malware-on-Firewalls-and-Routers-Every-5-Minutes.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - botnet
+    - malware
+    rationale: Active Mirai-derived botnet with persistent cron-based reinstallation on network devices;
+      practical cleanup implications.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 00bdce82487d
+    cluster_key: and-botnet-cron-evooo1bot-firewalls-hidden-itself-jobs-reinstalls-routers-via
+    coverage:
+    - title: Hackers Use Hidden Cron Jobs to Reinstall Malware on Firewalls and Routers Every 5 Minutes
+      url: https://cybersecuritynews.com/hackers-use-hidden-cron-jobs
+      source: Cybersecurity News
+      published: '2026-11-18T18:01:24+00:00'
+    published: '2026-11-18T18:01:24+00:00'
+  - id: 54fbd5b6248a
+    rank: 4
+    title: Attackers Abuse CyberPower UPS Software to Dump Active Directory Data
+    summary: Symantec reports attackers exploited CyberPower PowerPanel Business software to gain SYSTEM-level
+      access to a Windows domain controller, using a built-in scripting feature to copy the Active Directory
+      database and install persistence malware. No data exfiltration or ransomware was observed, but the
+      technique shows UPS management software being abused for AD harvesting.
+    url: https://cybersecuritynews.com/hackers-abuse-cyberpower-ups-software
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Hackers-Abuse-CyberPower-UPS-Software-to-Execute-SYSTEM-Commands-and-Dump-Active-Directory-Data.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - malware
+    - privilege escalation
+    - targeted attacks
+    rationale: Active intrusion technique abusing UPS management software for SYSTEM access and Active
+      Directory database theft.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 54fbd5b6248a
+    cluster_key: abuse-active-attackers-cyberpower-data-directory-dump-software-ups
+    coverage:
+    - title: Hackers Abuse CyberPower UPS Software to Execute SYSTEM Commands and Dump Active Directory
+        Data
+      url: https://cybersecuritynews.com/hackers-abuse-cyberpower-ups-software
+      source: Cybersecurity News
+      published: '2026-11-19T04:10:46+00:00'
+    published: '2026-11-19T04:10:46+00:00'
+  - id: b87ce4cd671b
+    rank: 5
+    title: EggStreme Malware Rebuilt to Evade Detection in Attacks on Philippine Government
+    summary: Bitdefender reports the suspected Chinese APT behind EggStreme has rebuilt its malware and
+      infrastructure after the toolkit was exposed, and is continuing to target government organizations
+      in the Philippines. The new variant operates more quietly to avoid security tooling, with attackers
+      rotating hashes, domains, and techniques.
+    url: https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYLKVaRRp02L2STeR4kakGeA1NJokTtxw2aLU4wBLS34vltviR8gV4eUjk0QJ9jDVbiS_2hSeDQCwIR_JoCzPzUt-FSNUNpaKNtHpKiMugkRAMwOIbl4FbcL5iE7KCe1hebNbJRTxqO5xQkEFBuDI6F8FnsnYfreljrQlHHXuKBEN0suJZeuIf8heda5wY/s1600/chinese.jpg
+    sources:
+    - The Hacker News
+    - Infosecurity Magazine
+    labels:
+    - espionage
+    - malware
+    - targeted attacks
+    rationale: Nation-state APT rebuilt its malware after exposure and continues targeting government
+      organizations; active espionage.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b87ce4cd671b
+    cluster_key: attacks-detection-eggstreme-evade-government-malware-philippine-rebuilt
+    coverage:
+    - title: New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks
+      url: https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html
+      source: The Hacker News
+      published: '2026-11-18T14:11:28+00:00'
+    - title: Suspected Chinese APT Rebuilds EggStreme Malware After Exposure
+      url: https://www.infosecurity-magazine.com/news/eggstreme-malware-rebuilt-after
+      source: Infosecurity Magazine
+      published: '2026-11-18T14:00:00+00:00'
+    published: '2026-11-18T14:11:28+00:00'
+  - id: b94438bc5f5c
+    rank: 6
+    title: Talos Tracks North Korea-Aligned UAT-12643 Using Overlord RAT and Infostealers
+    summary: Cisco Talos identified UAT-12643, a financially motivated actor likely aligned with North
+      Korea, using a Go-based Overlord RAT, a Python infostealer called 'Good Game,' and a multi-cryptocurrency
+      clipboard hijacker. The campaign appears to target cryptocurrency holders, gaming platform account
+      owners, and VoIP software users, with infrastructure blending blockchain-resilient C2.
+    url: https://blog.talosintelligence.com/uat-12643-suspected-north-korea-aligned-actor-blends-blockchain-resilience-with-targeted-infostealing
+    image: https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/content/images/2026/11/threat_spotlight.jpg
+    sources:
+    - Cisco Talos
+    labels:
+    - North Korea
+    - malware
+    - cryptocurrency
+    - targeted attacks
+    rationale: New North Korea-aligned financially motivated campaign with a distinct payload set; active
+      threat to crypto, gaming, and VoIP users.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b94438bc5f5c
+    cluster_key: 12643-aligned-and-infostealers-korea-north-overlord-rat-talos-tracks-uat-using
+    coverage:
+    - title: 'UAT-12643: Suspected North Korea-aligned actor blends blockchain resilience with targeted
+        infostealing'
+      url: https://blog.talosintelligence.com/uat-12643-suspected-north-korea-aligned-actor-blends-blockchain-resilience-with-targeted-infostealing
+      source: Cisco Talos
+      published: '2026-11-18T11:00:00+00:00'
+    published: '2026-11-18T11:00:00+00:00'
+  vulnerabilities:
+  - id: 27838aa0c0cc
+    rank: 1
+    title: Java4Shell Exploit Attempts Observed as CISA Urges Patching of OpenJDK Flaw (CVE-2026-114938)
+    summary: Cloudflare's Cloudforce One observed a Java4Shell exploit attempt disguised as Chrome traffic,
+      and separately linked infrastructure also associated with ARTEX. The critical OpenJDK Base64 decoder
+      memory-corruption flaw (CVE-2026-114938) can allow unauthenticated RCE on x86-64 systems with AVX-512
+      VBMI and affects widely used Java apps such as Jira, Jenkins, and Keycloak. Oracle and the OpenJDK
+      project released fixes, and CISA strongly urges immediate patching.
+    url: https://cybersecuritynews.com/java4shell-rce-flaw-exploited
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Java4Shell-RCE-Flaw-Exploited.webp
+    sources:
+    - Cybersecurity News
+    - Dark Reading
+    - Infosecurity Magazine
+    - The Hacker News
+    - Malwarebytes
+    - Help Net Security
+    - Cisco Talos
+    labels:
+    - CVE-2026-114938
+    - remote code execution
+    - CISA
+    - vulnerability
+    - security update
+    rationale: Critical OpenJDK flaw with CISA urgency and new observations of real-world exploit attempts;
+      affects widely deployed Java applications.
+    is_update: true
+    supersedes: bdbe65cecbac
+    what_changed: Cloudflare observed a Java4Shell exploit attempt disguised as Chrome and tied some related
+      traffic to ARTEX, adding real-world exploitation observations beyond the initial patch advisory.
+    cluster: bdbe65cecbac
+    cluster_key: 114938-2026-attempts-cisa-cve-exploit-flaw-java4shell-observed-openjdk-patching-urges
+    coverage:
+    - title: Hackers Exploiting Java4Shell RCE Flaw Using ARTEX Disguise Themselves as Chrome
+      url: https://cybersecuritynews.com/java4shell-rce-flaw-exploited
+      source: Cybersecurity News
+      published: '2026-11-19T03:18:37+00:00'
+    - title: Java4Shell Flaw Threatens Global Enterprises, Java Application Ecosystem
+      url: https://www.darkreading.com/vulnerabilities-threats/java4shell-flaw-threatens-global-java-application-ecosystem
+      source: Dark Reading
+      published: '2026-11-18T16:54:52+00:00'
+    - title: Java4Shell Vulnerability Allows Remote Attacks on Major Java Apps
+      url: https://www.infosecurity-magazine.com/news/java4shell-vulnerability-remote
+      source: Infosecurity Magazine
+      published: '2026-11-18T12:35:00+00:00'
+    - title: Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More
+      url: https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html
+      source: The Hacker News
+      published: '2026-11-18T11:55:49+00:00'
+    - title: 'Java4Shell: A critical flaw with a narrow reach'
+      url: https://www.malwarebytes.com/blog/bugs/2026/11/java4shell-a-critical-flaw-with-a-narrow-reach
+      source: Malwarebytes
+      published: '2026-11-18T11:41:07+00:00'
+    - title: 'Java4Shell OpenJDK flaw: Exploitation is tricky and hinges on specific CPUs (CVE-2026-114938)'
+      url: https://www.helpnetsecurity.com/2026/11/18/java4shell-openjdk-vulnerability-cve-2026-114938
+      source: Help Net Security
+      published: '2026-11-18T11:12:12+00:00'
+    - title: CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution
+      url: https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html
+      source: The Hacker News
+      published: '2026-11-18T08:24:23+00:00'
+    - title: 'CVE-2026-114938: Critical vulnerability in OpenJDK Java'
+      url: https://blog.talosintelligence.com/java4shell
+      source: Cisco Talos
+      published: '2026-11-18T01:53:03+00:00'
+    - title: F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE
+      url: https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html
+      source: The Hacker News
+      published: '2026-11-18T18:15:39+00:00'
+    published: '2026-11-19T03:18:37+00:00'
+  - id: 36f157d95908
+    rank: 2
+    title: Critical NGINX HTTP/2 RCE CVE-2026-123007 Patched After 10 Years
+    summary: Researchers disclosed five critical NGINX vulnerabilities, including CVE-2026-123007 ("nginx2root"),
+      a decade-old HTTP/2 integer underflow that can let an unauthenticated attacker execute code on servers
+      with HTTP/2 enabled. The flaw has been present since NGINX 1.9.5 (2015). F5 released fixed versions
+      1.31.9 and 1.30.7; administrators should update immediately.
+    url: https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed
+    image: https://images.contentstack.io/v3/assets/blte4f029e766e6b253/bltcbf09ec3af35e28e/6a15c63f08221ed5144dbf77/webinar-rapid7-logo.jpg
+    sources:
+    - Rapid7
+    - CyberScoop
+    - The Hacker News
+    - Infosecurity Magazine
+    - Cybersecurity News
+    - SecurityWeek
+    - BigGo Finance
+    labels:
+    - CVE-2026-123007
+    - remote code execution
+    - vulnerability
+    - security update
+    rationale: NGINX serves a large share of the web; critical unauthenticated RCE with patches now available.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 36f157d95908
+    cluster_key: 123007-2026-after-critical-cve-http-nginx-patched-rce-years
+    coverage:
+    - title: 'CVE-2026-123007: Critical NGINX HTTP/2 Integer Underflow Leads to RCE (FIXED)'
+      url: https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed
+      source: Rapid7
+      published: '2026-11-18T13:56:42+00:00'
+    - title: It’s NGINX’s turn to cause vulnpocalypse headaches
+      url: https://cyberscoop.com/nginx-critical-vulnerabilities-exploits
+      source: CyberScoop
+      published: '2026-11-18T18:54:12+00:00'
+    - title: 10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers
+      url: https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html
+      source: The Hacker News
+      published: '2026-11-18T18:31:17+00:00'
+    - title: Five Critical Vulnerabilities Found in World's Most Widely Used Open-Source Web Server
+      url: https://www.infosecurity-magazine.com/news/five-critical-vulnerabilities
+      source: Infosecurity Magazine
+      published: '2026-11-18T16:55:00+00:00'
+    - title: WordPress 7.1.5 Patches 20 Security Issues, Including Potential RCE and SQL Injection Flaws
+      url: https://cybersecuritynews.com/wordpress-7-1-5-patches-20-security-issues
+      source: Cybersecurity News
+      published: '2026-11-19T02:16:02+00:00'
+    - title: Chrome 158 Patches 204 Vulnerabilities
+      url: https://www.securityweek.com/chrome-158-patches-204-vulnerabilities
+      source: SecurityWeek
+      published: '2026-11-18T11:43:22+00:00'
+    - title: Oracle Patches 950 Vulnerabilities With November 2026 CSPU
+      url: https://www.securityweek.com/oracle-patches-640-vulnerabilities-with-november-2026-cspu
+      source: SecurityWeek
+      published: '2026-11-18T08:47:18+00:00'
+    - title: 'Vulnerability Hidden in nginx for 11 Years: AI Finds 4 Flaws in 90 Minutes, Patched Versions
+        Released, Urgent Updates Needed'
+      url: https://news.google.com/rss/articles/CBMidkFVX3lxTE9DS01CV1lubmFPX1BtZXNGMGw4UURxaE5mQ19TQkZQenpQNWpQRWE5a00wSjU5Q2ppYUZ2TWpLQl9qMnA2RjJHNWYxSTU1Vk9sLUIzNXdBWmlPTjBwTHE5aWRublBFeEdOYnpZamttMzV0cmJzSnc
+      source: BigGo Finance
+      published: '2026-11-19T00:57:00+00:00'
+    published: '2026-11-18T13:56:42+00:00'
+  - id: 9b32f6d75ffd
+    rank: 3
+    title: PHP Warns of Critical Security Flaws Across All Supported Versions, Releases Coming November
+      19
+    summary: The PHP security team announced that security releases on November 19, 2026 will address
+      vulnerabilities affecting all supported PHP branches, with the highest severity rated critical.
+      The issues reportedly require non-default settings in some cases. Users should prepare to install
+      the updates as soon as they are available.
+    url: https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj86YA0ZvPrdlouN6GvSZ5P_I5HCaYLm2PBs_JA74wUDgHl8anwcqEN5_Z0kTlAggf0906enJmrtUnN_6jn9kqD8KguG8nOeh1yGS6AAPo1-JHORLQ5nZcpmS5Ss7liuqghFsq8Bb4ooabK29UcCbZlwWGM6HtyRPs4Ty5zv5d4FC5So6tVFUOaEhUylIFU/s1600/php-flaws.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - security update
+    - vulnerability
+    rationale: Critical flaws in a widely used language runtime with an imminent coordinated security
+      release.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9b32f6d75ffd
+    cluster_key: across-all-coming-critical-flaws-november-php-releases-security-supported-versions-warns
+    coverage:
+    - title: PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November
+        19
+      url: https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html
+      source: The Hacker News
+      published: '2026-11-19T04:33:46+00:00'
+    - title: PHP Security Team Warns of Critical Vulnerabilities, Urges Users to Prepare for November
+        19 Updates
+      url: https://cybersecuritynews.com/php-critical-vulnerabilities
+      source: Cybersecurity News
+      published: '2026-11-19T01:49:53+00:00'
+    published: '2026-11-19T04:33:46+00:00'
