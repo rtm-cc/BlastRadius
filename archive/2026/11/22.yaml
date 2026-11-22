@@ -1,0 +1,1040 @@
+date: '2026-11-22'
+updated_at: '2026-11-22T07:07:07+00:00'
+topics:
+  ai_security:
+  - id: 6c5b97dfac9f
+    rank: 1
+    title: Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access
+    summary: Amazon Threat Intelligence says suspected China-linked hackers used autonomous Cairn AI agents
+      to discover and exploit a previously unknown vulnerability in MONAI Label, an open-source medical
+      imaging server, and gain root access to a university server. The flaw lets an unauthenticated attacker
+      write files outside the server's storage folder and affects MONAI Label 0.8.5 and earlier in the
+      default setup.
+    url: https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEIG6Wgi3wGQXrsdGKEf4ORPFjHVGpRkoSUPraOJfKhGmB0vYFojLq2mCuOP3a71_XpNZusvn45ZDa1J3a7eQ0WE3XJY0FGunHVWB1yHBluJT5vSDCmzkhaFGiHjeKbnoah6noyZ3mNInS-mjJK1Gfcf7jT3A60ZYR_eknSgt_sEa6MNGM-DA5-aLXMbZ5/s1600/medical-ai.jpg
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    - Security Affairs
+    - OECD AI Policy Observatory
+    - bloomingbit
+    - Cryptonews.net
+    - KuCoin
+    labels:
+    - autonomous exploitation
+    - AI security research
+    - remote code execution
+    - zero-day
+    rationale: 'Material update to the already-published Cairn AI zero-day story, adding root-cause and
+      scope details: MONAI Label 0.8.5 and earlier, unauthenticated file write outside the storage folder,
+      and confirmed root access on a university server.'
+    is_update: true
+    supersedes: 9eebeb309d1e
+    what_changed: 'Adds technical root-cause and impact details: the zero-day is in MONAI Label, is exploitable
+      without an account, allows writing files outside the storage folder, affects MONAI Label 0.8.5 and
+      earlier, and was used to gain root access on a university server.'
+    cluster: 9eebeb309d1e
+    cluster_key: access-agents-and-attackers-day-found-gained-imaging-medical-root-software-zero
+    coverage:
+    - title: Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access
+      url: https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html
+      source: The Hacker News
+      published: '2026-11-21T11:03:17+00:00'
+    - title: 'Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day'
+      url: https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day
+      source: SecurityWeek
+      published: '2026-11-21T12:08:50+00:00'
+    - title: 'Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day'
+      url: https://news.google.com/rss/articles/CBMipgFBVV95cUxNS0RzYnRJVzA5MjhlSWJfODFMNDRMdDl3Zk81UkxlbklPbE8tQ2xMYWdzSElBdlF6eTJaeWRSdm9aa3JkYU5xbUZIUjUtc3VxZzlYUXhCOWplcHBDb1AzcEMzWXd1eTdndHdIVWlrUnVSMExWQnZaakd4Y3JYRkFZeE9POGNKTE5tRlhwTTJnWUs4QVBjM1l6OFpaYmVqNVZWa0ZIUU5R
+      source: SecurityWeek
+      published: '2026-11-21T12:08:50+00:00'
+    - title: Cairn AI Framework Used in Autonomous Zero-Day Exploitation
+      url: https://news.google.com/rss/articles/CBMipAFBVV95cUxQU2FxalZIcWszNGNUOFJQLU9qWjlQVVZfRmR2MW9RY0VlNW5RS09PYXAzYlRvNUNfSFhOMUlMZzRRQ1ZHTjVlRmJ4eGdrbjN3dUxGSTVaNTdCWFB3X2taSE5xRTZRdTJfXy1hQkszbzdVbDhLYUNZRTZwdXNDcUR6SGNZd2o5MnB3ZFRrT1BOVnNIYVVteEpuOTJKYUpPbzRtNmhRTtIBqgFBVV95cUxPT1VkdmVCQ0dmTTFsaUpvc2Z6STFwRDRRci1QeWlVbWFONnQwWGpaOVJZMlRCc1Y5c0ZYcTlqb0lNSkxSTHlsdW01WTZ6QWlTOVRlNTU0VUZPWmRaVldkLUthU041dDBrUVJwTlFsdlJRYmpNLWVTVUtIZUFVbDFueFdCeHpVV0NFVFlLQXlZejh0bzVpMFlEUkE5ZlBfd2FtT2pZNXZxSjJzdw
+      source: Security Affairs
+      published: '2026-11-21T17:43:04+00:00'
+    - title: Chinese Hackers Use Cairn AI Agents to Exploit Zero-Day Vulnerability in East Asian Universities
+      url: https://news.google.com/rss/articles/CBMiV0FVX3lxTE9zT0pDQWplbHp0Y1Rnc1dVMlk3TTBiYVhZSVRrakNEcUtzbEFLZnlNSDBBcktUM3VTX0FBU0FXWVFuWjFfaUg1bTNtaXNWY1ZnZTZUT1pFMA
+      source: OECD AI Policy Observatory
+      published: '2026-11-21T08:13:04+00:00'
+    - title: Bitcoin Core Fixes AI-Discovered Flaw That Could Stall Node Processing
+      url: https://news.google.com/rss/articles/CBMiVEFVX3lxTE5zR25malpQWWpJT3M4dWpVeHNEMWJGLWhkbFJXWURLT2FicEpwZG1GVU5Ibjc1WWNHOFVfbXVtZWNVNVk0Skl6NEJnc3pMbjFNYUctdQ
+      source: bloomingbit
+      published: '2026-11-22T01:00:12+00:00'
+    - title: AI Finds Bitcoin Core Security Flaw That Could Temporarily Freeze Nodes
+      url: https://news.google.com/rss/articles/CBMiWkFVX3lxTE9sLTQ3UjJmdjZESVpTc2ZweWp4c18tNTI4eGRKS0ROa3AzYlVEZTl1UTNlZjNOYUlQdUFacmNUemc3TjBoeFVIdkNCZFc5cnlsSWRpTDBwcVJEUQ
+      source: Cryptonews.net
+      published: '2026-11-22T01:02:42+00:00'
+    - title: Bitcoin Core patches AI-discovered vulnerability that could temporarily halt node operations
+      url: https://news.google.com/rss/articles/CBMixAFBVV95cUxQRFNVLWcwZ2dLUnJEdUJIREhuWUV1UU81NFhOSnlhYzFVQ0hRVjIxOXVDanM2Z1NTdE5NN0hNMVdDa0doU09WbFRDajd3aXc1aVlMZjU4MV93MkFNQmlyV2kxR0JHanJiZko0YUVIY1g1djJpVWhkTWc2V3c0VXBoRGZwemJQNW1FOENQeGI5Wm9aclhpVlhKLUZUN3FZM3pGSU5BMWxvdzhSeFNCZnlpN2E1bjhIWXNoREpHellpWlp2Q1dL
+      source: KuCoin
+      published: '2026-11-21T07:36:45+00:00'
+    published: '2026-11-21T11:03:17+00:00'
+  - id: a5f1aeac8c5f
+    rank: 2
+    title: Claude reportedly developed a remote-root exploit for a Linux TCP flaw
+    summary: Reports say Anthropic's Claude produced a working remote-root exploit for a Linux TCP vulnerability,
+      a concrete demonstration of AI models generating high-impact kernel exploits. The initial coverage
+      did not provide further technical details on the flaw or disclosure timeline.
+    url: https://news.google.com/rss/articles/CBMiQkFVX3lxTFAwT2FmaFo1UXdUWXc1ZC11Y05LUUNOSk5ZWU1ZdGpzdTltR0szbXZ2Y1F5dFRUVERIMlV5TjRaYVZ6QQ
+    image: ''
+    sources:
+    - Digg
+    labels:
+    - AI security research
+    - remote code execution
+    - vulnerability research
+    rationale: Concrete report of an AI model developing a remote-root exploit for a real Linux TCP flaw,
+      matching the AI security research theme.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: a5f1aeac8c5f
+    cluster_key: claude-developed-exploit-flaw-for-linux-remote-reportedly-root-tcp
+    coverage:
+    - title: Claude reportedly developed a remote-root exploit for a Linux TCP flaw
+      url: https://news.google.com/rss/articles/CBMiQkFVX3lxTFAwT2FmaFo1UXdUWXc1ZC11Y05LUUNOSk5ZWU1ZdGpzdTltR0szbXZ2Y1F5dFRUVERIMlV5TjRaYVZ6QQ
+      source: Digg
+      published: '2026-11-21T21:34:18+00:00'
+    published: '2026-11-21T21:34:18+00:00'
+  - id: 8160444c13b1
+    rank: 3
+    title: A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats
+    summary: Researchers showed that a malicious webpage could extract private conversations and stored
+      memories from Meta Muse, Meta's AI assistant, without triggering any approval prompt. The same attack
+      could be extended to reach credentials Muse stores for connected accounts; it was a laboratory demonstration,
+      not an attack on real users.
+    url: https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYiVrbfn3FWfI_uNyjj8q9SZ38d2mHKu2ehdtYYKPwyg-05yKJBYUAPEaVxJq5KDGwU11X2tmEKNUKPIHQY9s67e1K9w_8NRdEOxVCDJqqMbQ6F27kfOj3GKjcQ3-0WHFNg7uYT6QeIU90qX1YW_Zvyn7WhZwpV41i5Pj6watQsF7Ti8NN1GIQLxw-jPc/s1600/muse-ai.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - AI assistant
+    - data exfiltration
+    - vulnerability research
+    rationale: Vulnerability in an AI assistant that allows silent extraction of private chats and connected-account
+      credentials, directly relevant to AI assistant data leakage.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8160444c13b1
+    cluster_key: access-and-chats-hijack-let-malicious-meta-muse-private-researchers-single-webpage
+    coverage:
+    - title: A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats
+      url: https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html
+      source: The Hacker News
+      published: '2026-11-21T11:53:07+00:00'
+    published: '2026-11-21T11:53:07+00:00'
+  breaches:
+  - id: 8f8012681d0f
+    rank: 1
+    title: FBI Investigating Apparent Hack of National Crime Information Center Database
+    summary: The FBI is investigating an apparent intrusion into its National Crime Information Center
+      (NCIC), the nationwide database used by local, state, and federal law enforcement, according to
+      AP sources. It would mark the second hack of FBI systems in two months. The scope and data affected
+      have not been disclosed as the investigation continues.
+    url: https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says
+    image: https://www.securityweek.com/wp-content/uploads/2024/04/FBI-Surveillance.jpg
+    sources:
+    - SecurityWeek
+    - BleepingComputer
+    - DataBreaches.net
+    labels:
+    - data breach
+    - law enforcement
+    - government
+    rationale: Confirmed security incident at a critical national law enforcement database; high sensitivity
+      and public interest.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8f8012681d0f
+    cluster_key: apparent-center-crime-database-fbi-hack-information-investigating-national
+    coverage:
+    - title: FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source
+        Says
+      url: https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says
+      source: SecurityWeek
+      published: '2026-11-22T00:53:02+00:00'
+    - title: FBI reportedly hacked again, this time targeting nationwide police database
+      url: https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database
+      source: BleepingComputer
+      published: '2026-11-21T14:26:04+00:00'
+    - title: FBI hacked again; criminal information database targeted
+      url: https://databreaches.net/2026/11/21/fbi-hacked-again-criminal-information-database-targeted
+      source: DataBreaches.net
+      published: '2026-11-21T12:37:22+00:00'
+    published: '2026-11-22T00:53:02+00:00'
+  - id: b116a55a393d
+    rank: 2
+    title: Microsoft Says Entra Connect Health Flaw Exploited to Steal Tenant Data
+    summary: Microsoft disclosed a data breach in its Entra Connect Health cloud service after attackers
+      exploited a vulnerability introduced on July 23 to read administrator and technical contact email
+      addresses plus tenant configuration data. The flaw was fixed in Microsoft's cloud on November 19;
+      no customer patch is needed. Microsoft says the access was read-only and did not include email inbox
+      contents.
+    url: https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data
+    image: https://www.bleepstatic.com/content/hl-images/2024/01/26/microsoft-red-header.jpg
+    sources:
+    - BleepingComputer
+    - Cybersecurity News
+    labels:
+    - data breach
+    - Microsoft
+    - cloud security
+    rationale: Microsoft confirms a data breach in a cloud service affecting enterprise tenants; named
+      vendor and fixed.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b116a55a393d
+    cluster_key: connect-data-entra-exploited-flaw-health-microsoft-says-steal-tenant
+    coverage:
+    - title: Microsoft Entra Connect Health flaw exploited to steal tenant data
+      url: https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data
+      source: BleepingComputer
+      published: '2026-11-21T18:01:58+00:00'
+    - title: Hackers Exploit Microsoft Entra Connect Health Flaw to Access Admin Emails and Organization
+        Data
+      url: https://cybersecuritynews.com/microsoft-entra-connect-health-flaw
+      source: Cybersecurity News
+      published: '2026-11-22T02:03:18+00:00'
+    published: '2026-11-21T18:01:58+00:00'
+  - id: f942b1f88083
+    rank: 3
+    title: OpenRouter Users' Private AI Chats Possibly Exposed via Compromised Third-Party Providers
+    summary: Researchers at Dragos discovered that three AI inference providers had been silently compromised
+      for months, allowing attackers to steal user prompts — including some marked Zero Data Retention
+      — without the providers detecting it. OpenRouter, the AI gateway that routes requests to these providers,
+      removed the three providers, revoked Zero Data Retention eligibility for 125 endpoints, and notified
+      potentially affected customers. OpenRouter itself was not breached.
+    url: https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEGP3P_elvK4C-QnSx5onZ67viDXCIgPCUYqtTF_RDNcLJfyQ4QMbegUmn8AJy5nEmnXfN4ACr6hHztG_DdqXlj54S21toacPQaZgRx2rgqZltN3lvREpZR2xlvgXF_iZ7zW0XT0b91mMiRDVaEB6TUvMFlWwaSa3_C7gwpxdKcNhLtIq15KqwaZrR3VI/s1600/openrouter.png
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - data breach
+    - AI security
+    - supply-chain
+    rationale: Confirmed breach at AI hosting providers exposed user prompts; new disclosure with broad
+      user impact.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f942b1f88083
+    cluster_key: chats-compromised-exposed-openrouter-party-possibly-private-providers-third-users-via
+    coverage:
+    - title: OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting
+        Firms
+      url: https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html
+      source: The Hacker News
+      published: '2026-11-22T05:06:55+00:00'
+    - title: OpenRouter Users’ Private AI Chats Possibly Exposed Via Compromised Third-Party Providers
+      url: https://cybersecuritynews.com/openrouter-ai-chat-leaks
+      source: Cybersecurity News
+      published: '2026-11-22T03:58:45+00:00'
+    published: '2026-11-22T05:06:55+00:00'
+  - id: 9f2784e66689
+    rank: 4
+    title: Rackspace Spot Breach Let Hackers Access Customer Kubernetes Secrets
+    summary: Rackspace warned customers that attackers used compromised credentials to access its Rackspace
+      Spot cloud platform, deploy unauthorized workloads, and access Kubernetes secrets in customer clusters.
+      The company is investigating and has not disclosed how many customers are affected. Customers should
+      rotate exposed secrets and review cluster activity.
+    url: https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets
+    image: https://www.bleepstatic.com/content/hl-images/2022/12/09/Rackspace.jpg
+    sources:
+    - BleepingComputer
+    - research.jfrog.com
+    labels:
+    - data breach
+    - cloud security
+    - exposed credentials
+    rationale: Confirmed breach at Rackspace's managed Kubernetes platform exposing customer cluster secrets.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9f2784e66689
+    cluster_key: access-breach-customer-hackers-kubernetes-let-rackspace-secrets-spot
+    coverage:
+    - title: Rackspace Spot breach let hackers access customer Kubernetes secrets
+      url: https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets
+      source: BleepingComputer
+      published: '2026-11-21T22:59:58+00:00'
+    - title: Microsoft's agent-framework Hijacked on PyPI via Silent .pth Startup Hook - JFrog Security
+        Research
+      url: https://research.jfrog.com/post/agent-framework-hijack
+      source: research.jfrog.com
+      published: '2026-11-22T07:03:44.671374+00:00'
+    published: '2026-11-21T22:59:58+00:00'
+  - id: 16a1bfd8d79a
+    rank: 5
+    title: YMCA of Singapore's Youth For Causes Portal Hit by Cybersecurity Breach
+    summary: YMCA of Singapore disclosed a cybersecurity breach affecting the Youth For Causes online
+      application portal and its associated database, which contained personal information including full
+      or partial NRIC numbers. The organization sent notifications to participants and mentors on November
+      21 and is investigating the scope of the exposure.
+    url: https://databreaches.net/2026/11/21/sg-ymcas-youth-for-causes-portal-associated-database-hit-by-cybersecurity-breach
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - data protection
+    rationale: Confirmed breach of a Singapore YMCA portal exposing NRIC numbers; active notification
+      underway.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 16a1bfd8d79a
+    cluster_key: breach-causes-cybersecurity-for-hit-portal-singapore-ymca-youth
+    coverage:
+    - title: 'SG: YMCA’s Youth For Causes portal, associated database hit by cybersecurity breach'
+      url: https://databreaches.net/2026/11/21/sg-ymcas-youth-for-causes-portal-associated-database-hit-by-cybersecurity-breach
+      source: DataBreaches.net
+      published: '2026-11-21T12:36:54+00:00'
+    published: '2026-11-21T12:36:54+00:00'
+  - id: 86ee6ed3a9fa
+    rank: 6
+    title: 14-Year-Old Hacker Arrested for Selling Data of 4,000 Agniveers on Dark Web
+    summary: Indian authorities arrested a 14-year-old who allegedly broke into a test website for former
+      Agniveers (military recruits) and extracted the personal data of about 4,000 people, then advertised
+      it for sale on the dark web. The juvenile gained access through the site's registration and employment-opportunities
+      portal; law enforcement is investigating.
+    url: https://databreaches.net/2026/11/21/india-14-year-old-hacker-held-for-trying-to-sell-private-data-of-4000-agniveers-on-dark-web
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    - law enforcement
+    - government
+    rationale: Confirmed unauthorized access and sale of government personal data; law enforcement action.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 86ee6ed3a9fa
+    cluster_key: 000-agniveers-arrested-dark-data-for-hacker-old-selling-web-year
+    coverage:
+    - title: 'India: 14-year-old hacker held for trying to sell private data of 4,000 Agniveers on dark
+        web'
+      url: https://databreaches.net/2026/11/21/india-14-year-old-hacker-held-for-trying-to-sell-private-data-of-4000-agniveers-on-dark-web
+      source: DataBreaches.net
+      published: '2026-11-21T12:37:00+00:00'
+    published: '2026-11-21T12:37:00+00:00'
+  fraud_phishing:
+  - id: 99be5d740a9e
+    rank: 1
+    title: Fake Microsoft Service Notifications Ride the Microsoft 365 Outage
+    summary: A wave of phishing emails exploited the major Microsoft 365 outage of November 12, 2026;
+      a day later, attackers sent messages posing as Microsoft service notifications. The fake alerts
+      mimic official service-status pages and use the disruption to create urgency, pressuring recipients
+      to click through and hand over credentials. Gurucul's threat research documents the campaign as
+      an example of attackers weaponizing real outages.
+    url: https://community.gurucul.com/articles/ThreatResearch/How-Phishing-Campaigns-Exploited-the-18-11-2026
+    image: https://community.gurucul.com/Contents/Assets/logo.png
+    sources:
+    - Community Portal
+    labels:
+    - phishing
+    - email security
+    - Microsoft
+    rationale: 'Only candidate that fits the Fraud & Phishing topic: a concrete phishing campaign using
+      fake Microsoft service notifications after the M365 outage. It updates the earlier M365-outage phishing
+      warning with additional technical analysis of the lure.'
+    is_update: true
+    supersedes: 30f8b8be0e6e
+    what_changed: New technical analysis of the same phishing wave, detailing how fake Microsoft service
+      notifications were deployed the day after the outage.
+    cluster: 30f8b8be0e6e
+    cluster_key: 365-fake-microsoft-microsoft-notifications-outage-ride-service-the
+    coverage:
+    - title: How Phishing Campaigns Exploited the Microsoft 365 Outage
+      url: https://community.gurucul.com/articles/ThreatResearch/How-Phishing-Campaigns-Exploited-the-18-11-2026
+      source: Community Portal
+      published: '2026-11-22T07:03:44.671374+00:00'
+    published: '2026-11-22T07:03:44.671374+00:00'
+  - id: 2085b0f003a5
+    rank: 2
+    title: Mail Bombing Attacks Fuel IT Helpdesk Impersonation Scams
+    summary: Researchers documented a large-scale campaign in which attackers first flood a victim's inbox
+      with emails, then call the victim while impersonating IT helpdesk staff. The fake technician uses
+      the email chaos as a pretext to convince the user their account is being spammed or compromised,
+      and pressures them into handing over passwords, MFA codes, or access that lets the attackers take
+      over the account. The combination of inbox flooding and a trusted-sounding helpdesk call is designed
+      to exploit alert fatigue and urgency.
+    url: https://www.infosecurity-magazine.com/news/mail-bombing-attacks-it-helpdesk
+    image: https://assets.infosecurity-magazine.com/webpage/og/2d1e6ffd-a4c3-409c-a9c6-0c7845da47ef.jpg
+    sources:
+    - Infosecurity Magazine
+    labels:
+    - help desk scam
+    - social engineering
+    rationale: New, concrete social-engineering campaign targeting everyday users with a recognizable
+      mail-bomb plus fake helpdesk call lure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2085b0f003a5
+    cluster_key: attacks-bombing-fuel-helpdesk-impersonation-mail-scams
+    coverage:
+    - title: Mail Bombing Attacks Fuel IT Helpdesk Impersonation Scams
+      url: https://www.infosecurity-magazine.com/news/mail-bombing-attacks-it-helpdesk
+      source: Infosecurity Magazine
+      published: '2026-11-20T11:55:00+00:00'
+    published: '2026-11-20T11:55:00+00:00'
+    is_carryover: true
+  - id: 81dc30b01c19
+    rank: 3
+    title: Fake GTA 6 PC Launchers Spread Malware Across 355+ Domains
+    summary: A campaign dubbed CyberLeek is using more than 355 domains and subdomains to promote fake
+      Grand Theft Auto VI PC launchers, claiming to offer a leaked or early Windows release. Instead of
+      a playable game, users get a ZIP archive containing a malicious installer. The lure exploits players
+      searching for an unofficial GTA 6 PC launch before an official release, a highly convincing hook
+      for gamers.
+    url: https://cybersecuritynews.com/fake-gta-6-pc-launchers
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Hackers-Use-355-Domains-to-Spread-Fake-GTA-6-PC-Launchers-Delivering-Malware.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - malware
+    - social engineering
+    - cybercrime
+    rationale: Updates prior fake-GTA-6 reporting with a named campaign and dramatically expanded domain
+      infrastructure.
+    is_update: true
+    supersedes: 7eb064f885c1
+    what_changed: Earlier reporting documented a fake GTA 6 download promoted via a Google Colab notebook
+      that dropped WARDEN Stealer; this report identifies a broader named campaign (CyberLeek) using 355+
+      domains and subdomains to distribute fake PC launcher installers.
+    cluster: 7eb064f885c1
+    cluster_key: 355-across-domains-fake-gta-launchers-malware-spread
+    coverage:
+    - title: Hackers Use 355 Domains to Spread Fake GTA 6 PC Launchers Delivering Malware
+      url: https://cybersecuritynews.com/fake-gta-6-pc-launchers
+      source: Cybersecurity News
+      published: '2026-11-20T13:02:57+00:00'
+    published: '2026-11-20T13:02:57+00:00'
+    is_carryover: true
+  policy:
+  - id: 2ee03e9630cb
+    rank: 1
+    title: CISA Adds Four Actively Exploited Flaws to KEV, Including VMware vCenter and Cisco Expressway
+    summary: 'CISA added four vulnerabilities to its Known Exploited Vulnerabilities catalog based on
+      confirmed active exploitation: CVE-2025-42884 in SAP NetWeaver, CVE-2026-76466 in Cisco Expressway,
+      CVE-2026-123890 in VMware vCenter Server, and CVE-2026-129448 in Apache Roller. Federal agencies
+      are required to remediate by the catalog deadlines, and the entries signal to all organizations
+      which flaws attackers are actively using.'
+    url: https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - Help Net Security
+    - Dark Reading
+    - The Hacker News
+    - Security
+    - CISA KEV
+    labels:
+    - CISA
+    - KEV
+    - active exploitation
+    - advisory
+    rationale: Official CISA KEV addition is a government advisory that imposes patching obligations for
+      federal agencies and prioritizes defensive action for all organizations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2ee03e9630cb
+    cluster_key: actively-adds-and-cisa-cisco-exploited-flaws-four-including-kev-vcenter-vmware
+    coverage:
+    - title: CISA Adds Four Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-11-20T12:00:00+00:00'
+    - title: VMware vCenter zero-day exploited for months before patch (CVE-2026-123890)
+      url: https://www.helpnetsecurity.com/2026/11/20/vmware-vcenter-zero-day-cve-2026-123890-exploited
+      source: Help Net Security
+      published: '2026-11-20T12:30:19+00:00'
+    - title: China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day
+      url: https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day
+      source: Dark Reading
+      published: '2026-11-20T21:03:27+00:00'
+    - title: China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal
+        Data
+      url: https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html
+      source: The Hacker News
+      published: '2026-11-20T09:38:15+00:00'
+    - title: VMware patches actively exploited security flaws
+      url: https://www.heise.de/en/news/VMware-patches-actively-exploited-security-flaws-11532137.html
+      source: Security
+      published: '2026-11-20T11:58:00+01:00'
+    - title: 'CISA adds CVE-2026-123890 to Known Exploited Vulnerabilities: VMWare vCenter Authentication
+        Bypass Using an Alternate Path or Channel Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-123890
+      source: CISA KEV
+      published: '2026-11-20T12:00:00+00:00'
+    published: '2026-11-20T12:00:00+00:00'
+    is_carryover: true
+  - id: 1d70fff3427f
+    rank: 2
+    title: CTO of RansomwareHelp Indicted for Wire Fraud After FBI Sting
+    summary: The chief technology officer and co-founder of ransomwarehelp.com was indicted for wire fraud.
+      An FBI sting found the Florida company claimed to use advanced cryptographic tools to restore data,
+      but actually paid ransomware attackers for decryption keys and resold them to victims at a markup
+      for work that was never performed.
+    url: https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud
+    image: https://krebsonsecurity.com/b-spycloud/5.png
+    sources:
+    - Krebs on Security
+    labels:
+    - indictment
+    - law enforcement
+    - ransomware
+    - cybercrime
+    rationale: Federal indictment of a ransomware-recovery firm executive following an FBI sting is a
+      law enforcement action targeting fraud tied to ransomware.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1d70fff3427f
+    cluster_key: after-cto-fbi-for-fraud-indicted-ransomwarehelp-sting-wire
+    coverage:
+    - title: CTO of ‘RansomwareHelp’ Indicted for Wire Fraud
+      url: https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud
+      source: Krebs on Security
+      published: '2026-11-21T00:36:39+00:00'
+    published: '2026-11-21T00:36:39+00:00'
+    is_carryover: true
+  - id: abeb37433506
+    rank: 3
+    title: UK court confirms British government served Apple with secret encryption notice
+    summary: A UK tribunal confirmed that the British government had served Apple with a secret legal
+      notice targeting iCloud encryption protections, ending almost two years of official refusal to acknowledge
+      the widely reported action. The notice has significant implications for encryption and data protection
+      obligations.
+    url: https://therecord.media/apple-uk-encryption-notice
+    image: http://cms.therecord.media/uploads/Apple_logo_253a5988c4.jpg
+    sources:
+    - The Record
+    labels:
+    - government
+    - Apple
+    rationale: A government legal action affecting Apple's encryption posture, a policy precedent with
+      obligations for companies.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: abeb37433506
+    cluster_key: apple-british-confirms-court-encryption-government-notice-secret-served-with
+    coverage:
+    - title: UK court confirms British government served Apple with secret encryption notice
+      url: https://therecord.media/apple-uk-encryption-notice
+      source: The Record
+      published: '2026-11-19T16:15:00+00:00'
+    published: '2026-11-19T16:15:00+00:00'
+    is_carryover: true
+  security_tools:
+  - id: 90a34e73a6f2
+    rank: 1
+    title: Owl OS Releases 1.0 With 275 Security Tools
+    summary: Owl OS reached its 1.0 milestone, shipping a security-focused Linux distribution that bundles
+      275 security tools out of the box. The release gives practitioners a ready-to-run environment for
+      pentesting, analysis, and defensive work without assembling a toolchain by hand.
+    url: https://news.google.com/rss/articles/CBMihAFBVV95cUxQZS1nLUZEZXd1X3dnd2NSbGdSRVRSZE8ydk5pRDJZRDhtbGMxeDA2Mm45WFZrNUdBUDBZU0dYN0hCQ3BLV2ZhQkdCRU1rOHkwVVE5LVd4YWp1VE56UUFYZ28xb0NNQm1JdnBSQ3BFNlY3Q1JkN3BPSTctZXd1cGZwcmdXWV8
+    image: ''
+    sources:
+    - Wisevoter
+    labels:
+    - open source
+    - security tools
+    rationale: Major v1.0 release of a security Linux distribution, directly usable by practitioners.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 90a34e73a6f2
+    cluster_key: 275-owl-releases-security-tools-with
+    coverage:
+    - title: Owl OS Releases 1.0 With 275 Security Tools
+      url: https://news.google.com/rss/articles/CBMihAFBVV95cUxQZS1nLUZEZXd1X3dnd2NSbGdSRVRSZE8ydk5pRDJZRDhtbGMxeDA2Mm45WFZrNUdBUDBZU0dYN0hCQ3BLV2ZhQkdCRU1rOHkwVVE5LVd4YWp1VE56UUFYZ28xb0NNQm1JdnBSQ3BFNlY3Q1JkN3BPSTctZXd1cGZwcmdXWV8
+      source: Wisevoter
+      published: '2026-11-21T19:52:46+00:00'
+    published: '2026-11-21T19:52:46+00:00'
+  - id: dbea9187c7ed
+    rank: 2
+    title: 'mcp-reverse v6.0.1: MCP Server Exposing 180+ Reverse-Engineering Tools'
+    summary: mcp-reverse v6.0.1 is an MCP server that exposes more than 180 reverse-engineering tools,
+      aggregating Ghidra, IDA, x64dbg, Frida and 56 other backends with native binary parsers and a 4,200-skill
+      knowledge base. It lets AI agents and analysts drive a broad reverse-engineering workflow through
+      a single interface.
+    url: https://kitploit.com/en/posts/mcp-reverse-aa41e77f1e7350ce
+    image: https://assets.kitploit.com/production/public/tools/58559/5c6c1b5b30e83aa5a6f8680b8014242417cb5efcab166b2328cbc8fbe1676649-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - reverse engineering
+    - LLM tooling
+    rationale: New notable release of an aggregated reverse-engineering toolkit with an MCP interface,
+      practical for analysts and AI-driven RE.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: dbea9187c7ed
+    cluster_key: 180-engineering-exposing-mcp-mcp-reverse-reverse-server-tools
+    coverage:
+    - title: mcp-reverse v6.0.1
+      url: https://kitploit.com/en/posts/mcp-reverse-aa41e77f1e7350ce
+      source: KitPloit
+      published: '2026-11-22T03:54:58+00:00'
+    published: '2026-11-22T03:54:58+00:00'
+  - id: e8d970b9682d
+    rank: 3
+    title: 'CyberChef v11.6.0: The Cyber Swiss Army Knife Update'
+    summary: CyberChef v11.6.0 is the latest release of the widely used web app for encryption, encoding,
+      compression, and data analysis. The update keeps the Cyber Swiss Army Knife current for analysts
+      handling encoding, decoding, and format-conversion tasks in DFIR and malware work.
+    url: https://kitploit.com/en/posts/cyberchef-4b7cdcfbf399f154
+    image: https://assets.kitploit.com/production/public/tools/1300/da83730b2fa039b08cfcdb7cf5410a2390950b2c850fde7a805080219e506b5d.png
+    sources:
+    - KitPloit
+    labels:
+    - security tools
+    - malware analysis
+    rationale: New release of a staple open-source analysis utility used across DFIR and reverse-engineering
+      workflows.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e8d970b9682d
+    cluster_key: army-cyber-cyberchef-knife-swiss-the-update-v11
+    coverage:
+    - title: CyberChef v11.6.0
+      url: https://kitploit.com/en/posts/cyberchef-4b7cdcfbf399f154
+      source: KitPloit
+      published: '2026-11-21T07:53:50+00:00'
+    published: '2026-11-21T07:53:50+00:00'
+  - id: 425ff020fc35
+    rank: 4
+    title: 'ESP32Marauder v1.21.0: WiFi/Bluetooth Offensive and Defensive Suite'
+    summary: ESP32Marauder v1.21.0 updates the suite of WiFi and Bluetooth offensive and defensive tools
+      for the ESP32 platform. The project remains a go-to for wireless testing on cheap ESP32 hardware,
+      covering deauthentication, packet capture, and Bluetooth scanning.
+    url: https://kitploit.com/en/posts/esp32marauder-0122d52e79b40fdc
+    image: https://assets.kitploit.com/production/public/tools/200/7374e8eb4c473e2a83fb935af6c7e956970cd52bcc8f79d8e9b3bf6b8f4fc0fd.png
+    sources:
+    - KitPloit
+    labels:
+    - embedded
+    - security tools
+    rationale: New release of a well-established open-source wireless testing suite with inspectable code.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 425ff020fc35
+    cluster_key: and-bluetooth-defensive-esp32marauder-offensive-suite-wifi
+    coverage:
+    - title: ESP32Marauder v1.21.0
+      url: https://kitploit.com/en/posts/esp32marauder-0122d52e79b40fdc
+      source: KitPloit
+      published: '2026-11-21T11:51:57+00:00'
+    published: '2026-11-21T11:51:57+00:00'
+  - id: 0f58b74a52e5
+    rank: 5
+    title: 'nginx2root: Lab Reproductions of Five Critical NGINX Vulnerabilities'
+    summary: Censys Research published nginx2root, a repository of isolated-lab reproductions of the five
+      nginx2root vulnerabilities, including a compact HTTP/2 flow-control accounting proof-of-concept,
+      packet captures, RCE evidence, and a guarded compatibility runner. It gives researchers and defenders
+      ready-to-run demonstrations of the high-profile NGINX HTTP/2 flaws.
+    url: https://kitploit.com/en/tools/github/censys-research/nginx2root
+    image: https://assets.kitploit.com/production/public/tools/60679/c8f5e6f813429e3e97bf2278ebce12d52d2871c8def2e6dc0a48599b0d7120a6-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - vulnerability research
+    - open source
+    rationale: Concrete PoC reproduction set for the recently disclosed critical NGINX HTTP/2 RCE flaws,
+      useful for researchers and detection engineers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0f58b74a52e5
+    cluster_key: critical-five-lab-nginx-nginx2root-reproductions-vulnerabilities
+    coverage:
+    - title: nginx2root
+      url: https://kitploit.com/en/tools/github/censys-research/nginx2root
+      source: KitPloit
+      published: '2026-11-21T06:53:49+00:00'
+    published: '2026-11-21T06:53:49+00:00'
+  - id: da5ca06759fe
+    rank: 6
+    title: 'aitarpit: Honeypot to Disrupt AI-Agent-Driven Attacks'
+    summary: aitarpit is a Python/Flask honeypot that disrupts AI-agent-driven attacks with tarpitting
+      and context-bomb techniques. It is config-driven, includes multi-channel alerting, and offers an
+      optional web UI, giving defenders a purpose-built way to slow down and poison the reconnaissance
+      and exploitation phases of autonomous attacks.
+    url: https://kitploit.com/en/tools/github/rbidou/aitarpit
+    image: https://assets.kitploit.com/production/public/tools/60957/82fc71c44ebeb396321986c2963771d03debb11397a25ca10cafad2ee9adeef2-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - honeypot
+    - AI agents
+    rationale: Novel defensive tool specifically designed to tarpit and confuse AI-agent-driven intrusions,
+      a timely hardening utility.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: da5ca06759fe
+    cluster_key: agent-aitarpit-attacks-disrupt-driven-honeypot
+    coverage:
+    - title: aitarpit
+      url: https://kitploit.com/en/tools/github/rbidou/aitarpit
+      source: KitPloit
+      published: '2026-11-21T09:54:14+00:00'
+    published: '2026-11-21T09:54:14+00:00'
+  - id: b355ececbff6
+    rank: 7
+    title: 'DetectViT: Test-Time Detector for Backdoored Vision Transformers'
+    summary: DetectViT is a training-free, trigger-agnostic test-time detector for backdoored Vision Transformers.
+      It flags poisoned samples using inter-head attention consistency and entropy variance, giving AI/ML
+      security teams an inspectable tool to detect model backdoors without prior knowledge of the trigger.
+    url: https://kitploit.com/en/tools/github/siquanhuang/detectvit
+    image: https://assets.kitploit.com/production/public/tools/60525/a3b9b37191d808c70bc31ee98ba971ad76ef3f9c9f0a190079ccc3421bcde23d-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - model backdoors
+    - AI security research
+    rationale: Concrete, runnable defensive tool for detecting backdoored vision models, relevant to AI
+      security practitioners.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b355ececbff6
+    cluster_key: backdoored-detector-detectvit-for-test-time-transformers-vision
+    coverage:
+    - title: DetectViT
+      url: https://kitploit.com/en/tools/github/siquanhuang/detectvit
+      source: KitPloit
+      published: '2026-11-21T08:54:10+00:00'
+    published: '2026-11-21T08:54:10+00:00'
+  - id: 70b112879aa7
+    rank: 8
+    title: 'invisible_playwright v0.58.0: Stealth Browser Automation for Scraping'
+    summary: invisible_playwright v0.58.0 is a patched Firefox build with C++-level fingerprint spoofing
+      and humanized mouse automation, marketed as a drop-in Playwright replacement that passes major bot-detection
+      suites for stealth web scraping and OSINT collection.
+    url: https://kitploit.com/en/posts/invisible_playwright-3a6234ea71e8a448
+    image: https://assets.kitploit.com/production/public/tools/7462/e23d5b9ad68fbaf1e80c3e7f70118a4e135514dc069f0b6d27076f6af3e23051.gif
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - security tools
+    rationale: New release of an open-source stealth-browser automation tool with concrete code, useful
+      for OSINT and authorized testing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 70b112879aa7
+    cluster_key: automation-browser-for-invisible-playwright-scraping-stealth
+    coverage:
+    - title: invisible_playwright v0.58.0
+      url: https://kitploit.com/en/posts/invisible_playwright-3a6234ea71e8a448
+      source: KitPloit
+      published: '2026-11-21T19:53:26+00:00'
+    published: '2026-11-21T19:53:26+00:00'
+  supply_chain:
+  - id: 038a1ffb1a03
+    rank: 1
+    title: Over 100 Debian Packages Still Ship Distrusted CA Certificates After Trust Store Update
+    summary: A scan of a Debian package mirror by Debian developer Steve McIntyre found that more than
+      100 packages still contain copies of distrusted certificate authority (CA) certificates, including
+      the emSign ECC Root CA that Debian removed from its system trust store on October 20. The finding
+      shows that updating the OS trust store does not change which certificates an application accepts,
+      so affected packages may keep trusting revoked CAs. Users should audit packages that embed their
+      own CA lists.
+    url: https://cybersecuritynews.com/debian-packages-ca-certificates
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Debian-Packages-CA-Certificates.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - certificate trust
+    - supply chain
+    rationale: 'Concrete trust-store gap in the Debian supply chain: distrusted CA certificates remain
+      bundled in 100+ packages with an actionable audit step.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 038a1ffb1a03
+    cluster_key: 100-after-certificates-debian-distrusted-over-packages-ship-still-store-trust-update
+    coverage:
+    - title: Over 100 Debian Packages Still Contain Distrusted CA Certificates Despite Security Updates
+      url: https://cybersecuritynews.com/debian-packages-ca-certificates
+      source: Cybersecurity News
+      published: '2026-11-20T16:39:48+00:00'
+    published: '2026-11-20T16:39:48+00:00'
+    is_carryover: true
+  - id: e4e3fe1ca7b8
+    rank: 2
+    title: Android Developer Verification Expands to All Countries and Every Install Source
+    summary: Google will require developers to verify their identity and register apps for normal installs
+      on certified Android devices starting January 2027. The rollout begins with seven app distributors
+      — Google Play, Galaxy Store, Honor, Oppo, Xiaomi, Transsion, and Vivo — and broadens over several
+      months to every install source. Unverified developers will lose the standard install experience
+      as the program expands.
+    url: https://www.helpnetsecurity.com/2026/11/20/android-developer-verification-power-users
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/19225129/android_developer_verification-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - Android
+    - supply chain
+    - malicious apps
+    - policy
+    rationale: Android app distribution is a core software supply chain; mandatory identity verification
+      across all install sources is a concrete control against malicious and impersonating apps at scale.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e4e3fe1ca7b8
+    cluster_key: all-and-android-countries-developer-every-expands-install-source-verification
+    coverage:
+    - title: Android developer verification will reach every install source, with a side door for power
+        users
+      url: https://www.helpnetsecurity.com/2026/11/20/android-developer-verification-power-users
+      source: Help Net Security
+      published: '2026-11-19T23:03:24+00:00'
+    published: '2026-11-19T23:03:24+00:00'
+    is_carryover: true
+  - id: fb43f5ca0fd3
+    rank: 3
+    title: Malicious Package Tracker Rises to 3,764 Records in 60 Days
+    summary: The OpenSSF-derived supply-chain attack tracker recorded 3,764 malicious package releases
+      in the 60 days before November 17, 2026, up from 2,961 in the prior snapshot. The list continues
+      to prioritize reviewed hijacks of widely used npm, PyPI, RubyGems, and other registry packages;
+      developers should compare their dependencies and lockfiles against the tracker's indicators.
+    url: https://vulnpocalypse.dev/supply-chain
+    image: https://vulnpocalypse.dev/og/psupply-chain.png
+    sources:
+    - Vulnpocalypse
+    labels:
+    - malicious-package
+    - supply chain
+    - npm
+    - pypi
+    rationale: Updated tracker snapshot shows continued growth in registry-based supply-chain attacks
+      and gives developers concrete package-level indicators to check.
+    is_update: true
+    supersedes: fe30e1d119f7
+    what_changed: Tracker snapshot updated from 2,961 to 3,764 malicious package records in the last 60
+      days, reflecting continued registry poisoning activity.
+    cluster: 2ae5f5563fdb
+    cluster_key: 764-days-malicious-package-records-rises-tracker
+    coverage:
+    - title: 'Supply-chain attack tracker: hijacked npm and PyPI packages'
+      url: https://vulnpocalypse.dev/supply-chain
+      source: Vulnpocalypse
+      published: '2026-11-20T07:03:43.994744+00:00'
+    published: '2026-11-20T07:03:43.994744+00:00'
+    is_carryover: true
+  threats:
+  - id: 47d625296a80
+    rank: 1
+    title: Gootloader Campaign Targets US Legal Professionals via 1,000+ Compromised WordPress Sites
+    summary: Gootloader operators are using poisoned search results and more than 1,000 compromised WordPress
+      sites to steer US legal professionals toward ransomware infections. The campaign has been linked
+      to over $28 million in ransom payments, with attackers blending into normal system activity to evade
+      detection.
+    url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-19-2026
+    image: https://images.ctfassets.net/pq3mldkivosa/1WiEq3et30jYsrxsWgfoLd/fbd1de9f1c63ebf1fe47b6b8e6fedc9e/shutterstock_2151784445.jpg
+    sources:
+    - Cyware
+    labels:
+    - malware
+    - ransomware
+    rationale: Active Gootloader campaign with new campaign-scope details beyond the previously published
+      DOJ Gootloader figures; the two Cyware briefings report the same campaign and are collapsed into
+      one story.
+    is_update: true
+    supersedes: 7c9e29b5341b
+    what_changed: New reporting adds that the Gootloader campaign specifically targeted US legal professionals
+      via poisoned search results and more than 1,000 compromised WordPress sites, with over $28 million
+      in ransom payments.
+    cluster: 41a3ad1ce4ca
+    cluster_key: 000-campaign-compromised-gootloader-legal-professionals-sites-targets-via-wordpress
+    coverage:
+    - title: Cyware Daily Threat Intelligence - November 19, 2026
+      url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-19-2026
+      source: Cyware
+      published: '2026-11-22T07:03:44.671374+00:00'
+    - title: Cyware Daily Threat Intelligence - November 17, 2026
+      url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-17-2026
+      source: Cyware
+      published: '2026-11-22T07:03:44.671374+00:00'
+    published: '2026-11-22T07:03:44.671374+00:00'
+  - id: 06d7f16a6dde
+    rank: 2
+    title: BADBOX Botnet Returns With Record-Breaking 40 Billion Daily Ad Requests
+    summary: The BADBOX malware family is again running large-scale ad-fraud operations on a broad range
+      of generic Android TV boxes after last year's disruptions. The botnet is generating a record-breaking
+      40 billion fraudulent ad requests per day, making infected streaming devices a persistent operational
+      threat.
+    url: https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests
+    image: https://www.bleepstatic.com/content/hl-images/2024/12/19/android-malware-botnet.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - botnet
+    - Android
+    - malware
+    rationale: Resurgence of a large-scale Android TV botnet engaged in ad fraud, with new record-breaking
+      scale and no prior Active Threats card covering this return.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 06d7f16a6dde
+    cluster_key: badbox-billion-botnet-breaking-daily-record-requests-returns-with
+    coverage:
+    - title: BADBOX botnet returns with record-breaking 40 billion daily ad requests
+      url: https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests
+      source: BleepingComputer
+      published: '2026-11-21T15:17:27+00:00'
+    published: '2026-11-21T15:17:27+00:00'
+  - id: d92724c2df17
+    rank: 3
+    title: Ransomware Attack Halts Osaki Electric Smart-Meter Production
+    summary: A ransomware attack forced Osaki Electric Industries to halt smart-meter production at its
+      Saitama and Shizukuishi facilities. The disruption is affecting supply chains for power infrastructure
+      projects and leaving customers facing installation delays.
+    url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-18-2026
+    image: https://images.ctfassets.net/pq3mldkivosa/1WiEq3et30jYsrxsWgfoLd/fbd1de9f1c63ebf1fe47b6b8e6fedc9e/shutterstock_2151784445.jpg
+    sources:
+    - Cyware
+    labels:
+    - ransomware
+    - critical infrastructure
+    rationale: Active ransomware incident with direct operational impact on a critical-infrastructure
+      equipment manufacturer, meeting the Active Threats focus on ransomware attacks and industrial disruption.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d92724c2df17
+    cluster_key: attack-electric-halts-meter-osaki-production-ransomware-smart
+    coverage:
+    - title: Cyware Daily Threat Intelligence - November 18, 2026
+      url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-18-2026
+      source: Cyware
+      published: '2026-11-22T07:03:44.671374+00:00'
+    published: '2026-11-22T07:03:44.671374+00:00'
+  vulnerabilities:
+  - id: 3e9409d09a15
+    rank: 1
+    title: Ghostscript 'Upload2Shell' RCE Lets Attackers Run Commands via Crafted File Uploads
+    summary: A now-patched critical flaw (CVE-2026-125396) in Ghostscript's Type 1 font loader, dubbed
+      Upload2Shell, allows a crafted file to escape the program's security sandbox and run commands on
+      the server processing it. Affecting upstream Ghostscript releases before 10.08.0, the flaw can be
+      triggered indirectly by applications like WordPress, Roundcube, and Linux print servers that use
+      file preview, thumbnail, or print features. No active exploitation has been reported, but a patch
+      is available and administrators should update.
+    url: https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1BiCJUIrSJXNfKPZEkM46ynK6Rs7gba2xMaTUdoJ7yOK6Y8kcKMqJ_6PhbUIog_U1E8gRCpbj2HrkQ9UEpbPi1HOvkxdxCE5Afa5LbkNhUPvgU7Sa60IVHAWqSvgJaX1p6frMAN335QncL5UTZ3a4v1-agyb8ZXIlMGZTOtzsC0Gll2qRI0NJNMHTsf8/s1600/ghostscript.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    labels:
+    - remote code execution
+    - vulnerability
+    - security update
+    rationale: Critical RCE in widely deployed Ghostscript affecting common web and print workflows; patch
+      is available and should be applied.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3e9409d09a15
+    cluster_key: attackers-commands-crafted-file-ghostscript-lets-rce-run-upload2shell-uploads-via
+    coverage:
+    - title: Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular
+        Apps
+      url: https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html
+      source: The Hacker News
+      published: '2026-11-22T05:03:41+00:00'
+    - title: Hackers Could Execute Commands on WordPress, Email and Print Servers Through Upload2Shell
+        Flaw
+      url: https://cybersecuritynews.com/upload2shell-flaw
+      source: Cybersecurity News
+      published: '2026-11-22T02:43:08+00:00'
+    published: '2026-11-22T05:03:41+00:00'
+  - id: d0afcfb7e00e
+    rank: 2
+    title: Critical GPGME Flaw (CVE-2026-129975) Lets Malicious OpenPGP Keys Trigger Memory Corruption
+    summary: GnuPG warned of a critical memory corruption bug in GPGME, the standard library used to integrate
+      GnuPG into applications. A malicious OpenPGP key with an unusually long user ID can trigger the
+      flaw, potentially allowing data theft from affected applications. Fixed in GPGME version 2.3.0;
+      all software using earlier versions should update.
+    url: https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTmX4ayWzvM0EzPttZ610B2837FppeU5AEmQmztLH2lai78EDQtjrp4wVI_bubSe2c2NGBE5sqBT9Py1mKkHQKN2faBkOzU70d7FntrpYD7Et2eeBxLNy2gzByAo1i8Aaw_VMBZD62RnBMY2md3iNfegK9M_NR5qTRDBw8s0uwKy1w7JoTV0zkDS_17Lse/s1600/pgp.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - vulnerability
+    - security update
+    rationale: Critical flaw in a widely used cryptography library with a patch; updating GPGME is a straightforward
+      security action.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d0afcfb7e00e
+    cluster_key: 129975-2026-critical-cve-flaw-gpgme-keys-lets-malicious-memory-openpgp-trigger
+    coverage:
+    - title: GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys
+      url: https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html
+      source: The Hacker News
+      published: '2026-11-21T11:05:53+00:00'
+    published: '2026-11-21T11:05:53+00:00'
+  - id: e2ed8d780a10
+    rank: 3
+    title: F5 Issues Emergency Patches for Critical BIG-IP RCE and DoS Flaws
+    summary: F5 released emergency fixes for six critical BIG-IP vulnerabilities disclosed in its November
+      18 out-of-band security notification. Remote attackers who can reach a vulnerable service can crash
+      the BIG-IP process that handles client traffic (denial of service) without logging in, and F5 warns
+      attackers may be able to run code on affected devices. The flaws affect specific traffic-handling
+      configurations; administrators should apply the updates immediately.
+    url: https://cybersecuritynews.com/critical-f5-big-ip-vulnerabilities
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Critical-F5-BIG-IP-Vulnerabilities.webp
+    sources:
+    - Cybersecurity News
+    - BleepingComputer
+    - The Hacker News
+    labels:
+    - F5
+    - remote code execution
+    - OOB update
+    - patch
+    - security update
+    rationale: Critical unauthenticated RCE/DoS in widely deployed BIG-IP appliances with emergency patches
+      available — high actionability.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e2ed8d780a10
+    cluster_key: and-big-critical-dos-emergency-flaws-for-issues-patches-rce
+    coverage:
+    - title: 6 Critical F5 BIG-IP Vulnerabilities Could Let Hackers Disrupt Websites and Execute Malicious
+        Code
+      url: https://cybersecuritynews.com/critical-f5-big-ip-vulnerabilities
+      source: Cybersecurity News
+      published: '2026-11-21T03:13:03+00:00'
+    - title: F5 releases emergency patches for critical BIG-IP RCE flaws
+      url: https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws
+      source: BleepingComputer
+      published: '2026-11-20T10:57:43+00:00'
+    - title: Critical Apache Tomcat Flaw Lets Remote Attackers Join Trusted Server Clusters Without Authentication
+      url: https://cybersecuritynews.com/critical-apache-tomcat-flaw
+      source: Cybersecurity News
+      published: '2026-11-20T14:29:21+00:00'
+    - title: SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws
+      url: https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html
+      source: The Hacker News
+      published: '2026-11-20T10:38:22+00:00'
+    published: '2026-11-21T03:13:03+00:00'
+    is_carryover: true
