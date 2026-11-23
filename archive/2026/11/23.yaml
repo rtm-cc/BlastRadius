@@ -1,0 +1,961 @@
+date: '2026-11-23'
+updated_at: '2026-11-23T07:08:45+00:00'
+topics:
+  ai_security:
+  - id: 1cc5cdb98002
+    rank: 1
+    title: OpenAI's GPT-6.2 Astra Discovers 0-Day Vulnerabilities Enabling Mobile OS Security Bypass and
+      RCE
+    summary: OpenAI's November 17 system card reports that GPT-6.2 Astra, during testing by security firm
+      Irregular, discovered and exploited zero-day vulnerabilities in a popular mobile operating system
+      and a widely hosted network service. The finds included a permission bypass that exposed private
+      data and a separate remote code execution flaw reachable from a low-privileged role, demonstrating
+      the model's ability to find and chain real, exploitable vulnerabilities.
+    url: https://cybersecuritynews.com/openai-gpt-6-2-astra-0-day-vulnerabilities
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/OpenAIs-GPT-6.2-Astra-Discovers-Zero-Day-Vulnerabilities-Enabling-Mobile-OS-Security-Bypass-and-RCE.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - AI security research
+    - zero-day
+    - remote code execution
+    rationale: 'Concrete, reproducible AI security research: an AI model found and exploited real zero-days
+      in a mobile OS and a network service, exactly the demonstrated-results focus of this topic.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1cc5cdb98002
+    cluster_key: and-astra-bypass-day-discovers-enabling-gpt-mobile-openai-rce-security-vulnerabilities
+    coverage:
+    - title: OpenAI’s GPT-6.2 Astra Discovers 0-Day Vulnerabilities Enabling Mobile OS Security Bypass
+        and RCE
+      url: https://cybersecuritynews.com/openai-gpt-6-2-astra-0-day-vulnerabilities
+      source: Cybersecurity News
+      published: '2026-11-23T03:06:27+00:00'
+    published: '2026-11-23T03:06:27+00:00'
+  - id: fa7214551a7c
+    rank: 2
+    title: US investigators got AI to plan mass-casualty, power grid attacks
+    summary: Reporting from USA TODAY describes how U.S. investigators were able to get AI systems to
+      plan attacks, including mass-casualty scenarios and power grid disruptions. The reporting builds
+      on earlier government watchdog testing that found major chatbots each produced attack plans in under
+      twelve hours, adding concrete detail on the kinds of attack plans the AI systems generated.
+    url: https://www.postandcourier.com/nation-world/news/us-investigators-got-ai-to-plan-mass-casualty-power-grid-attacks/article_a00c9e79-e8a7-4ecb-8906-c40a9ab9be92.html
+    image: https://bloximages.newyork1.vip.townnews.com/postandcourier.com/content/tncms/assets/v3/editorial/6/40/64054458-a144-4eb4-b25e-470f57207172/6b0208d446471.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C631&order=crop%2Cresize
+    sources:
+    - Post and Courier
+    labels:
+    - AI security
+    - government
+    rationale: 'Demonstrates real, reproducible AI misuse: government testing shows AI systems can be
+      steered to produce attack plans for high-impact physical and infrastructure targets.'
+    is_update: true
+    supersedes: a25716d683f7
+    what_changed: New reporting adds specifics that the plans included mass-casualty scenarios and power
+      grid attacks, and attributes the testing to U.S. investigators.
+    cluster: a25716d683f7
+    cluster_key: attacks-casualty-got-grid-investigators-mass-plan-power
+    coverage:
+    - title: US investigators got AI to plan mass-casualty, power grid attacks
+      url: https://www.postandcourier.com/nation-world/news/us-investigators-got-ai-to-plan-mass-casualty-power-grid-attacks/article_a00c9e79-e8a7-4ecb-8906-c40a9ab9be92.html
+      source: Post and Courier
+      published: '2026-11-22T04:15:00-05:00'
+    published: '2026-11-22T04:15:00-05:00'
+  - id: 4a829f7ce347
+    rank: 3
+    title: Block's AI Tool Found a Bitcoin Core Bug; Nodes Get Patched
+    summary: Block's AI-powered tool identified a bug in Bitcoin Core, and nodes have been patched in
+      response. The discovery is another concrete example of AI-driven vulnerability research producing
+      real fixes in critical open-source software.
+    url: https://news.google.com/rss/articles/CBMiigFBVV95cUxQakdlbWVuZXJ0dVJXaXJyOGtGS3laSTIzWmdoWDlPQktZcEN4UW5uS280ZmxqRzZPVXo0aTNYTDdVdXAwMWRGR3h2Sm1rOGpMMjlMeWxMc21YeHRrUV9zbnBUSWxXMkVTUkdQdm1qTzdIX1Z2VEVOOTUzcDVIZ0V6dVNEME9zUmN0M0E
+    image: ''
+    sources:
+    - CryptoRank
+    labels:
+    - AI security research
+    - vulnerability research
+    rationale: 'AI security research with a demonstrated result: an AI tool discovered a real bug in Bitcoin
+      Core that prompted a patch.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 4a829f7ce347
+    cluster_key: bitcoin-block-bug-core-found-get-nodes-patched-tool
+    coverage:
+    - title: Block’s AI Tool Found a Bitcoin Core Bug; Nodes Get Patched
+      url: https://news.google.com/rss/articles/CBMiigFBVV95cUxQakdlbWVuZXJ0dVJXaXJyOGtGS3laSTIzWmdoWDlPQktZcEN4UW5uS280ZmxqRzZPVXo0aTNYTDdVdXAwMWRGR3h2Sm1rOGpMMjlMeWxMc21YeHRrUV9zbnBUSWxXMkVTUkdQdm1qTzdIX1Z2VEVOOTUzcDVIZ0V6dVNEME9zUmN0M0E
+      source: CryptoRank
+      published: '2026-11-22T18:07:18+00:00'
+    published: '2026-11-22T18:07:18+00:00'
+  - id: df1d5111b507
+    rank: 4
+    title: Signal to block Siri, Gemini AI from capturing chats on iOS, Android
+    summary: Signal announced new protections that block screenshots on iOS 27 and prevent AI assistants
+      such as Siri and Gemini from capturing conversations on supported Android devices. The move addresses
+      growing concerns about AI assistants harvesting private chat data.
+    url: https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android
+    image: https://www.bleepstatic.com/content/hl-images/2025/09/08/Signal.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - AI assistants
+    - data protection
+    rationale: 'Security news about AI systems: a protective measure aimed at preventing AI assistants
+      from capturing private conversation data, relevant to AI data leakage risks.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: df1d5111b507
+    cluster_key: android-block-capturing-chats-from-gemini-ios-signal-siri
+    coverage:
+    - title: Signal to block Siri, Gemini AI from capturing chats on iOS, Android
+      url: https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android
+      source: BleepingComputer
+      published: '2026-11-22T15:15:25+00:00'
+    published: '2026-11-22T15:15:25+00:00'
+  - id: cb1325aa367f
+    rank: 5
+    title: Google's semantic governance policies can block an AI agent's tool call before it runs
+    summary: Google is letting enterprises place a semantic governance checkpoint in front of AI agents'
+      actions, in Preview on the Gemini platform. Each tool call the agent's model proposes is checked
+      before it runs and blocked if it doesn't match the user's request or breaks a company rule, with
+      enforcement sitting outside the agent at points such as Agent Gateway.
+    url: https://www.helpnetsecurity.com/2026/11/23/google-semantic-governance-policies
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2024/11/16180422/google-cloud.webp
+    sources:
+    - Help Net Security
+    labels:
+    - AI agents
+    - security tools
+    rationale: 'Security-focused control for AI agents: a governance mechanism designed to stop unauthorized
+      or malicious tool calls before execution.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cb1325aa367f
+    cluster_key: agent-before-block-call-can-google-governance-policies-runs-semantic-tool
+    coverage:
+    - title: Google’s semantic governance policies can block an AI agent’s tool call before it runs
+      url: https://www.helpnetsecurity.com/2026/11/23/google-semantic-governance-policies
+      source: Help Net Security
+      published: '2026-11-23T00:27:25+00:00'
+    published: '2026-11-23T00:27:25+00:00'
+  - id: 04e6ee044726
+    rank: 6
+    title: Race to fix AI-exposed security flaws risks more outages, warns Microsoft
+    summary: Microsoft is warning that the rush to fix security flaws exposed by AI-driven vulnerability
+      discovery risks causing more outages, urging organizations to balance speed with careful testing
+      when deploying patches for AI-found bugs.
+    url: https://news.google.com/rss/articles/CBMiywFBVV95cUxNLWlkMHdXbTBicjEtR2tnQmswMkc5eTZ0U0JsNl8yNmpxMWpVLTk2SU10VEozeUdDcUtVY0hkX25TZmFtTklJc1RRVHFWUUo4T0l3SUZUV08tSm0zYWp5bEM1eVZteS11WGRhbDZIRzZIaFpUeEF4eVVKRkZnVUlFUXRqUVBSenJOUGROaGRsclFBajlLMXVmczNTRV9pUWYxUWRSUmk2TmI1YjcwcDZST2FfZkNjZGFPQUhrRzdHZ2t3R2ZQUlR2X2Q3Z9IBywFBVV95cUxNLWlkMHdXbTBicjEtR2tnQmswMkc5eTZ0U0JsNl8yNmpxMWpVLTk2SU10VEozeUdDcUtVY0hkX25TZmFtTklJc1RRVHFWUUo4T0l3SUZUV08tSm0zYWp5bEM1eVZteS11WGRhbDZIRzZIaFpUeEF4eVVKRkZnVUlFUXRqUVBSenJOUGROaGRsclFBajlLMXVmczNTRV9pUWYxUWRSUmk2TmI1YjcwcDZST2FfZkNjZGFPQUhrRzdHZ2t3R2ZQUlR2X2Q3Zw
+    image: ''
+    sources:
+    - National Herald
+    labels:
+    - AI security
+    - security update
+    rationale: 'AI-related security news: Microsoft''s warning about operational risks from the wave of
+      AI-discovered vulnerabilities and rushed patching.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 04e6ee044726
+    cluster_key: exposed-fix-flaws-microsoft-more-outages-race-risks-security-warns
+    coverage:
+    - title: Race to fix AI-exposed security flaws risks more outages, warns Microsoft
+      url: https://news.google.com/rss/articles/CBMiywFBVV95cUxNLWlkMHdXbTBicjEtR2tnQmswMkc5eTZ0U0JsNl8yNmpxMWpVLTk2SU10VEozeUdDcUtVY0hkX25TZmFtTklJc1RRVHFWUUo4T0l3SUZUV08tSm0zYWp5bEM1eVZteS11WGRhbDZIRzZIaFpUeEF4eVVKRkZnVUlFUXRqUVBSenJOUGROaGRsclFBajlLMXVmczNTRV9pUWYxUWRSUmk2TmI1YjcwcDZST2FfZkNjZGFPQUhrRzdHZ2t3R2ZQUlR2X2Q3Z9IBywFBVV95cUxNLWlkMHdXbTBicjEtR2tnQmswMkc5eTZ0U0JsNl8yNmpxMWpVLTk2SU10VEozeUdDcUtVY0hkX25TZmFtTklJc1RRVHFWUUo4T0l3SUZUV08tSm0zYWp5bEM1eVZteS11WGRhbDZIRzZIaFpUeEF4eVVKRkZnVUlFUXRqUVBSenJOUGROaGRsclFBajlLMXVmczNTRV9pUWYxUWRSUmk2TmI1YjcwcDZST2FfZkNjZGFPQUhrRzdHZ2t3R2ZQUlR2X2Q3Zw
+      source: National Herald
+      published: '2026-11-23T04:37:20+00:00'
+    published: '2026-11-23T04:37:20+00:00'
+  breaches:
+  - id: 52411d3e904d
+    rank: 1
+    title: Cleverbridge confirms data breach exposed customer card numbers and CVV codes
+    summary: E-commerce platform Cleverbridge confirmed that attackers copied payment card data from its
+      systems, including card numbers, expiration dates and CVV/CVC security codes. Cleverbridge detected
+      the unauthorized activity on November 4 and began notifying affected individuals on November 20;
+      its public update does not list the exposed fields or say whether the same details were taken for
+      every customer.
+    url: https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/22/credit-cards.jpg
+    sources:
+    - BleepingComputer
+    - Cybersecurity News
+    labels:
+    - data breach
+    - e-commerce
+    rationale: Confirmed breach at a named e-commerce provider involving theft of payment card data, with
+      customer notifications underway.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 52411d3e904d
+    cluster_key: and-breach-card-cleverbridge-codes-confirms-customer-cvv-data-exposed-numbers
+    coverage:
+    - title: Cleverbridge warns hackers stole credit card numbers, CVVs in data breach
+      url: https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach
+      source: BleepingComputer
+      published: '2026-11-22T15:43:04+00:00'
+    - title: Cleverbridge Confirms Hackers Stole Customer Card Numbers and CVV Codes in a Major Data Breach
+      url: https://cybersecuritynews.com/cleverbridge-data-breach
+      source: Cybersecurity News
+      published: '2026-11-23T02:37:31+00:00'
+    published: '2026-11-22T15:43:04+00:00'
+  - id: 6f343c7e34a1
+    rank: 2
+    title: CSC Telecom leak exposed 125 million SMS messages from Swedbank, SEB, airBaltic and others
+    summary: The Latvian branch of telecom provider CSC Telecom left a database containing more than 125
+      million SMS messages exposed, spanning October 2022 to September 2026. The leaked records include
+      clients of Swedbank, SEB, airBaltic and dozens of other companies, and were updated in the database.
+    url: https://databreaches.net/2026/11/22/huge-european-telecom-leak-exposes-swedbank-seb-airbaltic-and-dozens-of-other-companies-clients
+    image: ''
+    sources:
+    - DataBreaches.net
+    labels:
+    - data breach
+    rationale: Large-scale exposure of sensitive telecom data from a named provider affecting many companies'
+      clients.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6f343c7e34a1
+    cluster_key: 125-airbaltic-csc-exposed-from-leak-messages-million-seb-sms-swedbank-telecom
+    coverage:
+    - title: Huge European telecom leak exposes Swedbank, SEB, airBaltic and dozens of other companies’
+        clients
+      url: https://databreaches.net/2026/11/22/huge-european-telecom-leak-exposes-swedbank-seb-airbaltic-and-dozens-of-other-companies-clients
+      source: DataBreaches.net
+      published: '2026-11-22T13:51:01+00:00'
+    published: '2026-11-22T13:51:01+00:00'
+  - id: 8f8012681d0f
+    rank: 3
+    title: FBI Investigating Apparent Hack of National Crime Information Center Database
+    summary: The FBI is investigating an apparent intrusion into its National Crime Information Center
+      (NCIC), the nationwide database used by local, state, and federal law enforcement, according to
+      AP sources. It would mark the second hack of FBI systems in two months. The scope and data affected
+      have not been disclosed as the investigation continues.
+    url: https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says
+    image: https://www.securityweek.com/wp-content/uploads/2024/04/FBI-Surveillance.jpg
+    sources:
+    - SecurityWeek
+    - BleepingComputer
+    - DataBreaches.net
+    labels:
+    - data breach
+    - law enforcement
+    - government
+    rationale: Confirmed security incident at a critical national law enforcement database; high sensitivity
+      and public interest.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 8f8012681d0f
+    cluster_key: apparent-center-crime-database-fbi-hack-information-investigating-national
+    coverage:
+    - title: FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source
+        Says
+      url: https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says
+      source: SecurityWeek
+      published: '2026-11-22T00:53:02+00:00'
+    - title: FBI reportedly hacked again, this time targeting nationwide police database
+      url: https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database
+      source: BleepingComputer
+      published: '2026-11-21T14:26:04+00:00'
+    - title: FBI hacked again; criminal information database targeted
+      url: https://databreaches.net/2026/11/21/fbi-hacked-again-criminal-information-database-targeted
+      source: DataBreaches.net
+      published: '2026-11-21T12:37:22+00:00'
+    published: '2026-11-22T00:53:02+00:00'
+    is_carryover: true
+  fraud_phishing:
+  - id: 860de5224edb
+    rank: 1
+    title: Fake Black Friday Deals Appear Early, Missing the Usual Scam Red Flags
+    summary: This year's fake Black Friday deals began appearing on September 1, more than a month earlier
+      than last year, and most lack the usual warning signs — they don't mention the holiday or use a
+      lookalike address, according to Doppel. The lures surface as posts in Facebook groups or pages on
+      Google Sites that carry a retailer's sale language on behalf of a software, payment, travel, or
+      crypto service. Because the pitches avoid typical indicators like typosquatted domains, shoppers
+      may not recognize them as scams before handing over payment or account details.
+    url: https://www.helpnetsecurity.com/2026/11/23/black-friday-scams-doppel-report
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2024/11/25153040/fraud-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - phishing
+    - e-commerce
+    - social engineering
+    rationale: Concrete analysis of a shopping-scam wave with specific lure details (Facebook group posts
+      and Google Sites pages impersonating retail sales) and earlier-than-usual timing; fits the Fraud
+      & Phishing topic and is not already published. Other candidates in the pool are breach, vulnerability,
+      or tool stories that belong to other topics or were already published.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 860de5224edb
+    cluster_key: appear-black-deals-early-fake-flags-friday-missing-red-scam-the-usual
+    coverage:
+    - title: Black Friday scams started earlier this year without the usual red flags
+      url: https://www.helpnetsecurity.com/2026/11/23/black-friday-scams-doppel-report
+      source: Help Net Security
+      published: '2026-11-23T06:00:16+00:00'
+    published: '2026-11-23T06:00:16+00:00'
+  - id: 99be5d740a9e
+    rank: 2
+    title: Fake Microsoft Service Notifications Ride the Microsoft 365 Outage
+    summary: A wave of phishing emails exploited the major Microsoft 365 outage of November 12, 2026;
+      a day later, attackers sent messages posing as Microsoft service notifications. The fake alerts
+      mimic official service-status pages and use the disruption to create urgency, pressuring recipients
+      to click through and hand over credentials. Gurucul's threat research documents the campaign as
+      an example of attackers weaponizing real outages.
+    url: https://community.gurucul.com/articles/ThreatResearch/How-Phishing-Campaigns-Exploited-the-18-11-2026
+    image: https://community.gurucul.com/Contents/Assets/logo.png
+    sources:
+    - Community Portal
+    labels:
+    - phishing
+    - email security
+    - Microsoft
+    rationale: 'Only candidate that fits the Fraud & Phishing topic: a concrete phishing campaign using
+      fake Microsoft service notifications after the M365 outage. It updates the earlier M365-outage phishing
+      warning with additional technical analysis of the lure.'
+    is_update: true
+    supersedes: 30f8b8be0e6e
+    what_changed: New technical analysis of the same phishing wave, detailing how fake Microsoft service
+      notifications were deployed the day after the outage.
+    cluster: 30f8b8be0e6e
+    cluster_key: 365-fake-microsoft-microsoft-notifications-outage-ride-service-the
+    coverage:
+    - title: How Phishing Campaigns Exploited the Microsoft 365 Outage
+      url: https://community.gurucul.com/articles/ThreatResearch/How-Phishing-Campaigns-Exploited-the-18-11-2026
+      source: Community Portal
+      published: '2026-11-22T07:03:44.671374+00:00'
+    published: '2026-11-22T07:03:44.671374+00:00'
+    is_carryover: true
+  - id: 2085b0f003a5
+    rank: 3
+    title: Mail Bombing Attacks Fuel IT Helpdesk Impersonation Scams
+    summary: Researchers documented a large-scale campaign in which attackers first flood a victim's inbox
+      with emails, then call the victim while impersonating IT helpdesk staff. The fake technician uses
+      the email chaos as a pretext to convince the user their account is being spammed or compromised,
+      and pressures them into handing over passwords, MFA codes, or access that lets the attackers take
+      over the account. The combination of inbox flooding and a trusted-sounding helpdesk call is designed
+      to exploit alert fatigue and urgency.
+    url: https://www.infosecurity-magazine.com/news/mail-bombing-attacks-it-helpdesk
+    image: https://assets.infosecurity-magazine.com/webpage/og/2d1e6ffd-a4c3-409c-a9c6-0c7845da47ef.jpg
+    sources:
+    - Infosecurity Magazine
+    labels:
+    - help desk scam
+    - social engineering
+    rationale: New, concrete social-engineering campaign targeting everyday users with a recognizable
+      mail-bomb plus fake helpdesk call lure.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2085b0f003a5
+    cluster_key: attacks-bombing-fuel-helpdesk-impersonation-mail-scams
+    coverage:
+    - title: Mail Bombing Attacks Fuel IT Helpdesk Impersonation Scams
+      url: https://www.infosecurity-magazine.com/news/mail-bombing-attacks-it-helpdesk
+      source: Infosecurity Magazine
+      published: '2026-11-20T11:55:00+00:00'
+    published: '2026-11-20T11:55:00+00:00'
+    is_carryover: true
+  policy:
+  - id: 5ea2bb7f402e
+    rank: 1
+    title: Police arrest 354 suspects in dark web cybercrime crackdown
+    summary: Police in 14 countries arrested 354 suspects in Operation TorNado, a joint international
+      law enforcement action targeting vendors and buyers on the Archetyp, Nemesis, Tor2Door, Bohemia,
+      and Kingdom dark web marketplaces. The operation ran from May 2025 to October 2026.
+    url: https://www.bleepingcomputer.com/news/security/police-arrest-354-vendors-buyers-in-global-cybercrime-crackdown
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/15/Arrest.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - law enforcement
+    - takedown
+    rationale: Law enforcement action that removes dark-web marketplace actors and infrastructure; the
+      strongest policy/enforcement fit in the supplied candidate pool.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 5ea2bb7f402e
+    cluster_key: 354-arrest-crackdown-cybercrime-dark-police-suspects-web
+    coverage:
+    - title: Police arrest 354 suspects in dark web cybercrime crackdown
+      url: https://www.bleepingcomputer.com/news/security/police-arrest-354-vendors-buyers-in-global-cybercrime-crackdown
+      source: BleepingComputer
+      published: '2026-11-23T07:04:11.253578+00:00'
+    published: '2026-11-23T07:04:11.253578+00:00'
+  - id: 2ee03e9630cb
+    rank: 2
+    title: CISA Adds Four Actively Exploited Flaws to KEV, Including VMware vCenter and Cisco Expressway
+    summary: 'CISA added four vulnerabilities to its Known Exploited Vulnerabilities catalog based on
+      confirmed active exploitation: CVE-2025-42884 in SAP NetWeaver, CVE-2026-76466 in Cisco Expressway,
+      CVE-2026-123890 in VMware vCenter Server, and CVE-2026-129448 in Apache Roller. Federal agencies
+      are required to remediate by the catalog deadlines, and the entries signal to all organizations
+      which flaws attackers are actively using.'
+    url: https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog
+    image: https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png
+    sources:
+    - CISA
+    - Help Net Security
+    - Dark Reading
+    - The Hacker News
+    - Security
+    - CISA KEV
+    labels:
+    - CISA
+    - KEV
+    - active exploitation
+    - advisory
+    rationale: Official CISA KEV addition is a government advisory that imposes patching obligations for
+      federal agencies and prioritizes defensive action for all organizations.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2ee03e9630cb
+    cluster_key: actively-adds-and-cisa-cisco-exploited-flaws-four-including-kev-vcenter-vmware
+    coverage:
+    - title: CISA Adds Four Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-11-20T12:00:00+00:00'
+    - title: VMware vCenter zero-day exploited for months before patch (CVE-2026-123890)
+      url: https://www.helpnetsecurity.com/2026/11/20/vmware-vcenter-zero-day-cve-2026-123890-exploited
+      source: Help Net Security
+      published: '2026-11-20T12:30:19+00:00'
+    - title: China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day
+      url: https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day
+      source: Dark Reading
+      published: '2026-11-20T21:03:27+00:00'
+    - title: China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal
+        Data
+      url: https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html
+      source: The Hacker News
+      published: '2026-11-20T09:38:15+00:00'
+    - title: VMware patches actively exploited security flaws
+      url: https://www.heise.de/en/news/VMware-patches-actively-exploited-security-flaws-11532137.html
+      source: Security
+      published: '2026-11-20T11:58:00+01:00'
+    - title: 'CISA adds CVE-2026-123890 to Known Exploited Vulnerabilities: VMWare vCenter Authentication
+        Bypass Using an Alternate Path or Channel Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-123890
+      source: CISA KEV
+      published: '2026-11-20T12:00:00+00:00'
+    published: '2026-11-20T12:00:00+00:00'
+    is_carryover: true
+  - id: 1d70fff3427f
+    rank: 3
+    title: CTO of RansomwareHelp Indicted for Wire Fraud After FBI Sting
+    summary: The chief technology officer and co-founder of ransomwarehelp.com was indicted for wire fraud.
+      An FBI sting found the Florida company claimed to use advanced cryptographic tools to restore data,
+      but actually paid ransomware attackers for decryption keys and resold them to victims at a markup
+      for work that was never performed.
+    url: https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud
+    image: https://krebsonsecurity.com/b-spycloud/5.png
+    sources:
+    - Krebs on Security
+    labels:
+    - indictment
+    - law enforcement
+    - ransomware
+    - cybercrime
+    rationale: Federal indictment of a ransomware-recovery firm executive following an FBI sting is a
+      law enforcement action targeting fraud tied to ransomware.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1d70fff3427f
+    cluster_key: after-cto-fbi-for-fraud-indicted-ransomwarehelp-sting-wire
+    coverage:
+    - title: CTO of ‘RansomwareHelp’ Indicted for Wire Fraud
+      url: https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud
+      source: Krebs on Security
+      published: '2026-11-21T00:36:39+00:00'
+    published: '2026-11-21T00:36:39+00:00'
+    is_carryover: true
+  security_tools:
+  - id: b7a2615917d2
+    rank: 1
+    title: 'bettercap v2.42.0: Network Recon and MITM Swiss Army Knife Update'
+    summary: bettercap 2.42.0 updates the open-source framework for network reconnaissance and man-in-the-middle
+      attacks across 802.11, Bluetooth LE, HID, CAN-bus, and IPv4/IPv6 networks. The release keeps the
+      tool current for red teamers and pentesters doing wireless and network-level testing.
+    url: https://kitploit.com/en/posts/bettercap-539ee050edfeff80
+    image: https://assets.kitploit.com/production/public/tools/42/6b968de5f9cb7903a593423010fd50fe2691c6f89161d69c6aee1fcae960707a.png
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - red team
+    - recon
+    - traffic inspection
+    rationale: Significant update to a widely used open-source network pentesting framework.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b7a2615917d2
+    cluster_key: and-army-bettercap-knife-mitm-network-recon-swiss-update
+    coverage:
+    - title: bettercap v2.42.0
+      url: https://kitploit.com/en/posts/bettercap-539ee050edfeff80
+      source: KitPloit
+      published: '2026-11-22T11:55:35+00:00'
+    - title: maigret v0.6.7
+      url: https://kitploit.com/en/posts/maigret-9d3c037d74e2cc04
+      source: KitPloit
+      published: '2026-11-22T07:55:13+00:00'
+    published: '2026-11-22T11:55:35+00:00'
+  - id: 795705c3798c
+    rank: 2
+    title: 'Xalgorix: Open-Source AI Penetration Testing Tool With Self-Verifying Exploit Checks'
+    summary: Xalgorix is an open-source AI penetration testing tool whose main agent hunts for bugs and
+      a second agent re-exploits each finding to verify it before reporting. Unverifiable results are
+      flagged for human review, targeting the false-positive problem in AI-driven pentesting.
+    url: https://www.helpnetsecurity.com/2026/11/23/xalgorix-ai-penetration-testing-tool
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/18112307/xalgorix-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - open source
+    - red team
+    - AI security
+    - security tools
+    rationale: New open-source AI-assisted pentesting tool with a concrete verification workflow, directly
+      relevant to security practitioners.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 795705c3798c
+    cluster_key: checks-exploit-open-penetration-self-source-testing-tool-verifying-with-xalgorix
+    coverage:
+    - title: 'Xalgorix: Open-source AI penetration testing tool'
+      url: https://www.helpnetsecurity.com/2026/11/23/xalgorix-ai-penetration-testing-tool
+      source: Help Net Security
+      published: '2026-11-23T06:30:08+00:00'
+    published: '2026-11-23T06:30:08+00:00'
+  - id: f9ac69f8e330
+    rank: 3
+    title: 'OPcap: Offline PCAP Forensic Analyzer'
+    summary: OPcap is an offline PCAP forensic analyzer for authorized security testing and incident response.
+      It lets analysts inspect captured network traffic without a live environment, supporting DFIR and
+      malware analysis workflows.
+    url: https://kitploit.com/en/tools/gitlab/owlsecx/opcap
+    image: https://assets.kitploit.com/production/public/tools/61092/50acfc4a749273b7a333af189359a03f2d9113ac88f97700d1311b766ff9814a-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - DFIR
+    - malware analysis
+    - incident response
+    rationale: Practical DFIR utility for offline packet capture analysis.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f9ac69f8e330
+    cluster_key: analyzer-forensic-offline-opcap-pcap
+    coverage:
+    - title: OPcap
+      url: https://kitploit.com/en/tools/gitlab/owlsecx/opcap
+      source: KitPloit
+      published: '2026-11-23T00:58:39+00:00'
+    published: '2026-11-23T00:58:39+00:00'
+  - id: 9dc96f72fe82
+    rank: 4
+    title: 'DOMPurify v3.5.0: XSS Sanitizer Library Update'
+    summary: DOMPurify 3.5.0 is a new release of the DOM-only XSS sanitizer for HTML, MathML, and SVG.
+      It provides a secure-by-default configuration with extensive customization hooks, making it a core
+      dependency for web developers hardening user-supplied content.
+    url: https://kitploit.com/en/posts/dompurify-721b4794b586386a
+    image: https://assets.kitploit.com/production/public/tools/237/ddaac853f5ec658e80d8055488a7d4178798f3656c57d8ff20fd53d56a076de1.png
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - developer tools
+    - security tools
+    rationale: Maintenance release of a widely used open-source XSS sanitization library.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9dc96f72fe82
+    cluster_key: dompurify-library-sanitizer-update-xss
+    coverage:
+    - title: DOMPurify v3.5.0
+      url: https://kitploit.com/en/posts/dompurify-721b4794b586386a
+      source: KitPloit
+      published: '2026-11-22T19:57:08+00:00'
+    published: '2026-11-22T19:57:08+00:00'
+  - id: d59c2dc346bf
+    rank: 5
+    title: 'unleashed-firmware Update: Custom Flipper Zero Firmware for Hardware Testing'
+    summary: The updated unleashed-firmware provides a custom firmware for Flipper Zero with Sub-GHz radio,
+      NFC/RFID emulation, infrared, and BadUSB attack features. It gives hardware security testers an
+      open-source platform for embedded and physical security assessments.
+    url: https://kitploit.com/en/posts/unleashed-firmware-64b382aebfbd7df1
+    image: https://assets.kitploit.com/production/public/tools/50767/2ff14a4bc8ee419b4dbd9b4c2efcc05a0c50cab2b04dc74358ca7f05dbcc5e8d-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - embedded
+    - open source
+    - red team
+    - reverse engineering
+    rationale: Active open-source firmware project for Flipper Zero hardware security testing.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d59c2dc346bf
+    cluster_key: custom-firmware-firmware-flipper-for-hardware-testing-unleashed-update-zero
+    coverage:
+    - title: unleashed-firmware — Updated!
+      url: https://kitploit.com/en/posts/unleashed-firmware-64b382aebfbd7df1
+      source: KitPloit
+      published: '2026-11-22T15:56:21+00:00'
+    published: '2026-11-22T15:56:21+00:00'
+  - id: e30a17e9fc84
+    rank: 6
+    title: 'beacon: Windows C2 Beacon Generator for LazyOwn Red Team Framework'
+    summary: beacon generates customizable Windows C2 beacons for the LazyOwn red team framework, with
+      AES-256 encrypted communications, malleable profiles, in-memory BOF/shellcode execution, and post-exploitation
+      modules. It gives red teams a modular way to build and deploy payloads in authorized engagements.
+    url: https://kitploit.com/en/tools/github/grisuno/beacon
+    image: https://assets.kitploit.com/production/public/tools/61069/2c0a903a5e474a01a0c0a9b393b73aab0c66082335ed85851de31377d052f99d-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - red team
+    - open source
+    - Windows
+    - security tools
+    rationale: New offensive tooling for red team C2 beacon generation.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e30a17e9fc84
+    cluster_key: beacon-beacon-for-framework-generator-lazyown-red-team-windows
+    coverage:
+    - title: beacon
+      url: https://kitploit.com/en/tools/github/grisuno/beacon
+      source: KitPloit
+      published: '2026-11-22T01:56:04+00:00'
+    published: '2026-11-22T01:56:04+00:00'
+  - id: 689ee8e8bf05
+    rank: 7
+    title: 'tantrum: Protection Domain Fuzzer for JavaScript Engine Heap Sandbox Escapes'
+    summary: tantrum is a research artifact for protection domain fuzzing that discovers heap sandbox
+      escapes in JavaScript engines. It ships crash discovery logs, Docker replay, and baseline comparisons,
+      giving vulnerability researchers a reproducible harness for engine sandbox testing.
+    url: https://kitploit.com/en/tools/github/leesh3288/tantrum
+    image: https://assets.kitploit.com/production/public/tools/61076/d19b6b5848ede260c0327eb0085d7fc5337fff44a9e27fd45cfb754506a55c09-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - vulnerability research
+    - open source
+    - reverse engineering
+    - security tools
+    rationale: Usable fuzzing artifact for finding sandbox escapes in JS engines, relevant to vulnerability
+      research.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 689ee8e8bf05
+    cluster_key: domain-engine-escapes-for-fuzzer-heap-javascript-protection-sandbox-tantrum
+    coverage:
+    - title: tantrum
+      url: https://kitploit.com/en/tools/github/leesh3288/tantrum
+      source: KitPloit
+      published: '2026-11-22T13:48:49+00:00'
+    published: '2026-11-22T13:48:49+00:00'
+  supply_chain:
+  - id: c7ab8c1527a9
+    rank: 1
+    title: OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms
+    summary: OpenRouter removed three AI hosting providers after researchers at Dragos found the providers
+      were compromised or failed to follow data policies, and revoked Zero Data Retention eligibility
+      for 125 endpoints. Stolen requests may have included prompts marked Zero Data Retention; OpenRouter
+      says it notified all potentially affected customers and its own systems were not breached.
+    url: https://cybersecuritynews.com/openrouter-ai-chat-leaks
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/OpenRouter-AI-Chat-Leaks.webp
+    sources:
+    - Cybersecurity News
+    - The Hacker News
+    labels:
+    - supply-chain
+    - data breach
+    - cloud security
+    rationale: 'Follow-up to the previously reported OpenRouter exposure: the vendor has now confirmed
+      provider removal, ZDR revocation for 125 endpoints, and customer notification, which is a material
+      containment update.'
+    is_update: true
+    supersedes: f942b1f88083
+    what_changed: OpenRouter confirmed it removed the three compromised providers, revoked Zero Data Retention
+      eligibility for 125 endpoints, and notified all potentially affected customers; OpenRouter itself
+      was not breached.
+    cluster: f942b1f88083
+    cluster_key: after-catch-drops-firms-hosting-months-openrouter-prompt-providers-researchers-theft
+    coverage:
+    - title: OpenRouter Users’ Private AI Chats Possibly Exposed Via Compromised Third-Party Providers
+      url: https://cybersecuritynews.com/openrouter-ai-chat-leaks
+      source: Cybersecurity News
+      published: '2026-11-22T03:58:45+00:00'
+    - title: OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting
+        Firms
+      url: https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html
+      source: The Hacker News
+      published: '2026-11-22T05:06:55+00:00'
+    published: '2026-11-22T03:58:45+00:00'
+  - id: 038a1ffb1a03
+    rank: 2
+    title: Over 100 Debian Packages Still Ship Distrusted CA Certificates After Trust Store Update
+    summary: A scan of a Debian package mirror by Debian developer Steve McIntyre found that more than
+      100 packages still contain copies of distrusted certificate authority (CA) certificates, including
+      the emSign ECC Root CA that Debian removed from its system trust store on October 20. The finding
+      shows that updating the OS trust store does not change which certificates an application accepts,
+      so affected packages may keep trusting revoked CAs. Users should audit packages that embed their
+      own CA lists.
+    url: https://cybersecuritynews.com/debian-packages-ca-certificates
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Debian-Packages-CA-Certificates.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - certificate trust
+    - supply chain
+    rationale: 'Concrete trust-store gap in the Debian supply chain: distrusted CA certificates remain
+      bundled in 100+ packages with an actionable audit step.'
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 038a1ffb1a03
+    cluster_key: 100-after-certificates-debian-distrusted-over-packages-ship-still-store-trust-update
+    coverage:
+    - title: Over 100 Debian Packages Still Contain Distrusted CA Certificates Despite Security Updates
+      url: https://cybersecuritynews.com/debian-packages-ca-certificates
+      source: Cybersecurity News
+      published: '2026-11-20T16:39:48+00:00'
+    published: '2026-11-20T16:39:48+00:00'
+    is_carryover: true
+  - id: e4e3fe1ca7b8
+    rank: 3
+    title: Android Developer Verification Expands to All Countries and Every Install Source
+    summary: Google will require developers to verify their identity and register apps for normal installs
+      on certified Android devices starting January 2027. The rollout begins with seven app distributors
+      — Google Play, Galaxy Store, Honor, Oppo, Xiaomi, Transsion, and Vivo — and broadens over several
+      months to every install source. Unverified developers will lose the standard install experience
+      as the program expands.
+    url: https://www.helpnetsecurity.com/2026/11/20/android-developer-verification-power-users
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/11/19225129/android_developer_verification-1500.webp
+    sources:
+    - Help Net Security
+    labels:
+    - Android
+    - supply chain
+    - malicious apps
+    - policy
+    rationale: Android app distribution is a core software supply chain; mandatory identity verification
+      across all install sources is a concrete control against malicious and impersonating apps at scale.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e4e3fe1ca7b8
+    cluster_key: all-and-android-countries-developer-every-expands-install-source-verification
+    coverage:
+    - title: Android developer verification will reach every install source, with a side door for power
+        users
+      url: https://www.helpnetsecurity.com/2026/11/20/android-developer-verification-power-users
+      source: Help Net Security
+      published: '2026-11-19T23:03:24+00:00'
+    published: '2026-11-19T23:03:24+00:00'
+    is_carryover: true
+  threats:
+  - id: 7ba762e62cde
+    rank: 1
+    title: Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices
+    summary: GL.iNet confirmed attackers exploited a vulnerability in its cloud remote management service
+      to install custom malware on customers' routers and KVM devices. Affected users reported backdoors
+      and reverse shells giving remote access to the infected devices.
+    url: https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/22/routers-kvms.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - exploited in the wild
+    - malware
+    - vulnerability
+    rationale: Confirmed exploitation of a cloud management flaw to compromise edge devices, with observed
+      backdoors and reverse shells — an active threat defenders can act on.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 7ba762e62cde
+    cluster_key: cloud-devices-exploit-flaw-hackers-inet-infect-kvm-routers
+    coverage:
+    - title: Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices
+      url: https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices
+      source: BleepingComputer
+      published: '2026-11-22T18:45:37+00:00'
+    published: '2026-11-22T18:45:37+00:00'
+  - id: 84434769c2b0
+    rank: 2
+    title: 'Inside The Server: 14 Months of Offensive Cyber Operations Targeting Europe'
+    summary: Group-IB discovered an internet-exposed open directory containing files that appear tied
+      to offensive cyber operations against European targets over a 14-month period. The researchers could
+      not attribute the activity and are asking the threat intelligence community to help investigate.
+    url: https://www.group-ib.com/blog/offensive-cyber-operations-europe
+    image: https://www.group-ib.com/wp-content/uploads/facebook_-1200x630-2026-11-10t145556.099.png
+    sources:
+    - Group-IB
+    labels:
+    - threat intelligence
+    - investigation
+    - targeted attacks
+    rationale: Evidence of long-running offensive cyber operations directed at Europe, surfaced by a threat
+      research firm; relevant to defenders tracking active targeting.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 84434769c2b0
+    cluster_key: cyber-europe-inside-months-offensive-operations-server-targeting-the
+    coverage:
+    - title: 'Inside The Server: 14 Months of Offensive Cyber Operations Targeting Europe'
+      url: https://www.group-ib.com/blog/offensive-cyber-operations-europe
+      source: Group-IB
+      published: '2026-11-23T07:04:11.253578+00:00'
+    published: '2026-11-23T07:04:11.253578+00:00'
+  - id: 47d625296a80
+    rank: 3
+    title: Gootloader Campaign Targets US Legal Professionals via 1,000+ Compromised WordPress Sites
+    summary: Gootloader operators are using poisoned search results and more than 1,000 compromised WordPress
+      sites to steer US legal professionals toward ransomware infections. The campaign has been linked
+      to over $28 million in ransom payments, with attackers blending into normal system activity to evade
+      detection.
+    url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-19-2026
+    image: https://images.ctfassets.net/pq3mldkivosa/1WiEq3et30jYsrxsWgfoLd/fbd1de9f1c63ebf1fe47b6b8e6fedc9e/shutterstock_2151784445.jpg
+    sources:
+    - Cyware
+    labels:
+    - malware
+    - ransomware
+    rationale: Active Gootloader campaign with new campaign-scope details beyond the previously published
+      DOJ Gootloader figures; the two Cyware briefings report the same campaign and are collapsed into
+      one story.
+    is_update: true
+    supersedes: 7c9e29b5341b
+    what_changed: New reporting adds that the Gootloader campaign specifically targeted US legal professionals
+      via poisoned search results and more than 1,000 compromised WordPress sites, with over $28 million
+      in ransom payments.
+    cluster: 41a3ad1ce4ca
+    cluster_key: 000-campaign-compromised-gootloader-legal-professionals-sites-targets-via-wordpress
+    coverage:
+    - title: Cyware Daily Threat Intelligence - November 19, 2026
+      url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-19-2026
+      source: Cyware
+      published: '2026-11-22T07:03:44.671374+00:00'
+    - title: Cyware Daily Threat Intelligence - November 17, 2026
+      url: https://www.cyware.com/resources/threat-briefings/daily-threat-briefing/cyware-daily-threat-intelligence-november-17-2026
+      source: Cyware
+      published: '2026-11-22T07:03:44.671374+00:00'
+    published: '2026-11-22T07:03:44.671374+00:00'
+    is_carryover: true
+  vulnerabilities:
+  - id: b0d30d9579e7
+    rank: 1
+    title: F5 Releases Emergency Patches for Critical BIG-IP RCE Flaws, Including CVE-2026-121805
+    summary: F5 issued emergency patches for critical BIG-IP vulnerabilities disclosed in November 2026,
+      including unauthenticated remote code execution flaws such as CVE-2026-121805. With more than 177,000
+      internet-exposed BIG-IP instances and no available mitigations, organizations should apply the out-of-band
+      updates immediately.
+    url: https://aviatrix.ai/threat-research-center/f5-big-ip-rce-dos-cve-2026-121805-emergency-patches-rce-flaws
+    image: https://images.ctfassets.net/mvxxnmpzvwpe/5z323QiTmgWF7bMVvh5lP4/243ca5df4c9398e1303f72b5199e5d4e/f5-big-ip-rce-dos-cve-2026-121805-emergency-patches-rce-flaws.png?w=1200&h=630&fit=fill&fm=jpg&q=85
+    sources:
+    - Aviatrix
+    - Cybersecurity News
+    labels:
+    - F5
+    - remote code execution
+    - security update
+    rationale: Critical unauthenticated RCE flaws in widely deployed BIG-IP appliances with a very large
+      exposed population and emergency out-of-band patches.
+    is_update: true
+    supersedes: e2ed8d780a10
+    what_changed: Adds CVE-2026-121805 and reports more than 177,000 internet-exposed BIG-IP instances
+      with no mitigations.
+    cluster: e2ed8d780a10
+    cluster_key: 121805-2026-big-critical-cve-emergency-flaws-for-including-patches-rce-releases
+    coverage:
+    - title: 'F5 BIG-IP RCE Flaws 2026: Emergency Patches for CVE-2026-121805 & More'
+      url: https://aviatrix.ai/threat-research-center/f5-big-ip-rce-dos-cve-2026-121805-emergency-patches-rce-flaws
+      source: Aviatrix
+      published: '2026-11-23T07:04:11.253578+00:00'
+    - title: Palo Alto Confirms NGINX Vulnerabilities Impact PAN-OS and Releases Workarounds
+      url: https://cybersecuritynews.com/palo-alto-confirms-nginx-rce-vulnerabilities
+      source: Cybersecurity News
+      published: '2026-11-23T05:40:07+00:00'
+    published: '2026-11-23T07:04:11.253578+00:00'
+  - id: f13e740849cf
+    rank: 2
+    title: Upload2Shell Ghostscript Flaw Lets Attackers Run Commands via WordPress, Email, and Print Servers
+    summary: Researchers demonstrated that the Ghostscript sandbox-escape flaw CVE-2026-125396 (Upload2Shell)
+      can be triggered indirectly through WordPress, Roundcube webmail, and Linux print servers that process
+      uploaded files. The flaw affects Ghostscript before 10.08.0; administrators should update Ghostscript
+      and review any service that renders PDFs, PostScript, or images.
+    url: https://cybersecuritynews.com/upload2shell-flaw
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Upload2Shell-Flaw.webp
+    sources:
+    - Cybersecurity News
+    - The Hacker News
+    labels:
+    - remote code execution
+    - vulnerability
+    - security update
+    rationale: Update to the Upload2Shell story adds concrete affected applications (WordPress, Roundcube,
+      print servers) and the CVSS 4.0 score, expanding the practical attack surface.
+    is_update: true
+    supersedes: 3e9409d09a15
+    what_changed: Adds that the flaw was demonstrated through WordPress, Roundcube webmail, and Linux
+      print servers, and gives the CVSS 4.0 score.
+    cluster: 3e9409d09a15
+    cluster_key: and-attackers-commands-email-flaw-ghostscript-lets-print-run-upload2shell-via-wordpress
+    coverage:
+    - title: Hackers Could Execute Commands on WordPress, Email and Print Servers Through Upload2Shell
+        Flaw
+      url: https://cybersecuritynews.com/upload2shell-flaw
+      source: Cybersecurity News
+      published: '2026-11-22T02:43:08+00:00'
+    - title: Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular
+        Apps
+      url: https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html
+      source: The Hacker News
+      published: '2026-11-22T05:03:41+00:00'
+    published: '2026-11-22T02:43:08+00:00'
+  - id: e611f84049af
+    rank: 3
+    title: Researchers Hack Volkswagen ID.4 Over Bluetooth to Spy on Conversations and Track Location
+    summary: Hungarian researchers demonstrated Bluetooth flaws in a Volkswagen ID.4 that could let attackers
+      access the hands-free microphone, monitor GPS location, and control cabin features. Some vehicles
+      remain exposed roughly 16 months after the vulnerabilities became public due to a slow patch rollout;
+      Volkswagen owners should check for updates.
+    url: https://cybersecuritynews.com/hack-volkswagen-cars-via-bluetooth
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Researchers-Hack-Volkswagen-Cars-via-Bluetooth-to-Spy-on-Conversations-and-Track-GPS-Locations.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - vulnerability research
+    - embedded
+    rationale: Practical wireless attack on a widely used consumer vehicle enabling eavesdropping and
+      tracking, with delayed vendor patching leaving vehicles exposed.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e611f84049af
+    cluster_key: and-bluetooth-conversations-hack-location-over-researchers-spy-track-volkswagen
+    coverage:
+    - title: Researchers Hack Volkswagen Cars via Bluetooth to Spy on Conversations and Track GPS Locations
+      url: https://cybersecuritynews.com/hack-volkswagen-cars-via-bluetooth
+      source: Cybersecurity News
+      published: '2026-11-23T03:09:11+00:00'
+    published: '2026-11-23T03:09:11+00:00'
