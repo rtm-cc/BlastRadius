@@ -1,0 +1,1160 @@
+date: '2026-11-26'
+updated_at: '2026-11-26T07:08:17+00:00'
+topics:
+  ai_security:
+  - id: 9ffd4094f6f9
+    rank: 1
+    title: 'Microsoft: China''s Salt Typhoon and North Korea Groups Are Adopting ARTEX'
+    summary: Microsoft Threat Intelligence reports that the ARTEX agentic AI penetration-testing framework
+      is being rapidly integrated into the hacking toolkits of groups from China and North Korea, including
+      China's Salt Typhoon. The new guidance covers how ARTEX agents operate, how to identify their network
+      and system activity, and mitigation steps for defenders.
+    url: https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse
+    image: https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2026/11/ARTEX-featured.png
+    sources:
+    - Microsoft Threat Intelligence
+    - The Record
+    labels:
+    - AI agents
+    - threat intelligence
+    - targeted attacks
+    - autonomous exploitation
+    rationale: Microsoft's new threat-intelligence report names China's Salt Typhoon and North Korea-aligned
+      groups as ARTEX users and adds network/system detection guidance, materially updating earlier ARTEX
+      warnings.
+    is_update: true
+    supersedes: 0fcf761397c9
+    what_changed: Microsoft now attributes ARTEX usage to China's Salt Typhoon and North Korea-aligned
+      threat actors and publishes network and system detection, hunting, and mitigation guidance.
+    cluster: 29cf1def5da9
+    cluster_key: adopting-and-are-artex-china-groups-korea-microsoft-north-salt-typhoon
+    coverage:
+    - title: What defenders need to know about ARTEX, the agentic AI framework threat actors abuse
+      url: https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse
+      source: Microsoft Threat Intelligence
+      published: '2026-11-25T18:09:06+00:00'
+    - title: 'Microsoft: China’s Salt Typhoon hackers are using Artex'
+      url: https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool
+      source: The Record
+      published: '2026-11-25T21:18:00+00:00'
+    published: '2026-11-25T18:09:06+00:00'
+  - id: 35535a8c643a
+    rank: 2
+    title: Italy and Switzerland Warn of Autonomous AI-Agent Attacks Compromising Critical Infrastructure
+    summary: Switzerland's NCSC confirmed its first cases of AI-assisted cyberattacks against Swiss organizations,
+      with AI agents leading to successful compromise of victim IT systems in every known case, affecting
+      companies and critical-infrastructure operators in at least two sectors. Italy issued a parallel
+      warning about automated AI-agent attacks targeting critical-infrastructure organizations.
+    url: https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks
+    image: https://www.bleepstatic.com/content/hl-images/2026/10/21/robot.jpg
+    sources:
+    - BleepingComputer
+    - Cybersecurity News
+    - Malwarebytes
+    labels:
+    - AI agents
+    - critical infrastructure
+    - automated attacks
+    - government
+    rationale: Swiss NCSC confirmed the first AI-assisted attacks against Swiss organizations, all resulting
+      in compromise, while Italy warned critical-infrastructure operators about the same autonomous AI-agent
+      threat.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 35535a8c643a
+    cluster_key: agent-and-attacks-autonomous-compromising-critical-infrastructure-italy-switzerland-warn
+    coverage:
+    - title: Italy and Switzerland warn of autonomous AI-driven cyberattacks
+      url: https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks
+      source: BleepingComputer
+      published: '2026-11-25T19:39:31+00:00'
+    - title: Switzerland Confirms First AI-Agent Cyberattacks That Successfully Compromised IT Systems
+      url: https://cybersecuritynews.com/switzerland-ai-agent-cyberattacks
+      source: Cybersecurity News
+      published: '2026-11-25T16:02:38+00:00'
+    - title: AI agents found an unpatched flaw after being told to “break in”
+      url: https://www.malwarebytes.com/blog/ai/2026/11/ai-agents-found-an-unpatched-flaw-after-being-told-to-break-in
+      source: Malwarebytes
+      published: '2026-11-25T14:24:16+00:00'
+    published: '2026-11-25T19:39:31+00:00'
+  - id: 0cca180c1d26
+    rank: 3
+    title: Shadowserver Finds 4,200 Internet-Exposed AI Hacking Frameworks Hitting Honeypots
+    summary: The Shadowserver Foundation identified around 4,200 internet-exposed instances of AI hacking
+      frameworks on November 23, 2026, up from just under 3,700 a day earlier. Between November 9 and
+      23, Shadowserver also recorded more than 10,000 events from over 80 IP addresses running these tools
+      against its honeypots, quantifying the growing AI-agent attack surface.
+    url: https://cybersecuritynews.com/4000-servers-running-ai-hacking-agents-are-exposed
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/AI-Hacking-Agents.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - AI agents
+    - autonomous exploitation
+    - recon
+    - honeypot
+    rationale: Shadowserver's measurement of thousands of exposed AI hacking frameworks and honeypot traffic
+      provides concrete evidence of AI-agent tooling being deployed against real targets at scale.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 0cca180c1d26
+    cluster_key: 200-exposed-finds-frameworks-hacking-hitting-honeypots-internet-shadowserver
+    coverage:
+    - title: 4,000+ Servers Running AI Hacking Agents Are Exposed to the Internet and Actively Attacking
+      url: https://cybersecuritynews.com/4000-servers-running-ai-hacking-agents-are-exposed
+      source: Cybersecurity News
+      published: '2026-11-26T06:26:55+00:00'
+    published: '2026-11-26T06:26:55+00:00'
+  - id: 6af7ff5161c4
+    rank: 4
+    title: 'Wiz: ARTEX and Cairn ''Intent IDs'' Leak Into Victim Logs, Giving Defenders a Tracking Signal'
+    summary: Wiz Research explains how intent IDs (iNNNN) from agentic offensive frameworks like ARTEX
+      and Cairn leak into victim logs. The analysis shows how defenders can use these counters to pace,
+      deconflict, and attribute AI-driven intrusions, while also documenting where the signal breaks down.
+    url: https://www.wiz.io/blog/agentic-offensive-frameworks-intent-ids-artex-cairn
+    image: https://www.datocms-assets.com/75231/1795602437-agentic-attack_custom.jpeg
+    sources:
+    - Wiz Research
+    labels:
+    - AI agents
+    - autonomous exploitation
+    - threat intelligence
+    - DFIR
+    rationale: Wiz's technical analysis of ARTEX/Cairn intent IDs gives defenders a concrete, reproducible
+      way to detect and track agentic AI attack activity in victim logs.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6af7ff5161c4
+    cluster_key: and-artex-cairn-defenders-giving-ids-intent-into-leak-logs-victim-wiz
+    coverage:
+    - title: 'Inside Agentic Offensive Frameworks: Intent IDs'
+      url: https://www.wiz.io/blog/agentic-offensive-frameworks-intent-ids-artex-cairn
+      source: Wiz Research
+      published: '2026-11-25T14:27:03+00:00'
+    published: '2026-11-25T14:27:03+00:00'
+  - id: cc04be6c84ac
+    rank: 5
+    title: UK NCSC Issues Guidance for Defending Against ARTEX-Like Agentic Offensive Tools
+    summary: The UK's National Cyber Security Centre published guidance urging organizations to apply
+      strong operational discipline to manage the threat from agentic offensive frameworks such as ARTEX.
+      The advisory focuses on reducing the risk that autonomous AI tools can accelerate reconnaissance,
+      credential attacks, and intrusions.
+    url: https://www.infosecurity-magazine.com/news/ncsc-tips-tackle-agentic-threat
+    image: https://assets.infosecurity-magazine.com/webpage/og/72cc2046-b141-4e8d-b54c-2b40c7ba30ab.jpg
+    sources:
+    - Infosecurity Magazine
+    labels:
+    - AI agents
+    - government
+    - threat intelligence
+    rationale: The UK NCSC's formal guidance responds to the spread of ARTEX-like agentic offensive frameworks
+      and gives defenders a government-endorsed mitigation baseline.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: cc04be6c84ac
+    cluster_key: against-agentic-artex-defending-for-guidance-issues-like-ncsc-offensive-tools
+    coverage:
+    - title: NCSC Shares Guidance to Tackle Agentic Threat From ARTEX-Like Tools
+      url: https://www.infosecurity-magazine.com/news/ncsc-tips-tackle-agentic-threat
+      source: Infosecurity Magazine
+      published: '2026-11-25T10:00:00+00:00'
+    published: '2026-11-25T10:00:00+00:00'
+  - id: b47c125572ff
+    rank: 6
+    title: Google Mandates MCP/CLI Access and Agent Identities for Workspace AI Agents
+    summary: Google announced security controls for AI agents across Google Workspace and Google Cloud,
+      including dedicated agent identities, human approval for sensitive operations, prompt-injection
+      screening, and restrictions on third-party AI tools. Starting February 2027, Workspace AI agents
+      will be required to use MCP or CLI access under these controls.
+    url: https://www.helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2026/05/10114938/google-ai-robot.webp
+    sources:
+    - Help Net Security
+    labels:
+    - AI agents
+    - cloud security
+    - prompt injection
+    - security update
+    rationale: Google's new AI-agent security requirements directly address prompt-injection and excessive-permission
+      risks in enterprise agent deployments, making it a significant AI security control update.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b47c125572ff
+    cluster_key: access-agent-agents-and-cli-for-google-identities-mandates-mcp-workspace
+    coverage:
+    - title: Google mandates MCP or CLI access for Workspace AI agents starting February 2027
+      url: https://www.helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements
+      source: Help Net Security
+      published: '2026-11-26T05:30:05+00:00'
+    published: '2026-11-26T05:30:05+00:00'
+  breaches:
+  - id: 91e4797441b4
+    rank: 1
+    title: 1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach
+    summary: 1Password disclosed on November 25 that an attacker compromised an employee's corporate GitHub
+      account and used it to deploy malicious code to backend services, stealing customer records including
+      names, sign-in email addresses, and internal account details. The intruder also copied source code
+      from private repositories and accessed the CI/CD system, but customer password vaults and secrets
+      were not compromised.
+    url: https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbu9vulg5_P2PLmwCbF5nNRu8UujJDFNLLCGackgRWjz4lmkQcAom8TerCouyPh1pF8sgBAiJTwO7qAQN3kLVd-_0e7czxqhyphenhyphenUQuSG6WyCJvoNsI92X7tl1ukE6h8QDLmQBUBJaKBCyTYXjaGMUeaczy-sTIjMvDHdQjphWmWyCsUyIG4Y7WD4J2FoQfgY/s1600/1password.jpg
+    sources:
+    - The Hacker News
+    - Cybersecurity News
+    - BleepingComputer
+    - DataBreaches.net
+    labels:
+    - data breach
+    - supply-chain
+    - github
+    - ci-cd
+    rationale: Newly disclosed breach at a widely used password manager; attacker used an employee GitHub
+      account to reach backend systems and steal customer data. Not previously published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 91e4797441b4
+    cluster_key: 1password-account-and-breach-code-customer-data-github-hacked-source-stolen
+    coverage:
+    - title: 1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach
+      url: https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html
+      source: The Hacker News
+      published: '2026-11-26T04:20:22+00:00'
+    - title: 1Password Hacked – Attackers Breach Backend Systems and Steal Customer Data
+      url: https://cybersecuritynews.com/1password-hacked-2
+      source: Cybersecurity News
+      published: '2026-11-26T03:04:19+00:00'
+    - title: 1Password customer data stolen after employee GitHub account breach
+      url: https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach
+      source: BleepingComputer
+      published: '2026-11-25T21:33:33+00:00'
+    - title: 1Password says a hacker used an employee’s GitHub account to take customer data
+      url: https://databreaches.net/2026/11/25/1password-says-a-hacker-used-an-employees-github-account-to-take-customer-data
+      source: DataBreaches.net
+      published: '2026-11-25T20:37:39+00:00'
+    - title: Task Management App Todoist Hacked, Attackers Breach Production Systems
+      url: https://cybersecuritynews.com/todoist-production-system-breach
+      source: Cybersecurity News
+      published: '2026-11-25T16:39:28+00:00'
+    published: '2026-11-26T04:20:22+00:00'
+  - id: e7c44b9b5dca
+    rank: 2
+    title: US Treasury's FinCEN Confirms Cyberattack, Takes Systems Offline After Unauthorized Access
+    summary: The U.S. Treasury Department's Financial Crimes Enforcement Network (FinCEN) confirmed a
+      cybersecurity incident involving unauthorized access to a limited subset of its systems and took
+      some systems offline as a precaution. The Bureau's Bank Secrecy Act E-Filing website remains operational,
+      and FinCEN has extended deadlines for affected filers while it investigates.
+    url: https://cybersecuritynews.com/fincen-confirms-cyberattack
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/FinCEN-Confirms-Cyberattack-and-Takes-Systems-Offline.webp
+    sources:
+    - Cybersecurity News
+    - SecurityWeek
+    - CyberScoop
+    - The Hacker News
+    - DataBreaches.net
+    - Infosecurity Magazine
+    labels:
+    - data breach
+    - government
+    rationale: Confirmed breach of a U.S. government financial intelligence agency, with systems taken
+      offline and filing deadlines extended. Not previously published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e7c44b9b5dca
+    cluster_key: access-after-confirms-cyberattack-fincen-offline-systems-takes-treasury-unauthorized
+    coverage:
+    - title: U.S. Treasury’s FinCEN Confirms Cyberattack, Takes Systems Offline After Unauthorized Access
+      url: https://cybersecuritynews.com/fincen-confirms-cyberattack
+      source: Cybersecurity News
+      published: '2026-11-25T17:01:30+00:00'
+    - title: US Treasury’s FinCEN Disconnects Systems Following Cyber Incident
+      url: https://www.securityweek.com/us-treasurys-fincen-disconnects-systems-following-cyber-incident
+      source: SecurityWeek
+      published: '2026-11-25T13:39:21+00:00'
+    - title: FinCEN investigates cybersecurity incident, takes systems offline
+      url: https://cyberscoop.com/fincen-investigates-cybersecurity-incident-systems-offline
+      source: CyberScoop
+      published: '2026-11-25T13:03:24+00:00'
+    - title: U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion
+      url: https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html
+      source: The Hacker News
+      published: '2026-11-25T12:30:08+00:00'
+    - title: Treasury’s FinCEN says ‘cybersecurity incident’ includes ‘unauthorized access’ of some systems
+      url: https://databreaches.net/2026/11/25/treasurys-fincen-says-cybersecurity-incident-includes-unauthorized-access-of-some-systems
+      source: DataBreaches.net
+      published: '2026-11-25T12:22:34+00:00'
+    - title: US Treasury Investigates Cyber Incident Amid Reported Federal Agency Breaches
+      url: https://www.infosecurity-magazine.com/news/us-treasury-cyber-incident
+      source: Infosecurity Magazine
+      published: '2026-11-25T11:45:00+00:00'
+    published: '2026-11-25T17:01:30+00:00'
+  - id: e02237131062
+    rank: 3
+    title: FIFA says hackers accessed 'limited set of personal and business information'
+    summary: FIFA, the Switzerland-based international governing body for soccer, disclosed that hackers
+      accessed a limited set of personal and business information in a recent breach. The organization
+      said it is working with relevant authorities and law enforcement to investigate the incident.
+    url: https://therecord.media/fifa-data-breach-limited
+    image: http://cms.therecord.media/uploads/fifa_sign_wc_final_202655407277531_c63256a9d9_o_77bc61d70a.jpg
+    sources:
+    - The Record
+    labels:
+    - data breach
+    rationale: Newly disclosed breach at a major global sports organization, confirmed by the organization
+      and under investigation. Not previously published on the board.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e02237131062
+    cluster_key: accessed-and-business-fifa-hackers-information-limited-personal-says-set
+    coverage:
+    - title: FIFA says hackers accessed ‘limited set of personal and business information’
+      url: https://therecord.media/fifa-data-breach-limited
+      source: The Record
+      published: '2026-11-25T20:40:00+00:00'
+    published: '2026-11-25T20:40:00+00:00'
+  - id: 018873c0f671
+    rank: 4
+    title: Suspected ransomware attack disrupts cancer treatments, surgeries at Guadeloupe hospital
+    summary: New reporting on the University Hospital of Guadeloupe cyberattack identifies it as a suspected
+      ransomware attack that impaired computer systems, forcing doctors to postpone surgeries, suspend
+      some cancer treatments, and revert to pen and paper. France's national cybersecurity agency is investigating.
+    url: https://therecord.media/guadeloupe-ransomware-hospital-cyber
+    image: http://cms.therecord.media/uploads/hush_naidoo_jade_photography_yo01_Z_9_HQ_Aw_unsplash_1b7f562bb0.jpg
+    sources:
+    - The Record
+    labels:
+    - ransomware
+    - critical infrastructure
+    - data breach
+    rationale: Material update to the previously published Guadeloupe university hospital cyberattack;
+      now characterized as suspected ransomware with specific patient-care impacts and an agency investigation.
+    is_update: true
+    supersedes: 04428a52f931
+    what_changed: 'New reporting identifies the incident as a suspected ransomware attack and details
+      patient-care impacts: surgeries postponed, some cancer treatments suspended, and staff reverted
+      to paper records; France''s ANSSI is investigating.'
+    cluster: 04428a52f931
+    cluster_key: attack-cancer-disrupts-guadeloupe-hospital-ransomware-surgeries-suspected-treatments
+    coverage:
+    - title: Suspected ransomware attack disrupts cancer treatments, surgeries at Guadeloupe hospital
+      url: https://therecord.media/guadeloupe-ransomware-hospital-cyber
+      source: The Record
+      published: '2026-11-25T13:30:00+00:00'
+    published: '2026-11-25T13:30:00+00:00'
+  fraud_phishing:
+  - id: e92ea772a702
+    rank: 1
+    title: Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion
+    summary: Palo Alto Networks Unit 42 reports ongoing waves of vishing since August 2026 by crews from
+      the Com cybercrime community, including Bling Libra, Redact and Pink. Attackers call employees posing
+      as IT help desk staff and pressure them into handing over Microsoft 365 and Okta credentials, MFA
+      codes, and access to files — which is then used for data theft and extortion. Targets span financial
+      services, healthcare and legal services in the U.S., U.K. and Australia, plus construction and other
+      sectors.
+    url: https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoCQn2zL8-RpfdhDeb1Zmyn46vLk1s9lerpXtGlcMkN5IGF9nlhEejtwoOXwhznjS7JVrix_FeG_G6yJ6Jb8mI31CU4Mi2dndKvLp-4nG4wWsqMaBpI60HFIk5d8_5uIxj6XEjSt4sixJYkJN8Xeqs4OrgSzOPK48esNtXbQ_FgtVe67B_WZkfpuUSEiD7/s1600/vishing.jpg
+    sources:
+    - The Hacker News
+    - InfraStack
+    labels:
+    - help desk scam
+    - social engineering
+    - phishing
+    - account takeover
+    rationale: 'Update to the earlier Unit 42 ''Com'' vishing story: reporting now names Bling Libra,
+      Redact and Pink and expands the target scope to legal services, construction, and U.K./Australian
+      organizations.'
+    is_update: true
+    supersedes: 92892ea077ed
+    what_changed: Unit 42 reporting now lists additional targets — legal services, construction — across
+      the U.S., U.K. and Australia and names Com-affiliated crews Bling Libra, Redact and Pink behind
+      the vishing waves.
+    cluster: 92892ea077ed
+    cluster_key: accounts-affiliated-and-cloud-com-data-for-hackers-hijack-theft-via-vishing
+    coverage:
+    - title: Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion
+      url: https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html
+      source: The Hacker News
+      published: '2026-11-25T06:37:06+00:00'
+    - title: 'Bling Libra: Microsoft 365 and Okta users fake IT-helpdesk calls steal logins, MFA and files…
+        (CMP-202611-jc5xej)'
+      url: https://infrastack.ai/live/CMP-202611-jc5xej
+      source: InfraStack
+      published: '2026-11-26T07:03:44.980989+00:00'
+    published: '2026-11-25T06:37:06+00:00'
+  - id: 1d07f76d20e7
+    rank: 2
+    title: ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties
+    summary: An account tied to the ShinyHunters collective announced the group's return, while Okta flagged
+      possible links between ShinyHunters and the newly surfaced Inception extortion gang behind large-scale
+      SSO vishing campaigns. Inception publicly rejected the alleged connection. The original reporting
+      tied Inception to phone-based vishing targeting single sign-on credentials at global brands across
+      tech, healthcare, biotech, financial services, gaming and retail.
+    url: https://www.securityweek.com/shinyhunters-claims-comeback-new-inception-group-rejects-alleged-ties
+    image: https://www.securityweek.com/wp-content/uploads/2026/09/cybercrime-hacker.jpeg
+    sources:
+    - SecurityWeek
+    - ScyScan
+    labels:
+    - social engineering
+    - phishing
+    - account takeover
+    rationale: 'Material attribution development in the Inception vishing story: ShinyHunters announces
+      a comeback, Okta sees potential links, and Inception denies the alleged connection.'
+    is_update: true
+    supersedes: 49ae8815f1fe
+    what_changed: 'Attribution update: an account tied to ShinyHunters announced the group''s return and
+      Okta sees possible Inception–ShinyHunters links, while Inception denies the alleged connection.'
+    cluster: 49ae8815f1fe
+    cluster_key: alleged-claims-comeback-group-inception-new-rejects-shinyhunters-ties
+    coverage:
+    - title: ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties
+      url: https://www.securityweek.com/shinyhunters-claims-comeback-new-inception-group-rejects-alleged-ties
+      source: SecurityWeek
+      published: '2026-11-25T14:15:25+00:00'
+    - title: New Inception extortion gang launches large-scale vishing campaign
+      url: https://www.scyscan.com/news/new-inception-extortion-gang-launches-large-scale-vishing-campaign
+      source: ScyScan
+      published: '2026-11-26T07:03:44.980989+00:00'
+    published: '2026-11-25T14:15:25+00:00'
+  - id: 2021ded50c1b
+    rank: 3
+    title: 'Beyond Holiday Scams: 5 Thanksgiving and Black Friday Cyberattacks Targeting Users and Businesses'
+    summary: ANY.RUN researchers document five holiday-themed attacks that abuse seasonal trust. The lures
+      look like Thanksgiving invitations, Black Friday discount messages, or holiday greetings, but behind
+      them are credential-phishing pages, malicious scripts, and unauthorized remote access software.
+      Clicking through can expose corporate credentials and put endpoints and sensitive data at risk.
+    url: https://cybersecuritynews.com/beyond-holiday-scams-5-thankssgiving-and-black-friday-cyberattacks-targeting-users-and-businesses
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Thanksgiving_Black_Friday_Cyberattacks_Banner_1600x900.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - phishing
+    - social engineering
+    - malware
+    rationale: Concrete seasonal lure breakdown showing recognizable Thanksgiving and Black Friday themed
+      phishing and malware delivery chains.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2021ded50c1b
+    cluster_key: and-and-beyond-black-businesses-cyberattacks-friday-holiday-scams-targeting-thanksgiving-users
+    coverage:
+    - title: 'Beyond Holiday Scams: 5 Thanksgiving and Black Friday Cyberattacks Targeting Users and Businesses'
+      url: https://cybersecuritynews.com/beyond-holiday-scams-5-thankssgiving-and-black-friday-cyberattacks-targeting-users-and-businesses
+      source: Cybersecurity News
+      published: '2026-11-25T16:42:01+00:00'
+    published: '2026-11-25T16:42:01+00:00'
+  - id: ed79c30b5521
+    rank: 4
+    title: More than 4,400 Malicious Domains Are Waiting for Holiday Shoppers
+    summary: FortiGuard Labs' Holiday Season Cyber Threats Report 2026 found more than 24,000 newly registered
+      domains containing seasonal shopping keywords over a 90-day period, with over 4,400 classified as
+      malicious. The infrastructure is used for fraudulent storefronts, retailer impersonation, payment
+      fraud and account takeover attacks aimed at shoppers during the holiday rush.
+    url: https://www.helpnetsecurity.com/2026/11/26/fortinet-holiday-shopping-cyber-threats-report
+    image: https://img.helpnetsecurity.com/wp-content/uploads/2024/02/17142025/send_money-1400.jpg
+    sources:
+    - Help Net Security
+    labels:
+    - phishing
+    - e-commerce
+    - account takeover
+    rationale: Shows the concrete scale and shape of holiday shopping fraud infrastructure, including
+      impersonated retailers and fake storefronts targeting consumers.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ed79c30b5521
+    cluster_key: 400-are-domains-for-holiday-malicious-more-shoppers-than-waiting
+    coverage:
+    - title: More than 4,400 malicious domains are waiting for holiday shoppers
+      url: https://www.helpnetsecurity.com/2026/11/26/fortinet-holiday-shopping-cyber-threats-report
+      source: Help Net Security
+      published: '2026-11-26T06:00:53+00:00'
+    published: '2026-11-26T06:00:53+00:00'
+  policy:
+  - id: 54bad3dbbd1d
+    rank: 1
+    title: Australia Passes Digital Duty of Care Act
+    summary: Australia's Parliament passed the Digital Duty of Care Act, requiring online providers to
+      preempt foreseeable harms, including threats of violence and rape, by establishing protocols. The
+      law imposes new statutory obligations on big tech platforms.
+    url: https://therecord.media/australia-passes-online-safety-legislation-preempt-harms
+    image: http://cms.therecord.media/uploads/australia_flag_luis_chavez_unsplash_7d5fcdecdc.jpg
+    sources:
+    - The Record
+    labels:
+    - policy
+    - government
+    - online safety
+    rationale: A new law with binding obligations for online platforms, qualifying as a legislative change
+      that alters what organizations must do.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 54bad3dbbd1d
+    cluster_key: act-australia-care-digital-duty-passes
+    coverage:
+    - title: Australia passes tough legislation requiring big tech to preempt foreseeable harms
+      url: https://therecord.media/australia-passes-online-safety-legislation-preempt-harms
+      source: The Record
+      published: '2026-11-25T17:07:00+00:00'
+    published: '2026-11-25T17:07:00+00:00'
+  - id: 88f4fb5926f7
+    rank: 2
+    title: EU Sanctions 30 Individuals and Two Entities for FIMI and Malicious Cyber Activities
+    summary: The EU Council imposed sanctions on 30 individuals and two entities for Russian foreign information
+      manipulation and interference and malicious cyber activities, including the Social Design Agency
+      (SDA). The measures extend existing EU restrictive actions.
+    url: https://support4partnership.org/en/news/russias-fimi-and-malicious-cyber-activities-council-imposes-sanctions-on-30-individuals-and-two-entities
+    image: https://support4partnership.org/img/s/850x567/upload/images/article/14148/c2b57e095ff69d5360103ce5460f4d3d.jpg
+    sources:
+    - Support4Partnership
+    labels:
+    - sanctions
+    - EU
+    - Russia
+    - cybercrime
+    rationale: Sanctions are a direct law enforcement and policy action targeting specific threat actors,
+      fitting the topic's mandate.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 88f4fb5926f7
+    cluster_key: activities-and-and-cyber-entities-fimi-for-individuals-malicious-sanctions-two
+    coverage:
+    - title: 'Russia’s FIMI and malicious cyber activities: Council imposes sanctions on 30 individuals
+        and two entities'
+      url: https://support4partnership.org/en/news/russias-fimi-and-malicious-cyber-activities-council-imposes-sanctions-on-30-individuals-and-two-entities
+      source: Support4Partnership
+      published: '2026-11-26T07:03:44.980989+00:00'
+    published: '2026-11-26T07:03:44.980989+00:00'
+  - id: 6762bc9d8964
+    rank: 3
+    title: US Anti-Scam Surge Hits 800 Defendants and 29 Scam Compounds
+    summary: The DOJ and FBI announced an anti-scam surge that has targeted over 800 defendants and hit
+      29 scam compounds, representing a large-scale law enforcement operation against fraudulent operations.
+    url: https://www.infosecurity-magazine.com/news/doj-anti-scam-surge-800-defendants
+    image: https://assets.infosecurity-magazine.com/webpage/og/92d1631b-998c-43dc-9685-90525adbd947.jpg
+    sources:
+    - Infosecurity Magazine
+    - Help Net Security
+    labels:
+    - law enforcement
+    - scam centers
+    - DOJ
+    rationale: A coordinated takedown/arrest action against scammers qualifies as enforcement that removes
+      real threat actors.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 6762bc9d8964
+    cluster_key: 800-and-anti-compounds-defendants-hits-scam-scam-surge
+    coverage:
+    - title: US Anti-Scam Surge Hits 800 Defendants and 29 Scam Compounds
+      url: https://www.infosecurity-magazine.com/news/doj-anti-scam-surge-800-defendants
+      source: Infosecurity Magazine
+      published: '2026-11-25T16:00:00+00:00'
+    - title: Police disrupt 57 illegal IPTV services and trace €26 million in crypto
+      url: https://www.helpnetsecurity.com/2026/11/25/illegal-iptv-disrupted-europol-crypto
+      source: Help Net Security
+      published: '2026-11-25T08:59:36+00:00'
+    published: '2026-11-25T16:00:00+00:00'
+  security_tools:
+  - id: f2ecb0876c07
+    rank: 1
+    title: 'wazuh v4.14.11: Open-Source XDR and SIEM Platform Update'
+    summary: Wazuh 4.14.11 is the latest release of the open-source extended detection and response (XDR)
+      and SIEM platform, providing threat detection, log analysis, file integrity monitoring, vulnerability
+      assessment, and compliance management across endpoints and cloud workloads. This update keeps the
+      widely used platform current for defenders.
+    url: https://kitploit.com/en/posts/wazuh-ce32e5c21b057aa4
+    image: https://assets.kitploit.com/production/public/tools/312/b30506b109073b47e96e3403771991e0d7a16474f4b690ac89c43d867d739d42.png
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - security tools
+    - threat intelligence
+    - incident response
+    rationale: Major update to a leading open-source SIEM/XDR platform, directly usable by defenders.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: f2ecb0876c07
+    cluster_key: and-open-platform-siem-source-update-wazuh-xdr
+    coverage:
+    - title: wazuh v4.14.11
+      url: https://kitploit.com/en/posts/wazuh-ce32e5c21b057aa4
+      source: KitPloit
+      published: '2026-11-26T00:29:27+00:00'
+    published: '2026-11-26T00:29:27+00:00'
+  - id: d57a371e185f
+    rank: 2
+    title: 'AIGoat: Deliberately Vulnerable Local AI Application for LLM and Agent Red Teaming'
+    summary: AIGoat is an intentionally vulnerable local AI application designed for hands-on LLM, agentic
+      AI, and MCP red teaming. It includes 46 OWASP-mapped attack labs, CTF challenges, and progressive
+      defenses, giving security researchers and practitioners a safe environment to test attacks on AI
+      systems.
+    url: https://kitploit.com/en/tools/github/aisecurityconsortium/aigoat
+    image: https://assets.kitploit.com/production/public/tools/61505/165302571b6ce3bdc44a3172b31967cc7054a260a5db9e0a2fc52b6a2edd3d27-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - AI security
+    - red team
+    - open source
+    - security tools
+    rationale: Concrete, open-source lab environment for AI/LLM red teaming, filling a growing gap in
+      AI security tooling.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: d57a371e185f
+    cluster_key: agent-aigoat-and-application-deliberately-for-llm-local-red-teaming-vulnerable
+    coverage:
+    - title: AIGoat
+      url: https://kitploit.com/en/tools/github/aisecurityconsortium/aigoat
+      source: KitPloit
+      published: '2026-11-26T02:30:45+00:00'
+    published: '2026-11-26T02:30:45+00:00'
+  - id: 069d7e099280
+    rank: 3
+    title: 'TACTBench: Benchmark for Testing Adaptive Conversational Threats Against Tool-Use Agents'
+    summary: TACTBench provides official code and data for TACT-Bench, a benchmark that tests adaptive
+      conversational threats (e.g., social engineering and manipulation) against tool-using agents. It
+      equips AI security researchers with a standardized way to evaluate agent robustness against conversational
+      attacks.
+    url: https://kitploit.com/en/tools/github/iliahashemirad/tactbench
+    image: https://assets.kitploit.com/production/public/tools/61488/0aae56cfeb442cacab0e5560504ba06c164e462b5db685d49faadee01e0299bc-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - AI security
+    - open source
+    - security tools
+    rationale: New specialized benchmark for assessing conversational threats to AI agents, relevant to
+      the AI security community.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 069d7e099280
+    cluster_key: adaptive-against-agents-benchmark-conversational-for-tactbench-testing-threats-tool-use
+    coverage:
+    - title: TACTBench
+      url: https://kitploit.com/en/tools/github/iliahashemirad/tactbench
+      source: KitPloit
+      published: '2026-11-26T03:31:44+00:00'
+    published: '2026-11-26T03:31:44+00:00'
+  - id: 9b70e06b64cd
+    rank: 4
+    title: 'LiveResponse-NG v0.23.0: Open-Source Live Response and DFIR Toolkit'
+    summary: LiveResponse-NG v0.23.0 is an MIT-licensed live response and DFIR toolkit for Windows and
+      Linux, combining a Go agent with a Rust sidecar for YARA-X memory scanning. New watch mode records
+      processes, connections, and DNS over 1 minute to 24 hours, then scores the window for beaconing,
+      aiding incident responders and threat hunters.
+    url: https://cyberr.ai/post/956c04ab-3a77-40bc-b78b-fc1b2f6c4d92
+    image: https://cyberr.ai/og-image.png
+    sources:
+    - cyberr.ai
+    labels:
+    - open source
+    - DFIR
+    - security tools
+    - incident response
+    rationale: New cross-platform DFIR toolkit with a unique beacon-detection watch mode, directly useful
+      for incident response.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 9b70e06b64cd
+    cluster_key: and-dfir-live-liveresponse-open-response-source-toolkit
+    coverage:
+    - title: Cyberr | The Professional Network for Cybersecurity
+      url: https://cyberr.ai/post/956c04ab-3a77-40bc-b78b-fc1b2f6c4d92
+      source: cyberr.ai
+      published: '2026-11-26T07:03:44.980989+00:00'
+    published: '2026-11-26T07:03:44.980989+00:00'
+  - id: 89804fe0090d
+    rank: 5
+    title: 'awtest: AWS Credential Permission Enumeration Tool'
+    summary: awtest is a command-line tool for quickly enumerating AWS credential permissions across 69
+      services, built for pentesters, red teamers, and cloud security assessors. It simplifies the process
+      of discovering what an AWS identity can actually access.
+    url: https://kitploit.com/en/tools/github/mattmillerai/awtest
+    image: https://assets.kitploit.com/production/public/tools/61526/267bc79ded47988a7491eca02ef9a728985812cf09efd7dbcc69f0b5c62c0530-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - open source
+    - cloud security
+    - red team
+    - security tools
+    rationale: Practical open-source utility for AWS permission auditing, valuable for cloud-focused assessments.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 89804fe0090d
+    cluster_key: aws-awtest-credential-enumeration-permission-tool
+    coverage:
+    - title: awtest
+      url: https://kitploit.com/en/tools/github/mattmillerai/awtest
+      source: KitPloit
+      published: '2026-11-26T06:32:44+00:00'
+    - title: autoswagger
+      url: https://kitploit.com/en/tools/github/intruder-io/autoswagger
+      source: KitPloit
+      published: '2026-11-25T11:05:58+00:00'
+    published: '2026-11-26T06:32:44+00:00'
+  - id: bfbac6f69d64
+    rank: 6
+    title: 'geo-sleuth: AI Agent Skill for Geolocation OSINT'
+    summary: geo-sleuth is an agent skill that determines where a photo was taken using OpenStreetMap
+      geometry, elevation skylines, satellite imagery, and street view, while showing its reasoning. It
+      is compatible with Claude Code, Codex, Cursor, Gemini CLI, OpenCode, and GitHub Copilot, making
+      it a practical OSINT tool for analysts.
+    url: https://kitploit.com/en/posts/geo-sleuth-8d9bd03208ea3772
+    image: https://assets.kitploit.com/production/public/tools/57233/1b6a76662fce75ace9683df6e13f8e322de9098c85106280d3836618f5158eaa-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - OSINT
+    - open source
+    - security tools
+    rationale: Updated OSINT agent skill that is immediately usable across multiple AI coding environments.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: bfbac6f69d64
+    cluster_key: agent-for-geo-geolocation-osint-skill-sleuth
+    coverage:
+    - title: geo-sleuth — Updated!
+      url: https://kitploit.com/en/posts/geo-sleuth-8d9bd03208ea3772
+      source: KitPloit
+      published: '2026-11-26T04:32:36+00:00'
+    published: '2026-11-26T04:32:36+00:00'
+  - id: b47f3467e42f
+    rank: 7
+    title: 'DeepAVR: Multi-Agent LLM Framework for Automatic Vulnerability Repair'
+    summary: DeepAVR is a multi-agent LLM framework that automatically repairs C/C++ vulnerabilities.
+      It localizes faults, generates patches, and validates them against sanitizer PoCs, tests, and security
+      checks, helping researchers and developers automate vulnerability remediation.
+    url: https://kitploit.com/en/tools/github/rimwoohan/deepavr
+    image: https://assets.kitploit.com/production/public/tools/61496/59a7728fa0c55237af25a2665496d1373490e5cd3c700dcddcfd8b9c06c8244c-display-v1.webp
+    sources:
+    - KitPloit
+    labels:
+    - AI security
+    - vulnerability research
+    - open source
+    - security tools
+    rationale: Novel open-source approach to automated C/C++ patching with built-in validation, relevant
+      to vulnerability management.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b47f3467e42f
+    cluster_key: agent-automatic-deepavr-for-framework-llm-multi-repair-vulnerability
+    coverage:
+    - title: DeepAVR
+      url: https://kitploit.com/en/tools/github/rimwoohan/deepavr
+      source: KitPloit
+      published: '2026-11-26T01:30:13+00:00'
+    published: '2026-11-26T01:30:13+00:00'
+  supply_chain:
+  - id: 3f37a934de3b
+    rank: 1
+    title: 'Eclypsium: Exploited Infrastructure Flaws Stem From Bundled Third-Party Software'
+    summary: Eclypsium's November InfraTrust report finds that most infrastructure security advisories
+      tied to exploited vulnerabilities over the past month stem from flaws in third-party software bundled
+      into network appliances rather than code written by the appliance vendors themselves. The analysis
+      underscores how hardware and appliance owners must track the full component software stack of their
+      devices to assess real supply-chain exposure and prioritize mitigations.
+    url: https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances
+    image: https://www.bleepstatic.com/content/hl-images/2026/07/21/infratrust.jpg
+    sources:
+    - BleepingComputer
+    labels:
+    - supply chain
+    - critical infrastructure
+    - vulnerability research
+    rationale: Concrete analysis of exploited flaws in third-party components bundled into network appliances
+      — a recurring supply-chain risk pattern with actionable takeaways for infrastructure operators.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 3f37a934de3b
+    cluster_key: bundled-eclypsium-exploited-flaws-from-infrastructure-party-software-stem-third
+    coverage:
+    - title: InfraTrust warns of exploited supply chain flaws in network appliances
+      url: https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances
+      source: BleepingComputer
+      published: '2026-11-25T15:00:00+00:00'
+    published: '2026-11-25T15:00:00+00:00'
+  - id: 042d40b6aad8
+    rank: 2
+    title: WordPress Blocks Six Backdoored WP Connect Plugins After Developer Account Compromise
+    summary: WordPress removed six plugins developed by WP Connect after they were backdoored on November
+      22, 2026, to enable arbitrary code execution on sites that installed them. The plugins team detected
+      the malicious changes and blocked the releases before they went live, following a suspected compromise
+      of the developer's account. Site owners using any WP Connect plugin should check whether they received
+      a backdoored version and scan for signs of compromise.
+    url: https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNbawIx8zYCfd7sCTbVfIzPFBtykkY65lf8EOswU62pIdZKTrx9ReB3mGnqYqujmW5eGzN_w8pEijAZMTpmOZ3fGB5zFyFaPo4ZhRQ8V0BkAmDCH3WoVqJ3kAfjDcw3_wRjhwphfyJxjF3_rDYiudb-cxt0pY3t8s-IRjNP1aEYHqtO5L1eZMkgBX6y2xD/s1600/wp.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - malicious-package
+    - supply-chain
+    - WordPress
+    rationale: This is a concrete supply-chain attack via a compromised developer account, where backdoored
+      plugins were distributed to WordPress sites. The plugins team blocked the release, but affected
+      sites need to check whether they installed the malicious versions.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 042d40b6aad8
+    cluster_key: account-after-backdoored-blocks-compromise-connect-developer-plugins-six-wordpress
+    coverage:
+    - title: WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live
+      url: https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html
+      source: The Hacker News
+      published: '2026-11-25T06:21:12+00:00'
+    published: '2026-11-25T06:21:12+00:00'
+    is_carryover: true
+  - id: c3f9c9e8005b
+    rank: 3
+    title: 'Databricks: 5,400 Malicious npm Packages Show Hijacked Legit Packages Drive Risk'
+    summary: Databricks Threat Research analyzed 5,400 malicious npm packages and found that hijacked
+      legitimate packages, though only 7% of the total, account for over 99% of downloads. The report
+      highlights that compromised maintainers and account takeovers are the dominant supply-chain risk,
+      far outweighing purely malicious new packages. Developers should audit dependencies for signs of
+      account takeover or backdooring.
+    url: https://www.databricks.com/blog/what-5400-malicious-npm-packages-reveal-about-software-supply-chain-risk-2026
+    image: https://www.databricks.com/sites/default/files/2026-11/cover-notext.png
+    sources:
+    - Databricks
+    labels:
+    - malicious-package
+    - supply-chain
+    - npm
+    - open source
+    rationale: This is original research into the npm supply-chain threat landscape, providing concrete
+      data on the outsized impact of hijacked legitimate packages. It gives developers actionable context
+      for prioritizing dependency audits.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: c3f9c9e8005b
+    cluster_key: 400-databricks-drive-hijacked-legit-malicious-npm-packages-packages-risk-show
+    coverage:
+    - title: What 5,400 Malicious npm Packages Reveal about Software Supply Chain Risk in 2026
+      url: https://www.databricks.com/blog/what-5400-malicious-npm-packages-reveal-about-software-supply-chain-risk-2026
+      source: Databricks
+      published: '2026-11-25T07:03:50.106390+00:00'
+    published: '2026-11-25T07:03:50.106390+00:00'
+    is_carryover: true
+  threats:
+  - id: e8ae7c1ead80
+    rank: 1
+    title: Critical Drupal Fail2Install RCE Exploited to Hijack Unpatched Sites
+    summary: Attackers have been exploiting CVE-2026-132165 ('Fail2Install'), a critical pre-authentication
+      RCE in Drupal core, since at least November 19 to take over unpatched sites. CISA added the flaw
+      to its KEV catalog with a November 27 federal remediation deadline; Drupal has released updates
+      and administrators should apply them immediately.
+    url: https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbChdPRqvJHt9cIG4Z1W9o12tl4thtxIDNNcntDjmIytSIC1PWvOytT0JjY0OJtnba6UVJcEmqNxgOMuWxX2pvNJzjQ70-CIeruqZEDdgaDG66Lv2T6lLMv8cEhrXRie1gcaLz6OoNw6f2822s2yz8jl958kok6WpHmZ7p_n3TRWTdEWSpr1le5T28kFQO/s1600/drupal.gif
+    sources:
+    - The Hacker News
+    - Help Net Security
+    - BleepingComputer
+    - SecurityWeek
+    - Cybersecurity News
+    - CISA
+    - CISA KEV
+    - Rapid7
+    labels:
+    - exploited in the wild
+    - remote code execution
+    - CISA
+    rationale: A critical CMS flaw under confirmed active exploitation with a KEV entry and a short federal
+      remediation deadline.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: e8ae7c1ead80
+    cluster_key: critical-drupal-exploited-fail2install-hijack-rce-sites-unpatched
+    coverage:
+    - title: Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation
+      url: https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html
+      source: The Hacker News
+      published: '2026-11-25T11:23:26+00:00'
+    - title: Critical Drupal installer flaw under active attack (CVE-2026-132165)
+      url: https://www.helpnetsecurity.com/2026/11/25/drupal-installer-rce-cve-2026-132165-exploited
+      source: Help Net Security
+      published: '2026-11-25T13:37:28+00:00'
+    - title: Hackers now exploit critical Drupal RCE flaw to hijack sites
+      url: https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites
+      source: BleepingComputer
+      published: '2026-11-25T10:10:20+00:00'
+    - title: Drupal Flaw Found by Anthropic Scanner Exploited in Attacks
+      url: https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks
+      source: SecurityWeek
+      published: '2026-11-25T08:01:06+00:00'
+    - title: Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library
+      url: https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library
+      source: SecurityWeek
+      published: '2026-11-25T09:05:13+00:00'
+    - title: CISA Warns of Drupal Core RCE, Idunno AntiCsrf and Optimizely Flaws Exploited in Attacks
+      url: https://cybersecuritynews.com/drupal-idunno-anticsrf-optimizely-flaws-exploited
+      source: Cybersecurity News
+      published: '2026-11-25T16:57:24+00:00'
+    - title: CISA warns of critical unpatched flaw in Danfoss refrigeration controllers
+      url: https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers
+      source: BleepingComputer
+      published: '2026-11-25T16:13:40+00:00'
+    - title: CISA Adds 10 Known Exploited Vulnerabilities to Catalog
+      url: https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog
+      source: CISA
+      published: '2026-11-25T12:00:00+00:00'
+    - title: Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains
+      url: https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html
+      source: The Hacker News
+      published: '2026-11-25T12:48:54+00:00'
+    - title: Two Newly Disclosed GeoServer Vulnerabilities Under Attack
+      url: https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack
+      source: SecurityWeek
+      published: '2026-11-25T15:27:36+00:00'
+    - title: Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers
+      url: https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html
+      source: The Hacker News
+      published: '2026-11-25T09:06:59+00:00'
+    - title: 'CISA adds CVE-2026-103406 to Known Exploited Vulnerabilities: Hewlett Packard Enterprise
+        (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-103406
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-133469 to Known Exploited Vulnerabilities: Vates Xen Orchestra Improper
+        Validation of Specified Type of Input Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-133469
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2025-41450 to Known Exploited Vulnerabilities: Danfoss AK-SM 800A Series Improper
+        Authentication Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2025-41450
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2023-25914 to Known Exploited Vulnerabilities: Danfoss AK-SM 800A Series Path
+        Traversal Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2023-25914
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2023-25915 to Known Exploited Vulnerabilities: Danfoss AK-SM 800A Series Improper
+        Input Validation Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2023-25915
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-133324 to Known Exploited Vulnerabilities: Mitel MiCollab Not Failing
+        Securely Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-133324
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-133275 to Known Exploited Vulnerabilities: Mitel MiCollab Unrestricted
+        Upload of File with Dangerous Type Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-133275
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-133311 to Known Exploited Vulnerabilities: Mitel MiCollab Weak Authentication
+        Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-133311
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-133303 to Known Exploited Vulnerabilities: Mitel MiCollab XML Injection
+        Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-133303
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: 'CISA adds CVE-2026-133323 to Known Exploited Vulnerabilities: Mitel MiCollab OS Command
+        Injection Vulnerability'
+      url: https://nvd.nist.gov/vuln/detail/CVE-2026-133323
+      source: CISA KEV
+      published: '2026-11-25T12:00:00+00:00'
+    - title: Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day
+      url: https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html?m=1&version=meter%2Bat%2Bnull%3Futm_campaign%3Dsidebar
+      source: The Hacker News
+      published: '2026-11-26T07:03:44.980989+00:00'
+    - title: 'CVE-2026-123903: Critical VMware Directory Service Authentication Bypass affects vCenter'
+      url: https://www.rapid7.com/blog/post/etr-cve-2026-123903-critical-vmware-directory-service-authentication-bypass-affects-vcenter
+      source: Rapid7
+      published: '2026-11-25T12:19:20+00:00'
+    - title: Critical SolarWinds Serv-U Flaws Could Let Hackers Gain Root Access and Take Control of Servers
+      url: https://cybersecuritynews.com/critical-solarwinds-serv-u-flaws
+      source: Cybersecurity News
+      published: '2026-11-26T06:00:51+00:00'
+    published: '2026-11-25T11:23:26+00:00'
+  - id: dd04dd39ced9
+    rank: 2
+    title: Fragnesia Flaw Exploited in Attacks on Exposed PAN-OS Firewalls
+    summary: Threat actors are chaining the PHP2Shell and Fragnesia vulnerabilities to attack Palo Alto
+      Networks devices with internet-exposed management interfaces. The exploitation has been tied to
+      a China-linked group and reportedly hit 25 servers; Palo Alto has released fixes, so defenders should
+      patch exposed PAN-OS management interfaces and restrict access to them.
+    url: https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks
+    image: https://www.bleepstatic.com/content/hl-images/2026/11/25/paloalto.jpg
+    sources:
+    - BleepingComputer
+    - Infosecurity Magazine
+    - SecurityWeek
+    labels:
+    - exploited in the wild
+    - remote code execution
+    - security update
+    rationale: Active exploitation of a firewall kernel flaw chained with PHP2Shell against internet-exposed
+      management interfaces.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: dd04dd39ced9
+    cluster_key: attacks-exploited-exposed-firewalls-flaw-fragnesia-pan
+    coverage:
+    - title: Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks
+      url: https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks
+      source: BleepingComputer
+      published: '2026-11-25T22:05:09+00:00'
+    - title: Palo Alto Fixes Fragnesia Kernel Bug Chained With PHP2Shell in Firewall Attacks
+      url: https://www.infosecurity-magazine.com/news/palo-alto-fragnesia-php2shell-fix
+      source: Infosecurity Magazine
+      published: '2026-11-25T15:00:00+00:00'
+    - title: Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls
+      url: https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls
+      source: SecurityWeek
+      published: '2026-11-25T08:12:24+00:00'
+    published: '2026-11-25T22:05:09+00:00'
+  - id: b9b8229250d1
+    rank: 3
+    title: Two GeoServer Vulnerabilities Exploited in the Wild
+    summary: Threat actors are actively exploiting two newly patched GeoServer flaws, CVE-2026-120705
+      and CVE-2026-129243, which can be chained for unauthenticated remote code execution. watchTowr is
+      urging administrators to update GeoServer instances immediately.
+    url: https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi8jBS9UW1bUouUo2cLun5A5rtqPOFJoVQctV4ZsoX9uuMottAxM0HLjLZrvTVGU1GtrewszjOwVMBkvHgyFIBsOndc049nwMidNiVnnoKCOePOhy-XDsjiVjxFvubbxn-Z6ca8VJAxxgLmyQ9KGYBRMWV5GP2et02dmXzcG3jKJw1p_njPdaPuJAaxAz1/s1600/geoserver.png
+    sources:
+    - The Hacker News
+    - SecurityWeek
+    labels:
+    - exploited in the wild
+    - remote code execution
+    - open source
+    rationale: Newly disclosed GeoServer bugs already under active attack, with a chain leading to unauthenticated
+      RCE.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: b9b8229250d1
+    cluster_key: exploited-geoserver-the-two-vulnerabilities-wild
+    coverage:
+    - title: Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains
+      url: https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html
+      source: The Hacker News
+      published: '2026-11-25T12:48:54+00:00'
+    - title: Two Newly Disclosed GeoServer Vulnerabilities Under Attack
+      url: https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack
+      source: SecurityWeek
+      published: '2026-11-25T15:27:36+00:00'
+    published: '2026-11-25T12:48:54+00:00'
+  vulnerabilities:
+  - id: 1b72767f4038
+    rank: 1
+    title: Roundcube Webmail Patches 12 Security Flaws
+    summary: Roundcube released Webmail versions 1.6.22 and 1.7.7 on November 23, 2026, addressing 12
+      security flaws in attachment handling, message rendering, and mail-server connections. The flaws
+      could expose data and allow unauthorized email-filter code to run, but the release notes do not
+      confirm server-side RCE or active exploitation. Webmail administrators should update.
+    url: https://cybersecuritynews.com/roundcube-webmail-flaws
+    image: https://cybersecuritynews.com/wp-content/uploads/2026/11/Roundcube-Webmail-Flaws-Could-Let-Hackers-Execute-Malicious-Code-and-Expose-Sensitive-Data.webp
+    sources:
+    - Cybersecurity News
+    labels:
+    - security update
+    - patch
+    - email security
+    - vulnerability
+    rationale: Security update for widely deployed open-source webmail software; no confirmed exploitation
+      but multiple exposure risks fixed.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 1b72767f4038
+    cluster_key: flaws-patches-roundcube-security-webmail
+    coverage:
+    - title: Roundcube Webmail Flaws Could Let Hackers Execute Malicious Code and Expose Sensitive Data
+      url: https://cybersecuritynews.com/roundcube-webmail-flaws
+      source: Cybersecurity News
+      published: '2026-11-26T06:05:33+00:00'
+    published: '2026-11-26T06:05:33+00:00'
+  - id: 2be49da119ec
+    rank: 2
+    title: NGINX HTTP/2 Use-After-Free CVE-2026-123633 Analyzed by Unit 42
+    summary: Palo Alto Networks Unit 42 published technical analysis of CVE-2026-123633, a use-after-free
+      flaw in NGINX's HTTP/2 implementation. The analysis details affected versions, sanitizer tests,
+      and patch guidance. This is a distinct flaw from the earlier nginx2root disclosure; organizations
+      running NGINX with HTTP/2 should review their versions and apply available patches.
+    url: https://unit42.paloaltonetworks.com/cve-2026-123633-nginx-http2-vulnerability
+    image: https://unit42.paloaltonetworks.com/wp-content/uploads/2026/11/06_Security-Technology_Category_1920x900.jpg
+    sources:
+    - Palo Alto Unit 42
+    labels:
+    - vulnerability
+    - remote code execution
+    - HTTP/2
+    rationale: Newly documented critical flaw in a massively deployed web server, with actionable patch
+      guidance.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: 2be49da119ec
+    cluster_key: 123633-2026-after-analyzed-cve-free-http-nginx-unit-use
+    coverage:
+    - title: 'NGINX HTTP/2 Use-After-Free: CVE-2026-123633'
+      url: https://unit42.paloaltonetworks.com/cve-2026-123633-nginx-http2-vulnerability
+      source: Palo Alto Unit 42
+      published: '2026-11-24T23:00:14+00:00'
+    published: '2026-11-24T23:00:14+00:00'
+    is_carryover: true
+  - id: ef7633e43658
+    rank: 3
+    title: WHMCS SQL Injection Exposes Customer Data and Admin Hashes Without Login
+    summary: A SQL injection flaw in WHMCS's shopping cart lets unauthenticated remote attackers retrieve
+      customer records and administrator password hashes from an installation's database. WHMCS disclosed
+      the flaw alongside two other issues and released a fix. Hosting providers running WHMCS should update
+      immediately to prevent data exfiltration and account takeover.
+    url: https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html
+    image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK7wXAof6nH7PDC5-3qxXZJgJvZODTjQcrWFOjO8jeb9yGkK6bUkzm27MzMy5n0S_Xywsj0npu_F0FmQ4JcKxPXNEoezLrpKoSStaYK4Ww46QUuzySTeQnnzcIXs_NADunlqeyuMIl5Wm5PKWc3c0JyNmYPxfbInIWx2tfosieI_QS_e4PX-JILlLH-1U/s1600/hosting.jpg
+    sources:
+    - The Hacker News
+    labels:
+    - SQL injection
+    - patch
+    - vulnerability
+    rationale: Critical unauthenticated SQLi in a widely used hosting billing platform, posing direct
+      data-exfiltration and takeover risk.
+    is_update: false
+    supersedes: null
+    what_changed: null
+    cluster: ef7633e43658
+    cluster_key: admin-and-customer-data-exposes-hashes-injection-login-sql-whmcs-without
+    coverage:
+    - title: WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login
+      url: https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html
+      source: The Hacker News
+      published: '2026-11-24T08:34:20+00:00'
+    published: '2026-11-24T08:34:20+00:00'
+    is_carryover: true
